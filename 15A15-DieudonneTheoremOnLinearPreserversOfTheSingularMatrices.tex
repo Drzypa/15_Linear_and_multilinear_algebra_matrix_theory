@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DieudonneTheoremOnLinearPreserversOfTheSingularMatrices}
+\pmcreated{2013-03-22 19:19:49}
+\pmmodified{2013-03-22 19:19:49}
+\pmowner{kammerer}{26336}
+\pmmodifier{kammerer}{26336}
+\pmtitle{Dieudonn\'e theorem on linear preservers of the singular matrices}
+\pmrecord{8}{42276}
+\pmprivacy{1}
+\pmauthor{kammerer}{26336}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+\pmclassification{msc}{15A04}
+%\pmkeywords{linear preserver}
+%\pmkeywords{singular matrix}
+\pmrelated{FundamentalTheoremOfProjectiveGeometry}
+\pmrelated{FrobeniusTheoremOnLinearDeterminantPreservers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\newtheorem{thm}{Theorem}
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\mathbb{F}$ be an arbitrary field. Consider $\mathcal{M}_n (\mathbb{F})$, the vector space of all $n \times n$ matrices over $\mathbb{F}$. Moreover, let $\mathcal{GL}_n (\mathbb{F})$ be the full linear group of nonsingular $n \times n$ matrices over $\mathbb{F}$.
+\begin{thm}
+For a linear automorphism $\varphi : \mathcal{M}_n (\mathbb{F}) \longrightarrow \mathcal{M}_n (\mathbb{F})$ the following conditions are equivalent:\\
+\begin{tabular}{cl}
+(i)&$\displaystyle \forall\, A \in \mathcal{M}_n (\mathbb{F}) :\, \det (A) = 0\, \Rightarrow\, \det (\varphi (A)) = 0$,\\
+(ii)&either $\displaystyle \exists\, P, Q \in \mathcal{GL}_n (\mathbb{F})\, \forall\, A \in \mathcal{M}_n (\mathbb{F}) :\, \varphi (A) = P A Q$, or $\displaystyle \exists\, P, Q \in \mathcal{GL}_n (\mathbb{F})\, \forall\, A \in \mathcal{M}_n (\mathbb{F}) :\, \varphi (A) = P A^\top Q$.\\
+\end{tabular}
+\end{thm}
+
+The original proof \cite{dieud} of the nontrivial implication (i) $\Rightarrow$ (ii) is based on the fundamental theorem of projective geometry.   
+\begin{thebibliography}{99}
+\bibitem[D]{dieud}
+J. Dieudonn\'e, Sur une g\'en\'eralisation du groupe orthogonal \`a quatre variables, \emph{Arch. Math.} {\bf 1}: 282--287 (1949).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RankOfAMatrix}
+\pmcreated{2013-03-22 19:22:42}
+\pmmodified{2013-03-22 19:22:42}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{rank of a matrix}
+\pmrecord{15}{42332}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmclassification{msc}{15A33}
+\pmrelated{DeterminingRankOfMatrix}
+\pmdefines{left row rank}
+\pmdefines{left column rank}
+\pmdefines{right row rank}
+\pmdefines{right column rank}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+
+\begin{document}
+Let $D$ be a division ring, and $M$ an $m\times n$ matrix over $D$.  There are four numbers we can associate with $M$:
+\begin{enumerate}
+\item the dimension of the subspace spanned by the columns of $M$ viewed as elements of the $n$-dimensional right vector space over $D$.
+\item the dimension of the subspace spanned by the columns of $M$ viewed as elements of the $n$-dimensional left vector space over $D$.
+\item the dimension of the subspace spanned by the rows of $M$ viewed as elements of the $m$-dimensional right vector space over $D$.
+\item the dimension of the subspace spanned by the rows of $M$ viewed as elements of the $m$-dimensional left vector space over $D$.
+\end{enumerate}
+The numbers are respectively called the \emph{right column rank}, \emph{left column rank}, \emph{right row rank}, and \emph{left row rank} of $M$, and they are respectively denoted by $\operatorname{rc.rnk}(M)$, $\operatorname{lc.rnk}(M)$, $\operatorname{rr.rnk}(M)$, and $\operatorname{lr.rnk}(M)$.
+
+Since the columns of $M$ are the rows of its transpose $M^T$, we have
+$$\operatorname{lc.rnk}(M)=\operatorname{lr.rnk}(M^T), \qquad \textrm{and} \qquad  \operatorname{rc.rnk}(M)=\operatorname{rr.rnk}(M^T).$$  
+
+In addition, it can be shown that for a given matrix $M$, $$\operatorname{lc.rnk}(M)=\operatorname{rr.rnk}(M), \qquad \textrm{and} \qquad  \operatorname{rc.rnk}(M)=\operatorname{lr.rnk}(M).$$
+For any $0\ne r\in D$, it is also easy to see that the left column and row ranks of $rM$ are the same as those of $M$.  Similarly, the right column and row ranks of $Mr$ are the same as those of $M$.
+
+If $D$ is a field, $\operatorname{lc.rnk}(M)=\operatorname{rc.rnk}(M)$, so that all four numbers are the same, and we simply call this number the \emph{rank} of $M$, denoted by $\operatorname{rank}(M)$.  
+
+Rank can also be defined for matrices $M$ (over a fixed $D$) that satisfy the identity $M=rM^T$, where $r$ is in the center of $D$.  Matrices satisfying the identity include symmetric and anti-symmetric matrices.
+
+However, the left column rank is not necessarily the same as the right row rank of a matrix, if the underlying division ring is not commutative, as can be shown in the following example: let $u=(1,j)$ and $v=(i,k)$ be vectors over the Hamiltonian quaternions $\mathbb{H}$.  They are columns in the $2\times 2$ matrix
+$$ M:=\begin{pmatrix}
+1 & i \\
+j & k
+\end{pmatrix} $$
+Since $iu=(i,ij)=(i,k)=v$, they are left linearly dependent, and therefore the left column rank of $M$ is $1$.  Now, suppose $ur+vs=(0,0)$, with $r,s\in \mathbb{H}$.  Since $ui=(i,ji)=(i,-k)$, then $ui(-ir)+vs=0$, which boils down to two equations $ir=s$ and $-ir=s$, and which imply that $s=r=0$, showing that $u,v$ are right linearly independent.  Thus the right column rank of $M$ is $2$.
+
+%%%%%
+%%%%%
+\end{document}

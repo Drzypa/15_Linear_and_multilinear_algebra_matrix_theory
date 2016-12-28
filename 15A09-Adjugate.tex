@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Adjugate}
+\pmcreated{2013-03-22 13:09:42}
+\pmmodified{2013-03-22 13:09:42}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{adjugate}
+\pmrecord{17}{33604}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A09}
+\pmsynonym{classical adjoint}{Adjugate}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand{\adj}{\operatorname{adj}}
+\newcommand{\adjA}{\adj(A)}
+\begin{document}
+The \emph{adjugate}, $\adjA$, of an $n\times n$
+matrix $A$, is the $n\times n$ matrix
+\begin{equation}
+  \label{eq:def1}
+  \adjA_{ij} = (-1)^{i+j}\, M_{\!ji}(A) 
+\end{equation}
+where $M_{\!ji}(A)$ is the indicated minor of $A$ (the determinant
+obtained by deleting row $j$ and column $i$ from $A$).  The adjugate
+is also known as the \emph{classical adjoint}, to distinguish it from
+the \PMlinkname{usual usage of ``adjoint''}{AdjointEndomorphism} which
+denotes the conjugate transpose operation.
+
+
+An equivalent characterization of the adjugate is the following:
+\begin{equation}
+  \label{eq:def2}
+  \adjA A = \det(A) I.
+\end{equation}
+The equivalence of \eqref{eq:def1} and \eqref{eq:def2} follows easily
+from the \PMlinkname{multi-linearity
+  properties}{DeterminantAsAMultilinearMapping} of the determinant.
+Thus, the adjugate operation is closely related to the matrix inverse.
+Indeed, if $A$ is invertible, the adjugate can be defined as
+\[ \adjA = \det(A)A^{-1} \]
+
+Yet another definition of the adjugate is the following:
+\begin{align}
+  \label{eq:def3}
+  \adjA = p_{n-1}(A) I &- p_{n-2}(A) A + p_{n-3}(A) A^2 - \cdots \\ \nonumber
+  & +  (-1)^{n-2}p_1(A) A^{n-2} + (-1)^{n-1}A^{n-1},
+\end{align}
+where $p_1(A)=\operatorname{tr}(A), p_2(A),\ldots, p_n(A) = \det(A)$
+are the elementary invariant polynomials of
+$A$.  The latter arise as
+coefficients in the
+characteristic polynomial $p(t)$ of $A$, namely
+\[p(t) = \det(t I - A) = t^n - p_1(A) t^{n-1} + \cdots + (-1)^n p_n(A).\]
+The equivalence of \eqref{eq:def2} and \eqref{eq:def3} follows from
+the Cayley-Hamilton theorem.  The latter states that $p(A)=0$, which
+in turn implies that
+ \[A ( A^{n-1} - p_1(A) A^{n-2} + \cdots + (-1)^{n-1} p_{n-1}(A) ) =
+ (-1)^{n-1} \det(A) I\]
+
+The adjugate operation enjoys  a number of notable
+properties:
+\begin{align}
+  &\adj(AB) =\adj(B)\adj(A),\\
+  &\adj(A^t) = \adjA^t,\\
+  &\det(\adjA) = \det(A)^{n-1}.
+\end{align}
+%%%%%
+%%%%%
+\end{document}

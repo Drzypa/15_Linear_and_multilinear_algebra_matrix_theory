@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivativeOfMatrix}
+\pmcreated{2013-03-22 15:00:28}
+\pmmodified{2013-03-22 15:00:28}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{derivative of matrix}
+\pmrecord{10}{36713}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-01}
+\pmrelated{NthDerivativeOfADeterminant}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Suppose $I$ is an open set of $\R$, and for each $t\in I$, $A(t)$ is 
+an $n\times m$ matrix. If each element in $A(t)$ is a differentiable function 
+of $t$, we say that $A$ is a differentiable, and define the 
+derivative of $A$ componentwise. This derivative we shall write as
+$\frac{d}{dt}A$ or $\frac{dA}{dt}$. 
+
+\subsubsection*{Properties}
+In the below we assume that all matrices are dependent on a parameter $t$
+and the matrices are differentiable with respect to $t$. 
+\begin{enumerate}
+\item For any $n\times m$ matrix $A$,
+\begin{eqnarray*}
+   \left(\frac{dA}{dt}\right)^T &=& \frac{d}{dt}\left(A^T\right), 
+\end{eqnarray*}
+where $^T$ is the matrix transpose.
+\item If $A(t),B(t)$ are matrices such that $AB$ is defined, then 
+$$
+   \frac{d}{dt}(AB) = \frac{dA}{dt} B + A\frac{dB}{dt}.
+$$
+\item When $A(t)$ is invertible,
+$$
+   \frac{d}{dt}(A^{-1}) = -A^{-1} \frac{dA}{dt} A^{-1}.
+$$
+\item For a square matrix $A(t)$, 
+\begin{eqnarray*}
+   \operatorname{tr}(\frac{dA}{dt}) &=& \frac{d}{dt}\operatorname{tr}(A),
+\end{eqnarray*}
+where $\operatorname{tr}$ is the matrix trace.
+\item If $A(t),B(t)$ are $n\times m$ matrices and $A\circ B$ is the
+Hadamard product of $A$ and $B$, then 
+$$
+   \frac{d}{dt}(A\circ B) = \frac{dA}{dt}\circ  B + A\circ \frac{dB}{dt}.
+$$
+%\operatorname{exp} is the matrix exponential.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

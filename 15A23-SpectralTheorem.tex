@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SpectralTheorem}
+\pmcreated{2013-03-22 12:45:49}
+\pmmodified{2013-03-22 12:45:49}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{spectral theorem}
+\pmrecord{9}{33072}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A23}
+\pmclassification{msc}{15A63}
+\pmclassification{msc}{15A18}
+\pmrelated{DiagonalizableOperator}
+\pmdefines{normal operator}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{{\PMlinkescapetext{{#1}}}}
+\newcommand{\pln}[2]{{\PMlinkname{{#1}}{#2}}}
+\newcommand{\adj}{^{\displaystyle \star}}
+\begin{document}
+Let $U$ be a finite-dimensional, unitary space and let $M:U\rightarrow
+U$ be an endomorphism.  We say that $M$ is normal if it commutes with
+its Hermitian adjoint, i.e.
+$$MM\adj= M\adj M.$$
+
+\paragraph{Spectral Theorem}
+Let $M:U\rightarrow U$ be a linear transformation of a unitary space.
+TFAE
+\begin{enumerate}
+\item The transformation $M$ is normal.
+\item Letting
+  $$\Lambda=\{\lambda\in\cnums \mid M-\lambda E \mbox{ is singular}\},$$
+  where $E$ is the identity operator,
+  denote the spectrum (set of eigenvalues) of $M$, the corresponding
+  eigenspaces
+  $$E_\lambda=\ker(M-\lambda E),\quad \lambda\in\Lambda$$
+  give an orthogonal, direct sum
+  decomposition of $U$, i.e. 
+  $$U=\bigoplus_{\lambda\in\Lambda} E_\lambda,$$
+  and $E_{\lambda_1}
+  \perp E_{\lambda_2}$ for distinct eigenvalues $\lambda_1\neq
+  \lambda_2$.
+\item We can decompose $M$ as the sum
+  $$M = \sum_{\lambda\in \Lambda} \lambda P_\lambda,$$
+  where  $\Lambda\in\cnums$ is  a finite subset of complex numbers
+  indexing a family of commuting orthogonal projections
+  $P_\lambda:U\rightarrow U$, i.e.
+  $$
+    P_\lambda{}\adj = P_\lambda \qquad
+    P_\lambda P_\mu =
+    \begin{cases}
+      P_\lambda & \lambda = \mu \\
+      0 & \lambda\neq \mu,
+    \end{cases}
+    $$
+    and where WLOG
+  $$\sum_{\lambda\in\Lambda} P_\lambda = 1_U.$$
+\item There exists an orthonormal basis of $U$ that diagonalizes $M$.
+\end{enumerate}
+
+\paragraph{Remarks.}
+\begin{enumerate}
+\item Here are some important classes of normal operators,
+  distinguished by the nature of their eigenvalues.
+  \begin{itemize}
+  \item Hermitian operators.  Eigenvalues are real.
+  \item Unitary transformations.  Eigenvalues lie on the unit circle,
+    i.e. the set of complex numbers of modulus 1.
+  \item Orthogonal projections.  Eigenvalues are either 0 or 1.
+  \end{itemize}
+\item There is a well-known version of the spectral theorem for
+  $\reals$, namely that a self-adjoint (symmetric) transformation of a
+  real inner product spaces can diagonalized and that eigenvectors
+  corresponding to different eigenvalues are orthogonal.  An even more
+  down-to-earth version of this theorem says that a symmetric, real
+  matrix can always be diagonalized by an orthonormal basis of
+  eigenvectors. 
+\item There are several versions of increasing sophistication of the
+  spectral theorem that hold in infinite-dimensional, Hilbert space
+  setting.  In such a context one must distinguish between the
+  so-called discrete and continuous (no corresponding eigenspace)
+  spectrums, and replace the representing sum for the operator with
+  some kind of an integral. The definition of self-adjointness is also
+  quite tricky for unbounded operators.  Finally, there are versions
+  of the spectral theorem, of importance in theoretical quantum
+  mechanics, that can be applied to continuous 1-parameter groups of
+  commuting, self-adjoint operators.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

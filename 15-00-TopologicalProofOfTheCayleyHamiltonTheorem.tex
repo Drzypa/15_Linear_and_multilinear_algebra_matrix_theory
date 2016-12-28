@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopologicalProofOfTheCayleyHamiltonTheorem}
+\pmcreated{2013-03-22 12:33:22}
+\pmmodified{2013-03-22 12:33:22}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{topological proof of the Cayley-Hamilton theorem}
+\pmrecord{7}{32802}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\End}{\mathrm{End}}
+\newcommand{\trace}{\mathrm{tr}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\begin{document}
+We begin by showing that the theorem is true if the characteristic
+polynomial does not have repeated roots,  and then prove the general case.
+
+Suppose then that the discriminant of the characteristic polynomial is
+non-zero, and hence that $T:V\rightarrow V$ has $n=\dim V$ distinct
+eigenvalues once we extend\footnote{Technically, this means that we must
+work with the vector space $\bar{V}=V\otimes\bar{k}$, where $\bar{k}$ is the
+algebraic closure of the original field of scalars, and with
+$\bar{T}:\bar{V}\to \bar{V}$ the extended automorphism with action
+$$\bar{T}(v\otimes a) \to T(V)\otimes a,\quad v\in V,\; a\in \bar{k}.$$} to the algebraic closure of the ground
+field.
+We can therefore choose a basis of eigenvectors, call them
+$\bv_1,\ldots,\bv_n$, with $\lambda_1,\ldots,\lambda_n$ the
+corresponding eigenvalues.  From the definition of characteristic
+polynomial we have that
+$$c_T(x) = \prod_{i=1}^n (x-\lambda_i).$$
+The factors on the right commute, and hence
+$$c_T(T)\bv_i = 0$$
+for all $i=1,\ldots,n$.  Since $c_T(T)$ annihilates a basis, it must, in
+fact, be zero.
+
+To prove the general case, let $\delta(p)$ denote the discriminant of
+a polynomial $p$, and let us remark that the discriminant mapping
+$$
+T\mapsto \delta(c_T),\quad T\in\End(V)$$
+is polynomial on
+$\End(V)$. Hence the set of $T$ with distinct eigenvalues is a dense
+open subset of $\End(V)$ relative to the Zariski
+topology.  Now the characteristic polynomial map
+$$T\mapsto c_T(T),\quad T\in\End(V)$$
+is a polynomial map on the vector
+space $\End(V)$.  Since it vanishes on a dense
+open subset, it must vanish identically. Q.E.D.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MatrixResolventProperties}
+\pmcreated{2013-03-22 15:33:52}
+\pmmodified{2013-03-22 15:33:52}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{matrix resolvent properties}
+\pmrecord{15}{37468}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The matrix resolvent norm for a complex-valued $s$ is related to the proximity of such value to the spectrum of $A$; more precisely, the following simple yet meaningful property holds:
+\[
+\|R_A(s)\|\geq\frac{1}{\mathrm{dist}(s,\sigma_A)},
+\]
+
+where $\|.\|$ is any self consistent matrix norm, $\sigma_A$ is the spectrum of $A$ and the distance between a complex point and the discrete set of the eigenvalues $\lambda_i$ is defined as $\mathrm{dist}(s,\sigma_A)=\min\limits_{1\leq i\leq n}|s-\lambda_i|$.
+
+From this fact it comes immediately, for any $1\leq i\leq n$,
+\[
+\lim_{s\rightarrow\lambda_i}\|R_A(s)\|=+\infty.
+\]
+
+\bigskip
+
+\begin{proof}
+
+Let ($\lambda_i$,$\mathbf{v}$) be an eigenvalue-eigenvector pair of $A$; then
+\[
+(sI-A)v=sv-Av=(s-\lambda_i)v
+\]
+
+which shows $(s-\lambda_i)$ to be an eigenvalue of $(sI-A)$; $(s-\lambda_i)^{-1}$ is then an eigenvalue of $(sI-A)^{-1}$ and , since for any self consistent norm $|\lambda|\leq \|A\|$, we have:
+\[
+\max\limits_{1\leq i\leq n}\frac{1}{|s-\lambda_i|}\leq\|(sI-A)^{-1}\|
+\]
+whence
+\[
+\|(sI-A)^{-1}\|\geq\frac{1}{\min\limits_{1\leq i\leq n}|s-\lambda_i|}=\frac{1}{\mathrm{dist}(s,\sigma_A)}.
+\]
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

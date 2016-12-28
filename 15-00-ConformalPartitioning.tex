@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConformalPartitioning}
+\pmcreated{2013-03-22 16:04:16}
+\pmmodified{2013-03-22 16:04:16}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{conformal partitioning}
+\pmrecord{9}{38127}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmdefines{block multiplication}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $R$ be a ring.
+Let the matrices $A \in M_{m,n}(R)$ and $B \in M_{n,p}(R)$ be partitioned into 
+submatrices $A^{i,j}$ and $B^{i,j}$ respectively as follows:
+
+$$A=\begin{matrix} 
+ \begin{matrix}
+n_{1} & n_{2} & \quad \cdots & n_{h}  
+\end{matrix}  & 
+\begin{matrix}
+\quad
+\end{matrix} 
+\\
+\left[ \begin{matrix} 
+\overbrace{A^{1,1}} & \overbrace{A^{1,2}} & \cdots & \overbrace{A^{1,h}} \\
+A^{2,1} & A^{2,2} & \cdots & A^{2,h} \\
+\vdots & \vdots & \ \ & \vdots \\
+A^{g,1} & A^{g,2} & \cdots & A^{g,h} 
+\end{matrix} \right] & 
+\begin{matrix}
+\}m_{1} \\
+\}m_{2} \\
+\vdots \\
+\}m_{g} 
+\end{matrix}
+\end{matrix}
+$$
+where $A^{i,j}$ is $m_{i} \times n_{j}, \sum_{i=1}^{g} m_{i} = m$, 
+$\sum_{j=1}^{h} n_{j} = n$; 
+$$B=\begin{matrix} 
+ \begin{matrix}
+p_{1} & p_{2} & \quad \cdots & p_{k}  
+\end{matrix}  & 
+\begin{matrix}
+\quad
+\end{matrix} 
+\\
+\left[ \begin{matrix} 
+\overbrace{B^{1,1}} & \overbrace{B^{1,2}} & \cdots & \overbrace{B^{1,k}} \\
+B^{2,1} & B^{2,2} & \cdots & B^{2,k} \\
+\vdots & \vdots & \ \ & \vdots \\
+B^{h,1} & B^{h,2} & \cdots & B^{h,k} 
+\end{matrix} \right] & 
+\begin{matrix}
+\}n_{1} \\
+\}n_{2} \\
+\vdots \\
+\}n_{h} 
+\end{matrix}
+\end{matrix}
+$$
+where $B^{i,j}$ is $n_{i} \times p_{j}, $ 
+$\sum_{j=1}^{k} p_{j} = p$. Then $A$ and $B$ (in this \PMlinkescapetext{order}) are said to be
+{\it conformally partitioned} for multiplication.  
+
+Now suppose that $A$ and $B$ are conformally partitioned for multiplication.
+Let $C=AB$ be partitioned as follows:
+$$C=\begin{matrix} 
+ \begin{matrix}
+p_{1} & p_{2} & \quad \cdots & p_{k}  
+\end{matrix}  & 
+\begin{matrix}
+\quad
+\end{matrix} 
+\\
+\left[ \begin{matrix} 
+\overbrace{C^{1,1}} & \overbrace{C^{1,2}} & \cdots & \overbrace{C^{1,k}} \\
+C^{2,1} & C^{2,2} & \cdots & C^{2,k} \\
+\vdots & \vdots & \ \ & \vdots \\
+C^{g,1} & C^{g,2} & \cdots & C^{g,k} 
+\end{matrix} \right] & 
+\begin{matrix}
+\}m_{1} \\
+\}m_{2} \\
+\vdots \\
+\}m_{g} 
+\end{matrix}
+\end{matrix}
+$$
+where $C^{i,j}$ is $m_{i} \times p_{j}$, $i=1, \cdots ,g$, $j=1,\cdots ,k$.
+Then
+$$
+C^{i,j} = \sum_{t=1}^{k} A^{i,t}B^{t,j}, \quad i=1,\cdots , g, \quad j=1, \cdots , k.
+$$
+This method of computing $AB$ is sometimes called {\it block multiplication}.
+
+
+%%%%%
+%%%%%
+\end{document}

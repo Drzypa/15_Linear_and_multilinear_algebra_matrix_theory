@@ -1,0 +1,298 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DecompositionOfOrthogonalOperatorsAsRotationsAndReflections}
+\pmcreated{2013-03-22 15:24:11}
+\pmmodified{2013-03-22 15:24:11}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{decomposition of orthogonal operators as rotations and reflections}
+\pmrecord{15}{37242}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+%\pmkeywords{rotation}
+%\pmkeywords{reflection}
+%\pmkeywords{orthogonal}
+\pmrelated{RotationMatrix}
+\pmrelated{OrthogonalMatrices}
+\pmrelated{DimensionOfTheSpecialOrthogonalGroup}
+\pmrelated{RodriguesRotationFormula}
+\pmrelated{DerivationOfRotationMatrixUsingPolarCoordinates}
+\pmrelated{DerivationOf2DReflectionMatrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{enumerate}
+
+% define commands here
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+
+
+\newcommand{\Vc}{V^\mathbb{C}}
+\newcommand{\Tc}{T^\mathbb{C}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+\DeclareMathOperator{\linspan}{span}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{defn}{Definition}
+\begin{document}
+\begin{thm}
+Let $V$ be a $n$-dimensional real inner product space ($0 < n < \infty$). Then every orthogonal operator $T$ on $V$
+can be decomposed into a series of two-dimensional rotations and one-dimensional reflections
+on mutually orthogonal subspaces of $V$.
+\end{thm}
+
+We first explain the general idea behind the proof.  Consider a rotation $R$ of angle $\theta$ in a two-dimensional space.  From its orthonormal basis representation
+\[
+\begin{bmatrix}
+\cos \theta & -\sin \theta \\
+\sin \theta & \; \cos \theta
+\end{bmatrix}\,,
+\]
+we find that the characteristic polynomial of $R$ is $t^2 - 2 \cos \theta + 1$,
+with (complex) roots $e^{\pm i\theta}$.  
+(Not surprising, since multiplication by $e^{i\theta}$ in the complex plane is rotation
+by $\theta$.)
+Thus given the characteristic polynomial of $R$,
+we can almost recover\footnote{Because the complex roots occur in conjugate pairs,
+the information about the sign of $\theta$ is lost. This too, is not a surprise,
+because the sign of $\theta$, i.e. whether the rotation is clockwise or counterclockwise,
+is dependent on the orientation of the basis vectors.} its rotation angle.  
+
+In the case of a reflection $S$, the eigenvalues of $S$ are $-1$ and $1$; so again, the characteristic polynomial of $S$ will provide some information on $S$.
+
+So in $n$ dimensions, we are also going to look at the complex eigenvalues and eigenvectors of $T$ to recover information about the rotations represented by $T$.
+
+But there is one technical point --- $T$ is a transformation on a real vector
+space, so it does not really have ``complex eigenvalues and eigenvectors''.
+To make this concept rigorous, we must consider the complexification $\Tc$ of $T$,
+the operator defined by $\Tc(x+iy) = Tx + iTy$
+in the vector space $\Vc$ consisting of elements of the form $x+iy$, for $x, y \in V$.
+(For more details, see the entry on \PMlinkname{complexification}{ComplexificationOfVectorSpace}.)
+
+\bigskip
+
+\begin{lem}
+For any linear operator $T\colon V \to V$, there exists a one- or two-dimensional subspace $W$ which is invariant under $T$.
+\begin{proof}
+Consider $\Tc$ and its characteristic polynomial.
+By the Fundamental Theorem of Algebra, the characteristic polynomial has a complex root $\lambda = \alpha + i \beta$. Then there is an eigenvector $x+iy \neq 0$ with eigenvalue $\lambda$.  We have
+\[
+Tx + iTy = \Tc(x+iy) = \lambda(x + iy) = (\alpha x - \beta y) + i(\beta x + \alpha y)\,.
+\]
+Equating real and imaginary components,
+we see that
+\begin{align*}
+Tx &= \alpha x - \beta y \in W \\
+Ty &= \beta x + \alpha y \in W
+\end{align*}
+where $W = \linspan \{ x, y\}$. $W$ is two-dimensional if $x$ and $y$ are linearly independent; otherwise it is one-dimensional\footnote{
+In fact, the space $W$ constructed is two-dimensional if and only if the eigenvalue $\lambda$ is not purely real.  Compare with the remark (i) after
+the proof of Theorem 1.
+
+Actually, Lemma 1 has more uses than just proving Theorem 1.
+For example, if $\dot{x} = Ax$ is a linear differential equation,
+and the constant coefficient matrix $A$ has only simple eigenvalues,
+then it is a consequence of Lemma 1, that the differential equation decomposes into a series of disjoint one-variable and two-variable equations.
+The solutions are then readily understood: they are always of the form of an
+exponential multiplied by a sinusoid, and linear combinations thereof.
+The sinusoids will be present whenever there are non-real eigenvalues.
+}. And we have $T(W) \subseteq W$ as claimed.
+\end{proof}
+\end{lem}
+
+\bigskip
+
+\begin{proof}[Proof of Theorem 1]
+We recursively factor $T$; formally, the proof will be by induction on the dimension $n$.
+
+The case $n=1$ is trivial.  We have $\det T = \pm 1$; if $\det T = 1$ then $T$ is the identity; otherwise $Tx = -x$ is a reflection.
+
+For larger $n$, by Lemma 1 there exists a $T$-invariant subspace $W$.  The orthogonal complement $W^\perp$ of $W$ is $T$-invariant also, because
+for all $x \in W^\perp$ and $y \in W$, 
+\begin{align*}
+\langle Tx, y \rangle &= \langle x, T^{-1} y \rangle & \textrm{because $T$ preserves inner product} \\
+&= 0 & \textrm{because $T^{-1}(W) = W$.}
+\end{align*}
+Let $T_W$ be the operator that acts as $T$ on $W$ and is the identity on $W^\perp$.
+Similarly, let $T_{W^\perp}$ be the operator that acts as $T$ on $W^{\perp}$
+and is the identity on $W$.  Then $T = T_W \circ T_{W^\perp}$.
+$T_W$ restricted to $W$ is orthogonal, and since $W$ is one- or two-dimensional,
+$T_W$ must therefore be a rotation or reflection (or the identity) in a line or plane.
+
+$T_{W^\perp}$ restricted to $W^\perp$ is also orthogonal. $W^\perp$ has dimension $<n$,
+so by the induction hypothesis
+we can continue to factor it into operators acting on subspaces of $W^\perp$ that are mutually orthogonal. These subspaces will of course also be orthogonal to $W$.
+
+The proof is now complete, except that we did not rule out $T_W$ being a reflection even
+when $W$ is two-dimensional.
+But of course, if $T_W$ is a reflection in two dimensions,
+then it can be factored as a reflection on a one-dimensional subspace $\linspan \{v\}$ 
+composed with the identity on $\linspan \{ v \}^\perp$.
+\end{proof}
+
+Actually, in the third paragraph of the proof, we implicitly assumed that every orthogonal operator on two-dimensional is either a rotation or reflection.
+This is a well-known fact, but it does need to be formally proven:
+
+\begin{thm}
+If $V$ is a two-dimensional real inner product space, then every orthogonal operator $T$
+is either a rotation or reflection.
+\begin{proof}
+Fix any orthonormal basis $\{ e_1, e_2 \}$ for $V$.
+Since $T$ is orthogonal, $\norm{Te_1} = \norm{e_1} = 1$, i.e. $Te_1$ is a unit vector on the plane, so there exists an angle $\theta$ (unique modulo $2\pi$) 
+such that $Te_1 = \cos \theta \, e_1 + \sin \theta \, e_2$.
+Similarly $Te_2$ is a unit vector, but since $e_1$ and $e_2$ are orthogonal, so
+are $Te_1$ and $Te_2$.  Then it is found that the solution to $Te_2$ must be either $-\sin \theta \,  e_1 + \cos \theta \, e_2$ or $\sin \theta \, e_1 - \cos \theta \, e_2$.  Putting all this together, the matrix for $T$ is:
+\[
+\begin{bmatrix}
+\cos \theta & \mp\sin \theta \\
+\sin \theta & \pm \cos \theta
+\end{bmatrix}\,.
+\]
+The first solution for $Te_2$ corresponds to a rotation matrix (and $\det T = 1$);
+the second solution for $Te_2$ corresponds to a 
+\PMlinkname{reflection matrix}{DerivationOf2DReflectionMatrix} (and $\det T = -1$).
+\end{proof}
+\end{thm}
+
+\bigskip
+\section{Remarks}
+\begin{enumerate}[i.]
+\item
+Observe that the two equations for $Tx$ and $Ty$ appearing in the proof of Lemma 1
+do specify a rotation of angle $\pm \theta$ when $\lambda = \alpha + i\beta = e^{i\theta}$
+and $x, y$ are orthonormal.
+So by examining the complex eigenvales and eigenvectors of $\Tc$,
+we can reconstruct the rotation.
+
+This construction can be used to give an alternate proof of Theorem 1; we sketch it below:
+
+The complexified space $\Vc$ has an inner product structure inherited from $V$ (again, see 
+\PMlinkname{complexification}{ComplexificationOfVectorSpace} for details).
+Let $U = \Tc$.  Since $T$ is orthogonal, $U$ is unitary, and hence normal ($U^* U = UU^*$).
+There exists an orthonormal basis of eigenvectors for $U$ (the \PMlinkname{Schur decomposition}{CorollaryOfSchurDecomposition}).
+Let $z = x+iy$ is any one of these eigenvectors with a complex, non-real eigenvalue
+$\lambda$.  Then $\abs{\lambda} = 1$ because $U$ is unitary,
+and $\overline{z} = x-iy$ is another eigenvector with eigenvalue $\overline{\lambda}$.
+Using the $\Vc$ inner product formula, the vectors $x/\sqrt{2}$ and $y/\sqrt{2}$ can be shown to be orthonormal.
+Then the proof of Lemma 1 shows that $T$ acts as a rotation in the plane $\linspan \{ x, y \}$.
+All such planes obtained will be orthogonal to each other.
+
+To summarize, the orthogonal subplanes of rotation are found by grouping conjugate pairs
+of complex eigenvectors. If one actually needs to determine the planes of rotation explicitly (for dimensions $n \geq 4$), then probably it is better to work directly with the complexified matrix,
+rather than to factor the matrix over the reals.
+
+\item
+The decomposition of $T$ is not unique.  However, it is always possible to obtain
+a decomposition which contains at most one reflection,
+because any two single-dimensional reflections can always be combined into
+a two-dimensional rotation.
+In any case, the parity of the number of reflections in a decomposition of $T$ is invariant,
+because the parity is equal to $\det T$.
+
+\item
+In the decomposition, the component rotations and reflections all commute
+because they act on orthogonal subspaces.
+
+\item
+If we take a basis for $V$ describing the mutually orthogonal subspaces in Theorem 1,
+the matrix for $T$ looks like:
+\[
+\begin{bmatrix}
+\cos \theta_1 & -\sin \theta_1 \\
+\sin \theta_1 & \; \cos \theta_1 \\
+& & \ddots \\
+& & & \cos \theta_k & -\sin \theta_k \\
+& & & \sin \theta_k & \; \cos \theta_k \\
+& & & & & \pm 1 \\
+& & & & & & +1 \\
+& & & & & & & \ddots \\
+& & & & & & & & +1
+\end{bmatrix}
+\]
+where $\theta_1, \dotsc, \theta_k$ are the rotation angles, one for each orthogonal subplane,
+and the $\pm 1$ in the middle is the reflective component (if present).  The rest of the entries
+in the matrix are zero.
+
+\item
+Sometimes any orthogonal operator $T$ with $\det T = 1$
+is called a rotation, even though strictly speaking it is actually series of rotations
+(each on different ``axes'').  Similarly, when $\det T = -1$,
+$T$ may be called a reflection, even though again it is not always a single (one-dimensional)
+reflection.
+
+In this language, a rotation composed with a rotation will always be a rotation;
+a rotation composed with a reflection is a reflection; and two reflections composed together will always be a rotation.
+
+\item
+In $\real^3$, an orthogonal operator with positive determinant is necessarily
+a rotation on one axis which is left fixed (except when the operator is the identity).
+This follows simply because there is no way to fit more than one orthogonal subplane
+into three-dimensional space.
+
+A composition of two rotations in $\real^3$ would then
+be a rotation too.
+On the other hand it is not at all obvious what relation the axis of rotation
+of the composition has with the original two axes of rotation.
+
+For an explicit formula for a rotation matrix in $\real^3$ that does not
+require manual calculation of the basis vectors for the rotation subplane, see Rodrigues' rotation formula.
+
+\item
+In $\real^n$, reflections can be carried out by first embedding $\real^n$ into $\real^{n+1}$
+and then rotating $\real^{n+1}$.  
+(Here, the words ``rotation'' and ``reflection'' being taken in their extended sense of (v).)
+For example, in the plane, a right hand can be
+rotated in $\real^3$ into a left hand. 
+
+To be specific, suppose we embed $\real^n$ in $\real^{n+1}$ as the first $n$ coordinates.
+Then we gain an extra degree of freedom in the last coordinate of $\real^{n+1}$
+(with coordinate vector $e_{n+1}$).
+Given an orthogonal operator $T\colon \real^n \to \real^n$,
+we can extend it to an operator on $T'\colon \real^{n+1} \to \real^{n+1}$
+by having it act as $T$ on the lower $n$ coordinates,
+and setting $T'(e_{n+1}) = -e_{n+1}$.
+Since $\det T' = -\det T = 1$,
+our new $T'$ will be a rotation (the extra angle of rotation will be by $\pi$)
+that reflects sets in the $\real^n$ plane.
+
+\end{enumerate}
+
+\begin{thebibliography}{3}
+\bibitem{Friedberg} Friedberg, Insel, Spence. {\it Linear Algebra}. Prentice-Hall, 1997.
+\bibitem{Arnold} Vladimir I. Arnol'd (trans. Roger Cooke). {\it Ordinary Differential Equations}. Springer-Verlag, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

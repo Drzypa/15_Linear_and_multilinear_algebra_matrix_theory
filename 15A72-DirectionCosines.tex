@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirectionCosines}
+\pmcreated{2013-03-22 17:16:32}
+\pmmodified{2013-03-22 17:16:32}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{direction cosines}
+\pmrecord{8}{39615}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A72}
+\pmclassification{msc}{51N20}
+\pmrelated{MutualPositionsOfVectors}
+\pmrelated{EquationOfPlane}
+\pmdefines{direction numbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If the non-zero vector \,$\vec{r} = x\vec{i}+y\vec{j}+z\vec{k}$\, of $\mathbb{R}^3$ forms the angles $\alpha$, $\beta$ and $\gamma$ with the positive directions of $x$-axis, $y$-axis and $z$-axis, respectively, then the numbers
+$$\cos{\alpha},\; \cos{\beta},\; \cos{\gamma}$$
+are the {\em direction cosines} of the vector.  Any triple $l,\,m,\,n$ of numbers, which are \PMlinkname{proportional}{Variation} to the direction cosines, are {\em direction numbers} of the vector.
+
+If\, $r = \sqrt{x^2+y^2+z^2}$\, is the \PMlinkescapetext{length} of $\vec{r}$, we see easily that
+$$\cos{\alpha} = \frac{x}{r},\;\; \cos{\beta} = \frac{y}{r},\;\; \cos{\gamma} = \frac{z}{r}.$$
+
+Conversely, the components of the vector on the coordinate axes may be obtained  from
+$$x = r\cos{\alpha},\;\; y = r\cos{\beta},\;\; z = r\cos{\gamma}.$$
+
+We also see that the direction cosines satisfy
+$$\cos^2\alpha+\cos^2\beta+\cos^2\gamma = 1.$$
+%%%%%
+%%%%%
+\end{document}

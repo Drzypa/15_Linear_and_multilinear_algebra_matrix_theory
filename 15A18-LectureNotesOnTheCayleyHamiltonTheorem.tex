@@ -1,0 +1,626 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LectureNotesOnTheCayleyHamiltonTheorem}
+\pmcreated{2013-03-22 16:50:59}
+\pmmodified{2013-03-22 16:50:59}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{lecture notes on the Cayley-Hamilton theorem}
+\pmrecord{8}{39096}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A18}
+\pmclassification{msc}{15A15}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\ve}{\mathbf{e}}
+\newcommand{\vzero}{\mathbf{0}}
+
+\newcommand{\bB}{{\mathbf{B}}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\reals}{{\Bbb R}}
+
+\newcommand{\bvector}[1]{\lb\begin{array}{r} #1 \end{array}\rb}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\begin{document}
+\PMlinkescapeword{order}
+\PMlinkescapeword{word}
+\PMlinkescapeword{relation}
+\PMlinkescapeword{structure}
+\PMlinkescapeword{block}
+
+\section{Overview}
+
+You should all know about the characteristic polynomial of a square
+matrix, $A$.  To calculate the characteristic polynomial of $A$, one
+subtracts a variable, say $t$, from the diagonal entries of $A$, and
+then takes the determinant of the result.  In other words, letting
+$p_A(t)$ denote the characteristic polynomial of $A$, one has
+$$p_A(t) = \det ( A - tI),$$
+where $I$ as usual denotes the identity matrix.
+ For example, set 
+ $$
+ A=
+ \lb\begin{array}{rrr}
+ 1 &  2 & 3 \\
+ 0 & -2 & 1 \\
+ 1 &  1 & 0 
+ \end{array}\rb.$$
+ Evaluating the determinant of $A-tI$ one gets 
+ $$p_A(t) = -t^3-t^2+6t+7.$$
+
+ Now the interesting thing about square matrices is that one can do
+ algebra with them.  So if $A$ is a $3\times3$ matrix then $A^2$,
+ $A^3$, indeed every power of $A$ will also be a $3\times 3$ matrix.
+ Indeed, one can take any polynomial $p(t)$, and happily plug $A$ into
+ it.  The result will be some other $3\times 3$ matrix.  The obvious
+ question now is: what will happen when one plugs a square matrix $A$
+ into its own characteristic polynomial?  Let's see what happens for
+ the sample $3\times 3$ matrix above. Straightforward calculations show
+ that
+ $$
+ A^2=
+ \lb\begin{array}{rrr}
+  4&  1 &  5 \\
+  1&  5 & -2 \\
+  1&  0 &  4 
+ \end{array}\rb,\qquad
+ A^3=
+ \lb\begin{array}{rrr}
+  9&   11&  13\\
+ -1&  -10&   8\\
+  5&   6 &   3
+ \end{array}\rb,
+ $$
+ Next adding the various powers of $A$ with the coefficients of
+ characteristic polynomial (note that one uses the identity matrix in
+ place of the constants) one gets
+ {\small
+ $$
+ \begin{array}{cccc}
+ -A^3 & -A^2 & 6A & 7I \\
+ \\
+ -
+ \lb\begin{array}{rrr}
+  9&   11&  13\\
+ -1&  -10&   8\\
+  5&   6 &   3
+ \end{array}\rb 
+ & -
+ \lb\begin{array}{rrr}
+  4&  1 &  5 \\
+  1&  5 & -2 \\
+  1&  0 &  4 
+ \end{array}\rb 
+ &
+ + 6
+ \lb\begin{array}{rrr}
+ 1 &  2 & 3 \\
+ 0 & -2 & 1 \\
+ 1 &  1 & 0 
+ \end{array}\rb
+ &
+ + 7
+ \lb\begin{array}{rrr}
+  1 & 0 & 0 \\
+  0 & 1 & 0 \\
+  0 & 0 & 1 
+ \end{array}\rb 
+ \end{array}
+ $$
+ $$
+ \qquad \qquad = 
+ \lb\begin{array}{rrr}
+  0 & 0 & 0 \\
+  0 & 0 & 0 \\
+  0 & 0 & 0 
+ \end{array}\rb 
+ $$
+ }
+ Zero!  One gets zero.  This seemingly miraculous answer is not a
+ coincidence. Indeed one gets zero regardless of what matrix one
+ starts with.  I encourage you to try this with a few examples of your own.
+ \begin{theorem}[Cayley-Hamilton]
+ Let $A$ be an $n\times n$ matrix, and let $p_A(t)=\det(A-tI)$ be the
+ corresponding characteristic polynomial.  Then,  $p_A(A)=0$.
+ \end{theorem}
+
+ The goal of these notes will be to explain and prove the above
+ theorem.  There are various hidden reasons that make the
+ Cayley-Hamilton theorem work.  It is the purpose of these notes to
+ bring these reasons into the open.
+
+ \section{The Gist of the Matter.}
+
+ Indeed there are two factors that make the Cayley-Hamilton theorem
+ such a striking and interesting result.  Recall that if $U$ is an
+ $n$-dimensional vector space, and $\vu_1, \vu_2, \vu_3, \ldots ,
+ \vu_{n+1}$, are any $n+1$ vectors in $U$, then there will some kind of
+ a linear relation between the $\vu_i$'s, i.e. for some choice of
+ scalars $a_1, a_2, \ldots , a_{n+1}$ one will have
+ $$a_1 \vu_1+a_2\vu_2+a_3\vu_3 + \ldots a_{n+1}\vu_{n+1}=0.$$
+
+ Now the space of $3\times 3$ matrices is $9$-dimensional.  Therefore
+ for every $3\times 3$ matrix $A$ there must be a linear relationship
+ between the $10$ different matrix powers
+ $$A^9, A^8, A^7, A^6, A^5, A^4, A^3, A^2, A^1=A, A^0=I.$$
+ The ``miracle'' of the Cayley-Hamilton theorem is twofold.  First, a
+ linear relation arises already for the powers $A^3, A^2, A^1, A^0$.
+ Second, the coefficients for this linear relation are precisely the
+ coefficients of the characteristic polynomial of $A$.
+
+ Let's put it another way.  Look at the first column vectors of the
+ matrices $A^3, A^2, A^1, A^0$, i.e. the vectors 
+ $$
+ \bvector{9\\-1\\5},\quad
+ \bvector{4\\1\\1},\quad
+ \bvector{1\\0\\1 },\quad
+ \bvector{1\\0\\0 }.
+ $$
+ Now $\reals^3$ is a $3$-dimensional vector space, and so there
+ should be a linear relation between the above $4$ vectors.  Indeed
+ there is: the coefficients of the linear relation are $-1, -1, 6, 7$
+ ( i.e. $-1$ times the first vector, plus $-1$ times the second, plus
+ $6$ times the third, plus $7$ times the fourth is equal to zero ---
+ try it yourself!).  What about the second column vectors of $A^3,
+ A^2, A^1, A^0$?  Now the vectors in question are
+ $$
+ \bvector{11\\-10\\6},\quad
+ \bvector{1\\5\\0},\quad
+ \bvector{2\\-2\\1 },\quad
+ \bvector{0\\1\\0 }.
+ $$
+ Again, we have here $4$ vectors from a $3$-dimensional vectors
+ space, and therefore there should be a linear relation between the
+ vectors.  However by some miracle the coefficients of the linear
+ relation for the second column vectors are the same as the
+ coefficients of the linear relation between the first column vectors,
+ namely $-1, -1, 6, 7$.  Furthermore, these coefficients are precisely
+ the coefficients of the characteristic polynomial: $-t^3-t^2+6t+7$.
+ Needless to say the third column vectors are joined in a linear
+ relation with the same coefficients: $-1, -1, 6, 7$.  Why is this
+ happening?
+
+ \section{The Cyclic Basis}
+ Let's look again at the first column vectors of the matrices $A^0,
+ A^1, A^2$ (recall that $A^0$ is just the identity matrix):
+ $$\vu_0 = \
+ \bvector{1\\0\\0 },\quad
+ \vu_1=\bvector{1\\0\\1 },\quad
+ \vu_2=\bvector{4\\1\\1},
+ $$
+ and let's take these $3$ vectors as a new basis, $\bB$.  A basis
+ obtained in this fashion, i.e. by starting with a vector and
+ successively applying a matrix to it, is called a cyclic basis. What
+ will be the representation of the matrix $A$ relative to this cyclic
+ basis?  Now $\vu_0$ is just the first elementary vector, $\ve_1$.
+ Furthermore, note that $\vu_1$ is nothing but $A\vu_0$, and that
+ $\vu_2=A\vu_1$.  Now $A\vu_2$ is the first column vector of $A^3$ and
+ we already determined the linear relation between the first column
+ vectors of $A^3, \ldots A^0$.  The bottom line is that
+ $$A\vu_2 = - (\vu_2-6\vu_1-7\vu_0),$$
+ and consequently $A$ will have
+ the following appearance relative to the basis $\bB$:
+ $$[A]_{\bB} =
+ \lb\begin{array}{rrr}
+ 0 & 0 & 7 \\
+ 1 & 0 & 6 \\
+ 0 & 1 & -1
+ \end{array}\rb
+ $$
+ The transition matrix $P$ from $\bB$ to the standard basis $\ve_1,
+ \ve_2, \ve_3$ is given by
+ $$P= 
+ \lb\begin{array}{rrr}
+ 1&1&4\\
+ 0&0&1\\
+ 0&1&1
+ \end{array}\rb
+ .$$
+ Of course $P$ is relevant to our discussion precisely because
+ $$[A]_\bB = P^{-1} A P.$$
+ \begin{proposition}
+ \label{prop:conj}
+ Let $A$ be an $n\times n$ matrix, $P$ a non-singular $n\times n$
+ matrix, and set $B=P^{-1} A P$.  The matrices $A$ and $B$ have
+ the same characteristic polynomials.
+ \end{proposition}
+ \begin{proof}
+ The characteristic polynomial of $B$ is given as
+ $$\det(B-tI) = \det\lp P^{-1} A P - tI \rp 
+ = \det\lp P^{-1} (A-tI) P \rp.$$
+ Recall that the determinant of a product is the product of the
+ determinants, and that the determinant of an inverse is the inverse of
+ the determinant.  Therefore
+ $$\det(B-tI) = \det( P^{-1}) \det(A-tI) \det(P) = \det(A-tI).$$
+ \end{proof}
+
+ In other words, according to the above theorem we should expect the
+ characteristic polynomial of $[A]_\bB$ to be equal to the
+ characteristic polynomial of $A$.  Let's check this using a co-factor
+ expansion.
+ $$
+ \left|
+ \begin{array}{ccc}
+ -t & 0  & 7 \\
+ 1  & -t & 6 \\
+ 0  & 1  & -1-t
+ \end{array}
+ \right|
+ = -t (t^2+t-6) + 7\cdot 1 = -t^3-t^2+6t + 7
+ $$
+ Also note that the last column of $[A]_\bB$ contains all but one of
+ the coefficients of the characteristic polynomial.  This too is not a
+ coincidence. 
+ \begin{proposition}
+ \label{prop:ratform}
+   Consider an $n\times n$ matrix $B$ such that the $j^{\mbox{\rm th}}$
+   column vector for $j=1,2,\ldots n-1$ is the basic vector
+   $\ve_{j+1}$, while the last column of $B$ is the vector $[-b_0,
+   -b_1, \ldots , -b_{n-1} ]^T$.  In other words $B$ has the following
+   form:
+ $$
+ B=\lb\begin{array}{cccccc}
+ 0 & 0 & 0 & \ldots & 0 & -b_0 \\
+ 1 & 0 & 0 & \ldots & 0 & -b_1 \\
+ 0 & 1 & 0 & \ldots & 0 & -b_2 \\
+ 0 & 0 & 1 & \ldots & 0 & -b_3 \\
+ \vdots & \vdots & \vdots &  \ddots & \vdots & \vdots \\
+ 0 & 0 & 0 & \ldots & 1 & -b_{n-1}
+ \end{array}\rb
+ $$
+ Then, the characteristic polynomial of $B$ is given by
+ $$(-1)^n p_B(t) = t^n + b_{n-1}t^{n-1} + \ldots + b_2 t^2 + b_1 t +
+ b_0.$$
+ \end{proposition}
+\begin{proof}
+  We will calculate the determinant of $B-tI$ by doing a co-factor
+  expansion along the first row.  Let $B_1$ be the matrix obtained by
+  deleting the first row and the first column from $B-tI$, and let $D$
+  be the matrix obtained by deleting the first row and the last column
+  from $B-tI$.  Doing a co-factor expansion along the top row, it is
+  easy to see that
+  $$\det(B-tI) = -t \det(B_1) +(-1)^n b_0 \det(D).$$
+  Now $D$ is an
+  upper triangular matrix with ones on the diagonal, and therefore
+  $\det(D)=1$.  The matrix $B_1$, on the other hand has the same
+  structure as $B-tI$, only it's 1 size smaller.  To that end let
+  $B_2$ be the matrix obtained by deleting the first two rows and
+  columns from $B-tI$.  By the same reasoning as above it's easy to
+  see that
+  $$\det(B_1) = -t \det(B_2) + (-1)^{n-1} b_1,$$
+  and therefore
+  $$\det(B-tI) = (-1)^n b_0 - t\Big( (-1)^{n-1} b_1 -t
+  \det(B_2)\Big).$$
+  Continuing inductively we see that for even $n$,
+  the determinant of $B-tI$ will have the form:
+   $$b_0-t\Bigg(-b_1 - t\Big( b_2 - t \big( -b_3 - t ( \ldots ) \big)
+   \Big) \Bigg) = b_0 + b_1 t + b_2 t^2 + b_3 t^3 + \ldots + b_{n-1}
+   t^{n-1} + t^n $$
+   For odd $n$, $\det(B-tI)$ will be just like the
+   formula above, but multiplied through by a negative sign.
+\end{proof}
+
+\section{Putting it all together}
+
+ Thanks to Propositions \ref{prop:conj} and \ref{prop:ratform} we are
+ now in a position to understand and to prove the
+ Cayley-Hamilton Theorem.  Let $A$ be an $n\times n$ matrix.  Start by
+ setting $\vu_0=\ve_1$, and then create a sequence of vectors by
+ successively applying $A$, i.e. $\vu_1=A\vu_0$, $\vu_2=A\vu_1$, etc.
+ Notice that $\vu_k=A^k \vu_0$; in other words, $\vu_k$ is the first
+ column of the matrix $A^k$.
+
+ 
+ Next, suppose that the $n$ vectors $\vu_0, \vu_1, \vu_2,\ldots ,
+ \vu_{n-1}$ form a basis, $\bB$, of $\reals^n$ (There are matrices $A$
+ for which this doesn't happen, but we'll consider this possibility
+ later.)  There will therefore exist scalars $b_0,b_1,\ldots b_{n-1}$
+ such that
+ $$\vu_n + b_{n-1} \vu_{n-1} + \ldots + b_1 \vu_1 + b_0 \vu_0 = 0.$$
+ Now the representation of $A$ relative to the cyclic basis $\bB$ will
+ have the form
+ $$
+ [A]_\bB=
+ \lb\begin{array}{cccccc}
+ 0 & 0 & 0 & \ldots & 0 & -b_0 \\
+ 1 & 0 & 0 & \ldots & 0 & -b_1 \\
+ 0 & 1 & 0 & \ldots & 0 & -b_2 \\
+ 0 & 0 & 1 & \ldots & 0 & -b_3 \\
+ \vdots & \vdots & \vdots &  \ddots & \vdots & \vdots \\
+ 0 & 0 & 0 & \ldots & 1 & -b_{n-1}
+ \end{array}\rb
+ $$
+By Proposition \ref{prop:conj} the characteristic polynomial of
+$[A]_\bB$ is equal to the characteristic polynomial of $A$.
+Furthermore, by Proposition \ref{prop:ratform} the characteristic
+polynomial of $[A]_\bB$ is equal to 
+$$\pm(t^n+b_{n-1}t^{n-1} + \ldots b_1 t + b_0).$$
+Only one conclusion
+is possible: $b_0, b_1, \ldots , b_{n-1}$ must be precisely the
+coefficients of the characteristic polynomial of $A$.  Let us
+summarize these findings.
+\begin{proposition}
+\label{prop:cols}
+  Let $A$ be an $n\times n$ matrix, with characteristic polynomial
+  $$p_A(t)=\pm \lp t^n+b_{n-1}t^{n-1} + \ldots + b_1 t + b_0\rp.$$
+  Fix a
+  number $k$ between $1$ and $n$, and let $\vu_j$ be the $k^{\mbox{\rm
+      th}}$ column of the matrix $A^j$.  If the vectors
+  $\vu_0,\vu_1,\ldots, \vu_{n-1}$ form a basis of $\reals^n$, then
+  the vectors $\vu_0,\vu_1,\ldots, \vu_{n-1}, \vu_n$ satisfy the
+  linear relation:
+  $$\vu_n+b_{n-1}\vu_{n-1} + \ldots + b_1 \vu_1 + b_0\vu_0=0.$$
+\end{proposition}
+
+\section{A Complication}
+We are almost done with the proof of the Cayley-Hamilton
+Theorem. First, however, we must deal with the possibility that the
+square matrix $A$ is such that  the column vectors of $A^0, A^1,
+\ldots, A^{n-1}$ do not form a basis.  Consider, for example 
+$$
+A=\lb\begin{array}{rrr}
+ 1 & -1 &  2 \\
+ 1 &  4 & -4 \\
+ 1 &  2 & -2 
+\end{array}\rb
+$$
+An easy calculation shows that the characteristic polynomial is given
+by
+$$p_A(t)=t^3-3t^2+t+2.$$
+Writing down the sequence of powers of $A$:
+$$
+\begin{array}{cccc}
+A^3 & A^2 & A^1 & A^0\\
+\\
+\lb\begin{array}{rrr}
+ 3 & -2 &  4  \\
+ 2 & 15 & -14 \\
+ 2 &  7 &  -6 
+\end{array}\rb
+&\quad
+\lb\begin{array}{rrr}
+ 2 & -1 &  2 \\
+ 1 &  7 & -6 \\
+ 1 &  3 & -2 
+\end{array}\rb
+&\quad
+\lb\begin{array}{rrr}
+ 1 & -1 &  2 \\
+ 1 &  4 & -4 \\
+ 1 &  2 & -2 
+\end{array}\rb
+&\quad
+\lb\begin{array}{rrr}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{array}\rb
+\end{array}
+$$
+we notice that the first columns do, in fact, obey a linear relation
+with the coefficients of the characteristic polynomial:
+\begin{equation}
+  \label{eq:comp0}
+\bvector{3\\2\\2} 
+-3\bvector{2\\1\\1}
++\bvector{1\\1\\1}
++2\bvector{1\\0\\0}
+=
+\bvector{0\\0\\0}.
+\end{equation}
+However these first column vectors {\em do not } form a basis of
+$\reals^3$, and therefore Proposition \ref{prop:cols} is not enough
+to explain why these vectors obey the above linear relation.
+
+In order to find an explanation, let us proceed as follows.  Just as
+before, start by setting $\vu_0=\ve_1$, and $\vu_1=A\vu_0$.  If we
+take $\vu_2=A\vu_1$, then $\bB=(\vu_0, \vu_1, \vu_2)$ will not form a
+basis, so instead, let us choose $\vu_2$ that is linearly independent
+from $\vu_0$ and $\vu_1$, thereby ensuring that $\bB$ is a basis.
+There are many, many possible such choices for $\vu_2$.  To keep the
+discussion concrete, let us take $\vu_2=\ve_3=[0,0,1]^T$.  Note that
+$$A\vu_0 = \vu_1$$
+$$A\vu_1 = [2,1,1]^T = \vu_0 + \vu_1.$$
+$$A\vu_2 = [2,-4,2]^T = 6\vu_0 -4\vu_1 +2\vu_2.$$
+Therefore, representing $A$ relative to the basis $\bB$ we obtain
+$$[A]_\bB = 
+\lb\begin{array}{rrr}
+0 & 1 & 6 \\
+1 & 1 & -4 \\
+0 & 0 & 2
+\end{array}\rb
+$$
+By Proposition \ref{prop:conj}, we know that the characteristic
+polynomial of $[A]_\bB$ is equal to the characteristic polynomial of
+$A$.  However, we know much more.
+\begin{proposition}
+\label{prop:2block}
+Let $B$ be an $n\times n$ matrix of the form
+$$B=\lb\begin{array}{cc} B_1 & B_2 \\ \mathbf{0} & B_3
+\end{array}\rb$$
+where 
+$B_1$ is a $k\times k$ matrix, $B_2$ is a $k\times(n-k)$ matrix, and
+$B_3$ is a $(n-k)\times(n-k)$ matrix.  Then, the characteristic
+polynomial of $B$ is the product of the characteristic polynomials of
+$B_1$ and $B_3$, i.e. $p_B(t) = p_{B_1}(t)\times p_{B_3}(t)$.
+\end{proposition}
+\begin{proof}
+Note that 
+$$B-tI =
+ \lb\begin{array}{cc}
+B_1-tI_1 & B_2 \\
+\mathbf{0} & B_3 - tI_3
+\end{array}\rb
+$$
+where $I_1$ is the $k\times k$ identity matrix, and $I_3$ is the
+$(n-k)\times (n-k)$ identity matrix.  The Proposition now follows from
+the fact that the determinant of a matrix whose shape is like $B$ is
+the determinant of the upper-left block times the determinant of the
+lower-right block.
+\end{proof}
+
+Thanks to Proposition \ref{prop:2block} we know that the
+characteristic polynomial of $[A]_\bB$ is a product of the
+characteristic polynomial of  the $2\times 2$ matrix
+$$\lb\begin{array}{rr} 0 & 1 \\ 1 & 1 \end{array}\rb$$
+and the characteristic polynomial of the $1\times 1$ matrix $[2]$.  In
+other words,
+$$p_{[A]_\bB}(t) = (t^2-t-1)(t-2).$$
+Furthermore by Proposition
+\ref{prop:ratform} we know that $A\vu_1$, $\vu_1$, $\vu_0$, i.e.  the
+first column vectors of $A^2, A^1, A^0$, obey a linear relation with
+the coefficients of the polynomial $t^2-t-1$:
+$$A\vu_1 - \vu_1 - \vu_0 = \vzero,$$
+\begin{equation}
+\label{eq:comp1}
+\bvector{2\\1\\1}
+-\bvector{1\\1\\1}
+-\bvector{1\\0\\0}
+=
+\bvector{0\\0\\0}.
+\end{equation}
+Multiplying this relation through by $A$ wed deduce that the first
+column vectors of $A^3, A^2, A^1$ obey the same linear relation:
+\begin{equation}
+  \label{eq:comp2}
+\bvector{3\\2\\2} 
+-\bvector{2\\1\\1}
+-\bvector{1\\1\\1}
+=
+\bvector{0\\0\\0}.
+\end{equation}
+Next think about what it means to multiply a polynomial such as
+$t^2-t-1$ by another polynomial such as $t-2$.  Indeed, one can
+structure the multiplication by multiplying the first polynomial
+through by $t$, then multiplying it through by $-2$, and then adding
+the two terms:
+$$
+\begin{array}{cccc}
+t^3 & - t^2 & -t \\
+& -2t^2 & 2t & 2\\
+\hline
+t^3 & - 3t^2 &+ t& + 2
+\end{array}
+$$
+The bottom line is, of course, just the characteristic polynomial
+of $A$, and the whole idea behind the above calculation is that
+$p_A(t)$ can be ``formed out of'' the polynomial $t^2-t-1$.  This
+shows that we can combine relations (\ref{eq:comp1}) and
+(\ref{eq:comp2}) and produce in the end the desired relation
+(\ref{eq:comp0}).  All we have to do is take relation (\ref{eq:comp2}),
+and add to it $-2$ times the relation (\ref{eq:comp1}).  This explains
+why the first column vectors of $A^3, A^2, A^1, A^0$ obey a linear
+relation whose coefficients come from the characteristic polynomial of
+$A$.
+
+\begin{proposition}
+\label{prop:cols2}
+  Let $A$ be an $n\times n$ matrix, with characteristic polynomial
+  $$p_A(t)=\pm \lp t^n+b_{n-1}t^{n-1} + \ldots + b_1 t + b_0\rp.$$
+  Fix a
+  number $k$ between $1$ and $n$, and let $\vu_j$ be the $k^{\mbox{\rm
+      th}}$ column of the matrix $A^j$.  
+  The vectors $\vu_0,\vu_1,\ldots, \vu_{n-1}, \vu_n$ satisfy the
+  linear relation:
+  $$\vu_n+b_{n-1}\vu_{n-1} + \ldots + b_1 \vu_1 + b_0\vu_0=0,$$
+  even if the vectors $\vu_0,\vu_1,\ldots, \vu_{n-1}$ do not form a
+  basis of $\reals^n$.
+\end{proposition}
+\begin{proof}
+  Suppose that there is a number $m<n$ such that $\vu_m$ can be given
+  as a linear combination of $\vu_0,\vu_1,\ldots, \vu_{m-1}$; let's
+  say
+  $$\vu_m + c_{m-1} \vu_{m-1} + \ldots + c_1\vu_1 + c_0\vu_0 = 0.$$
+  Choose vectors $\vv_m, \vv_{m+1}, \ldots, \vv_{n-1}$ so that the
+  list
+  $$\bB = ( \vu_0, \vu_1, \ldots , \vu_{m-1}, \vv_m , \vv_{m+1},
+  \ldots , \vv_{n-1})$$
+  forms a basis of $\reals^n$.  Relative to this basis, $A$ will have
+  the form
+  $$ A = \lb\begin{array}{rr} A_1 & A_2 \\ 0 & A_3 \end{array}\rb ,$$
+  where the upper-left block has the form
+  $$
+  A_1=\lb\begin{array}{ccccc}
+    0 & 0 &  \ldots & 0 & -c_0 \\
+    1 & 0 &  \ldots & 0 & -c_1 \\
+    0 & 1 &  \ldots & 0 & -c_2 \\
+    \vdots  & \vdots &  \ddots & \vdots & \vdots \\
+    0 & 0 & \ldots & 1 & -c_{m-1}
+ \end{array}\rb
+ $$
+By Proposition \ref{prop:ratform}, 
+$$p_{A_1}(t) = \pm(t^m + c_{m-1}t^{m-1} + \ldots + c_1 t +
+c_0)$$.
+Let $\pm(t^{n-m} + d_{n-m-1}t^{m-1} + \ldots d_1 t +
+d_0)$ denote the characteristic polynomial of $A_3$.
+By Proposition \ref{prop:2block}, the characteristic polynomial of
+$[A]_\bB$ (which is equal to the characteristic polynomial of $A$) is
+the product $p_{A_1}(t)\times p_{A_3}(t)$, and therefore $p_A(t)$ can
+be obtained by taking linear combinations of $p_{A_1}(t)$ times
+various powers of $t$:
+{\small
+$$
+\begin{array}{rrrrrrrrrr}
+d_0\times&&&  t^m \;+& c_{m-1}t^{m-1} \;+& \ldots \;+& c_2 t^2 \;+&  c_1 t
+\;+& c_0 \\ 
+d_1\times&& t^{m\;+1} \;+& c_{m-1}t^{m} \;+& c_{m-2}t^{m-1} \;+& \ldots \;+&
+c_1 t^2 \;+& 
+c_0t\hphantom{+}\\
+&& \ldots & \ldots & \ldots \\
+1\times&t^{n} \;+& c_{m-1}t^{n-1} \;+& \ldots \;+&  c_1 t^{n-m\;+1} \;+&
+c_0t^{n-m} \\
+\hline
+& t^n \;+& b_{n-1} t^{n-1} \;+& b_{n-2} t^{n-2} \;+ & \ldots & +  &
+b_2 t^2 \; + & b_1 t \;+& b_0  
+\end{array}
+$$
+}
+Corresponding to the above polynomials are  the relations
+{\small
+$$
+\begin{array}{rrrrrrrrrr}
+&& \vu_{m} \;+& c_{m-1}\vu_{m-1} \;+& \ldots \;+& c_2 \vu_2 \;+&  c_1 \vu_1
+\;+& c_0\vu_0 &=0\\
+& \vu_{m+1} \;+& c_{m-1}\vu_{m} \;+& c_{m-2}\vu_{m-1} \;+&
+\ldots \;+&  c_1 \vu_2
+\;+& c_0\vu_1\hphantom{+} &&=0\\
+& \ldots & \ldots & \ldots \\
+\vu_{n} \;+& c_{m-1}\vu_{n-1}  \;+&
+\ldots \;+&  c_1 \vu_{n-m+1}
+\;+& c_0\vu_{n-m} &&&&=0\\
+\end{array}
+$$
+} Adding these relations in the same way as the polynomials yields
+the desired relation:
+ $$\vu_n+b_{n-1}\vu_{n-1} + \ldots + b_1 \vu_1 + b_0\vu_0=0,$$
+\end{proof}
+
+Now we really are finished.  Thanks to Propositions \ref{prop:cols}
+and \ref{prop:cols2} we know that for every $k=1,\ldots, n$, the $k^{\rm
+  th}$ column vectors of the matrices 
+$$A^n, A^{n-1}, \ldots, A^1, A^0$$
+obey a linear relation with the coefficients of the characteristic
+polynomial of $A$.  Since this is true for every column of the above
+matrices, it is certainly true for the full matrix --- and that is the
+precisely the conclusion of the Cayley-Hamilton theorem.
+ 
+
+%%%%%
+%%%%%
+\end{document}

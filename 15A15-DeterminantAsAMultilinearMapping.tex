@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeterminantAsAMultilinearMapping}
+\pmcreated{2013-03-22 13:09:17}
+\pmmodified{2013-03-22 13:09:17}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{determinant as a multilinear mapping}
+\pmrecord{5}{33595}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+\pmrelated{ExteriorAlgebra}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+\newcommand{\mM}{\mathbf{M}}
+\newcommand{\be}{\mathbf{e}}
+\begin{document}
+Let $\mM = (M_{ij})$ be an $n\times n$ matrix with entries in a field
+$K$. The matrix $\mM$ is really the same thing as a list of $n$ column
+vectors of size $n$. Consequently, the determinant operation may be
+regarded as a mapping
+$$\det:\overbrace{K^n\times\ldots\times K^n}^{n \mbox{
+    times}}\rightarrow K$$
+The determinant of a matrix $\mM$ is then defined to be 
+$\det(\mM_1,\ldots,\mM_n),$
+where $\mM_j\in K^n$ denotes the $j\supth$ column of $\mM$.
+
+Starting with the definition
+\begin{equation}
+\label{eq:detdef}
+\det(\mM_1,\ldots,\mM_n) = \sum_{\pi\in S_n} \mathrm{sgn}(\pi) M_{1\pi_1}
+M_{2\pi_2}\cdots  
+M_{n\pi_n}
+\end{equation}
+the following properties are easily established:
+\begin{enumerate}
+\item the determinant is multilinear;
+\item the determinant is anti-symmetric;
+\item the determinant of the identity matrix is $1$.
+\end{enumerate}
+These three properties uniquely characterize the determinant, and
+indeed can --- some would say should --- be used as the definition of
+the determinant operation.
+
+Let us prove this.  We  proceed by representing elements of $K^n$
+as linear combinations of
+$$
+\be_1=\begin{pmatrix} 1\\0\\0\\\vdots\\0\end{pmatrix},\quad
+\be_2=\begin{pmatrix} 0\\1\\0\\\vdots\\0\end{pmatrix},\quad \ldots\quad
+\be_n=\begin{pmatrix} 0\\0\\0\\ \vdots\\1\end{pmatrix},
+$$
+the standard basis of $K^n$. Let $\mM$ be an $n\times n$ matrix.
+The $j\supth$ column is represented as $\sum_i M_{ij}\be_i$; whence
+using multilinearity
+\begin{align*}
+\det(\mM) &= \det\lp \sum_i M_{i1}\be_i\,,\sum_i
+M_{i2}\be_i\,,\;\ldots\;,\sum_i M_{in} \be_i\rp\\  
+&=\sum_{i_1,\ldots,i_n=1}^n M_{i_11} M_{i_22} \cdots M_{i_n n} 
+\det(\be_{i_1},\be_{i_2},\ldots,\be_{i_n})
+\end{align*}
+The anti-symmetry assumption implies that the expressions
+$\det(\be_{i_1},\be_{i_2},\ldots,\be_{i_n})$ vanish if any two of the
+indices $i_1,\ldots,i_n$ coincide.  If all $n$ indices are distinct,
+$$\det(\be_{i_1},\be_{i_2},\ldots,\be_{i_n}) = \pm
+\det(\be_1,\ldots,\be_n),$$
+the sign in the above expression being
+determined by the  number of transpositions required to rearrange
+the list $(i_1,\ldots,i_n)$ into the list $(1,\ldots,n)$. The sign is
+therefore the parity of the permutation $(i_1,\ldots,i_n)$.  Since we
+also assume that
+$$\det(\be_1,\ldots,\be_n)=1,$$ we now recover the original definition 
+\eqref{eq:detdef}.
+%%%%%
+%%%%%
+\end{document}

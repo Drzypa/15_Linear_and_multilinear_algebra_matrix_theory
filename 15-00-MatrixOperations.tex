@@ -1,0 +1,239 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MatrixOperations}
+\pmcreated{2013-03-22 13:57:54}
+\pmmodified{2013-03-22 13:57:54}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{matrix operations}
+\pmrecord{6}{34734}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmdefines{matrix addition}
+\pmdefines{matrix multiplication}
+\pmdefines{matrix product}
+\pmdefines{standard matrix multiplication}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A {\em matrix} is an array, or a rectangular grid, of numbers. An $m
+\times n$ matrix is one which has $m$ rows and $n$ columns. Examples of
+matrices include:
+\begin{itemize}
+\item The $2 \times 3$ matrix
+$$
+A =
+\begin{pmatrix}
+1 & -2 & 2 \\
+1 & 0 & 2
+\end{pmatrix}
+$$
+\item The $3 \times 3$ matrix
+$$
+B =
+\begin{pmatrix}
+1 & 0 & 1 \\
+3 & -1 & 5 \\
+4 & 2 & 0
+\end{pmatrix}
+$$
+\item The $3 \times 1$ matrix
+$$
+C =
+\begin{pmatrix}
+7 \\
+7 \\
+2
+\end{pmatrix}
+$$
+\item The $1 \times 2$ matrix
+$$
+D =
+\begin{pmatrix}
+\frac{1}{2} & 2
+\end{pmatrix}
+$$
+\end{itemize}
+
+All of our example matrices (except the last one) have entries which are
+integers. In general, matrices are allowed to have their entries taken
+from any ring $R$. The set of all $m \times n$ matrices with entries in
+a ring $R$ is denoted $M_{m \times n}(R)$. If a matrix has exactly as
+many rows as it has columns, we say it is a square matrix.
+
+Addition of two matrices is allowed provided that both matrices have the
+same number of rows and the same number of columns. The sum of two such
+matrices is obtained by adding their respective entries. For example,
+$$
+\begin{pmatrix}
+7 \\
+7 \\
+2
+\end{pmatrix} +
+\begin{pmatrix}
+-1 \\
+4.5 \\
+0
+\end{pmatrix} =
+\begin{pmatrix}
+7 + (-1) \\
+7 + 4.5 \\
+2 + 0
+\end{pmatrix} =
+\begin{pmatrix}
+6 \\
+11.5 \\
+2
+\end{pmatrix}
+$$
+
+Multiplication of two matrices is allowed provided that the number of
+columns of the first matrix equals the number of rows of the second
+matrix. (For example, multiplication of a $2 \times 3$ matrix with a $3
+\times 3$ is allowed, but multiplication of a $3 \times 3$ matrix with a
+$2 \times 3$ matrix is not allowed, since the first matrix has 3
+columns, and the second matrix has 2 rows, and 3 doesn't equal 2.)
+In this case the matrix multiplication is defined by
+$$(AB)_{ij}=\sum_k (A)_{ik} (B)_{kj}\;.$$
+
+We will describe how matrix multiplication works is with an
+example. Let
+$$
+A =
+\begin{pmatrix}
+1 & -2 & 2 \\
+1 & 0 & 2
+\end{pmatrix},\ \ \ \
+B =
+\begin{pmatrix}
+1 & 0 & 1 \\
+3 & -1 & 5 \\
+4 & 2 & 0
+\end{pmatrix}
+$$
+be the two matrices that we used above as our very first two examples of
+matrices. Since $A$ is a $2 \times 3$ matrix, and $B$ is a $3 \times 3$
+matrix, it is legal to multiply $A$ and $B$, but it is not legal to
+multiply $B$ and $A$. The method for computing the product $AB$ is to
+place $A$ below and to the left of $B$, as follows:
+$$
+\begin{matrix}
+& \begin{pmatrix}
+1 & 0 & 1 \\
+3 & -1 & 5 \\
+4 & 2 & 0
+\end{pmatrix}
+\\
+\begin{pmatrix}
+1 & -2 & 2 \\
+1 & 0 & 2
+\end{pmatrix} &
+\begin{pmatrix}
+X & Y & \ \ \\
+\ \ &\ \ &\ \
+\end{pmatrix}
+\end{matrix}
+$$
+$A$ is always in the bottom left corner, $B$ is in the top right corner,
+and the product, $AB$, is always in the bottom right corner. We see from
+the picture that $AB$ will be a $2 \times 3$ matrix. (In general, $AB$
+has as many rows as $A$, and as many columns as $B$.)
+
+Let us compute the top left entry of $AB$, denoted by $X$ in the above
+picture. The way to calculate this entry of $AB$ (or any other entry) is
+to take the dot product of the stuff above it [which is $(1,3,4)$] and
+the stuff to the left of it [which is $(1,-2,2)$]. In this case, we have
+$$
+X = 1 \cdot 1 + 3 \cdot (-2) + 4 \cdot 2 = 3.
+$$
+Similarly, the top middle entry of $AB$ (where the $Y$ is in the above
+picture) is gotten by taking the dot product of the stuff above it:
+$(0,-1,2)$, and the stuff to the left of it: $(1,-2,2)$, which gives
+$$
+Y = 0\cdot 1 + (-1) \cdot (-2) + 2 \cdot 2 = 6
+$$
+
+Continuing in this way, we can compute every entry of $AB$ one by one to
+get
+$$
+\begin{matrix}
+& \begin{pmatrix}
+1 & 0 & 1 \\
+3 & -1 & 5 \\
+4 & 2 & 0
+\end{pmatrix}
+\\
+\begin{pmatrix}
+1 & -2 & 2 \\
+1 & 0 & 2
+\end{pmatrix} &
+\begin{pmatrix}
+3 & 6 & -9 \\
+9 & 4 & 1
+\end{pmatrix}
+\end{matrix}
+$$
+and so
+$$
+AB = \begin{pmatrix}
+3 & 6 & -9 \\
+9 & 4 & 1
+\end{pmatrix}.
+$$
+If one tries to compute the {\bf illegal} product $BA$ using this
+procedure, one winds up with
+$$
+\begin{matrix}
+& \begin{pmatrix}
+1 & -2 & 2 \\
+1 & 0 & 2
+\end{pmatrix} \\
+\begin{pmatrix}
+1 & 0 & 1 \\
+3 & -1 & 5 \\
+4 & 2 & 0
+\end{pmatrix} &
+\begin{pmatrix}
+?\ &\ \ & \ \ \\
+\ \ &\ \ & \ \ \\
+\ \ &\ \ & \ \
+\end{pmatrix}
+\end{matrix}
+$$
+The top left entry of this illegal product (marked with a $?$ above)
+would have to be the dot product of the stuff above it: $(1,1)$, and the
+stuff to the left of it: $(1,0,1)$, but these vectors do not have the same
+length, so it is impossible to take their dot product, and consequently
+it is impossible to take the product of the matrices $BA$.
+
+Under the correspondence of matrices and linear transformations, one can
+show that matrix multiplication is equivalent to composition of linear
+transformations, which explains why matrix multiplication is
+defined in a manner which is so odd at first sight, and why this strange
+manner of multiplication is so useful in mathematics.
+%%%%%
+%%%%%
+\end{document}

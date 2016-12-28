@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CalculatingTheSolidAngleOfDisc}
+\pmcreated{2013-03-22 18:19:36}
+\pmmodified{2013-03-22 18:19:36}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{calculating the solid angle of disc}
+\pmrecord{6}{40957}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A72}
+\pmclassification{msc}{51M25}
+\pmrelated{SubstitutionNotation}
+\pmrelated{AngleOfViewOfALineSegment}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+We determine the solid angle formed by a disc when one is looking at it on the normal line of its plane set to the center of it.\\
+
+Let us look the disc from the origin and let the disc with radius $R$ situate such that its plane is parallel to the $xy$-plane and the center is on the $z$-axis at\, $(0,\,0,\,h)$\, with\, $h > 0$.\, Into the \PMlinkescapetext{formula}
+\begin{align}         
+\Omega = -\int_a \vec{da}\cdot\nabla\frac{1}{r} = \int_a \vec{da}\cdot\frac{\vec{r}}{|\vec{r}|^3}
+\end{align}
+of the \PMlinkname{parent entry}{SolidAngle}, we may substitute the position vector \,$\vec{r} = x\vec{i}+y\vec{j}+h\vec{k}$\, of the directed surface element \,$d\vec{a} = \vec{k}\,da,$
+getting         
+$$\Omega = \int_a \frac{h\,da}{(x^2+y^2+h^2)^{3/2}}.$$
+Now we can use a \PMlinkname{annulus}{Annulus2}-formed surface element \,$da = 2\pi\varrho\;d\varrho$\, where\, $\varrho^2 = x^2+y^2$, whence the surface integral may be calculated as
+$$\Omega = \pi h\int_0^R \frac{2\varrho\;d\varrho}{(\varrho^2+h^2)^{3/2}} = 
+\frac{\pi h}{-2}\sijoitus{\varrho=0}{\quad R}\frac{1}{\sqrt{\varrho^2+h^2}}.\\$$
+Thus we have the result
+$$\Omega = 2\pi h\left(\frac{1}{h}-\frac{1}{\sqrt{R^2+h^2}}\right)\!.$$
+
+%%%%%
+%%%%%
+\end{document}

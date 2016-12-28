@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TensorArray}
+\pmcreated{2013-03-22 12:40:25}
+\pmmodified{2013-03-22 12:40:25}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{tensor array}
+\pmrecord{10}{32949}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A69}
+\pmrelated{Frame}
+\pmrelated{Vector2}
+\pmrelated{BasicTensor}
+\pmrelated{TensorProductClassical}
+\pmrelated{Tensor}
+\pmdefines{covariant index}
+\pmdefines{contravariant index}
+\pmdefines{valence}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{{\PMlinkescapetext{{#1}}}}
+\newcommand{\pln}[2]{{\PMlinkname{#1}{#2}}}
+\newcommand{\kfield}{\mathbb{K}}
+\newcommand{\rT}{\mathrm{T}}
+\newcommand{\tspace}[1]{\rT^{#1}}
+\begin{document}
+\paragraph{Introduction.}
+\PMlinkescapetext{{\em Tensor arrays}}, or tensors for short\footnote{The term {\em tensor} has other meanings, c.f. the \PMlinkname{tensor entry}{Tensor}.}
+are multidimensional arrays with two types of (covariant and
+contravariant) indices.  Tensors are widely used in science and
+mathematics, because these data structures are the natural choice of
+representation for a variety of important physical and geometric
+quantities.
+  
+In this entry we give the definition of a tensor array and establish
+some related terminology and notation.  The theory of tensor arrays
+incorporates a number of other essential topics: basic tensors, tensor
+transformations, outer multiplication, contraction, inner
+multiplication, and generalized transposition.  These are fully
+described in their separate entries.
+%  We warn the reader that the Einstein summation convention
+% will be in force throughout.
+
+\paragraph{Valences and the space of tensors arrays.}
+Let $\kfield$ be a field\footnote{In physics and differential
+  geometry, $\kfield$ is typically $\reals$ or $\cnums$.} and let $I$
+be a finite list of indices\footnote{It is advantageous to allow
+  general indexing sets, because one can indicate the use of multiple
+  frames of reference by employing multiple, disjoint sets of
+  indices.}, such as $(1,2,\ldots, n)$.  A tensor array of type
+$$(p,q),\quad p,q\in\natnums$$
+is a mapping 
+$$I^p\times I^q\rightarrow \kfield.$$
+The set of all such mappings
+will be denoted by $\tspace{p,q}(I,\kfield)$, or when $I$ and
+$\kfield$ are clear from the context, simply as $\tspace{p,q}$.  The
+numbers $p$ and $q$ are called, respectively, the contravariant and
+the covariant valence of the tensor array.
+
+Point-wise addition and scaling give $\tspace{p,q}$ the structure of a
+a vector space of dimension $n^{p+q}$, where $n$ is the cardinality of
+$I$.  We will interpret $I^0$ as signifying a singleton set.
+Consequently $\tspace{p,0}$ and $\tspace{0,q}$ are just the maps from,
+respectively, $I^p$ and $I^q$ to $\kfield$.  It is also customary to
+identify $\tspace{1,0}$ with $\kfield^I$, the vector space of list
+vectors indexed by $I$, and to identify $\tspace{0,1}$ with dual space
+$\lp\kfield^I\rp^*$ of linear forms on $\kfield^I$.  Finally,
+$\tspace{0,0}$ can be identified with $\kfield$ itself. In other
+words, scalars are tensor arrays of zero valence.
+
+Let 
+$X:I^p\times I^q\rightarrow \kfield$
+be a type $(p,q)$ tensor array.
+In writing the values of $X$, it is customary to write contravariant
+indices using superscripts, and covariant indices using subscripts.
+Thus, for indices $i_1,\ldots, i_p, j_1,\ldots,j_q\in I$ we write 
+$$X^{i_1\ldots
+  i_p}_{j_1\ldots j_q}$$ instead of \footnote{Curiously, the latter notation is preferred by some
+  authors.  See H. Weyl's books and papers, for example.}
+$$X(i_1,\ldots,i_p;j_1,\ldots,
+j_p).$$
+
+We also mention that it is customary to use columns to represent
+contravariant index dimensions, and rows to represent the covariant
+index dimensions.  Thus column vectors are type $(1,0)$ tensor arrays,
+row vectors are type $(0,1)$ tensor arrays, and matrices, in as much
+as they can be regarded either as rows of columns or as columns of
+rows, are type $(1,1)$ tensor arrays.\footnote{It is also customary to
+  use matrices to also represent type $(2,0)$ and type $(0,2)$ tensor
+  arrays (The latter are used to represent quadratic forms.)
+  Speaking idealistically, such objects should be typeset,
+  respectively, as a column of column vectors and as a row of row
+  vectors. However typographical constraints and notational
+  convenience dictate that they be displayed as matrices.}
+
+\paragraph{Notes.}
+It must be noted that our usage of the term {\em tensor array} is
+non-standard.  The traditionally inclined authors simply call these
+data structures tensors.  We bother to make the distinction because
+the traditional nomenclature is ambiguous and doesn't include the
+modern mathematical understanding of the tensor concept. (This is
+explained more fully in the \PMlinkname{tensor entry}{Tensor}.)  Precise and
+meaningful definitions can only be given by treating the concept of a
+tensor array as distinct from the concept of a geometric/abstract
+tensor.
+
+
+We also mention that the term {\em tensor} is often applied to objects
+that should more appropriately be termed a {\em tensor field}.  The
+latter are tensor-valued functions, or more generally sections of a
+tensor bundle.  A tensor is what one gets by evaluating a tensor field
+at one point.  Informally, one can also think of a tensor field as a
+tensor whose values are functions, rather than constants.
+%%%%%
+%%%%%
+\end{document}

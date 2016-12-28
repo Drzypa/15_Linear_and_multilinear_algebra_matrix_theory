@@ -1,0 +1,220 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOf2DReflectionMatrix}
+\pmcreated{2013-03-22 15:25:05}
+\pmmodified{2013-03-22 15:25:05}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{derivation of 2D reflection matrix}
+\pmrecord{14}{37262}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+%\pmkeywords{reflection matrix}
+%\pmkeywords{slope}
+%\pmkeywords{real projective line}
+\pmrelated{RotationMatrix}
+\pmrelated{DecompositionOfOrthogonalOperatorsAsRotationsAndReflections}
+\pmrelated{DerivationOfRotationMatrixUsingPolarCoordinates}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\newcommand{\real}{\mathbb{R}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+\providecommand{\transpose}[1]{#1^{\textrm{tr}}}
+
+
+
+\newcommand{\vx}{\mathbf{x}}
+\newcommand{\vy}{\mathbf{y}}
+\newcommand{\vu}{\mathbf{u}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\vw}{\mathbf{w}}
+
+\newcommand{\Otwo}{\mathrm{O}(2)}
+\newcommand{\RPone}{\mathbb{RP}^1}
+\begin{document}
+\section*{Reflection across a line of given angle}
+Let $\vx, \vy$ be perpendicular unit vectors in the plane.
+Suppose we want to reflect vectors (perpendicularly) over a line that makes an angle $\theta$ with
+the positive $\vx$ axis.  More precisely, we are given
+a direction direction vector $\vu = \cos \theta \, \vx + \sin \theta \, \vy$ for the line of reflection.
+A unit vector perpendicular to $\vu$ is $\vv = -\sin \theta \, \vx + \cos \theta \, \vy$
+(as is easily checked).  Then to reflect an arbitrary vector $\vw$,
+we write $\vw$ in \PMlinkescapetext{terms} of its components in the $\vu, \vv$ axes:
+$\vw = a\vu + b \vv$, and the result of the reflection is to be $\vw' = a\vu - b \vv$.
+
+\begin{center}
+\includegraphics{reflection.eps}
+\end{center}
+
+We compute the matrix for such a reflection in the original $x,y$ coordinates.
+
+Denote the reflection by $T$.  By the matrix change-of-coordinates formula,
+we have
+\begin{align*}
+[ T ]_{xy} = [I]_{uv}^{xy} \: [T]_{uv} \: [I]_{xy}^{uv}\,,
+\end{align*}
+where $[T]_{xy}$ and $[T]_{uv}$ denote the matrix representing $T$ with
+respect to the $x,y$ and $u,v$ coordinates respectively; $[I]_{uv}^{xy}$ is the
+matrix that changes from $u,v$ coordinates to $x,y$ coordinates, and $[I]_{xy}^{uv}$ is the matrix that changes coordinates the other way.
+
+The three matrices on the right-hand side are all easily derived
+from the description we gave for the reflection $T$:
+\begin{align*}
+[I]_{uv}^{xy} = \begin{bmatrix}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta
+\end{bmatrix}\,, \quad
+[T]_{uv} = \begin{bmatrix}
+1 & 0 \\
+0 & -1
+\end{bmatrix}\,,
+\quad 
+[I]_{xy}^{uv} = \Bigl( [I]_{uv}^{xy} \Bigr)^{-1} = 
+\begin{bmatrix}
+\cos \theta & \sin \theta \\
+-\sin \theta & \cos \theta
+\end{bmatrix}\,.
+\end{align*}
+Computing the matrix product (with the help of the double angle identity) yields:
+\begin{equation}\label{theta-matrix}
+[T]_{xy} = \begin{bmatrix}
+\cos 2\theta & \sin 2\theta \\
+\sin 2\theta & -\cos 2\theta
+\end{bmatrix}\,.
+\end{equation}
+
+For the \PMlinkescapetext{information} of the reader, we note that there are other ways of ``deriving'' this result.
+One is by the use of a diagram, which would show that $(1,0)$ gets reflected
+to $(\cos 2\theta, \sin 2\theta)$ and $(0,1)$ gets reflected to $(\sin 2\theta, -\cos 2\theta)$.
+Another way is to observe that we can rotate an arbitrary mirror line
+onto the x-axis, then reflect across the x-axis, and rotate back.
+(The matrix product $[T]_{xy}$ can be seen as operating this way.)
+We took neither of these two approaches, because to justify them rigorously takes a bit of work,
+that is avoided by the pure linear algebra approach.
+
+Note also that $[T]_{uv}$ and $[T]_{xy}$ are orthogonal matrices,
+with determinant $-1$, as expected.
+
+\section*{Reflection across a line of given direction vector}
+Suppose instead of being given an angle $\theta$,
+we are given the unit direction vector $u$ to reflect the vector $w$.
+We can derive the matrix for the reflection directly, without involving any trigonometric functions.
+
+In the decomposition $\vw = a \vu + b\vv$,
+we note that $b = \vw \cdot \vv$.  Therefore 
+\[
+\vw' = (a\vu + b\vv) - 2b\vv = \vw - 2(\vw \cdot \vv) \vv\,.
+\] 
+(In fact, this is the formula used in the \PMlinkescapetext{source code} to draw the diagram in this entry.)
+To derive the matrix with respect to $x,y$ coordinates, we resort to a trick:
+\[
+\vw' = I\vw - 2\vv (\vw \cdot \vv) = I\vw - 2\vv (\transpose{\vv} \vw) = I\vw - 2(\vv \transpose{\vv}) \vw\,.
+\]
+Therefore the matrix of the transformation is
+\[
+I - 2\vv \transpose{\vv}  = \begin{bmatrix}
+u_x^2 - u_y^2 & 2u_x u_y \\
+2u_x u_y & u_y^2 - u_x^2
+\end{bmatrix}\,, \quad \vu = \transpose{(u_x, u_y)}\,, \quad \vv = \transpose{(-u_y, u_x)}\,.
+\]
+If $u$ was not a unit vector to begin with, it of course suffices to divide by its magnitude before proceeding. Taking this into account, we obtain the following matrix for a reflection
+about a line with direction $\vu$:
+\begin{equation}
+\label{u-matrix}
+\frac{1}{u_x^2 + u_y^2} 
+\begin{bmatrix}
+u_x^2 - u_y^2 & 2u_x u_y \\
+2u_x u_y & u_y^2 - u_x^2
+\end{bmatrix}\,.
+\end{equation}
+Notice that if we put $u_x = \cos \theta$ and $u_y = \sin \theta$ in matrix \eqref{u-matrix},
+we get matrix \eqref{theta-matrix}, as it should be.
+
+\section*{Reflection across a line of given slope}
+There is another form for the matrix \eqref{theta-matrix}.
+We set $m = \tan \theta$ to be the slope of the line of reflection
+and use the identities:
+\begin{align*}
+\cos^2 \theta &= \frac{1}{\tan^2 \theta + 1}  = \frac{1}{m^2 + 1} \\
+\cos 2 \theta &= 2 \cos^2 \theta - 1  \\
+\sin 2 \theta &= 2 \sin \theta \cos \theta = 2 \tan \theta \cos^2 \theta = 2m \cos^2 \theta\,.
+\end{align*}
+When these equations are substituted in matrix \eqref{theta-matrix},
+we obtain an alternate expression for it in \PMlinkescapetext{terms} of $m$ only:
+\begin{equation}\label{m-matrix}
+\frac{1}{m^2 + 1} 
+\begin{bmatrix}
+1-m^2 & 2m \\
+2m & m^2 - 1
+\end{bmatrix}\,.
+\end{equation}
+Thus we have derived the matrix for a reflection about a line of slope $m$.
+
+Alternatively, we could have also substituted $u_x = 1$ and $u_y = m$
+in matrix \eqref{u-matrix} to arrive at the same result.
+
+\section*{Topology of reflection matrices}
+Of course, formula \eqref{m-matrix} does not work literally when 
+$m = \pm \infty$ (the line is vertical).
+However, that case may be derived by taking the limit $\abs{m} \to \infty$ ---
+this limit operation can be justified by considerations of the topology of 
+the space of two-dimensional reflection matrices.
+
+What is this topology? It is the one-dimensional projective plane $\RPone$,
+or simply, the ``real projective line''.
+It is formed by taking the circle, and identifying opposite points, so
+that each pair of opposite points specify a unique mirror line of reflection in $\real^2$.
+Formula \eqref{theta-matrix} is a parameterization of $\RPone$.
+Note that \eqref{theta-matrix} involves the quantity $2\theta$, not $\theta$,
+because for a point $(\cos \theta, \sin \theta)$ on the circle,
+its opposite point $(\cos (\theta+\pi), \sin (\theta+\pi))$ specify the same reflection,
+so formula \eqref{theta-matrix} has to be invariant when $\theta$ is replaced by $\theta + \pi$.
+
+But \eqref{theta-matrix} might as well be written
+\begin{equation}\label{phi-matrix}
+[T]_{xy} = \begin{bmatrix}
+\cos \phi & \sin \phi \\
+\sin \phi & -\cos \phi
+\end{bmatrix}\,.
+\end{equation}
+where $\phi = 2\theta$. For this parameterization of $RP^1$ to be one-to-one,
+$\phi$ can range over interval $(0, 2\pi)$, and the endpoints at $\phi = 0, 2\pi$ overlap just
+as for a circle, without identifying pairs of opposite points.  What does this mean?  It is the fact that $\RPone$ is homeomorphic to the circle $S^1$.
+
+The real projective line $\RPone$ is also the one-point compactification of $\real$
+(i.e. $\RPone = \real \cup \{ \infty \}$),
+as shown by formula \eqref{m-matrix}; the number $m = \infty$ corresponds to 
+a reflection across the vertical axis.  Note that this ``$\infty$''
+is not the same as the usual $\pm \infty$, because here $-\infty$ and $\infty$
+are actually the same number, both representing the slope of a vertical line.
+%%%%%
+%%%%%
+\end{document}

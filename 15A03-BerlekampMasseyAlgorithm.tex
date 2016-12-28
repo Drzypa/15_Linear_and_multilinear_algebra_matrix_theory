@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BerlekampMasseyAlgorithm}
+\pmcreated{2013-03-22 14:28:55}
+\pmmodified{2013-03-22 14:28:55}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Berlekamp-Massey algorithm}
+\pmrecord{7}{36015}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmclassification{msc}{11B37}
+\pmrelated{RecurrenceRelation}
+\pmrelated{MapleImplementationOfBerlekampMasseyAlgorithm}
+\pmdefines{linear recurrent sequence}
+\pmdefines{minimal polynomial of a sequence}
+\pmdefines{annihilator}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\begin{document}
+The Berlekamp-Massey algorithm is used for finding the minimal polynomial of a linearly recurrent sequence. The algorithm itself is presented at the end of this article.
+
+\begin{definition}
+Suppose the infinite sequence $a$ with elements from a field $K$ has the property that there exist constants $c_1, \ldots, c_k$ in $K$ such that, for all $t > k$, 
+        $$a_t = a_{t-1}c_1 + a_{t-2}c_2 + ... + a_{t-k}c_k.$$
+Then $a$ is called a {\textbf{linearly recurrent sequence}}.
+\end{definition}
+
+\begin{definition}
+Given a linearly recurrent sequence $a$, suppose $c_0 \ldots c_k \in K$ with $c_0 \neq 0$ satisfy, for all $t>k, $
+        $$c_0a_t = a_{t-1}c_1 + a_{t-2}c_2 + ... + a_{t-k}c_k.$$
+Then the polynomial $$c_0x^k - c_1x^{k-1} - c_2x^{k-2} - ... - c_k$$ is called an \textbf{annihilator} for $a$.
+\end{definition}
+
+\begin{proposition}
+The annihilators of $a$ form an ideal of $K[x]$.
+\end{proposition}
+
+\begin{definition}
+Since $K[x]$ is a principal ideal domain, the ideal of $a$'s annihilators have a unique monic generator of minimal degree. This annihilator is called the {\textbf{minimal polynomial}} of $a$.
+\end{definition}
+
+To find the minimal polynomial, we need to be given an upper bound $m$ on its degree; having done so, the minimal polynomial is uniquely determined by the first $2m$ elements of $a$ (since we need to get $m$ equations to solve for the unknowns $c_1, \ldots c_m$).
+
+
+
+There is another way to determine the minimal polynomial, originally presented by Dornstetter, which uses the Euclidean Algorithm. It can be shown that the characteristic polynomial of a sequence is the unique monic polynomial $C(x)$ of least degree for which the infinite product
+ $$C(x)(a_1 + a_2x + a_3x^2 + ...)$$
+has finitely many nonzero terms. (In fact, the nonzero terms will have coefficients up to $x^{k-1}$ where $k$ is the degree of $C$). 
+
+We can rewrite this as
+$$C(x)\cdot(a_1 + a_2x + ... + a_{2m}x^{2m-1}) - Q(x)\cdot x^{2m} = R(x) $$
+
+where $R(x)$ is a remainder polynomial of degree < $m$, and $Q(x)$ is a quotient polynomial. Denote by $A(x)$ the sum $\Sigma_{i=1}^{2m}a_ix^{i-1}$. 
+
+This is where the Euclidean Algorithm comes in; if we take the GCD of $A(x)$ and $x^{2m}$, keeping track of remainders, we get two sequences $P_i(x), Q_i(x)$ such that
+$$P_i(x)\cdot A(x) - Q_i(x)\cdot x^{2m}$$
+forms a series of polynomials whose degree is decreasing; as soon as this degree is less than $m$, we have the needed polynomials with $C=P_i, Q=Q_i$.
+
+There is more info about the Extended Euclidean Algorithm in ``Modern Computer Algebra'' by von zur Gathen and Gerhard. 
+
+(Berlekamp's algorithm proper to come)
+
+The original algorithm is from \emph{Algebraic Coding Theory} by Elwyn R. Berlekamp, McGraw-Hill, 1968. Its application to linearly recurrent sequences was noted by J.L.Massey, in ``Shift-register synthesis and BCH decoding'', 1969.
+%%%%%
+%%%%%
+\end{document}

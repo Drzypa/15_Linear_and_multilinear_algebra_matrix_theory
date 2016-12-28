@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SquareRootOfPositiveDefiniteMatrix}
+\pmcreated{2013-03-22 15:16:42}
+\pmmodified{2013-03-22 15:16:42}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{square root of positive definite matrix}
+\pmrecord{12}{37067}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A48}
+\pmrelated{CholeskyDecomposition}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Suppose $M$ is a positive definite Hermitian matrix. Then $M$ has a diagonalization 
+$$
+   M= P^* \operatorname{diag}(\lambda_1, \ldots, \lambda_n) P
+$$
+where $P$ is a unitary matrix and 
+   $\lambda_1, \ldots, \lambda_n$ are the eigenvalues of $M$, which are all positive. 
+
+We can now define the \emph{squar{e} roo{t}} of $M$ as the matrix
+$$
+   M^{1/2}= P^* \operatorname{diag}(\sqrt{\lambda_1}, \ldots, \sqrt{\lambda_n}) P.
+$$
+The following properties are clear
+\begin{enumerate}
+\item $M^{1/2} M^{1/2}=M$,
+\item $M^{1/2}$ is Hermitian and positive definite.
+\item $M^{1/2}$ and $M$ commute
+\item $(M^{1/2})^T=(M^T)^{1/2}$.
+\item $(M^{1/2})^{-1}=(M^{-1})^{1/2}$, so one can write $M^{-1/2}$
+\item If the eigenvalues of $M$ are $(\lambda_1, \ldots, \lambda_n)$, then
+    the eigenvalues of $M^{1/2}$ are 
+    $(\sqrt{\lambda_1}, \ldots, \sqrt{\lambda_n})$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

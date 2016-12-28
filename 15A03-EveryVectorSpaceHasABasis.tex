@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EveryVectorSpaceHasABasis}
+\pmcreated{2013-03-22 13:04:48}
+\pmmodified{2013-03-22 13:04:48}
+\pmowner{GrafZahl}{9234}
+\pmmodifier{GrafZahl}{9234}
+\pmtitle{every vector space has a basis}
+\pmrecord{14}{33494}
+\pmprivacy{1}
+\pmauthor{GrafZahl}{9234}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmsynonym{every vector space has a Hamel basis}{EveryVectorSpaceHasABasis}
+\pmrelated{ZornsLemma}
+\pmrelated{AxiomOfChoice}
+\pmrelated{ZermelosWellOrderingTheorem}
+\pmrelated{HaudorffsMaximumPrinciple}
+\pmrelated{KuratowskisLemma}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[latin1]{inputenc}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\newcommand{\Bigcup}{\bigcup\limits}
+\newcommand{\DirectSum}{\bigoplus\limits}
+\newcommand{\Prod}{\prod\limits}
+\newcommand{\Sum}{\sum\limits}
+\newcommand{\h}{\widehat}
+\newcommand{\mbb}{\mathbb}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mmm}[9]{\left(\begin{array}{rrr}#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{array}\right)}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+
+% Math Operators/functions
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\cwe}{cwe}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\mult}{mult}
+\DeclareMathOperator{\we}{we}
+\DeclareMathOperator{\wt}{wt}
+
+\begin{document}
+This result, trivial in the finite case, is in fact rather surprising
+when one thinks of infinite dimensionial vector spaces, and the
+definition of a basis: just try to imagine a basis of the vector space
+of all continuous mappings $f\colon\mbb{R}\to\mbb{R}$. The theorem is
+equivalent to the axiom of choice family of axioms and theorems. Here
+we will only prove that Zorn's lemma implies that every vector space
+has a basis.
+
+\newtheorem*{thm}{Theorem}
+\begin{thm}
+Let $X$ be any vector space over any field $F$ and assume Zorn's
+lemma. Then if $L$ is a linearly independent subset of $X$, there
+exists a basis of $X$ containing $L$. In particular, $X$ does have a
+basis at all.
+\end{thm}
+\begin{proof}
+Let $\mc{A}$ be the set of linearly independent subsets of $X$
+containing $L$ (in particular, $\mc{A}$ is not empty), then $\mc{A}$
+is partially ordered by inclusion. For each chain $C\subseteq\mc{A}$,
+define $\h{C}=\bigcup C$. Clearly, $\h{C}$ is an upper bound of $C$. Next we
+show that $\h{C}\in\mc{A}$. Let $V:=\{v_1,\ldots,v_n\}\subseteq\h{C}$
+be a finite collection of vectors. Then there exist sets $C_1,\ldots,
+C_n\in C$ such that $v_i\in C_i$ for all $1\leq i\leq n$. Since $C$ is
+a chain, there is a number $k$ with $1\leq k\leq n$ such that
+$C_k=\Bigcup_{i=1}^nC_i$ and thus $V\subseteq C_k$, that is $V$ is
+linearly independent. Therefore, $\h{C}$ is an element of $\mc{A}$.
+
+According to Zorn's lemma $\mc{A}$ has a maximal element, $M$, which
+is linearly independent. We show now that $M$ is a basis. Let $\langle M\rangle$
+be the span of $M$. Assume there exists an $x\in X\setminus\langle M\rangle$. Let
+$\{x_1,\ldots,x_n\}\subseteq M$ be a finite collection of vectors and
+$a_1,\ldots,a_{n+1}\in F$ elements such that
+\begin{equation*}
+a_1x_1+\cdots+a_nx_n-a_{n+1}x=0.
+\end{equation*}
+If $a_{n+1}$ was necessarily zero, so would be the other $a_i$, $1\leq i\leq n$,
+making $\{x\}\cup M$ linearly independent in contradiction to the
+maximality of $M$. If $a_{n+1}\neq 0$, we would have
+\begin{equation*}
+x=\frac{a_1}{a_{n+1}}x_1+\cdots+\frac{a_n}{a_{n+1}}x_n,
+\end{equation*}
+contradicting $x\notin\langle M\rangle$. Thus such an $x$ does not exist and
+$X=\langle M\rangle$, so $M$ is a generating set and hence a basis.
+
+Taking $L=\emptyset$, we see that $X$ does have a basis at all.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

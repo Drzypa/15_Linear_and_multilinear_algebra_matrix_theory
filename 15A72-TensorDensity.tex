@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TensorDensity}
+\pmcreated{2013-03-22 14:55:18}
+\pmmodified{2013-03-22 14:55:18}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{tensor density}
+\pmrecord{12}{36608}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A72}
+\pmsynonym{density}{TensorDensity}
+\pmrelated{tensor}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\subsection{Heuristic definition}
+
+A tensor density is a quantity whose transformation law under change of basis involves the determinant of the transformation matrix (as opposed to a tensor, whose transformation law does not involve the determinant).  
+
+\subsection{Linear Theory}
+
+For any real number $p$, we may define a representation $\rho_p$ of the group $GL(\mathbb{R}^k)$ on the vector space of tensor arrays of rank $m,n$ as follows:
+ $$(\rho_p (M) T)^{i_1, \ldots, i_n}_{j_1, \ldots j_m} = (\mathop{\rm det}(M))^p M^{i_1}_{l_1} \cdots M^{i_n}_{l_n} (M^{-1})_{k_1}^{j_1} \cdots (M^{-1})_{k_m}^{j_m} T^{i_1, \ldots, i_n}_{j_1, \ldots j_m}$$
+
+A \emph{tensor density} $T$ of rank $m,n$ and weight $p$ is an element of the vector space on which this representation acts.
+
+Note that if the weight equals zero, the concept of tensor density reduces to that of a tensor.
+
+\subsection{Examples}
+
+The simplest example of such a quantity is a scalar density.  Under a change of basis $y^i = M^i_j x^j$, a scalar density transforms as follows:
+ $$\rho_p (S) = (\mathop{\rm det}(M))^p S$$
+
+An important example of a tensor density is the Levi-Civita permutation symbol.  It is a density of weight $1$ because, under a change of coordinates,
+ $$(\rho_1 \epsilon)_{j_1, \ldots j_m} = (\mathop{\rm det}(M))  (M^{-1})_{k_1}^{j_1} \cdots (M^{-1})_{k_m}^{j_m} \epsilon^{i_1, \ldots, i_n}_{j_1, \ldots j_m} = \epsilon_{k_1, \ldots k_m}$$
+
+\subsection{Tensor Densities on Manifolds}
+
+As with tensors, it is possible to define tensor density fields on manifolds.  On each coordinate neighborhood, the density field is given by a tensor array of functions.  When two neighborhoods overlap, the tensor arrays are related by the change of variable formula
+ $$T^{i_1, \ldots, i_n}_{j_1, \ldots j_m} (x) = (\mathop{\rm det}(M))^p M^{i_1}_{l_1} \cdots M^{i_n}_{l_n} (M^{-1})_{k_1}^{j_1} \cdots (M^{-1})_{k_m}^{j_m} T^{i_1, \ldots, i_n}_{j_1, \ldots j_m} (y)$$
+where $M$ is the Jacobian matrix of the change of variables.
+%%%%%
+%%%%%
+\end{document}

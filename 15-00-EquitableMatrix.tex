@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquitableMatrix}
+\pmcreated{2013-03-22 14:58:28}
+\pmmodified{2013-03-22 14:58:28}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{equitable matrix}
+\pmrecord{11}{36674}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmrelated{HadamardProduct}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Equitable matrices have been used in economics and group theory
+ \cite{eves}. 
+
+\begin{defn} An $n\times n$ matrix $M=(m_{ij})$ is an 
+\emph{equitable matrix} if all $m_{ij}$ are positive, and 
+$m_{ij}=m_{ik} m_{kj}$ for all $i,j,k=1,\ldots, n$.
+\end{defn}
+
+Setting $i=j=k$ yields $m_{ii}=m_{ii} m_{ii}$ so diagonal elements of
+equitable matrices equal $1$. Next, setting $i=j$ yields
+$m_{ii}=m_{ik} m_{ki}$, so $m_{ik} =1/m_{ki}$.
+
+\subsubsection*{Examples}
+\begin{enumerate}
+\item 
+An example of an equitable matrix of order $n$ is
+$$
+  \begin{pmatrix} 1 & \cdots & 1 \\
+                  \vdots & \ddots & \vdots \\
+                  1 & \cdots & 1 \end{pmatrix}.
+$$
+This example shows that equitable matrices exist for all $n$. 
+\item The most general equitable matrix of orders $2$ and $3$ are
+$$
+  \begin{pmatrix} 1 & a \\
+                  1/a & 1 \end{pmatrix},
+$$
+and
+$$
+  \begin{pmatrix} 1 & a & ab  \\
+                  1/a & 1 &b \\
+                  1/ab & 1/b & 1 \end{pmatrix},
+$$
+where $a,b,c>0$. 
+
+\end{enumerate}
+
+\subsubsection*{Properties}
+\begin{enumerate}
+\item A $n \times n$ matrix $M=(m_{ij})$ is equitable if and 
+only if it can be expressed in the form
+$$
+  m_{ij} = \exp (\lambda_i - \lambda_j)
+$$
+for real numbers $\lambda_1, \lambda_2, \ldots, \lambda_n$ with $\lambda_1 = 0$. (\PMlinkname{proof.}{ParameterizationOfEquitableMatrices})
+\item An equitable matrix is completely determined by its first row. 
+If $m_{1i}$, $i=1, \ldots, n$ are known, then 
+$$
+   m_{ij} = \frac{m_{1j}}{m_{1i}}.
+$$
+\item If $M$ is an $n\times n$ equitable matrix, then 
+$$
+  \operatorname{exp}(M) = I + \frac{e^n-1}{n} M,
+$$
+where $\operatorname{exp}$ is the matrix exponential. 
+\item Equitable matrices form a group under the Hadamard product \cite{eves}.
+\item If $M$ is an $n\times n$ equitable matrix and $s\colon \{1,\ldots, r\}\to \{1, \ldots, n\}$
+is a mapping, then 
+$$
+   K_{ab} = M_{s(a)\, s(b)}, \quad a,b=1,\ldots, r
+$$
+is an equitable $r\times r$ matrix. In particular, striking the $l$:th row and column in an 
+equitable matrix yields a new equitable matrix. 
+\end{enumerate}
+
+See \cite{eves} for further properties and references.
+
+\begin{thebibliography}{9}
+\bibitem {eves} H. Eves, \emph{Elementary Matrix Theory}, Dover publications, 1980.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

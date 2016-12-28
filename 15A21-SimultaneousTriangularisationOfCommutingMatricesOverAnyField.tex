@@ -1,0 +1,187 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimultaneousTriangularisationOfCommutingMatricesOverAnyField}
+\pmcreated{2013-03-22 15:29:38}
+\pmmodified{2013-03-22 15:29:38}
+\pmowner{lars_h}{9802}
+\pmmodifier{lars_h}{9802}
+\pmtitle{simultaneous triangularisation of commuting matrices over any field}
+\pmrecord{4}{37352}
+\pmprivacy{1}
+\pmauthor{lars_h}{9802}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A21}
+\pmrelated{CommutingMatrices}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+
+\newtheorem*{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\vek}{\mathbf}
+
+\newcommand{\Mat}{\mathrm{M}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\Trans}[1]{#1^{\mathrm{T}}\!}
+\begin{document}
+Let $\vek{e}_i$ denote the (column) vector whose $i$th position is $1$ 
+and where all other positions are $0$. Denote by $[n]$ the set 
+$\{1,\dotsc,n\}$. Denote by $\Mat_n(\mc{K})$ the set of all $n \times 
+n$ matrices over $\mc{K}$, and by $\GL_n(\mc{K})$ the set of all 
+invertible elements of $\Mat_n(\mc{K})$. Let $d_i$ be the function 
+which extracts the $i$th diagonal element of a matrix, i.e., \(d_i(A) 
+= \Trans{\vek{e}_i} A \vek{e}_i\).
+
+
+\begin{theorem}
+  Let $\mc{K}$ be a field, let \(A_1,\dotsc,A_r \in \Mat_n(\mc{K})\) 
+  be pairwise commuting matrices, and let $\mc{L}$ be a field extension 
+  of $\mc{K}$ in which the characteristic polynomials of all $A_k$ 
+  \PMlinkname{split}{SplittingField}. Then there exists some 
+  \(P \in \GL_n(\mc{L})\) such that
+  \begin{enumerate}
+    \item
+      \(P^{-1} A_k P\) is upper triangular for all \(k=1,\dotsc,r\),
+      and
+    \item
+      if \(i,j,l \in [n]\) are such that \(i \leqslant l \leqslant j\) 
+      and \(d_i(P^{-1} A_k P) = d_j(P^{-1} A_k P)\) for all 
+      \(k=1,\dotsc,r\), then \(d_l(P^{-1} A_k P) = d_j(P^{-1} A_k P)\) 
+      for all \(k=1,\dotsc,r\) as well.
+  \end{enumerate}
+\end{theorem}
+
+The proof relies on two lemmas.
+
+\begin{lemma} \label{L1}
+  Let $\mc{K}$ be a field, let \(A_1,\dotsc,A_r \in \Mat_n(\mc{K})\) 
+  be pairwise commuting matrices, and let $\mc{L}$ be a field extension 
+  of $\mc{K}$ in which the characteristic polynomials of all $A_k$ 
+  split. Then there exists some nonzero \(\vek{u} \in \mc{L}^n\) which 
+  is an eigenvector of $A_k$ for all \(k=1,\dotsc,r\).
+\end{lemma}
+
+\begin{lemma} \label{L2}
+  For any sequence \(R_1,\dotsc,R_r \in \Mat_n(\mc{L})\) of upper 
+  triangular pairwise commuting matrices and every row index 
+  \(i \in [n]\), there exists \(\vek{v} \in \mc{L}^n \setminus \{0\}\) 
+  such that
+  \begin{equation*}
+    R_k \vek{v} = d_i(R_k) \vek{v}
+    \quad\text{for all \(k \in [r]\).}
+  \end{equation*}
+\end{lemma}
+
+
+\begin{proof}
+  This is by induction on $n$. The induction hypothesis is that given 
+  pairwise commuting matrices \(A_1,\dotsc,A_r \in \Mat_n(\mc{L})\), 
+  whose characteristic polynomials all split in $\mc{L}$, and a 
+  sequence of arbitrary scalars \(\mu_1,\dotsc,\mu_r \in \mc{L}\), 
+  there exists some \(P \in \GL_n(\mc{L})\) such that:
+  \begin{enumerate}
+    \item \label{Cond:Triangular}
+      \(P^{-1} A_k P\) is upper triangular for all \(k=1,\dotsc,r\).
+    \item \label{Cond:Block}
+      If some \(i,j \in [n]\) are such that \(i<j\) and 
+      \(d_j(P^{-1} A_k P) = d_i(P^{-1} A_k P)\) for all \(k \in [r]\), 
+      then \(d_{i+1}(P^{-1} A_k P) = d_i(P^{-1} A_k P)\).
+    \item \label{Cond:Forst}
+      If some \(j \in [n]\) is such that \(d_j(P^{-1} A_k P) = \mu_k\) 
+      for all \(k \in [r]\), then \(d_1(P^{-1} A_k P) = \mu_k\) 
+      for all \(k \in [r]\).
+  \end{enumerate}
+  For \(n=1\) this hypothesis is trivially fulfilled (all $1 \times 1$ 
+  matrices are upper triangular). Assume that it holds for \(n=m\) and 
+  consider the case \(n=m+1\).
+  
+  It is easy to see that condition~\ref{Cond:Triangular} implies 
+  that $P\vek{e}_1$ must be an eigenvector that is common to all the 
+  matrices. If there exists a nonzero vector \(\vek{u}_1 \in \mc{L}^n\) 
+  such that \(A_k \vek{u}_1 = \mu_k \vek{u}_1\) for all \(k=1,\dotsc,r\) 
+  then this is such a common eigenvector, and in that case let 
+  \(\lambda_k=\mu_k\) for all \(k=1,\dotsc,r\). Otherwise there by 
+  Lemma~\ref{L1} exists a vector
+  \(\vek{u}_1 \in \mc{L}^n \setminus \{\vek{0}\}\) such that 
+  \(A_k \vek{u}_1 = \lambda_k \vek{u}_1\) for some 
+  \(\{\lambda_k\}_{k=1}^r \subseteq \mc{L}\). Either way, one gets a 
+  suitable candidate $\vek{u}_1$ for $P\vek{e}_1$ and eigenvalues 
+  \(\lambda_1,\dotsc,\lambda_r\) that incidentally will satisfy 
+  \(d_1(P^{-1} A_k P) = \lambda_k\) for all \(k \in [r]\).
+  
+  Let \(\vek{u}_2,\dotsc,\vek{u}_n \in \mc{L}^n\) be arbitrary 
+  vectors such that \(\{\vek{u}_i\}_{i=1}^n\) is a basis of 
+  $\mc{L}^n$. Let $U$ be the $n \times n$ matrix whose $i$th column 
+  is $\vek{u}_i$ for \(1 \leqslant i \leqslant n\).\footnote{By 
+  imposing extra conditions on the choice of the basis 
+  \(\{\vek{u}_i\}_{i=1}^n\) (such as for example requesting that 
+  it is orthonormal) at this point, one can often prove a stronger 
+  claim where the choice of $P$ is restricted to some smaller 
+  group of matrices (for example the group of orthogonal 
+  matrices), but this requires assuming additional things about 
+  the fields $\mc{K}$ and $\mc{L}$.}
+  Then $U$ is invertible and for each $k$ the first column of 
+  \(B_k = U^{-1} A_k U\) is
+  \begin{equation*}
+    U^{-1} A_k U \vek{e}_1 =
+    U^{-1} A_k \vek{u}_1 =
+    \lambda_k U^{-1} \vek{u}_1 =
+    \lambda_k \vek{e}_1
+    \text{.}
+  \end{equation*}
+  Furthermore
+  \begin{multline*}
+    B_j B_k = U^{-1} A_j U U^{-1} A_k U =
+    U^{-1} A_j A_k U = \\ = 
+    U^{-1} A_k A_j U = 
+    U^{-1} A_k U U^{-1} A_j U = B_k B_j
+  \end{multline*}
+  for all $j$ and $k$.
+  
+  \PMlinkescapeword{side}
+  \PMlinkescapeword{contains}
+  
+  Now let $A_k'$ be the matrix formed from rows and columns $2$ though 
+  $n$ of $B_k$. Since \(\det(A_k -\nobreak xI) = 
+  \det( B_k -\nobreak xI ) = (\lambda_k -\nobreak x) 
+  \det( A_k' -\nobreak xI )\) by 
+  \PMlinkname{expansion}{LaplaceExpansion} along the first column, 
+  it follows that the characteristic polynomial of $A_k'$ splits in 
+  $\mc{L}$. Furthermore all the $A_k'$ have side \(m = n-1\) and 
+  commute pairwise with each other, whence by the induction hypothesis 
+  there exists some \(P' \in \GL_{n-1}(\mc{L})\) such that every 
+  \(P'^{-1} A_k' P'\) is upper triangular. Let \(P = 
+  U \left(\begin{smallmatrix} 1& 0 \\ 0& P' \end{smallmatrix}\right) 
+  \). Then the submatrix consisting of rows and columns $2$ through 
+  $n$ of $P^{-1} A_k P$ is equal to \(P'^{-1} A_k' P'\) and hence 
+  contains no nonzero subdiagonal elements. Furthermore the first 
+  column of $P^{-1} A_k P$ is equal to the first column of $B_k$ and 
+  thus the $P^{-1} A_k P$ are all upper triangular, as claimed.
+  
+  It also follows from the induction hypothesis that $P$ can be chosen 
+  such that \(d_2(P^{-1} A_k P) = d_1(P'^{-1} A_k' P') = \lambda_k = 
+  d_1(P^{-1} A_k P)\) for all \(k \in [r]\) if there is any \(j 
+  \geqslant 2\) for which \(d_j(P^{-1} A_k P) = d_{j-1}(P'^{-1} A_k' 
+  P') = \lambda_k = d_1(P^{-1} A_k P)\) for all \(k \in [r]\) and 
+  more generally if \(2 \leqslant i < j\) are such that 
+  \(d_j(P^{-1} A_k P) = d_i(P^{-1} A_k P)\) for all \(k \in [r]\) 
+  then similarly \(d_{i+1}(P^{-1} A_k P) = d_i(P^{-1} A_k P)\) 
+  for all \(k \in [r]\). This has verified 
+  condition~\ref{Cond:Block} of the induction hypothesis. 
+  For the remaining condition~\ref{Cond:Forst}, one may first observe 
+  that if there is some \(i \in [n]\) such that \(d_i(P^{-1} A_k P) = 
+  \mu_k\) for all \(k \in [r]\) then by Lemma~\ref{L2} 
+  there exists a nonzero \(\vek{v} \in \mc{L}^n\) such that 
+  \(P^{-1} A_k P \vek{v} = \mu_k \vek{v}\) for all \(k \in [r]\). This 
+  means $P \vek{v}$ will fulfill the condition for choice of 
+  $\vek{u}_1$, and hence \(d_1(P^{-1} A_k P) = \lambda_k = \mu_k\) as 
+  claimed.
+  
+  The theorem now follows from the principle of induction.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

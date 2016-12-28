@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ABAndBAAreAlmostIsospectral}
+\pmcreated{2013-03-22 14:44:51}
+\pmmodified{2013-03-22 14:44:51}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{$AB$ and $BA$ are almost isospectral}
+\pmrecord{14}{36386}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+\pmclassification{msc}{47A10}
+\pmclassification{msc}{16B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{parent}
+\PMlinkescapeword{similar}
+\PMlinkescapeword{argument}
+
+\subsection{General case}
+
+Let $A$ and $B$ be endomorphisms of a vector space $V$. Let $\sigma(AB)$ and $\sigma(BA)$ denote, respectively, the \PMlinkname{spectra}{spectrum} of $AB$ and $BA$.
+
+The next result shows that $AB$ and $BA$ are ``almost'' isospectral, in the sense that their spectra is the same except possibly the value $0$.
+
+{\bf Theorem -} Let $A$ and $B$ be as above. We have
+\begin{enumerate}
+\item $\sigma(AB) \cup \{0\} = \sigma(BA) \cup \{0\}$, and moreover
+\item $AB$ and $BA$ have the same eigenvalues, except possibly the zero eigenvalue.
+\end{enumerate}
+
+{\bf Proof :} Let  $\lambda \ne 0$.
+\begin{enumerate}
+\item  If $\lambda \in \sigma(AB)$ then $\lambda^{-1} AB - I$ is not invertible.  By the result in the parent entry, this implies that $\lambda^{-1} BA - I$ is not invertible either, hence $\lambda \in \sigma(BA)$.
+
+A similar argument proves that every non-zero element of $\sigma(BA)$ also belongs to $\sigma(AB)$. Hence $\sigma(AB) \cup \{0\} = \sigma(BA) \cup \{0\}$.
+
+\item If $\lambda$ is an eigenvalue of $AB$, then $I-\lambda^{-1}AB$ is not injective. By the result in the parent entry, this implies that $I-\lambda^{-1}BA$ is also not injective, hence $\lambda$ is an eigenvalue of $BA$.
+
+A similar argument proves that non-zero eigenvalues of $BA$ are also eigenvalues of $AB$. $\square$
+\end{enumerate}
+
+{\bf Remark :} Note that for infinite dimensional vector spaces the spectrum of a linear mapping does not consist solely  of its eigenvalues. Hence, 1 and 2 above are two different statements.
+
+\subsection{Finite dimensional case}
+
+When the vector space $V$ is finite dimensional we can strengthen the above result.
+
+{\bf Theroem -} $AB$ and $BA$ are isospectral, i.e. they have the same spectrum. Since $V$ is finite dimensional, this means that $AB$ and $BA$ have the same eigenvalues.
+
+{\bf Proof :} By the above result we only need to prove that: $AB$ is invertible if and only if $BA$ is invertible.
+
+Suppose $AB$ is not invertible. Hence, $A$ is not invertible or $B$ is not invertible.
+
+For finite dimensional vector spaces invertibility, injectivity and surjectivity are the same thing. Thus, the above statement can be rewritten as: $A$ is not injective or $B$ is not surjective.
+
+Either way $BA$ is not invertible.
+
+A similar argument shows that if $BA$ is not invertible, then $AB$ is also not invertible, which concludes the proof. $\square$
+
+\subsection{Comments}
+
+The first theorem can be proven in a more general context : If $A$ and $B$ are elements of an arbitrary unital algebra, then \begin{center}
+$\sigma(AB) \cup \{0\} = \sigma(BA) \cup \{0\}$.
+\end{center}
+
+This humble result plays an important role in the spectral theory of operator algebras.
+%%%%%
+%%%%%
+\end{document}

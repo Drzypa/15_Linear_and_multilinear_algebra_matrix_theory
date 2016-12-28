@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompoundMatrix}
+\pmcreated{2013-03-22 16:13:39}
+\pmmodified{2013-03-22 16:13:39}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{compound matrix}
+\pmrecord{9}{38326}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmdefines{rth adjugate}
+\pmdefines{Sylvester -Franke theorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Suppose that $A$ is an $m \times n$  matrix with entries from a field $F$ and 
+$1 \leq r \leq \min(m,n)$. The $r^{th}$ \emph{compound matrix} or
+$r^{th}$ \emph{\PMlinkescapetext{adjugate}} of $A$ is the 
+$\binom{m}{r} \times \binom{n}{r}$
+matrix whose entries are $\det A[\alpha,\beta])$, 
+$\alpha \in Q_{r,m}$ and $\beta \in Q_{r,n}$, arranged in lexicographic order  and we use submatrix notation.
+The notation for this matrix is $C_r(A)$.
+
+
+Properties
+
+\begin{enumerate}
+\item
+$C_r(AB) = C_r(A)C_r(B)$ when $r$ is less than or equal to the number of rows or columns of $A$ and $B$
+\item
+If $A$ is nonsingular, the $C_r(A)^{-1} = C_r(A^{-1})$.
+\item
+If $A$ has complex entries, then $C_r(A^*) = (C_r(A))^*$.
+\item
+$C_r(A^T) = (C_r(A))^T$
+\item
+$C_r(\overline{A}) = \overline{C_r(A)}$
+\item
+For any $k \in F$ $C_r(kA) = k^r C_r(A)$
+\item 
+$C_r(I_n ) = I_{\binom{n}{r}}$
+\item
+$\det (C_r(A)) = \det (A)^{\binom{n-1}{r-1}}$ (Sylvester --- Franke theorem)
+\end{enumerate}
+
+
+
+%%%%%
+%%%%%
+\end{document}

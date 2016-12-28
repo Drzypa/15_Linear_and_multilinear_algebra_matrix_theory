@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SchurDecomposition}
+\pmcreated{2013-03-22 13:42:12}
+\pmmodified{2013-03-22 13:42:12}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{Schur decomposition}
+\pmrecord{8}{34380}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmrelated{AnExampleForSchurDecomposition}
+\pmrelated{ProofThatDetEAEoperatornametrA}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If $A$ is a complex square matrix of order n \textit{(i.e. $A\in\mathrm{Mat}_n(\mathbb{C})$)}, then there exists a unitary matrix $Q \in \mathrm{Mat}_n(\mathbb{C})$ such that\\
+\begin{center}
+$Q^HAQ = T = D + N$
+\end{center}
+where $^H$ is the conjugate transpose, $D = \operatorname{diag}(\lambda_1,   \dots, \lambda_n)$ \textit{(the $\lambda_i$ are eigenvalues of $A$)}, and $N \in \mathrm{Mat}_n(\mathbb{C})$ is strictly upper triangular matrix.  Furthermore, $Q$ can be chosen such that the eigenvalues $\lambda_i$ appear in any order along the diagonal.  \cite{1}
+\begin{thebibliography}{1}
+\bibitem[GVL]{1} Golub, H. Gene, Van Loan F. Charles:  Matrix Computations \textit{(Third Edition)}.  The Johns Hopkins University Press, London, 1996.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

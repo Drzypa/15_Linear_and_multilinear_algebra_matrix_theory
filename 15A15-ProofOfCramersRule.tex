@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCramersRule}
+\pmcreated{2013-03-22 13:03:24}
+\pmmodified{2013-03-22 13:03:24}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{proof of Cramer's rule}
+\pmrecord{11}{33462}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Since $\det(A) \neq 0$, by properties of the determinant we know that $A$ is invertible.
+
+We claim that this implies that the equation $Ax=b$ has a unique solution.
+Note that $A^{-1}b$ is a solution since $A(A^{-1}b)=(AA^{-1})b=b$, so we know that a solution exists.
+
+Let $s$ be an arbitrary solution to the equation, so $As=b$.  But then $s=(A^{-1}A)s=A^{-1}(As)=A^{-1}b$, so we see that $A^{-1}b$ is the only solution.
+
+For each integer $i$, $1 \leq i \leq n$, let $a_i$ denote the $i$th column of $A$, let $e_i$ denote the $i$th column of the identity matrix $I_n$, and let $X_i$ denote the matrix obtained from $I_n$ by replacing column $i$ with the column vector $x$.
+
+We know that for any matrices $A,B$ that the $k$th column of the product $AB$ is simply the product of $A$ and the $k$th column of $B$.  Also observe that $Ae_k=a_k$ for $k=1,\ldots,n$.  Thus, by multiplication, we have:
+\[ \begin{array}{lll}
+   AX_i & = & A (e_1,\ldots,e_{i-1},x,e_{i+1},\ldots,e_n) \\
+        & = & (Ae_1,\ldots,Ae_{i-1},Ax,Ae_{i+1},\ldots,Ae_n) \\
+        & = & (a_1,\ldots,a_{i-1},b,a_{i+1},\ldots,a_n) \\
+        & = & M_i 
+\end{array} \]
+
+Since $X_i$ is $I_n$ with column $i$ replaced with $x$, computing the determinant of $X_i$ with cofactor expansion gives:
+\[ \det(X_i) = (-1)^{(i+i)} x_i \det(I_{n-1}) = 1 \cdot x_i \cdot 1 = x_i\]
+Thus by the multiplicative property of the determinant,
+\[ \det(M_i) = \det(AX_i) = \det(A) \det(X_i) = \det(A) x_i \]
+and so $x_i = \frac{\det(M_i)}{\det(A)}$ as required.
+%%%%%
+%%%%%
+\end{document}

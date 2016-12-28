@@ -1,0 +1,150 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Determinant}
+\pmcreated{2013-03-22 12:33:07}
+\pmmodified{2013-03-22 12:33:07}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{determinant}
+\pmrecord{24}{32797}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+\pmrelated{LaplaceExpansion}
+\pmrelated{Permanent}
+\pmrelated{GeneralizedRuizsIdentity}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\mM}{\mathbf{M}}
+\begin{document}
+\section*{Overview}
+
+The \emph{determinant} is an algebraic operation that transforms a
+square matrix $M$ into a scalar. This operation has many useful and
+important properties.  For example, the determinant is zero if and
+only the matrix $M$ is singular (no inverse exists).  The determinant
+also has an important geometric interpretation as the area of a
+parallelogram, and more generally as the volume of a
+higher-dimensional parallelepiped.
+
+The notion of determinant predates matrices and linear
+transformations. Originally, the determinant was a number associated
+to a system of $n$ linear equations in $n$ variables. This number
+``determined'' whether the system possessed a unique solution.  In
+this sense, two-by-two determinants were considered by Cardano at the
+end of the 16th century and ones of arbitrary size (see the definition
+below) by Leibniz about 100 years later.
+
+\section*{Definition}
+
+Let $M$ be an $n\times n$ matrix with entries $M_{ij}$ that are
+elements of a given field\footnote{Most scientific and geometric
+applications deal with matrices made up of real or complex numbers.
+However, the determinant of a matrix over any field is well defined
+sense and has all the properties of the more conventional
+determinant. Indeed, many properties of the determinant remain
+valid for matrices with entries in a commutative ring.}. The
+determinant of $M$, or $\det M$ for short, is the scalar quantity
+\begin{equation}
+\label{eq:detdef}
+\det M = \left|
+\begin{array}{cccc}
+M_{11} & M_{12} &\ldots & M_{1n} \\
+M_{21} & M_{22} & \ldots & M_{2n}\\
+\vdots & \vdots & \ddots & \vdots \\
+M_{n1} & M_{n2} & \ldots & M_{nn}
+\end{array}\right| = \sum_{\pi\in S_n} \mathrm{sgn}(\pi) M_{1\pi_1}
+M_{2\pi_2}\cdots
+M_{n\pi_n}.
+\end{equation}
+The index $\pi$ in the above sum varies over all the permutations of
+$\{1,\ldots,n\}$ (i.e., the elements of the symmetric group $S_n$.)
+Hence, there are $n!$ terms in the defining sum of the determinant.
+The symbol $\operatorname{sgn}(\pi)$ denotes the parity of the
+permutation; it is $\pm 1$ according to whether $\pi$ is an even or
+odd permutation.  Using the Einstein summation convention one can also
+express the above definition as
+\begin{equation}
+  \det M = \epsilon_{\pi_1\pi_2\dots \pi_n} M^{\pi_1}{}_1  M^{\pi_2}{}_2
+  \cdots  M^{\pi_n}{}_{n},
+\end{equation}
+where we've raised the first index so that $M^i{}_j = M_{ij}$, and
+where 
+\[\epsilon_{\pi_1\dots \pi_n} = \operatorname{sgn}(\pi)\]
+is known as the Levi-Civita permutation symbol.
+
+By way of example, the determinant of a $2\times2$ matrix is given by
+$$\left| \begin{matrix} M_{11} & M_{12} \\ M_{21}& M_{22}
+\end{matrix}\right| = M_{11} M_{22}-M_{12}M_{21},$$
+There are six permutations of the numbers $1,2,3$, namely
+$$1\overset{+}23,\;2\overset{+}31,\;3\overset{+}12,\;1\overset{-}32,\;
+3\overset{-}21,\;2\overset{-}13;$$
+the overset sign indicates the permutation's signature. Accordingly,
+the $3\times 3$ deterimant is a sum of the following $6$ terms:
+$$ \left| \begin{matrix}
+M_{11} & M_{12} & M_{13} \\
+M_{21} & M_{22} & M_{23} \\
+M_{31} & M_{32} & M_{33}
+\end{matrix}\right| =
+\begin{array}{rr}
+\\
+M_{11} M_{22} M_{33} + M_{12} M_{23} M_{31} + M_{13}M_{21} M_{32} \\
+-M_{11}M_{23}M_{32}-M_{13}M_{22} M_{31} - M_{12}M_{21}M_{33}
+\end{array}
+$$
+
+\section*{Remarks and important properties}
+
+\begin{enumerate}
+\item
+\label{pd:mult} The determinant operation converts matrix multiplication into
+scalar multiplication;
+$$
+\det(AB)=\det(A) \det(B),
+$$
+where $A, B$ are square matrices of the same size.
+\item The determinant operation is multi-linear, and anti-symmetric
+with respect to the matrix's rows and columns. See the
+multi-linearity attachment for more details.
+\item The determinant of a lower triangular, or an upper triangular
+matrix is the product of the diagonal entries, since all the other summands
+in (1) are zero.
+\item \PMlinkname{Similar matrices}{SimilarMatrix}
+have the same determinant. To be more precise,
+let $A$ and $X$ be square matrices with $X$ invertible. Then,
+$$
+\det(XAX^{-1})= \det(A).
+$$
+In particular, if we let $X$ be the matrix representing a change of
+basis, this shows that the determinant is independent of the basis.
+The same is true of the trace of a matrix. In fact, the whole
+characteristic polynomial of an endomorphism is definable without
+using a basis or a matrix, and it turns out that the determinant and
+trace are two of its coefficients.
+\item The determinant of a matrix $A$ is zero if and only if $A$ is
+singular; that is, if there exists a non-trivial solution to the
+homogeneous equation
+$$
+A\mathbf{x} = \mathbf{0}.
+$$
+\item The transpose
+operation does not change the determinant:
+$$
+\det A^{\scriptscriptstyle\mathrm{T}} = \det A.
+$$
+\item
+The determinant of a diagonalizable transformation is equal to the product
+of its eigenvalues, counted with multiplicities.
+\item The determinant is homogeneous of degree $n$. This means that
+$$
+\det(k M ) = k^n \det M,\quad k\;\text{is a scalar.}
+$$
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

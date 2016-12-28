@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EuclideanSpace}
+\pmcreated{2013-03-22 14:17:19}
+\pmmodified{2013-03-22 14:17:19}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{Euclidean space}
+\pmrecord{16}{35743}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmclassification{msc}{51M05}
+\pmrelated{EuclideanVectorProperties}
+\pmrelated{InnerProduct}
+\pmrelated{PositiveDefinite}
+\pmrelated{EuclideanDistance}
+\pmrelated{Vector}
+\pmdefines{Euclidean plane}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\begin{document}
+\section{Definition}
+\emph{Euclidean $n$-space} is a metric space $(E,d)$
+with the property that the group of isometries is transitive and is
+isomorphic to an $n$-dimensional Euclidean vector space.  To be more
+precise, we are saying that there exists an $n$-dimensional Euclidean
+vector space $V$ with inner product $\langle \cdot,\cdot\rangle$ and a
+mapping
+\[ +: E\times V\to E \]
+such that the following hold:
+\begin{enumerate}
+\item For all $x,y\in E$ there exists a unique $u\in V$ satisfying
+\[ y=x+u,\quad d(x,y)^2=\langle u,u\rangle,\]
+\item For all $x,y\in E$ and all $u\in V$ we have
+\[ d(x+u,y+u)=d(x,y).\]
+\item For all $x\in E$ and all $u,v\in V$ we have
+\[ (x+u)+v=x+(u+v).\]
+\end{enumerate}
+Putting it more succinctly: $V$ acts transitively and effectively on
+$E$ by isometries.
+
+\paragraph{Remarks.}
+\begin{itemize}
+\item
+The difference between Euclidean space and a Euclidean vector space is
+one of loss of structure.  Euclidean space is a Euclidean vector space
+that has ``forgotten'' its origin.
+\item A 2-dimensional Euclidean space is often called a
+  \emph{Euclidean plane}.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

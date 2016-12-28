@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MatrixRepresentationOfALinearTransformation}
+\pmcreated{2013-03-22 17:29:59}
+\pmmodified{2013-03-22 17:29:59}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{matrix representation of a linear transformation}
+\pmrecord{15}{39888}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+\pmsynonym{ordered bases}{MatrixRepresentationOfALinearTransformation}
+\pmsynonym{standard ordered bases}{MatrixRepresentationOfALinearTransformation}
+\pmrelated{LinearTransformation}
+\pmdefines{ordered basis}
+\pmdefines{matrix representation}
+\pmdefines{standard ordered basis}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Linear transformations and matrices are the two most fundamental notions in the study of linear algebra.  The two concepts are intimately related.  In this article, we will see how the two are related.  We assume that all vector spaces are finite dimensional and all vectors are written as column vectors.
+
+\subsubsection*{Linear transformations as matrices}
+
+Let $V,W$ be vector spaces (over a common field $k$) of dimension $n$ and $m$ respectively.  Fix bases $A=\lbrace v_1,\ldots, v_n\rbrace$ and  $B=\lbrace w_1,\ldots, w_m\rbrace$ for $V$ and $W$ respectively.  We shall order these bases so that $v_i < v_j$ and $w_i < w_j$ whenever $i < j$.  To distinguish an ordinary set from an ordered set, we shall adopt the notation $\langle v_1,\ldots, v_n\rangle$ to mean the set $\lbrace v_1,\ldots, v_n\rbrace$ with ordering $v_i\le v_j$ whenever $i\le j$.  The importance of ordering these bases will be apparent shortly.
+
+For any linear transformation $T:V\to W$, we can write $$T(v_j)=\sum_{i=1}^m \alpha_{ij} w_i$$ for each $j\in \lbrace 1,\ldots, n\rbrace$ and $\alpha_{ij}\in k$.  We define the \emph{matrix associated with the linear transformation $T$ and ordered bases $A,B$} by $$[T]^A_B:=(\alpha_{ij}),$$ where $1\le i\le n$ and $1\le j\le m$. $[T]^A_B$ is a $m\times n$ matrix whose entries are in $k$.  When $A=B$, we often write $[T]_A:=[T]^A_A$.  In addition, when both ordered bases are standard bases $E_n,E_m$ ordered in the obvious way, we write $[T]:=[T]^{E_n}_{E_m}$.
+
+\textbf{Examples.}
+\begin{enumerate}
+\item Let $T:\mathbb{R}^3\to \mathbb{R}^4$ be given by $$T\begin{pmatrix}x\\y\\z\end{pmatrix}=\begin{pmatrix}x+2y+z \\ z \\ -x+y-5z \\ 3x+2z\end{pmatrix}.$$  Using the standard ordered bases $$E_3=\Bigg\langle \begin{pmatrix}1\\0\\0\end{pmatrix}, \begin{pmatrix}0\\1\\0\end{pmatrix},\begin{pmatrix}0\\0\\1\end{pmatrix}\Bigg\rangle \mbox{ for }\mathbb{R}^3 \quad \mbox{ and } \quad E_4=\Bigg\langle \begin{pmatrix}1\\0\\0\\0\end{pmatrix}, \begin{pmatrix}0\\1\\0\\0\end{pmatrix}, \begin{pmatrix}0\\0\\1\\0\end{pmatrix}, \begin{pmatrix}0\\0\\0\\1\end{pmatrix}\Bigg\rangle \mbox{ for }\mathbb{R}^4$$ ordered in the obvious way.  Then, $$T\begin{pmatrix}1\\0\\0\end{pmatrix}=\begin{pmatrix}1\\0\\-1\\3\end{pmatrix},\quad T\begin{pmatrix}0\\1\\0\end{pmatrix}=\begin{pmatrix}2\\0\\1\\0\end{pmatrix},\quad T\begin{pmatrix}0\\0\\1\end{pmatrix}=\begin{pmatrix}1\\1\\-5\\2\end{pmatrix},$$ so the matrix $[T]^{E_3}_{E_4}$ associated with $T$ and the standard ordered bases $E_3$ and $E_4$ is the $4\times 3$ matrix $$\begin{pmatrix} 1&2&1 \\ 0&0&1 \\ -1&1&-5 \\ 3&0&2 \end{pmatrix}.$$
+\item Let $T$ be the same linear transformation as above.  However, let $E'_3$ be the same basis as $E_3$ except that the order is reversed: $e_3<e_2<e_1$.  Then $$[T]^{E'_3}_{E_4}=\begin{pmatrix} 1&2&1 \\ 1&0&0 \\ -5&1&-1 \\ 2&0&3 \end{pmatrix}.$$  Note that this matrix is just the matrix from the previous example except that the first and the last columns have been switched.
+\item Again, let $T$ be the same as before.  Now, let $E'_4$ be the ordered basis whose elements are those of $E_4$ but the order is now given by $e_2<e_1<e_4<e_3$.  Then $$[T]^{E'_3}_{E'_4}=\begin{pmatrix} 1&0&0 \\ 1&2&1 \\ 2&0&3 \\ -5&1&-1 \end{pmatrix}.$$  Note that this matrix is just the matrix from the previous example except that the first two rows and the last two rows have been interchanged.
+\end{enumerate}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+From the examples above, we note several important features of a matrix representation of a linear transformation:
+\begin{enumerate}
+\item the matrix depends on the bases given to the vector spaces
+\item the ordering of a basis is important
+\item switching the order of a given basis amounts to switching columns and rows of the matrix, essentially multiplying a matrix by a permutation matrix.
+\end{enumerate}
+\item Some basic properties of matrix representations of linear transformations are
+\begin{enumerate}
+\item If $T:V\to W$ is a linear transformation, then $[rT]^A_B=r[T]^A_B$, where $A,B$ are ordered bases for $V,W$ respectively.
+\item If $S,T:V\to W$ are linear transformations, then $[S+T]^A_B=[S]^A_B+[T]^A_B$, where $A$ and $B$ are ordered bases for $V$ and $W$ respectively.
+\item If $S:U\to V$ and $T:V\to W$, then $[TS]^A_C=[T]^B_C[S]^A_B$, where $A,B,C$ are ordered bases for $U,V,W$ respectively.
+\item As a result, $T$ is invertible iff $[T]^A_B$ is an invertible matrix iff $\dim(V)=\dim(W)$.
+\end{enumerate}
+\item
+We could have represented all vectors as row vectors.  However, doing so would mean that the matrix representation $M_1$ of a linear transformation $T$ would be the transpose of the matrix representation $M_2$ of $T$ if the vectors were represented as column vectors: $M_1=M_2^T$, and that the application of the matrices to vectors would be from the right of the vectors:  $$\begin{pmatrix}a&b&c\end{pmatrix}\begin{pmatrix}1&0&-1&3\\2&0&1&0\\1&1&-5&2\end{pmatrix}\qquad \mbox{ instead of } \qquad\begin{pmatrix} 1&2&1 \\ 0&0&1 \\ -1&1&-5 \\ 3&0&2 \end{pmatrix}\begin{pmatrix}a\\b\\c\end{pmatrix}.$$
+\end{itemize}
+
+\subsubsection*{Matrices as linear transformations}
+
+Every $m\times n$ matrix $A$ over a field $k$ can be thought of as a linear transformation from $k^n$ to $k^m$ if we view each vector $v\in k^n$ as a $n\times 1$ matrix (a column) and the mapping is done by the matrix multiplication $Av$, which is a $m\times 1$ matrix (a column vector in $k^m$).  Specifically, we define $T_A:k^n\to k^m$ by $$T_A(v):=Av.$$  It is easy to see that $T_A$ is indeed a linear transformation.  Furthermore, $[T_A]=[T_A]^{E_n}_{E_m}=A$, since the representation of vectors as $n$-tuples of elements in $k$ is the same as expressing each vector under the standard basis (ordered) in the vector space $k^n$.  Below we list some of the basic properties:
+
+\begin{enumerate}
+\item $T_{rA}=rT_A$, for any $r\in k$,
+\item $T_A+T_B=T_{A+B}$, where $A,B$ are $m\times n$ matrices over $k$
+\item $T_A\circ T_B=T_{AB}$, where $A$ is an $m\times n$ matrix and $B$ is an $n\times p$ matrix over $k$
+\item $T_A$ is invertible iff $A$ is an invertible matrix.
+\end{enumerate}
+
+\textbf{Remark}.  As we can see from the discussion above, if we fix sets of base elements for a vector space $V$ and $W$, there is a one-to-one correspondence between the set of matrices (of the same size) over the underlying field $k$ and the set of linear transformations from $V$ to $W$.
+
+\begin{thebibliography}{3}
+\bibitem{Friedberg} Friedberg, Insell, Spence. {\it Linear Algebra}. Prentice-Hall Inc., 1997.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

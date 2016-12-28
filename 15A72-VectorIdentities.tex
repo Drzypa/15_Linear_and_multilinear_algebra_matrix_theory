@@ -1,0 +1,261 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VectorIdentities}
+\pmcreated{2013-03-22 18:07:43}
+\pmmodified{2013-03-22 18:07:43}
+\pmowner{mark_t314159}{20778}
+\pmmodifier{mark_t314159}{20778}
+\pmtitle{vector identities}
+\pmrecord{34}{40678}
+\pmprivacy{1}
+\pmauthor{mark_t314159}{20778}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A72}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\section{Preface}
+In all works that I have read, that describe electromagnetic fields from a technical point of view, the authors use vector identities to establish proof. These vector identities,for example, are used to establish the veracity of the poynting vector or establish the wave equation. 
+We have no intristic reason to believe these identities are true, however the proofs of which can be tedious. Nonwithstanding, doing so can have rewards as we gain insight into the nature of combinatorics and the constraints of permutations.
+A list of these vector identities is provided and for each one also is provided a proof of the identity.
+\section{What are curl and div anyway?}
+curl see hyperlinks for more information.
+\begin{equation}
+(\nabla \times \vec{B} )
+\end{equation}
+divergence see hyperlinks for more information.
+\begin{equation}
+(\nabla \cdot \vec{B} )
+\end{equation}
+\begin{equation}
+(\nabla b )
+\end{equation}
+Is div applied to a scalar. This is the gradient or grad.
+curl takes a vector and gives back a vector; div takes a vector and gives back a scalar.
+grad takes a scalar and gives back a vector.
+\section{First Proof}
+\begin{equation}
+\nabla ab = a\nabla b + b\nabla a
+\end{equation}
+Starting with
+\begin{equation}
+\nabla f = \vec{i} \frac{\partial f}{\partial x_1} +\vec{j} \frac{\partial f}{\partial x_2}+\vec{k} \frac{\partial f}{\partial x_3}
+\end{equation}
+Replace f with ab
+\begin{equation}
+\nabla ab = \vec{i} \frac{\partial ab}{\partial x_1} +\vec{j} \frac{\partial ab}{\partial x_2}+\vec{k} \frac{\partial ab}{\partial x_3}
+\end{equation}
+we cannot make assertions about the scalar functions a b, so we are forced to invoke the 
+product rule assuming the most generality
+For the first dimension it becomes
+\begin{equation}
+\vec{i}\left[ a \frac{\partial b}{\partial x_1} +  \frac{\partial a}{\partial x_1} b \right]
+\end{equation}
+and likewise
+\begin{equation}
+\vec{j}\left[ a \frac{\partial b}{\partial x_1} +  \frac{\partial a}{\partial x_1} b \right]
+\end{equation}
+\begin{equation}
+\vec{k}\left[ a \frac{\partial b}{\partial x_1} +  \frac{\partial a}{\partial x_1} b \right]
+\end{equation}
+Instead of viewing this as a single vector we split the vector into two vectors.
+\begin{equation}
+\vec{i}\left[ a \frac{\partial b}{\partial x_1}\right] \longleftrightarrow \vec{i}\left[ \frac{\partial a}{\partial x_1} b \right]
+\end{equation}
+and likewise
+\begin{equation}
+\vec{j}\left[ a \frac{\partial b}{\partial x_1} \right]  \longleftrightarrow  \vec{j}\left[  \frac{\partial a}{\partial x_1} b \right]
+\end{equation}
+\begin{equation}
+\vec{k}\left[ a \frac{\partial b}{\partial x_1} \right]  \longleftrightarrow \vec{k}\left[ \frac{\partial a}{\partial x_1} b \right]
+\end{equation}
+factor the a scalar from the first vector and b scalar from the second vector
+\begin{equation}
+a \left[ \vec{i}  \frac{\partial b}{\partial x_1}+ \vec{j}  \frac{\partial b}{\partial x_2} + \vec{k}  \frac{\partial b}{\partial x_3} \right] +\left[ \vec{i}  \frac{\partial a}{\partial x_1}+ \vec{j}  \frac{\partial a}{\partial x_2} + \vec{k}  \frac{\partial a}{\partial x_3} \right]  b  
+\end{equation}
+Now the defintion of the gradient can be seen to occur twice in the last equation, once for b and once for a
+and it is shown by imposing a structure
+\begin{equation}
+\nabla ab = a\nabla b + b\nabla a
+\end{equation}
+\section{Second Proof}
+\begin{equation}
+\nabla (\vec{A} \cdot \vec{B}) = [(\vec{A} \cdot \nabla)\vec{B}]+[(\vec{B} \cdot \nabla)\vec{A}] + [\vec{A} \times (\nabla \times \vec{B})]+ [\vec{B} \times (\nabla \times \vec{A})]
+\end{equation}
+This is the second vector identity to prove.
+\begin{equation}
+\nabla \cdot (A \times B)  = [B \cdot (\nabla \times A)] - [A \cdot (\nabla \times B)]
+\end{equation}
+\begin{equation}
+\frac{\partial (a_2 b_3-b_2 a_3) }{\partial x_1}
+\end{equation}
+Structurally, this means we have to apply the product rule twice: 
+Once on the first term and again on the second term.
+\begin{equation}
+\frac{\partial (a_2 b_3)}{\partial x_1} -\frac{\partial (b_2 a_3) }{\partial x_1}
+\end{equation}
+Each of these must get expanded according to the product rule.
+\begin{equation}
+ a_2\frac{\partial b_3}{\partial x_1} +  b_3\frac{\partial a_2}{\partial x_1} - \left[ a_3\frac{\partial b_2}{\partial x_1} +  b_2\frac{\partial a_3}{\partial x_1} \right]
+\end{equation}
+\begin{equation}
+- \left[ a_1\frac{\partial b_3}{\partial x_2} +  b_3\frac{\partial a_1}{\partial x_2} - \left[ a_3\frac{\partial b_1}{\partial x_2} +  b_1\frac{\partial a_3}{\partial x_2} \right]\right]
+\end{equation}
+\begin{equation}
+ a_1\frac{\partial b_2}{\partial x_3} +  b_2\frac{\partial a_1}{\partial x_3} 
+- \left[ a_2\frac{\partial b_1}{\partial x_3} +  b_1\frac{\partial a_2}{\partial x_3} \right]
+\end{equation}
+Ok. Now we start to look at this as an array. The importance of this cannot be underestimated to build up what I call a Noetherian viewpoint. If we insist on imposing a structure on something that is abelian, we will be able to draw conclusions with much more alacrity.
+\begin{equation}
+\mathbf{X} = \left(
+\begin{array}{cccc}
+a_2\partial b^3_1 & b_3\partial a^2_1  & -a_3\partial b^2_1 & -b_2\partial a^3_1 \\
+-a_1\partial b^3_2 & -b_3\partial a^1_2  & a_3\partial b^1_2 & b_1\partial a^3_2 \\
+a_1\partial b^2_3 & b_2\partial a^1_3  & -a_2\partial b^1_3 & -b_1\partial a^2_3 
+\end{array} \right)
+\end{equation}
+This transformation now allows us to count that 3x4 or 12 terms is the same as 2x6 terms.
+grabbing the $a_1$ terms:
+\begin{equation}
+a_1\partial b^2_3 -a_1\partial b^3_2 
+\end{equation}
+grabbing the $a_2$ terms:
+\begin{equation}
+-\left[a_2\partial b^1_3-a_2\partial b^3_1\right] 
+\end{equation}
+grabbing the $a_3$ terms:
+\begin{equation}
+a_3\partial b^1_2   -a_3\partial b^2_1 
+\end{equation}
+grabbing the $b_1$ terms:
+\begin{equation}
+-b_1\partial a^2_3 + b_1\partial a^3_2 
+\end{equation}
+grabbing the $b_2$ terms:
+\begin{equation}
+-\left[-\left[b_2\partial a^1_3-b_2\partial a^3_1 \right]\right]
+\end{equation}
+grabbing the $b_3$ terms:
+\begin{equation}
+-b_3\partial a^1_2   +b_3\partial a^2_1 
+\end{equation}
+Note that the Sign of the second group of six is Inverted from the first group.
+All of these have an identical form and it remains to extract the Dot product of the A vector with something that can be made to look like the curl of B.
+Factoring and transforming back to the partial deriviative form:
+grabbing the $a_1$ terms:
+\begin{equation}
+(a_1)(\frac{\partial b_2}{\partial x_3}  -\frac{\partial b_3}{\partial x_2} ) 
+\end{equation}
+grabbing the $a_2$ terms:
+\begin{equation}
+(a_2)(-\left[\frac{\partial b_1}{\partial x_3} -\frac{\partial b_3}{\partial x_1}\right]) 
+\end{equation}
+grabbing the $a_3$ terms:
+\begin{equation}
+(a_3)(\frac{\partial b_1}{\partial x_2}   -\frac{\partial b_2}{\partial x_1}) 
+\end{equation}
+Equation 19 cannot contain $x_1$("x" component)
+Equation 20 cannot contain $x_2$("y" component) and must be negative cofactor
+Equation 21 cannot contain $x_3$("z"component)
+gluing these together as a vector we see after factoring out another -1,
+\begin{equation}
+-A \cdot (\nabla \times B)
+\end{equation}
+working through the similar logic for the other 6 terms, we see
+ \begin{equation}
+B \cdot (\nabla \times A)
+\end{equation}
+Together, the result is proven.
+This is a lot of work, but because we organize it as systematically as we do,we are able to manage the tedium, and gain some insight into why this can only work because of the factorization of 12 and the fact that curl is intrinsically 3 dimensional. Note also that this identity only works with the cartesian coordinate systems. Variation based on the Jacobian can be found in Ramo and Whinnery, "Fields and Waves in Modern Radio"\
+\section{Third Proof}
+\begin{equation}
+\nabla \times (\nabla \times A) = \nabla(\nabla \cdot A) - \nabla^2 A
+\end{equation}
+
+In this proof, I have resorted to an even more barebones representation.
+It is really the only way you can get to see the view from 10,000 feet and still be able to elicit forth the regroupings.
+Looking at the expanded curl operator
+\begin{equation}
+\nabla \times A = \left[ \frac{\frac{3}{2} - \frac{2}{3}}{1} \right] \left[ \frac{\frac{3}{1} - \frac{1}{3}}{-2} \right] \left[ \frac{\frac{2}{1} - \frac{1}{2}}{3} \right]
+\end{equation}
+The denominators are not really denominators, but the dimensions of the space. The second one is made negative to remind all of the cofactor, lest it get inadvertently dropped.
+\begin{equation}
+\nabla \times (\nabla \times A) = \left[ \frac{\frac{\left[ \frac{\frac{2}{1} - \frac{1}{2}}{3} \right]}{2} - \frac{\left[ \frac{\frac{3}{1} - \frac{1}{3}}{-2} \right]}{3}}{1} \right] \left[ \frac{\frac{\left[ \frac{\frac{2}{1} - \frac{1}{2}}{3} \right]}{1} - \frac{\left[ \frac{\frac{3}{2} - \frac{2}{3}}{1} \right]}{3}}{-2} \right] \left[ \frac{\frac{\left[ \frac{\frac{3}{1} - \frac{1}{3}}{-2} \right] }{1} - \frac{ \left[ \frac{\frac{3}{2} - \frac{2}{3}}{1} \right]}{2}}{3} \right]
+\end{equation}
+
+It is important to be sure of these relationships because it would appear for certain it will deal with the mixed partial derivatives. For example, the last equation, the "denominator" when there are two "fractions" separated by subtraction, is not one of dimension, but is in fact the partial derivative with respect to the "numerator" 
+The operation of taking the partial derivative first with respect to the first dimension and them with respect to the second dimension, is notated by
+\begin{equation}
+\frac{\partial \left[ \frac{\partial f_2}{\partial x_1}\right]}{\partial x_2} = \frac {\partial^2 f_2}{\partial x_2 \partial x_1}
+\end{equation}
+\begin{equation}
+\frac{\partial \left[ \frac{\partial f_1}{\partial x_2}\right]}{\partial x_2} = \frac {\partial^2  f_1}{\partial x_2^2}
+\end{equation}
+The notation, barebones or not must keep track of the order of mixed partials, in case we have to 
+
+explain why the order matters(though it shouldn't, but at this point who knows?)
+Back substition
+\begin{equation}
+\nabla \times (\nabla \times A) = \left[ \frac{\left[ \frac {\partial^2  f_2}{\partial x_2 \partial x_1} - \frac {\partial^2  f_1}{\partial x_2^2} \right] - \frac{\left[ \frac{\frac{3}{1} - \frac{1}{3}}{-2} \right]}{3}}{1} \right] \left[ \frac{\frac{\left[ \frac{\frac{2}{1} - \frac{1}{2}}{3} \right]}{1} - \frac{\left[ \frac{\frac{3}{2} - \frac{2}{3}}{1} \right]}{3}}{-2} \right] \left[ \frac{\frac{\left[ \frac{\frac{3}{1} - \frac{1}{3}}{-2} \right] }{1} - \frac{ \left[ \frac{\frac{3}{2} - \frac{2}{3}}{1} \right]}{2}}{3} \right]
+\end{equation}
+What is seen is a pattern emerging were some of the items in this collection are positive and some are negative. None of the positive items are of the form:
+\begin{equation}
+\frac {\partial^2  f_1}{\partial x_2^2}
+\end{equation}
+In fact these all correspond to the expansion of the term:
+\begin{equation}
+-\nabla^2A
+\end{equation}
+Given the products that appear on the left hand side of the above equation the meaning of 
+\begin{equation}
+\nabla^2A
+\end{equation}
+is inferred to be
+\begin{equation}
+\nabla^2A = \vec(i)\nabla^2C_1 + \vec(j)\nabla^2C_2 + \vec(k)\nabla^2C_3 
+\end{equation}
+This will give us an "array" 3 by 3 that has overcounted the items on the "main diagonal" the curl of the curl has no terms of the form:
+\begin{equation}
+\frac {\partial^2  f_1}{\partial x_1^2}
+\end{equation}
+And so we must resort to trickery using an
+\begin{equation}
+\left[\vec(i)\frac {\partial^2  C_1}{\partial x_1^2} + \vec(j)\frac {\partial^2  C_2}{\partial x_2^2} + \vec(k)\frac {\partial^2  C_3}{\partial x_3^2}\right] - \left[\vec(i)\frac {\partial^2  C_1}{\partial x_1^2} + \vec(j)\frac {\partial^2  C_2}{\partial x_2^2} + \vec(k)\frac {\partial^2  C_3}{\partial x_3^2}\right]
+\end{equation}
+As a substituion for zero.
+What remains is to show that the positive part of the above expression together with the remaining part of the curl is indeed
+\begin{equation}
+\nabla (\nabla \cdot A)
+\end{equation}
+
+\begin{thebibliography}{[AHU]}
+\bibitem[RW]{rw} Ramo, Simon,\  and 
+Whinnery, John R.\ (1944).  {\em{Fields and Waves in Modern Radio.}} General Electric Company.
+\bibitem[KC]{KC} Krause, John D. and Carver, Keith R. 
+(1973). {\em{Electromagnetics Second Edition.}} McGraw Hill Book Company
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

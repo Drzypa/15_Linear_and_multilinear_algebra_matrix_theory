@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GroupInverse}
+\pmcreated{2013-03-22 17:01:17}
+\pmmodified{2013-03-22 17:01:17}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{group inverse}
+\pmrecord{5}{39306}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A09}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $A$ be an $n \times n$ matrix over $\mathbb{R}$. 
+A \emph{group inverse} for $A$ is an $n \times n$ matrix
+$X$ such that
+\begin{align}
+AXA &= A \\
+XAX &= X \\
+AX &= XA.
+\end{align}
+Such a matrix, when it exists, is unique and is denoted by $A^{\#}$.
+A group inverse is a special case of a Drazin inverse.
+
+%%%%%
+%%%%%
+\end{document}

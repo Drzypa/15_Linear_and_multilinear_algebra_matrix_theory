@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeterminantOfAntidiagonalMatrix}
+\pmcreated{2013-03-22 15:50:25}
+\pmmodified{2013-03-22 15:50:25}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{determinant of anti-diagonal matrix}
+\pmrecord{6}{37817}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $A=\operatorname{adiag}(a_1, \ldots, a_n)$ be an anti-diagonal matrix. Using the sum over all permutations formula for the determinant of a matrix and since all but possibly the anti-diagonal elements are null we get directly at the result
+
+$$\operatorname{det} A =\operatorname{sgn}(n,n-1,\ldots,1) \prod_{i=1}^n a_i $$
+
+so all that remains is to calculate the sign of the permutation.
+This can be done directly.
+
+To bring the last element to the beginning $n-1$ permutations are needed so
+
+$$\operatorname{sgn}(n,n-1,\ldots,1) = (-1)^{n-1} \operatorname{sgn}(1,n,n-1,\cdots,2)$$
+
+Now bring the last element to the second position.
+To do this $n-2$ permutations are needed.
+Repeat this procedure $n-1$ times to get the permutation $(1,\ldots,n)$ which has positive sign.
+
+Summing every permutation, it takes
+
+$$\sum_{k=1}^{n-1} k = \frac{n(n-1)}{2}$$
+
+permutations to get to the desired permutation.
+
+So we get the final result that 
+
+$$\operatorname{det} \operatorname{adiag}(a_1, \ldots, a_n) = (-1)^{\frac{n(n-1)}{2}}  \prod_{i=1}^n a_i $$
+
+Notice that the sign is positive if either $n$ or $n-1$ is a multiple of $4$ and negative otherwise.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPropertiesOfTraceOfAMatrix}
+\pmcreated{2013-03-22 13:42:54}
+\pmmodified{2013-03-22 13:42:54}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{proof of properties of trace of a matrix}
+\pmrecord{4}{34396}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\textbf{Proof of Properties:}
+\begin{enumerate}
+\item Let us check linearity. For sums we have
+\begin{eqnarray*}
+\operatorname{trace}(A+B) &=& \sum\limits_{i=1}^{n} (a_{i,i} + b_{i,i})\,\,\,\,\,\,\,\,\,\,\, \mbox{(property of matrix addition)}\\
+&=&\sum\limits _{i=1} ^{n} a_{i,i} + \sum\limits _{i=1} ^{n} b_{i,i}\,\,\,\, \mbox{(property of sums)} \\
+&=&\operatorname{trace}(A) + \operatorname{trace}(B).
+\end{eqnarray*}
+Similarly,
+% \item Like above the trace is a linear transformation therefore this property
+% is inherited. Proving that it is a linear
+% transformation.
+\begin{eqnarray*}
+\operatorname{trace}(cA) &=& \sum\limits _{i=1} ^{n} c\cdot a_{i,i}\,\,\,\,\, \mbox{(property of matrix scalar multiplication)} \\
+&=& c\cdot \sum\limits _{i=1} ^{n} a_{i,i}\,\,\,\,\, \mbox{(property of sums)} \\
+&=& c\cdot \operatorname{trace}(A).
+\end{eqnarray*}
+\item The second property follows since the transpose does not alter
+the entries on the main diagonal.
+\item The proof of the third property follows by exchanging the
+summation order. Suppose $A$ is a $n\times m$ matrix and $B$ is a $m\times n$ matrix.
+Then
+\begin{eqnarray*}
+\operatorname{trace} AB &=& \sum\limits_{i=1}^{n} \sum\limits_{j=1}^{m} A_{i,j} B_{j,i} \\
+&=& \sum\limits_{j=1}^{m} \sum\limits_{i=1}^{n} B_{j,i} A_{i,j} \,\,\,\,\mbox{(changing summation order)}\\
+&=& \operatorname{trace} BA.
+\end{eqnarray*}
+\item The last property is a consequence of Property 3 and the fact that matrix multiplication is
+associative;
+\begin{eqnarray*}
+\operatorname{trace} (B^{-1} A B) &=& \operatorname{trace} \big((B^{-1} A) B\big) \\
+&=& \operatorname{trace} \big(B(B^{-1} A) \big) \\
+&=& \operatorname{trace} \big( (BB^{-1}) A \big) \\
+&=& \operatorname{trace} (A).
+\end{eqnarray*}
+
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SomeFactsAboutInjectiveAndSurjectiveLinearMaps}
+\pmcreated{2013-03-22 18:32:22}
+\pmmodified{2013-03-22 18:32:22}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{some facts about injective and surjective linear maps}
+\pmrecord{6}{41257}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $k$ be a field and $V,W$ be vector spaces over $k$.
+
+\textbf{Proposition}. Let $f:V\to W$ be an injective linear map. Then there exists a (surjective) linear map $g:W\to V$ such that $g\circ f=\mathrm{id}_{V}$.
+
+\textit{Proof}. Of course $\mathrm{Im}(f)$ is a subspace of $W$ so $f:V\to\mathrm{Im}(f)$ is a linear isomorphism. Let $(e_i)_{i\in I}$ be a basis of $\mathrm{Im}(f)$ and $(e_j)_{j\in J}$ be its completion to the basis of $W$, i.e. $(e_i)_{i\in I\cup J}$ is a basis of $W$. Define $g:W\to V$ on the basis as follows:
+$$g(e_i)=f^{-1}(e_i),\ \mbox{if } i\in I;$$
+$$g(e_j)=0,\ \mbox{if } j\in J.$$
+We will show that $g\circ f=\mathrm{id}_{V}$.
+
+Let $v\in V$. Then $$f(v)=\sum_{i\in I}\alpha_{i}e_i,$$
+where $\alpha_{i}\in k$ (note that the indexing set is $I$). Thus we have $$(g\circ f)(v)=g(\sum_{i\in I}\alpha_{i}e_i)=\sum_{i\in I}\alpha_{i}g(e_i)=\sum_{i\in I}\alpha_{i}f^{-1}(e_i)=$$
+$$=f^{-1}(\sum_{i\in I}\alpha_{i}e_i)=f^{-1}(f(v))=v.$$
+It is clear that the equality $g\circ f=\mathrm{id}_{V}$ implies that $g$ is surjective. $\square$
+
+\textbf{Proposition}. Let $g:W\to V$ be a surjective linear map. Then there exists a (injective) linear map $f:V\to W$ such that $g\circ f=\mathrm{id}_{V}$.
+
+\textit{Proof}. Let $(e_{i})_{i\in I}$ be a basis of $V$. Since $g$ is onto, then for any $i\in I$ there exist $w_{i}\in W$ such that $g(w_{i})=e_{i}$.
+Now define $f:V\to W$ by the formula $$f(e_{i})=w_{i}.$$
+It is clear that $g\circ f=\mathrm{id}_{V}$, which implies that $f$ is injective. $\square$
+
+If we combine these two propositions, we have the following corollary:
+
+\textbf{Corollary}. There exists an injective linear map $f:V\to W$ if and only if there exists a surjective linear map $g:W\to V$.
+%%%%%
+%%%%%
+\end{document}

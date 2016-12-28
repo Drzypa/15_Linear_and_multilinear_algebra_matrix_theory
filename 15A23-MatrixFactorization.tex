@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MatrixFactorization}
+\pmcreated{2013-03-22 14:15:07}
+\pmmodified{2013-03-22 14:15:07}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{matrix factorization}
+\pmrecord{10}{35699}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A23}
+\pmsynonym{matrix decomposition}{MatrixFactorization}
+\pmrelated{IsawasaDecomposition}
+\pmdefines{factor matrix}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+\subsubsection*{Matrix Factorization}
+
+A \emph{matrix factorization} (or \emph{matrix decomposition}) is the right-hand-side product in
+
+$$ A = F_1 F_2 \ldots F_k $$
+
+for ``input'' matrix $A$.  The number of factor matrices $k$ depends on the situation.  Most often, $k = 2$ or $k = 3$.
+
+Note that the process of \emph{producing} a factorization/decomposition is also called ``factorization'' or ``decomposition''.
+
+\subsubsection*{Examples}
+
+Some common factorizations and related devices are:
+
+\begin{itemize}
+\item LU-decomposition: $A = LU$, where $L$ is lower triangular, and $U$ is upper triangular
+\item QR-decomposition: $A = QR$, where $Q$ is orthogonal, and $R$ is right triangular.
+\item Singular value decomposition (SVD): $A = USV^T$, where $U$ and $V$ are orthogonal, and $S$ is a partially diagonal matrix.
+\item The Cholesky Decomposition.
+\item For a positive definite matrix, we can decompose it into its \PMlinkname{square root}{SquareRootOfPositiveDefiniteMatrix} squared.
+\item Polar decomposition
+\item Jordan canonical form
+\item Iwasawa decomposition
+\end{itemize}
+
+See the entries for these and other matrix factorizations for details on the contents of the factor matrices, where to apply them, and how to best calculate them.
+
+\subsubsection*{Simultaneous matrix factorization}
+A related problem is to diagonalize or tridiagonalize many matrices using
+the same matrix. Some results in this direction are listed below:
+\begin{itemize}
+\item commuting matrices are simultanenously triangularizable
+\item commuting normal matrices are simultanenously diagonalizable
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

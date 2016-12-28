@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SecondOrderTensorSymmetricAndSkewsymmetricParts}
+\pmcreated{2013-03-22 15:51:32}
+\pmmodified{2013-03-22 15:51:32}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{second order tensor: symmetric and skew-symmetric parts}
+\pmrecord{18}{37847}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A69}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem*}{Theorem}
+
+\begin{document}
+We shall prove the following theorem on existence and uniqueness.  (Here,
+we assime that the ground field has characteristic different from 2. 
+This hypothesis is satisfied for the cases of greatest interest, 
+namely real and complex ground fields.)
+\begin{theorem*} Every covariant and contravariant tensor of second rank may be expressed univocally as the sum of a symmetric and skew-symmetric tensor.
+\end{theorem*}
+\begin{proof} 
+Let us consider a contravariant tensor. 
+
+{\em 1. Existence.}\, Put
+\begin{align*}
+U^{ij}=\frac{1}{2}(T^{ij}+T^{ji}), \qquad  W^{ij}=\frac{1}{2}(T^{ij}-T^{ji}).
+\end{align*}
+Then $U^{ij}=U^{ji}$ is symmetric,  $W^{ij}=-W^{ji}$ is skew-symmetric, and
+\begin{align*}
+T^{ij}=U^{ij}+W^{ij}.
+\end{align*}
+{\em 2. Uniqueness.}\, Let us suppose that $T^{ij}$ admits the decompositions
+\begin{align*}
+T^{ij}=U^{ij}+W^{ij}=U'^{ij}+W'^{ij}.
+\end{align*}
+By taking the transposes
+\begin{align*}
+T^{ji}=U^{ji}+W^{ji}=U'^{ji}+W'^{ji},
+\end{align*}
+we separate the symmetric and skew-symmetric parts in both equations and making use of their symmetry properties, we have
+\begin{eqnarray*}
+U^{ij}-U'^{ij} & = & W'^{ij}-W^{ij} \\
+=U^{ji}-U'^{ji} & = & W'^{ji}-W^{ji} \\
+=W^{ij}-W'^{ij} & = & U'^{ij}-U^{ij} \\
+=-(U^{ij}-U'^{ij}) & = & 0,
+\end{eqnarray*}
+which shows uniqueness of each part. {\em mutatis mutandis}\, for a covariant tensor $T_{ij}$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

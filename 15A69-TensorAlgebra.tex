@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TensorAlgebra}
+\pmcreated{2013-03-22 13:17:21}
+\pmmodified{2013-03-22 13:17:21}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{tensor algebra}
+\pmrecord{13}{33776}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A69}
+\pmrelated{FreeAssociativeAlgebra}
+\pmdefines{tensor power}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\begin{document}
+Let $R$ be a commutative ring, and $M$ an $R$-module.
+The \emph{tensor algebra}
+\[ \mc{T}(M) = \bigoplus_{n=0}^\infty \mc{T}_n(M)\]
+is the  graded $R$-algebra with $n^{th}$
+graded component simply the $n^{th}$ tensor power:
+\[ \mc{T}_n(M) = M^{\otimes n} =\overbrace{M\otimes \cdots \otimes
+  M}^{n\text{ times}},\quad n=1,2,\ldots,\]
+and $\mc{T}_0(M)=R$.
+The multiplication $m:\mc{T}(M)\times \mc{T}(M)\to\mc{T}(M)$ is given
+by the usual tensor product: 
+\[ m(a,b)=a\otimes b,\quad a\in M^{\otimes n},\; b\in M^{\otimes m}.\]
+
+\paragraph{Remark 1.} One can  generalize the above definition to
+cover the case where the ground ring $R$ is non-commutative by
+requiring that the module $M$ is a bimodule with $R$ acting on both
+the left and the right.
+
+
+\paragraph{Remark 2.} From the point of view of category theory, one
+can describe the tensor algebra construction as  a functor $\mc{T}$
+from the category of $R$-module to the category of $R$-algebras that
+is left-adjoint to the forgetful functor $\mc{F}$ from algebras to
+modules.  Thus, for $M$ an $R$-module and $S$ an $R$-algebra, every
+module homomorphism $M\to \mc{F}(S)$ extends to a unique algebra
+homomorphism $\mc{T}(M)\to S$.
+%%%%%
+%%%%%
+\end{document}

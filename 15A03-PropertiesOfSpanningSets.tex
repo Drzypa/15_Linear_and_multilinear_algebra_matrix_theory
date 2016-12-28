@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfSpanningSets}
+\pmcreated{2013-03-22 18:05:40}
+\pmmodified{2013-03-22 18:05:40}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{properties of spanning sets}
+\pmrecord{7}{40634}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmclassification{msc}{16D10}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\def\Sp{\operatorname{Sp}}
+\begin{document}
+Let $V$ be a vector space over a field $k$.  Let $S$ be a subset of $V$.  We denote $\Sp(S)$ the span of the set $S$.  Below are some basic properties of spanning sets.
+
+\begin{enumerate}
+\item If $S\subseteq T$, then $\Sp(S)\subseteq \Sp(T)$.  In particular, if $\Sp(S)=V$, every superset of $S$ spans (generates) $V$.
+\begin{proof} If $v \in \Sp(S)$, then $v=r_1v_1+\cdots +r_nv_n$ for $v_i\in S$.  But $v_i\in T$ by assumption.  So $v\in \Sp(T)$ as well.  If $\Sp(S)=V$, and $S\subseteq T$, then $V=\Sp(S)\subseteq \Sp(T) \subseteq V$.  \end{proof}
+\item If $S$ contains $0$, then $\Sp(S-\lbrace 0\rbrace)=\Sp(S)$.
+\begin{proof} Let $T=S-\lbrace 0\rbrace$.  So $\Sp(T)\subseteq \Sp(S)$ by 1 above.  If $v\in \Sp(S)$, then $v=r_1v_1+\cdots + r_nv_n$.  If one of the $v_i$'s, say $v_i$, is $0$, then $v=r_2v_2+\cdots +r_nv_n\in \Sp(T)$.  \end{proof}
+\item It is not true that if $S_1\supseteq S_2\supseteq \cdots$ is a chain of subsets, each spanning the same subspace $W$ of $V$, so does their intersection.
+\begin{proof}  Take $V=\mathbb{R}^n$, the Euclidean space in $n$ dimensions.  For each $i=1,2,\ldots$, let $S_i$ be the closed ball centered at the origin, with radius $1/i$.  Then $\Sp(S_i)=V$.  But the intersection of these $S_i$'s is just the origin, whose span is itself, not $V$.
+\end{proof}
+\item $S$ is a basis for $V$ iff $S$ is a minimal spanning set of $V$.  Here, minimal means that any deletion of an element of $S$ is no longer a spanning set of $V$.
+\begin{proof}  If $S$ is a basis for $V$, then $S$ spans $V$ and $S$ is linearly independent.  Let $T$ be the set obtained from $S$ with $v\in S$ deleted.  If $T$ spans $V$, then $v$ can be written as a linear combination of elements in $T$.  But then $S=T\cup \lbrace v\rbrace$ would no longer be linearly independent, contradiction the assumption.  Therefore, $S$ is minimal.
+
+Conversely, suppose $S$ is a minimal spanning set for $V$.  Furthermore, suppose that $S$ is linearly dependent.  Let $0=r_1v_1+\cdots r_nv_n$, with $r_1\ne 0$.  Then 
+\begin{equation}
+v_1=s_2v_2+\cdots +s_nv_n,
+\end{equation} 
+where $s_i=-r_i/r_1$.  So any linear combination of elements in $S$ involving $v_1$ can be replaced by a linear combination not involving $v_1$ through equation (1).  Therefore $\Sp(S)=\Sp(S-\lbrace v\rbrace)$.  But this means that $S$ is not minimal, contrary to our assumption.  Therefore, $S$ must be linearly independent.
+\end{proof}
+\end{enumerate}
+
+\textbf{Remark}.  All of the properties above can be generalized to modules over rings, except the last one, where the implication is only one-sided: basis implying minimal spanning set.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfBoundedOperatorWithNoEigenvalues}
+\pmcreated{2013-03-22 17:57:53}
+\pmmodified{2013-03-22 17:57:53}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{example of bounded operator with no eigenvalues}
+\pmrecord{7}{40470}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A18}
+\pmclassification{msc}{47A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In this entry we show that there are operators with no eigenvalues. Moreover, we exhibit an operator $T$ in a Hilbert space which is bounded, self-adjoint, has a non-empty spectrum but no eigenvalues. 
+
+Consider the Hilbert space \PMlinkname{$L^2([0,1])$}{L2SpacesAreHilbertSpaces} and let $f:[0,1] \longrightarrow \mathbb{C}$ be the function $f(t) = t$.
+
+Let $T:L^2([0,1]) \longrightarrow L^2([0,1])$ be the \PMlinkname{operator of multiplication}{MultiplicationOperatorOnMathbbL22} by $f$
+\begin{displaymath}
+T(\varphi) = f\varphi \,, \qquad\qquad \varphi \in L^2([0,1])
+\end{displaymath}
+
+Thus, $T$ is a bounded operator, since it is a multiplication operator  (see \PMlinkname{this entry}{OperatorNormOfMultiplicationOperatorOnL2}). Also, it is easily seen that $T$ is self-adjoint.
+
+We now prove that $T$ has no eigenvalues: suppose $\lambda \in \mathbb{C}$ is an eigenvalue of $T$ and $\varphi$ is an eigenvector. Then,
+\begin{displaymath}
+T\varphi = \lambda \varphi
+\end{displaymath}
+This means that $(f-\lambda)\varphi =0$, but this is impossible for $\varphi \neq 0$ since $f-\lambda$ has at most one zero. Hence, $T$ has no eigenvalues.
+
+Of course, since the Hilbert space is complex, the spectrum of $T$ is non-empty (see \PMlinkname{this entry}{SpectrumIsANonEmptyCompactSet}). Moreover, the spectrum of $T$ can be easily computed and seen to be the whole interval $[0,1]$, as we explain now:
+
+It is known that an operator of multiplication by a continuous function $g$ is invertible if and only if $g$ is invertible. Thus, for every $\lambda \in \mathbb{C}$, $T-\lambda I$ is easily seen to be the operator of multiplication by $(f - \lambda)$. Hence, $T-\lambda I $ is not invertible if and only if $\lambda \in [0,1]$, i.e. $\sigma(T) = [0,1]$.
+%%%%%
+%%%%%
+\end{document}

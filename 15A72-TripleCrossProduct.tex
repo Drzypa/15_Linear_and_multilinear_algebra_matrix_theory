@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TripleCrossProduct}
+\pmcreated{2013-03-22 14:15:53}
+\pmmodified{2013-03-22 14:15:53}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{triple cross product}
+\pmrecord{28}{35714}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A72}
+\pmsynonym{vector triple product}{TripleCrossProduct}
+\pmsynonym{triple vector product}{TripleCrossProduct}
+\pmrelated{PhysicalVector}
+\pmdefines{Lagrange's formula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The cross product of a vector with a cross product is called the {\em triple cross product}.
+
+The \PMlinkescapetext{{\em expansion formula}} of the triple cross product or {\em Lagrange's \PMlinkescapetext{formula}} is
+  $$\vec{a} \times (\vec{b} \times \vec{c}) = (\vec{a} \cdot    \vec{c})\vec{b}-(\vec{a} \cdot \vec{b})\vec{c}$$
+(``exterior dot far times near minus exterior dot near times far'' --- this works also when ``exterior'' is the last \PMlinkescapetext{factor}).
+
+The \PMlinkescapetext{formula shows that this vector is in the plane spanned by} the vectors $\vec{b}$ and $\vec{c}$ (when these are not parallel).
+
+Note that the use of parentheses in the triple cross products is necessary, since the cross product operation is not \PMlinkname{associative}{GeneralAssociativity}, i.e., generally we have
+  $$(\vec{a}\times\vec{b})\times\vec{c} \neq\vec{a}\times(\vec{b}\times\vec{c})$$
+(for example:\, $(\vec{i}\times\vec{i})\times\vec{j} = \vec{0}$\, but\, $\vec{i}\times(\vec{i}\times\vec{j}) = -\vec{j}$\, when 
+$(\vec{i},\,\vec{j},\,\vec{k})$ is a right-handed orthonormal basis of $\mathbb{R}^3$).\, So the \PMlinkname{system}{AlgebraicSystem}\, $(\mathbb{R}^3,\,+,\,\times)$\, is not a ring.
+
+A direct consequence of the \PMlinkescapetext{expansion formula} is the {\em Jacobi identity}
+$$\vec{a}\times(\vec{b}\times\vec{c})+\vec{b}\times(\vec{c}\times\vec{a})+
+  \vec{c} \times(\vec{a}\times\vec{b}) = \vec{0},$$
+which is one of the properties making\, $(\mathbb{R}^3,\,+,\,\times)$\, a Lie algebra.
+
+It follows from the \PMlinkescapetext{expansion formula} also that
+  $$(\vec{a}\times\vec{b})\times(\vec{c}\times\vec{d}) = (\vec{a}\vec{b}\vec{d})\vec{c}-(\vec{a}\vec{b}\vec{c})\vec{d}$$
+where $(\vec{u}\vec{v}\vec{w})$ means the triple scalar product of $\vec{u}$, $\vec{v}$ and $\vec{w}$.
+%%%%%
+%%%%%
+\end{document}

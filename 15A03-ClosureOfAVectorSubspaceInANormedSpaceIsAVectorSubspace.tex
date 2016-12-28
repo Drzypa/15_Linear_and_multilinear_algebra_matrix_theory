@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClosureOfAVectorSubspaceInANormedSpaceIsAVectorSubspace}
+\pmcreated{2013-03-22 15:00:16}
+\pmmodified{2013-03-22 15:00:16}
+\pmowner{gumau}{3545}
+\pmmodifier{gumau}{3545}
+\pmtitle{closure of a vector subspace in a normed space is a vector subspace}
+\pmrecord{7}{36709}
+\pmprivacy{1}
+\pmauthor{gumau}{3545}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmclassification{msc}{46B99}
+\pmclassification{msc}{54A05}
+\pmrelated{ClosureOfAVectorSubspaceIsAVectorSubspace2}
+\pmrelated{ClosureOfSetsClosedUnderAFinitaryOperation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $(V, \| \cdot \|)$ be a normed space, and $S \subset V$ a vector subspace. Then $\overline{S}$ is a vector subspace in $V$.
+
+\textbf{Proof}
+
+First of all, $0 \in \overline{S}$ because $0 \in S$. Now, let $x, y \in \overline{S}$, and $\lambda \in K$ (where $K$ is the ground field of the vector space $V$). Then there are two sequences in $S$, say $(x_n)_{n \in \mathbb{N}}$ and $(y_n)_{n \in \mathbb{N}}$ which converge to $x$ and $y$ respectively.
+
+Then, the sequence $(x_n + \lambda \cdot y_n)_{n \in \mathbb{N}}$ is a sequence in $S$ (because $S$ is a vector subspace), and it's trivial (use properties of the norm) that this sequence converges to $x + \lambda \cdot y$, and so this sum is a vector which lies in $\overline{S}$. 
+
+
+We have proved that $\overline{S}$ is a vector subspace. QED.
+%%%%%
+%%%%%
+\end{document}

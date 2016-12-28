@@ -1,0 +1,170 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTheoremForNormalMatrices}
+\pmcreated{2013-03-22 15:36:36}
+\pmmodified{2013-03-22 15:36:36}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{proof of theorem for normal matrices}
+\pmrecord{16}{37530}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A21}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+1) ($A^H=g(A)\rightarrow A$ is normal)
+
+Keeping in mind that every matrix commutes with its own powers, let's compute
+\[
+AA^H=Ag(A)=A\sum_{i=0}^{n-1}a_iA^i=\sum_{i=0}^{n-1}a_iAA^i=\sum_{i=0}^{n-1}a_iA^iA=\left(\sum_{i=0}^{n-1}a_iA^i\right)A=g(A)A=A^HA
+\]
+which shows $A$ to be normal.
+
+2) ($A$ is normal $\rightarrow A^H=g(A)$)
+
+Let $\lambda _{1},\lambda _{2}, \ldots,\lambda _{r}$ , $1\leq
+r\leq n$ be the distinct eigenvalues of A, and let $\Lambda $ $=$ $%
+diag\{\lambda _{1},\lambda _{2}, \ldots,\lambda _{n}\}$; then it's possible to
+find a $(r-1)$-degree polynomial $g(t)$ such that $g(\lambda _{i})=\lambda
+_{i}^{\ast }$ $1\leq i\leq r$, solving the $r\times r$ linear Vandermonde
+system:
+\[
+\begin{bmatrix}
+1 & \lambda _{1} & \lambda _{1}^{2} & \cdots & \lambda _{1}^{r-1} \\ 
+1 & \lambda _{2} & \lambda _{2}^{2} & \cdots & \lambda _{2}^{r-1} \\ 
+\vdots & \vdots & \vdots & \vdots & \vdots \\ 
+1 & \lambda _{r-1} & \lambda _{r-1}^{2} & \cdots & \lambda _{r-1}^{r-1} \\ 
+1 & \lambda _{r} & \lambda _{r}^{2} & \cdots & \lambda _{r}^{r-1}%
+\end{bmatrix}%
+\begin{bmatrix}
+a_{0} \\ 
+a_{1} \\ 
+a_{2} \\ 
+\vdots \\ 
+a_{r-1}%
+\end{bmatrix}%
+=%
+\begin{bmatrix}
+\lambda _{1}^{\ast } \\ 
+\lambda _{2}^{\ast } \\ 
+\lambda _{3}^{\ast } \\ 
+\vdots \\ 
+\lambda _{r}^{\ast }%
+\end{bmatrix}%
+\]
+
+Since these $r$ eigenvalues are distinct, the Vandermonde matrix is full
+rank, and the linear system admits a unique solution; so a $(r-1)$-degree
+polynomial $g(t)$ can be found such that $g(\lambda _{i})=\lambda _{i}^{\ast
+}$ $1\leq i\leq r$ and therefore $g(\lambda _{i})=\lambda _{i}^{\ast }$ $%
+1\leq i\leq n$. Writing these equations in matrix form, we have%
+\begin{equation*}
+g(\Lambda )=\Lambda ^{\ast }
+\end{equation*}
+
+By Schur's decomposition theorem, a unitary matrix $U$ and an upper
+triangular matrix $T$ exist such that%
+\begin{equation*}
+A=UTU^{H}
+\end{equation*}
+
+and since $A$ is normal we have $T=\Lambda $.
+
+Let's evaluate $g(A)$.%
+\begin{equation*}
+g(A)=g(U\Lambda U^{H})=\sum_{i=0}^{r-1}a_{i}(U\Lambda U^{H})^{i}
+\end{equation*}
+
+But, keeping in mind that $U^{H}U=I$,
+\begin{equation*}
+(U\Lambda U^{H})^{i}=\overset{i\ times}{\overbrace{U\Lambda U^{H}U\Lambda
+U^{H}U\Lambda U^{H} \cdots U\Lambda U^{H}}}=U\Lambda ^{i}U^{H}
+\end{equation*}
+
+and so
+\begin{eqnarray*}
+g(A) &=&\sum_{i=0}^{r-1}a_{i}(U\Lambda ^{i}U^{H}) \\
+&=&U\left( \sum_{i=0}^{r-1}a_{i}\Lambda ^{i}\right) U^{H} \\
+&=&Ug(\Lambda )U^{H} \\
+&=&U\Lambda ^{\ast }U^{H} \\
+&=&U\Lambda ^{H}U^{H} \\
+&=&(U\Lambda U^{H})^{H}=A^{H}
+\end{eqnarray*}
+
+which is the thesis.
+
+
+Remark: note that this is a constructive proof, giving explicitly a way to
+find $g(t)$ polynomial by solving Vandermonde system in the eigenvalues.
+
+Example:
+
+Let  $A=\frac{1}{2}%
+\begin{bmatrix}
+1+j & -1-j \\ 
+1+j & 1+j%
+\end{bmatrix}%
+$ (which is easily checked to be normal),
+
+with\ \ $U$ $=\frac{1}{\sqrt{2}}%
+\begin{bmatrix}
+1 & -j \\ 
+j & -1%
+\end{bmatrix}%
+$. Then $\sigma (A)=\{1,j\}$ and the Vandermonde system is%
+\[
+\begin{bmatrix}
+1 & 1 \\ 
+1 & j%
+\end{bmatrix}%
+\begin{bmatrix}
+a_{0} \\ 
+a_{1}%
+\end{bmatrix}%
+=%
+\begin{bmatrix}
+1 \\ 
+-j%
+\end{bmatrix}%
+\]
+
+from which we find%
+\[
+g(t)=(1-j)+jt
+\]
+
+A simple calculation yields%
+\[
+g(A)=(1-j)I+jA=\frac{1}{2}%
+\begin{bmatrix}
+1-j & 1-j \\ 
+-1+j & 1-j%
+\end{bmatrix}%
+=A^{H}
+\]
+%%%%%
+%%%%%
+\end{document}

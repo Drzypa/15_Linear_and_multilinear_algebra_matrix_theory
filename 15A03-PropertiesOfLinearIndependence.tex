@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfLinearIndependence}
+\pmcreated{2013-03-22 18:05:37}
+\pmmodified{2013-03-22 18:05:37}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{properties of linear independence}
+\pmrecord{5}{40633}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $V$ be a vector space over a field $k$.  Below are some basic properties of linear independence.
+
+\begin{enumerate}
+\item $S\subseteq V$ is never linearly independent if $0\in S$.
+\begin{proof} Since $1\cdot 0=0$. \end{proof}
+\item If $S$ is linearly independent, so is any subset of $S$.  As a result, if $S$ and $T$ are linearly independent, so is $S\cap T$.  In addition, $\varnothing$ is linearly independent, its spanning set being the singleton consisting of the zero vector $0$.
+\begin{proof} If $r_1v_1+\cdots r_nv_n=0$, where $v_i\in T$, then $v_i\in S$, so $r_i=0$ for all $i=1,\ldots, n$. \end{proof}
+\item If $S_1\subseteq S_2\subseteq \cdots$ is a chain of linearly independent subsets of $V$, so is their union.
+\begin{proof} Let $S$ be the union.  If $r_1v_1+\cdots r_nv_n=0$, then $v_i\in S_{a(i)}$, for each $i$.  Pick the largest $S_{a(i)}$ so that all $v_i$'s are in it.  Since this set is linearly independent, $r_i=0$ for all $i$.  
+\end{proof}
+\item $S$ is a basis for $V$ iff $S$ is a maximal linear independent subset of $V$.  Here, maximal means that any proper superset of $S$ is linearly dependent.
+\begin{proof} If $S$ is a basis for $V$, then it is linearly independent and spans $V$.  If we take any vector $v\notin S$, then $v$ can be expressed as a linear combination of elements in $S$, so that $S\cup \lbrace v\rbrace$ is no longer linearly independent, for the coefficient in front of $v$ is non-zero.  Therefore, $S$ is maximal.  
+
+Conversely, suppose $S$ is a maximal linearly independent set in $V$.  Let $W$ be the span of $S$.  If $W\ne V$, pick an element $v\in V-W$.  Suppose $0=r_1v_1+\cdots r_nv_n+rv$, where $v_i\in S$, then $-rv = r_1v_1+\cdots +r_nv_n$.  If $r\ne 0$, then $v$ would be in the span of $S$, contradicting the assumption.  So $r=0$, and as a result, $r_i=0$, since $S$ is linearly independent.  This shows that $S\cup \lbrace v\rbrace$ is linearly independent, which is impossible since $S$ is assumed to be maximal.  Therefore, $W=V$.
+\end{proof}
+\end{enumerate}
+
+\textbf{Remark}.  All of the properties above can be generalized to modules over rings, except the last one, where the implication is only one-sided: basis implying maximal linear independence.
+%%%%%
+%%%%%
+\end{document}

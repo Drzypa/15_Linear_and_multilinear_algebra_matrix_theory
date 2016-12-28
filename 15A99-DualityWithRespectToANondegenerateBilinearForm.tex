@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DualityWithRespectToANondegenerateBilinearForm}
+\pmcreated{2013-03-22 16:23:02}
+\pmmodified{2013-03-22 16:23:02}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{duality with respect to a non-degenerate bilinear form}
+\pmrecord{8}{38528}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A99}
+\pmrelated{BilinearForm}
+\pmrelated{PolaritiesAndForms}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+\begin{defn}
+Let $V$ and $W$ be finite dimensional vector spaces over a field $F$ and let $B:V\times W \to F$ be a non-degenerate bilinear form. Then we say that $V$ and $W$ are dual with respect to $B$.
+\end{defn}
+
+\begin{exa}
+Let $V$ be a finite dimensional vector space and let $W=V^\ast$ be the dual space of $V$, i.e. $W$ is the vector space formed by all linear transformations $V\to F$. Let $B:V\times V^\ast \to F$ be defined by $B(v,f)=f(v)$ for all $v\in V$ and all $f:V\to F$ in $V^\ast$. Then $B$ is a non-degenerate bilinear form and $V$ and $V^\ast$ are dual with respect to $B$.
+\end{exa}
+
+\begin{defn}
+Let $f:V\to V$ and $g:W\to W$ be linear transformations. We say that $f$ and $g$ are transposes of each other with respect to $B$ if
+$$B(f(v),w)=B(v,g(w))$$
+for all $v\in V$ and $w\in W$.
+\end{defn}
+
+The reasons why the terms ``dual'' and ``transpose'' are used are explained in the following theorems (here $V^\ast$ denotes the dual vector space of $V$). Notice that for a fixed element $w\in W$ one can define a linear form $V \to F$ which sends $v$ to $B(v,w)$.
+
+\begin{thm}
+Let $V,W$ be finite dimensional vector spaces over $F$ which are dual with respect to a non-degenerate bilinear form $B:V\times W \to F$. Then there exist canonical isomorphisms $V \cong W^\ast$ and $W\cong V^\ast$ given by
+$$W\to V^\ast,\ w\mapsto (v\mapsto B(v,w));\quad V\to W^\ast,\ v\mapsto (w\mapsto B(v,w)).$$
+\end{thm}
+
+\begin{thm}
+Let $V,W$ be finite dimensional vector spaces over $F$ which are dual with respect to a non-degenerate bilinear form $B:V\times W \to F$. Moreover, suppose $f:V\to V$ and $g:W\to W$ are transposes of each other with respect to $B$. Let $\mathcal{B}=\{v_1,\ldots,v_n\}$ be a basis of $V$ and let $\mathcal{C}=\{w_1,\ldots,w_n\}$ be the basis of $W$ which maps to the dual basis of $\mathcal{B}$ via the isomporphism $W\cong V^\ast$ defined in the previous theorem. If $A$ is the matrix of $f$ in the basis $\mathcal{B}$ then the matrix of $g$ in the basis $\mathcal{C}$ is $A^T$, the transpose matrix of $A$.
+\end{thm}
+
+\begin{proof}[{\bf Proof of Theorem 2.}]
+Let $V$ and $W$ be dual with respect to a non-degenerate bilinear
+form $B$ and let $f$ and $g$ be transposes of each other, also
+with respect to $B$ so that:
+$$B(f(v),w)=B(v,g(w))$$
+for all $v\in V$ and $w \in W$. By Theorem 1, we have $W\cong V^\ast$. Let
+$\mathcal{B}=\{v_1,\ldots,v_n\}$ be a basis for $V$ and let
+$\mathcal{C}=\{w_1,\ldots,w_n\}$ be a basis for $W$ which
+corresponds to the dual basis of $V^\ast$ via the isomorphism $W\cong V^\ast$. Then $B(v_i,w_j)=1$
+for $i=j$ and equal to $0$ otherwise. Let $A=(\alpha_{ij})$ be the
+matrix of $f$ with respect to $\mathcal{B}$. Then
+$$f(v_j)=\sum_{i=1}^n \alpha_{ij}v_i.$$
+Let $A'=(\beta_{ij})$ be the matrix of $g$ with respect to
+$\mathcal{C}$ so that $g(w_j)=\sum_i \beta_{ij}w_i$. We will
+show that $A'=A^T$, the transpose of $A$. Indeed:
+$$B(f(v_j),w_k)=B(\sum_i \alpha_{ij}v_i,w_k)=\alpha_{kj}$$
+and also
+$$B(f(v_j),w_k)=B(v_j,g(w_k))=B(v_j,\sum_i
+\beta_{ik}w_i)=\beta_{jk}.$$ Therefore $\beta_{jk}=\alpha_{kj}$
+for all $k$ and $j$, as desired.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LinearAlgebra}
+\pmcreated{2013-03-22 12:26:16}
+\pmmodified{2013-03-22 12:26:16}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{linear algebra}
+\pmrecord{10}{32530}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmclassification{msc}{15-01}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\begin{document}
+Linear algebra is the branch of mathematics devoted to the theory of
+linear structure.  The axiomatic treatment of linear structure is
+based on the notions of a {\em linear space} (more commonly known as a
+{\em vector space}), and a {\em linear mapping}.  Broadly speaking,
+there are two fundamental questions considered by linear algebra:
+\begin{itemize}
+\item the solution of a linear equation, and
+\item diagonalization, a.k.a. the eigenvalue problem.
+\end{itemize}
+From the geometric point of view, ``linear'' is synonymous with
+``straight'', and consequently linear algebra can be regarded as the
+branch of mathematics dealing with lines and planes, as well as with
+transformations of space that preserve ``straightness'', e.g.
+rotations and reflections. The two fundamental questions, in geometric
+terms, deal with
+\begin{itemize}
+\item the intersection of hyperplanes, and
+\item the principal axes of an ellipsoid.
+\end{itemize}
+
+Linearity is a very basic notion, and consequently linear algebra has
+applications in numerous areas of mathematics, science, and
+engineering.  Diverse disciplines, such as differential equations,
+differential geometry, the theory of relativity, quantum mechanics,
+electrical circuits, computer graphics, and information theory benefit
+from the notions and techniques of linear algebra.
+
+Euclidean geometry is related to a specialized branch of linear
+algebra that deals with linear measurement.  Here the relevant notions
+are length and angle.  A typical question is the determination of
+lines perpendicular to a given plane.  A somewhat less specialized
+branch deals with affine structure, where the key notion is that of
+area and volume. Here   determinants play an essential role.
+
+Yet another branch of linear algebra is concerned with computation,
+algorithms, and numerical approximation.  Important examples of such
+techniques include: Gaussian elimination, the method of least squares,
+LU factorization, QR decomposition, Gram-Schmidt orthogonalization,
+singular value decomposition, and a number of iterative algorithms for
+the calculation of eigenvalues and eigenvectors.
+
+
+The following subject outline surveys 
+key topics in linear algebra.
+
+\begin{enumerate}
+\item {\bf Linear structure.}
+  \begin{enumerate}
+  \item {\bf Introduction:} systems of linear equations, Gaussian
+    elimination, matrices, matrix operations.
+  \item {\bf Foundations:} fields and vector spaces, subspace, linear
+    independence, basis, ordered basis, dimension, direct sum decomposition.
+  \item {\bf Linear mappings:} linearity axioms, kernels and images,
+    injectivity, surjectivity, bijections, compositions, inverses,
+    matrix representations, change of bases, conjugation, similarity.
+  \end{enumerate}
+\item {\bf Affine structure.}
+  \begin{enumerate}
+  \item {\bf Determinants:} characterizing properties, cofactor
+    expansion, permutations, Cramer's rule, classical adjoint.
+  \item {\bf Geometric aspects:} Euclidean volume, orientation,
+    equiaffine transformations, determinants as geometric invariants
+    of linear transformations.
+  \end{enumerate}
+\item {\bf Diagonalization and Decomposition.}
+  \begin{enumerate}
+  \item {\bf Basic notions:} eigenvector, eigenvalue, eigenspace,
+    characteristic polynomial.
+  \item {\bf Obstructions:} imaginary eigenvalues, nilpotent
+    transformations, classification of 2-dimensional real
+    transformations.
+  \item {\bf Structure theory:} invariant subspaces, Cayley-Hamilton
+    theorem, Jordan canonical form, rational canonical form.
+  \end{enumerate}
+\item {\bf Multi-linearity.}
+  \begin{enumerate}
+  \item {\bf Foundations:} vector space dual, bilinearity, bilinear
+    transpose, Gram-Schmidt orthogonalization.
+  \item {\bf Bilinearity:} bilinear forms, symmetric bilinear forms,
+    quadratic forms, signature and Sylvester's theorem, orthogonal
+    transformations, skew-symmetric bilinear forms, symplectic
+    transformations.
+  \item {\bf Tensor algebra:} tensor product, contraction, invariants
+    of linear transformations, symmetry operations.
+  \end{enumerate}
+\item {\bf Euclidean and Hermitian structure.}
+  \begin{enumerate}
+  \item{\bf Foundations:} inner product axioms, the adjoint operation,
+    symmetric transformations, skew-symmetric transformations,
+    self-adjoint transformations, normal transformations.
+  \item{\bf Spectral theorem:} diagonalization of self-adjoint
+    transformations, diagonalization of quadratic forms.
+  \end{enumerate}
+\item {\bf Computational and numerical methods.}
+  \begin{enumerate}
+  \item {\bf Linear problems:}  LU-factorization, QR decomposition, least
+    squares, Householder transformations.
+  \item {\bf Eigenvalue problems:} singular value decomposition, Gauss and
+    Jacobi-Siedel iterative algorithms.
+  \end{enumerate}
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

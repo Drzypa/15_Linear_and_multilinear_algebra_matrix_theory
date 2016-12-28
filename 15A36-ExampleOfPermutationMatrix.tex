@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfPermutationMatrix}
+\pmcreated{2013-03-22 15:03:14}
+\pmmodified{2013-03-22 15:03:14}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{example of permutation matrix}
+\pmrecord{8}{36771}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A36}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\usepackage{amsmath}
+\begin{document}
+\PMlinkescapeword{column}
+\PMlinkescapeword{columns}
+\PMlinkescapeword{row}
+\PMlinkescapeword{rows}
+
+Consider the matrix
+\[
+P=\begin{pmatrix}
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0
+\end{pmatrix}
+\]
+that corresponds to permuting the columns of the identity matrix under the permutation $(1 2 4 3)$ (\PMlinkname{i.e.}{Ie}, the first column of the identity matrix is the second column of $P$, the second column of the identity matrix is the fourth column of $P$, etc.).  Then $P$ is a permutation matrix.
+
+We will consider what happens when we multiply a $4\times 4$ matrix by $P$.  For example, let $A$ be the matrix
+\[
+A=\begin{pmatrix}
+4 & 2 & 6 & 8 \\
+1 & 3 & 5 & 7 \\
+1 & 0 & 1 & 0 \\
+-1& -2& -3& -4
+\end{pmatrix}.
+\]
+Then
+\[
+PA=\begin{pmatrix}
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0
+\end{pmatrix}
+\begin{pmatrix}
+4 & 2 & 6 & 8 \\
+1 & 3 & 5 & 7 \\
+1 & 0 & 1 & 0 \\
+-1& -2& -3&-4
+\end{pmatrix}
+= 
+\begin{pmatrix}
+1 & 3 & 5 & 7 \\
+-1& -2& -3&-4 \\
+4 & 2 & 6 & 8 \\
+1 & 0 & 1 & 0
+\end{pmatrix}.
+\]
+
+We notice that $PA$ has the same rows as $A$.  Moreover, the rows of $A$ are the rows of $PA$ permuted under $(1 2 4 3)$: The first row of $PA$ is the second row of $A$, the second row of $PA$ is the fourth row of $A$, etc.
+%%%%%
+%%%%%
+\end{document}

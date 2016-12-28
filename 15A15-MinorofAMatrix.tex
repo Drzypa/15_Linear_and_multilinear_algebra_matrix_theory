@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MinorofAMatrix}
+\pmcreated{2013-03-22 14:07:01}
+\pmmodified{2013-03-22 14:07:01}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{minor (of a matrix)}
+\pmrecord{7}{35522}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+\pmrelated{LaplaceExpansion}
+\pmrelated{CauchyBinetFormula}
+\pmdefines{principal minor}
+\pmdefines{cofactor}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\sse{\subseteq}
+\def\bigtimes{\mathop{\mbox{\Huge $\times$}}}
+\def\impl{\Rightarrow}
+\begin{document}
+\PMlinkescapeword{principal}
+\PMlinkescapeword{minor}
+\PMlinkescapeword{term}
+\PMlinkescapeword{order}
+
+Given an $n\times m$ matrix $A$ with entries $a_{ij}$, a \emph{minor} of $A$ is
+the determinant of a smaller matrix formed from its entries by selecting
+only some of the rows and columns. Let $K=\{k_1,k_2,\ldots,k_p\}$ and
+$L=\{l_1,l_2,\ldots,l_p\}$ be subsets of $\{1,2,\ldots,n\}$ and
+$\{1,2,\ldots,m\}$, respectively. The indices are chosen such that
+$k_1 < k_2 < \cdots < k_p$ and $l_1 < l_2 < \cdots < l_p$. The $p$-th
+order minor defined by $K$ and $L$ is the following determinant
+\begin{equation*}
+  A\begin{pmatrix} k_1 & k_2 & \cdots & k_p \\
+    l_1 & l_2 & \cdots & l_p \end{pmatrix} =
+  \begin{vmatrix}
+    a_{k_1 l_1} & a_{k_1 l_2} & \cdots & a_{k_1 l_p} \\
+    a_{k_2 l_1} & a_{k_2 l_2} & \cdots & a_{k_2 l_p} \\
+    \vdots      & \vdots      & \ddots & \vdots      \\
+    a_{k_p l_1} & a_{k_p l_2} & \cdots & a_{k_p k_p}
+  \end{vmatrix}.
+\end{equation*}
+If $p$ exceeds either $m$ or $n$, then the minor is
+automatically zero. When $p=m=n$, the minor is simply the determinant
+of the matrix. If $K=L$, then the minor is called \emph{principal}.
+The word \emph{minor} may also refer to just the matrix formed from
+the selected rows and columns, not necessarily its determinant. The precise
+meaning is usually clear from context.
+
+There does not seem to be a standard notation for matrix minors.
+Another possible notation is $[A]_{K,L}$.
+
+Some authors reserve the term \emph{minor} for the case when only one
+row and one column are removed. This use is in conjunction with the
+concept of a \emph{\PMlinkname{cofactor}{LaplaceExpansion}}.
+%%%%%
+%%%%%
+\end{document}

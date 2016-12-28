@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ParameterizationOfEquitableMatrices}
+\pmcreated{2013-03-22 14:58:36}
+\pmmodified{2013-03-22 14:58:36}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{parameterization of equitable matrices}
+\pmrecord{6}{36678}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A $n \times n$ matrix is \emph{equitable} if and only if it can be expressed in the form
+ $$m_{ij} = \exp (\lambda_i - \lambda_j)$$
+for real numbers $\lambda_1, \lambda_2, \ldots, \lambda_n$ with $\lambda_1 = 0$.
+
+\PMlinkescapetext{{\sl Proof:}} \,
+Assume that $m_{ij}$ are the entries of an equitable matrix.
+
+Since all the elements of an equitable matrix are positive by definition, we can write
+ $$m_{ij} = \exp \mu_{ij}$$
+with the quantities $\mu_{ij}$ being real numbers (which may be positive, negative or zero).
+
+In terms of this representation, the defining identity for an equitable matrix becomes
+ $$\mu_{ik} = \mu_{ij} + \mu_{jk}$$
+Since this comprises a system of linear equations for the quantities $\mu_{ij}$, we could solve it using the usual methods of matrix theory.  However, for this particular system of linear equations, there is a much simpler approach.
+
+Consider the special case of the identity when $i=j=k$:
+ $$\mu_{ii} = \mu_{ii} + \mu_{ii}.$$
+This simplifies to 
+ $$\mu_{ii} = 0.$$
+In other words, all the diagonal entries are zero.
+
+Consider the case when $i = k$ (but does not equal $j$).
+ $$\mu_{ij} + \mu_{ji} = \mu_{ii}$$
+By wat we have just shown, the right hand side of this equation equals zero.  Hence, we have
+ $$\mu_{ij} = - \mu_{ji}.$$
+In other words, the matrix of $\mu$'s is antisymmetric.
+
+We may express any entry in terms of the $n$ entries $\mu_{i1}$:
+ $$\mu_{ij} = \mu_{i1} + \mu_{1j} = \mu_{i1} - \mu_{j1}$$
+
+We will conclude by noting that if, given any $n$ numbers $\lambda_i$ with $\lambda_1 = 0$, but the remaining $\lambda$'s arbitrary, we define
+ $$\mu_{ij} = \lambda_i - \lambda_j,$$
+then
+ $$\mu_{ij} + \mu_{jk} = \lambda_i - \lambda_j + \lambda_j - \lambda_k = \lambda_i - \lambda_k = \mu_{ik}$$
+Hence, we obtain a solution of the equations
+ $$\mu_{ik} = \mu_{ij} + \mu_{jk}.$$
+Moreover, by what we what we have seen, if we set $\lambda_i = \mu_{i1}$, all solutions of these equations can be so described.
+\rightline{Q.E.D.}
+%%%%%
+%%%%%
+\end{document}

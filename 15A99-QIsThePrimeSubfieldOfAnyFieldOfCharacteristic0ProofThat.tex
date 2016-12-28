@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QIsThePrimeSubfieldOfAnyFieldOfCharacteristic0ProofThat}
+\pmcreated{2013-03-22 15:39:57}
+\pmmodified{2013-03-22 15:39:57}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Q is the prime subfield of any field of characteristic 0, proof that}
+\pmrecord{16}{37600}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A99}
+\pmclassification{msc}{12F99}
+\pmclassification{msc}{12E99}
+\pmclassification{msc}{12E20}
+\pmrelated{RationalNumbersAreRealNumbers}
+\pmdefines{prime field}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\newcommand{\fp}{\mathbb{F}_p}
+\newcommand{\rat}{\mathbb{Q}}
+\begin{document}
+The following two propositions show that $\rat$ can be embedded in any field of characteristic $0$, while $\fp$ can be embedded in any field of characteristic $p$.
+
+\textbf{Proposition.}\, $\rat$ is the prime subfield of any field of characteristic 0.  
+\begin{proof}  Let $F$ be a field of characteristic $0$.\, We want to find a one-to-one field homomorphism $\phi:\rat\to F$.\, For\, $\frac{m}{n}\in\mathbb{Q}$\, with $m,\,n$ coprime, define the mapping $\phi$ that takes $\frac{m}{n}$ into $\frac{m1_F}{n1_F}\in F$.\, It is easy to check that $\phi$ is a well-defined function.\, Furthermore, it is elementary to show   
+\begin{enumerate}
+\item additive: for $p,q\in\rat$, $\phi(p+q)=\phi(p)+\phi(q)$;
+\item multiplicative: for $p,q\in\rat$, $\phi(pq)=\phi(p)\phi(q)$;
+\item $\phi(1)=1_F$, and
+\item $\phi(0)=0_F$.
+\end{enumerate}
+This shows that $\phi$ is a field homomorphism.  Finally, if $\phi(p)=0$ and $p\ne 0$, then $1=\phi(1)=\phi(pp^{-1})=\phi(p)\phi(p^{-1})=0\cdot\phi(p^{-1})=0$, a contradiction.
+\end{proof}
+
+\textbf{Proposition.}  $\fp$ ($\cong\mathbb{Z}/p\mathbb{Z}$) is the prime subfield of any field of characteristic $p$.
+\begin{proof}  Let $F$ be a field of characteristic $p$.  The idea again is to find an injective field homomorphism, this time, from $\fp$ into $F$.  Take $\phi$ to be the function that maps $m\in \fp$ to $m\cdot 1_F$.  It is well-defined, for if $m=n$ in $\fp$, then $p\mid (m-n)$, meaning $(m-n)1_F=0$, or that $m\cdot 1_F=n\cdot 1_F$, (showing that one element in $\fp$ does not get ``mapped'' to more than one element in $F$).  Since the above argument is reversible, we see that $\phi$ is one-to-one.
+
+To complete the proof, we next show that $\phi$ is a field homomorphism.  That $\phi(1)=1_F$ and $\phi(0)=0_F$ are clear from the definition of $\phi$.  Additivity and multiplicativity of $\phi$ are readily verified, as follows: 
+\begin{itemize}
+\item $\phi(m+n)=(m+n)\cdot 1_F=m\cdot 1_F + n\cdot 1_F=\phi(m)+\phi(n)$; 
+\item $\phi(mn)=mn\cdot 1_F=mn\cdot 1_F\cdot 1_F=(m\cdot 1_F)(n\cdot 1_F)=\phi(m)\phi(n)$.  
+\end{itemize}
+This shows that $\phi$ is a field homomorphism.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

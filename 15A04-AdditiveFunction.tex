@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AdditiveFunction}
+\pmcreated{2013-03-22 16:17:31}
+\pmmodified{2013-03-22 16:17:31}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{additive function}
+\pmrecord{9}{38409}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+\pmrelated{LinearFunctional}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\begin{document}
+\begin{definition}
+Let $f\colon V\to \R$ be a function on a real vector space $V$ (more generally we can consider a vector space $V$ over a field $F$). 
+We say that $f$ is \emph{additive} if 
+\[
+  f(x+y)= f(x) + f(y)
+\]
+for all $x,y \in V$.
+\end{definition}
+
+If $f$ is additive, we find that 
+\begin{enumerate}
+\item
+$f(0)=0$. In fact $f(0)=f(0+0)=f(0)+f(0)=2f(0)$.
+
+\item
+$f(nx) = nf(x)$ for $n\in \N$. In fact $f(nx)=f(x)+\cdots +f(x) = nf(x)$.
+
+\item
+$f(nx) = nf(x)$ for $n\in \Z$. In fact $0=f(0)=f(x+(-x)) =f(x)+f(-x)$ so that $f(-x)=-f(x)$ and hence $f(-nx)=-f(nx)=-nf(x)$.
+
+\item
+$f(qx) = q f(x)$ for $q\in \Q$. In fact $q f(px/q) = f(q(px/q))=f(px) = p f(x)$ so that $f(px/q) = pf(x)/q$.
+\end{enumerate}
+
+This means that $f$ is $\Q$ linear. 
+Quite surprisingly it is possible to show that there exist additive functions which are not linear (for example when $V$ is a vector space over the field $\R$).
+
+%%%%%
+%%%%%
+\end{document}

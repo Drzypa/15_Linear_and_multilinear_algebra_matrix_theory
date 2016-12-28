@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MatrixInverse}
+\pmcreated{2013-03-22 13:04:25}
+\pmmodified{2013-03-22 13:04:25}
+\pmowner{akrowne}{2}
+\pmmodifier{akrowne}{2}
+\pmtitle{matrix inverse}
+\pmrecord{18}{33483}
+\pmprivacy{1}
+\pmauthor{akrowne}{2}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A09}
+\pmsynonym{inverse}{MatrixInverse}
+\pmsynonym{matrix inversion}{MatrixInverse}
+\pmdefines{invertible}
+\pmdefines{adjugate}
+\pmdefines{adjugate of a matrix}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+\section{Matrix Inverse}
+
+The \emph{inverse} of an $n \times n$ matrix $A$ is denoted by $A^{-1}$.  The inverse is defined so that 
+
+$$ A A^{-1} = A^{-1}A = I_n $$
+
+where $I_n$ is the $n \times n$ identity matrix.
+
+It should be stressed that \textbf{only} square matrices have inverses proper-- however, a matrix of any size may have ``left'' and ``right'' inverses (which will not be discussed here).
+
+A precondition for the existence of the matrix inverse $A^{-1}$ (i.e. the matrix is \emph{invertible}) is that $\det A \ne 0$ (the determinant is nonzero), the reason for which we will see in a second. 
+
+The general form of the inverse of a matrix $A$ is
+
+$$ A^{-1} = \frac{1}{\det(A)} \operatorname{adj}(A) $$
+
+where $\operatorname{adj}(A)$ is the \emph{adjugate} of $A$ (the matrix formed by the cofactors of $A$, i.e. with $\operatorname{adj}(A)_{ij} = C_{ij}(A)$).\footnote{Some other sources call the adjugate the adjoint; however on PM the adjoint is reserved for the conjugate transpose.}  This can also be thought of as a generalization of the $2 \times 2$ formula given in the next section.  However, due to the inclusion of the determinant in the expression, it is impractical to actually use this to calculate inverses.
+
+This general form also explains why the determinant must be nonzero for invertibility; as we are dividing through by its value.
+
+An invertible matrix is also said to be nonsingular.
+
+\section{Calculating the Inverse By Hand}
+
+\textbf{Method 1:}
+
+An easy way to calculate the inverse of a matrix by hand is to form an augmented matrix $[A|I]$ from $A$ and $I_n$, then use Gaussian elimination to transform the left half into $I$.  At the end of this procedure, the right half of the augmented matrix will be $A^{-1}$ (that is, you will be left with $[I|A^{-1}]$).
+
+\textbf{Method 2:}
+
+One can calculate the $i,j$th element of the inverse by using the general formula; i.e.
+
+$$ A^{-1}_{ji} = C_{ij}(A) / \det{A} $$
+
+where $C_{ij}(A)$ is the $i, j$th cofactor expansion of the matrix $A$.  
+
+Note that the indices on the left-hand side are swapped relative to the right-hand side.  
+
+\subsection{2-by-2 case:}
+
+For the $2\times 2$ case, the general formula reduces to a memorable shortcut.  For the $2\times 2$ matrix 
+
+$$ M = \begin{bmatrix}a & b \\ c & d \end{bmatrix} $$
+
+The inverse $M^{-1}$ is always
+
+$$ M^{-1} = \left(\frac{1}{\det M}\right) \begin{bmatrix}d & -b \\ -c & a\end{bmatrix} $$
+
+where $\det M$ is simply $ad - bc$.
+
+\subsection{Remarks}
+
+Some caveats: computing the matrix inverse for ill-conditioned matrices is error-prone; special care must be taken and there are sometimes special algorithms to calculate the inverse of certain classes of matrices (for example, Hilbert matrices).  
+
+\section{Avoiding the Inverse and Numerical Calculation}
+
+The need to find the matrix inverse depends on the situation-- whether done by hand or by computer, and whether the matrix is simply a part of some equation or expression or not.  
+
+Instead of computing the matrix $A^{-1}$ as part of an equation or expression, it is nearly always better to use a matrix factorization instead.  For example, when solving the system $Ax = b$, actually calculating $A^{-1}$ to get $x=A^{-1}b$ is discouraged.  LU-factorization is typically used instead.
+
+We can even use this fact to speed up our calculation of the inverse by itself.  We can cast the problem as finding $X$ in 
+
+$$ AX = B $$
+
+For $n \times n$ matrices $A$, $X$, and $B$ (where $X = A^{-1}$ and $B = I_n$).  To solve this, we first find the $LU$ decomposition of $A$, then iterate over the columns, solving $ Ly = Pb_k $ and $ Ux_k = y $ each time ($k = 1 \ldots n$).  The resulting values for $x_k$ are then the columns of $A^{-1}$.
+
+\section{Elements of Invertible Matrices}
+
+Typically the matrix elements are members of a field when we are speaking of inverses (i.e. the reals, the complex numbers).  However, the matrix inverse may exist in the case of the elements being members of a commutative ring, provided that the determinant of the matrix is a unit in the ring.
+
+\begin{thebibliography}{3}
+
+\bibitem{Golub} Golub and Van Loan, ``Matrix Computations,'' Johns Hopkins Univ. Press, 1996.
+
+\bibitem{MrMeanie} ``Matrix Math,'' \PMlinkexternal{http://easyweb.easynet.co.uk/~mrmeanie/matrix/matrices.htm}{http://easyweb.easynet.co.uk/~mrmeanie/matrix/matrices.htm}
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

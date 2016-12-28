@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DualHomomorphismOfTheDerivative}
+\pmcreated{2013-03-22 12:35:28}
+\pmmodified{2013-03-22 12:35:28}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{dual homomorphism of the derivative}
+\pmrecord{4}{32842}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+\pmclassification{msc}{15A72}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\dual}{^*}
+\newcommand{\cP}[1]{\mathcal{P}_{#1}}
+\newcommand{\ev}[1]{\mathrm{Ev}^{(#1)}}
+\newcommand{\D}[1]{\mathrm{D}_{#1}}
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\begin{document}
+Let $\cP{n}$ denote the vector space of real
+polynomials of degree $n$ or less, and let $\D{n}:\cP{n}\rightarrow
+\cP{n-1}$ denote the ordinary derivative.  Linear forms on $\cP{n}$
+can be given in terms of evaluations, and so we introduce the
+following notation.  For every scalar $k\in\reals$, let $\ev{n}_k\in
+(\cP{n})\dual$ denote the evaluation functional
+$$\ev{n}_k:p\mapsto p(k),\quad p\in \cP{n}.$$
+Note: the degree superscript matters!  For example:
+$$\ev1_2 = 2\, \ev1_1- \ev1_0,$$
+whereas $\ev2_0, \ev2_1, \ev2_2$ are
+linearly independent.  Let us consider the dual homomorphism
+$\D2\dual$, i.e. the adjoint of $\D2$.  We have the following
+relations:
+$$
+\begin{array}{rrrr}
+  \D2\dual\lp\ev1_0\rp =&-\frac{3}{2}\,
+  \ev2_0 &+ 2\,\ev2_1 & -\frac{1}{2}\, \ev2_2 ,\\ 
+  \D2\dual\lp \ev1_1\rp =& - \frac{1}{2}\, \ev2_0  &&+\frac{1}{2}\, \ev2_2.
+\end{array}
+$$
+In other words, taking $\ev1_0, \ev1_1$ as the basis of
+$(\cP1)\dual$ and $\ev2_0, \ev2_1, \ev2_2$ as the basis  of
+$(\cP2)\dual$, the matrix that represents $\D2\dual$ is just
+$$
+\lp
+\begin{array}{rr}
+  -\frac{3}{2} & - \frac{1}{2} \\
+  2 &  0 \\
+ - \frac{1}{2} &  \frac{1}{2}
+\end{array}\rp
+$$
+Note the contravariant relationship between $\D2$ and $\D2\dual$. The
+former turns second degree polynomials into first degree polynomials,
+where as the latter turns first degree evaluations into second degree
+evaluations.  The matrix of $\D2\dual$ has 2 columns and 3 rows
+precisely because $\D2\dual$ is a homomorphism from a 2-dimensional
+vector space to a 3-dimensional vector space.  
+
+By contrast, $\D2$ will be represented by a $2\times 3$ matrix.  The
+dual basis of $\cP1$ is
+$$-x+1,\quad x$$
+and the dual basis of $\cP2$ is
+$$\frac{1}{2} (x-1)(x-2),\quad  x(2-x),\quad \frac{1}{2} x(x-1).$$
+Relative to these bases, $\D2$ is represented by the transpose of the
+matrix for $\D2\dual$, namely
+$$
+\begin{pmatrix}
+  -\frac{3}{2} & 2 & - \frac{1}{2} \\
+ - \frac{1}{2} & 0 &  \frac{1}{2}
+\end{pmatrix}
+$$
+This corresponds to the following three relations:
+$$
+\begin{array}{lcrr}
+\D2\lb \frac{1}{2} (x-1)(x-2) \rb &=& -\frac{3}{2}\, (-x+1) &  -
+\frac{1}{2}\, x \\
+\D2\lb x(2-x) \rb &=& 2\, (-x+1) & + 0\, x \\
+\D2\lb \frac{1}{2} x(x-1) \rb &=& - \frac{1}{2}\,(-x+1) & +
+\frac{1}{2}\, x
+\end{array}
+$$
+%%%%%
+%%%%%
+\end{document}

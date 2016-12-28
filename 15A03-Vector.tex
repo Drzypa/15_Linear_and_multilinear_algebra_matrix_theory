@@ -1,0 +1,195 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Vector}
+\pmcreated{2013-03-22 12:38:40}
+\pmmodified{2013-03-22 12:38:40}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{vector}
+\pmrecord{13}{32909}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmclassification{msc}{15A90}
+\pmsynonym{abstract vector}{Vector}
+\pmrelated{VectorSpace}
+\pmrelated{Frame}
+\pmrelated{TensorArray}
+\pmrelated{Vector}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{{\PMlinkescapetext{{#1}}}}
+\newcommand{\pln}[2]{{\PMlinkname{{#1}}{#2}}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bzero}{\mathbf{0}}
+\newcommand{\supt}{^{\scriptscriptstyle\mathrm{T}}}
+\newcommand{\kfield}{\mathbb{K}}
+\begin{document}
+\paragraph{Overview.}
+The word \emph{vector} has several distinct, but interrelated
+meanings.  The present entry is an overview and discussion of these
+concepts, with links at the end to more detailed definitions.
+
+\begin{itemize}
+\item A \emph{list vector} (follow the link to the formal definition)
+  is a finite list of numbers\footnote{Infinite vectors arise in areas
+    such as functional analysis and quantum mechanics, but require a
+    much more complicated and sophisticated theory.}.  Most commonly,
+  the vector is composed of real numbers, in which case a list vector
+  is just an element of $\reals^n$.  Complex numbers are also quite
+  common, and then we speak of a complex vector, an element of
+  $\cnums^n$.  Lists of ones and zeroes are also utilized, and are
+  referred to as binary vectors.  More generally, one can use any
+  field $\kfield$, in which case a list vector is just an element of
+  $\kfield^n$.
+\item A \emph{physical vector} (follow the link to a formal definition
+  and in-depth discussion) is a geometric quantity that correspond to
+  a linear displacement. Indeed, it is customary to depict a physical
+  vector as an arrow.  By choosing a system of coordinates a physical
+  vector $\bv$, can be represented by a list vector
+  $(v^1,\ldots,v^n)\supt$.  Physically, no single system of
+  measurement cannot be preferred to any other, and therefore such a
+  representation is not canonical.  A linear change of coordinates
+  induces a corresponding linear transformation of the representing
+  list vector.
+
+  
+  In most physical applications vectors have a magnitude as well as a
+  direction, and then we speak of a Euclidean vector.  When lengths
+  and angles can be measured, it is most convenient to utilize an
+  orthogonal system of coordinates.  In this case, the magnitude of a
+  Euclidean vector $\bv$ is given by the usual Euclidean norm of the
+  corresponding list vector,
+  $$\Vert \bv \Vert = \sqrt{{\textstyle \sum_i} (v^i)^2}\;.$$
+  This
+  definition is independent of the choice of orthogonal coordinates.
+  
+\item An \emph{abstract vector} is an element of a vector space.  An
+  abstract Euclidean vector is an element of an inner product space.
+  The connection
+  between list vectors and the more general abstract vectors is fully
+  described in the entry on \PMlinkname{frames}{Frame}.  
+  
+  Essentially, given a finite dimensional abstract vector space, a
+  choice of a coordinate frame (which is really the same thing as a
+  basis) sets up a linear bijection between the abstract vectors and
+  list vectors, and makes it possible to represent the one in terms of
+  the other.  The representation is not canonical, but depends on the
+  choice of frame.  A change of frame changes the representing list
+  vectors by a matrix multiplication.
+  
+  We also note that the axioms of a vector space make no mention of
+  lengths and angles.  The vector space formalism can be enriched to
+  include these notions.  The result is the axiom system for inner
+  products.
+  
+  Why do we bother with the ``bare-bones'' formalism of length-less
+  vectors? The reason is that some applications involve velocity-like
+  quantities, but lack a meaningful notion of speed.  As an example,
+  consider a multi-particle system.  The state of the system is
+  represented as a point in some manifold, and the evolution of the
+  system is represented by velocity vectors that live in that
+  manifold's tangent space.  We can superimpose and scale these
+  velocities, but it is meaningless to speak of a speed of the
+  evolution.
+
+\end{itemize}
+
+\paragraph{Discussion.}
+What is a vector?  This simple question is surprisingly difficult to
+answer.  Vectors are an essential scientific concept, indispensable
+for both the physicist and the mathematicians.  It is strange then,
+that despite the obvious importance, there is no clear, universally
+accepted definition of this term.
+
+The difficulty is one of semantics. The term {\em vector} is
+ambiguous, but its various meanings are interrelated.  The different
+usages of {\em vector} call for different formal definitions, which
+are similarly interrelated.  List vectors are the most elementary and
+familiar kind of vectors.  They are easy to define, and are
+mathematically precise.  However, saying that a vector is just a list
+of numbers leads to conceptual difficulties.
+
+A physicist needs to be able to say that velocities, forces, fluxes
+are vectors.  A geometer, and for that matter a pilot, will think of a
+vector as a kind of spatial displacement.  Everyone would agree that a
+choice of a vector involves multiple degrees of freedom, and that
+vectors can linearly superimposed.  This description of ``vector''
+evokes useful and intuitive understanding, but is difficult to
+formalize.  
+
+The synthesis of these conflicting viewpoints is the modern
+mathematical notion of a vector space.  The key innovation of modern,
+formal mathematics is the pursuit of generality by means of
+abstraction.  To that end, we do not give an answer to ``What is a
+vector?'', but rather give a list of properties enjoyed by all objects
+that one may reasonably term a ``vector''.  These properties are just
+the axioms of an abstract vector space, or as Forrest Gump\cite{gump}
+might have put it, ``A vector is as a vector does.''  
+
+The axiomatic approach afforded by vector space theory gives us
+maximum flexibility.  We can carry out an analysis of various physical
+vector spaces by employing propositions based on vector space axioms,
+or we can choose a basis and perform the same analysis using list
+vectors.  This flexibility is obtained by means of abstraction.  We
+are not obliged to say what a vector {\em is}; all we have to do is
+say that these abstract vectors enjoy certain properties, and make the
+appropriate deductions.  This is similar to the idea of an abstract
+class in object-oriented programming.
+
+
+Surprisingly, the idea that a vector is an element of an abstract
+vector space has not made great inroads in the physical sciences and
+engineering.  The stumbling block seems to be a poor understanding of
+formal, deductive mathematics and the unstated, but implicit attitude
+that
+\begin{quote}
+  \em formal manipulation of a physical quantity requires that it be
+  represented by one or more numbers.
+\end{quote}
+Great historical irony is at work here.  The classical, Greek approach
+to geometry was purely synthetic, based on idealized notions like
+point and line, and on various axioms.  Analytic geometry, a la
+\PMlinkexternal{Descartes}{http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Descartes.html},
+arose much later, but became the dominant mode of thought in
+scientific applications and largely overshadowed the synthetic method.
+The pendulum began to swing back at the end of the nineteenth century
+as mathematics became more formal and important new axiomatic systems,
+such as vector spaces, fields, and topology, were developed.  The cost
+of increased abstraction in modern mathematics was more than justified
+by the improvement in clarity and organization of mathematical
+knowledge.
+
+Alas, to a large extent physical science and engineering continue to
+dwell in the $19\supth$ century.  The axioms and the formal theory of
+vector spaces allow one to manipulate formal geometric entities, such
+as physical vectors, without first turning everything into numbers.
+The increased level of abstraction, however, poses a formidable
+obstacle toward the acceptance of this approach.  Indeed, mainstream
+physicists and engineers do not seem in any great hurry to accept the
+definition of {\em vector} as something that dwells in a vector space.
+Until this attitude changes, {\em vector} will retain the ambiguous
+meaning of being both a list numbers, and a physical quantity that
+transforms with respect to matrix multiplication.
+\begin{thebibliography}{99}
+\bibitem{gump} R. Zemeckis, ``Forrest Gump'', Paramount Pictures.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

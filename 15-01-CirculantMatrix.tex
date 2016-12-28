@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CirculantMatrix}
+\pmcreated{2013-03-22 13:53:38}
+\pmmodified{2013-03-22 13:53:38}
+\pmowner{bwebste}{988}
+\pmmodifier{bwebste}{988}
+\pmtitle{circulant matrix}
+\pmrecord{9}{34640}
+\pmprivacy{1}
+\pmauthor{bwebste}{988}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-01}
+\pmclassification{msc}{15A99}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{term} \PMlinkescapeword{connection}
+\PMlinkescapeword{simple} \PMlinkescapeword{images}
+A square matrix $M:A\times A\to C$ is said to be $g$-\emph{circulant} for an integer $g$ if each row other than the first is obtained
+from the preceding row by shifting the elements cyclically g columns to the right (g>0) or -g columns to the left (g < 0).
+
+That is, if $A=[a_{ij}]$ then
+$a_{i,j} = a_{i+1,j+g}$
+where the subscripts are computed modulo d.
+A 1-circulant is commonly called a circulant
+and a -1-circulant is called a back circulant.
+
+More explicitly, a matrix of the form
+$$
+\left[
+\begin{array}{ccccc}
+M_1 & M_2 & M_3 &\ldots & M_{d} \\
+M_d & M_1 & M_2 & \ldots & M_{d-1}\\
+M_{d-1} & M_d & M_1 & \ldots & M_{d-2}\\
+\vdots & \vdots& \vdots & \ddots & \vdots \\
+M_2 & M_3 & M_4 & \ldots & M_1
+\end{array}\right]
+$$
+is called circulant. 
+
+%The determinant of M' is
+%$$\prod_{i=1}^n\sum_{j=1}^nM_j\omega_i^{j-1}$$
+%where \omega is exp(2pi i/n).
+
+Because the \PMlinkname{Jordan decomposition}{JordanCanonicalFormTheorem} of a
+circulant matrix is rather simple, circulant matrices have some
+interest in connection with the approximation of eigenvalues of
+more general matrices. In particular, they have become part of the
+standard apparatus in the computerized analysis of signals and images.
+%%%%%
+%%%%%
+\end{document}

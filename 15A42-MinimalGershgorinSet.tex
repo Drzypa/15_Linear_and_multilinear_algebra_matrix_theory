@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MinimalGershgorinSet}
+\pmcreated{2013-03-22 15:35:57}
+\pmmodified{2013-03-22 15:35:57}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{minimal Gershgorin set}
+\pmrecord{11}{37514}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A42}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapetext{Strictly} related to Gershgorin's theorem is the so called "minimal Gershgorin set".
+For every $A\in\mathbf{C}^{n,n}$, $\mathbf{x}>0$ meaning $x_i>0\quad \forall i$, let's define its \emph{minimal Gershgorin set} $G(A)$ as:
+\[
+G(A)=\bigcap_{\mathbf{x}>0} G_{\mathbf{x}}(A),
+\]
+where
+\[
+G_{\mathbf{x}}(A)=\bigcup_{i=1}^n \left\{z\in\mathbf{C}:\left|z-a_{ii}\right|\leq\frac{1}{x_i}\sum_{j\ne i}\left|a_{ij}\right|x_j\right\}.
+\]
+
+Theorem: Let $A\in\mathbf{C}^{n,n}$, let $\sigma(A)$ be the spectrum of $A$ and let $G(A)$ be its minimal Gershgorin set defined as above. Then
+\[
+\sigma(A)\subseteq G(A).
+\]
+
+\begin{proof}
+
+Given $\mathbf{x}>0$, let $X=diag\left\{x_1, x_2, \ldots, x_n\right\}$and let $B_X=X^{-1}AX$. Then $A$ and $B_X$ share the same spectrum, being similar. Due to definition, and keeping in mind that $X^{-1}=diag\left\{x_1^{-1}, x_2^{-1}, \ldots, x_n^{-1}\right\}$, we have $b_{ij}^{(X)}=a_{ij}\frac{x_j}{x_i}$
+and, applying Gershgorin theorem to $B_X$, we get:
+
+$\sigma(A)=\sigma(B_X)\subseteq\bigcup_{i=1}^n \left\{z\in\mathbf{C}:\left|z-a_{ii}\right|\leq\frac{1}{x_i}\sum_{j\ne i}\left|a_{ij}\right|x_j\right\}$
+
+and, since this is true for any $\mathbf{x}>0$, we finally get the thesis.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

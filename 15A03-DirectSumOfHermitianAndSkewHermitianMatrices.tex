@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirectSumOfHermitianAndSkewHermitianMatrices}
+\pmcreated{2013-03-22 13:36:30}
+\pmmodified{2013-03-22 13:36:30}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{direct sum of Hermitian and skew-Hermitian matrices}
+\pmrecord{5}{34238}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmclassification{msc}{15A57}
+\pmrelated{DirectSumOfEvenoddFunctionsExample}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\newcommand{\ccj}[1]{\overline{#1}}
+\def\dtra{\hspace{0.04cm} ^{\mbox{\scriptsize{T}}} \hspace{0.02cm}}
+
+\newcommand{\matC}[0]{M}
+\newcommand{\matCp}[0]{M_+}
+\newcommand{\matCm}[0]{M_-}
+ 
+
+In this example, we show that any square matrix with complex
+entries can uniquely be decomposed into the sum of one Hermitian matrix and 
+one skew-Hermitian matrix. A fancy way to say this is that
+complex square matrices is the direct sum of Hermitian and skew-Hermitian 
+matrices. 
+
+Let us denote the vector space (over $\mathbb{C}$) of 
+complex square $n\times n$ matrices by $\matC$.
+Further, we denote by $\matCp$ respectively $\matCm$ the vector
+subspaces of Hermitian and skew-Hermitian matrices. 
+We claim that 
+ \begin{eqnarray}
+ \label{eqp}
+ \matC &=&  \matCp  \oplus \matCm.
+ \end{eqnarray}
+Since $\matCp$ and $\matCm$ are vector subspaces of $\matC$, it is clear
+that $\matCp +\matCm$ is a vector subspace of $\matC$. Conversely, suppose 
+$A\in \matC$. We can then define
+ \begin{eqnarray*}
+ A_+ &=& \frac{1}{2}\big( A + A^\ast \big), \\
+ A_- &=& \frac{1}{2}\big( A - A^\ast \big).
+ \end{eqnarray*}
+Here $A^\ast = \ccj{A}\dtra$, and $\ccj{A}$ is the complex conjugate of $A$,
+and $A\dtra$ is the transpose of $A$. It follows that $A_+$ is Hermitian 
+and $A_-$ is anti-Hermitian. Since $A=A_+ + A_-$, any element 
+in $\matC$ can be written as
+the sum of one element in $\matCp$ and one element in $\matCm$. Let us check 
+that this decomposition is unique. If $A\in \matCp\cap \matCm$, then 
+$A=A^\ast=-A$, so $A=0$. 
+We have established equation \ref{eqp}.
+
+{\bf Special cases}
+\begin{itemize} 
+\item In the special case of $1\times 1$ matrices, we obtain the 
+decomposition of a complex number into its real and imaginary components. 
+
+\item In the special case of real matrices, we obtain the decomposition of 
+a $n\times n$ matrix into a symmetric matrix and anti-symmetric matrix. 
+
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

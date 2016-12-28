@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfCramersRule}
+\pmcreated{2013-03-22 12:50:33}
+\pmmodified{2013-03-22 12:50:33}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{example of Cramer's rule}
+\pmrecord{7}{33169}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{amsmath}
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+Say we want to solve the system
+\begin{eqnarray*}
+3x + 2y + z -2w&=&4\\
+2x - y + 2z - 5w &=& 15\\
+4x + 2y \phantom{+ 2x} - 5w&=&1\\
+3x \phantom{+ 2y} - 2z -4w &=& 1.
+\end{eqnarray*}
+
+The associated matrix is 
+$$\begin{pmatrix}
+3 & 2 & 1 & -2\\
+2 & -1 & 2 & -5\\
+4 & 2 & 0 & -1 \\
+3 & 0 & -2 & -4
+\end{pmatrix}$$
+
+whose determinant is $\Delta=-65$. Since the determinant is non-zero, we can use Cramer's rule. To obtain the value of the $k$-th variable, we replace the $k$-th column of the matrix above by the column vector 
+$$\begin{pmatrix} 4\\ 15\\ 1\\ 1\end{pmatrix},$$ 
+the determinant of the obtained matrix is divided by $\Delta$ and the resulting value is the wanted solution.
+
+So
+$$
+x=\frac{\Delta_1}{\Delta}=
+\frac{
+\begin{vmatrix}
+4 & 2 & 1 & -2\\
+15 & -1 & 2 & -5\\
+1 & 2 & 0 & -1\\
+1 & 0 & -2 & -4
+\end{vmatrix}
+}{-65}=\frac{-65}{-65}=1
+$$
+
+$$
+y=\frac{\Delta_2}{\Delta}=
+\frac{
+\begin{vmatrix}
+3 & 4 &  1 & -2\\
+2 & 15 & 2 & -5\\
+4 & 1 &  0 & -1\\
+3 & 1 &  -2 & -4
+\end{vmatrix}
+}{-65}=\frac{130}{-65}=2
+$$
+
+$$
+z=\frac{\Delta_3}{\Delta}=
+\frac{
+\begin{vmatrix}
+3 & 2 & 4 &  -2\\
+2 & -1 & 15 & -5\\
+4 & 2 & 1 &  1\\
+3 & 0 & 1 &  -4
+\end{vmatrix}
+}{-65}=\frac{-195}{-65}=3
+$$
+
+$$
+w=\frac{\Delta_4}{\Delta}=
+\frac{
+\begin{vmatrix}
+3 & 2 & 1& 4 \\
+2 & -1 & 2 & 15\\
+4 & 2 & 0 & 1 \\
+3 & 0 &  -2 & 1
+\end{vmatrix}
+}{-65}=\frac{65}{-65}=-1
+$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCalculusTheoremUsedInTheLagrangeMethod}
+\pmcreated{2013-03-22 13:29:51}
+\pmmodified{2013-03-22 13:29:51}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of calculus theorem used in the Lagrange method}
+\pmrecord{6}{34073}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A18}
+\pmclassification{msc}{15A42}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $f(\mathbf{x})$ and $g_i(\mathbf{x}), i=0,{\ldots},m$ 
+be differentiable scalar functions; $\mathbf{x} \in R^n$.
+
+We will find local extremes of the function $f(\mathbf{x})$ where
+$\nabla f=0$.  This can be proved by contradiction:
+\[ \nabla f \neq 0 \]
+\[ \Leftrightarrow \exists \epsilon_0 > 0, \forall
+\epsilon; 0<\epsilon<\epsilon_0: f(\mathbf{x}-\epsilon \nabla f) < f(\mathbf{x}) < f(\mathbf{x+\epsilon \nabla f})
+\]
+but then $f(\mathbf{x})$ is not a local extreme.
+
+Now we put up some conditions, such that we should find the $\mathbf{x}
+\in S \subset R^n$ that gives a local extreme of $f$.  Let $S=\bigcap_{i=1}^m S_i$, and
+let $S_i$ be defined so that $g_i(\mathbf{x})=0 \forall \mathbf{x} \in S_i$. 
+
+Any vector $\mathbf{x} \in R^n$ can have one component perpendicular to
+the subset $S_i$ (for visualization, think $n=3$ and let
+$S_i$ be a flat surface).  $\nabla g_i$ will be perpendicular to
+$S_i$, because:
+\[ \exists \epsilon_0>0,  \forall \epsilon; 0<\epsilon<\epsilon_0:
+g_i(\mathbf{x}-\epsilon \nabla g_i)<g_i(\mathbf{x})<
+g_i(\mathbf{x}+\epsilon \nabla g_i) \]
+But $g_i(\mathbf{x})=0$, so any vector $\mathbf{x}+\epsilon \nabla
+g_i$ must be outside $S_i$, and also outside $S$.
+(todo: I have proved that there might exist a component perpendicular to each subset $S_i$, but not that there exists only one; this should be done)
+
+%We define the local maximum of $f(\mathbf{x})$ within $S$ to be all values such
+%that 
+%\[ \exists \epsilon_0, \forall \mathbf{x_0} \in S; |\mathbf{x}-\mathbf{x_0}|<\epsilon_0: f(\mathbf{x_0})<f(\mathbf{x}) \]
+%and the local minimum similarly.
+
+By the argument above, $\nabla f$ must be zero - but now we can ignore
+all components of $\nabla f$ perpendicular to $S$. (todo: this should be expressed more formally and proved)
+
+So we will have a local extreme within $S_i$ if there exists a
+$\lambda_i$ such that 
+\[ \nabla f = \lambda_i \nabla g_i \] 
+
+We will have local extreme(s) within $S$ where there exists a set
+$\lambda_i, i=1,{\ldots},m$
+such that 
+\[ \nabla f = \sum \lambda_i \nabla g_i \]
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CharacteristicPolynomialOfAlgebraicNumber}
+\pmcreated{2013-03-22 19:08:41}
+\pmmodified{2013-03-22 19:08:41}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{characteristic polynomial of algebraic number}
+\pmrecord{14}{42046}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A18}
+\pmclassification{msc}{12F05}
+\pmclassification{msc}{11R04}
+\pmrelated{RationalIntegersInIdeals}
+\pmrelated{DegreeOfAlgebraicNumber}
+\pmdefines{characteristic polynomial}
+\pmdefines{characteristic equation}
+\pmdefines{$\mathbb{Q}(\vartheta)$-conjugates}
+\pmdefines{$K$-conjugates}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $\vartheta$ be an algebraic number of degree $n$, $f(x)$ its minimal polynomial and
+$$\vartheta_1 = \vartheta,\; \vartheta_2,\; \ldots,\; \vartheta_n$$
+its algebraic conjugates.
+
+Let $\alpha$ be an element of the number field $\mathbb{Q}(\vartheta)$ and 
+$$r(x) \;:=\; c_0+c_1x+\ldots+c_{n-1}x^{n-1}$$
+the canonical polynomial of $\alpha$ with respect to $\vartheta$.\, We consider the numbers
+\begin{align}
+r(\vartheta_1) \;=\; \alpha \;:=\; \alpha^{(1)},\quad r(\vartheta_2) \;:=\; \alpha^{(2)},\quad 
+\ldots,\quad r(\vartheta_n) \;:=\; \alpha^{(n)}
+\end{align}
+and form the equation
+$$
+g(x) \;:=\; \prod_{i=1}^n[x\!-\!r(\vartheta_i)] \;=\; (x\!-\!\alpha^{(1)})(x\!-\!\alpha^{(2)})\cdots(x\!-\!\alpha^{(n)}) 
+\;=\; x^n\!+\!g_1x^{n-1}\!+\!\ldots\!+\!g_n \;=\; 0,
+$$
+the roots of which are the numbers (1) and only these.\, The coefficients $g_i$ of the polynomial $g(x)$ are symmetric polynomials in the numbers $\vartheta_1,\, \vartheta_2,\, \ldots,\, \vartheta_n$ and also symmetric polynomials in the numbers $\alpha^{(i)}$.\, The fundamental theorem of symmetric polynomials implies now that the symmetric polynomials $g_i$ in the roots $\vartheta_i$ of the equation \,$f(x) = 0$\, belong to the ring determined by the coefficients of the equation and of the canonical polynomial $r(x)$; thus the numbers $g_i$ are rational (whence the degree of $\alpha$ is at most equal to $n$).\\
+
+It is not hard to show (see the entry degree of algebraic number) of that the degree $k$ of $\alpha$ divides $n$ and that the numbers (1) consist of $\alpha$ and its algebraic conjugates $\alpha_2,\,\ldots,\,\alpha_k$, each of which appears in (1) exactly\, $\frac{n}{k} = m$\, times.\, In fact,\, $g(x) = [a(x)]^m$\, where $a(x)$ is the minimal polynomial of $\alpha$ (consequently, the coefficients 
+$g_i$ are integers if $\alpha$ is an algebraic integer).\\
+
+The polynomial $g(x)$ is the \emph{characteristic polynomial} (in German \emph{Hauptpolynom}) of the element $\alpha$ of the algebraic number field $\mathbb{Q}(\vartheta)$ and the equation\, $g(x) = 0$ the \emph{characteristic equation} (\emph{Hauptgleichung}) of $\alpha$.\, See the independence of characteristic polynomial on primitive element. \\
+
+So, the roots of the characteristic equation of $\alpha$ are $\alpha^{(1)},\,\alpha^{(2)},\,\ldots,\,\alpha^{(n)}$.\, They are called the $\mathbb{Q}(\vartheta)$\emph{-conjugates} of $\alpha$; they all are algebraic conjugates of 
+$\alpha$.
+
+
+%%%%%
+%%%%%
+\end{document}

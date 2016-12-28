@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfLinearLeastSquares}
+\pmcreated{2013-03-22 16:51:19}
+\pmmodified{2013-03-22 16:51:19}
+\pmowner{bloftin}{6104}
+\pmmodifier{bloftin}{6104}
+\pmtitle{example of linear least squares}
+\pmrecord{6}{39102}
+\pmprivacy{1}
+\pmauthor{bloftin}{6104}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The assumption of linear least squares is that there is a linear relationship between our measurements $z$ and the variables to be estimated $x$
+
+\begin{equation}
+z = Mx + b
+\end{equation}
+
+For this example let us assume that our measurements are given in Table 1 and you can see them plotted in Figure 1.
+
+\begin{center}
+\begin{tabular}{ccccccccccc}
+\hline \\ 
+x & -3.0 & -2.5 & -2.0 & -1.5 & -1.0 & -0.5 & 0.0 & 0.5 & 1.0 & 1.5 \\
+\PMlinkescapetext{z} & -1.0 & -0.25 & 0.0 & 0.25 & 0.4 & 0.7 & 1.0 & 1.1 & 1.4 & 1.8 \\ [2ex]
+\hline 
+\end{tabular}
+\end{center}
+\begin{center}
+{\bf Table 1:} Example Data
+\end{center}
+
+The linear least squares solution to fit the given data is given by the equation
+
+\begin{equation}
+x_{fit} = (A^TA)^{-1}A^Tz
+\end{equation}
+
+The only not so obvious step before using a tool like Matlab, is to form the $A$ matrix, which is a \PMlinkescapetext{combination} of an identity vector and $x$ as column vectors, such that
+
+$$ A = [ \,\, 1 \,\, | \,\,x \,\,] $$
+
+This is clarified by looking at the example \PMlinkescapetext{code} in Matlab, \PMlinktofile{LinearLeastSquares.m}{LinearLeastSquares.m}.  A plot of fitting the measurement data with a line such that it minimizes the the mean square of the error is shown in Figure 1.  The equation of the line to fit this data is then
+
+$$z = 0.543 x + 0.947$$
+
+\begin{center}
+\includegraphics[scale=.7]{LinearLeastSquares.eps}
+\end{center}
+\begin{center}
+{\bf Figure 1:} Linear Fit of Example Data
+\end{center}
+
+
+%%%%%
+%%%%%
+\end{document}

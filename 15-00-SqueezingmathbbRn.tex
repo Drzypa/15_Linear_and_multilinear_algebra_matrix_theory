@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SqueezingmathbbRn}
+\pmcreated{2013-03-22 17:10:02}
+\pmmodified{2013-03-22 17:10:02}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{squeezing $\mathbb{R}^n$}
+\pmrecord{20}{39479}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmclassification{msc}{15A04}
+\pmrelated{circle}
+\pmrelated{Ellipse2}
+\pmrelated{Circle}
+\pmrelated{ConicSection}
+\pmrelated{VolumeOfEllipsoid}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Squeezing the vector space $\mathbb{R}^n$ in the direction of one coordinate axis, \PMlinkname{i.e.}{Ie} multiplying a certain component $x_i$ of all vectors by a non-zero real number $k$, is a linear transformation of $\mathbb{R}^n$.\\
+
+A concrete example of such squeezing and its results is obtained if we squeeze in $\mathbb{R}^2$, i.e. in the Euclidean plane formed by all pairs\, $(x,\,y)$\, of real numbers, every $y$-coordinate by a positive number\, 
+$k = \frac{b}{a}$\, where\, $a > b > 0$.\, We may look how this procedure \PMlinkescapetext{acts} on the circle
+\begin{align}
+x^2+y^2 = a^2.
+\end{align}
+Since all ordinates of this equation are shrinked by the factor $\displaystyle \frac{b}{a}$ which is less than 1, we must must multiply the new $y$ in equation (1) by the inverse number $\displaystyle\frac{a}{b}$ in \PMlinkescapetext{order} to keep the equation satisfied; then the new $y$ no longer denotes the ordinate of the circle, but rather the ordinate of the squeezed circle. Thus, the equation of the squeezed curve is
+$$x^2+\left(\frac{a}{b}\!\cdot\!y\right)^2 = a^2.$$
+Simplifying we first obtain
+$$x^2+\frac{a^2y^2}{b^2} = a^2,$$
+and dividing all \PMlinkescapetext{terms} by $a^2$ yields
+\begin{align}
+   \frac{x^2}{a^2}+\frac{y^2}{b^2} = 1.
+\end{align}
+So the resulting curve is an ellipse with semiaxes $a$ and $b$.\\
+
+In the picture below, the circle\, $x^2\!+\!y^2=a^2$\! is drawn in red and the ellipse\, $\displaystyle \frac{x^2}{a^2}+\frac{y^2}{b^2}=1$\, in blue.  The angle $t$ is the eccentric anomaly at the point $P$ of the ellipse, which has the \PMlinkname{parametric presentation}{Parameter}\, $x = a\cos{t}$,\, $y = b\sin{t}$.
+
+\begin{center}
+\begin{pspicture}(-3.2,-2.5)(3.5,3.5)
+\psaxes[Dx=9,Dy=9]{->}(0,0)(-3.5,-3.2)(3.5,3.5)
+\psellipse[linecolor=blue](0,0)(3,2)
+\pscircle[linecolor=red](0,0){3}
+\rput[b](3.5,-0.3){$x$}
+\rput[r](-0.2,3.5){$y$}
+\rput(-0.2,2.77){$a$}
+\rput(-0.2,1.75){$b$}
+\rput(2.8,-0.2){$a$}
+\psline[linecolor=green](2,0)(2,2.236)
+\psline[linecolor=green](0,0)(2,2.236)
+\psarc[linecolor=green](0,0){0.5}{0}{48.19}
+\psdot(2,2.20)
+\psdot(2,1.49)
+\rput(1.8,1.3){$P$}
+\rput[b](0.6,0.27){$t$}
+\end{pspicture}
+\end{center}
+
+Squeezing $\mathbb{R}^3$ in the directions of the $y$-axis and $z$-axis one can get from the sphere
+                     $$x^2\!+\!y^2\!+\!z^2 = a^2$$
+the ellipsoid
+               $$\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2} = 1.$$
+
+
+%%%%%
+%%%%%
+\end{document}

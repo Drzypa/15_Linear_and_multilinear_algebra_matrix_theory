@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ListVector}
+\pmcreated{2013-03-22 12:51:50}
+\pmmodified{2013-03-22 12:51:50}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{list vector}
+\pmrecord{5}{33200}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmclassification{msc}{15A90}
+\pmdefines{column vector}
+\pmdefines{row vector}
+
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\hbF}{\hat{\bF}}
+\newcommand{\va}{a}
+\newcommand{\vu}{u}
+\newcommand{\vv}{v}
+\newcommand{\bzero}{\mathbf{0}}
+\newcommand{\supt}{^{\scriptscriptstyle\mathrm{T}}}
+\newcommand{\kfield}{\mathbb{K}}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{{\PMlinkescapetext{{#1}}}}
+\newcommand{\pln}[2]{{\PMlinkname{{#1}}{#2}}}
+\begin{document}
+Let $\kfield$ be a field and $n$ a positive natural number.  We define
+$\kfield^n$ to be the set of all mappings from the index list
+$(1,2,\ldots,n)$ to $\kfield$.  Such a mapping $\va\in \kfield^n$ is
+just a formal way of speaking of a list of field elements
+$\va^1,\ldots, \va^n\in\kfield$.
+
+The above description is somewhat restrictive. A more flexible
+definition of a list vector is the following.  Let $I$ be a finite
+list of indices\footnote{Distinct index sets are often used when
+  working with multiple frames of reference.}, $I=(1,\ldots,n)$ is one
+such possibility, and let $\kfield^I$ denote the set of all mappings
+from $I$ to $\kfield$.  A list vector, an element of $\kfield^I$, is
+just such a mapping.  Conventionally, superscripts are used to denote
+the values of a list vector, i.e. for $\vu\in \kfield^I$ and $i\in I$,
+we write $\vu^i$ instead of $\vu(i)$.
+
+We add and scale list vectors point-wise, i.e. for $\vu, \vv \in
+\kfield^I$ and $k\in \kfield$, we define $\vu+\vv\in \kfield^I$ and $k\vu\in
+\kfield^I$, respectively by
+\begin{align*}
+(\vu+\vv)^i &= \vu^i+\vv^i,\quad i\in I,\\
+(k\vu)^i &= k \vu^i,\quad i\in I.
+\end{align*}
+We also have the zero vector $\bzero\in \kfield^I$, namely the constant mapping
+$$\bzero^i = 0,\quad i\in I.$$
+The above operations give $\kfield^I$ the
+structure of an (abstract) vector space over $\kfield$.
+
+Long-standing traditions of linear algebra hold that elements of
+$\kfield^I$ be regarded as column vectors.  For example, we write
+$\va\in \kfield^n$ as
+$$\va = 
+\begin{pmatrix}
+  \va^1 \\ \va^2 \\ \vdots \\ \va^n
+\end{pmatrix}.$$
+Row vectors are usually taken to represents linear forms on
+$\kfield^I$.  In other words, row vectors are elements of the dual
+space $\lp\kfield^I\rp^*$.  The components of a row vector are
+customarily written with subscripts, rather than superscripts.  Thus,
+we express a row vector $\alpha\in\lp\kfield^n\rp^*$ as 
+$$\alpha = (\alpha_1,\ldots,\alpha_n).$$
+%%%%%
+%%%%%
+\end{document}

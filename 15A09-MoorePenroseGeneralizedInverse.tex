@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MoorePenroseGeneralizedInverse}
+\pmcreated{2013-03-22 14:31:31}
+\pmmodified{2013-03-22 14:31:31}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Moore-Penrose generalized inverse}
+\pmrecord{8}{36067}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A09}
+\pmclassification{msc}{60J10}
+\pmsynonym{Moore-Penrose pseudoinverse}{MoorePenroseGeneralizedInverse}
+\pmrelated{DrazinInverse}
+\pmrelated{Pseudoinverse}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $A$ be an $m\times n$ matrix with entries in $\mathbb{C}$. The \emph{Moore-Penrose generalized inverse}, denoted by $A^{\dagger}$, is an $n\times m$ matrix with entries in $\mathbb{C}$, such that
+\begin{enumerate}
+\item $AA^{\dagger}A=A$
+\item $A^{\dagger}AA^{\dagger}=A^{\dagger}$
+\item $AA^{\dagger}$ and $A^{\dagger}A$ are both Hermitian
+\end{enumerate}
+
+\textbf{Remarks}
+\begin{itemize}
+\item The Moore-Penrose generalized inverse of a given matrix is unique.
+\item If $A^{\dagger}$ is the Moore-Penrose generalized inverse of $A$, then $(A^{\dagger})^{\operatorname{T}}$ is the Moore-Penrose generalized inverse of $A^{\operatorname{T}}$.
+\item If $A=BC$ such that
+\begin{enumerate}
+\item $A\in\mathbb{C}^{m\times n}$, $B\in\mathbb{C}^{m\times r}$, and $C\in\mathbb{C}^{r\times n}$,
+\item $r=\operatorname{rank}(A)=\operatorname{rank}(B)=\operatorname{rank}(C)$, then $$A^{\dagger}=C^{\ast}(CC^{\ast})^{-1}(B^{\ast}B)^{-1}B^{\ast}.$$
+\end{enumerate}
+\end{itemize}
+
+For example, let
+$$A=\begin{pmatrix} 1&1&i \\ 0&1&0 \end{pmatrix}.$$
+Transform $A$ to its row echelon form to get a decomposition of $A=BC$, where $$B=\begin{pmatrix} 1&1 \\ 0&1 \end{pmatrix}\mbox{ and }C=\begin{pmatrix} 1&0&i \\ 0&1&0 \end{pmatrix}.$$
+It is readily verified that $2=\operatorname{rank}(A)=\operatorname{rank}(B)=\operatorname{rank}(C)$.  
+So $$A^{\dagger}=\frac{1}{2}\begin{pmatrix} 1&-1 \\ 0&2 \\ -i&i \end{pmatrix}.$$
+We check that $$AA^{\dagger}=I\mbox{ and }A^{\dagger}A=\frac{1}{2}\begin{pmatrix} 1&0&i \\ 0&2&0 \\ -i&0&1 \end{pmatrix}$$ are both Hermitian.  Furthermore, $AA^{\dagger}A=A$ and $A^{\dagger}AA^{\dagger}=A^{\dagger}$.  So, $A^{\dagger}$ is the Moore-Penrose generalized inverse of $A$.
+%%%%%
+%%%%%
+\end{document}

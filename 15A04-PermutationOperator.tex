@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PermutationOperator}
+\pmcreated{2013-03-22 16:15:38}
+\pmmodified{2013-03-22 16:15:38}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{permutation operator}
+\pmrecord{7}{38368}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $V$ be a vector space over a field. Let $\sigma \in S_n$, the symmetric group on $\{1, \ldots, n\}$ and define
+a multilinear map $\phi: V \times \cdots \times V \to V^{\otimes n} =\overbrace{V\otimes \cdots \otimes
+V}^{n\text{ times}}$ by
+$$
+\phi ( v_1, \ldots , v_n ) = v_{\sigma^{-1}(1)} \otimes \cdots \otimes v_{\sigma^{-1}(n)}.
+$$
+Then by the \PMlinkname{universal factorization property}{TensorProduct} for a \PMlinkname{tensor product}{TensorProduct} there is a
+unique linear map $P(\sigma) : V^{\otimes n} \to V^{\otimes n}$ such that
+$P(\sigma)\otimes = \phi$. Then of course, 
+$$
+P(\sigma)v_1 \otimes \cdots \otimes v_n = v_{\sigma^{-1}(1)} \otimes \cdots \otimes v_{\sigma^{-1}(n)}.
+$$
+
+$P(\sigma)$ is called the \emph{permutation operator} associated with $\sigma$.
+
+\section{Properties}
+\begin{enumerate}
+\item
+$P(\sigma\tau) = P(\sigma)P(\tau)$
+\item
+$P(e) = I$ , where $I$ is the identity mapping on $V^{\otimes n}$
+\item
+$P(\sigma)$ is nonsingular and $P(\sigma)^{-1} = P(\sigma^{-1})$
+\end{enumerate}
+
+%%%%%
+%%%%%
+\end{document}

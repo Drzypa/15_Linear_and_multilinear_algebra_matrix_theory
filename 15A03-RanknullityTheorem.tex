@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RanknullityTheorem}
+\pmcreated{2013-03-22 16:35:40}
+\pmmodified{2013-03-22 16:35:40}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{rank-nullity theorem}
+\pmrecord{7}{38790}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmrelated{RankLinearMapping}
+\pmrelated{Nullity}
+
+\usepackage{amsmath}
+
+\def\dim{\operatorname{dim}}
+\def\codim{\operatorname{codim}}
+\def\im{\operatorname{im}}
+\def\ker{\operatorname{ker}}
+
+\def\floor#1{\lfloor#1\rfloor}
+\def\ceiling#1{\lceil#1\rceil}
+\begin{document}
+\PMlinkescapeword{canonical}
+\PMlinkescapeword{sum}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{words}
+
+Let $V$ and $W$ be vector spaces over the same field.
+If $\phi\colon V\to W$ is a linear mapping, then
+\[
+  \dim V = \dim(\ker\phi) + \dim(\im\phi).
+\]
+In other words, the dimension of $V$
+is equal to the \PMlinkname{sum}{CardinalArithmetic}
+of the \PMlinkname{rank}{RankLinearMapping} and nullity of $\phi$.
+
+Note that if $U$ is a subspace of $V$, then this
+(applied to the canonical mapping $V\to V/U$) says that
+\[
+  \dim V = \dim U + \dim(V/U),
+\]
+that is,
+\[
+  \dim V = \dim U + \codim U,
+\]
+where $\codim$ denotes codimension.
+
+An alternative way of stating the rank-nullity theorem is
+by saying that if
+\[
+  0\to U\to V\to W\to 0
+\]
+is a short exact sequence of vector spaces, then
+\[
+  \dim(V) = \dim(U) + \dim(W).
+\]
+In fact, if
+\[
+  0\to V_1\to\cdots\to V_n\to 0
+\]
+is an exact sequence of vector spaces, then
+\[
+  \sum_{i=1}^{\floor{n/2}}V_{2i}=\sum_{i=1}^{\ceiling{n/2}}V_{2i-1},
+\]
+that is, the sum of the dimensions of even-numbered terms
+is the same as the sum of the dimensions of the odd-numbered terms.
+
+%%%%%
+%%%%%
+\end{document}

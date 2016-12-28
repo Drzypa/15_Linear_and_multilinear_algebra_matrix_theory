@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DiagonalizationOfQuadraticForm}
+\pmcreated{2013-03-22 14:49:34}
+\pmmodified{2013-03-22 14:49:34}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{diagonalization of quadratic form}
+\pmrecord{7}{36490}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmrelated{DiagonalQuadraticForm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A quadratic form may be diagonalized by the following procedure:
+\begin{enumerate}
+\item  Find a variable $x$ such that $x^2$ appears in the quadratic form.  If no such variable can be found, perform a linear change of variable so as to create such a variable.
+\item  By completing the square, define a new variable $x'$ such that there are no cross-terms involving $x'$.
+\item  Repeat the procedure with the remaining variables.
+\end{enumerate}
+
+{\bf Example}
+Suppose we have been asked to diagonalize the quadratic form
+ $$Q = x^2 + xy - 3xz - y^2/4 + yz - 9 z^2/4$$
+in three variables.  We could proceed as follows:
+\begin{itemize}
+\item  Since $x^2$ appears, we do not need to perform a change of variables.
+\item  We have the cross terms $xy$ and $-3 xz$.  If we define $x' = x + y/2 - 3z/2$, then 
+ $${x'}^2 = x^2 + xy - 3xz + y^2/4 + 9 z^2/4 - 3yz/2$$
+Hence, we may re-express $Q$ as
+ $$Q = {x'}^2 - yz/2$$
+\item  We must now repeat the procedure with the remaining variables, $y$ and $z$.  Since neither $y^2$ nor $z^2$ appears, we must make a change of variable.  Let us define $z' = z + 2y$.
+ $$Q = {x'}^2 - y^2 - yz'/2$$
+\item  We have a cross term $- yz'/2$.  To eliminate this term, make a change of variable $y' = y + z'/4$.  Then we have
+ $${y'}^2 = y^2 + yz'/2 + {z'}^2/16$$
+and hence
+ $$Q = {x'}^2 - {y'}^2 + {z'}^2/16$$
+The quadratic form is now diagonal, so we are done.  We see that the form has rank 3 and signature 2.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

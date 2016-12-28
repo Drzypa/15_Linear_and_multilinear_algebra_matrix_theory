@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MinimalPolynomialendomorphism}
+\pmcreated{2013-03-22 13:10:14}
+\pmmodified{2013-03-22 13:10:14}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{minimal polynomial (endomorphism)}
+\pmrecord{12}{33615}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+\pmrelated{ZeroPolynomial2}
+\pmrelated{OppositePolynomial}
+\pmdefines{zero polynomial}
+\pmdefines{minimal polynomial}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $T$ be an endomorphism of an $n$-dimensional vector space $V$.
+
+{\bf Definitions.}
+We define the \emph{\PMlinkescapetext{minimal polynomial}}, $M_T(X)$, to be the unique monic polynomial of \PMlinkescapetext{minimal degree} such that $M_T(T) = 0$. We say that $P(X)$ is a \emph{zero \PMlinkescapetext{polynomial}} for $T$ if $P(T)$ is the zero endomorphism.
+
+Note that the minimal polynomial exists by virtue of the Cayley-Hamilton theorem, which provides a zero polynomial for $T$.
+
+{\bf \PMlinkescapetext{Properties}.}
+Firstly, $\operatorname{End}(V)$ is a vector space of dimension $n^2$. Therefore the $n^2 + 1$ vectors, $i_v, T, T^2, \ldots T^{n^2}$, are linearly dependant. So there are coefficients, $a_i$ not all zero such that $\sum_{i=0}^{n^2} a_i T^i = 0$. We conclude that a non-trivial zero polynomial for $T$ exists. We take $M_T(X)$ to be a zero polynomial for $T$ of minimal degree with leading coefficient one.
+
+{\bf \PMlinkescapetext{Lemma}:} If $P(X)$ is a zero polynomial for $T$ then $M_T(X) \mid P(X)$.
+
+\begin{proof}
+By the division algorithm for polynomials, $P(X) = Q(X)M_T(X) + R(X)$ with $deg R < deg M_T$. We note that $R(X)$ is also a zero polynomial for $T$ and by minimality of $M_T(X)$, must be just $0$. Thus we have shown $M_T(X) \mid P(X)$.
+\end{proof}
+
+The minimal polynomial has a number of interesting properties:
+
+\begin{enumerate}
+\item The roots are exactly the eigenvalues of the endomorphism
+\item If the minimal polynomial of $T$ splits into linear factors then $T$ is upper-triangular with respect to some basis
+\item The minimal polynomial of $T$ splits into \emph{distinct} linear factors (i.e. no repeated roots) if and only if $T$ is diagonal with respect to some basis.
+\end{enumerate}
+
+
+It is then a \PMlinkescapetext{simple} corollary of the fundamental theorem of algebra that every endomorphism of a finite dimensional vector space over $\mathbb{C}$ may be upper-triangularized.
+
+The minimal polynomial is intimately related to the characteristic polynomial for $T$. For let $\chi_T(X)$ be the characteristc polynomial. Since $\chi_T(T)=0$, we have by the above lemma that $M_T(X) \mid \chi_T(X)$. It is also a fact that the eigenvalues of $T$ are exactly the roots of $\chi_T$. So when split into linear factors the only difference between $M_T(X)$ and $\chi_T(X)$ is the algebraic multiplicity of the roots.
+
+In general they may not be the same - for example any diagonal matrix with repeated eigenvalues.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ReducibleMatrix}
+\pmcreated{2013-03-22 13:18:20}
+\pmmodified{2013-03-22 13:18:20}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{reducible matrix}
+\pmrecord{11}{33810}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A48}
+\pmdefines{irreducible matrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+An $n\times n$ matrix $A$ is said to be a {\it reducible matrix} if and only if for some permutation matrix $P$, the matrix $P^TAP$ is block upper triangular.
+If a square matrix is not reducible, it is said to be an {\it irreducible matrix}.  
+
+The following conditions on an $n\times n$ matrix $A$ are equivalent.
+\begin{enumerate}
+\item
+$A$ is an irreducible matrix.
+
+\item
+The digraph associated to $A$ is strongly connected.
+
+\item
+For each $i$ and $j$, there exists some $k$ such that $(A^k)_{ij}>0$.
+
+\item
+For any partition $J\sqcup K$ of the index set $\{1,2,\dots,n\}$, there exist $j\in J$ and $k\in K$ 
+such that $a_{jk}\ne 0$.
+\end{enumerate}
+
+For certain applications, irreducible matrices are more useful than reducible matrices.  In particular, the Perron-Frobenius theorem gives more information about the spectra of irreducible matrices than of reducible matrices.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnExampleForSchurDecomposition}
+\pmcreated{2013-03-22 15:27:02}
+\pmmodified{2013-03-22 15:27:02}
+\pmowner{georgiosl}{7242}
+\pmmodifier{georgiosl}{7242}
+\pmtitle{an example for Schur decomposition}
+\pmrecord{8}{37299}
+\pmprivacy{1}
+\pmauthor{georgiosl}{7242}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmrelated{SchurDecomposition}
+\pmrelated{GramSchmidtOrthogonalization}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\usepackage[fleqn]{amsmath}
+\begin{document}
+Let 
+$$
+A = \begin{pmatrix} 5 & 7 \\ -2 & -4 \end{pmatrix}.
+$$ 
+We will find an orthogonal matrix $P$  and an upper triangular matrix $T$ such that $P^tAP=T$ applying the proof of Schur's decomposition.
+ We 're following the steps below
+\begin{itemize}
+\item We find the eigenvalues of $A$ 
+\\The eigenvalues of a matrix are precisely the solutions to the equation
+$$
+\det(\lambda I - A) = 0 \leftrightarrow \lambda^2-\lambda -6=0 
+$$
+\\Hence the roots of the \PMlinkname{quadratic equation}{QuadraticFormula} are the eigenvalues 
+$\lambda_1=-2,\lambda_2=3$
+\item We find the eigenvectors
+\\For each eigenvalue $\lambda_i$, solving the system
+$$ (A-\lambda_i I)X_i=0$$
+So we have that
+for $\lambda_1=-2$
+$$(A+2I)=0  
+\leftrightarrow \begin{pmatrix} 7 & 7 \\ -2 & -2 \end{pmatrix}\begin{pmatrix} x_1 \\x_2\end{pmatrix}=\begin{pmatrix} 0\\ 0\end{pmatrix}\rightarrow 
+X_1=(1,-1)$$ 
+\\Analogously for $\lambda_2=3$ 
+the eigenvector $X_2=(7,-2)$
+\item We get an orthonormal set of eigenvectors using Gram-Schmidt orthogonalization 
+\\Consider the above two eigenvectors which are linearly independent but are not orthogonal 
+\begin{align*}
+X_1&=(1,-1)\\
+X_2&=(7,-2)
+\end{align*}
+First we take $w_1=X_1=(1,-1)$. Therefore 
+\[w_2= X_2 - \frac{w_1\cdot X_2}{\Vert w_1\Vert^2}w_1\] 
+that is,
+\[
+w_2=(\frac{5}{2},\frac{5}{2})
+\]
+and finally the orthonormal set is 
+$\{w_1/\Vert w_1\Vert,w_2/\Vert w_2\Vert\}=\{(\frac{1}{\sqrt{2}},\frac{-1}{\sqrt{2}}),(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})\}$
+\\So 
+$$P =\frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1 \\ -1 & 1 \end{pmatrix}.$$
+Then $$T=P^tAP=\begin{pmatrix} -2 & 9 \\ 0 & 3 \end{pmatrix}.$$
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

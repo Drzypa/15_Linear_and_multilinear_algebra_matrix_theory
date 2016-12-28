@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EuclideanVectorSpace}
+\pmcreated{2013-03-22 15:38:24}
+\pmmodified{2013-03-22 15:38:24}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{Euclidean vector space}
+\pmrecord{9}{37571}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A63}
+\pmrelated{InnerProductSpace}
+\pmrelated{UnitarySpace}
+\pmrelated{PositiveDefinite}
+\pmrelated{EuclideanDistance}
+\pmrelated{Vector}
+\pmrelated{EuclideanVectorSpace}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+\begin{document}
+\section{Definition}
+The term \emph{Euclidean vector space} is synonymous with \emph{finite-dimensional, real, positive definite, inner product space}.  The canonical example is $\reals^n$, equipped with the usual dot product.  Indeed, every Euclidean vector space $V$  is isomorphic to $\reals^n$, up to a choice of orthonormal basis of $V$.    As well, every  Euclidean vector space $V$ carries a natural metric space structure given by
+$$ d(u,v) = \sqrt{\left< u-v, u-v \right>},\quad u,v\in V.$$
+
+\section{Remarks.}
+\begin{itemize}
+\item An analogous object with complex numbers as the base field is called a unitary space.
+\item Dropping the assumption of finite-dimensionality we arrive at the class of  real pre-Hilbert spaces.
+\item  If we drop the inner product and the vector space structure, but retain the metric space structure, we arrive at the notion of a Euclidean space.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

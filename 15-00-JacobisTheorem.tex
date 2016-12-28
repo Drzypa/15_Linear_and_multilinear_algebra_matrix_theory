@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{JacobisTheorem}
+\pmcreated{2013-03-22 13:33:06}
+\pmmodified{2013-03-22 13:33:06}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Jacobi's theorem}
+\pmrecord{13}{34156}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+{\bf Jacobi's Theorem} Any skew-symmetric matrix of odd order has determinant equal to $0$. 
+
+{\bf Proof.} Suppose $A$ is an $n\times n$ square matrix. 
+For the determinant, we then have $\det A = \det A^T$, and
+$\det (-A) = (-1)^n \det A$. Thus, since $n$ is odd, and $A^T=-A$, we have
+ $\det A = -\det A$, and the theorem follows.  $\Box$
+
+\subsubsection{Remarks}
+\begin{enumerate}
+\item  According to \cite{eves}, this theorem was given by 
+Carl Gustav Jacob Jacobi (1804-1851) \cite{jacobi} in 1827.
+
+\item The $2\times 2$ matrix $\left( \begin{array}{cc}
+ 0 & 1 \\
+ -1 & 0
+ \end{array} \right)$ shows that Jacobi's theorem does not hold for $2\times 2$ 
+matrices. The determinant of the  $2n\times 2n$ block matrix with 
+these $2\times 2$ matrices on the diagonal equals $(-1)^n$. Thus Jacobi's theorem
+does not hold for matrices of even order.
+
+\item For $n=3$, any antisymmetric matrix $A$ can be written 
+as
+$$ A =
+\begin{pmatrix}
+0 & -v_3 & v_2 \\
+v_3 & 0 & -v_1 \\
+-v_2 & v_1 & 0
+\end{pmatrix}
+$$
+for some real $v_1,v_2,v_3$, which can be written as a
+vector $v=(v_1,v_2,v_3)$. Then $A$ is the matrix representing the
+mapping $u\mapsto v\times u$, that is, the cross product with 
+respect to $v$. Since $Av=v\times v=0$, we have $\det A=0$. 
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem {eves} H. Eves,
+        \emph{Elementary Matrix Theory},
+        Dover publications, 1980.
+\bibitem{jacobi}
+ The MacTutor History of Mathematics archive,
+ \PMlinkexternal{Carl Gustav Jacob Jacobi}{http://www-gap.dcs.st-and.ac.uk/~history/Mathematicians/Jacobi.html}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

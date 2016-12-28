@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AntisymmetricMapping}
+\pmcreated{2013-03-22 12:34:39}
+\pmmodified{2013-03-22 12:34:39}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{antisymmetric mapping}
+\pmrecord{10}{32826}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A69}
+\pmclassification{msc}{15A63}
+\pmsynonym{skew-symmetric}{AntisymmetricMapping}
+\pmsynonym{anti-symmetric}{AntisymmetricMapping}
+\pmsynonym{antisymmetric}{AntisymmetricMapping}
+\pmsynonym{skew-symmetric mapping}{AntisymmetricMapping}
+\pmrelated{SkewSymmetricMatrix}
+\pmrelated{SymmetricBilinearForm}
+\pmrelated{ExteriorAlgebra}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\begin{document}
+Let $U$ and $V$ be a vector spaces over a field $K$.  A bilinear mapping
+$B:U\times U\rightarrow V$
+is said to be \emph{antisymmetric} if
+\begin{equation}
+B(u,u)=0  
+\end{equation}
+for all $u\in U$.  
+
+If $B$ is antisymmetric, then the polarization of the anti-symmetry
+relation gives the condition:
+\begin{equation}
+B(u,v) + B(v,u) = 0  
+\end{equation}
+for all $u,v \in U$.  If the characteristic of $K$ is not 2, then
+the two conditions are equivalent.
+
+A multlinear mapping $M:U^k\rightarrow V$
+is said to be \emph{totally antisymmetric}, or simply antisymmetric, if 
+for every $u_1,\ldots,u_k\in U$ such that
+$$u_{i+1} = u_i$$
+for some $i=1,\ldots,k-1$ we have
+$$M(u_1,\ldots,u_k)=0.$$
+\begin{proposition}
+  Let $M:U^k\rightarrow V$ be a totally antisymmetric, multlinear
+  mapping, and let $\pi$ be a permutation of $\{1,\ldots,k\}$.  Then,
+  for every $u_1,\ldots,u_k\in U$ we have
+  $$M(u_{\pi_1},\ldots,u_{\pi_k}) = \mathrm{sgn}(\pi)
+  M(u_1,\ldots,u_k),$$
+  where $\mathrm{sgn}(\pi)=\pm1$ according to the parity of $\pi$.
+\end{proposition}
+{\em Proof.}
+Let $u_1,\ldots,u_k\in U$ be given.  multlinearity and anti-symmetry
+imply that
+\begin{align*}
+0 &= M(u_1+u_2,u_1+u_2,u_3,\ldots,u_k) \\
+&= M(u_1,u_2,u_3,\ldots,u_k) + M(u_2,u_1,u_3,\ldots,u_k)  
+\end{align*}
+Hence, the proposition is valid for $\pi=(12)$ (see cycle notation).
+Similarly, one can show that the proposition holds for all
+transpositions 
+$$\pi=(i,i+1),\quad i=1,\ldots,k-1.$$
+However, such transpositions
+generate the group of permutations, and hence the proposition holds in
+full generality.
+
+\paragraph{Note.} The determinant is an excellent example of a totally
+antisymmetric, multlinear mapping.
+%%%%%
+%%%%%
+\end{document}

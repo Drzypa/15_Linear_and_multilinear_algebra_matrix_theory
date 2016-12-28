@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfRanksOfMatrices}
+\pmcreated{2013-03-22 19:23:23}
+\pmmodified{2013-03-22 19:23:23}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{properties of ranks of matrices}
+\pmrecord{8}{42345}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{tabls}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+
+\begin{document}
+Let $D$ be a division ring and $M$ a matrix over $D$.  In \PMlinkname{this entry}{RankOfAMatrix}, the ranks of $M$ are defined, and the following properties regarding ranks and elementary matrix operations are shown in the table below:
+\begin{center}
+preservation of ranks of $M$
+\begin{tabular}{|p{8cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+\hline
+operation & left row rank & right row rank & left column rank & right column rank \\
+\hline\hline
+row exchange & yes & yes & yes & yes \\
+\hline
+column exchange & yes & yes & yes & yes \\
+\hline
+row addition & yes & yes & yes & yes \\
+\hline
+column addition & yes & yes & yes & yes \\
+\hline
+left non-zero row scalar multiplication & yes & no & no & yes \\
+\hline
+left non-zero column scalar multiplication & no & yes & yes & no \\
+\hline
+right non-zero row scalar multiplication & no & yes & yes & no \\
+\hline
+right non-zero column scalar multiplication & yes & no & no & yes \\
+\hline
+\end{tabular}
+\end{center}
+From the properties above, one sees that 
+\begin{center}
+left column rank &=& right row rank, $\qquad$ right column rank &=& left row rank.
+\end{center}
+If $D$ is a field, all ranks of $M$ are identical, since left and right multiplications are the same.  Now, back to assuming $D$ a division ring.  Refer the right ranks of $M$ to be either the right row rank or right column rank of $M$.  Left ranks, row ranks, and column ranks are similarly referred.  Ranks of $M$ can be either one of the four ranks of $M$.
+
+The following are additional properties of ranks of matrices of $D$:
+\begin{enumerate}
+\item if $r\ne 0$, then $rM$ and $Mr$ have the same ranks as those of $M$.
+\end{enumerate}
+
+More to come...
+
+%%%%%
+%%%%%
+\end{document}

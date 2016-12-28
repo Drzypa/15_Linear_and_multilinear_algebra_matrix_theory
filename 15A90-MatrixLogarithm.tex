@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MatrixLogarithm}
+\pmcreated{2013-03-22 15:31:22}
+\pmmodified{2013-03-22 15:31:22}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{matrix logarithm}
+\pmrecord{11}{37394}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A90}
+\pmclassification{msc}{15A99}
+\pmrelated{NaturalLogarithm2}
+\pmrelated{MatrixFNorm}
+\pmrelated{FrobeniusMatrixNorm}
+\pmdefines{principal logarithm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\norm}[1]{\ensuremath{||#1||_F}}
+\begin{document}
+Unlike the scalar logarithm, there are no naturally-defined bases for the matrix logarithm; therefore, the matrix logarithm is always taken to be the natural logarithm.  In general, there may be an infinite number of matrices $B$ satisfying $\exp(B)=A$; these are known as the logarithms of $A$.
+
+As for the scalar natural logarithm, the matrix logarithm can be defined as a power series when $A$ is a square matrix and $\norm{I-A} < 1$, where $\norm{\cdot}$ is the Frobenius matrix norm.  The logarithm this formula produces is known as the \emph{principal logarithm} of $A$.
+\begin{equation*}
+\log(A) = -\sum_{k=1}^\infty \frac{(I-A)^k}{k} =\log(I+X) = \sum_{k=1}^\infty \frac{(-1)^{k+1}}{k} X^k
+\end{equation*}
+
+Since this series expansion does not converge for all $A$, it is not a global inverse function for the matrix exponential.  In particular, $\exp^{\log A}=A$ only holds for $\norm{I-A} < 1$, and $\log(\exp^A)=A$ only holds for $\norm{A} < 2$.
+
+There are other, more general methods of calculating the matrix logarithm.  For example, see \htmladdnormallink{An Explicit Formula for the Matrix Logarithm}{http://arxiv.org/abs/math/0410556}.
+%%%%%
+%%%%%
+\end{document}

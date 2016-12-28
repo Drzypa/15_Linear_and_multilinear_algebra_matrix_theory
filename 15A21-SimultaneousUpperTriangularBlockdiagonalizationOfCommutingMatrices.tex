@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimultaneousUpperTriangularBlockdiagonalizationOfCommutingMatrices}
+\pmcreated{2013-03-22 15:29:35}
+\pmmodified{2013-03-22 15:29:35}
+\pmowner{lars_h}{9802}
+\pmmodifier{lars_h}{9802}
+\pmtitle{simultaneous upper triangular block-diagonalization of commuting matrices}
+\pmrecord{4}{37350}
+\pmprivacy{1}
+\pmauthor{lars_h}{9802}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A21}
+%\pmkeywords{diagonalization}
+%\pmkeywords{diagonalisation}
+%\pmkeywords{commuting matrices}
+\pmrelated{JordanCanonicalFormTheorem}
+\pmrelated{IfABInM_nmathbbCABBAThenQHAQT_1QHBQT_2}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\vek}{\mathbf}
+
+\newcommand{\Mat}{\mathrm{M}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\Trans}[1]{#1^{\mathrm{T}}\!}
+\begin{document}
+Let $\vek{e}_i$ denote the (column) vector whose $i$th position is $1$ 
+and where all other positions are $0$. Denote by $[n]$ the set 
+$\{1,\dotsc,n\}$. Denote by $\Mat_n(\mc{K})$ the set of all $n \times 
+n$ matrices over $\mc{K}$, and by $\GL_n(\mc{K})$ the set of all 
+invertible elements of $\Mat_n(\mc{K})$.
+
+\begin{theorem}
+  Let $\mc{K}$ be a field, let \(A_1,\dotsc,A_r \in \Mat_n(\mc{K})\) 
+  be pairwise commuting matrices, and let $\mc{L}$ be a field extension 
+  of $\mc{K}$ in which the characteristic polynomials of all $A_k$ 
+  split. Then there exists an equivalence relation $\sim$ on $[n]$ and 
+  a matrix \(R \in \GL_n(\mc{L})\) such that:
+  \begin{enumerate}
+    \item
+      If \(i \sim j\) and \(i \leqslant k \leqslant j\) then 
+      \(k \sim i\).
+    \item
+      If \(i \sim j\) then \(\Trans{\vek{e}_i} R^{-1} A_k R 
+      \vek{e}_i = \Trans{\vek{e}_j} R^{-1} A_k R \vek{e}_j\).
+    \item
+      If \(\Trans{\vek{e}_i} R^{-1} A_k R \vek{e}_j \neq 0\) then 
+      \(i \leqslant j\) and \(i \sim j\).
+  \end{enumerate}
+  In other words there exists a simultaneous upper triangular 
+  block-diagonalisation of the matrices $A_1,\dotsc,A_r$ in which each 
+  block is characterised by the particular values of the diagonal 
+  elements.
+\end{theorem}
+
+The proof of this theorem is the obvious combination of the following 
+two lemmas.
+
+\begin{lemma} 
+  Let $\mc{K}$ be a field, let \(A_1,\dotsc,A_r \in \Mat_n(\mc{K})\) 
+  be pairwise commuting matrices, and let $\mc{L}$ be a field extension 
+  of $\mc{K}$ in which the characteristic polynomials of all $A_k$ 
+  split. Then there exists some \(P \in \GL_n(\mc{L})\) such that
+  \begin{enumerate}
+    \item
+      \(P^{-1} A_k P\) is upper triangular for all \(k=1,\dotsc,r\),
+      and
+    \item
+      if \(i,j,l \in [n]\) are such that \(i \leqslant l \leqslant j\) 
+      and \(\Trans{\vek{e}_i} P^{-1} A_k P \vek{e}_i = 
+      \Trans{\vek{e}_j} P^{-1} A_k P \vek{e}_j\) for all 
+      \(k=1,\dotsc,r\), then \(\Trans{\vek{e}_l} P^{-1} A_k P 
+      \vek{e}_l = \Trans{\vek{e}_j} P^{-1} A_k P \vek{e}_j\) 
+      for all \(k=1,\dotsc,r\) as well.
+  \end{enumerate}
+\end{lemma}
+
+\noindent
+Let \(B_k = P^{-1} A_k P\) for all \(k=1,\dotsc,r\) and define
+\begin{equation*}
+  i \sim j
+  \quad\text{if and only if}\quad
+  \Trans{\vek{e}_i} P^{-1} A_k P \vek{e}_i = 
+    \Trans{\vek{e}_j} P^{-1} A_k P \vek{e}_j
+  \text{ for all }k \in [r]\text{.}
+\end{equation*}
+
+\begin{lemma}
+  Let $\mc{L}$ be a field, let $n$ be a positive integer, and let $\sim$ 
+  be an equivalence relation on $[n]$ such that if \(i \sim j\) and 
+  \(i \leqslant k \leqslant j\) then \(k \sim i\). Let \(B_1,\dotsc,B_r 
+  \in \Mat_n(\mc{L})\) be pairwise commuting upper triangular matrices. 
+  If these matrices and $\sim$ are related such that
+  \begin{equation*}
+    i \sim j
+    \quad\text{if and only if}\quad
+    \Trans{\vek{e}_i} B_k \vek{e}_i = \Trans{\vek{e}_j} B_k \vek{e}_j
+    \text{ for all }k \in [r]\text{,}
+  \end{equation*}
+  then there exists a matrix \(Q \in \GL_n(\mc{L})\) such that:
+  \begin{enumerate}
+    \item
+      If \(\Trans{\vek{e}_i} Q^{-1} B_k Q \vek{e}_j \neq 0\) then 
+      \(i \sim j\) and \(i \leqslant j\).
+    \item
+      If \(i \sim j\) then \(\Trans{\vek{e}_i} Q^{-1} B_k Q 
+      \vek{e}_j = \Trans{\vek{e}_i} B_k \vek{e}_j\).
+  \end{enumerate}
+\end{lemma}
+
+\noindent The wanted $R$ is then $PQ$.
+%%%%%
+%%%%%
+\end{document}

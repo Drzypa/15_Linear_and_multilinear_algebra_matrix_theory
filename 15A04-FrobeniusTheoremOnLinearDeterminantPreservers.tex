@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FrobeniusTheoremOnLinearDeterminantPreservers}
+\pmcreated{2013-03-22 19:19:52}
+\pmmodified{2013-03-22 19:19:52}
+\pmowner{kammerer}{26336}
+\pmmodifier{kammerer}{26336}
+\pmtitle{Frobenius theorem on linear determinant preservers}
+\pmrecord{7}{42277}
+\pmprivacy{1}
+\pmauthor{kammerer}{26336}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+\pmclassification{msc}{15A15}
+%\pmkeywords{linear preserver}
+%\pmkeywords{determinant}
+\pmrelated{DieudonneTheoremOnLinearPreserversOfTheSingularMatrices}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{defi}[thm]{Definition}
+\begin{document}
+Let $\mathbb{F}$ be an arbitrary field. Consider $\mathcal{M}_n (\mathbb{F})$, the vector space of all $n \times n$ matrices over $\mathbb{F}$. Let $\mathcal{GL}_n (\mathbb{F})$ be the set of all nonsingular matrices $P \in \mathcal{M}_n (\mathbb{F})$. 
+\begin{defi}
+A linear endomorphism $\varphi : \mathcal{M}_n (\mathbb{F}) \longrightarrow \mathcal{M}_n (\mathbb{F})$ is said to be in standard form, if either $\exists\, P, Q \in \mathcal{GL}_n (\mathbb{F})\, \forall\, A \in \mathcal{M}_n (\mathbb{F}) :\, \varphi (A) = P A Q$ or $\exists\, P, Q \in \mathcal{GL}_n (\mathbb{F})\, \forall\, A \in \mathcal{M}_n (\mathbb{F}) :\, \varphi (A) = P A^\top Q$.
+\end{defi}
+
+The classical \PMlinkescapetext{Frobenius theorem} on linear preservers of the determinant function \cite{frob} reads as follows.
+\begin{thm}
+If $\varphi : \mathcal{M}_n (\mathbb{C}) \longrightarrow \mathcal{M}_n (\mathbb{C})$ is a linear automorphism such that $\det (\varphi (A)) = \det (A)$ for all $A \in \mathcal{M}_n (\mathbb{C})$, then $\varphi$ is in standard form with
+\newline
+$\det (P Q) = 1$. 
+\end{thm}
+
+It is well known that the \PMlinkescapetext{Frobenius theorem} can be strengthened.
+\begin{thm}
+Let $\mathbb{F}$ be an arbitrary field and let $\varphi : \mathcal{M}_n (\mathbb{F}) \longrightarrow \mathcal{M}_n (\mathbb{F})$ be a linear endomorphism. Then the following conditions are equivalent:\\
+\begin{tabular}{cl}
+(i)&$\det (\varphi (A)) = \det (A)$ for all $A \in \mathcal{M}_n (\mathbb{F})$,\\
+(ii)&$\varphi$ is in standard form with $\det (P Q) = 1$.\\
+\end{tabular}
+\end{thm}
+
+The above strengthened version of the \PMlinkescapetext{Frobenius theorem} can be derived from the Dieudonn\'e theorem on linear preservers of the singular matrices.
+
+
+\begin{thebibliography}{99}
+\bibitem[GF]{frob}
+G. Frobenius, \emph{\"Uber die Darstellung der endlichen Gruppen durch lineare Substitutionen}, Sitzungsber., Preuss. Akad. Wiss., Berlin, 1897 (994--1015).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

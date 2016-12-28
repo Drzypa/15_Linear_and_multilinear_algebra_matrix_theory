@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GraphOfEquationxyConstant}
+\pmcreated{2013-03-22 17:30:12}
+\pmmodified{2013-03-22 17:30:12}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{graph of equation $\,xy =$ constant}
+\pmrecord{9}{39892}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmclassification{msc}{51N20}
+\pmsynonym{equation $xy =$ constant}{GraphOfEquationxyConstant}
+%\pmkeywords{rectangular hyperbola}
+\pmrelated{Variation}
+\pmrelated{RuledSurface}
+\pmrelated{ExactTrigonometryTables}
+\pmrelated{Hyperbola2}
+\pmrelated{UncertaintyPrinciple}
+\pmrelated{Polytrope}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Consider the equation \,$xy = c$,\, i.e.
+\begin{align}
+    y = \frac{c}{x},
+\end{align}
+where $c$ is a non-zero real constant.  Such a dependence between the real variables $x$ and $y$ is called an \PMlinkname{inverse proportionality}{Variation}.\\  
+
+The graph of (1) may be inferred to be a \PMlinkname{hyperbola}{Hyperbola2}, because the curve has two asymptotes (see asymptotes of graph of rational function) and because the form 
+\begin{align}
+    xy-c = 0
+\end{align}
+of the equation is of second \PMlinkname{degree}{PolynomialRing} (see conic, tangent of conic section).\\
+
+One can also see the graph of the equation (2) in such a coordinate system ($x',\,y'$) where the equation takes a canonical form of the \PMlinkname{hyperbola}{Hyperbola2}.  The symmetry of (2) with respect to the variables $x$ and $y$ suggests to take for the new coordinate axes the axis angle bisectors\, $y = \pm{x}$.  Therefore one has to rotate the old coordinate axes $45^\circ$, i.e.
+\begin{align}
+\begin{cases}
+\displaystyle x = x'\cos45^\circ-y'\sin45^\circ = \frac{x'-y'}{\sqrt{2}}\\
+\displaystyle y = x'\sin45^\circ+y'\cos45^\circ = \frac{x'+y'}{\sqrt{2}}
+\end{cases}
+\end{align}
+($\sin45^\circ = \cos45^\circ = \frac{1}{\sqrt{2}}$).  Substituting (3) into (2) yields
+$$\frac{x'^2-y'^2}{2}-c = 0,$$
+i.e.
+\begin{align}
+   \frac{x'^2}{2c}-\frac{y'^2}{2c} = 1.
+\end{align}
+This is recognised to be the equation of a rectangular hyperbola with the transversal axis and the \PMlinkname{conjugate axis}{Hyperbola2} on the coordinate axes.
+%%%%%
+%%%%%
+\end{document}

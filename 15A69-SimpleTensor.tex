@@ -1,0 +1,224 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimpleTensor}
+\pmcreated{2013-03-22 15:26:07}
+\pmmodified{2013-03-22 15:26:07}
+\pmowner{lars_h}{9802}
+\pmmodifier{lars_h}{9802}
+\pmtitle{simple tensor}
+\pmrecord{5}{37282}
+\pmprivacy{1}
+\pmauthor{lars_h}{9802}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A69}
+\pmsynonym{tensor rank}{SimpleTensor}
+\pmsynonym{entangled}{SimpleTensor}
+\pmrelated{TensorProduct}
+\pmrelated{BasicTensor}
+\pmdefines{rank}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\newenvironment{warning}{%
+  \trivlist\item\relax
+  \textbf{Warning.}\hspace*{0.5em}\ignorespaces
+}{\endtrivlist}
+
+
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Fpil}{\longrightarrow}
+\newcommand{\vek}[1]{\mathbf{#1}}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\gobble}[1]{}
+\newcommand*{\setOf}[3][\gobble]{%
+   \left\{ \, #2 \,\,\vrule\relax#1.\,\, #3 \, \right\}%
+}
+\newcommand*{\spmatrix}[1]{%
+  \left(\begin{smallmatrix}#1\end{smallmatrix}\right)%
+}
+\begin{document}
+The \PMlinkname{tensor product}{TensorProduct} \PMlinkescapephrase{tensor product}
+$U \otimes V$ of two vector spaces $U$ and $V$ is 
+another vector space which is characterised by being universal 
+for bilinear maps on $U \times V$. As part of this package, 
+there is an operation $\otimes$ on vectors such that 
+\(\vek{u} \otimes \vek{v} \in U \otimes V\) for all 
+\(\vek{u} \in U\) and \(\vek{v} \in V\), and the primary subject 
+of this article is the image of that operation.
+
+\PMlinkescapeword{component}
+\PMlinkescapeword{components}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{order}
+\PMlinkescapeword{generic}
+\PMlinkescapeword{degrees}
+\PMlinkescapeword{primary}
+
+\begin{definition}
+  The element \(\vek{w} \in U \otimes V\) is said to be a 
+  \emph{simple tensor} if there exist \(\vek{u} \in U\) and \(\vek{v} 
+  \in V\) such that \(\vek{w} = \vek{u} \otimes \vek{v}\).
+  
+  More generally, the element \(\vek{w} \in W = U_1 \otimes \dotsb 
+  \otimes U_k\) is said to be a simple tensor (with respect to the 
+  decomposition $U_1 \otimes \dotsb \otimes U_k$ of $W$) if there 
+  exist \(\vek{u}_i \in U_i\) for \(i=1,\dotsc,k\) such that 
+  \(\vek{w} = \vek{u}_1 \otimes \dotsb \otimes \vek{u}_k\).
+\end{definition}
+
+For this definition to be interesting, there must also be tensors 
+which are not simple, and indeed most tensors aren't. In order to 
+illustrate why, it is convenient to consider the tensor product of 
+two finite-dimensional vector spaces \(U = \K^m\) and \(V = \K^n\) 
+over some field $\K$. In this case one can let \(U \otimes V = 
+\K^{m \times n}\) (the vector space of $m \times n$ matrices), since 
+$\K^{m \times n}$ is isomorphic to any generic construction of 
+$U \otimes V$ and the tensor product of two spaces is anyway only 
+defined up to isomorphism. Furthermore considering elements of $U$ 
+and $V$ as column vectors, the tensor product of vectors can be 
+defined through
+\begin{equation*}
+  \vek{u} \otimes \vek{v} = \vek{u} \cdot \vek{v}^{\mathrm{T}}
+\end{equation*}
+where $\cdot$ denotes the product of two matrices (in this case an 
+$m \times 1$ matrix by a $1 \times n$ matrix). As a very concrete 
+example of this,
+\begin{equation*}
+  \begin{pmatrix} u_1 \\ u_2 \\ u_3 \end{pmatrix} \otimes
+  \begin{pmatrix} v_1 \\ v_2 \\ v_3 \\ v_4 \end{pmatrix} =
+  \begin{pmatrix}
+    u_1v_1 & u_1v_2 & u_1v_3 & u_1v_4 \\
+    u_2v_1 & u_2v_2 & u_2v_3 & u_2v_4 \\
+    u_3v_1 & u_3v_2 & u_3v_3 & u_3v_4 
+  \end{pmatrix}
+  \text{.}
+\end{equation*}
+One reason the simple tensors in $U \otimes V$ cannot exhaust this 
+space (provded \(m,n \geqslant 2\)) is that there are essentially 
+only $m+n-1$ degrees of freedom in the choice of a simple tensor, but 
+$mn$ \PMlinkname{dimensions}{Dimension2} in the space $U \otimes V$ 
+as a whole. Hence
+\begin{equation*}
+  \K^m \otimes \K^n \neq 
+  \setOf{ \vek{u} \otimes \vek{v} }{ \vek{u} \in \K^m, \vek{v} \in \K^n}
+  \qquad\text{when \(m,n \geqslant 2\).}
+\end{equation*}
+
+How can one to understand the non-simple tensors, then? In general, 
+they are finite sums of simple tensors. One way to see this is from 
+the theorem that $U \otimes V$ has a basis consisting of products of 
+pairs of basis vectors.
+
+\begin{theorem}[\PMlinkname{tensor product basis}{TensorProductBasis}]
+  Let $U$ and $V$ be vector spaces over $\K$ with bases 
+  $\{\vek{e}_i\}_{i \in I}$ and $\{\vek{f}_j\}_{j \in J}$ 
+  respectively. Then \( \{ \vek{e}_i \otimes \vek{f}_j\}_{(i,j) \in 
+  I \times J} \) is a basis for $U \otimes V$.
+\end{theorem}
+
+Expressing some arbitrary \(\vek{w} \in U \otimes V\) as a linear 
+combination
+$$
+  \vek{w} = \sum_{r=1}^n \lambda_r(\vek{e}_{i_r} \otimes \vek{f}_{j_r})
+$$
+with respect to such a basis immediately produces the decomposition
+$$
+  \vek{w} = \sum_{r=1}^n (\lambda_r\vek{e}_{i_r}) \otimes \vek{f}_{j_r}
+$$
+as a sum of simple tensors, but this decomposition is often far 
+from optimally short. 
+Let \(\vek{e}_1 = \spmatrix{1\\0} \in \K^2\) and \(\vek{e}_2 = 
+\spmatrix{0\\1} \in \K^2\). The tensor \(\vek{e}_1 \otimes \vek{e}_1 
++ \vek{e}_2 \otimes \vek{e}_2 = \spmatrix{1 & 0 \\ 0 & 1}\) is not 
+simple, but as it happens the tensor \(\vek{e}_1 \otimes \vek{e}_1 + 
+\vek{e}_1 \otimes \vek{e}_2 + \vek{e}_2 \otimes \vek{e}_1 + 
+\vek{e}_2 \otimes \vek{e}_2 = \spmatrix{1&1\\1&1} = 
+\spmatrix{1\\1} \otimes \spmatrix{1\\1}\) is simple. In general it 
+is not trivial to find the simplest way of expressing a tensor as 
+a sum of simple tensors, so there is a name for the length of the 
+shortest such sum.
+
+
+\begin{definition} \label{Def:Rang}
+  The \emph{rank} of a tensor $\vek{w}$ is the smallest natural 
+  number $n$ such that \(\vek{w} = \vek{w}_1 + \dotsb + \vek{w}_n\) 
+  for some set of $n$ simple tensors $\vek{w}_1$, \dots, $\vek{w}_n$.
+\end{definition}
+
+In particular, the zero tensor has rank $0$, and all other simple 
+tensors have rank $1$.
+
+\begin{warning}
+  There is an entirely different concept which is also called 
+  `the \PMlinkname{rank of a tensor}{Tensor}', 
+  namely the number of components (factors) in the tensor 
+  product forming the space in which the tensor lives. This latter 
+  `rank' concept does not generalise 
+  `\PMlinkname{rank of a matrix}{RankLinearMapping}'. 
+  The `rank' of Definition~\ref{Def:Rang} \emph{does} 
+  generalise `rank of a matrix'. (It also generalises 
+  \PMlinkname{rank of a quadratic form}{Rank5}.)
+\end{warning}
+
+
+\PMlinkescapeword{area}
+\PMlinkescapeword{example}
+\PMlinkescapeword{theorem}
+\PMlinkescapeword{definition}
+\PMlinkescapephrase{one way}
+\PMlinkescapeword{bases}
+\PMlinkescapeword{rank}
+\PMlinkescapeword{factor}
+\PMlinkescapeword{factors}
+
+One area where the distinction between simple and non-simple tensors 
+is particularly important is in Quantum Mechanics, because the state 
+space of a pair of quantum systems is in general the tensor product 
+of the state spaces of the component systems. When the combined state 
+is a simple tensor \(\vek{w} = \vek{u} \otimes \vek{v}\), then that 
+state can be understood as though one subsystem has state $\vek{u}$ 
+and the other state $\vek{v}$, but when the combined state $\vek{w}$ 
+is a non-simple tensor \(\vek{u}_1 \otimes \vek{v}_1 + 
+\vek{u}_2 \otimes \vek{v}_2\) then the full system cannot be 
+understood by considering the two subsystems in isolation, even if 
+there is no apparent interaction between them. This situation is 
+often described by saying that the two subsystems are 
+\emph{entangled}, or using phrases such as ``either $U$ is in state 
+$\vek{u}_1$ and $V$ is in state $\vek{v}_1$, or else $U$ is in state 
+$\vek{u}_2$ and $V$ is in state $\vek{v}_2$.'' 
+Entanglement is an important part of that which makes quantum systems 
+different from probabilistic classical systems. The physical 
+interpretations are often mind-boggling, but the mathematical meaning 
+is no more mysterious than `non-simple tensor'.
+
+Entanglement can also be a useful concept for understanding pure mathematics. 
+One reason that the comultiplication \(\Delta\colon C \Fpil C \otimes C\) 
+of a coalgebra $C$ cannot simply be replaced in the definition by two 
+maps \(\Delta_L,\Delta_R\colon C \Fpil C\) that compute the `left' 
+and `right' parts of $\Delta$ is that value of $\Delta$ may be 
+entangled, in which case one left part $\Delta_L(c)$ and one right 
+part $\Delta_R(c)$ cannot fully encode $\Delta(c)$.
+%%%%%
+%%%%%
+\end{document}

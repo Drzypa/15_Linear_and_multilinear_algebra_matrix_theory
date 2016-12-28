@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HadamardConjecture}
+\pmcreated{2013-03-22 14:07:07}
+\pmmodified{2013-03-22 14:07:07}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Hadamard conjecture}
+\pmrecord{12}{35524}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Conjecture}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmsynonym{Hadamard's conjecture}{HadamardConjecture}
+\pmrelated{HadamardMatrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{order}
+
+There exists a Hadamard matrix of order $n$ = $4m$, for all 
+$m \in \mathbb{Z}^+.$
+
+ A Hadamard matrix of order 428 (m=107) has been recently constructed \cite{KT}.
+
+\PMlinkexternal{See here}{http://math.ipm.ac.ir/tayfeh-r/papersandpreprints/h428.pdf}.
+
+A Hadamard matrix of order 764 has also recently been constructed \cite{DZD}.
+
+Also, Paley's theorem guarantees that there always exists a Hadamard matrix $H_n$ when $n$ is divisible by 4 and of the form $ 2^e(p^m+1) $, for some positive integers e and m, and p an odd prime and the matrices can be found using Paley construction. 
+
+This leaves the order of the lowest unknown Hadamard matrix as 668.
+There are 13 integers $m$ less than 500 for which no Hadamard matrix of order $4m$
+is known:
+$$
+167, 179, 223, 251, 283, 311, 347, 359, 419, 443, 479, 487, 491
+$$
+and all of them are primes congruent to 3 mod 4.
+
+\begin{thebibliography}{99}
+\bibitem{KT} H. Kharaghani, B. Tayfeh-Rezaie, \emph{A Hadamard matrix of order 428}, J. Comb. 
+Designs \textbf{13}, (2005), 435-440.
+\bibitem{DZD} D.Z. Dokovi\'c, \emph{Hadamard matrices of order 764 exist}, \PMlinkexternal{preprint}{http://arxiv.org/abs/math/0703312v1}.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VectorizationOfMatrix}
+\pmcreated{2013-03-22 18:12:20}
+\pmmodified{2013-03-22 18:12:20}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{vectorization of matrix}
+\pmrecord{4}{40785}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-01}
+\pmsynonym{vectorization}{VectorizationOfMatrix}
+\pmsynonym{vectorisation}{VectorizationOfMatrix}
+\pmrelated{transpose}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The {\em vectorization} of a $m\!\times\!n$ matrix \,$A = (a_{ij})$\, \PMlinkescapetext{transforms} the matrix to a column vector $\mbox{vec}(A)$, which consists of all columns of $A$ stacked in \PMlinkescapetext{sequence}: 
+$$\mbox{vec}(A) \;:=\; \left(a_{11}\;\;a_{21}\;\ldots\;a_{m1}\;\;\;a_{12}\;\;a_{22}\;\ldots\;a_{m2}\;\;
+\ldots\;\ldots\;\;a_{1n}\;\;a_{2n}\;\ldots\;a_{mn}\right)^\intercal$$
+The mapping vec from the vector space formed by the $m\!\times\!n$ matrices to the vector space of the column vectors of the \PMlinkescapetext{length} $mn$ is apparently a linear transformation.
+
+%%%%%
+%%%%%
+\end{document}

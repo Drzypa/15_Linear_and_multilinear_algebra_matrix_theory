@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EigenvaluesOfAnInvolution}
+\pmcreated{2013-03-22 13:38:57}
+\pmmodified{2013-03-22 13:38:57}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{eigenvalues of an involution}
+\pmrecord{4}{34301}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A21}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+\emph{Proof.} For the first claim suppose $\lambda$ is an eigenvalue
+corresponding to an eigenvector $x$ of $A$. That is, $Ax = \lambda x$.
+Then $A^2x = \lambda Ax$, so $x=\lambda^2x$. As an eigenvector, $x$ is non-zero, and
+ $\lambda = \pm 1$. Now property (1) follows since the determinant is
+the product of the eigenvalues. For property (2), suppose that
+$A-\lambda I = -\lambda A(A-1/\lambda I)$, where $A$ and $\lambda$ are as above.
+Taking the determinant of both
+sides, and using part (1), and the properties of the determinant, yields
+ $$ \det (A-\lambda I) = \pm \lambda^n \det(A-\frac{1}{\lambda} I).$$
+Property (2) follows.
+$\Box$
+%%%%%
+%%%%%
+\end{document}

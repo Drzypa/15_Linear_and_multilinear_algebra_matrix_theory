@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SparkOfAMatrix}
+\pmcreated{2013-03-22 19:36:23}
+\pmmodified{2013-03-22 19:36:23}
+\pmowner{kammerer}{26336}
+\pmmodifier{kammerer}{26336}
+\pmtitle{spark of a matrix}
+\pmrecord{21}{42599}
+\pmprivacy{1}
+\pmauthor{kammerer}{26336}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmrelated{RankOfAMatrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{defi}{Definition}
+\newtheorem{remark}[defi]{Remark}
+
+\begin{document}
+Let $\mathbb{F}$ be a field, and let $m, n \in \mathbb{N} \setminus \{0\}.$ Consider an $m \times n$ matrix $A$ whose entries belong to $\mathbb{F}.$ Let $\displaystyle C_1, \ldots , C_n \in \mathbb{F}^m$ be the columns of $A.$
+\begin{defi}
+The spark of the matrix $A$ is defined to be the infimum of the set of all positive integers $k$ with the property that
+$$
+\exists\, j_1, \ldots , j_k \in \{1, \ldots , n\} :\, \left\{
+\begin{array}{l}
+j_1 < \ldots < j_k,\\
+$\displaystyle C_{j_1}, \ldots , C_{j_k}$ are linearly dependent (over $\mathbb{F}$).
+\end{array}
+\right.
+$$
+\end{defi}
+
+The notion of spark of a matrix was introduced by Donoho and Elad in \cite{de}. It is strictly related to Compressed Sensing. The word ``spark'' comes from a verbal fusion of ``sparse'' and ``rank''.
+\begin{remark}
+The following properties hold true:\\
+\begin{tabular}{cl}
+(i)&${\rm spark} (A) \in \{1, \ldots , n\} \cup \{+\infty\},$\\
+(ii)&${\rm spark} (A) = +\infty\, \Leftrightarrow\, {\rm rank} (A) = n,$\\
+(iii)&${\rm spark} (A) = 1$ if and only if the matrix $A$ has a zero column,\\
+(iv)&if ${\rm spark} (A) \neq +\infty,$ then ${\rm spark} (A) \leq {\rm rank} (A) + 1.$\\
+\end{tabular}\\
+Moreover, ${\rm spark} (A)$ coincides with the infimum of the set $\displaystyle \left\{\left\| x \right\|_0 :\, x \in \mathbb{F}^n \setminus \{{\bf 0}\},\, A x = {\bf 0}\right\}$, where $\displaystyle \left\| x \right\|_0$ is the Hamming weight of $x$ and ${\bf 0}$ stands for the appropriate zero vectors.
+\end{remark}
+\begin{thebibliography}{99}
+\bibitem{de}
+D. L. Donoho and M. Elad, Optimally sparse representation in general (nonorthogonal) dictionaries via $\ell^1$ minimization, {\it Proc. Natl. Acad. Sci. USA} {\bf 100}, No. 5: 2197 -- 2202 (2003).
+\end{thebibliography} 
+
+%%%%%
+%%%%%
+\end{document}

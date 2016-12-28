@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHolderInequality}
+\pmcreated{2013-03-22 13:31:16}
+\pmmodified{2013-03-22 13:31:16}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of H\"{o}lder inequality}
+\pmrecord{10}{34110}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A60}
+\pmclassification{msc}{46E30}
+\pmsynonym{proof of H\"{o}lder inequality}{ProofOfHolderInequality}
+\pmsynonym{proof of Holder's inequality}{ProofOfHolderInequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+First we prove the more general form (in measure spaces).
+
+Let $(X,\mu)$ be a measure space and let $f\in L^p(X)$, $g\in L^q(X)$ where $p,q\in [1,+\infty]$ and $\frac 1 p + \frac 1 q = 1$.
+
+The case $p=1$ and $q=\infty$ is obvious since
+\[
+  \vert f(x) g(x)\vert \le \Vert g\Vert_{L^\infty} \vert f(x)\vert.
+\]
+Also if $f=0$ or $g=0$ the result is obvious. 
+Otherwise notice that (applying \PMlinkid{Young inequality}{YoungInequality}) we have
+\[
+\frac{\Vert fg\Vert_1}{\Vert f\Vert_p\cdot \Vert g\Vert_q}
+= \int_X \frac{\vert f\vert}{\Vert f\Vert_p} \cdot
+  \frac{\vert g\vert}{\Vert g\Vert_q} \, d\mu
+\le \frac 1 p \int_X \left(\frac{\vert f\vert}{\Vert f\Vert_p}\right)^p\, d\mu
+ + \frac 1 q \int_X \left(\frac{\vert g\vert}{\Vert g\Vert_q}\right)^q\, d\mu
+= \frac 1 p + \frac 1 q = 1
+\]
+hence the desired inequality holds
+\[
+  \int_X \vert f g\vert = \Vert fg\Vert_1 \le \Vert f \Vert_p \cdot
+   \Vert g\Vert_q = \left(\int_X \vert f\vert^p\right)^{\frac 1 p}
+   \left(\int_X \vert g\vert ^q\right)^{\frac 1 q}.
+\]
+
+If $x$ and $y$ are vectors in ${\mathbb R}^n$ or vectors in $\ell^p$ and $\ell^q$-spaces we can specialize the previous result by choosing $\mu$ to be the counting measure on ${\mathbb N}$.  
+
+In this case the proof can also be rewritten, without using measure theory,
+as follows.
+If we define
+\[
+  \Vert x \Vert_p = \left(\sum_k \vert x_k\vert^p\right)^{\frac 1 p}
+\]
+we have
+\[
+ \frac{\left\vert \sum_k x_k y_k \right\vert}{\Vert x\Vert_p \cdot \Vert y \Vert_q}
+\le \frac{\sum_k \vert x_k\vert \vert y_k\vert}{\Vert x\Vert_p\cdot \Vert y\Vert_q}
+= \sum_k \frac{\vert x_k\vert}{\Vert x\Vert_p} \frac{\vert y_k\vert}{\Vert y\Vert_q}
+\le \frac 1 p \sum_k \frac{\vert x_k\vert^p}{\Vert x\Vert_p^p} +
+ \frac 1 q \sum_k \frac{\vert y_k\vert^q}{\Vert y\Vert_q^q}
+= \frac 1 p + \frac 1 q = 1.
+\]
+%%%%%
+%%%%%
+\end{document}

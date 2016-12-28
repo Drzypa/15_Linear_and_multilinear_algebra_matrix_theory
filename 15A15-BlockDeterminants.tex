@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BlockDeterminants}
+\pmcreated{2013-03-22 15:25:57}
+\pmmodified{2013-03-22 15:25:57}
+\pmowner{georgiosl}{7242}
+\pmmodifier{georgiosl}{7242}
+\pmtitle{block determinants}
+\pmrecord{20}{37279}
+\pmprivacy{1}
+\pmauthor{georgiosl}{7242}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+\pmrelated{SchurComplement}
+\pmrelated{DeterminantsOfSomeMatricesOfSpecialForm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If $A$ and $D$ are square matrices
+\begin{itemize}
+\item If $A^{-1}$ exists, then $$ \det \begin{pmatrix} A & B \\ C & D \end{pmatrix}=\det(A)\det(D-CA^{-1}B)\\$$  
+\item If $D^{-1}$ exists, then $$\det \begin{pmatrix} A & B \\ C & D \end{pmatrix}=\det(D)\det(A-BD^{-1}C)$$
+\end{itemize}
+The matrices $D-CA^{-1}B$ and $A-BD^{-1}C$ are called the Schur complements of $A$ and $D$, respectively.
+\\Mention that 
+\begin{itemize}
+\item If $A$, $D$ are square matrices, then  
+$$ \det \begin{pmatrix} A & B \\ O & D \end{pmatrix}=\det(A) \det(D)$$, where $O$ is a zero matrix.
+\item Also we have that $$\det \begin{pmatrix} A & O \\ O & B \end{pmatrix}=\det(A)\det(B).$$ 
+\item Another useful result for block determinants is the following.
+\\As $J=\begin{pmatrix} O & I \\ -I & O \end{pmatrix}$ is a symplectic matrix, 
+we have that $\det J=1$. Using now the fact that $\det MN= \det(M) \det(N)$ for any $M$, $N$ square matrices, we have that
+$$ \det \begin{pmatrix} O & A \\ B & O \end{pmatrix}
+=\det \begin{pmatrix} O & A \\ B & O \end{pmatrix}\det J
+=-\det(A)\det(B)$$
+\end{itemize}
+This holds for any square matrices $A$,\,$B$ and for the last point $A$,\,$B$ have also the same order. They do not need to be
+invertible.
+%%%%%
+%%%%%
+\end{document}

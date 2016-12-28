@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SpectralValuesClassification}
+\pmcreated{2013-03-22 18:52:01}
+\pmmodified{2013-03-22 18:52:01}
+\pmowner{fernsanz}{8869}
+\pmmodifier{fernsanz}{8869}
+\pmtitle{spectral values classification}
+\pmrecord{5}{41698}
+\pmprivacy{1}
+\pmauthor{fernsanz}{8869}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A18}
+\pmsynonym{eigenvalues}{SpectralValuesClassification}
+\pmsynonym{spectrum}{SpectralValuesClassification}
+%\pmkeywords{spectrum}
+%\pmkeywords{eigenvalues}
+%\pmkeywords{vector space}
+%\pmkeywords{topological vector space}
+%\pmkeywords{matrix}
+%\pmkeywords{transformation}
+%\pmkeywords{identity transformation}
+%\pmkeywords{domain}
+%\pmkeywords{dense}
+\pmrelated{Eigenvalue}
+\pmrelated{SpectrumOfAMuI}
+\pmrelated{InvertibleLinearTransformation}
+\pmdefines{spectrum}
+\pmdefines{point spectrum}
+\pmdefines{residual spectrum}
+\pmdefines{continuous spectrum}
+\pmdefines{resolvent set}
+\pmdefines{eigenvalues}
+\pmdefines{puntual spectrum}
+\pmdefines{point spectral value}
+\pmdefines{residual spectral value}
+\pmdefines{continuous spectral value}
+\pmdefines{resolvent set value}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{rem}{Remark}
+\numberwithin{equation}{section}
+\begin{document}
+\title{Spectral points classification}%
+\author{Fernando Sanz Gamiz}%
+
+\begin{defn}
+Let $X$ a topological vector space and $A: X \supset D_A \longrightarrow X$ a linear transformation with
+domain $D_A$. Depending on the properties of\footnote{the notation $(\lambda -A)$ is to be
+understood as $\lambda I -A$ with $I$ the identity transformation and $R(\lambda-A)$ is the range
+of $(\lambda -A)$} $(\lambda - A)$ the following definitions apply:
+
+\medskip
+
+\begin{center}
+\begin{tabular}{cccc}
+$(\lambda-A)^{-1}$ & Boundness of $(\lambda-A)^{-1}$ & $R(\lambda-A)$ & Set to which $\lambda$ belongs\\
+\hline \hline
+exists & bounded & dense in X& resolvent set $\rho(A)$\\
+\hline
+exists & unbounded & dense in X & continuous spectrum $C\sigma(A)$\\
+\hline
+exists & bounded or unbounded in X & not dense in X & residual spectrum $R\sigma(A)$\\
+\hline
+not exists &  & dense or not dense in X & puntual spectrum $P\sigma(A)$\\
+\end{tabular}
+\end{center}
+\end{defn}
+
+\begin{rem}
+It is obvious that, if $F$ is the field of possible values for $\lambda$ (usually $F=\mathbb C$ or
+$F=\mathbb R$) then $F=\rho(A) \cup C\sigma(A) \cup R\sigma(A) \cup P\sigma(A)$, that is, these
+definitions cover all the possibilities for $\lambda$. The complement of the resolvent set is called \emph{spectrum} of the operator A, i.e., $\sigma(A)=C\sigma(A) \cup R\sigma(A) \cup P\sigma(A)$
+\end{rem}
+
+\bigskip
+
+\begin{rem}
+In the finite dimensional case if $(\lambda-A)^{-1}$ exists it must be bounded, since all finite
+dimensional linear mappings are bounded. This existence also implies that the range of
+$(\lambda-A)$ must be the whole X. So, in the finite dimensional case the only spectral values we
+can encounter are point spectrum values (eigenvalues).
+\end{rem}
+
+%%%%%
+%%%%%
+\end{document}

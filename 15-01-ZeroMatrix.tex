@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ZeroMatrix}
+\pmcreated{2013-03-22 14:19:19}
+\pmmodified{2013-03-22 14:19:19}
+\pmowner{waj}{4416}
+\pmmodifier{waj}{4416}
+\pmtitle{zero matrix}
+\pmrecord{8}{35789}
+\pmprivacy{1}
+\pmauthor{waj}{4416}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-01}
+\pmrelated{Matrix}
+\pmrelated{IdentityMatrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+\PMlinkescapeword{additive}
+\PMlinkescapeword{identity}
+
+The $n \times m$ \emph{zero \PMlinkescapetext{matrix}} $O$ over a ring $R$ is the $n \times m$ matrix with 
+coefficients in $R$ given by
+ 
+ $$ O = 
+ \begin{bmatrix}
+ 0 & \cdots & 0 \\
+ \vdots &  \ddots & \vdots \\
+ 0 & \cdots &  0 \\
+ \end{bmatrix},$$
+
+where  0 is the \PMlinkname{additive identity}{Ring} in $R$.
+ 
+\subsubsection{Properties}
+The zero matrix is the additive identity in the ring of $n\times n$ matrices over $R$. This \PMlinkescapetext{property} is an alternative definition of $O$ (since there's \PMlinkname{just one additive identity in any given ring}{UniquenessOfAdditiveIdentityInARing2}). 
+ 
+The $n\times n$ zero matrix $O$ has the following properties:
+ \begin{itemize}
+ \item The determinant of $O$ is $\det O = 0$, and its trace is
+ $\operatorname{tr}O = 0$.
+ \item $O$ has only one eigenvalue $\lambda =0$ of
+ multiplicity $n$. Any non-zero vector is an eigenvector of $O$, so if we're looking for a basis of eigenvectors, we could pick the standard basis $e_1=(1,0,\ldots, 0), \ldots , e_n=(0,\ldots, 0,1)$.
+ \item The matrix exponential of $O$ is $e^O = I$, the $n\times n$ identity matrix.
+ \end{itemize}
+%%%%%
+%%%%%
+\end{document}

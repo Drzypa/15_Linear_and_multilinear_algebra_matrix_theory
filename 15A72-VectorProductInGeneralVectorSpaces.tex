@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VectorProductInGeneralVectorSpaces}
+\pmcreated{2013-03-22 14:32:32}
+\pmmodified{2013-03-22 14:32:32}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{vector product in general vector spaces}
+\pmrecord{5}{36089}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A72}
+\pmsynonym{vector product}{VectorProductInGeneralVectorSpaces}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The vector product can be defined in any finite dimensional vector space $V$ with $\dim V=n$. Let $v_1,\dots,v_n$ be a basis of $V$, we then define the vector product of the vectors $w_1,\dots,w_{n-1}$ in the following way:
+$$w_1\times\dots\times w_{n-1}=\sum_{j=1}^nv_j\det(w_1,\dots,w_{n-1},v_j).$$
+One can easily see that some of the properties of the vector product are the same as in $\mathbb{R}^3$:
+\begin{itemize}
+\item If one of the $w_i$ is equal to $0$, then the vector product is $0$.
+\item If $w_i$ are linearly dependent, then the vector product is $0$.
+\item In a Euclidean vector space $w_1\times\dots\times w_{n-1}$ is perpendicular to all $w_i$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

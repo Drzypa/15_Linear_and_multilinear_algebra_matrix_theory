@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfNondiagonalizableMatrices}
+\pmcreated{2013-03-22 14:14:30}
+\pmmodified{2013-03-22 14:14:30}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{example of non-diagonalizable matrices}
+\pmrecord{14}{35686}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Some matrices with real entries which are not diagonalizable over $\mathbb{R}$ \emph{are} diagonalizable over the complex numbers $\mathbb{C}$.
+
+For instance,
+
+\[A = \begin{pmatrix}
+          0 &-1
+       \\ 1 & 0
+       \end{pmatrix} \]
+
+has $\lambda^2+1$ as characteristic polynomial.
+This  polynomial  doesn't factor over the reals, but over $\mathbb{C}$ it does. Its roots are $\lambda = \pm i$.
+
+Interpreting the matrix as a linear transformation  $\mathbb{C}^2 \to \mathbb{C}^2$, it has eigenvalues $i$ and $-i$ and linearly independent eigenvectors $(1, -i)$, $(-i, 1)$.  So we can diagonalize $A$:
+
+\[A = \begin{pmatrix}
+0 &-1
+\\ 1 & 0
+\end{pmatrix}=\begin{pmatrix}
+1 & -i
+\\ -i & 1
+\end{pmatrix}\begin{pmatrix}
+i&0
+\\0&-i
+\end{pmatrix}\begin {pmatrix}
+.5&.5i
+\\.5i&.5 \end{pmatrix}\]
+
+But there exist real matrices which aren't diagonalizable even if complex eigenvectors and eigenvalues are allowed.
+
+For example,
+
+\[B = \begin{pmatrix}
+0 & 1
+\\ 0 & 0
+\end{pmatrix}\]
+
+cannot be written as $U D U^{-1}$ with $D$ diagonal.
+
+In fact, the characteristic polynomial is $\lambda^2$ and it has only one double root $\lambda=0$.
+However the eigenspace corresponding to the $0$ (kernel) eigenvalue has dimension 1.
+
+$B \begin{pmatrix}
+v_1
+\\v_2
+\end{pmatrix}
+=
+\begin{pmatrix}
+0
+\\0
+\end{pmatrix}
+\iff v_2 = 0
+$ and thus the eigenspace is $ker(B) = span_{\mathbb{C}}\left \{ (1,0)^T \right\}$, with only one dimension.
+
+There isn't a change of basis where $B$ is diagonal.
+%%%%%
+%%%%%
+\end{document}

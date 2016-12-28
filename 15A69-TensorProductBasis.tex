@@ -1,0 +1,160 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TensorProductBasis}
+\pmcreated{2013-03-22 15:24:48}
+\pmmodified{2013-03-22 15:24:48}
+\pmowner{lars_h}{9802}
+\pmmodifier{lars_h}{9802}
+\pmtitle{tensor product basis}
+\pmrecord{11}{37254}
+\pmprivacy{1}
+\pmauthor{lars_h}{9802}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A69}
+\pmsynonym{basis construction of tensor product}{TensorProductBasis}
+\pmrelated{TensorProduct}
+\pmrelated{FreeVectorSpaceOverASet}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+
+\usepackage{amsthm}
+% \newtheorem*{theorem}{Theorem}
+\newenvironment{theorem}{%
+   \trivlist\item\relax
+   \textbf{Theorem.}\hspace*{0.5em}%
+   \ignorespaces
+}{\endtrivlist}
+
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Fpil}{\longrightarrow}
+\newcommand{\vek}[1]{\mathbf{#1}}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\gobble}[1]{}
+\newcommand*{\setOfBig}[2]{%
+   \left\{ \, #1 \,\,\vrule\relax\big.\,\, #2 \, \right\}%
+}
+\begin{document}
+The following theorem describes a basis of the 
+\PMlinkname{tensor product}{TensorProduct} 
+of two vector spaces, in terms of given bases of the 
+\PMlinkescapetext{component} 
+spaces. In passing, it also gives a construction of this tensor 
+product. The exact same method can be used also for free 
+modules over a commutative ring with unit.
+
+% % 2007-09-01: Seems to work now (at least in preview), 
+% % but since I'm not overly optimistic about the problem 
+% % really having been solved, I'll for now leave this piece 
+% % of text as a comment.
+% \textbf{Apology:} For some reason the PlanetMath renderer 
+% doesn't seem to like this entry---formulas (even single 
+% letter ones like $x$) tend to be included in the wrong places 
+% in the HTML version of this page, and some are just garbage. 
+% If this problem still persists when you try to view this page, 
+% then you may get around it by selecting an alternative 
+% viewing format.
+
+\PMlinkescapeword{terms}
+\PMlinkescapeword{bases}
+\PMlinkescapephrase{tensor product}
+\PMlinkescapeword{observation}
+
+
+\begin{theorem}
+  Let $U$ and $V$ be vector spaces over a field $\K$ with bases 
+  $$
+    \{\vek{e}_i\}_{i \in I} \quad\text{and}\quad 
+    \{\vek{f}_j\}_{j \in J}
+  $$
+  respectively. Then
+  \begin{equation} \label{Eq:ProdBas}
+    \{ \vek{e}_i \otimes \vek{f}_j\}_{(i,j) \in I \times J}
+  \end{equation}
+  is a basis for the tensor product space $U \otimes V$.
+\end{theorem}
+\begin{proof}
+  Let
+  $$
+    W = \setOfBig{ \psi\colon I \times J \Fpil \K }{
+      f^{-1}\bigl( \K \setminus \{0\} \bigr) \text{ is finite}
+    }\text{;}
+  $$
+  this set is obviously a $\K$-vector-space under pointwise addition 
+  and multiplication by scalar (see also 
+  \PMlinkname{this}{FreeVectorSpaceOverASet} article). 
+  Let \(p\colon U \times V \Fpil W\) be 
+  the bilinear map which satisfies
+  \begin{equation} \label{Eq:def.p}
+    p(\vek{e}_i,\vek{f}_j)(k,l) = \begin{cases}
+      1& \text{if \(i=k\) and \(j=l\),}\\
+      0& \text{otherwise}
+    \end{cases}
+  \end{equation}
+  for all \(i,k \in I\) and \(j,l \in J\), i.e., 
+  \(p(\vek{e}_i,\vek{f}_j) \in W\) is the characteristic function of 
+  $\bigl\{(i,j)\bigr\}$. The reasons \eqref{Eq:def.p} uniquely 
+  defines $p$ on the whole of $U \times V$ are that 
+  $\{\vek{e}_i\}_{i \in I}$ is a basis of $U$, $\{\vek{f}_i\}_{j \in 
+  J}$ is a basis of $V$, and $p$ is bilinear.
+  
+  Observe that
+  $$
+    \bigl\{ p(\vek{e}_i,\vek{f}_j) \bigr\}_{(i,j) \in I \times J}
+  $$
+  is a basis of $W$. Since one may always define a linear map 
+  by giving its values on the basis elements, this implies that there for every 
+  $\K$-vector-space $X$ and every map \(\gamma\colon U \times V \Fpil 
+  X\) exists a unique linear map \(\widehat{\gamma}\colon W \Fpil X\) 
+  such that
+  $$
+    \widehat{\gamma}\bigl( p(\vek{e}_i,\vek{f}_j) \bigr) =
+    \gamma(\vek{e}_i,\vek{f}_j)
+    \quad\text{for all \(i \in I\) and \(j \in J\).}
+  $$
+  For $\gamma$ that are bilinear it holds for arbitrary \(\vek{u} = 
+  \sum_{i \in I'} u_i\vek{e}_i \in U\) and \(\vek{v} = 
+  \sum_{j \in J'} v_j\vek{f}_j \in V\) that \(\gamma(\vek{u},\vek{v}) 
+  = (\widehat{\gamma} \circ\nobreak p)(\vek{u},\vek{v})\), since
+  \begin{multline*}
+    \gamma(\vek{u},\vek{v}) =
+    \gamma\biggl( \sum_{i \in I'} u_i\vek{e}_i, 
+      \sum_{j \in J'} v_j\vek{f}_j \biggr) =
+    \sum_{i \in I'} \sum_{j \in J'} u_i v_j 
+      \gamma(\vek{e}_i,\vek{f}_j) = \\ =
+    \sum_{i \in I'} \sum_{j \in J'} u_i v_j 
+      \widehat{\gamma}\bigl( p(\vek{e}_i,\vek{f}_j) \bigr) =
+    \widehat{\gamma} \biggl(
+      \sum_{i \in I'} \sum_{j \in J'} u_i v_j p(\vek{e}_i,\vek{f}_j)
+      \biggr) = \\ =
+    \widehat{\gamma} \Biggl(
+      p\biggl( \sum_{i \in I'} u_i \vek{e}_i,
+      \sum_{j \in J'} v_j \vek{f}_j \biggr)
+      \Biggr) =
+    \widehat{\gamma}\bigl( p(\vek{u},\vek{v}) \bigr)
+    \text{.}
+  \end{multline*}
+  As this is the defining property of the tensor product $U \otimes 
+  V$ however, it follows that $W$ is (an incarnation of) this tensor 
+  product, with \(\vek{u} \otimes \vek{v} := p(\vek{u},\vek{v})\). 
+  Hence the claim in the theorem is equivalent to the observation 
+  about the basis of $W$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

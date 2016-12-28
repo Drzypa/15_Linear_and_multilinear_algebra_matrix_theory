@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeterminantInequalities}
+\pmcreated{2013-03-22 15:34:46}
+\pmmodified{2013-03-22 15:34:46}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{determinant inequalities}
+\pmrecord{12}{37489}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+There are a number of interesting inequalities bounding the determinant of a $n\times n$ complex matrix $A$, where $\rho$ is its spectral radius:
+
+1) $\left |\det(A)\right|\leq\rho^n(A)$\\
+2) $\left |\det(A)\right|\leq\prod_{i=1}^n\left (\sum_{j=1}^n\left |a_{ij}\right |\right )=\prod_{i=1}^n \|a_i\|_1$\\
+3) $\left |\det(A)\right|\leq\prod_{j=1}^n\left (\sum_{i=1}^n\left |a_{ij}\right |\right )=\prod_{j=1}^n \|a_j\|_1$\\
+4) $\left |\det(A)\right|\leq\prod_{i=1}^n\left (\sum_{j=1}^n\left |a_{ij}\right |^2\right )^{\frac{1}{2}}=\prod_{i=1}^n \|a_i\|_2$\\
+5) $\left |\det(A)\right|\leq\prod_{j=1}^n\left (\sum_{i=1}^n\left |a_{ij}\right |^2\right )^{\frac{1}{2}}=\prod_{j=1}^n \|a_j\|_2$\\
+6) if $A$ is Hermitian positive semidefinite, $\det(A)\leq\prod_{i=1}^n a_{ii}$, with equality if and only if $A$ is diagonal.
+
+Inequalities 4)-6) are known as "Hadamard's inequalities".
+
+(Note that inequalities 2)-5) may suggest the idea that such inequalities could hold: $\left |\det(A)\right|\leq\prod_{i=1}^n\|a_i\|_p$ or $\left |\det(A)\right|\leq\prod_{j=1}^n\|a_j\|_p$ for any $p\in\mathbf{N}$; however, this is not true, as one can easily see with $A=\begin{bmatrix} 1 & 1\\
+-1 & 1\end{bmatrix}$ and $p=3$. Actually, inequalities 2)-5) give the best possible estimate of this kind.)
+
+Proofs:
+
+1) $\left|\det(A)\right|=\left|\prod_{i=1}^n \lambda_i\right|=\prod_{i=1}^n\left|\lambda_i\right|\leq\prod_{i=1}^n\rho(A)=\rho^n(A).$
+
+2) If $A$ is singular, the thesis is trivial. Let then $\det(A)\ne 0$. Let's define $B=DA$, $D=diag(d_{11},d_{22},\cdots,d_{nn})$,$d_{ii}=\left(\sum_{j=1}^n \left|a_{ij}\right|\right)^{-1}$. (Note that $d_{ii}$ exist for any $i$, because $\det(A)\ne 0$ implies no all-zero row exists.) So $\|B\|_\infty=\max_i\left(\sum_{j=1}^n \left|b_{ij}\right|\right)=1$ and, since $\rho(B)\leq\|B\|_\infty$, we have:
+
+$\left|\det(B)\right|=\left|\det(D)\right|\left|\det(A)\right|=\left(\prod_{i=1}^n\sum_{j=1}^n\left|a_{ij}\right|\right)^{-1}\left|\det(A)\right|\leq\rho^n(B)\leq\|B\|_\infty^n =1$,
+
+from which:
+
+$\left|\det(A)\right|\leq\prod_{i=1}^n\left(\sum_{j=1}^n\left|a_{ij}\right |\right).$ 
+
+3) Same as 2), but applied to $A^T$.
+
+4)-6) See related proofs attached to "Hadamard's inequalities".
+%%%%%
+%%%%%
+\end{document}

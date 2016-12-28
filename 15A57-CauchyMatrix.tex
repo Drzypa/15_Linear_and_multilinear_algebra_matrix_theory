@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CauchyMatrix}
+\pmcreated{2013-03-22 14:30:43}
+\pmmodified{2013-03-22 14:30:43}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{Cauchy matrix}
+\pmrecord{9}{36050}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A57}
+\pmdefines{Cauchy matrices}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $x_1$, $x_2,\ldots, x_m$, and $y_1$, $y_2 \ldots, y_n$ be elements in a field $F$, satisfying the \PMlinkescapetext{properties} that
+
+\begin{enumerate}
+\item $x_1, \ldots, x_m$ are distinct,
+
+\item $y_1, \ldots, y_n$ are distinct, and
+
+\item $x_i+y_j\neq 0$ for $1\leq i \leq m$, $1\leq j \leq n$.
+\end{enumerate}
+
+The matrix
+\[
+\begin{bmatrix}
+\frac{1}{x_1+y_1} & \frac{1}{x_1+y_2} & \cdots &\frac{1}{x_1+y_n} \\
+\frac{1}{x_2+y_1} & \frac{1}{x_2+y_2} & \cdots &\frac{1}{x_2+y_n} \\
+\vdots & \vdots & \ddots & \vdots \\
+\frac{1}{x_m+y_1} & \frac{1}{x_m+y_2} & \cdots &\frac{1}{x_m+y_n}
+\end{bmatrix}
+\]
+is called a {\em Cauchy matrix} over $F$.
+
+\bigskip
+
+The determinant of a square Cauchy matrix is
+\[
+\frac{ \prod_{i<j} (x_i-x_j)(y_i-y_j) } {\prod_{ij} (x_i+y_j)}
+\]
+
+Since $x_i$'s are distinct and $y_j$'s are distinct by definition, a square Cauchy matrix is non-singular. Any submatrix of a rectangular Cauchy matrix has full rank.
+%%%%%
+%%%%%
+\end{document}

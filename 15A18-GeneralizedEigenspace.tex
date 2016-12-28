@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedEigenspace}
+\pmcreated{2013-03-22 17:23:36}
+\pmmodified{2013-03-22 17:23:36}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{generalized eigenspace}
+\pmrecord{8}{39761}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A18}
+\pmrelated{GeneralizedEigenvector}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $V$ be a vector space (over a field $k$), and $T$ a linear operator on $V$, and $\lambda$ an eigenvalue of $T$.  The set $E_{\lambda}$ of all generalized eigenvectors of $T$ corresponding to $\lambda$, together with the zero vector $0$, is called the \emph{generalized eigenspace} of $T$ corresponding to $\lambda$.  In short, the generalized eigenspace of $T$ corresponding to $\lambda$ is the set $$E_{\lambda}:=\lbrace v\in V\mid (T-\lambda I)^i(v)=0\textrm{ for some positive integer }i\rbrace.$$
+
+Here are some properties of $E_{\lambda}$:
+\begin{enumerate}
+\item $W_{\lambda}\subseteq E_{\lambda}$, where $W_{\lambda}$ is the eigenspace of $T$ corresponding to $\lambda$.
+\item $E_{\lambda}$ is a subspace of $V$ and $E_{\lambda}$ is $T$-invariant.
+\item If $V$ is finite dimensional, then $\dim(E_{\lambda})$ is the algebraic multiplicity of $\lambda$.
+\item $E_{\lambda_1}\cap E_{\lambda_2}=0$ iff $\lambda_1\ne \lambda_2$.  More generally, $E_A\cap E_B=0$ iff $A$ and $B$ are disjoint sets of eigenvalues of $T$, and $E_A$ (or $E_B$) is defined as the sum of all $E_{\lambda}$, where $\lambda\in A$ (or $B$).
+\item If $V$ is finite dimensional and $T$ is a linear operator on $V$ such that its characteristic polynomial $p_T$ splits (over $k$), then $$V=\bigoplus_{\lambda\in S} E_{\lambda},$$ where $S$ is the set of all eigenvalues of $T$.
+\item Assume that $T$ and $V$ have the same properties as in (5).  By the Jordan canonical form theorem, there exists an ordered basis $\beta$ of $V$ such that $[T]_{\beta}$ is a Jordan canonical form.  Furthermore, if we set $\beta_i=\beta \cap E_{\lambda_i}$, then $[T|_{E_{\lambda_i}}]_{\beta_i}$, the matrix representation of $T|_{E_{\lambda}}$, the restriction of $T$ to $E_{\lambda_i}$, is a Jordan canonical form.  In other words, 
+$$[T]_{\beta}=\begin{pmatrix}
+J_{1} & O & \cdots & O\\
+O & J_{2} & \cdots & O\\
+\vdots & \vdots & \ddots & \vdots \\
+O & O & \cdots & J_{n}
+\end{pmatrix}$$
+where each $J_i=[T|_{E_{\lambda_i}}]_{\beta_i}$ is a Jordan canonical form, and $O$ is a zero matrix.
+\item Conversely, for each $E_{\lambda_i}$, there exists an ordered basis $\beta_i$ for $E_{\lambda_i}$ such that $J_i:=[T|_{E_{\lambda_i}}]_{\beta_i}$ is a Jordan canonical form.  As a result, $\beta:=\bigcup_{i=1}^n \beta_i$ with linear order extending each $\beta_i$, such that $v_i<v_j$ for $v_i\in \beta_i$ and $v_j\in \beta_j$ for $i<j$, is an ordered basis for $V$ such that $[T]_{\beta}$ is a Jordan canonical form, being the direct sum of matrices $J_i$.
+\item Each $J_i$ above can be further decomposed into Jordan blocks, and it turns out that the number of Jordan blocks in each $J_i$ is the dimension of $W_{\lambda_i}$, the eigenspace of $T$ corresponding to $\lambda_i$.
+\end{enumerate}
+
+More to come...
+
+\begin{thebibliography}{3}
+\bibitem{Friedberg} Friedberg, Insell, Spence. {\it Linear Algebra}. Prentice-Hall Inc., 1997.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

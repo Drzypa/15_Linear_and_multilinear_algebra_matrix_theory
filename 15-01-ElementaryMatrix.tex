@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ElementaryMatrix}
+\pmcreated{2013-03-22 18:30:38}
+\pmmodified{2013-03-22 18:30:38}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{elementary matrix}
+\pmrecord{13}{41195}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-01}
+\pmrelated{MatrixUnit}
+\pmrelated{GaussianElimination}
+\pmdefines{elementary operation}
+\pmdefines{elementary column operation}
+\pmdefines{elementary row operation}
+\pmdefines{basic diagonal matrix}
+\pmdefines{transposition matrix}
+\pmdefines{row replacement matrix}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+
+\begin{document}
+\subsubsection*{Elementary Operations on Matrices}
+
+Let $\mathbb{M}$ be the set of all $m\times n$ matrices (over some commutative ring $R$).  An operation on $\mathbb{M}$ is called an \emph{elementary row operation} if it takes a matrix $M\in \mathbb{M}$, and does one of the following:
+\begin{enumerate}
+\item interchanges of two rows of $M$,
+\item multiply a row of $M$ by a non-zero element of $R$,
+\item add a (constant) multiple of a row of $M$ to another row of $M$.
+\end{enumerate}
+An \emph{elementary column operation} is defined similarly.  An operation on $\mathbb{M}$ is an \emph{elementary operation} if it is either an elementary row operation or elementary column operation.
+
+For example, if $M=\begin{pmatrix} a & b \\ c & d \\ e & f \end{pmatrix}$, then the following operations correspond respectively to the three types of elementary row operations described above
+\begin{enumerate}
+\item $\begin{pmatrix} a & b \\ e & f \\ c & d \end{pmatrix}$ is obtained by interchanging rows 2 and 3 of $M$,
+\item $\begin{pmatrix} a & b \\ rc & rd \\ e & f \end{pmatrix}$ is obtained by multiplying $r\ne 0$ to the second row of $M$,
+\item $\begin{pmatrix} a & b \\ c & d \\ sa+e & sb+f \end{pmatrix}$ is obtained by adding to row 1 multiplied by $s$ to row 3 of $M$.
+\end{enumerate}
+
+Some immediate observation: elementary operations of type 1 and 3 are always invertible.  The inverse of type 1 elementary operation is itself, as interchanging of rows twice gets you back the original matrix.  The inverse of type 3 elementary operation is to add the negative of the multiple of the first row to the second row, thus returning the second row back to its original form.  Type 2 is invertible provided that the multiplier has an inverse.
+
+Some notation: for each type $k$ (where $k=1,2,3$) of elementary operations, let $E_c^k(A)$ be the set of all matrices obtained from $A$ via an elementary column operation of type $k$, and $E_r^k(A)$ the set of all matrices obtained from $A$ via an elementary row operation of type $k$.
+
+\subsubsection*{Elementary Matrices}
+
+Now, assume $R$ has $1$.  An $n\times n$ \emph{elementary matrix} is a (square) matrix obtained from the identity matrix $I_n$ by performing an elementary operation.  As a result, we have three types of elementary matrices, each corresponding to a type of elementary operations:
+\begin{enumerate}
+\item \emph{transposition matrix} $T_{ij}$: an matrix obtained from $I_n$ with rows $i$ and $j$ switched,
+\item \emph{basic diagonal matrix} $D_i(r)$: a diagonal matrix whose entries are $1$ except in cell $(i,i)$, whose entry is a non-zero element $r$ of $R$
+\item \emph{row replacement matrix} $E_{ij}(s)$: $I_n + s U_{ij}$, where $s\in R$ and $U_{ij}$ is a matrix unit with $i\ne j$.
+\end{enumerate}
+
+For example, among the $3\times 3$ matrices, we have 
+$$T_{12} = \begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{pmatrix}, \quad
+D_3(r) = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & r \end{pmatrix},\quad\mbox{and}\quad
+E_{32}(s) = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & s & 1 \end{pmatrix}$$
+
+For each positive integer $n$, let $\mathbb{E}^k(n)$ be the collection of all $n\times n$ elementary matrices of type $k$, where $k=1,2,3$.
+
+Below are some basic properties of elementary matrices:
+\begin{itemize}
+\item $T_{ij}=T_{ji}$, and $T_{ij}^2=I_n$.
+\item $D_i(r)D_i(r^{-1})=I_n$, provided that $r^{-1}$ exists.
+\item $E_{ij}(s) E_{ij}(-s) = I_n$.
+\item $\det(T_{ij})=-1$, $\det(D_i(r))=r$, and $\det(E_{ij}(s))=1$.
+\item If $A$ is an $m\times n$ matrix, then $$E_c^k(A)=\lbrace AE \mid E \in \mathbb{E}^k(n) \rbrace \qquad \mbox{and} \qquad E_r^k(A)=\lbrace EA \mid E \in \mathbb{E}^k(m) \rbrace.$$
+\item Every non-singular matrix can be written as a product of elementary matrices.  This is the same as saying: given a non-singular matrix, one can perform a finite number of elementary row (column) operations on it to obtain the identity matrix.
+\end{itemize}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item One can also define elementary matrix operations on matrices over general rings.  However, care must be taken to consider left scalar multiplications and right scalar multiplications as separate operations.
+\item The discussion above pertains to elementary linear algebra.  In algebraic K-theory, an elementary matrix is defined only as a row replacement matrix (type 3) above.
+\end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

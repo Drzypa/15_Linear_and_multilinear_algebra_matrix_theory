@@ -1,0 +1,126 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IsomorphismOfRingsOfRealAndComplexMatrices}
+\pmcreated{2013-03-22 16:17:15}
+\pmmodified{2013-03-22 16:17:15}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{isomorphism of rings of real and complex matrices}
+\pmrecord{10}{38403}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-01}
+\pmclassification{msc}{15A33}
+\pmclassification{msc}{15A21}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem*{thm*}{Theorem}
+
+\begin{document}
+Note that \PMlinkname{submatrix notation}{Submatrix} will be used within this entry.  Also, for any positive integer $n$, $M_{n \times n}(R)$ will be used to denote the ring of $n \times n$ matrices with entries from the ring $R$, and $R_n$ will be used to denote the following subring of $M_{2n \times 2n}(\mathbb{R})$:
+
+$$R_n=\left\{ P \in M_{2n \times 2n}(\mathbb{R}) : P=\left( \begin{array}{cc}
+A & B \\
+-B & A \end{array}
+\right)  \text{ for some } A,B \in M_{n \times n}(\mathbb{R}) \right\}$$
+
+\begin{thm*}
+For any positive integer $n$, $R_n \cong M_{n \times n}(\mathbb{C})$.
+\end{thm*}
+
+\begin{proof}
+Define $\varphi \colon R_n \to M_{n \times n}(\mathbb{C})$ by $\displaystyle \varphi \left( \left( \begin{array}{cc}
+A & B \\
+-B & A \end{array}
+\right) \right) = A+iB$ for $A,B \in M_{n \times n}(\mathbb{R})$.
+
+Let $A,B,C,D \in M_{n \times n}(\mathbb{R})$ such that $\displaystyle \varphi \left( \left( \begin{array}{cc}
+A & B \\
+-B & A \end{array}
+\right) \right) =\varphi \left( \left( \begin{array}{cc}
+C & D \\
+-D & C \end{array}
+\right) \right)$.  Then $A+iB=C+iD$.  Therefore, $A=C$ and $B=D$.  Hence, $\displaystyle \left( \begin{array}{cc}
+A & B \\
+-B & A \end{array}
+\right) = \left( \begin{array}{cc}
+C & D \\
+-D & C \end{array}
+\right)$.  It follows that $\varphi$ is injective.
+
+Let $Z \in M_{n \times n}(\mathbb{C})$.  Then there exist $X,Y \in M_{n \times n}(\mathbb{R})$ such that $X+iY=Z$.  Since $\varphi \left( \left( \begin{array}{cc}
+X & Y \\
+-Y & X \end{array}
+\right) \right)=X+iY=Z$, it follows that $\varphi$ is surjective.
+
+Let $A,B,C,D \in M_{n \times n}(\mathbb{R})$.  Then
+
+\begin{center}
+$\begin{array}{rl}
+\displaystyle \varphi \left( \left( \begin{array}{cc}
+A & B \\
+-B & A \end{array}
+\right) + \left( \begin{array}{cc}
+C & D \\
+-D & C \end{array}
+\right) \right) & \displaystyle =\varphi \left( \left( \begin{array}{cc}
+A+C & B+D \\
+-B-D & A+C \end{array}
+\right) \right) \\
+\\
+& =A+C+i(B+D) \\
+\\
+& =A+iB+C+iD \\
+\\
+& \displaystyle =\varphi \left( \left( \begin{array}{cc}
+A & B \\
+-B & A \end{array}
+\right) \right) + \varphi \left( \left( \begin{array}{cc}
+C & D \\
+-D & C \end{array}
+\right) \right) \end{array}$
+\end{center}
+
+and
+
+\begin{center}
+$\begin{array}{rl}
+\displaystyle \varphi \left( \left( \begin{array}{cc}
+A & B \\
+-B & A \end{array}
+\right) \left( \begin{array}{cc}
+C & D \\
+-D & C \end{array}
+\right) \right) & \displaystyle =\varphi \left( \left( \begin{array}{cc}
+AC-BD & AD+BC \\
+-AD-BC & AC-BD \end{array}
+\right) \right) \\
+\\
+& =AC-BD+i(AD+BC) \\
+\\
+& =(A+iB)(C+iD) \\
+\\
+& \displaystyle =\varphi \left( \left( \begin{array}{cc}
+A & B \\
+-B & A \end{array}
+\right) \right) \varphi \left( \left( \begin{array}{cc}
+C & D \\
+-D & C \end{array}
+\right) \right) . \end{array}$
+\end{center}
+
+It follows that $\varphi$ is an \PMlinkname{isomorphism}{RingIsomorphism}.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

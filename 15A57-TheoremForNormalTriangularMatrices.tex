@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheoremForNormalTriangularMatrices}
+\pmcreated{2013-03-22 13:43:35}
+\pmmodified{2013-03-22 13:43:35}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{theorem for normal triangular matrices}
+\pmrecord{12}{34412}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A57}
+\pmclassification{msc}{15-00}
+\pmrelated{NormalMatrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+\PMlinkescapeword{row}
+\newtheorem{thm}{Theorem}
+\begin{thm}
+ (\cite{prasolov}, pp. 82) 
+A square matrix is diagonal
+if and only if it is normal and triangular. 
+\end{thm}
+
+\emph{Proof.} If $A$ is a diagonal matrix, then the complex conjugate 
+$A^\ast$ is also a diagonal matrix. Since arbitrary diagonal matrices
+commute, it follows that $A^\ast A = A A^\ast$. 
+Thus
+any diagonal matrix is a normal triangular matrix. 
+
+Next, suppose $A=(a_{ij})$ is a normal upper triangular matrix. 
+Thus $a_{ij}=0$ for $i>j$, so for the diagonal elements in $A^\ast A$ and
+$AA^\ast$, we obtain
+\begin{eqnarray*}
+(A^\ast A)_{ii} &=& \sum_{k=1}^i |a_{ki}|^2, \\
+(AA^\ast)_{ii} &=& \sum_{k=i}^n |a_{ik}|^2. \\
+\end{eqnarray*}
+For $i=1$, we have
+$$ |a_{11}|^2 = |a_{11}|^2+|a_{12}|^2+\cdots + |a_{1n}|^2.$$
+It follows that the only non-zero entry on the first row of $A$ is $a_{11}$.
+Similarly, for $i=2$, we obtain
+$$ |a_{12}|^2 + |a_{22}|^2 = |a_{22}|^2+\cdots + |a_{2n}|^2.$$
+Since $a_{12}=0$, it follows that the only non-zero element on the
+second row is $a_{22}$. Repeating this \PMlinkescapetext{argument} for all rows, 
+we see that $A$ is a diagonal matrix. Thus any normal 
+upper triangular matrix is a diagonal matrix. 
+
+Suppose then that $A$ is a normal lower triangular matrix. 
+Then it is not difficult to see that $A^\ast$ is a normal 
+upper triangular matrix. Thus, by the above, $A^\ast$ is a diagonal matrix,
+whence also $A$ is a diagonal matrix. $\Box$
+
+
+\begin{thebibliography}{9}
+\bibitem{prasolov} V.V. Prasolov, 
+\emph{Problems and Theorems in Linear Algebra}, 
+American Mathematical Society, 1994.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

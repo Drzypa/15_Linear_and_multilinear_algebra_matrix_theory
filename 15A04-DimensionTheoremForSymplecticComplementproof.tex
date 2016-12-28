@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DimensionTheoremForSymplecticComplementproof}
+\pmcreated{2013-03-22 13:32:52}
+\pmmodified{2013-03-22 13:32:52}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{dimension theorem for symplectic complement (proof)}
+\pmrecord{5}{34149}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\newcommand{\image}{\mathop{\mathrm{img}}}
+We denote by $V^\star$ the dual space of $V$, i.e.,
+linear mappings from $V$ to $\mathbb{R}$. Moreover, we assume known that
+$\dim V = \dim V^\ast$ for any vector space $V$.
+
+We begin by showing that the
+mapping $S: V \to V^*$, $a \mapsto \omega(a,\cdot)$
+is an linear isomorphism. First, linearity is clear, and since
+$\omega$ is non-degenerate, $\ker S=\{0\}$, so $S$ is injective.
+To show that $S$ is surjective, we apply the 
+\PMlinkid{rank-nullity theorem}{2238} to
+$S$, which yields $\dim V = \dim \image S$.
+We now have
+$\image S \subset V^*$
+and
+$\dim \image S = \dim V^\ast$.
+(The first assertion follows directly from the definition of $S$.)
+Hence $\image S = V^\ast$ (see \PMlinkname{this page}{VectorSubspace}),
+and $S$ is a surjection. We have shown that
+$S$ is a linear isomorphism.
+
+Let us next define the mapping $T: V\to W^*$, $a\mapsto \omega(a,\cdot)$.
+Applying the  \PMlinkid{rank-nullity theorem}{2238} to $T$ yields
+\begin{eqnarray}
+\label{eq0}
+\dim V &=& \dim \ker T + \dim \image T.
+\end{eqnarray}
+Now  $\ker T = W^\omega$ and $ \image T = W^*$.
+To see the latter assertion, first note that from the definition of $T$, we
+have $\image T \subset W^*$. Since $S$ is a linear
+isomorphism, we also have $\image T \supset W^*$.
+Then, since $\dim W= \dim W^*$,
+the result follows from equation \ref{eq0}. $\Box$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedInverse}
+\pmcreated{2013-03-22 14:31:26}
+\pmmodified{2013-03-22 14:31:26}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{generalized inverse}
+\pmrecord{5}{36065}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A09}
+\pmclassification{msc}{62J10}
+\pmclassification{msc}{62J12}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $A$ be an $m\times n$ matrix with entries in $\mathbb{C}$.  A \emph{generalized inverse}, denoted by $A^{-}$, is an $n\times m$ matrix with entries in $\mathbb{C}$, such that $$AA^{-}A=A.$$
+
+\textbf{Examples}
+\begin{enumerate}
+\item Let $$A=\begin{pmatrix} 2&3&0 \\ 1&2&0 \\ 0&0&0 \end{pmatrix}.$$
+Then any matrix of the form 
+$$A^{-}=\begin{pmatrix} 2&-3&a \\ -1&2&b \\ c&d&e \end{pmatrix},$$
+where $a,b,c,d$ and $e\in\mathbb{C}$, is a generalized inverse.
+\item Using the same example from above, if $a=b=c=d=e=0$, then we have an example of the \emph{Moore-Penrose generalized inverse}, which is a unique matrix.
+\item Again, using the example from above, if $a=b=c=d=0$ and $e$ is any complex number, we have an example of a \emph{Drazin inverse}.
+\end{enumerate}
+
+\textbf{Remark}
+Generalized inverse of a matrix has found many applications in statistics.  For example, in general linear model, one solves the set of normal equations
+$$\textbf{X}^{\operatorname{T}}\textbf{X}\boldsymbol{\beta}=\textbf{X}^{\operatorname{T}}\textbf{Y},$$
+to get the MLE $\hat{\boldsymbol{\beta}}$ of the parameter vector $\boldsymbol{\beta}$.  If the design matrix $\textbf{X}$ is not of full rank (this occurs often when the model is either an ANOVA or ANCOVA type) and hence $\textbf{X}^{\operatorname{T}}\textbf{X}$ is singular.  Then the MLE can be given by
+$$\hat{\boldsymbol{\beta}}=(\textbf{X}^{\operatorname{T}}\textbf{X})^{-}\textbf{X}^{\operatorname{T}}\textbf{Y}.$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PauliMatrices}
+\pmcreated{2013-03-22 17:57:01}
+\pmmodified{2013-03-22 17:57:01}
+\pmowner{invisiblerhino}{19637}
+\pmmodifier{invisiblerhino}{19637}
+\pmtitle{Pauli matrices}
+\pmrecord{9}{40449}
+\pmprivacy{1}
+\pmauthor{invisiblerhino}{19637}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A57}
+\pmsynonym{sigma matrices}{PauliMatrices}
+\pmrelated{Spinor}
+\pmrelated{SchrodingersWaveEquation}
+\pmrelated{UnitaryGroup}
+\pmrelated{HermitianMatrix}
+\pmrelated{DiracMatrices}
+\pmrelated{DiracEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The Pauli matrices are a set of three Hermitian, unitary matrices used by Wolfgang Pauli in his theory of quantum-mechanical spin. They are given by:
+\begin{align*}
+\sigma_1 &= \begin{pmatrix} 0 & 1\\
+                            1 & 0
+            \end{pmatrix}\\
+\sigma_2 &= \begin{pmatrix} 0 & -i\\
+                            i & 0
+            \end{pmatrix}\\
+\sigma_3 &= \begin{pmatrix} 1 & 0\\
+                            0 & -1
+            \end{pmatrix}\\
+\end{align*}
+
+They satisfy the following commutation and anticommutation identities:
+\begin{align*}
+\left[ \sigma_i, \sigma_j \right] &= 2i\epsilon_{ijk} \sigma_k\text{where $\epsilon_{ijk}$ is the Levi-Civita symbol}\\
+\lbrace \sigma_i, \sigma_j \rbrace &=2 \mathbf{I} \delta_{ij} \text{where $\mathbf{I}$ is the identity matrix and $\delta_{ij}$ is the Kronecker delta}
+\end{align*}
+
+\subsection{Delta notation}
+With the identity matrix $\textbf{I}$, the Pauli matrices form a group. When combined in this way, they are often given the symbols $\delta_i$, as follows:
+
+\begin{align*}
+\delta_0 &= \begin{pmatrix} 1 & 0\\
+                            0 & 1
+            \end{pmatrix}\\
+\delta_1 &= \begin{pmatrix} 0 & 1\\
+                            1 & 0
+            \end{pmatrix}\\
+\delta_2 &= \begin{pmatrix} 0 & -i\\
+                            i & 0
+            \end{pmatrix}\\
+\delta_3 &= \begin{pmatrix} 1 & 0\\
+                            0 & -1
+            \end{pmatrix}\\
+\end{align*}
+This choice is useful when writing the Dirac matrices.
+%%%%%
+%%%%%
+\end{document}

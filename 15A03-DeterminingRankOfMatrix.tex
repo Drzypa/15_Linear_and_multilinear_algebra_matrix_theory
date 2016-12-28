@@ -1,0 +1,207 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeterminingRankOfMatrix}
+\pmcreated{2013-03-22 17:19:23}
+\pmmodified{2013-03-22 17:19:23}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{determining rank of matrix}
+\pmrecord{9}{39674}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmrelated{GaussianElimination}
+\pmrelated{ReducedRowEchelonForm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+One can determine the rank of even large matrices by using row and
+column operations to put the matrix in a triangular form.  The method
+presented here is a version of row reduction to echelon form,
+but some simplifications can be made because we are only interested
+in finding the rank of the matrix.
+
+The foundation of this method is that the rank of a matrix is left
+invariant by the following operations:
+\begin{enumerate}
+\item Permuting rows
+\item Permuting colums
+\item Adding a multiple of a row to another row
+\item Multiplying a row by an invertible scalar
+\end{enumerate}
+The last operation is really not needed, but it can be convenient.
+For instance, if some of the numbers in the matrix are huge, one
+may want to use this operation to keep the numbers in a reasonable
+range or, if one has a matrix of integers, one may want to cancel
+denominators so that one does not have to deal with fractions.
+
+These operations can be used to put the matrix in a triangular
+form; once this is done, all one has to do to determine the rank
+is count how many non-zero rows there are.  A systematic way of
+going about this is as follows:
+\begin{enumerate}
+\item If there are no rows or all the entries of the matrix are
+zero, you are done.
+\item Permute rows and columns so as to put a non-zero element in
+the $(1,1)$ position of the matrix.
+\item Subtract multiples of the first row so as to put all the
+entries in the first column except the first one zero.
+\item Repeat the process starting at step 1 with the submatrix 
+gotten by throwing away the first row and the first column.
+\end{enumerate}
+
+Let us illustrate this with the following matrix:
+\[
+\begin{matrix}
+0 & 1 & 1 & 0 & 0 \\
+1 & 1 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 & 1
+\end{matrix}
+\]
+
+We interchange the first two rows to put a $1$ in the $(1,1)$ position:
+\[
+\begin{matrix}
+1 & 1 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 \\
+1 & 0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 & 1
+\end{matrix}
+\]
+We subtract the first row from the third and the fifth rows:
+\[
+\begin{matrix}
+1 & 1 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 \\
+0 & -1 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 & 1 \\
+0 & -1 & 1 & 0 & 1
+\end{matrix}
+\]
+We now concentrate on the submatrix gotten by ignoring the 
+first column and the first row:
+\[
+\begin{matrix}
+1 & 1 & 0 & 0 & 0 \\
+0 & \mathbf{1} & \mathbf{1} & \mathbf{0} & \mathbf{0} \\
+0 & \mathbf{-1} & \mathbf{0} & \mathbf{0} & \mathbf{1} \\
+0 & \mathbf{0} & \mathbf{0} & \mathbf{0} & \mathbf{1} \\
+0 & \mathbf{-1} & \mathbf{1} & \mathbf{0} & \mathbf{1}
+\end{matrix}
+\]
+Since the $(1,1)$ position of this submatrix is not zero,
+we do not need to do any permuting.  Instead, we go to the
+next step and add the second column to the third and fifth 
+columns:
+\[
+\begin{matrix}
+1 & 1 & 0 & 0 & 0 \\
+0 & \mathbf{1} & \mathbf{1} & \mathbf{0} & \mathbf{0} \\
+0 & \mathbf{0} & \mathbf{1} & \mathbf{0} & \mathbf{1} \\
+0 & \mathbf{0} & \mathbf{0} & \mathbf{0} & \mathbf{1} \\
+0 & \mathbf{0} & \mathbf{2} & \mathbf{0} & \mathbf{1}
+\end{matrix}
+\]
+We now narrow our focus to the submatrix gotten by throwing
+out the first and second rows and columns:
+\[
+\begin{matrix}
+1 & 1 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 \\
+0 & 0 & \mathbf{1} & \mathbf{0} & \mathbf{1} \\
+0 & 0 & \mathbf{0} & \mathbf{0} & \mathbf{1} \\
+0 & 0 & \mathbf{2} & \mathbf{0} & \mathbf{1}
+\end{matrix}
+\]
+Since the $(1,1)$ entry of this submatrix is again not zero,
+we do not need to do any permuting.  Thus, we move to the
+next step and subtract twice the third row from the fifth row:
+\[
+\begin{matrix}
+1 & 1 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 \\
+0 & 0 & \mathbf{1} & \mathbf{0} & \mathbf{1} \\
+0 & 0 & \mathbf{0} & \mathbf{0} & \mathbf{1} \\
+0 & 0 & \mathbf{0} & \mathbf{0} & \mathbf{-2}
+\end{matrix}
+\]
+We now narrow our focus to the submatrix gotten by throwing
+out the first, second, and third rows and columns:
+\[
+\begin{matrix}
+1 & 1 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 & 1 \\
+0 & 0 & 0 & \mathbf{0} & \mathbf{1} \\
+0 & 0 & 0 & \mathbf{0} & \mathbf{-2}
+\end{matrix}
+\]
+Since the $(1,1)$ entry of this submatrix is zero, we must make
+a permutation.  We will swap the fourth and the fifth columns:
+\[
+\begin{matrix}
+1 & 1 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 \\
+0 & 0 & 1 & 1 & 0 \\
+0 & 0 & 0 & \mathbf{1} & \mathbf{0} \\
+0 & 0 & 0 & \mathbf{-2} & \mathbf{0}
+\end{matrix}
+\]
+We add twice the fourth row to the fifth row:
+\[
+\begin{matrix}
+1 & 1 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 \\
+0 & 0 & 1 & 1 & 0 \\
+0 & 0 & 0 & \mathbf{1} & \mathbf{0} \\
+0 & 0 & 0 & \mathbf{0} & \mathbf{0}
+\end{matrix}
+\]
+We narrow our focus to the submatrix gotten by ignoring 
+all but the fifth row and column:
+\[
+\begin{matrix}
+1 & 1 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 \\
+0 & 0 & 1 & 1 & 0 \\
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & \mathbf{0}
+\end{matrix}
+\]
+Since the sole entry of this submatrix is zero, we are done
+and have a triangular matrix.  Since there are four
+non-zero rows, the rank is $4$.
+
+In the presentation above, certain entries of the matrix have been
+shown in boldface.  When using the method in practice, it is only
+necessary to write these entries --- the other entries can be
+ignored and need not be copied from step to step.
+%%%%%
+%%%%%
+\end{document}

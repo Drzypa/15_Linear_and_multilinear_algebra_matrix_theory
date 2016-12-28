@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NthDerivativeOfADeterminant}
+\pmcreated{2013-03-22 14:30:25}
+\pmmodified{2013-03-22 14:30:25}
+\pmowner{GeraW}{6138}
+\pmmodifier{GeraW}{6138}
+\pmtitle{n'th derivative of a determinant}
+\pmrecord{5}{36044}
+\pmprivacy{1}
+\pmauthor{GeraW}{6138}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+\pmrelated{GeneralizedLeibnizRule}
+\pmrelated{MultinomialTheorem}
+\pmrelated{DerivativeOfMatrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\sgn}{\mathrm{sgn}}
+\begin{document}
+Let $ A= (a_{i,j})$ be a $d \times d$ matrix whose entries are real functions of $t$. Then,
+
+\[\begin{split}
+\frac{d^n}{dt^n}\det(A)
+&=\sum_{n_1+\cdots+n_d=n} {n \choose n_1,n_2,...,n_d} \sum_{\pi \in S_d} \sgn(\pi) \prod_{i=1}^{d} \frac{d^{n_i}}{dt^{n_i}}a_{i,\pi(i)}\\
+\\
+&= \sum_{n_1+\cdots+n_d=n} {n \choose n_1,n_2,...,n_d} \det \begin{pmatrix} \frac{ d^{n_1}}{dt^{n_1}}a_{1,1} & \frac{ d^{n_1}}{dt^{n_1}}a_{1,2} &  \cdots
+&\frac{d^{n_1}}{dt^{n_1}}a_{1,d} \cr \vdots & \vdots &  & \vdots \cr \frac{d^{n_d}}{dt^{n_d}}a_{d,1} & \frac{d^{n_d}}{dt^{n_d}}a_{d,2} & \cdots &
+\frac{d^{n_d}}{dt^{n_d}}a_{d,d}
+\end{pmatrix}
+\end{split}\]
+
+where $ {n \choose n_1,n_2,...,n_r}$ is the multinomial coefficient, $S_d$ is the symmetric group of permutations and $\sgn(\pi)$ is the sign of a
+permutation $\pi$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnotherProofOfRanknullityTheorem}
+\pmcreated{2013-03-22 18:06:14}
+\pmmodified{2013-03-22 18:06:14}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{another proof of rank-nullity theorem}
+\pmrecord{4}{40647}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmrelated{ProofOfRankNullityTheorem}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\def\dim{\operatorname{dim}}
+\def\rank{\operatorname{rank}}
+\def\ker{\operatorname{ker}}
+\def\nullity{\operatorname{nullity}}
+\begin{document}
+Let $\phi: V\to W$ be a linear transformation from vector spaces $V$ to $W$.  Recall that the rank of $\phi$ is the dimension of the image of $\phi$ and the nullity of $\phi$ is the dimension of the kernel of $\phi$.
+
+\begin{prop} $\dim(V)=\rank(\phi)+\nullity(\phi)$. \end{prop}
+
+\begin{proof}  Let $K=\ker(\phi)$.  $K$ is a subspace of $V$ so it has a unique algebraic complement $L$ such that $V=K\oplus L$.  It is evident that $$\dim(V)=\dim(K)+\dim(L)$$ since $K$ and $L$ have disjoint bases and the union of their bases is a basis for $V$.  
+
+Define $\phi': L\to \phi(V)$ by restriction of $\phi$ to the subspace $L$.  $\phi'$ is obviously a linear transformation.  If $\phi'(v)=0$, then $\phi(v)=\phi'(v)=0$ so that $v\in K$.  Since $v\in L$ as well, we have $v\in K\cap L=\lbrace 0\rbrace$, or $v=0$.  This means that $\phi'$ is one-to-one.  Next, pick any $w\in \phi(V)$.  So there is some $v\in V$ with $\phi(v)=w$.  Write $v=x+y$ with $x\in K$ and $y\in L$.  So $\phi'(y)=\phi(y)=0+\phi(y) =\phi(x)+ \phi(y) =\phi(v) =w$, and therefore $\phi'$ is onto.  This means that $L$ is isomorphic to $\phi(V)$, which is equivalent to saying that $\dim(L)=\dim(\phi(V))=\rank(\phi)$.  Finally, we have $$\dim(V)=\dim(K)+\dim(L)=\nullity(\phi)+\rank(\phi).$$
+\end{proof}
+
+\textbf{Remark}.  The dimension of $V$ is not assumed to be finite in this proof.  For another approach (where finite dimensionality of $V$ is assumed), please see \PMlinkname{this entry}{ProofOfRankNullityTheorem}.
+%%%%%
+%%%%%
+\end{document}

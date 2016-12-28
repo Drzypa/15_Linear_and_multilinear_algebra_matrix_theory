@@ -1,0 +1,122 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CauchyBinetFormula}
+\pmcreated{2013-03-22 14:07:04}
+\pmmodified{2013-03-22 14:07:04}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Cauchy-Binet formula}
+\pmrecord{11}{35523}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+\pmsynonym{Binet-Cauchy formula}{CauchyBinetFormula}
+\pmrelated{MinorOfAMatrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\sse{\subseteq}
+\def\bigtimes{\mathop{\mbox{\Huge $\times$}}}
+\def\impl{\Rightarrow}
+\def\sgn{\operatorname{sgn}}
+\begin{document}
+\PMlinkescapeword{term}
+
+Let $A$ be an $m\times n$ matrix and $B$ an $n\times m$ matrix. Then
+the determinant of their product $C=AB$ can be written as a sum of products of
+minors of $A$ and $B$:
+\begin{equation*}
+  |C| = \sum_{1\le k_1<k_2<\cdots<k_m\le n}
+    A\begin{pmatrix}
+      1 & 2 & \cdots & m \\
+      k_1 & k_2 & \cdots & k_m
+    \end{pmatrix}
+    B\begin{pmatrix}
+      k_1 & k_2 & \cdots & k_m \\
+      1 & 2 & \cdots & m
+    \end{pmatrix}.
+\end{equation*}
+Basically, the sum is over the maximal ($m$-th order) minors of $A$ and $B$.
+See the entry on \PMlinkname{minors}{MinorOfAMatrix} for notation.
+
+If $m>n$, then neither $A$ nor $B$ have minors of rank $m$, so $|C|=0$.
+If $m=n$, this formula reduces to the usual multiplicativity of determinants
+$|C|=|AB|=|A||B|$.
+
+\begin{proof}
+
+Since $C=AB$, we can write its elements as $c_{ij} = \sum_{k=1}^n
+a_{ik} b_{kj}$. Then its determinant is
+\begin{align*}
+  |C| &= \begin{vmatrix}
+      \sum_{k_1=1}^n a_{1 k_1} b_{k_1 1} & \cdots &
+        \sum_{k_m=1}^n a_{1 k_m} b_{k_m m} \\
+      \vdots & \ddots & \vdots \\
+      \sum_{k_1=1}^n a_{m k_1} b_{k_1 1} & \cdots &
+        \sum_{k_m=1}^n a_{m k_m} b_{k_m m}
+    \end{vmatrix} \\
+  &= \sum_{k_1,\ldots,k_m=1}^n \begin{vmatrix}
+      a_{1 k_1} b_{k_1 1} & \cdots & a_{1k_m} b_{k_m m} \\
+      \vdots & \ddots & \vdots \\
+      a_{m k_1} b_{k_1 1} & \cdots & a_{mk_m} b_{k_m m}
+    \end{vmatrix} \\
+   &= \sum_{k_1,\ldots,k_m=1}^n
+     A \begin{pmatrix} 1 & 2 & \cdots & m \\ k_1 & k_2 & \cdots
+       & k_m \end{pmatrix} b_{k_1 1} b_{k_2 2} \cdots b_{k_m m}.
+\end{align*}
+In both steps above, we have used the property that the determinant is
+multilinear in the colums of a matrix.
+
+Note that the terms in the last sum with any two $k$'s the same will
+make the minor of $A$ vanish. And, for $\{k_1,\cdots,k_m\}$'s
+that differ only by a permutation, the minor of $A$ will simply change
+sign according to the parity of the permutation. Hence the determinant of
+$C$ can be rewritten as
+\begin{align*}
+  |C| &= \sum_{1\le k_1<\cdots<k_m\le n}
+    A \begin{pmatrix} 1 & 2 & \cdots & m \\ k_1 & k_2 & \cdots
+      & k_m \end{pmatrix}
+    \sum_{\sigma\in S_m} \sgn(\sigma)\, b_{k_{\sigma(1)} 1}
+      b_{k_{\sigma(2)} 2} \cdots b_{k_{\sigma(m)} m},
+\end{align*}
+where $S_m$ is the permutation group on $m$ elements.
+But the last sum is none other than the determinant
+$B \left(\begin{smallmatrix}
+  k_1 & k_2 & \cdots & k_m \\
+  1 & 2 & \cdots & m
+\end{smallmatrix}\right)$.
+Hence we write
+\begin{equation*}
+  |C| = \sum_{1\le k_1<\cdots<k_m\le n}
+    A \begin{pmatrix} 1 & 2 & \cdots & m \\ k_1 & k_2 & \cdots
+      & k_m \end{pmatrix}
+    B \begin{pmatrix} k_1 & k_2 & \cdots & k_m \\
+      1 & 2 & \cdots & m\end{pmatrix},
+\end{equation*}
+which is the Cauchy-Binet formula.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

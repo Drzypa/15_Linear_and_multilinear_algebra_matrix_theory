@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Symmetrizer}
+\pmcreated{2013-03-22 16:15:44}
+\pmmodified{2013-03-22 16:15:44}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{symmetrizer}
+\pmrecord{8}{38370}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $V$ be a vector space over a field $F$. Let $n$ be an integer, where
+$n < \mathrm{char}(F)$ if $\mathrm{char}(F) \neq 0$. Let $S_n$ be the symmetric group on
+$\{1,\ldots, n\}.$
+The linear operator $S: V^{\otimes n} \to V^{\otimes n}$ defined by:
+
+$$
+S = \frac{1}{n!} \sum_{\sigma \in S_n} P(\sigma)
+$$
+is called the \emph{symmetrizer}.
+Here $P(\sigma)$ is the permutation operator.
+It is clear that $P(\sigma )S = SP(\sigma )= S$ for all $\sigma \in S_n$.
+
+\textbf{\PMlinkescapetext{Theorem}}\\
+Let $S$ be the symmetrizer for $V^{\otimes n}$. Then an order-n tensor $A$ is 
+\PMlinkname{symmetric}{SymmetricTensor} if and only $S(A) = A$.
+
+
+\textbf{Proof}\\
+If $A$ is  \PMlinkescapetext{symmetric} then 
+$$
+S(A) = \frac{1}{n!} \sum_{\sigma \in S_n} P(\sigma)A = \frac{1}{n!} \sum_{\sigma \in S_n} A = A.
+$$
+If $S(A) = A$ then 
+$$
+P(\sigma)A = P(\sigma)S(A) = P(\sigma)S(A) = S(A) = A
+$$
+for all $\sigma \in S_n$, so $A$ is  \PMlinkescapetext{symmetric}. 
+
+The theorem says that a \PMlinkescapetext{symmetric tensor} is an eigenvector of the linear operator $S$ corresponding to the eigenvalue 1. It is easy to verify that
+$S^2 = S$, so that $S$ is a projection onto $S^n(V)$.
+
+
+%%%%%
+%%%%%
+\end{document}

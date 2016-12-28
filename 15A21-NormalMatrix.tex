@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NormalMatrix}
+\pmcreated{2013-03-22 13:41:10}
+\pmmodified{2013-03-22 13:41:10}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{normal matrix}
+\pmrecord{12}{34358}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A21}
+\pmsynonym{normal}{NormalMatrix}
+\pmrelated{TheoremForNormalTriangularMatrices}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{properties}
+
+A complex matrix $A \in \mathbb{C}^{n\times n}$ is said to be \emph{normal} if $A^\ast A = AA^\ast$ where $^\ast$ denotes the conjugate transpose.\\
+Similarly for a real matrix $A \in \mathbb{R}^{n\times n}$ is said to be \emph{normal} if $A^TA=AA^T$ where $T$ denotes the transpose.\\\\
+\textbf{properties:}
+\begin{itemize}
+\item Equivalently a complex matrix $A \in \mathbb{C}^{n\times n}$ is said to be \emph{normal} if it satisfies $[A,A^\ast]=0$ where $[,]$ is the commutator bracket.
+
+\item Equivalently a real matrix $A \in \mathbb{R}^{n\times n}$ is said to be \emph{normal} if it satisfies $[A,A^T]=0$ where $[,]$ is the commutator bracket.
+
+\item Let $A$ be a square complex matrix of order $n$. It follows from Schur's inequality that if $A$ is a normal matrix then $\sum_{i=1}^n |\lambda_i|^2 = \operatorname{trace} A^\ast A$ where $^\ast$ is the conjugate transpose and $\lambda_i$ are the eigenvalues of $A$.
+
+\item   A complex square matrix is diagonal if and only if it is normal,  triangular.(see theorem for normal triangular matrices).
+\end{itemize}
+
+\textbf{examples:}
+\begin{itemize}
+\item $\begin{pmatrix}
+a & b \\
+-b & a \\\end{pmatrix}$ where $a,b \in \mathbb{R}$
+\item $\begin{pmatrix}
+1 & i \\
+-i & 1 \\\end{pmatrix}$
+\end{itemize}
+
+\textbf{see also:}
+\begin{itemize}
+\item Wikipedia, \PMlinkexternal{normal matrix}{http://www.wikipedia.org/wiki/Normal_matrix}
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

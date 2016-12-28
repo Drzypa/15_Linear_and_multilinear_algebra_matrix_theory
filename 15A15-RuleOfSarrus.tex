@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RuleOfSarrus}
+\pmcreated{2013-03-22 17:32:49}
+\pmmodified{2013-03-22 17:32:49}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{rule of Sarrus}
+\pmrecord{9}{39950}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+\pmsynonym{Sarrus rule}{RuleOfSarrus}
+\pmsynonym{Sarrus' rule}{RuleOfSarrus}
+%\pmkeywords{mnemonic}
+\pmrelated{LaplaceExpansion}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+For calculating the value of a determinant 
+$$D = 
+\left|\begin{matrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}
+\end{matrix}\right|
+$$
+with three rows, it is comfortable to use the {\em rule of Sarrus} (invented 1833 by the French mathematician P. F. Sarrus). 
+
+The rule comprises that first one writes the two first columns of the determinant on the \PMlinkescapetext{right side} of the determinant (seeing thus a $3\!\times\!5$ matrix!): 
+$$
+\left|\begin{matrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}
+\end{matrix}\right|
+\begin{matrix}
+\,a_{11} & a_{12}\\
+\,a_{21} & a_{22}\\
+\,a_{31} & a_{32}
+\end{matrix}
+$$
+Here one sums the products on all lines parallel to the main diagonal of $D$ and subtracts the products on the lines parallel to the second diagonal of $D$.  Accordingly, one obtains the expression
+$$a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}
+ -a_{13}a_{22}a_{31}-a_{11}a_{23}a_{32}-a_{12}a_{21}a_{33},$$
+which gives the value of the determinant $D$.
+
+There is no corresponding rule for determinants with more or less rows.   
+
+
+%%%%%
+%%%%%
+\end{document}

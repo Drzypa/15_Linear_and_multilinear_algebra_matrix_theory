@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UnitTriangularMatrix}
+\pmcreated{2013-03-22 13:41:58}
+\pmmodified{2013-03-22 13:41:58}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{unit triangular matrix}
+\pmrecord{6}{34375}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmsynonym{unit left triangular matrix}{UnitTriangularMatrix}
+\pmsynonym{unit right triangular matrix}{UnitTriangularMatrix}
+\pmdefines{unit upper triangular matrix}
+\pmdefines{unit lower triangular matrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{unit triangular matrix} is a triangular matrix with $1$ on the diagonal.\\i.e.
+
+A \emph{unit upper triangular matrix} is of the form
+
+$$ \begin{bmatrix}
+1 & a_{12} & a_{13} & \cdots & a_{1n} \\
+0 & 1 & a_{23} & \cdots & a_{2n} \\
+0 & 0 & 1 & \cdots & a_{3n} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \cdots & 1
+\end{bmatrix} $$
+
+and is sometimes called a \emph{unit right triangular matrix}.
+
+A \emph{unit lower triangular matrix} is of the form
+
+$$ \begin{bmatrix}
+1 & 0 & 0 & \cdots & 0 \\
+a_{21} & 1 & 0 & \cdots & 0 \\
+a_{31} & a_{32} & 1 & \cdots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & a_{n3} & \cdots & 1
+\end{bmatrix} $$
+
+and is sometimes called a \emph{unit left triangular matrix}.
+%%%%%
+%%%%%
+\end{document}

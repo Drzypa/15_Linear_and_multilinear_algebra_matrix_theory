@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TensorTransformations}
+\pmcreated{2013-03-22 12:40:33}
+\pmmodified{2013-03-22 12:40:33}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{tensor transformations}
+\pmrecord{4}{32952}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A69}
+
+\newcommand{\kfield}{\mathbb{K}}
+\newcommand{\rT}{\mathrm{T}}
+\newcommand{\tspace}[1]{\rT^{#1}}
+\newcommand{\ca}{\varepsilon}
+\newcommand{\ud}[2]{^{#1}_{\!\hphantom{#1}#2}}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{\PMlinkescapetext{{#1}}}
+\newcommand{\pln}[2]{\PMlinkname{#1}{#2}}
+\begin{document}
+The present entry employs the terminology and notation defined
+and described in the entry on tensor arrays and basic tensors.  To keep things
+reasonably self contained we mention that the symbol $\tspace{p,q}$ refers
+to the vector space of type $(p,q)$ tensor arrays, i.e. maps
+$$I^p\times I^q\rightarrow \kfield,$$
+where $I$ is some finite list of
+index labels, and where $\kfield$ is a field.  The symbols $\ca_{(i)},
+\ca^{(i)},\; i\in I$ refer to the column and row vectors giving the
+natural basis of $\tspace{1,0}$ and $\tspace{0,1}$, respectively.
+
+Let $I$ and $J$ be two finite lists of equal cardinality, and let
+ $$T:\kfield^I\rightarrow\kfield^J$$ be a linear isomorphism.  Every
+such isomorphism is uniquely represented by an invertible matrix
+$$M:J\times I\rightarrow \kfield$$ with entries given by $$M\ud{j}{i}
+= \lp T\ca_{(i)}\rp^j,\quad i\in I,\; j\in J.$$ In other words, the
+action of $T$ is described by the following substitutions
+\begin{equation}
+  \label{eq:vsubrule}
+  \ca_{(i)} \mapsto \sum_{j\in J} M\ud{j}{i}\, \ca_{(j)},\quad i\in I.  
+\end{equation}
+Equivalently, the action of $T$ is given by matrix-multiplication
+of column vectors in $\kfield^I$ by $M$.  
+
+The corresponding substitutions relations for the type $(0,1)$ tensors
+involve the inverse matrix $M^{-1}: I\times J\rightarrow \kfield,$ and
+take the form\footnote{The above relations describe the action of the dual homomorphism of the
+inverse transformation
+$$\lp T^{-1} \rp ^*: \lp \kfield^I \rp^* \rightarrow \lp \kfield^J
+\rp^*.$$}
+\begin{equation}
+  \label{eq:lfsubrule}
+  \ca^{(i)} \mapsto \sum_{j\in J} \lp M^{-1} \rp\ud{i}{j}\,
+\ca^{(j)},\quad i\in I.  
+\end{equation}
+
+The rules for type $(0,1)$ substitutions are what they are, because of
+the requirement that the $\ca_{(i)}$ and $\ca^{(i)}$ remain dual bases
+even after the substitution.  In other words we want the substitutions
+to preserve the relations
+$$\ca^{(i_1)}\ca_{(i_2)} = \delta^{\,i_1}_{\;i_2},\quad i_1, i_2\in
+I,$$
+where the left-hand side of the above equation features the inner
+product and the right-hand side the Kronecker delta.  Given that the
+vector basis transforms as in \eqref{eq:vsubrule} and given the above
+constraint, the substitution rules for the linear form basis, shown in
+\eqref{eq:lfsubrule}, are the only such possible.
+
+
+
+
+
+
+The classical terminology of contravariant and covariant indices is
+motivated by thinking in term of substitutions.  Thus, suppose we
+perform a linear substitution and change a vector, i.e. a type $(1,0)$
+tensor, $X\in \kfield^I$ into a vector $Y\in \kfield^J$.  The indexed
+values of the former and of the latter are related by
+\begin{equation}
+  \label{eq:visubrule}
+  Y^j = \sum_{i\in I} M\ud{j}{i}\, X^i,\quad j\in J.
+\end{equation}
+Thus, we see
+that the ``transformation rule'' for indices is contravariant to the
+substitution rule \eqref{eq:vsubrule} for basis vectors.
+
+
+In modern terms, this contravariance is best described by saying that
+the dual space space construction is a contravariant functor\footnote{See the entry on the dual homomorphism.}.  In other
+words, the substitution rule for the linear forms, i.e. the type
+$(0,1)$ tensors, is contravariant to the substitution rule for
+vectors:
+\begin{equation}
+  \label{eq:ilfsubrule}
+  \ca^{(j)} \mapsto \sum_{i\in I} M\ud{j}{i}\, \ca^{(i)},\quad j\in
+J,  
+\end{equation}
+in full agreement with the relation shown in \eqref{eq:lfsubrule}.
+Everything comes together, and equations \eqref{eq:visubrule} and
+\eqref{eq:ilfsubrule} are seen to be one and the same, once we remark
+that tensor array values can be obtained by contracting with
+characteristic arrays.  For example,
+$$ X^i = \ca^{(i)}(X),\quad i\in I; \qquad Y^j = \ca^{(j)}(Y),\quad j\in J.$$
+
+
+Finally we must remark that the transformation rule for covariant
+indices involves the inverse matrix $M^{-1}$.   Thus if $\alpha\in
+\tspace{0,1}(I)$ is transformed to a  $\beta\in \tspace{0,1}$ the
+indices will be related by
+$$\beta_j = \sum_{i\in I} \lp M^{-1}\rp\ud{i}{j}\, \alpha_i,\quad j\in
+J.$$
+The most general transformation rule for tensor array indices is
+therefore the following: the indexed values of a tensor array $X\in
+\tspace{p,q}(I)$  and the values of the transformed tensor array
+$Y\in\tspace{p,q}(J)$ are related by
+$$Y^{\!j_1\ldots j_p}_{\;l_1\ldots l_q} = \!\!
+\sum_{\genfrac{}{}{0pt}{}{i_1,\ldots,i_p\in I^p}{k_1,\ldots,k_q\in
+    I^q}} \!\!
+ M^{j_1}_{\,i_1}\cdot\cdot\cdot M^{j_p}_{\,i_p} \lp M^{-1} \rp^{\!k_1}_{l_1}
+\cdot\cdot\cdot \lp M^{-1} \rp^{\!k_q}_{l_q} X^{i_1\ldots i_p}_{k_1\ldots k_q},
+$$
+for all possible choice of indices
+$\quad j_1,\ldots j_p,l_1,\ldots, l_q \in J.$
+Debauche of indices, indeed!
+%%%%%
+%%%%%
+\end{document}

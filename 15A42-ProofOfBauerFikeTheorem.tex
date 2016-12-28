@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBauerFikeTheorem}
+\pmcreated{2013-03-22 15:33:08}
+\pmmodified{2013-03-22 15:33:08}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{proof of Bauer-Fike theorem}
+\pmrecord{9}{37450}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A42}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We can assume $\tilde{\lambda}\notin\sigma(A)$ (otherwise, we can choose $\lambda=\tilde{\lambda}$ and theorem is proven, since $\kappa_p(X)>1$).
+Then $(A-\tilde{\lambda} I)^{-1}$ exists, so we can write:
+\[
+\tilde{u}=(A-\tilde{\lambda} I)^{-1}r=X(D-\tilde{\lambda} I)^{-1}X^{-1}r
+\]
+since $A$ is diagonalizable; taking the \PMlinkname{p-norm}{VectorPnorm} of both sides, we obtain:
+
+\begin{eqnarray*}
+1&=&\|\tilde{u}\|_p\\
+&=& \|X(D-\tilde{\lambda} I)^{-1}X^{-1}r\|_p \leq \|X\|_p \|(D-\tilde{\lambda} I)^{-1}\|_p \|X^{-1}\|_p \|r\|_p\\
+&=& \kappa_p(X)\|(D-\tilde{\lambda} I)^{-1}\|_p \|r\|_p.
+\end{eqnarray*}
+
+But, since $(D-\tilde{\lambda} I)^{-1}$ is a diagonal matrix, the p-norm is easily computed, and yields:
+\[
+\|(D-\tilde{\lambda} I)^{-1}\|_p=\max\limits_{\|x\|_p \ne 0}\frac{\|(D-\tilde{\lambda} I)^{-1}x\|_p}{\|x\|_p}=\max\limits_{\lambda\in\sigma(A)} \frac{1}{|\lambda-\tilde{\lambda}|}=\frac{1}{\min\limits_{\lambda\in\sigma(A)}|\lambda-\tilde{\lambda}|}
+\]
+whence:
+\[
+\min\limits_{\lambda\in\sigma(A)}|\lambda-\tilde{\lambda}|\leq\kappa_p(X)||r||_p.
+\]
+%%%%%
+%%%%%
+\end{document}

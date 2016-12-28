@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{JordanCanonicalFormTheorem}
+\pmcreated{2013-03-22 12:59:21}
+\pmmodified{2013-03-22 12:59:21}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Jordan canonical form theorem}
+\pmrecord{16}{33364}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A18}
+\pmsynonym{Jordan canonical form}{JordanCanonicalFormTheorem}
+\pmrelated{PartitionedMatrix}
+\pmrelated{SimultaneousUpperTriangularBlockDiagonalizationOfCommutingMatrices}
+\pmrelated{Diagonalizable2}
+\pmdefines{Jordan block}
+\pmdefines{Jordan matrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{thms}{Theorem}
+\begin{document}
+A \textbf{Jordan block} or \textbf{Jordan matrix} is a matrix of the form
+
+$$\begin{pmatrix}
+\lambda & 1 & 0 & \cdots & 0\\
+0 & \lambda & 1 & \cdots & 0\\
+0 & 0 & \lambda & \cdots & 0\\
+\vdots & \vdots & \vdots &  \ddots & 1\\
+0 & 0 & 0 & \cdots & \lambda
+\end{pmatrix}$$
+
+with a constant value $\lambda$ along the diagonal and 1's on the superdiagonal.  Some texts \PMlinkescapetext{place} the 1's on the subdiagonal instead.
+
+
+
+
+\begin{thms} Let $V$ be a finite-dimensional vector space over a field $F$ and $t:V \to V$ be a linear transformation.  Then, if the characteristic polynomial factors completely over $F$, there will exist a basis of $V$ with respect to which the matrix of $t$ is of the form
+
+$$\begin{pmatrix}
+J_{1} & 0 & \cdots& 0\\
+0 & J_{2} & \cdots & 0\\
+ & & \cdots & \\
+0 & 0 & \cdots & J_{k}
+\end{pmatrix}$$
+
+where each $J_{i}$ is a Jordan block in which $\lambda = \lambda_{i}$.
+\end{thms}
+The matrix in Theorem 1 is called a \emph{Jordan canonical form} for the transformation \emph{t}.
+
+
+%%%%%
+%%%%%
+\end{document}

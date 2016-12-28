@@ -1,0 +1,297 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DimensionFormulaeForVectorSpaces}
+\pmcreated{2013-03-22 16:31:19}
+\pmmodified{2013-03-22 16:31:19}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{dimension formulae for vector spaces}
+\pmrecord{25}{38701}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+
+\usepackage{amsmath}
+
+\def\Hom{\operatorname{Hom}}
+\def\End{\operatorname{End}}
+\def\Im{\operatorname{Im}}
+\def\Ker{\operatorname{Ker}}
+
+\def\isomorphic{\cong}
+
+% The following lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\begin{document}
+\PMlinkescapeword{degree}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{formula}
+\PMlinkescapeword{implies}
+\PMlinkescapeword{obvious}
+\PMlinkescapeword{order}
+\PMlinkescapeword{pointwise}
+\PMlinkescapeword{section}
+\PMlinkescapeword{sum}
+\PMlinkescapeword{term}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{theory}
+
+In this entry we look at various formulae 
+involving the dimension of a vector space.
+
+Throughout this entry, $K$ will be a field,
+and $V$ and $W$ will be vector spaces over $K$.
+The dimension of a vector space $U$ over $K$
+will be denoted by $\dim(U)$, 
+or by $\dim_K(U)$ if the ground field needs to be emphasized.
+
+All of these formulae potentially involve infinite cardinals,
+so the reader should have a basic knowledge of cardinal arithmetic
+in order to understand them in full generality.
+
+\section*{Subspaces}
+
+If $S$ and $T$ are subspaces of $V$, then
+\[
+  \dim(S)+\dim(T)=\dim(S\cap T)+\dim(S+T).
+\]
+
+\section*{Rank-nullity theorem}
+
+The rank-nullity theorem states that if $\phi\colon V\to W$ is a linear mapping,
+then the dimension of $V$ 
+is the sum of the dimensions of the image and kernel of $\phi$:
+\[
+  \dim(V)=\dim(\Im\phi)+\dim(\Ker\phi).
+\]
+
+In particular, if $U$ is a subspace of $V$ then
+\[
+  \dim(V)=\dim(V/U)+\dim(U).
+\]
+
+The rank-nullity theorem can also be stated in terms of short exact sequences:
+if
+\[
+  0\longrightarrow U\longrightarrow V\longrightarrow
+  W\longrightarrow 0
+\]
+is a short exact sequence of vector spaces over $K$,
+then
+\[
+  \dim(V) = \dim(U) + \dim(W).
+\]
+This can be generalized to infinite exact sequences:
+if
+\[
+  \cdots\longrightarrow V_{n+1}\longrightarrow V_n\longrightarrow 
+  V_{n-1}\longrightarrow \cdots
+\]
+is an exact sequence of vector spaces over $K$,
+then
+\[
+  \sum_{n\rm{~even}}\!\!\dim(V_n)\,=\sum_{n\rm{~odd}}\!\dim(V_n).
+\]
+(This is indeed a generalization, 
+because any finite exact sequence of vectors spaces
+terminating with $0$ at both ends
+can be considered as an infinite exact sequence
+in which all remaining terms are $0$.)
+
+\section*{Direct sums}
+
+If $(V_i)_{i\in I}$ is a family of vector spaces over $K$,
+then
+\[
+  \dim\!\left(\bigoplus_{i\in I}V_i\right) = \sum_{i\in I}\dim(V_i).
+\]
+
+\section*{Cardinality of a vector space}
+
+The cardinality of a vector space 
+is determined by its dimension and the cardinality of the ground field:
+\[
+  |V|=\begin{cases}
+        |K|^{\dim(V)},&\hbox{if }\dim(V)\hbox{ is finite};\\
+        \max\{|K|,\dim(V)\},&\hbox{if }\dim(V)\hbox{ is infinite}.\cr
+      \end{cases}
+\]
+
+The effect of the above formula is somewhat different
+depending on whether $K$ is \PMlinkname{finite}{FiniteField} or infinite.
+If $K$ is finite, then it reduces to
+\[
+  |V|=\begin{cases}
+         |K|^{\dim(V)},&\hbox{if }\dim(V)\hbox{ is finite};\\
+         \dim(V),&\hbox{if }\dim(V)\hbox{ is infinite}.
+      \end{cases}
+\]
+If $K$ is infinite, then it can be expressed as
+\[
+  |V|=\begin{cases}
+         1,&\hbox{if }\dim(V)=0;\\
+         |K|,&\hbox{if }0<\dim(V)\le|K|;\\
+         \dim(V),&\hbox{if }\dim(V)\ge|K|.
+      \end{cases}
+\]
+
+\section*{Change of ground field}
+
+If $F$ is a subfield of $K$,
+then $V$ can be considered as a vector space over $F$.
+The dimensions of $V$ over $K$ and $F$ are related by the formula
+\[
+  \dim_F(V)=[K:F]\cdot\dim_K(V).
+\]
+In this formula, $[K:F]$ is the degree of the field extension $K/F$,
+that is, the dimension of $K$ considered as a vector space over $F$.
+
+\section*{Space of functions into a vector space}
+
+If $S$ is any set,
+then the set $K^S$ of all functions from $S$ into $K$
+becomes a vector space over $K$ if we define the operations pointwise,
+that is, $(f+g)(x)=f(x)+g(x)$ and $(\lambda f)(x)=\lambda f(x)$
+for all $f,g\in K^S$, all $x\in S$, and all $\lambda\in K$.
+The dimension of this vector space is given by
+\[
+  \dim(K^S)=\begin{cases}
+               |S|,&\hbox{if }S\hbox{ is finite};\\
+               |K|^{|S|},&\hbox{if }S\hbox{ is infinite}.
+            \end{cases}
+\]
+The case where $S$ is infinite is not straightforward to prove.
+Proofs can be found in books by Baer\cite{baer} and Jacobson\cite{jacobson},
+among others.
+
+More generally, we can consider the space $V^S$,
+which is really just the \PMlinkname{direct product}{DirectProduct} of copies of $V$ indexed by $S$.
+We get
+\[
+  \dim(V^S)=\begin{cases}
+               0,&\hbox{if }\dim(V)=0;\\
+               |S|\cdot\dim(V),&\hbox{if }S\hbox{ is finite};\\
+               |V|^{|S|},&\hbox{otherwise}.
+            \end{cases}
+\]
+
+\section*{Dual space}
+
+Given any basis $B$ of $V$,
+the dual space $V^*$
+is isomorphic to $K^B$ via the mapping $f\mapsto f|_B$.
+So the formula of the previous section
+can be applied to give a formula for the dimension of $V^*$:
+\[
+  \dim(V^*)=\begin{cases}
+               \dim(V),&\hbox{if }\dim(V)\hbox{ is finite};\\
+               |K|^{\dim(V)},&\hbox{if }\dim(V)\hbox{ is infinite}.
+            \end{cases}
+\]
+In particular, this formula implies that $V$ is isomorphic to $V^*$
+if and only if $V$ is finite-dimensional.
+(Students who are familiar with the fact that
+an infinite-dimensional Banach space can be isomorphic to its dual
+are sometimes surprised to learn that an infinite-dimensional vector space
+cannot be isomorphic to its dual,
+for a Banach space is surely a vector space.
+But the term {\it dual} is used in different senses in these two statements,
+so there is no contradiction.
+In the theory of Banach spaces
+one is usually only interested in the {\it continuous} linear functionals,
+and the resulting `continuous' dual
+is a subspace of the full dual used in the above formula.)
+
+\section*{Space of linear mappings}
+
+The set $\Hom_K(V,W)$ of all linear mappings from $V$ into $W$
+is itself a vector space over $K$,
+with the operations defined in the obvious way,
+namely $(f+g)(x)=f(x)+g(x)$ and $(\lambda f)(x)=\lambda f(x)$
+for all $f,g\in\Hom_K(V,W)$, all $x\in V$, and all $\lambda\in K$.
+The dual space $V^*=\Hom_K(V,K)$ considered in the previous section
+is a special case of this.
+For any basis $B$ of $V$, the mapping $f\mapsto f|_B$
+defines an isomorphism between $\Hom_K(V,W)$ and $W^B$,
+so that from an earlier section we get
+\[
+  \dim(\Hom_K(V,W))=\begin{cases}
+               0,&\hbox{if }\dim(W)=0;\\
+               \dim(V)\cdot\dim(W),&\hbox{if }\dim(V)\hbox{ is finite};\\
+               |W|^{\dim(V)},&\hbox{otherwise}.
+            \end{cases}
+\]
+
+In the special case $W=V$ this can be simplified to
+\[
+  \dim(\End_K(V))=\begin{cases}
+               \dim(V)^2,&\hbox{if }\dim(V)\hbox{ is finite};\\
+               |K|^{\dim(V)},&\hbox{otherwise}.
+            \end{cases}
+\]
+
+\section*{Tensor products}
+
+The dimension of the \PMlinkname{tensor product}{TensorProduct} of $V$ and $W$ is given by
+\[
+  \dim(V\otimes W)=\dim(V)\cdot\dim(W).
+\]
+
+\section*{Banach spaces}
+
+The dimension of a Banach space,
+considered as a vector space,
+is sometimes called the {\it Hamel dimension},
+in order to distinguish it from other concepts of dimension.
+For an infinite-dimensional Banach space $B$ we have
+\[
+  \dim(B)=|B|.
+\]
+The tricky part of establishing this formula
+is to show that the dimension is always
+at least the cardinality of the continuum.
+A short proof of this is given in a paper by Lacey\cite{lacey}.
+
+The above formula suggests that Hamel dimension 
+is not a very useful concept for infinite-dimensional Banach spaces,
+which is indeed the case.
+Nonetheless, it is interesting to see how Hamel dimension relates to
+the usual concept of dimension in Hilbert spaces.
+If $H$ is a Hilbert space,
+and $d$ is its dimension 
+(meaning the cardinality of an orthonormal basis),
+then the Hamel dimension $\dim(H)$ is given by
+\[
+  \dim(H)=\begin{cases}
+             d,&\hbox{if }d\hbox{ is finite};\\
+             d^{\aleph_0},&\hbox{if }d\hbox{ is infinite}.
+          \end{cases}
+\]
+
+\begin{thebibliography}{9}
+\bibitem{baer}
+ Reinhold Baer,
+ {\it Linear Algebra and Projective Geometry},
+ Academic Press, 1952.
+\bibitem{jacobson}
+ Nathan Jacobson,
+ {\it Lectures in Abstract Algebra},
+ Volume II: {\it Linear Algebra},
+ D.\ Van Nostrand Company Inc., 1953.
+\bibitem{lacey}
+ H.\ Elton Lacey,
+ {\it The Hamel Dimension of any Infinite Dimensional Separable Banach Space is c},
+ Amer.\ Math.\ Mon.\ 80 (1973), 298.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

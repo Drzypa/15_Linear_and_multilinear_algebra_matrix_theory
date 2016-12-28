@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DiagonalMatrix}
+\pmcreated{2013-03-22 13:43:32}
+\pmmodified{2013-03-22 13:43:32}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{diagonal matrix}
+\pmrecord{12}{34411}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmclassification{msc}{15A57}
+\pmsynonym{quasi-scalar matrix}{DiagonalMatrix}
+\pmsynonym{quasi-scalar matrices}{DiagonalMatrix}
+\pmsynonym{diagonal matrices}{DiagonalMatrix}
+\pmrelated{DiagonalizationLinearAlgebra}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \newcommand{\diag}[0]{\operatorname{diag}}
+\begin{document}
+{\bf Definition}
+Let $A$ be a square matrix (with entries in any field).
+If all off-diagonal entries of $A$ are zero, then $A$ is a 
+\emph{diagonal matrix}. 
+
+From the definition, we see that an $n\times n$ diagonal matrix is 
+completely determined by the $n$ entries on the diagonal; all other entries
+are zero. If the diagonal entries are $a_1, a_2, \ldots, a_n$, 
+then we denote the corresponding diagonal matrix by 
+$$ \diag(a_1,\ldots, a_n) = \begin{pmatrix}
+ a_{1} & 0 & 0      &  \cdots &  0      \\
+ 0 & a_{2} & 0      & \cdots & 0      \\
+ 0 & 0 & a_{3} & \cdots &  0       \\
+ \vdots & \vdots & \vdots & \ddots &  \\
+ 0 & 0 & 0 &        & a_{n}
+ \end{pmatrix}. $$
+
+\subsubsection*{Examples}
+\begin{enumerate}
+\item The identity matrix and zero matrix are diagonal matrices. Also, 
+ any $1\times 1$ matrix is a diagonal matrix.
+\item A matrix $A$ is a diagonal matrix if and only if $A$ is 
+both an upper and lower triangular matrix. 
+\end{enumerate}
+
+\subsubsection*{Properties}
+\begin{enumerate}
+\item If $A$ and $B$ are diagonal matrices of same order, then 
+$A+B$ and $AB$ are again a diagonal matrix. Further, diagonal matrices
+commute, i.e., $AB=BA$. It follows that real (and complex)
+diagonal matrices are normal matrices. 
+\item A square matrix is diagonal if and only if it is 
+triangular and normal (see \PMlinkname{this page}{TheoremForNormalTriangularMatrices}).
+\item The eigenvalues of a diagonal matrix 
+$A=\diag(a_1,\ldots, a_n)$ are $a_1, \ldots, a_n$. 
+Corresponding eigenvectors are the standard unit vectors in $\sR^n$.
+For the determinant, we have $\det A = a_1 a_2 \cdots a_n$, so 
+$A$ is invertible if and only if all $a_i$ are non-zero. 
+Then the inverse is given by
+$$ 
+  \big( \diag(a_1,\ldots, a_n)\big)^{-1} = \diag(1/a_1, \ldots, 1/a_n).
+$$
+\item If $A$ is a diagonal matrix, then the adjugate of $A$ is also a diagonal matrix.
+\item The matrix exponential of a diagonal matrix is
+$$
+  e^{\diag(a_1,\ldots, a_n)} = \diag(e^{a_1}, \ldots, e^{a_n}).
+$$ 
+\end{enumerate}
+More generally, every analytic function of a diagonal matrix can be computed entrywise, i.e.:
+\[ f(\diag(a_{11},a_{22},...,a_{nn}))= \diag(f(a_{11}),f(a_{22}),...,f(a_{nn})) \]
+
+\subsubsection*{Remarks}
+Diagonal matrices are also sometimes called \emph{quasi-scalar matrices} \cite{eves}.
+
+\begin{thebibliography}{9}
+ \bibitem {eves} H. Eves,
+ \emph{Elementary Matrix Theory},
+ Dover publications, 1980.
+\bibitem{wiki_diagonal} Wikipedia, 
+\PMlinkexternal{diagonal matrix}{http://www.wikipedia.org/wiki/Diagonal_matrix}.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,127 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FindingEigenvalues}
+\pmcreated{2013-03-22 15:52:35}
+\pmmodified{2013-03-22 15:52:35}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{finding eigenvalues}
+\pmrecord{6}{37873}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A18}
+%\pmkeywords{eigenvalue}
+%\pmkeywords{eigenvector}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+This example investigates eigenvalues and the similarity transformation used
+to diagonalize matrices.  We seek the eigenvalues of the matrix $A$ below.  Afterward,
+we can transform this matrix into a diagonal matrix which has many useful applications.\\
+$$A=\left( \begin{array}{cc}
+2 & 1 \\
+1 & 2
+\end{array} \right )$$
+Here, we need to solve the corresponding matrix equation;\\
+$$\left( \begin{array}{cc}
+2 & 1 \\
+1 & 2
+\end{array} \right )
+\left( \begin{array}{c}
+x_1 \\
+x_2
+\end{array} \right )=\lambda
+\left( \begin{array}{c}
+x_1 \\
+x_2
+\end{array} \right )$$ or\\
+$$AX=\lambda X$$ 
+rearranging gives
+$$AX-\lambda X=0$$ or\\
+$$(A-\lambda I) X=0$$\\
+We seek the values for $\lambda$ and $X$.
+First, we need to solve the characteristic equation of $A$.  We do this by finding
+$det(A-\lambda I)$.  First, calculating $A-\lambda I$ gives;\\
+$$A -\lambda I=
+\left( \begin{array}{cc}
+2-\lambda & 1 \\
+1 & 2-\lambda
+\end{array} \right )$$
+Next, calculating $det(A-\lambda I)$ yields\\
+$$det(A-\lambda I)=(2-\lambda)^2-1=\lambda^2-4\lambda+3=(\lambda-1)(\lambda-3)=0$$\\
+Substituting $\lambda=1$ into $(A-\lambda I)X$ gives...\\
+$$\left\{ \begin{array}{c}
+x_1+x_2=0 \\
+x_1+x_2=0
+\end{array} \right.$$
+so that $x_2=-x_1$ and the corresponding eigenvector is
+$$\left( \begin{array}{c}
+t \\
+-t
+\end{array} \right )=t
+\left( \begin{array}{c}
+1 \\
+-1
+\end{array} \right )$$  where $t\ne 0.$\\
+Substituting $\lambda=3$ gives...\\
+$$\left\{ \begin{array}{c}
+-x_1+x_2=0 \\
+x_1-x_2=0
+\end{array} \right.$$
+so that $x_2=x_1$ and the corresponding eigenvector is
+$$\left( \begin{array}{c}
+t \\
+t
+\end{array} \right )=t
+\left( \begin{array}{c}
+1 \\
+1
+\end{array} \right )$$  where $t\ne 0.$\\
+Finally, to diagonalize $A$ we let the eigenvectors be the columns of a new matrix\\
+$$P=\left( \begin{array}{cc}
+1 & -1 \\
+1 & 1
+\end{array} \right )$$
+and then since our eigenvectors are linearly independent we can also find;\\
+$$P^{-1}=\frac{1}{2} \left( \begin{array}{cc}
+1 & 1 \\
+-1 & 1
+\end{array} \right )$$
+then we create a diagonal matrix as follows...\\
+$$D=P^{-1}AP=\left( \begin{array}{cc}
+1 & 0 \\
+0 & 3
+\end{array} \right )$$
+Computing powers of $A$ is a very useful application of $D$.  Solving for $A$ lets us compute powers of $A$\\
+$$A=PDP^{-1}$$\\
+so that\\
+$$A^n=PD^nP^{-1}$$\\  or
+$$A^n=P\left( \begin{array}{cc}
+1^n & 0 \\
+0 & 3^n
+\end{array} \right )P^{-1}$$\\
+%%%%%
+%%%%%
+\end{document}

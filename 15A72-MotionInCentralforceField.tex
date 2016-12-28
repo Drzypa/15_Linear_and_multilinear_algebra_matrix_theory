@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MotionInCentralforceField}
+\pmcreated{2013-03-22 18:52:41}
+\pmmodified{2013-03-22 18:52:41}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{motion in central-force field}
+\pmrecord{14}{41725}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A72}
+\pmclassification{msc}{51N20}
+\pmsynonym{Kepler's first law}{MotionInCentralforceField}
+\pmrelated{CommonEquationOfConics}
+\pmrelated{PropertiesOfEllipse}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[T2A]{fontenc}
+\usepackage[russian, english]{babel}
+
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+\PMlinkescapeword{constant} \PMlinkescapeword{moment} \PMlinkescapeword{degrees}
+\PMlinkescapeword{central} \PMlinkescapeword{force} \PMlinkescapeword{field}
+Let us consider a body with \PMlinkescapetext{mass} $m$ in a gravitational force \PMlinkname{field}{VectorField} exerted by the origin and directed always from the body towards the origin.\, Set the plane through the origin and the velocity vector $\vec{v}$ of the body.\, Apparently, the body is forced to move constantly in this plane, i.e. there is a question of a planar motion.\, We want to derive the trajectory of the body.
+
+Equip the plane of the motion with a polar coordinate system $r,\,\varphi$ and denote the position vector of the body by $\vec{r}$.\, Then the velocity vector is
+\begin{align}
+\vec{v} \;=\; \frac{d\vec{r}}{dt} \;=\; \frac{d}{dt}(r\vec{r}^{\,0}) 
+\;=\; \frac{dr}{dt}\vec{r}^{\,0}+r\frac{d\varphi}{dt}\vec{s}^{\,0},
+\end{align}
+where $\vec{r}^{\,0}$ and $\vec{s}^{\,0}$ are the unit vectors in the direction of $\vec{r}$ and of $\vec{r}$ rotated 90 degrees anticlockwise ($\vec{r}^{\,0} = \vec{i}\cos\varphi+\vec{j}\sin\varphi$,\, whence\, $\frac{\vec{r}^{\,0}}{dt} = 
+(-\vec{i}\sin\varphi+\vec{j}\cos\varphi)\frac{d\varphi}{dt} = \frac{d\varphi}{dt}\vec{s}^{\,0}$).\, Thus the kinetic energy of the body is
+$$E_k \;=\; \frac{1}{2}m\left|\frac{d\vec{r}}{dt}\right|^2 
+\;=\; \frac{1}{2}m\left(\!\left(\frac{dr}{dt}\right)^2\!+\!\left(r\frac{d\varphi}{dt}\right)^2\right)\!.$$
+Because the gravitational force on the body is exerted along the position vector, its moment is 0 and therefore the angular momentum 
+$$\vec{L} \;=\; \vec{r}\!\times\!m\frac{d\vec{r}}{dt} 
+\;=\; mr^2\frac{d\varphi}{dt}\vec{r}^{\,0}\!\times\!\vec{s}^{\,0}$$
+of the body is constant; thus its magnitude is a constant,
+$$mr^2\frac{d\varphi}{dt} \;=\; G,$$
+whence
+\begin{align}
+\frac{d\varphi}{dt} \;=\; \frac{G}{mr^2}.
+\end{align}
+The central force\, $\displaystyle\vec{F} := -\frac{k}{r^2}\vec{r}^{\,0}$\, (where $k$ is a constant) has the scalar potential \, $U(r) = -\frac{k}{r}$.\, Thus the total energy\, $E = E_k\!+\!U(r)$ of the body, which is constant, may be written
+$$E \;=\; \frac{1}{2}m\!\left(\frac{dr}{dt}\right)^2\!+\frac{1}{2}mr^2\!\left(\frac{G}{mr^2}\right)^2\!-\!\frac{k}{r} 
+\;=\; \frac{m}{2}\!\left(\frac{dr}{dt}\right)^2\!+\frac{G^2}{2mr^2}\!-\!\frac{k}{r}.$$
+This equation may be revised to
+$$\left(\frac{dr}{dt}\right)^2\!+\frac{G^2}{m^2r^2}-\frac{2k}{mr}+\frac{k^2}{G^2} \;=\; \frac{2E}{m}+\frac{k^2}{G^2},$$
+i.e. 
+$$\left(\frac{dr}{dt}\right)^2\!+\left(\frac{k}{G}-\frac{G}{mr}\right)^2 \;=\; q^2$$
+where
+$$q \;:=\; \sqrt{\frac{2}{m}\left(\!E\!+\!\frac{mk^2}{2G^2}\right)}$$
+is a constant.\, We introduce still an auxiliary angle $\psi$ such that
+\begin{align}
+\frac{k}{G}-\frac{G}{mr} \;=\; q\cos\psi, \quad \frac{dr}{dt} \;=\; q\sin\psi.
+\end{align}
+Differentiation of the first of these equations implies
+$$\frac{G}{mr^2}\cdot\frac{dr}{dt} \;=\; -q\sin\psi\frac{d\psi}{dt} \;=\; -\frac{dr}{dt}\cdot\frac{d\psi}{dt},$$
+whence, by (2),
+$$\frac{d\psi}{dt} \;=\; -\frac{G}{mr^2} \;=\; -\frac{d\varphi}{dt}.$$
+This means that\, $\psi = C\!-\!\varphi$, where the constant $C$ is determined by the initial conditions.\, We can then solve $r$ from the first of the equations (3), obtaining
+\begin{align}
+r \;=\; \frac{G^2}{km\left(1-\frac{Gq}{k}\cos(C-\varphi)\right)} \;=\; \frac{p}{1-\varepsilon\cos(\varphi-C)},
+\end{align}
+where
+$$p \;:=\; \frac{G^2}{km}, \quad \varepsilon \;:=\; \frac{Gq}{k}.$$\\
+
+By the \PMlinkid{parent entry}{11724}, the result (4) shows that the trajectory of the body in the gravitational \PMlinkname{field}{VectorField} of one point-like sink is always a conic section whose focus \PMlinkescapetext{contains} the sink causing the field.\\
+
+As for the \PMlinkescapetext{type} of the conic, the most interesting one is an ellipse.\, It occurs, by the 
+\PMlinkid{parent entry}{11724}, when\, $\varepsilon < 1$.\, This condition is easily seen to be equivalent with a negative total energy $E$ of the body.\\
+
+One can say that any planet revolves around the Sun along an ellipse having the Sun in one of its foci --- this is \emph{Kepler's first law}.
+
+
+
+\begin{thebibliography}{9}
+\bibitem{MMP} \CYRYA. \CYRB. \CYRZ\cyre\cyrl\cyrsftsn\cyrd\cyro\cyrv\cyri\cyrch \;\&\, \CYRA. \CYRD. \CYRM\cyrery\cyrsh\cyrk\cyri\cyrs: 
+{\em \CYREREV\cyrl\cyre\cyrm\cyre\cyrn\cyrt\cyrery\, \cyrp\cyrr\cyri\cyrk\cyrl\cyra\cyrd\cyrn\cyro\cyrishrt\, \cyrm\cyra\cyrt\cyre\cyrm\cyra\cyrt\cyri\cyrk\cyri}. \,\CYRI\cyrz\cyrd\cyra\cyrt\cyre\cyrl\cyrsftsn\cyrs\cyrt\cyrv\cyro \,
+``\CYRN\cyra\cyru\cyrk\cyra''.\, \CYRM\cyro\cyrs\cyrk\cyrv\cyra \,(1976).
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

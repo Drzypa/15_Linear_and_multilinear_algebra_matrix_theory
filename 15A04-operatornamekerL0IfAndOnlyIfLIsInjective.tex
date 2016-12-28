@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{operatornamekerL0IfAndOnlyIfLIsInjective}
+\pmcreated{2013-03-22 14:44:46}
+\pmmodified{2013-03-22 14:44:46}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{$\operatorname{ker} L=\{0\}$ if and only if $L$ is injective}
+\pmrecord{11}{36384}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem*{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{thm} 
+A linear map between vector spaces is injective if and only if its kernel is $\{0\}$. 
+\end{thm}
+
+
+
+\begin{proof} Let $L: V \to W$ be a linear map. Suppose $L$ is injective, and $L(v)=0$ for some vector
+$v\in V$. Also, $L(0) =0$ because $L$ is linear. 
+Then $L(v)=L(0)$,   so $v=0$. On the other hand, suppose
+ $\operatorname{ker}L=\{0\}$, and $L(v)=L(v')$ for vectors $v,v'\in V$. 
+Hence $L(v-v') = L(v)-L(v') = 0$ because $L$ is linear.
+Therefore, $v-v'$ is in $\operatorname{ker}L=\{0\}$, which means that 
+$v-v'$ must be $0$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

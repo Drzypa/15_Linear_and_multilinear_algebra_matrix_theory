@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfBases}
+\pmcreated{2013-03-22 18:06:00}
+\pmmodified{2013-03-22 18:06:00}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{properties of bases}
+\pmrecord{9}{40642}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmclassification{msc}{13C05}
+\pmclassification{msc}{16D40}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $V$ be a vector space over a field $k$.
+
+\begin{enumerate}
+\item $V$ has a basis.
+\item Every linearly independent set in $V$ can be expanded into a basis for $V$.
+\item Every spanning set of $V$ contains a subset that is a basis for $V$.
+\item If $A,B$ are subsets of $V$ such that $A$ is linearly independent and $B$ spans $V$, then $$|A|\le |B|.$$
+\item All bases for $V$ have the same cardinality (hence it is possible to define the dimension of a vector space).
+\item $V$ and $W$ are isomorphic iff their bases have the same cardinality.
+\end{enumerate}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+Property 1 is actually a special case of either property 2 or property 3.  If we take $\varnothing$ as the given linearly independent set in $V$, and apply property 2, we obtain property 1.  Likewise, if we take $V$ as the given spanning set  of $V$, and apply property 3, we again obtain property 1.
+\item
+The above properties can be generalized to a (left or right) vector space over a division ring.
+\item
+However, most of the properties on bases can not be generalized to an arbitrary module over an arbitrary ring.   For example, not all modules have bases.  But we do have the following: let $M$ be a (left) module over a ring $R$.  Then
+\begin{enumerate}
+\item if $M$ has a finite basis, then all bases for $M$ are finite.
+\item if $M$ has an infinite basis, then all bases for $M$ have the same cardinality.
+\end{enumerate}
+When a module has a basis, then we call it a free module (other characterizations are possible).  So free modules behave a bit like vector spaces.  However, unlike a vector space, one may not be able to define a dimension on a free module.  It is possible that, in a finitely generated free module, there are two bases of different cardinalities.  For more on this, see the entry on IBN.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

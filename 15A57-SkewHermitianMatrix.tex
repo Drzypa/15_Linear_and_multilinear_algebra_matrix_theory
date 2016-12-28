@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SkewHermitianMatrix}
+\pmcreated{2013-03-22 13:36:14}
+\pmmodified{2013-03-22 13:36:14}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{skew-Hermitian matrix}
+\pmrecord{21}{34231}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A57}
+\pmsynonym{anti-Hermitian matrix}{SkewHermitianMatrix}
+\pmrelated{HermitianMatrix}
+\pmrelated{SymmetricMatrix}
+\pmrelated{SkewSymmetricMatrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\newcommand{\ccj}[1]{\overline{#1}}
+\def\dtra{\hspace{0.04cm} ^{\mbox{\scriptsize{T}}} \hspace{0.02cm}}
+
+{\bf Definition.} A square matrix $A$ with complex entries is 
+\emph{skew-Hermitian}, if
+ $$ A^* = -A. $$
+Here $A^\ast=\ccj{A\dtra}$, $A\dtra$ is the transpose of $A$, and $\ccj{A}$ is
+is the complex conjugate of the matrix $A$.
+
+\subsection*{Properties.}
+\begin{enumerate}
+\item The trace of a skew-Hermitian matrix is \PMlinkid{imaginary}{2017}. 
+\item The eigenvalues of a skew-Hermitian matrix are
+ \PMlinkid{imaginary}{2017}. 
+\end{enumerate}
+
+
+\emph{Proof.} Property (1) follows directly from property (2) since the
+trace is the sum of the eigenvalues. But one can also give a simple proof
+as follows.  Let $x_{ij}$ and $y_{ij}$ be the 
+real respectively imaginary parts of the elements in $A$. 
+Then the diagonal elements of $A$ are of the
+form $x_{kk} + i y_{kk}$, and the diagonal elements in $A^\ast$ 
+are of the form $-x_{kk} + iy_{kk}$. Hence $x_{kk}$, i.e., the real
+part for the diagonal elements in $A$ must vanish, and 
+property (1) follows.
+For property (2), suppose 
+ $A$ is a skew-Hermitian matrix, and $x$ an 
+eigenvector corresponding to the eigenvalue $\lambda$, i.e.,  
+\begin{eqnarray}
+\label{gugg}
+Ax &=& \lambda x.
+\end{eqnarray}
+Here, $x$ is a complex column vector. 
+Since $x$ is an eigenvector, $x$ is not the zero vector, and
+$x^\ast x > 0$. Without loss of generality we can assume $x^\ast x =1$.
+ Thus
+\begin{eqnarray*}
+\ccj{\lambda} &=& x^\ast \ccj{\lambda} x\\
+&=& ( x^\ast \lambda x )^\ast \\
+&=& (x^\ast A x )^\ast \\
+&=& x^\ast A^\ast x \\
+&=& x^\ast (-A) x \\
+&=& -x^\ast \lambda x \\
+&=& - \lambda .
+\end{eqnarray*}
+Hence the eigenvalue $\lambda$ corresponding
+to $x$ is \PMlinkid{imaginary}{2017}. $\Box$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GerstenhaberSerezhkinTheorem}
+\pmcreated{2013-03-22 19:20:05}
+\pmmodified{2013-03-22 19:20:05}
+\pmowner{kammerer}{26336}
+\pmmodifier{kammerer}{26336}
+\pmtitle{Gerstenhaber - Serezhkin theorem}
+\pmrecord{7}{42281}
+\pmprivacy{1}
+\pmauthor{kammerer}{26336}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A30}
+%\pmkeywords{nilpotent matrix}
+%\pmkeywords{linear subspace}
+%\pmkeywords{dimension}
+%\pmkeywords{simultaneous triangularizability}
+\pmrelated{BottaPierceWatkinsTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+Let $\mathbb{F}$ be an arbitrary field. Consider $\mathcal{M}_n (\mathbb{F}),$ the vector space of all $n \times n$ matrices over $\mathbb{F}.$ Define
+\begin{itemize}
+\item
+$\mathcal{N} = \{A \in \mathcal{M}_n (\mathbb{F}):\, A\, \, \mbox{is nilpotent}\},$
+\item
+$\mathcal{GL}_n (\mathbb{F}) = \{A \in \mathcal{M}_n (\mathbb{F}): \det (A) \neq 0\},$
+\item
+$\mathcal{T} = \{A \in \mathcal{M}_n (\mathbb{F}):\, A\, \, \mbox{is strictly upper triangular}\}.$
+\end{itemize}
+
+Notice that $\mathcal{T}$ is a linear subspace of $\mathcal{M}_n (\mathbb{F}).$ Moreover, $\mathcal{T} \subseteq \mathcal{N}$ and $\dim \mathcal{T} = n (n - 1) / 2.$
+
+The Gerstenhaber -- Serezhkin theorem on linear subspaces contained in the nilpotent cone \cite{G, S} reads as follows.
+\begin{thm}
+Let $\mathcal{L}$ be a linear subspace of $\mathcal{M}_n (\mathbb{F}).$ Assume that $\mathcal{L} \subseteq \mathcal{N}.$ Then\\
+\begin{tabular}{cl}
+(i)&$\dim \mathcal{L} \leq n (n - 1) / 2,$\\
+(ii)&$\dim \mathcal{L} = n (n - 1) / 2$ if and only if there exists $U \in \mathcal{GL}_n (\mathbb{F})$ such that $\{U A U^{-1}:\, A \in \mathcal{L}\} = \mathcal{T}.$\\
+\end{tabular} 
+\end{thm}
+
+An alternative simple proof of inequality {\it (i)} can be found in \cite{M}.
+
+\begin{thebibliography}{99}
+\bibitem[G]{G}
+M. Gerstenhaber, On nilalgebras and linear varieties of nilpotent matrices, I, {\it Amer. J. Math.} {\bf 80}: 614--622 (1958).
+\bibitem[M]{M}
+B. Mathes, M. Omladi\v{c}, H. Radjavi, Linear Spaces of Nilpotent Matrices, {\it Linear Algebra Appl.} {\bf 149}: 215--225 (1991).
+\bibitem[S]{S}
+V. N. Serezhkin, On linear transformations preserving nilpotency, {\it Vests$\bar{\iota}$ Akad. Navuk BSSR Ser. F$\bar{\iota}$z.-Mat. Navuk} {\bf 1985}, no. 6: 46--50 (Russian).  
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

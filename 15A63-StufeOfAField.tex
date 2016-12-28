@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StufeOfAField}
+\pmcreated{2013-03-22 15:06:01}
+\pmmodified{2013-03-22 15:06:01}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{stufe of a field}
+\pmrecord{5}{36829}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A63}
+\pmclassification{msc}{12D15}
+\pmsynonym{level of a field}{StufeOfAField}
+\pmrelated{TheoremsOnSumsOfSquares}
+\pmdefines{stufe}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \emph{stufe} of a field $F$ is the least number $n$ such that $-1$ can be expressed as a sum of $n$ squares:
+$$-1=a_1^2+\cdots+a_n^2,$$
+where each $a_i\in F$.  If no such an $n$ exists, then we say that the \emph{stufe} of $F$ is $\infty$.
+
+\textbf{Remarks}.
+\begin{itemize}
+\item The word ``stufe'', meaning ``level'' in German, is attributed to mathematician Albrecht Pfister.
+\item A theorem of Pfister asserts that in a field $F$, if $-1$ can be expressed as a finite sum of squares, then the stufe of $F$ is a power of $2$.
+\end{itemize}
+
+\begin{thebibliography}{8}
+\bibitem{pfister} A. Pfister, {\em Zur Darstellung definiter Funktionen als Summe von Quadraten}, Inventiones Mathematicae (1967).
+\bibitem{rajwade} A. R. Rajwade, {\em Squares}, Cambridge University Press (1993).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

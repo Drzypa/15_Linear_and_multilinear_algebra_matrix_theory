@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CentralizerOfMatrixUnits}
+\pmcreated{2013-03-22 18:39:58}
+\pmmodified{2013-03-22 18:39:58}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{centralizer of matrix units}
+\pmrecord{8}{41410}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A30}
+\pmclassification{msc}{16S50}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem -} Let $R$ be a ring with identity $1$ and $M_n(R)$ the ring of $n \times n$ matrices with entries in $R$. The centralizer of the matrix units is the set $R\cdot Id$, consisting of all multiples of the identity matrix.
+
+$\,$
+
+{\bf \emph{\PMlinkescapetext{Proof}:}} It is clear that the multiples of the identity matrix commute with all matrix units, and therefore belong to their centralizer. We will now prove the converse.
+
+We will regard the elements of $M_n(R)$ as endomorphisms of the module $\oplus_{i =1}^n R$. We will denote by $\{e_i\}$ the canonical basis of $\oplus_{i =1}^n R$ and by $E_{ij}$ the matrix unit whose entry $(i,j)$ is $1$.
+
+Let $S = [s_{ij}] \in M_n(R)$ be an element of the centralizer of the matrix units. For all $i, j, k$ we must have
+
+\begin{align}
+SE_{ij}\, e_k = E_{ij}S\, e_k
+\end{align}
+
+But a straightforward computation shows that $SE_{ij\,}e_j = S\, e_i$ and $E_{ij}S\, e_j = s_{jj}\,e_i$. Since $j$ is arbitrary we see, by equality (1), that all $s_{jj}$ are equal, say $s_{jj} = s \in R$.
+
+ Hence, $S\, e_i = s\, e_i$, wich means that $S = s\,Id$. We conclude that $S$ must be a multiple of the identity matrix. $\square$
+%%%%%
+%%%%%
+\end{document}

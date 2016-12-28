@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConjugateTranspose}
+\pmcreated{2013-03-22 13:42:18}
+\pmmodified{2013-03-22 13:42:18}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{conjugate transpose}
+\pmrecord{10}{34382}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmclassification{msc}{15A15}
+\pmsynonym{adjoint matrix}{ConjugateTranspose}
+\pmsynonym{Hermitian conjugate}{ConjugateTranspose}
+\pmsynonym{tranjugate}{ConjugateTranspose}
+\pmrelated{Transpose}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+\def\dtra{\hspace{0.04cm} ^{\mbox{\scriptsize{T}}} \hspace{0.02cm}}
+\def\htra{\hspace{0.04cm} ^{\mbox{\scriptsize{H}}} \hspace{0.02cm}}
+
+{\bf Definition} If $A$ is a complex matrix, then the 
+\emph{conjugate transpose} $A^\ast$ is the matrix 
+$A^\ast = \bar{A}\dtra$, where $\bar{A}$ is
+the complex conjugate of $A$, and $A\dtra$ is the 
+transpose of $A$. 
+
+It is clear that for real matrices, the conjugate transpose coincides with
+the transpose. 
+
+\subsubsection{Properties}
+\begin{enumerate}
+\item If $A$ and $B$ are complex matrices of same size, and $\alpha,\beta$
+are complex constants, then
+\begin{eqnarray*}
+  (\alpha A + \beta B)^\ast &=& \overline{\alpha} A^\ast + \overline{\beta} B^\ast,\\
+  A^{\ast\ast} &=& A.
+\end{eqnarray*}
+
+\item If $A$ and $B$ are complex matrices such that $AB$ is defined, then 
+$$ (AB)^\ast = B^\ast A^\ast.$$
+\item If $A$ is a complex square matrix, then 
+\begin{eqnarray*}
+ \det (A^\ast) &=& \overline{ \det{A}}, \\
+\operatorname{trace}(A^\ast) &=& \overline{ \operatorname{trace}{A}}, \\
+(A^\ast)^{-1} &=& (A^{-1})^\ast,
+\end{eqnarray*}
+where $\operatorname{trace}$ and $\operatorname{det}$ are the trace 
+and the determinant operators, and $^{-1}$ is the inverse operator. 
+\item Suppose $\langle \cdot, \cdot \rangle$ is the standard inner product on $\sC^n$. 
+Then for an arbitrary complex $n\times n$ matrix $A$,  
+and vectors $x,y\in \sC^n$, we have 
+$$ \langle Ax,y\rangle = \langle x,A^\ast y \rangle.$$
+\end{enumerate}
+
+\subsubsection*{Notes}
+The conjugate transpose of $A$ is also called the \emph{adjoint matrix} of $A$, 
+the \emph{Hermitian conjugate} of $A$ (whence one usually writes $A^\ast = A\htra$).
+The notation $A^\dagger$ is also used for the conjugate transpose \cite{pease}. 
+In \cite{eves}, $A^\ast$ is also called the \emph{tranjugate} of $A$.
+
+
+\begin{thebibliography}{9}
+ \bibitem {eves} H. Eves, \emph{Elementary Matrix Theory}, Dover publications, 1980.
+\bibitem {pease} M. C. Pease,
+ \emph{Methods of Matrix Algebra},  Academic Press, 1965.
+ \end{thebibliography}
+
+
+\subsubsection*{See also}
+\begin{itemize}
+ \item Wikipedia, 
+ \PMlinkexternal{conjugate transpose}{http://www.wikipedia.org/wiki/Conjugate_transpose}
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

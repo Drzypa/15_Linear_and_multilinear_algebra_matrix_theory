@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StrainTransformation}
+\pmcreated{2013-03-22 17:25:45}
+\pmmodified{2013-03-22 17:25:45}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{strain transformation}
+\pmrecord{5}{39804}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+\pmsynonym{strain}{StrainTransformation}
+\pmdefines{strain coefficient}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $E$ be a Euclidean plane.  Fix a line $\ell$ in $E$ and a real number $r\ne 0$.  Take any point $p\in E$.  Drop a line $m_p$ from $p$ perpendicular to $\ell$.  Denote $d(p,\ell)$ the distance from $p$ to $\ell$.  Then there is a unique point $p'$ on $m_p$ such that $$d(p',\ell)=r\cdot d(p,\ell).$$  The function $s_r:E\to E$ such that $s_r(p)=p'$ is called a \emph{strain transformation}, or simply a \emph{strain}. 
+
+One can visualize a strain stretches a geometric figure if $|r|>1$ and compresses it if $|r|<1$.  If $r=1$, then $s_r$ is the identity function, the only time when a strain is a rigid motion.  For example, let $\ell$ be the $x$-axis and $C$ be a circle in the upper half plane of the $x$-$y$ plane.  Then the following diagrams show how a strain transforms $C$:
+
+\begin{center}
+\psset{unit=1.5cm}
+\begin{pspicture}(-4,-2)(5,3)
+\psline(-4,0)(4,0)
+\rput(4.5,0){$\ell$}
+\psellipse(-3,1)(0.5,0.5)
+\psellipse(-1,2)(0.5,1)
+\psellipse(1,0.5)(0.5,0.25)
+\psellipse(3,-1)(0.5,0.5)
+\rput(-3,-2){$C$}
+\rput(-1,-2){$s_2(C)$}
+\rput(1,-2){$s_{\frac{1}{2}}(C)$}
+\rput(3,-2){$s_{-1}(C)$}
+\end{pspicture}
+\end{center}
+
+Again, if $\ell$ is the $x$-axis, then $s_r$ is the function that sends $(x,y)$ to $(x,ry)$.  Representing the ordered pairs as column vectors and $s_r$ as a matrix , we have
+\begin{center}$s_r
+\begin{pmatrix}
+x \\ y 
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 \\
+0 & r
+\end{pmatrix}
+\begin{pmatrix}
+x \\ y 
+\end{pmatrix}
+=
+\begin{pmatrix}
+x \\ ry 
+\end{pmatrix}
+.$
+\end{center}
+
+Nevertheless, a strain, as a (non-singular) linear transformation, takes lines to lines, and parallel lines to parallel lines.
+
+In general, given any finite dimensional vector space $V$ over a field $k$, a strain $s_r$ is a non-singular diagonalizable linear transformation on $V$ such that $s_r$ leaves a subspace $W$ of codimension $1$ fixed.  $0\ne r\in k$ is called the \emph{strain coefficient}.
+
+\textbf{Remark}.  By choosing an appropriate base for $V$ of dimension $n$, $s_r$ can be represented as a diagonal matrix whose diagonals are $1$ in at least $n-1$ cells and $r$ in at most one cell.  
+
+It is easy to see that every non-singular diagonalizable linear transformation on $V$ can be written as a product of $n$ strains, where $n=\operatorname{dim}(V)$.
+%%%%%
+%%%%%
+\end{document}

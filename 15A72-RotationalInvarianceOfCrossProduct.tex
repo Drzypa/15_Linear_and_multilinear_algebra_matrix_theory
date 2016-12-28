@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RotationalInvarianceOfCrossProduct}
+\pmcreated{2013-03-22 13:33:53}
+\pmmodified{2013-03-22 13:33:53}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{rotational invariance of cross product}
+\pmrecord{6}{34171}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A72}
+\pmclassification{msc}{15A90}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+\newcommand{\vu}[0]{\textbf{u}}
+\newcommand{\vv}[0]{\textbf{v}}
+\newcommand{\vR}[0]{\textbf{R}}
+
+{\bf Theorem} \\
+Let $\vR$ be a rotational $3\times 3$ matrix, i.e., a real
+matrix with $\det \vR = 1$ and $\vR^{-1} = \vR^T$.
+Then for all vectors $\vu,\vv$ in $\mathbb{R}^3$,
+$$ \vR \cdot (\vu\times \vv) = (\vR\cdot \vu)\times (\vR\cdot \vv).$$
+
+\emph{Proof.}
+Let us first fix some right hand oriented orthonormal basis in $\mathbb{R}^3$.
+Further, let $\{u^1,u^2,u^3\}$ and $\{v^1,v^2,v^3\}$ be the components
+of $\vu$ and
+$\vv$ in that basis. Also, in the chosen basis, we denote the entries
+of $\vR$ by $R_{ij}$. Since  $\vR$ is rotational, we have
+$R_{ij} R_{kj} = \delta_{ik}$ where $\delta_{ik}$ is the
+Kronecker delta symbol. Here we use the Einstein summation convention.
+Thus, in the previous expression, on the left hand side, $j$ should be summed
+over $1,2,3$. We shall use the
+Levi-Civita permutation symbol $\varepsilon$ to write the cross product.
+Then the $i$:th coordinate of $\vu\times \vv$ equals
+$(\vu\times \vv)^i = \varepsilon^{ijk} u^j v^k$.
+For the  $k$th component of $(\vR\cdot \vu)\times (\vR\cdot \vv)$ we
+then have
+\begin{eqnarray*}
+((\vR\cdot \vu)\times (\vR\cdot \vv))^k &=& \varepsilon^{imk} R_{ij} R_{mn} u^j v^n \\
+&=& \varepsilon^{iml} \delta_{kl} R_{ij} R_{mn} u^j v^n \\
+&=& \varepsilon^{iml} R_{kr} R_{lr} R_{ij} R_{mn} u^j v^n \\
+&=& \varepsilon^{jnr} \det \vR\, R_{kr} u^j v^n.
+\end{eqnarray*}
+The last line follows since
+$\varepsilon^{ijk} R_{im} R_{jn} R_{kr} = \varepsilon^{mnr}\varepsilon^{ijk} R_{i1} R_{j2} R_{k3} = \varepsilon^{mnr} \det \vR$.
+Since $\det \vR = 1$, it follows that
+\begin{eqnarray*}
+((\vR\cdot \vu)\times (\vR\cdot \vv))^k &=& R_{kr} \varepsilon^{jnr} u^j v^n\\
+        &=& R_{kr} (\vu\times \vv)^r \\
+        &=& (\vR\cdot \vu\times \vv)^k
+\end{eqnarray*}
+as claimed. $\Box$
+%%%%%
+%%%%%
+\end{document}

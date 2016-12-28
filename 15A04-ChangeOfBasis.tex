@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChangeOfBasis}
+\pmcreated{2013-03-22 17:30:18}
+\pmmodified{2013-03-22 17:30:18}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{change of basis}
+\pmrecord{20}{39894}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+\pmsynonym{change of coordinates}{ChangeOfBasis}
+\pmsynonym{change of bases}{ChangeOfBasis}
+\pmsynonym{basis change}{ChangeOfBasis}
+\pmsynonym{base change}{ChangeOfBasis}
+\pmsynonym{base change matrix}{ChangeOfBasis}
+\pmdefines{change of basis matrix}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $V$ be a vector space.  Given a basis $A$ for $V$, each vector $v\in V$ can be uniquely expressed in terms of the base elements $v_i\in A$ as follows: $$v=\sum_{v_i\in A} r_iv_i$$ where the sum is taken over a finite number of elements in $A$.  Suppose now that $B$ is another basis for $V$.  By a \emph{change of basis} from $A$ to $B$ we mean re-expressing $v$ in terms of base elements $w_i\in B$.
+
+Formally, we can think of a change of basis as the identity function (viewed as a linear operator) on a vector space $V$, such that elements in the domain are expressed in terms of $A$ and elements in the range are expressed in terms of $B$.
+
+Note that, by the very design of a basis, a change of basis in a vector space is always possible.
+
+Now, if $V$ has dimension $n<\infty$.  We can total order bases $A$ and $B$.  Then a change of basis (from $A$ to $B$) has the matrix representation $$[I]^A_B,$$ where $I:V\to V$ is the identity operator.  $[I]^A_B$ is called a \emph{change of basis matrix}.  By applying $[I]^A_B$ to a vector $v$ expressed in terms of $A$, we get $v$ expressed in terms of $B$:  $$[v]_B=[I]^A_B[v]_A,$$ where $[v]_A$ and $[v]_B$ are $v$ expressed in the two bases $A$ and $B$ respectively.  
+
+Since $I$ is obviously invertible, $[I]^A_B$ is invertible also, whose inverse is $[I]^B_A$.  Furthermore, $[I]_A=I_n$ for any basis $A$.  Here, $I_n$ is the identity matrix.
+
+\textbf{Examples}.
+\begin{enumerate}
+\item Let $V=\mathbb{R}^3$ and the following two sets 
+$$A=\Bigg\lbrace \begin{pmatrix} 1\\-1\\2 \end{pmatrix}, \begin{pmatrix} 0\\1\\1 \end{pmatrix}, \begin{pmatrix} 2\\3\\0 \end{pmatrix} \Bigg\rbrace \mbox{ and }B=\Bigg\lbrace \begin{pmatrix} 1\\0\\0 \end{pmatrix}, \begin{pmatrix} 0\\1\\0 \end{pmatrix}, \begin{pmatrix} 0\\0\\1 \end{pmatrix} \Bigg\rbrace$$
+be the two ordered bases for $V$, ordered in the way the elements are arranged in the set.  For each $v_i\in A$, $I(v_i)=v_i=[v_i]_{E_3}$, we see that $$[I]^A_B=\begin{pmatrix} 1&0&2 \\ -1&1&3 \\ 2&1&0 \end{pmatrix}.$$  Notice that the columns of $[I]^A_B$ are exactly the elements of $A$.  Indeed, each element of $A$ is \emph{already} written in terms of the standard basis elements (in $B$).  For example, let $v$ be the first basis element in $A$.  Let us see what $[v]_A$ is, when expressed using base elements in $B$, the standard ordered basis: $$[v]_B=[I]^A_B[v]_A=\begin{pmatrix} 1&0&2 \\ -1&1&3 \\ 2&1&0 \end{pmatrix}[v]_A = \begin{pmatrix} 1&0&2 \\ -1&1&3 \\ 2&1&0 \end{pmatrix}\begin{pmatrix} 1\\0\\0 \end{pmatrix}=\begin{pmatrix} 1\\-1\\2 \end{pmatrix},$$ exactly as we have expected. 
+\item Conversely, let $w$ be the first basis element in $B$.  What is $w$ when expressed in terms of basis elements of $A$?  In other words, we need to find $$[w]_A=[I]^B_A[w]_B.$$  Now, $[w]_B$ is just $\begin{pmatrix} 1\\0\\0 \end{pmatrix}$, so $[w]_A$ is nothing more than the first column of $[I]^B_A$, which is just the inverse of the matrix $[I]^A_B$, so $$[I]^B_A={([I]^A_B)}^{-1}=\begin{pmatrix} 1&0&2 \\ -1&1&3 \\ 2&1&0 \end{pmatrix}^{-1}=\begin{pmatrix} 1/3&-2/9&2/9 \\ -2/3&4/9&5/9 \\ 1/3&1/9&-1/9 \end{pmatrix}.$$  Therefore, $[w]_A=\begin{pmatrix}1/3\\-2/3\\1/3 \end{pmatrix}$.  A quick verification shows that this is indeed the case: $$\begin{pmatrix}1\\0\\0\end{pmatrix}= (1/3) \begin{pmatrix}1\\-1\\2\end{pmatrix} + (-2/3)\begin{pmatrix}0\\1\\1\end{pmatrix} + (1/3)\begin{pmatrix}2\\3\\0\end{pmatrix}.$$
+\item Now let $C$ be the set $\Bigg\lbrace \begin{pmatrix} 1\\0\\2 \end{pmatrix}, \begin{pmatrix} 0\\1\\1 \end{pmatrix}, \begin{pmatrix} 2\\1\\0 \end{pmatrix} \Bigg\rbrace$.  It is easy to check that $C$ forms a basis for $\mathbb{R}^3$ (determinant is non-zero).  Order $C$ in the obvious manner.  What is the change of basis matrix $[I]^C_A$?  One way is to express each element of $C$ in terms of the elements of $A$.  Another way is to use the formula $[I]^C_A=[I]^B_A[I]^C_B$.    Applying the first example, we see that $[I]^C_B$ is just the matrix whose columns are elements of $C$.  As a result: $$[I]^C_A=[I]^B_A[I]^C_B=\begin{pmatrix} 1/3&-2/9&2/9 \\ -2/3&4/9&5/9 \\ 1/3&1/9&-1/9 \end{pmatrix} \begin{pmatrix} 1&0&2 \\ 0&1&1 \\ 2&1&0 \end{pmatrix}=\begin{pmatrix} 7/9&0&4/9 \\ 4/9&1&-8/9 \\ 1/9&0&7/9 \end{pmatrix}. $$
+\end{enumerate}
+
+\textbf{Remarks.}  Let us summarize what we have learned from the examples above, as well as list some additional facts.  Let $V$ be a finite dimensional vector space of dimension $n$.  
+\begin{itemize}
+\item If $E$ is the standard basis (ordered), then for any ordered basis $A$, $[I]^A_E$ is the matrix whose columns are exactly the basis elements in $A$ (assuming these elements have already been expressed in terms of $E$) such that the $i$-column corresponds to the $i$-th element in the ordered set $A$.
+\item This also means that every invertible matrix $A$ corresponds to (in a one-to-one fashion) a change of basis from the basis $S_A$ whose elements are columns of $A$ to $E$, the standard basis: $A=[I]^{S_A}_E$.
+\item Continue to assume that $E$ is the standard basis.  Let $A,B$ be any ordered bases for $V$.  Using the above property, we can easily compute $[I]^A_B$, which is $[I]^E_B[I]^A_E=([I]^B_E)^{-1}[I]^A_E.$
+\item Let $A'$ be a re-ordering of the ordered basis $A$, where each $v'_i\in A'$ is just $v_{\pi(i)}$ for some permutation in $S_n$.  Then $[I]^{A'}_A$ is the permutation matrix corresponding to the permutation $\pi$.
+\item Suppose $T$ is a linear transformation from $V$ to $W$ (both finite dimensional).  Under a bases $A\subset V$ and $B\subset W$, $T$ has matrix representation $[T]^A_B$.  Under changes of basis from $A$ to $A'$, and $B$ to $B'$, we have $$[T]^{A'}_{B'}=[ITI]^{A'}_{B'}=[I]^B_{B'}[T]^A_B[I]^{A'}_A.$$ 
+\item If $T$ is a linear operator on $V$, then setting $V=W$, $A=B$ and $A'=B'$ from above, we have that $$[T]_{A'}=P^{-1}[T]_A P,$$ where $P$ is the change of basis matrix $[I]^{A'}_A$.  This shows that $[T]_A$ and $[T]_{A'}$ are similar matrices.  In other words, under a change of basis, the linear transformation $T$ is basically the same.
+\end{itemize}
+
+\begin{thebibliography}{3}
+\bibitem{Friedberg} Friedberg, Insell, Spence. {\it Linear Algebra}. Prentice-Hall Inc., 1997.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

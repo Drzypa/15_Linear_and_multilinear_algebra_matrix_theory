@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SubmatrixNotation}
+\pmcreated{2013-03-22 16:13:36}
+\pmmodified{2013-03-22 16:13:36}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{submatrix notation}
+\pmrecord{5}{38325}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $n$ and $k$ be integers with $1 \leq k \leq n$. Denote by
+$Q_{k,n}$ the totality  of all sequences of $k$ integers, where the elements of
+the sequence are strictly increasing and choosen from $\{1, \ldots , n\}$.
+
+
+Let $A=(a_{ij})$ be an $m \times n$ matrix with elements from some set, usually
+taken to be a field for ring. Let  $k$ and $r$ be positive integers with
+$1 \leq k \leq m$, $1 \leq r \leq n$, $ \alpha \in Q_{k,m}$ and
+$ \beta \in Q_{r,n}$. 
+We let $ \alpha = (i_1, \ldots , i_k)$ and $ \beta =(j_1, \ldots , j_r)$
+
+The submatrix $A[\alpha, \beta]$ has $(s,t)$ entry equal to
+$a_{i_sj_t}$ and has $k$ rows and $r$ columns. 
+
+We denote by  $A(\alpha, \beta)$ the submatrix of $A$ whose rows  and columns
+are complementary to $\alpha $ and $\beta$, respectively.
+ 
+We can also define similarly the notations $A[\alpha, \beta)$ and $A(\alpha, \beta]$.
+
+%%%%%
+%%%%%
+\end{document}

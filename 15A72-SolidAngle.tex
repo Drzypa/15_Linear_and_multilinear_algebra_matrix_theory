@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SolidAngle}
+\pmcreated{2014-03-12 21:18:06}
+\pmmodified{2014-03-12 21:18:06}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{solid angle}
+\pmrecord{26}{37266}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A72}
+\pmclassification{msc}{51M25}
+\pmrelated{ConvexAngle}
+\pmrelated{Radian}
+\pmrelated{AreaOfASphericalTriangle}
+\pmrelated{DihedralAngle}
+\pmdefines{space angle}
+\pmdefines{full solid angle}
+\pmdefines{steradian}
+\pmdefines{trihedral angle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+A conical surface may contain a certain portion $\Omega$ of the space $\mathbb{R}^3$.\, This portion is called \emph{solid angle} or \emph{space angle}.\, If the conical surface contains a portion $A$ of a spherical surface with radius $R$ and with \PMlinkname{centre}{Sphere} $P$ in the \PMlinkescapetext{vertex} of the solid angle, then the magnitude of the solid angle is given by
+                   $$\Omega \;=\; \frac{A}{R^2}$$
+which is \PMlinkescapetext{independent} on the radius $R$.\,The spherical surface can be replaced by any surface $a$, through which all the half-lines originating from $P$ and being contained in the solid angle go.\, Then the solid angle may be computed from the \PMlinkescapetext{surface integral}
+\begin{align}         
+\Omega \;=\; -\int_a \vec{da}\cdot\nabla\frac{1}{r},
+\end{align}
+where $r$ is the length of the position vector $\vec{r}$ for the points on the surface $a$.
+ The \emph{full solid angle}, consisting of all points of $\mathbb{R}^3$, has the magnitude $4\pi$. 
+
+The SI \PMlinkescapetext{unit} of solid angle, analogous to the angle \PMlinkescapetext{unit} radian, is the \emph{steradian} ($= 1\;\mbox{sr}$).\, The steradian takes a proportion $\frac{1}{4\pi}$, or approximately 7.957747 \%, of the surface area of a sphere.\\
+
+If the solid angle is bounded by three planes having exactly one common point, it may be called a \emph{trihedral angle}; cf. the example 2!\\
+
+
+\textbf{Example 1.}\,  The solid angle determined by a right circular cone with the angle $\alpha$ between its axis and \PMlinkescapetext{side line} is equal to $2\pi(1\!-\cos\alpha)$, i.e. $\displaystyle 4\pi\sin^2{\frac{\alpha}{2}}$.\\
+
+\textbf{Example 2.}\,  Let\, $\vec{r}_1,\,\vec{r}_2,\,\vec{r}_3$ be the position vectors of three points in $\mathbb{R}^3$ and $r_1,\,r_2,\,r_3$ their lengths.\, Then the solid angle $\Omega$ of the tetrahedron \PMlinkescapetext{spanned} by the vectors $\vec{r_i}$ is obtained from the equation
+\begin{align}
+\tan\frac{\Omega}{2} \;=\; 
+\frac{\vec{r}_1\!\times\!\vec{r}_2\!\cdot\!\vec{r}_3}{(\vec{r}_1\!\cdot\!\vec{r}_2)r_3+(\vec{r}_2\!\cdot\!\vec{r}_3)r_1+(\vec{r}_3\!\cdot\!\vec{r}_1)r_2+r_1r_2r_3},
+\end{align}
+where the numerator of the \PMlinkescapetext{right hand side} is the triple scalar product of the vectors.\, This equation is expressed simplier using the unit vectors $\vec{u}_i$ corresponding $\vec{r}_i$:
+$$
+\tan\frac{\Omega}{2} \;=\; 
+ \frac{\vec{u}_1\!\times\!\vec{u}_2\!\cdot\!\vec{u}_3}
+  {1+\vec{u}_2\!\cdot\!\vec{u}_3+\vec{u}_3\!\cdot\!\vec{u}_1+\vec{u}_1\!\cdot\!\vec{u}_2}
+$$
+The result (2) is due to van Oosterom and Strackee 1983.\\
+
+
+\textbf{Example 3.}\,  Using (2), one can easily get the \PMlinkname{apical}{ConeInMathbbR3} solid angle of a \PMlinkname{right pyramid}{ConeInMathbbR3} with square base:
+        $$\Omega \;=\; 4\arctan{\frac{a^2}{2h\sqrt{2a^2+4h^2}}} \;=\; 4\arcsin\frac{a^2}{a^2+4h^2}$$
+Here $a$ is the side of the base square and $h$ is the \PMlinkname{height}{ConeInMathbbR3} of the pyramid.\, Cf. the solid angle of rectangular pyramid.
+
+
+
+
+\begin{thebibliography}{8}
+\bibitem{O}{\sc A. van Oosterom, J. Strackee}:\, A solid angle of a plane triangle.\; -- \emph{IEEE Trans. Biomed. Eng.} \textbf{30}:2 (1983); 125--126.
+\bibitem{G}{\sc M. S. Gossman, A. J. Pahikkala, M. B. Rising, P. H. McGinley}:\, Providing Solid Angle Formalism for    
+Skyshine Calculations.\; -- \emph{Journal of Applied Clinical Medical Physics.} \textbf{11}:4 (2010); 278--282.
+\end{thebibliography}
+
+
+%%%%%
+%%%%%
+\end{document}

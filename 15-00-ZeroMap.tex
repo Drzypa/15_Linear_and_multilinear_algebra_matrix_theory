@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ZeroMap}
+\pmcreated{2013-03-22 14:03:38}
+\pmmodified{2013-03-22 14:03:38}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{zero map}
+\pmrecord{6}{35416}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmrelated{ZeroVectorSpace}
+\pmrelated{ConstantFunction}
+\pmrelated{IdentityMap}
+\pmdefines{zero operator}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\R}[0]{\mathbb{R}}
+\newcommand{\C}[0]{\mathbb{C}}
+\newcommand{\N}[0]{\mathbb{N}}
+\newcommand{\Z}[0]{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+{\bf Definition}
+Suppose $X$ is a set, and $Y$ is a vector space with zero vector $0$. 
+If $Z$ is a map $Z:X\to Y$, such that $Z(x)=0$ for all $x$ in $X$,
+then $Z$ is a {\bf zero map}.
+
+\subsubsection{Examples}
+\begin{enumerate}
+\item On the set of non-invertible $n\times n$ matrices, the determinant
+is a zero map.
+\item If $X$ is the zero vector space, any linear map $T:X\to Y$ is
+a zero map. In fact, $T(0)=T(0\cdot 0)=0T(0)=0$. 
+\item If $X=Y$ and its field is $\R$ or $\C$, then the spectrum of $Z$ is
+$\{0\}$. 
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

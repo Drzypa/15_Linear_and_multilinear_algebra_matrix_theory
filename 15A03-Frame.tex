@@ -1,0 +1,228 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Frame}
+\pmcreated{2013-03-22 12:39:42}
+\pmmodified{2013-03-22 12:39:42}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{frame}
+\pmrecord{13}{32931}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmrelated{Vector2}
+\pmrelated{TensorArray}
+\pmrelated{BasicTensor}
+\pmdefines{coframe}
+\pmdefines{component}
+\pmdefines{coordinate}
+\pmdefines{transition matrix}
+\pmdefines{polyad}
+
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\tmat}{\mathcal{M}}
+\newcommand{\hbF}{\hat{\bF}}
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bzero}{\mathbf{0}}
+\newcommand{\du}[2]{^{#2}_{\hphantom{#2}\!#1}}
+\newcommand{\ud}[2]{_{#2}^{\hphantom{#2}\!#1}}
+\newcommand{\supp}[1]{^{(#1)}}
+\newcommand{\subp}[1]{_{(#1)}}
+\newcommand{\kfield}{\mathbb{K}}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{\PMlinkescapetext{{#1}}}
+\newcommand{\pln}[2]{\PMlinkname{#1}{#2}}
+\begin{document}
+\paragraph{Introduction}
+Frames and coframes are notions closely related to the notions of
+basis and dual basis.  As such, frames and coframes are needed to
+describe the connection between \PMlinkname{list vectors}{Vector2} and
+the more general \PMlinkname{abstract vectors}{VectorSpace}.  
+
+
+\paragraph{Frames and bases.}
+Let $\cU$ be a finite-dimensional vector space over a field $\kfield$,
+and let $I$ be a finite, totally ordered set of indices\footnote{It is
+  advantageous to allow general indexing sets, because one can
+  indicate the use of multiple frames of reference by employing
+  multiple, disjoint sets of indices.}, e.g.  $(1,2,\ldots,n)$.  We
+will call a mapping $\bF:I\rightarrow\cU$ a reference frame, or simply
+a frame.  To put it plainly, $\bF$ is just a list of elements of $\cU$
+with indices belong to $I$.  We will adopt a notation to reflect this
+and write $\bF_i$ instead of $\bF(i)$.  Subscripts are used when
+writing the frame elements because it is best to regard a frame as a
+row-vector\footnote{It is customary to use superscripts for the
+  components of a column vector, and subscripts for the components of
+  a row vector.  This is fully described in the
+\PMlinkname{vector entry}{Vector2}.}  whose entries happen to be elements of $\cU$,
+and write
+$$\bF = (\bF_1,\ldots,\bF_n).$$
+This is appropriate because
+every reference frame $\bF$ naturally corresponds to a linear
+mapping $\hbF:\kfield^I\rightarrow \cU$ defined by
+$$
+\ba \mapsto \sum_{i\in I} \ba^i\, \bF_i,\quad \ba\in \kfield^I.$$
+In other words, $\hbF$ is a linear form on $\kfield^I$ that takes
+values in $\cU$ instead of $\kfield$.  We use row vectors to represent
+linear forms, and that's why we write the frame as a row vector.
+
+We call $\bF$ a coordinate frame (equivalently, a basis), if $\hbF$ is
+an isomorphism of vector spaces.  Otherwise we call $\bF$ degenerate,
+incomplete, or both, depending on whether $\hbF$ fails to be,
+respectively, injective and surjective.
+
+\paragraph{Coframes and coordinates.}
+In cases where $\bF$ is a basis, the inverse isomorphism
+$$\hbF^{-1}:\cU\rightarrow \kfield^I$$
+is called the coordinate
+mapping.  It is cumbersome to work with this inverse explicitly, and
+instead we introduce linear forms $\bx^i\in \cU^*,\; i\in I$ defined
+by
+$$\bx^i:\bu\mapsto \hbF^{-1}(\bu)(i),\quad \bu\in \cU.$$
+Each
+$\bx^i,\; i\in I$ is called the $i\supth$ coordinate function
+relative to $\bF$, or simply the $i\supth$
+coordinate\footnote{Strictly speaking, we should be denote the coframe
+  by $\bx_\bF$ and the coordinate functions by $\bx^i_\bF$ so as
+  to reflect their dependence on the choice of reference frame.
+  Historically, writers have been loath to do this, preferring a
+  couple of different notational tricks to avoid ambiguity.  The
+  cleanest approach is to use different symbols, e.g.  $\bx^i$ versus
+  $\by^j$, to distinguish coordinates coming from different frames.
+  Another approach is to use distinct indexing sets; in this way the
+  indices themselves will indicate the choice of frame.  Say we have
+  two frames $\bF: I\rightarrow \cU$ and $\bG:J\rightarrow \cU$ with
+  $I$ and $J$ distinct finite sets.  We stipulate that the symbol $i$
+  refers to elements of $I$ and that $j$ refers to elements of $J$,
+  and write $\bx^i$ for coordinates relative to $\bF$ and $\bx^j$ for
+  coordinates relative to $\bG$.  That's the way it was done in all
+  the old-time geometry and physics papers, and is still largely the
+  way physicists go about writing coordinates.  Be that as it may, the
+  notation has its problems and is the subject of long-standing
+  controversy, named by mathematicians the debauche of indices. The
+  problem is that the notation employs the same symbol, namely $\bx$,
+  to refer to two different objects, namely a map with domain $I$ and
+  another map with domain $J$.  In practice, ambiguity is 
+  avoided because the old-time notation {\em never} refers to the
+  coframe (or indeed any tensor) without also writing the indices.
+  This is the classical way of the dummy variable, a cousin to the
+  $f(x)$ notation.  It creates some confusion for beginners, but with
+  a little practice it's a perfectly serviceable and useful way to
+  communicate.}.  In this way we obtain a mapping
+$$\bx:I\rightarrow \cU^*,\quad i\mapsto \bx^i$$
+called the {\em
+  coordinate coframe} or simply a {\em coframe}.  The forms $\bx^i,\,i
+\in I$ give a basis of $\cU^*$. It is the dual basis of $\bF_i,\,i \in
+I$, i.e.
+$$\bx^i(\bF_j) = \delta^i_j,\quad i,j\in I,$$
+where $\delta^i_j$ is the well-known Kronecker symbol.
+
+In full duality to the custom of writing frames as row-vectors, we
+write the coframe as a column vector whose components are the
+coordinate functions:
+$$
+\begin{pmatrix}
+  \bx^1\\ \bx^2\\ \vdots \\ \bx^n
+\end{pmatrix}.
+$$
+We identify of $\hbF^{-1}$ and $\bx$ with the above column-vector.
+This is quite natural because all of these objects are in natural
+correspondence with a $\kfield$-valued functions of two arguments,
+$$\cU\times I \rightarrow \kfield,$$
+that maps an abstract vector
+$\bu\in \cU$ and an index $i\in I$ to a scalar $\bx^i(\bu)$, called
+the $i\supth$ component of $\bu$ relative to the reference frame
+$\bF$.
+\paragraph{Change of frame.}
+Given two coordinate frames $\bF:I\rightarrow \cU$ and
+$\bG:J\rightarrow \cU$, one can easily show that $I$ and $J$ must
+have the same cardinality.  Letting $\bx^i,\,i\in I$ and $\by^j,\,j\in
+J$ denote the coordinates functions relative to $\bF$ and $\bG$,
+respectively, we define the transition matrix from $\bF$ to $\bG$ to
+be the matrix  
+$$\tmat:I\times J\rightarrow \kfield$$
+with entries
+$$\tmat^j_i = \by^j(\bF_i),\quad i\in I,\; j\in J.$$
+An equivalent description of the transition matrix is given by
+$$
+\by^j = \sum_{i\in I} \tmat^j_i\, \bx^i,\quad \mbox{for all }j\in J.
+$$
+
+
+It is also the custom to regard the elements of $I$ as indexing the
+columns of the matrix, while the elements of $J$ label the rows.
+Thus, for $I=(1,2,\ldots,n)$ and
+$J=(\bar{1},\bar{2},\ldots,\bar{n})$, we can write
+$$
+\begin{pmatrix}
+  \tmat^{\bar{1}}_1 & \ldots &\tmat^{\bar{1}}_n \\
+  \vdots & \ddots & \vdots \\
+  \tmat^{\bar{n}}_1 & \ldots &\tmat^{\bar{n}}_n
+\end{pmatrix} = 
+\begin{pmatrix}
+  \by^{\bar{1}} \\ \vdots \\ \by^{\bar{n}}
+\end{pmatrix}
+\begin{pmatrix}
+  \bF_1 & \ldots & \bF_n
+\end{pmatrix}.
+$$
+In this way we can describe the relation between coordinates
+relative to the two frames in terms of ordinary matrix multiplication.
+To wit, we can write
+$$
+\begin{pmatrix}
+  \by^{\bar{1}} \\ \vdots \\ \by^{\bar{n}}
+\end{pmatrix}
+=
+\begin{pmatrix}
+  \tmat^{\bar{1}}_1 & \ldots &\tmat^{\bar{1}}_n \\
+  \vdots & \ddots & \vdots \\
+  \tmat^{\bar{n}}_1 & \ldots &\tmat^{\bar{n}}_n
+\end{pmatrix}
+\begin{pmatrix}
+  \bx^1 \\ \vdots \\ \bx^n
+\end{pmatrix}
+$$
+
+\paragraph{Notes.}
+The term frame is often used to refer to objects that
+should properly be called a {\em moving frame}.  The latter can be
+thought of as a \PMlinkescapetext{field of frames}, or functions taking
+values in the space of all frames, and are fully described elsewhere.
+The confusion in terminology is unfortunate but quite common, and is
+related to the questionable practice of using the word {\em scalar}
+when referring to a {\em scalar field} (a.k.a. scalar-valued
+functions) and using the word {\em vector} when referring to a {\em
+  vector field.}
+
+We also mention that in the world of theoretical physics, the
+preferred terminology seems to be {\em polyad} and related
+specializations, rather than frame.  Most commonly used are {\em
+  dyad}, for a frame of two elements, and {\em tetrad} for a frame of
+four elements.
+%%%%%
+%%%%%
+\end{document}

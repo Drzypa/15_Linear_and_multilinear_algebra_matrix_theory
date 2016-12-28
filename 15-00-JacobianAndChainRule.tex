@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{JacobianAndChainRule}
+\pmcreated{2013-03-22 18:59:45}
+\pmmodified{2013-03-22 18:59:45}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Jacobian and chain rule}
+\pmrecord{4}{41863}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmclassification{msc}{26B05}
+\pmclassification{msc}{26B10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{connection}
+
+Let $u$, $v$ be differentiable functions of $x$, $y$ and $x$, $y$ be differentiable functions of $s$, $t$.\, Then the connection
+\begin{align}
+\frac{\partial(u,v)}{\partial(s,t)} \;=\; \frac{\partial(u,v)}{\partial(x,y)}\cdot\frac{\partial(x,y)}{\partial(s,t)}
+\end{align}
+between the Jacobian determinants is in \PMlinkescapetext{force}.\\
+
+\emph{Proof.}\, Starting from the right hand side of (1), where one can \PMlinkname{multiply the determinants}{Determinant2} similarly as the corresponding \PMlinkname{matrices}{MatrixMultiplication}, we have
+$$\left|\begin{matrix}
+u_x & u_y \\
+v_x & v_y \\
+\end{matrix}\right| \cdot
+\left|\begin{matrix}
+x_s & x_t \\
+y_s & y_t \\
+\end{matrix}\right| \;=\;
+\left|\begin{matrix}
+u_xx_s+u_yy_s & u_xx_t+u_yy_t \\
+v_xx_s+v_yy_s & v_xx_t+v_yy_t \\
+\end{matrix}\right| \;=\; 
+\left|\begin{matrix}
+u_s & u_t \\
+v_s & v_t \\
+\end{matrix}\right|. 
+$$
+Here, the last stage has been written according to the \PMlinkname{general chain rule}{ChainRuleSeveralVariables}.\, But thus we have arrived at the left hand side of the equation (1), which hereby has been proved.\\
+
+\textbf{Remark.}\, The rule (1) is only a visualisation of the more general one concerning the case of functions of $n$ variables.
+%%%%%
+%%%%%
+\end{document}

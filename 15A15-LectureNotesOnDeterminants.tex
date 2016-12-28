@@ -1,0 +1,644 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LectureNotesOnDeterminants}
+\pmcreated{2013-03-22 17:33:37}
+\pmmodified{2013-03-22 17:33:37}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{lecture notes on determinants}
+\pmrecord{6}{39967}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\bzero}{\boldsymbol{0}}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\ha}{\hat{\ba}}
+\newcommand{\hA}{\hat{\bA}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\be}{\mathbf{e}}
+\newcommand{\he}{\hat{\be}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\adj}{\operatorname{adj}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\nullity}{\operatorname{nullity}}
+\newcommand{\col}{\operatorname{col}}
+\newcommand{\nul}{\operatorname{nul}}
+\newcommand{\row}{\operatorname{row}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\bmat}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand{\bnmat}[1]{\left[\!\!\begin{array}{rrrr}#1\end{array}\!\!\right]}
+\newcommand{\bmatg}[2]{\left[\!\!\begin{array}{#1}#2\end{array}\!\!\right]}
+\newcommand{\bvec}[1]{\left[\!\!\begin{array}{r}#1\end{array}\!\!\right]}
+\newcommand{\vmat}[1]{\left|\begin{matrix}#1\end{matrix}\right|}
+
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+\section{Introduction.}  The determinant operation is an algebraic
+formula involving addition and multiplication that combines the $n^2$
+entries of an $n\times n$ matrix of numbers into a single number.  
+The determinant has many useful and surprising properties.  In
+particular the determinant ``determines'' whether or not a matrix is
+singular.  If the determinant is zero, the matrix is singular; if not,
+the matrix is invertible.
+
+\section{Notation.} 
+We can regard an $n\times n$ matrix $A$ as an entity in and of itself,
+as a collection of $n^2$ numbers arranged in a table, or as a list of
+column vectors:
+\[A= \bmat{a_{11} & a_{12} &\ldots & a_{1n} \\
+  a_{21} & a_{22} & \ldots & a_{2n} \\
+  \vdots & \vdots &\ddots & \vdots \\ a_{n1} & a_{n2} & \ldots &
+  a_{nn}} = \bmat{ \ba_1, \ba_2,\ldots, \ba_n}, \] where
+\[ \ba_1 = \bmat{a_{11}\\ \vdots \\ a_{n1}} = a_{11} \be_1 + \cdots
+a_{n1} \be_n,\quad
+\ba_2 = \bmat{a_{12}\\ \vdots \\ a_{n2}} = a_{12} \be_1 + \cdots
+a_{n2} \be_n,\quad \text{etc.}\]
+Correspondingly, we employ the following notation for the determinant:
+  \[\det(A)=\vmat{a_{11} & \ldots & a_{1n} \\
+    \vdots & \ddots & \vdots \\ a_{n1} & \ldots & a_{nn}} 
+  = \vmat{ \ba_1 ,  \ldots, \ba_n}.\]
+
+\section{Defining properties.}  The determinant operation obeys
+certain key properties.  The correct application of these rules allows
+us to evaluate the determinant of a given square matrix.  For the sake
+of simplicity, we describe these rules for the case of the $2\times 2$
+and $3\times 3$
+determinants.  Determinants of larger sizes obey analogous rules.
+
+\begin{enumerate}
+\item \textbf{Multi-linearity}.  The determinant operation is linear
+  in each of its vector arguments.
+  \begin{enumerate}
+  \item The determinant distributes over addition.  Thus, for a
+    $3\times 3$ matrix $A$ and a column vector $\bb\in \R^3$, we have
+    \begin{align*}
+      \vmat{\ba_1 + \bb , \ba_2, \ba_3} &= \vmat{\ba_1,\ba_2,\ba_3} +
+      \vmat{\bb,\ba_2,\ba_3} \\
+      \vmat{\ba_1 , \ba_2 + \bb, \ba_3} &= \vmat{\ba_1,\ba_2,\ba_3} +
+      \vmat{\ba_1,\bb,\ba_3} \\
+      \vmat{\ba_1 , \ba_2, \ba_3 + \bb} &= \vmat{\ba_1,\ba_2,\ba_3} +
+      \vmat{\ba_1,\ba_2,\bb}     
+    \end{align*}
+    Thus, if $A,B$ are two $2\times 2$ matrices the determinant of the
+    sum $A+B$ will have a total of $4$ terms (think FOIL):
+    \begin{align*}
+      \det(A+B) &= \vmat{\ba_1+\bb_1, \ba_2+\bb_2} \\
+      &= \vmat{\ba_1, \ba_2} + \vmat{\ba_1, \bb_2} +
+      \vmat{\bb_1,\ba_2}+\vmat{\bb_1, \bb_2}\\
+      &= \det(A) + \vmat{\ba_1, \bb_2} +
+      \vmat{\bb_1,\ba_2}+\det(B)
+    \end{align*}
+    Warning: the formula $\det(A+B)=\det(A)+\det(B)$ is most certainly
+    wrong; it has the F and the L terms from FOIL, but is missing the
+    O and the I terms.  Remember, the determinant is not linear; it's
+    multi-linear!
+  \item Scaling one column of a matrix, scales the determinant by the
+    same amount.  Thus, for a scalar $k\in \R$, we have
+    \[ \vmat{k \ba_1, \ba_2, \ba_3} = k \vmat{\ba_1,\ba_2, \ba_3} =
+    k\det(A).\]
+    Similarly,
+    \[ \vmat{\ba_1, k\ba_2, \ba_3} = \vmat{\ba_1,\ba_2, k \ba_3} = k
+    \det(A). \]
+    Let's see what happens to the determinant if we scale the entire
+    matrix:
+    \begin{align*}
+      \det(kA ) &= \vmat{k\ba_1, k\ba_2, k\ba_3} \\
+      &= k \vmat{\ba_1, k
+      \ba_2, k \ba_3}= k^2 \vmat{\ba_1, \ba_2, k \ba_3}= k^3
+    \vmat{\ba_1, \ba_2, \ba_3} \\&= k^3 \det(A).      
+    \end{align*}
+  \item A matrix with a zero column has a zero determinant.  For
+    example,
+    \[ \vmat{\bzero, \ba_2, \ba_3} = \vmat{0 & a_{12} & a_{13} \\ 0 & a_{22} & a_{23} \\ 0 & a_{32}
+      & a_{33}} = 0.\]
+  \end{enumerate}
+\item \textbf{Skew-symmetry.}  A multi-variable function or formula is
+  called symmetric if it does not depend on the order of the
+  arguments/variables.  For example, ordinary addition and
+  multiplication are symmetric operations.  A multi-variable function
+  is said to be skew-symmetric if changing the order of any two
+  arguments changes the sign of the operation.  The 3-dimensional
+  cross-product is an example of a skew-symmetric operation:
+  \[ \bu \times \bv = - \bv\times \bu,\quad \bu,\bv \in \R^3.\]
+  Likewise, the $n\times n$ determinant is a skew-symmetric operation,
+  albeit one with $n$ arguments.
+
+  Thus, for a $2\times 2$ matrix $A$ we have
+  \[ \det(A) = \vmat{\ba_1, \ba_2} = - \vmat{\ba_2, \ba_1}.\] There
+  are six possible ways to rearrange the columns of a $3\times 3$
+  matrix.  Correspondingly, for a $3\times 3$ matrix $A$ we have
+  \begin{align*}
+    \det(A) &= \vmat{\ba_1, \ba_2, \ba_3}\\
+    &=-\vmat{\ba_2, \ba_1, \ba_3} = -\vmat{\ba_3, \ba_2,
+      \ba_1} = -\vmat{\ba_1, \ba_3, \ba_2} \\
+    &= +\vmat{\ba_2, \ba_3,
+      \ba_1} = +\vmat{\ba_3, \ba_1, \ba_2} 
+  \end{align*}
+  The determinants in the 3rd line are equal to $\det(A)$ because, in
+  each case, the matrices in question differ from $A$ by 2 column
+  exchanges.
+
+  Skew-symmetry of the determinant operation has an important consequence: a
+  matrix with two identical columns has zero determinant.  Consider,
+  for example a $3\times 3$ matrix $A$ with identical first and second
+  columns.  By skew-symmetry, if we exchange the first two columns we
+  negate the value of the determinant:
+  \[ \vmat{\ba_1, \ba_1, \ba_3} = - \vmat{\ba_1,\ba_1, \ba_3}.\]
+  Therefore, $\det(A)$ is equal to its negation.  This can only mean
+  that $\det(A) = 0$.
+\item \textbf{The identity  rule.} The determinant of the identity
+  matrix is equal to $1$.  Written out in symbols for the
+  $3\times 3$ case, this means that
+  \[ \det(I_3) = \vmat{\be_1, \be_2, \be_3} = 1.\]
+\end{enumerate}
+
+\section{Evaluation.}  The above properties dictate the rules by
+which we evaluate a determinant.  Overall, the process is very
+reminiscent of binomial expansion --- the algebra that goes into
+expanding an expression like $(x+y)^3$.  The essential difference in
+evaluating determinants is that for scalar algebra the order of the
+variables is unimportant: $x\cdot y = y\cdot x$.  However, when we
+evaluate determinants, the choice of order can introduce a minus sign,
+or result in a zero answer, if some of the arguments are repeated.
+
+Let's see how evaluation works for $2\times 2$ determinants.
+\begin{align*}
+    \vmat{ a& b\\c&d} &= \vmat{ a\,\be_1 + c\,\be_2, b\,\be_1 + d\,\be_2}  \\
+    &= ab \vmat{ \be_1, \be_1} +  ad \vmat{ \be_1, \be_2} + cb \vmat{
+      \be_2, \be_1} + 
+    cd \vmat{ \be_2,  \be_2} \\
+    &= 0+ad  \vmat{ \be_1, \be_1}  -
+    bc \vmat{ \be_1,  \be_2}+0\\
+     &= (ad-bc) \vmat{ \be_1, \be_2} \\
+     &= ad-bc    
+\end{align*}
+In the above evaluation we used skew-symmetry 3 times:
+\[ \vmat{\be_1,\be_1} = 0,\quad \vmat{\be_2, \be_2} = 0,\quad
+\vmat{\be_2,\be_1} = - \vmat{\be_1, \be_2}.\]
+At the very end, we also used the identity rule.
+It is useful  to contrast the above manipulations with the expansion of
+\[ (ax+cy)(bx+dy) = ab x^2 + (ac+bd) xy + cd y^2.\]
+The distributive step is the same. The different answers arise because
+ordinary multiplication is a symmetric operation.
+
+
+Next, let's see how to evaluate a $3\times 3$ determinant.
+\begin{align*}
+  \vmat{ a_1 & b_1 & c_1 \\
+    a_2 & b_2 & c_2 \\
+    a_3 & b_3 & c_3 } &=
+  \vmat{ a_1 \be_1 + a_2 \be_2 + a_3 \be_3, b_1 \be_1 + b_2 \be_2 + b_3
+  \be_3, c_1 \be_1 + c_2 \be_2 + c_3 \be_3 } 
+\end{align*}
+The symmetric analogue would be an expansion of the form
+\[ ( a_1 x + a_2 y + a_3 z)(b_1 x + b_2 y + b_3 z)(c_1 x + c_2 y + c_3
+z ) = a_1 b_1 c_1 x^3 + \cdots \] In both cases, if we were to expand
+fully, we would get an expression involving $3\cdot 3\cdot 3=27$
+terms.  However, skew-symmetry tells us that a determinant that
+involves repeated standard vectors will equal to zero.  Thus, from the
+27 terms we only keep the 6 terms that involve all three standard
+standard vectors:
+\begin{align*}
+  \vmat{ a_1 & b_1 & c_1 \\
+    a_2 & b_2 & c_2 \\
+    a_3 & b_3 & c_3 } &=
+  a_1 b_2 c_3 \vmat{\be_1,\be_2,\be_3} + a_2 b_3 c_1
+  \vmat{\be_2,\be_3,\be_1} + a_3 b_1 c_2 \vmat{\be_3,\be_1,\be_2} + \\
+  &\quad + a_1 b_3 c_2 \vmat{\be_1, \be_3, \be_2} + a_2 b_1 c_3
+  \vmat{\be_2,\be_1, \be_3} + a_3 b_2 c_1 \vmat{\be_3, \be_2, \be_1}
+\end{align*}
+Using skew symmetry once again (one flip gives a minus sign; two flips
+give a plus sign), and the identity rule we obtain
+\begin{align*}
+  \vmat{ a_1 & b_1 & c_1 \\
+    a_2 & b_2 & c_2 \\
+    a_3 & b_3 & c_3 } &= a_1 b_2 c_3 + a_2 b_3 c_1 + a_3 b_1 c_2 - a_1
+  b_3 c_2 - a_2 b_1 c_3- a_3 b_2 c_1
+\end{align*}
+Notice that each of the 6 terms in the above expression involves an
+entry from all 3 rows and from all 3 columns; it's a sudoku kind of
+thing.  The choice of sign depends on the number of column flips
+that takes the corresponding list of standard vectors to the identity
+matrix; an even number of flips gives a $+$, an odd number a $-1$.
+
+\section{Row operations.}
+Above, we observed that the terms in the final expression treat rows
+and columns on an equal footing.  
+\begin{theorem}
+  Let $A$ be a square matrix.  Then, $\det(A) = \det(A^T)$.
+\end{theorem}
+\noindent
+In other words, transposing a matrix does not alter the value of its
+determinant.  One consequence of the row-column symmetry is that
+everything one can say about determinants in terms of columns, one can
+say using rows.  In particular, we can state some useful facts about
+the effect of row operations on the value of a determinant.
+
+
+Again, for the sake of simplicity we focus on the $3\times 3$ case.
+Let $A$ be a $3\times 3$ matrix, expressed as a column of row vectors.
+The hats above the symbols are there to remind us that we are dealing
+with row rather than column vectors.
+\begin{align*}
+  &A= \bmat{a_{11} & a_{12} & a_{13} \\
+  a_{21} & a_{22} & a_{23} \\
+  a_{31} & a_{32}&  a_{33}} = \bmat{ \ha_1\\ \ha_2\\ \ha_3};\\
+  &\ha_1= \bmat{a_{11} , a_{12}, a_{13}},\quad \ha_2 =
+  \bmat{a_{21} , a_{22},  a_{23}},\quad \ha_3 =
+  \bmat{a_{31} , a_{32}, a_{33}}.
+\end{align*}
+Below we list the effect of each of the 3 types  of elementary row
+operations on the determinant of a matrix, and a provide an explanation.
+\begin{enumerate}
+\item Row replacements do not affect the value
+  of the determinant.  Consider, for example the effect of a row
+  replacement operation $R_2 \to 
+  R_2 + k R_1$. Here $k$ is a scalar and $E$ is an elementary matrix
+  that encodes the row operation in question:
+  \begin{align*}
+    E=\bmat{1&0&0\\k&1&0\\0&0&1},\qquad
+    \det( E A)= \vmat{\ha_1\\ \ha_2 + k \ha_1\\ \ha_3} =
+    \vmat{\ha_1\\\ha_2\\ \ha_3} + k\vmat{\ha_1\\ \ha_1\\\ha_3} = \det(A).
+  \end{align*}
+\item Row scaling operations scale the determinant by the same
+  factor.  Consider, for example, the operation $R_2\to k R_2$:
+  \begin{align*}
+    E&=\bmat{1&0&0\\0&k&0\\0&0&1}, \qquad \det( E A) = \vmat{\ha_1\\ k\ha_2\\
+      \ha_3} = k\vmat{\ha_1\\\ha_2\\ \ha_3} = k\det(A)
+  \end{align*}
+\item A row exchange operation negates the determinant.  Consider, for
+  example,the exchange of rows $1$ and $3$:
+  \begin{align*}
+    E&=\bmat{0&0&1\\0&1&0\\1&0&0}, \qquad \det( E A) = \vmat{\ha_3\\ \ha_2\\
+      \ha_1} = -\vmat{\ha_1\\\ha_2\\ \ha_3} = -\det(A)
+  \end{align*}
+\end{enumerate}
+Above, if we take $A$ to be the identity matrix, we obtain the value
+for the determinant of an elementary matrix.  We summarize as follows.\\
+\begin{theorem} 
+\label{thm:elemmat}
+Let $E$ be an elementary matrix. Then,
+  \[ \det(EA) = \det(E) \det(A)\] where
+\[ \det(E) =
+\begin{cases}
+  1 & \text{if $E$ encodes a row replacement;} \\
+  k & \text{if $E$ encodes a scaling of a particular row by a factor
+    of $k\neq 0$;}\\
+  -1 & \text{if $E$ encodes the exchange of two rows.}
+\end{cases}\]
+\end{theorem}
+
+Of course, a sequence of elementary row operations can be used to
+transform every matrix into reduced echelon form.  This is a useful
+observation, because it gives us an alternative method for computing
+determinants; namely, we can compute the determinant of an $n\times n$
+square matrix $A$ by row reducing $A$ to row-echelon form.  Let's
+summarize this process by writing
+\begin{align*}
+  E_k \cdots E_1 A &= U,\\
+  \det(E_k) \cdots \det(E_1) \det(A) &= \det(U),
+\end{align*}
+where $E_1,\ldots, E_k$ is a sequence of elementary row operations, and
+where $U$ is a matrix in reduced echelon form. If $A$ is singular,
+then the bottom row of $U$ will
+consist of zeros, and hence $\det(U) =0$.  Since the determinant of an
+elementary matrix is never zero, this implies that $\det(A) = 0$,
+also.
+
+If $A$ is invertible, then $U$ is the identity matrix, and hence
+\[ \det(E_k) \cdots \det(E_1) \det(A) = 1.\]
+Since the determinant of an elementary matrix is explicitly known (see
+Theorem \ref{thm:elemmat}), this
+gives us a way of calculating $\det(A)$.
+We are also in a position to prove  some important theorems.
+\begin{theorem} Let $A$ be a square matrix.  Then, $\det(A)=0$ if
+and only if $A$ is singular.
+\end{theorem}
+\begin{theorem}
+  Let $A, B$ be $n\times n$ matrices.  Then, 
+  \[ \det(AB) = \det(A) \det(B).\]
+\end{theorem}
+\noindent\emph{Proof.}  As above, Let $E_1, \ldots, E_k$ be the elementary
+matrices that row reduce $A$ to reduced echelon form;
+\[ E_k \cdots E_1 A = U. \]
+Above, we showed that
+\[ \det(UB) = \det(E_k \cdots E_1 A B) = \det(E_k) \cdots \det(E_1) \det(AB).\]
+If $A$ is singular, then the bottom row of $U$ will be zero, and so
+will the bottom row of $UB$.  Hence, in this case, $\det(AB)=0=\det(A)
+\det(B)$, because $\det(A)=0$, also.  Suppose then that $A$ is
+invertible.  This means that $U$ is the identity matrix, and hence
+\[ \det(B) = \det(E_k) \cdots \det(E_1) \det(AB).\]
+However,
+\[ \det(E_k) \cdots \det(E_1) =1/\det(A),\]
+and the desired conclusion follows.
+\begin{theorem}
+  Let $A$ be an invertible matrix.  Then 
+  \[ \det(A^{-1}) = 1/\det(A).\]
+\end{theorem}
+\noindent
+\emph{Proof.}
+  By the above theorem,
+  \begin{align*}
+    1&= \det(I) = \det(A A^{-1}) \\
+    &= \det(A) \det(A^{-1}).
+  \end{align*}
+
+\section{Cofactor expansion.}
+Cofactor expansion is another method for evaluating determinants.  It
+organizes the computation of larger determinants, and can be useful in
+calculating the determinants of matrices containing zero entries.  
+At this point, we introduce some useful jargon.  Given an $n\times n$
+matrix $A$, we call the $(n-1)\times(n-1)$ matrix obtained by deleting
+row $i$ and column $j$ the $ij$ minor of $A$, and denote it by
+$A_{ij}$.  We also set
+\[ C_{ij} = (-1)^{i+j} \det(A_{ij}) \] and call $C_{ij}$ the $ij$
+\emph{signed cofactor} of $A$.  
+We are going to prove the following.
+\begin{theorem}
+  Consider a $3\times 3$ matrix
+  \[ A = \bmat{a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33} }.\] The determinant of $A$ can be
+  obtained by means of cofactor expansion along the first column:
+  \[ \det(A) = a_{11} C_{11} + a_{21} C_{21} + a_{31} C_{31}  = a_{11} \vmat{ a_{22} & a_{23} \\ a_{32} & a_{33}}
+  - a_{21} \vmat{a_{12} & a_{13} \\ a_{32} & a_{33}} 
+  + a_{31} \vmat{a_{12} & a_{13} \\ a_{22} &a_{23}};\]
+  or, along the first row:
+  \[ \det(A) = a_{11} C_{11} + a_{12} C_{12} + a_{13} C_{13}  = a_{11} \vmat{ a_{22} & a_{23} \\ a_{32} & a_{33}}
+  - a_{12} \vmat{a_{21} & a_{23} \\ a_{31} & a_{33}} 
+  + a_{13} \vmat{a_{21} & a_{22} \\ a_{31} &a_{32}}.\]
+  More generally, the determinant of an $n\times n$ matrix can be
+  obtained by cofactor expansion along  any column $j$:
+  \[ \det(A) = a_{1j} C_{1j} + a_{2j} C_{2j} + \cdots + a_{nj}
+  C_{nj},\quad j=1,2,\ldots,n;\]
+  or, along any  row $i$:
+  \[ \det(A) = a_{i1} C_{i1} + a_{i2} C_{i2} +\cdots +  a_{in}
+  C_{in},\quad i=1,2,\ldots,n.\]
+\end{theorem}
+\noindent
+The proof works by writing 
+\[ A = \bmat{\ba_1, \ba_2, \ba_3},\quad \ba_1 = a_{11} \be_1+ a_{21}
+\be_2 + a_{31} \be_3,\] and then using multi-linearity:
+\begin{align*}
+\vmat{ a_{11}&a_{12}& a_{13} \\
+    a_{21}&a_{22} & a_{23} \\
+    a_{31}&a_{32} & a_{33}}
+  &= \vmat{ \ba_1, \ba_2, \ba_3} \\
+  &= a_{11} \vmat{\be_1, \ba_2,
+    \ba_3} + a_{21} \vmat{\be_2, \ba_2, \ba_3} +a_{31}
+  \vmat{\be_3,\ba_2,\ba_3} \\
+  &= a_{11}
+  \vmat{ 1&a_{12}& a_{13} \\
+    0&a_{22} & a_{23} \\
+    0&a_{32} & a_{33}} + a_{21}
+  \vmat{ 0&a_{12}& a_{13} \\
+    1&a_{22} & a_{23} \\
+    0&a_{32} & a_{33}} + a_{31}
+  \vmat{ 0&a_{12}& a_{13} \\
+    0&a_{22} & a_{23} \\
+    1&a_{32} & a_{33}}\\
+  &= a_{11} \vmat{ a_{22} & a_{23} \\ a_{32} & a_{33}}
+  - a_{21} \vmat{a_{12} & a_{13} \\ a_{32} & a_{33}} 
+  + a_{31} \vmat{a_{12} & a_{23} \\ a_{13} &a_{23}} \\
+  &= a_{11} C_{11} + a_{21} C_{21} + a_{31} C_{31}.
+\end{align*}
+The intermediate steps, namely
+\[ \vmat{\be_1, \ba_2, \ba_3} = C_{11},\quad \vmat{\be_2, \ba_2, \ba_3}  = C_{21},\quad \vmat{\be_3, \ba_2, \ba_3} = C_{31}.\]
+need to be explained.
+\begin{theorem}
+  \label{thm:cofactor}
+  Let $A=\bmat{\ba_1,\ba_2,\ba_3,\ldots, \ba_n}$ be an $n\times n$ matrix.
+  Then, 
+  \begin{align*}
+    &\vmat{\be_i,\ba_2,\ba_3 \ldots, \ba_n} = C_{i1},\\
+    &\vmat{\ba_1,\be_i, \ba_3,\ldots, \ba_n} = C_{i2},\\
+    &\vmat{\ba_1,\ba_2, \be_i,\ldots, \ba_n} = C_{i3},\\
+    &\qquad \text{etc}    
+  \end{align*}
+\end{theorem}
+\noindent\emph{Proof.} Expanding $\vmat{\be_1, \ba_2, \ba_3}$
+we obtain 9 terms:
+\[ \vmat{\be_1, \ba_2, \ba_3} = \vmat{\be_1, a_{12} \be_1 + a_{22}
+  \be_2 + a_{32} \be_3, a_{13} \be_1 + a_{23} \be_2 + a_{33} \be_3}.\]
+However, there can't be any terms with a double occurrence of $\be_1$,
+and so we end up evaluating a $2\times 2$ determinant:
+\begin{align*}
+  \vmat{\be_1, \ba_2, \ba_3} &= \vmat{\be_1,a_{22}
+    \be_2 + a_{32} \be_3, a_{23} \be_2 + a_{33} \be_3} \\
+  &= a_{22} a_{33} \vmat{\be_1, \be_2, \be_3}  + a_{22} a_{23}
+  \vmat{\be_1, \be_2, \be_2} + a_{32} a_{23} \vmat{\be_1, \be_3, \be_2}
+  + a_{32} a_{33} \vmat{\be_1, \be_3, \be_3} \\
+  &= \vmat{a_{22} & a_{23} \\ a_{32} & a_{33}}\\
+  &= C_{11}
+\end{align*}
+Similarly, 
+\begin{align*}
+  &\vmat{\be_2, \ba_2, \ba_3} = -\vmat{\ba_2, \be_2, \ba_3} = -
+  \vmat{a_{12} & 0& a_{13}\\a_{22} & 1 & a_{23} \\ a_{32}& 0 &
+    a_{33}}= - \vmat{a_{12} & a_{13} \\ a_{32} & a_{33}} = C_{21}.\\
+  & \vmat{\be_3, \ba_2, \ba_3} = -\vmat{\ba_2, \be_3, \ba_3} = +
+  \vmat{\ba_2,\ba_3, \be_3}
+  = +
+  \vmat{a_{12} &  a_{13}&0\\a_{22} &  a_{23}&0 \\ a_{32}&  a_{33}&1}= 
+  \vmat{a_{12} & a_{13} \\ a_{22} & a_{23}} = C_{31}.
+\end{align*}
+This argument generalizes to matrices of arbitrary size.
+
+
+Next, by way of example, let's consider the expansion of a $3\times 3$
+matrix along the 2nd column:
+\begin{align*}
+\vmat{ a_{11}&a_{12}& a_{13} \\
+    a_{21}&a_{22} & a_{23} \\
+    a_{31}&a_{32} & a_{33}}
+  &= \vmat{ \ba_1, \ba_2, \ba_3}  = \vmat{\ba_1, a_{12} \be_1+ a_{22}
+    \be_2 + a_{32} \be_3, \ba_3}  \\
+  &= a_{12} \vmat{\ba_1, \be_1,
+    \ba_3} + a_{22} \vmat{\ba_1, \be_2, \ba_3} +a_{32}
+  \vmat{\ba_1,\be_3,\ba_3} \\
+  &= a_{12}
+  \vmat{ a_{11}&1& a_{13} \\
+    a_{21}&0 & a_{23} \\
+    a_{31}&0 & a_{33}} + a_{22}
+  \vmat{ a_{11}&0& a_{13} \\
+    a_{21}&1 & a_{23} \\
+    a_{31}&0 & a_{33}} + a_{32}
+  \vmat{ a_{11}&0& a_{13} \\
+    a_{21}&0 & a_{23} \\
+    a_{31}&1 & a_{33}}\\
+  &= a_{12} \vmat{ a_{21} & a_{23} \\ a_{31} & a_{33}}
+  - a_{22} \vmat{a_{11} & a_{13} \\ a_{31} & a_{33}} 
+  + a_{32} \vmat{a_{11} & a_{13} \\ a_{21} &a_{23}} \\
+  &= a_{12} C_{12} + a_{22} C_{22} + a_{32} C_{32}.
+\end{align*}
+The above argument generalizes to expansions along any column, and
+indeed to expansions of a matrix of arbitrary size.  
+For
+example, for a $4\times 4$ matrix we write
+\[\ba_1 = a_{11}\be_1 a_{21}  \be_2 + a_{31} \be_3 + a_{41} \be_4\]
+and use multi-linearity to obtain
+\begin{align*}
+&\vmat{ a_{11}&a_{12}& a_{13} & a_{14} \\
+    a_{21}&a_{22} & a_{23} & a_{24} \\
+    a_{31}&a_{32} & a_{33} & a_{34} \\
+  a_{41} & a_{42} & a_{43} & a_{44}}
+  = \vmat{ \ba_1, \ba_2, \ba_3,\ba_4} \\
+ &\quad = a_{11} \vmat{\be_1, \ba_2,
+    \ba_3,\ba_4} + a_{21} \vmat{\be_2, \ba_2, \ba_3,\ba_4} +a_{31}
+  \vmat{\be_3,\ba_2,\ba_3,\ba_4}+a_{41} \vmat{\be_4,\ba_2, \ba_3, \ba_4} \\
+  & \quad = a_{11} C_{11} + a_{21} C_{21} + a_{31} C_{31}+a_{41} C_{41}.
+\end{align*}
+Working with row vectors, the same argument also establishes the
+validity of cofactor expansion along rows.  For example, here is the
+derivation of
+cofactor expansion along the 2nd row of a $3\times 3$ matrix:
+\begin{align*}
+\vmat{ a_{11}&a_{12}& a_{13} \\
+    a_{21}&a_{22} & a_{23} \\
+    a_{31}&a_{32} & a_{33}}
+  &= \vmat{ \ha_1\\ \ha_2\\ \ha_3}  = \vmat{\ha_1\\ a_{21} \he_1+ a_{22}
+    \he_2 + a_{23} \he_3 \\ \ha_3}  \\
+  &= a_{21} \vmat{\ha_1\\ \he_1\\
+    \ha_3} + a_{22} \vmat{\ha_1\\ \he_2\\ \ha_3} +a_{23}
+  \vmat{\ha_1\\ \he_3\\ \ha_3} \\
+  &= a_{21} C_{21} + a_{22} C_{22} + a_{23} C_{23}.
+\end{align*}
+Here $\he_i = \be_i^T$ denote the elementary row vectors.
+
+Here is a useful theorem about determinants that can be proved using
+cofactor expansions.
+\begin{theorem}
+The determinant of an upper
+   triangular matrix is the product of the diagonal entries.
+\end{theorem}
+Consider, for example the determinant of the following $4\times 4$
+upper triangular matrix; the stars indicate an arbitrary number.  We
+repeatedly use cofactor expansion along the first column.  The
+multiple zeros mean that, each time, the cofactor expansion has only one term.
+\begin{align*}
+ \vmat{a&*&*&*\\0&b&*&*&\\0&0&c&*\\ 0&0&0&d} &=
+ a \vmat{b&*&*\\0&c&*\\0&0&d} \\
+ &= ab \vmat{c&*\\0&d} \\
+ &= abcd  
+\end{align*}
+
+
+\section{The adjugate matrix.}
+The cofactors $C_{ij}$ of an $n\times n$ matrix $A$ can be arranged
+into an $n\times n$ matrix, called $\adj A$, the adjugate of $A$.  In
+the $3\times 3$ case we define
+\[ \adj A =  \bmat{C_{11} & C_{21} & C_{31} \\ C_{12} & C_{22} & C_{32}\\
+    C_{13} & C_{23} & C_{33} } .\]
+Note that the entries of $\adj A$ are indexed differently than the
+entries of $A$.  For $A$, the entry in the $i$-th row and $j$-th
+column is denoted by $a_{ij}$.  However the cofactor $C_{ij}$ is
+placed in row $j$ and column $i$.  Remarkably, the matrix of cofactors
+$\adj A$ is closely related to the inverse of $A$.
+\begin{theorem}
+  Let $A$ be an $n\times n$ matrix.  Then, $A \adj A = \det(A) I$.
+  Furthermore, if $A$ is invertible, then $A^{-1} = (1/\det(A)) \adj
+  A$.  
+\end{theorem}
+\noindent Let's consider the proof for the $3\times 3$ case.  We aim
+to show that
+\[ 
+\bmat{C_{11} & C_{21} & C_{31} \\ C_{12} & C_{22} & C_{32}\\
+  C_{13} & C_{23} & C_{33} } \bmat{a_{11} & a_{12} & a_{13} \\
+  a_{21} & a_{22} & a_{23}\\
+  a_{31} & a_{32} & a_{33} } =
+\bmat{\det(A)&0&0\\0&\det(A)&0\\0&0&\det(A)}\] Writing $A=\vmat{\ba_1,
+  \ba_2, \ba_3}$, using the properties of the determinant and Theorem
+\ref{thm:cofactor}
+\begin{align*}
+  \det(A)=\vmat{ \ba_1, \ba_2, \ba_3} &= a_{11} \vmat{ \be_1,\ba_2,
+    \ba_3} +
+  a_{21}  \vmat{ \be_2,\ba_2, \ba_3} + a_{31} \vmat{\be_3,\ba_2, \ba_3}\\
+  &=a_{11} C_{11} + a_{21} C_{21} + a_{31} C_{31} .\\
+  0=\vmat{ \ba_1, \ba_1, \ba_3} &= a_{11} \vmat{ \ba_1,\be_1, \ba_3} +
+  a_{21} \vmat{
+    \ba_1,\be_2, \ba_3} + a_{31} \vmat{\ba_1,\be_3, \ba_3}\\
+  &=a_{11} C_{12} + a_{21} C_{22} + a_{31} C_{32} .\\
+  0=\vmat{ \ba_1, \ba_2, \ba_1} &= a_{11} \vmat{ \ba_1,\ba_2,\be_1} +
+  a_{21} \vmat{
+    \ba_1,\ba_2,\be_2} + a_{31} \vmat{\ba_1,\ba_2,\be_3}\\
+  &=a_{11} C_{13} + a_{21} C_{23} + a_{31} C_{33} .
+\end{align*}
+This gives us the first column of the multiplication.  To obtain the
+second column, we observe
+\begin{align*}
+  0=\vmat{ \ba_2, \ba_2, \ba_3} &= a_{12} \vmat{ \be_1, \ba_2, \ba_3} + a_{22}
+  \vmat{ \be_2, \ba_2, \ba_3} + a_{32} \vmat{\be_3,\ba_2, \ba_3}\\
+  &=a_{12} C_{11} + a_{22} C_{21} + a_{32} C_{31} .\\
+  \det(A)=\vmat{ \ba_1, \ba_2, \ba_3} &= a_{12} \vmat{ \ba_1,\be_1, \ba_3} +
+  a_{22}
+  \vmat{ \ba_1,\be_2, \ba_3} + a_{32} \vmat{\ba_1,\be_3, \ba_3}\\
+  &=a_{12} C_{12} + a_{22} C_{22} + a_{32}
+  C_{32} .\\
+  0=\vmat{ \ba_1, \ba_2, \ba_2} &= a_{12} \vmat{ \ba_1, \ba_2, \be_1} + a_{22}
+  \vmat{ \ba_1, \ba_2, \be_2} + a_{32} \vmat{\ba_1,\ba_2, \be_3}\\
+  &=a_{12} C_{13} + a_{22} C_{23} + a_{31} C_{33} .
+\end{align*}
+The values in the 3rd column are established in a similar fashion.
+\section{Cramer's rule}
+We can also use determinants and cofactors to solve a linear system
+$A\bx=\bb$, where $A$ is an invertible, square matrix.  
+Of course, if $A$ is invertible, then a solution exists and is
+unique;  indeed, $\bx = A^{-1} \bb$.  However, Cramer's rule allows us
+to calculate $\bx$ directly, without first calculating $A^{-1}$ and
+then performing a matrix-vector multiplication.
+
+Let's
+see how this works for the case of a $3\times 3$ matrix $A=
+\vmat{\ba_1, \ba_2, \ba_3}$.  Given a $\bb\in \R^3$, we are searching
+for the $3$ numbers 
+$x_1, x_2, x_3$ such that
+\[ \bb = x_1 \ba_1+ x_2 \ba_2 + x_3\ba_3.\] Substituting this into the
+following determinant and expanding produces a useful equation:
+\begin{align*}
+    \vmat{ \bb, \ba_2, \ba_3} &=  \vmat{x_1 \ba_1 + x_2 \ba_2 + x_3
+      \ba_3, \ba_2, \ba_3}\\
+    &=    x_1 \vmat{\ba_1, \ba_2, \ba_3} + x_2\vmat{ \ba_2, \ba_2, \ba_3} + 
+    x_3 \vmat{\ba_3,\ba_2, \ba_3} \\
+    &= x_1 \det(A) + 0 + 0.
+\end{align*}
+Similarly
+\begin{align*}
+  \vmat{\ba_1, \bb, \ba_3} = x_1 \vmat{\ba_1, \ba_1, \ba_3} +
+  x_2\vmat{ \ba_1, \ba_2, \ba_3} +
+  x_3 \vmat{\ba_1,\ba_3, \ba_3} = x_2 \det(A)\\
+  \vmat{\ba_1, \ba_2, \bb} =x_1 \vmat{\ba_1, \ba_2, \ba_1} + x_2\vmat{
+    \ba_1, \ba_2, \ba_2} +
+  x_3 \vmat{\ba_1,\ba_2, \ba_3} =  x_3 \det(A)
+\end{align*}
+Therefore, the desired solution can be obtained as follows:
+\[
+    x_1 =  \frac{|\bb,\ba_2,\ba_3|}{|\ba_1, \ba_2, \ba_3|}\quad
+    x_2 =  \frac{|\ba_1,\bb,\ba_3|}{|\ba_1, \ba_2, \ba_3|}\quad
+    x_3 =  \frac{|\ba_1,\ba_2,\bb|}{|\ba_1, \ba_2, \ba_3|}
+\]
+We generalize and summarize as follows.
+\begin{theorem}
+  Let $A$ be an invertible $n\times n$ matrix, and $\bb\in \R^n$ a
+  vector.  Then the unique solution to the linear equation $A \bx=\bb$
+  is given by
+  \[ x_i = \frac{\det A_i(\bb)}{\det A},\quad i=1,2,\ldots,n ,\]
+  where $A_i(\bb)$ denotes the matrix obtained by replacing column $i$
+  of $A$ with $\bb$.
+\end{theorem}
+
+%%%%%
+%%%%%
+\end{document}

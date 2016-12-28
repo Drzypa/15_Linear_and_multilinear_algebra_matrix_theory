@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EveryOrthonormalSetIsLinearlyIndependent}
+\pmcreated{2013-03-22 13:33:48}
+\pmmodified{2013-03-22 13:33:48}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{every orthonormal set is linearly independent}
+\pmrecord{14}{34169}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A63}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+{\bf Theorem }: An orthonormal set of vectors in an inner product space is linearly independent.
+
+\emph{Proof.} We denote by $\langle \cdot, \cdot \rangle$ the inner product of $L$.  Let $S$ be an orthonormal set of vectors.
+Let us first consider the case when $S$ is finite, i.e.,
+$S=\{e_1,\ldots, e_n\}$ for some $n$.
+Suppose
+$$ \lambda_1 e_1 + \cdots + \lambda_n e_n =0$$
+for some scalars $\lambda_i$ (belonging to the field on the
+underlying vector space of $L$). For a fixed $k$ in $1,\ldots, n$,
+we then have
+$$0=\langle e_k,0\rangle =  \langle e_k,\lambda_1 e_1 + \cdots + \lambda_n e_n \rangle = \lambda_1 \langle e_k,e_1\rangle + \cdots + \lambda_n \langle e_k,e_n\rangle = \lambda_k,$$
+
+so $\lambda_k=0$, and $S$ is linearly independent.
+Next, suppose $S$ is infinite (countable or uncountable). To prove
+that $S$ is linearly independent, we need to show that
+all finite subsets of $S$ are linearly independent. Since any
+subset of an orthonormal set is also orthonormal, the infinite case
+follows from the finite case. $\Box$
+%%%%%
+%%%%%
+\end{document}

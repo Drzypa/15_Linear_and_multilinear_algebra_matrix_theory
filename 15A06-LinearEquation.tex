@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LinearEquation}
+\pmcreated{2013-03-22 12:25:59}
+\pmmodified{2013-03-22 12:25:59}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{linear equation}
+\pmrecord{8}{32496}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A06}
+\pmsynonym{linear problem}{LinearEquation}
+\pmsynonym{linear system}{LinearEquation}
+\pmrelated{HomogeneousLinearProblem}
+\pmrelated{FiniteDimensionalLinearProblem}
+\pmdefines{consistent}
+\pmdefines{inconsistent}
+\pmdefines{particular solution}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+\begin{document}
+Let $L:U\rightarrow V$ be a linear mapping, and $v\in V$ an element of
+the codomain.  A {\em linear equation}  is
+a relation of the form,
+$$L(u)=v,$$
+where $u\in U$ is to be considered as the unknown.  The
+solution set of a linear equation is the set of $u\in U$ that satisfy the
+above constraint, or to be more precise, the pre-image $L^{-1}(v)$.  The equation is
+called inconsistent if no solutions exist, that is, if the pre-image is
+the empty set. Otherwise, the equation is called \emph{consistent}.
+
+The general solution of
+a linear equation has the form
+$$u=u_p + u_h,\quad u_p,u_h\in U,$$
+where 
+$$L(u_p)=v$$
+is a \emph{particular solution} and where
+$$L(u_h)=0$$
+is any  solution of the corresponding homogeneous problem, i.e. an
+element of the kernel of $L$.
+
+{\bf Notes.} Elementary treatments of linear algebra focus almost
+exclusively on finite-dimensional linear problems. They neglect to
+mention the underlying mapping, preferring to focus instead on
+``variables and equations.'' However, the scope of the general concept
+is considerably wider, e.g.  linear differential equations such as
+$$y''+y = 0.$$
+%%%%%
+%%%%%
+\end{document}

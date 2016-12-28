@@ -1,0 +1,152 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralSolutionOfLinearDifferentialEquation}
+\pmcreated{2013-03-22 16:32:25}
+\pmmodified{2013-03-22 16:32:25}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{general solution of linear differential equation}
+\pmrecord{16}{38722}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A06}
+\pmclassification{msc}{34A05}
+\pmsynonym{solution of linear ordinary differential equation}{GeneralSolutionOfLinearDifferentialEquation}
+%\pmkeywords{non-homogeneous}
+%\pmkeywords{homogeneous}
+%\pmkeywords{linear differential equation}
+\pmrelated{LinearProblem}
+\pmrelated{SecondOrderLinearDifferentialEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The general solution $y$ of the nonhomogeneous linear differential equation 
+$$\frac{d^{n}y}{dx^n}+P_1(x)\frac{d^{n-1}y}{dx^{n-1}}+\cdots+
+P_{n-1}(x)\frac{dy}{dx}+P_n(x)y = Q(x)$$
+is gotten by adding the general solution $\bar{y}$ of the corresponding homogeneous equation 
+$$\frac{d^{n}\bar{y}}{dx^n}+P_1(x)\frac{d^{n-1}\bar{y}}{dx^{n-1}}+\cdots+
+P_{n-1}(x)\frac{d\bar{y}}{dx}+P_n(x)\bar{y} = 0$$
+to some particular solution of the nonhomogeneous equation.
+
+The general solution of the homogeneous equation has the form
+\begin{align}
+    \bar{y} = C_1y_1+C_2y_2+\cdots+C_ny_n
+\end{align}
+where\, $y_1,\,y_2,\,\ldots,\,y_n$\, are linearly independent solutions of the equation.\, A particular solution of the nonhomogeneous equation can be obtained by using the method of variation of constants\, $C_1,\,C_2,\,\ldots,\,C_n$\, in (1). \\
+
+\textbf{Example 1.}\, Find the general solution of the nonhomogeneous linear second order differential equation
+\begin{align}
+   \frac{d^2y}{dx^2}-4y = e^x.
+\end{align}
+The corresponding homogeneous equation \,$\displaystyle\frac{d^2\bar{y}}{dx^2} = 4\bar{y}$\,
+has apparently the linearly independent solutions $\bar{y} = e^{\pm2x}$\, and thus the general solution\,  $\bar{y} = C_1e^{2x}+C_2e^{-2x}$.\, For finding a particular solution of (2) we variate the constants $C_1$, $C_2$, i.e. think that 
+$$C_1 = C_1(x),\,\,C_2 = C_2(x)$$
+in the sum
+$$y = C_1e^{2x}+C_2e^{-2x}.$$
+The first derivative \,$y' = [C_1'e^{2x}+C_2'e^{-2x}]+[2C_1e^{2x}-2C_2e^{-2x}]$\, of it reduces to
+the latter bracket expression if we set the condition 
+\begin{align}
+C_1'e^{2x}+C_2'e^{-2x} = 0.
+\end{align}
+So the second derivative is
+$$y'' = (2C_1'e^{2x}-2C_2'e^{-2x})+(4C_1e^{2x}+4C_2e^{-2x}).$$
+Substituting this and the expression of $y$ in the differential equation (2) gives the \PMlinkescapetext{simple} equation
+\begin{align}
+2C_1'e^{2x}-2C_2'e^{-2x} = e^x.
+\end{align}
+Now we have the pair of linear equations formed by (3) and (4) for determining the derivatives $C_1'$ and $C_2'$; the result of them is
+$$C_1' = e^{-x}/4,\,\,C_2' = -e^{3x}/4.$$
+If we then integrate and chose 
+$$C_1 = -e^{-x}/4,\,\,C_2 = -e^{3x}/12,$$
+we can form the particular solution
+$$y = -\frac{e^{-x}}{4}e^{2x}-\frac{e^{3x}}{12}e^{-2x} 
+\equiv -\frac{e^x}{3}.$$
+Accordingly, the general solution of the nonhomogeneous equation (2) is
+$$ y = -\frac{e^x}{3}+C_1e^{2x}+C_2e^{-2x}.$$
+
+In some cases it is not necessary to use the \emph{variation of parameters method} above illustrated, but a particular solution may be found at simple sight, as it is the case in the following example about boundary values. \\
+
+\textbf{Example 2.}\, Find the general solution of the nonhomogeneous linear second order differential equation 
+$$y''-y = 2x$$
+under the boundary conditions 
+$$y(1) = 0,\quad y'(0) = 0.$$
+The function \,$x\mapsto -2x$\, is evidently a particular solution of the differential equation.  Therefore, the general solution is
+$$y(x) = -2x+C_1e^x+C_2e^{-x}.$$
+Thus we have\, $y'(x) = -2+C_1e^x-C_2e^{-x}$.  By making use of the boundary conditions, we obtain
+$$0 = y(1) = -2+C_1e+C_2e^{-1},\qquad 0 = y'(0) = -2+C_1-C_2.$$
+Solving this system of linear equations and introducing $C_1$ and $C_2$ into the general solution, we have the result
+$$y(x) = -2x+\frac{2(e+1)}{e^2+1}e^x-\frac{2e(e-1)}{e^2+1}e^{-x}.$$ 
+
+To solve more advanced problems about nonhomogeneous ordinary linear differential equations of second order with boundary conditions, we may find out a particular solution by using, for instance, the \emph{Green's function method.}
+Thus consider, for instance, the self-adjoint differential equation{\footnote{Minus sign, on the right-hand member of the equation, it is by convenience in the applications.}}
+$$\frac{d}{dx}\left(p(x)\frac{dy}{dx}\right)+q(x)y=-f(x), \qquad a<x<b, \qquad y(a)=y(b)=0.$$  
+The solution of this problem, about boundary values, is known to be given by
+$$y(x)= \int_a^b G(x,\xi)f(\xi)d(\xi),$$
+where the symmetric function $G(x,\xi)=G(\xi,x)$ {\footnote{Some authors call this symmetry \emph{reciprocity's law}.}} is the so-called Green's function. It satifies the following boundary problem{\footnote{It is easy verify the details about such statement; it can be found in any good book on mathematical analysis.}}
+\begin{align*}
+\begin{cases}
+\; i)\;\; \frac{d}{dx}\left(p(x)\frac{dG}{dx}\right)+q(x)G=0, \qquad x\neq\xi. \\
+\; ii)\;\; G(a)=G(b)=0, \\
+\; iii)\;\; G(\xi^-)=G(\xi^+)=0, \\
+\; iv)\;\; \frac{dG}{dx}(\xi^+)-\frac{dG}{dx}(\xi^-)=-\frac{1}{p(\xi)}.
+\end{cases}
+\end{align*}
+From the last two one, we realize that $G$ is continuous at $x=\xi$ while $dG/dx$ has there a jump discontinuity. {\footnote{The solution $y(x)$, which is above given, it may be physically interpreted as follows: if $y$ stands for a displacement and $f$ like a force per length unit, then the Green's function $G(x,\xi)$ corresponds to a displacement at $x$ due a force, of unit magnitude, concentrated at $x=\xi$.}} Let us see an example. \\
+
+\textbf{Example 3.}\, Consider the problem
+\begin{align*}
+\begin{cases}
+\; \frac{d^2y}{dx^2}=-f(x) \qquad  0<x<1, \\
+\; y(0)=y(1)=0.
+\end{cases}
+\end{align*}
+Here, $p(x)\equiv 1$, $q(x)\equiv 0$, $a=0$, $b=1$. So from i) and ii), $d^2G/dx^2=0$ and therefore
+$$G(x,\xi)=\begin{cases}
+\; C_1(\xi)x\qquad x<\xi, \\
+\; C_2(\xi)(1-x)\qquad x>\xi. \end{cases}$$
+Since $\xi$ stays fixed on above Green's conditions, constants $C_1,C_2$ may depend on $\xi$. Further, the symmetry of $G$ demands that $C_1(\xi)=C(1-\xi)$, and $C_2(\xi)=C\xi$, where $C$ is a constant independent on $\xi$. Then the continuity condition iii) is automatically satisfied, and the jump condition iv) gives
+\begin{align*}
+(-1)C\xi-C(1-\xi)=-1,\qquad & \textrm{whence} \qquad C=1.
+\end{align*}
+Therefore,
+$$G(x,\xi)=\begin{cases}
+\; (1-\xi)x\qquad x\leq \xi, \\
+\; (1-x)\xi\qquad x\geq \xi. \end{cases}$$
+Thus, the solution is
+$$y(x)=\int_0^x (1-x)\xi f(\xi)d\xi+\int_x^1 x(1-\xi)f(\xi)d\xi.$$
+If, for example, $f(x)\equiv 1$, then we find
+$$y(x)=\frac{1}{2}(1-x)x^2+\frac{1}{2}x(1-x)^2=\frac{1}{2}x(1-x).$$
+In some cases related to partial differential equations (specially that of hyperbolic type), the method of separation of variables, splits in ordinary differential equations (possibly with variable coefficients) on boundary values, and one of them usually leading to a Sturm-Liouville problem (basically an eigen-values and eigen-functions problem). The general solution of those partial differential equations generally leads to Bessel-Fourier series, but the details about that question is out of the sight of this entry. 
+ 
+   
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IfAAndBCommuteSoDoAAndB1}
+\pmcreated{2013-03-22 15:27:14}
+\pmmodified{2013-03-22 15:27:14}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{If $A$ and $B$ commute so do $A$ and $B^{-1}$}
+\pmrecord{7}{37303}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmclassification{msc}{15A27}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{thm}
+Let $A$ and $B$ be commuting matrices.
+If $B$ is invertible,
+ then $A$ and $B^{-1}$ commute,
+and if $A$ and $B$ are invertible, then $A^{-1}$ and $B^{-1}$ commute. 
+\end{thm}
+
+\begin{proof} By assumption 
+$$
+  AB = BA,
+$$
+multiplying from the left and from the right by $B^{-1}$ yields
+$$
+  B^{-1} A = A B^{-1}.
+$$
+The second claim follows similarly. 
+\end{proof}
+
+The statement and proof of this result can obviously be extended to elements of any monoid.  In particular, in the case of a group, we see that two elements commute if and only if their inverses do.
+%%%%%
+%%%%%
+\end{document}

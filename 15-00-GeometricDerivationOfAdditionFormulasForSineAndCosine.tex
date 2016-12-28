@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeometricDerivationOfAdditionFormulasForSineAndCosine}
+\pmcreated{2013-03-22 17:10:16}
+\pmmodified{2013-03-22 17:10:16}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{geometric derivation of addition formulas for sine and cosine}
+\pmrecord{7}{39483}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmclassification{msc}{26A09}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Here is a geometric derivation of the addition laws for sines (and cosines)
+
+
+\begin{align*}
+\sin(\alpha+\beta)&=\sin(\alpha)\cos(\beta)+\cos(\alpha)\sin(\beta)\\
+\cos(\alpha+\beta)&=\cos(\alpha)\cos(\beta)-\sin(\alpha)\sin(\beta)
+\end{align*}
+
+First note that, by symmetry, it is clear that
+\begin{align*}
+\sin\left(x+\frac{\pi}{2}\right)&=\cos x\\
+\cos\left(x+\frac{\pi}{2}\right)&=-\sin x\\
+\sin(-x)&=-\sin x\\
+\cos(-x)&=\cos x
+\end{align*}
+and so we can reduce proving the addition law to proving it in the case where $\alpha$, $\beta$, and $\alpha+\beta$ are all in the first quadrant.
+
+We then have the situation pictured below:
+
+\begin{center}
+\begin{pspicture}(-.4,-.4)(5.4,5.4)
+\psline[linewidth=1pt]{->}(-.4,0)(5.4,0)
+\psline[linewidth=1pt]{->}(0,-.4)(0,5.4)
+\psarc[linewidth=2pt](0,0){5}{0}{90}
+\psline[linewidth=2pt, linecolor=red]{->}(0,0)(4.33,2.5)
+\psline[linewidth=2pt, linecolor=blue]{->}(0,0)(2.5,4.33)
+\psarc[linewidth=2pt, linecolor=red](0,0){1.2}{0}{30}
+\rput(0.8,0.2){$\alpha$}
+\psarc[linewidth=2pt, linecolor=blue](0,0){1.4}{30}{60}
+\rput(1.3,1.2){$\beta$}
+\psline[linewidth=2pt, linecolor=red](2.5,4.33)(3.88,2.24)
+\psarc[linewidth=2pt,linecolor=red](3.88,2.24){0.7}{90}{124}
+\psline[linewidth=2pt, linecolor=blue](3.88,0)(3.88,4.33)(2.5,4.33)
+\psline[linewidth=0.5pt](3.68,0)(3.68,0.2)(3.88,0.2)
+\psline[linewidth=0.5pt](3.68,4.33)(3.68,4.13)(3.88,4.13)
+\psline[linewidth=0.5pt](3.708,2.14)(3.607,2.313)(3.78,2.413)
+\rput(0,5.3){.}
+\rput(5.3,0){.}
+\rput(-.3,-.3){O}
+\rput(2.5,4.63){A}
+\rput(3.88,4.63){B}
+\rput(4.08,2.04){\PMlinkescapetext{C}}
+\rput(3.88,-.3){D}
+\end{pspicture}
+\end{center}
+
+Now, from the definitions of $\sin$ and $\cos$, and assuming that $OA=1$, we see that
+\begin{align*}
+AC&=\sin(\beta)\\
+OC&=\cos(\beta)
+\end{align*}
+
+Now,
+\begin{align*}
+\sin(\alpha)&=\sin(\angle DOC)=\frac{CD}{OC}=\frac{CD}{\cos(\beta)}\\
+\cos(\alpha)&=\cos(\angle DOC)=\frac{OD}{OC}=\frac{OD}{\cos(\beta)}
+\end{align*}
+so we have that
+\begin{align*}
+CD&=\sin(\alpha)\cos(\beta)\\
+OD&=\cos(\alpha)\cos(\beta)
+\end{align*}
+
+But also, it is clear that $\angle BCA=\angle DOC=\alpha$, and therefore we have similarly
+\begin{align*}
+\sin(\alpha)&=\sin(\angle BCA)=\frac{AB}{AC}=\frac{AB}{\sin(\beta)}\\
+\cos(\alpha)&=\cos(\angle BCA)=\frac{BC}{AC}=\frac{BC}{\sin\beta}
+\end{align*}
+so that
+\begin{align*}
+AB&=\sin(\alpha)\sin(\beta)\\
+BC&=\cos(\alpha)\sin(\beta)
+\end{align*}
+Thus $\sin(\alpha+\beta)$ is the $y$-coordinate of $A$, which is the $y$-coordinate of $B$, so
+\[\sin(\alpha+\beta)=CD+BC=\sin(\alpha)\cos(\beta)+\cos(\alpha)\sin(\beta)\]
+and $\cos(\alpha+\beta)$ is the $x$-coordinate of $A$, which is the $x$-coordinate of $B$ less the difference in $x$-coordinates between $B$ and $A$, so
+\[\cos(\alpha+\beta)=OD-AB=\cos(\alpha)\cos(\beta)-\sin(\alpha)\sin(\beta)\]
+%%%%%
+%%%%%
+\end{document}

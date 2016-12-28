@@ -1,0 +1,187 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCayleyHamiltonTheoremByFormalSubstitutions}
+\pmcreated{2013-03-22 15:27:28}
+\pmmodified{2013-03-22 15:27:28}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{proof of Cayley-Hamilton theorem by formal substitutions}
+\pmrecord{19}{37308}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A18}
+\pmclassification{msc}{15A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{enumerate}
+
+% define commands here
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+\begin{document}
+\PMlinkescapephrase{properties}
+
+Let $A$ be a $n \times n$ matrix with entries
+in a commutative ring with identity, and let $p(\lambda)= c_0 + c_1 \lambda + \dots + c_n \lambda^n$ be its characteristic polynomial.
+We will prove that $p(A) := c_0I + c_1 A + \dots + c_n A^n = 0$.
+
+{\bf \emph{Proof}$\,$ (Popular fake proof):}
+
+In the expression
+\begin{align*}
+p(t) = \det(A - t I) = c_0 + c_1 t + \dotsb + c_n t^n \,,
+\end{align*}
+substitute $t = A$; then $p(A) = \det(A - AI) = \det (0) = 0$. $\square$
+
+$\,$
+
+It is clear why the argument is faulty.
+But interestingly, there is a way to rescue it using clever formal substitution arguments.  For the moment,
+we assume that the matrix $A$ is over the complex field.
+
+Since the notation $p(\lambda)$ and $p(A)$ can be confusing at first sight, as one expression takes scalar values and the other matrix values, we will change it. From now on, we will use the notation $\widetilde{p}(t)$ when applying the polymial $p$ to a matrix $t$. In this sense $p(\cdot)$ is a function of $\mathbb{C}$ and $\widetilde{p}(\cdot)$ is function of matrices. Also, by definition,
+\begin{align*}
+\widetilde{p}(t):= c_0I + c_1 t + \dots + c_n t^n\,, \qquad\qquad \text{where $t$ is a matrix}
+\end{align*}
+Of course, we intend to prove that $\widetilde{p}(A) = 0$.
+
+{\bf \emph{Proof} $\,$ (Proof of the complex case):}
+
+For each $\lambda \in \mathbb{C}$ let $B(\lambda)$ be the classical adjoint to $A - \lambda I$.
+We have
+\begin{equation}\label{char-eq}
+B(\lambda)(A-\lambda I) = \det(A - \lambda I) I = p(\lambda) I = c_0 I + \lambda (c_1 I) + \dotsb + \lambda^n (c_n I)\,.
+\end{equation}
+From the definition of the classical adjoint, it is clear
+that $B(\lambda)$ can be written as a polynomial of $\lambda$ having degree $\leq n-1$, whose coefficients are matrices.
+That is,
+\begin{align*}
+B(\lambda) = D_0 + D_1 \lambda + \dots + D_{n-1}\lambda^{n-1} \,,
+\end{align*}
+for some constant coefficient matrices $D_i$.
+
+Now, we would like $B$ to be defined for matrices (just like from the polynomial $p$ we have considered $\widetilde{p}$), so we define for every matrix $t$
+
+\begin{align*}
+\widetilde{B}(t):=D_0 + D_1 t + \dots + D_{n-1}t^{n-1}\,.
+\end{align*}
+
+Now consider the following function of matrices:
+\begin{align}
+Q(t):= (D_0A - c_0I)+ (D_1A-D_0-c_1I)t + \dots + (D_{n-1}A- D_{n-2} - c_{n-1}I)t^{n-1}+(-D_{n-1} - c_nI)t^n
+\end{align}
+
+The above expression may look strange, but if we think that the matrix $t$ commutes with all $D_0, \dots, D_{n-1}$ and $A$, then  expression (2) is easily seen to be equal to
+\begin{align*}
+(D_0+D_1t+ \dots +D_{n-1}t^{n-1})(A-It) - c_0I - c_1t - \dots - c_nt^n 
+\end{align*}
+This means that
+\begin{align}
+Q(t)=\widetilde{B}(t)(A-It) - \widetilde{p}(t) \;\;\;\;\;\;\; \text{whenever} \; t \text{commutes with} D_0, \dots, D_{n-1}, A
+\end{align}
+The reason for not defining $Q(t)$ by the expression in (3) is that we want $Q(t)$ to be some kind of "polynomial" in $t$ (with matrix coefficients on the left of each $t^k$). 
+
+We now state some properties that can be easily checked by straightforward calculation:
+\begin{itemize}
+\item $\widetilde{p}(\lambda I) = p(\lambda)I$
+\item $\widetilde{B}(\lambda I) = B(\lambda)$
+\end{itemize}
+
+Notice that matrices of the form $\lambda I$ with $\lambda \in \mathbb{C}$ commute with every other matrix, so that
+\begin{align*}
+Q(\lambda I) = \widetilde{B}(\lambda I)(A-\lambda I) - \widetilde{p}(\lambda I)= B(\lambda)(A-\lambda I) - p(\lambda)I = 0
+\end{align*}
+
+Now $Q(\lambda I)$ is also a matrix whose entries $q_{ij}(\lambda)$ are polynomials in $\lambda$. Since $Q(\lambda I) =0$ we must have $q_{ij}(\lambda) = 0$ for all $\lambda \in \mathbb{C}$. This means that $q_{ij}(t)$ is the zero
+polynomial and, since this occurs for all $i, j$, it follows that
+the matrix coefficients of $t^k$ occurring in (2) are all zero, i.e. $Q(t)$ is the zero matrix for all matrices $t$. 
+
+Taking $t = A$ we can also see that
+\begin{eqnarray*}
+Q(A) & = & (D_0A - c_0I)+ (D_1A-D_0-c_1I)A + \dots + (D_{n-1}A- D_{n-2} - c_{n-1}I)A^{n-1}+(-D_{n-1} - c_nI)A^n\\
+& = & -c_0I - c_1A - \dots - c_{n-1}A^{n-1} - c_nA^n\\
+& = &  - \widetilde{p}(A)
+\end{eqnarray*}
+
+Hence $\widetilde{p}(A) = 0$, which finishes the proof. $\square$
+
+$,$
+
+Actually, $\complex$ could have been substituted with $\real$ or $\rat$ in the proof above.
+The only property of $\complex$ that was used is that it is an infinite integral domain.
+
+{\bf \emph{Proof} $\,$ (Proof for an arbitrary commutative ring with identity):}
+
+Let $A = (a_{ij})$, where the entries $a_{ij}$ are in commutative ring with identity $R$. First notice that, since $c_0+c_1\lambda+\dots + c_n \lambda^n = p(\lambda)= \det(A - \lambda I)$, where $\lambda \in R$, we have that the coefficients $c_0, \dots, c_n$ are polynomials in $\{a_{ij}\}$.
+
+Hence $\widetilde{p}(A):= c_0I + c_1A+ \dots +c_nA^n$ is a matrix whose entries are also polynomials in $\{ a_{ij} \}$.
+These polynomials vanish for every assignment of $\{ a_{ij} \}$ to numbers in $\mathbb{C}$,
+because the complex case of the theorem has already been proven (this would be the same as substituting the matrix $A$ by a matrix with complex entries).
+Therefore these polynomials are zero polynomials and we conclude that $\widetilde{p}(A) = 0$ as we inteded to prove.$\square$
+
+\section*{Comments on other proofs}
+
+Yet \PMlinkname{another proof of the Cayley-Hamilton Theorem}{ProofOfCayleyHamiltonTheorem}
+is to establish it for diagonalizable matrices,
+and then by a density argument (i.e. every matrix can be approximated by
+diagonalizable ones in an algebraically closed field), 
+we conclude that $p(A) = 0$ is an identity for all matrices over a field.
+This kind of proof is also presented as an exercise in \cite{Artin}.
+
+The ``standard approach'' can be found in \cite{Friedberg}.
+It proves the result for matrices over any field,
+but requires no ``abstract algebra'' (no algebraic closure, Zariski topology or formal substitutions).
+
+The two other proofs just mentioned can be extended to matrices
+over an arbitrary commutative ring simply by repeating the last argument
+in our proof.
+
+In \cite{Braun} there is a proof similar to the one presented here (although it has some errors).
+
+\begin{thebibliography}{XXXXXX}
+
+\bibitem{Artin}
+Michael Artin. {\it Algebra}. Prentice-Hall, 1991.
+
+\bibitem{Braun}
+Martin Braun. {\it Differential equations and their applications: an introduction to applied mathematics},
+3rd edition.  Springer-Verlag, 1983.
+
+\bibitem{Friedberg}
+Friedberg, Insel, Spence. 
+{\it Linear Algebra}, 3rd edition. Prentice-Hall, 1997.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

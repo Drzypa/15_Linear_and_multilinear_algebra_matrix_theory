@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Blade}
+\pmcreated{2013-03-22 15:58:40}
+\pmmodified{2013-03-22 15:58:40}
+\pmowner{PhysBrain}{974}
+\pmmodifier{PhysBrain}{974}
+\pmtitle{blade}
+\pmrecord{5}{37994}
+\pmprivacy{1}
+\pmauthor{PhysBrain}{974}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmclassification{msc}{15A75}
+\pmclassification{msc}{15A66}
+\pmrelated{Basis}
+\pmrelated{UnitVector}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A blade is a term often used to describe a basis entity in the space defined by a geometric algebra.  Since a geometric algebra is a multi-graded space, the basis entities also have multiple grades.  To distinguish the various graded entities, the blades are often prefixed by their grade.  For example a grade-$k$ basis entity would be called a $k$-blade.
+
+The number of linearly independent $k$-blades in a particular geometric algebra is dependent on the number of dimensions of the manifold on which the algebra is defined.  For an $n$-dimensional manifold, the number of $k$-blades is given by the binomial coefficient.
+\[
+N_k = \left( \begin{array}{c}
+n \\
+k
+\end{array} \right)
+\]
+The total number of basis blades of all grades in a geometric algebra defined on an $n$-manifold is then:
+\[
+N = \sum_{k=0}^n N_k = 2^n
+\]
+
+%%%%%
+%%%%%
+\end{document}

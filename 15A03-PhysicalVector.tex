@@ -1,0 +1,159 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PhysicalVector}
+\pmcreated{2013-03-22 12:51:53}
+\pmmodified{2013-03-22 12:51:53}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{physical vector}
+\pmrecord{5}{33201}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmclassification{msc}{15A90}
+
+\newcommand{\vu}{u}
+\newcommand{\vv}{v}
+
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\tmat}{\mathcal{M}}
+\newcommand{\du}[2]{^{#2}_{\hphantom{#2}\!#1}}
+\newcommand{\ud}[2]{_{#2}^{\hphantom{#2}\!#1}}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{{\PMlinkescapetext{{#1}}}}
+\newcommand{\pln}[2]{{\PMlinkname{{#1}}{#2}}}
+\begin{document}
+\paragraph{Definition.}
+Let $\cL$ be a collection of labels $\alpha\in\cL$. For each ordered
+pair of labels $(\alpha,\beta)\in\cL\times\cL$ let
+$\tmat\du{\alpha}{\beta}$ be a non-singular $n\times n$ matrix, the
+collection of all such satisfying the following functor-like
+consistency conditions:
+\begin{itemize}
+\item For all $\alpha\in \cL$, the matrix $\tmat\du{\alpha}{\alpha}$ is
+  the identity matrix.
+\item For all $\alpha,\beta,\gamma \in \cL$ we have
+  $$\tmat\du{\alpha}{\gamma} = \tmat\du{\beta}{\gamma}\, \tmat\du{\alpha}{\beta},$$
+  where the product in
+  the right-hand side is just ordinary matrix multiplication. 
+\end{itemize}
+We then impose an equivalence relation by stipulating that for all
+$\alpha,\beta\in\cL$ and $\vu\in\reals^n$, the pair $(\alpha,\vu)$ is
+equivalent to the pair $(\beta,\tmat\du{\alpha}{\beta}\vu)$.  Finally,
+we define a physical vector to be an equivalence class of such pairs
+relative to the just-defined relation.
+
+The idea behind this definition is that the $\alpha\in \cL$ are labels
+of various coordinate systems, and that the matrices
+$\tmat\du{\alpha}{\beta}$ encode the corresponding changes of
+coordinates. For label $\alpha\in \cL$ and list-vector
+$\vu\in\reals^n$ we think of the pair $(\alpha,\vu)$ as the
+representation of a physical vector relative to the coordinate system
+$\alpha$.
+
+\paragraph{Discussion.}
+All scientific disciplines have a need for formalization.  However,
+the extent to which rigour is pursued varies from one discipline to
+the next.  Physicists and engineers are more likely to regard
+mathematics as a tool for modeling and prediction.  As such they are
+likely to blur the distinction between list vectors and physical
+vectors.  Consider, for example the following excerpt from R.
+Feynman's ``Lectures on physics'' \cite{feynman}
+\begin{quote}
+  All quantities that have a direction, like a step in space, are
+  called vectors.  A vector is three numbers.  In order to represent a
+  step in space, $\ldots$, we really need three numbers, but we are
+  going to invent a single mathematical symbol, $\mathbf{r}$, which is
+  unlike any other mathematical symbols we have so far used.  It is
+  {\em not} a single number, it represents {\em three} numbers: $x$,
+  $y$, and $z$.  It means three numbers, but not only {\em those}
+  three numbers, because if we were to use a different coordinate
+  system, the three numbers would be changed to $x'$, $y'$, and $z'$.
+  However, we want to keep our mathematics simple and so we are going
+  to use the {\em same mark} to represent the three numbers $(x,y,z)$
+  and the three numbers $(x',y',z')$.  That is, we use the same mark
+  to represent the first set of three numbers for one coordinate
+  system, but the second set of three numbers if we are using the
+  other coordinate system.  This has the advantage that when we change
+  the coordinate system, we do not have to change the letters of our
+  equations.
+\end{quote}
+Surely you are joking Mr. Feynman!?  What are we supposed to make of
+this definition?  We learn that a vector is both a physical quantity,
+and a list of numbers. However we also learn that it is not really a
+specific list of numbers, but rather any of a number of possible
+lists.  Furthermore, the choice of which list is being used is
+dependent on the context (choice of coordinate system), but this is
+not really important because we just end up using the same symbol
+$\mathbf{r}$ regardless.  
+
+What a muddle!  Even at the informal level one can do better than
+Feynman.  The central weakness of his definition is that he is
+unwilling to distinguish between physical vectors (quantities) and
+their representation (lists of numbers).  Here is an alternative
+physical definition from a book by R. Aris on fluid mechanics
+\cite{aris}.
+\begin{quote}
+  There are many physical quantities with which only a single
+  magnitude can be associated.  For example, when suitable units of
+  mass and length have been adopted the density of a fluid may be
+  measured. $\ldots$  There are other quantities associated with a
+  point that have not only a magnitude but also a direction.  If a
+  force of 1 lb weight is said to act at a certain point, we can still
+  ask in what direction the force acts and it is not fully specified
+  until this direction is given.  Such a physical quantity is a {\em
+  vector}. $\ldots$  We distinguish therefore between the vector as an
+  entity and its components which allow us to reconstruct it {\em in a
+  particular system of reference.}  The set of components is
+  meaningless unless the system of reference is also prescribed, just
+  as the magnitude 62.427 is meaningless as a density until the units
+  are also prescribed.
+  $\ldots$.
+
+  {\em Definition.} A Cartesian vector, $\mathbf{a}$, in three
+  dimensions is a quantity with three components $a_1, a_2, a_3$ in
+  the frame of reference $O123$, which, under rotation of the
+  coordinate frame to $O\bar{1}\bar{2}\bar{3}$, become components
+  $\bar{a}_1, \bar{a}_2, \bar{a}_3$, where 
+  $$\bar{a}_j = l_{ij} a_i.$$
+  The vector $\mathbf{a}$ is to be regarded as an entity, just as the
+  physical quantity it represents is an entity.  It is sometimes
+  convenient to use the bold face $\mathbf{a}$ to show this. In any
+  particular coordinate system it has components $a_1, a_2, a_3$, and
+  it is at other times convenient to use the typical component $a_i$.
+\end{quote}
+Here we see a carefully drawn distinction between physical quantities
+and the numerical measurements that represent them.  A system of
+measurement, i.e. a choice of units and or coordinate axes, turns
+physical quantities into numbers. However the correspondence is not
+fixed, but varies according to the choice of measurement system.  This
+point of view can be formalized by representing physical vectors as
+labeled list vectors, the label specifying a choice of measurement
+systems.  The actual vector is then defined to be an equivalence class
+of such labeled list vectors.
+\begin{thebibliography}{99}
+\bibitem{feynman} R. Feynman, R. Leighton, and M. Sands, ``Lectures on
+  Physics'', 
+  11-4, Vol. I, Addison-Wesley.
+\bibitem{aris} R. Aris, ``Vectors, Tensors and the Basic Equations of
+  Fluid Mechanics'', Dover.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

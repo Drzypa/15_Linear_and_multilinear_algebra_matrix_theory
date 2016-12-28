@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatdetEAEoperatornametrA}
+\pmcreated{2013-03-22 15:51:56}
+\pmmodified{2013-03-22 15:51:56}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{proof that $\det e^A = e^{\operatorname{tr}A}$}
+\pmrecord{7}{37858}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmclassification{msc}{15A15}
+%\pmkeywords{exponential}
+%\pmkeywords{determinant}
+%\pmkeywords{trace}
+%\pmkeywords{Liouville}
+\pmrelated{SchurDecomposition}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\trace}{\operatorname{tr}}
+\begin{document}
+According to Schur decomposition the matrix $A$ can be written after a suitable change of basis as $A=D+N$ where $D$ is a diagonal matrix and $N$ is a strictly upper triangular matrix.
+
+The formula we aim to prove
+
+$$ \det e^A = e^{\trace A} $$
+
+is invariant under a change of basis and thus we can carry out the computation of the exponential in any basis we choose.
+
+By definition
+
+\begin{equation}
+\label{def}
+e^A = \sum_{n=0}^{\infty} \frac{A^n}{n!}
+\end{equation}
+
+By the properties of diagonal and strictly upper triangular matrices we know that both $DN$ and $ND$ will also be strictly upper triangular matrices and so will their sum.
+
+Thus the powers of $A$ are of the form:
+
+\begin{eqnarray}
+A   &=& (D+N) = D+N_1\\
+A^2 &=& (D+N)(D+N) = D^2 + N_2 \\
+A^3 &=& (D+N)(D^2 + N_2) = D^3 + N_3\\
+    &\vdots& \\
+A^k &=& D^k + N_k \\
+    &\vdots& 
+\end{eqnarray}
+
+where all the $N_i$ matrices are strictly upper triangular.
+Explicitly, $N_2 = DN_1+N_1D+N_1^2$ and by recursion $N_{n+1} = DN_n + N_n D + N_1 N_n$.
+
+Using equation \ref{def} we can write
+
+\begin{equation}
+e^A = e^D + \tilde{N}
+\end{equation}
+
+where $\tilde{N} = \sum_{n=1}^{\infty}\frac{N_n}{n!}$ is strictly upper triangular and $e^D = \operatorname{diag}(e^{\lambda_1}, \cdots, e^{\lambda_n})$, where $D=\operatorname{diag}(\lambda_1, \cdots,\lambda_n)$.
+
+$e^A$ will thus be an upper triangular matrix.
+Since the determinant of an upper triangular matrix is just the product of the elements in its diagonal, we can write:
+
+\begin{equation}
+\label{result}
+\det e^A = \prod_{i=1}^{n} e^{\lambda_i} = e^{\sum_{i=1}^n \lambda_i} = e^{\trace A}
+\end{equation}
+%%%%%
+%%%%%
+\end{document}

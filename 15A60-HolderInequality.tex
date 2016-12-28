@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HolderInequality}
+\pmcreated{2013-03-22 11:43:06}
+\pmmodified{2013-03-22 11:43:06}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{H\"older inequality}
+\pmrecord{27}{30094}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A60}
+\pmclassification{msc}{55-XX}
+\pmclassification{msc}{46E30}
+\pmclassification{msc}{42B10}
+\pmclassification{msc}{42B05}
+\pmsynonym{Holder inequality}{HolderInequality}
+\pmsynonym{Hoelder inequality}{HolderInequality}
+%\pmkeywords{vector}
+%\pmkeywords{norm}
+\pmrelated{VectorPnorm}
+\pmrelated{CauchySchwartzInequality}
+\pmrelated{CauchySchwarzInequality}
+\pmrelated{ProofOfMinkowskiInequality}
+\pmrelated{ConjugateIndex}
+\pmrelated{BoundedLinearFunctionalsOnLpmu}
+\pmrelated{ConvolutionsOfComplexFunctionsOnLocallyCompactGroups}
+\pmrelated{LpNormIsDualToLq}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+The \emph{H\"older inequality} concerns \emph{vector p-norms}: given $1 \leq p$, $q \leq \infty$,
+
+\begin{displaymath}
+    \mbox{If }\frac{1}{p}+\frac{1}{q}=1\mbox{ then }|x^Ty| \leq ||\,x\,||_p||\,y\,||_q
+\end{displaymath}
+
+An important instance of a H\"older inequality is the \emph{Cauchy-Schwarz inequality}.
+
+There is a version of this result for the \PMlinkname{$L^p$ spaces}{LpSpace}.
+If a function $f$ is in $L^p(X)$, then the $L^p$-norm of $f$ is denoted
+$||\,f\,||_p$.
+Given a measure space $(X,\mathfrak{B},\mu)$, if $f$ is in $L^p(X)$ and $g$ is in $L^q(X)$ (with $1/p + 1/q = 1$), then
+the H\"older inequality becomes
+
+\begin{eqnarray*}
+\Vert fg\Vert_1 = \int_X \vert fg\vert \mathrm{d}\mu 
+                      & \le & 
+\left(\int_X|f|^p\mathrm{d}\mu\right)^{\frac{1}{p}}
+\left(\int_X|g|^q\mathrm{d}\mu\right)^{\frac{1}{q}}\\
+& = & \Vert f\Vert_p\,\Vert g \Vert_q 
+\end{eqnarray*}
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DualHomomorphism}
+\pmcreated{2013-03-22 12:29:33}
+\pmmodified{2013-03-22 12:29:33}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{dual homomorphism}
+\pmrecord{10}{32717}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A72}
+\pmclassification{msc}{15A04}
+\pmsynonym{adjoint homomorphism}{DualHomomorphism}
+\pmsynonym{adjoint}{DualHomomorphism}
+\pmrelated{LinearTransformation}
+\pmrelated{DualSpace}
+\pmrelated{DoubleDualEmbedding}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\Hom}{\mathop{\mathrm{Hom}}\nolimits}
+\newcommand{\Mat}{\mathop{\mathrm{Mat}}\nolimits}
+\newcommand{\kfield}{\mathbb{K}}
+\newcommand{\supt}{^t}
+\newcommand{\dual}{^*}
+\newcommand{\adj}{^{\displaystyle \star}}
+
+\newcommand{\cP}[1]{\mathcal{P}_{#1}}
+\newcommand{\ev}[1]{\mathrm{Ev}^{(#1)}}
+\newcommand{\D}[1]{\mathrm{D}_{#1}}
+
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\begin{document}
+\paragraph{Definition.}  Let $U,V$ be vector spaces over a field
+$\kfield$, and  $T:U\rightarrow V$ be a homomorphism (a
+linear map) between them.
+Letting $U\dual, V\dual$  denote the corresponding dual
+spaces, we define the {\em dual homomorphism} 
+$T\dual:V\dual\rightarrow U\dual$,
+to be the linear mapping with action
+$$\alpha \to \alpha\circ T,\quad \alpha\in V^*.$$
+
+We can also characterize  $T^*$ as the adjoint of $T$ relative
+to the natural evaluation bracket between linear forms and vectors:
+$$\left<-,-\right>_U: U\dual\times U\rightarrow \kfield,\qquad
+\left<\alpha,u\right> = \alpha(u),\quad \alpha\in U\dual,\; u\in U.$$
+To be more precise $T\dual$ is characterized by the condition 
+$$\left<T^*\alpha,u\right>_U = \left< \alpha,Tu\right>_V ,\quad \alpha\in
+V\dual,\; u\in U.$$
+% In other words, for $\alpha\in V\dual$ we define $T\dual\alpha$
+% to be the element of $U\dual$ with action
+% $$(T\dual\alpha):u\mapsto \alpha(Tu),\quad u\in U,\quad \alpha\in
+% V\dual.$$
+
+If $U$ and $V$ are finite dimensional, we can also characterize the
+dualizing operation as the composition of the following canonical
+isomorphisms:
+$$\Hom(U,V)
+\stackrel{\simeq}{\longrightarrow}
+U\dual\otimes V
+\stackrel{\simeq}{\longrightarrow}
+(V^*)^*\otimes U^*
+\stackrel{\simeq}{\longrightarrow}
+\Hom(V^*,U^*).
+$$
+
+\paragraph{Category theory perspective.} The dualizing operation behaves
+contravariantly with respect to composition, i.e.
+$$(S\circ T)^* = T\dual \circ S\dual,$$
+for all vector space homomorphisms $S,
+T$ with suitably matched domains.  Furthermore, the dual of the
+identity homomorphism is the identity homomorphism of the dual space.
+Thus, using the language of category theory, the dualizing operation
+can be characterized as the homomorphism action of the contravariant,
+dual-space functor.
+
+\paragraph{Relation to the matrix transpose.} The above properties closely
+mirror the algebraic properties of the matrix transpose operation.
+Indeed, $T^*$ is sometimes referred to as the transpose of $T$,
+because at the level of matrices the dual homomorphism is calculated
+by taking the transpose.  
+
+To be more precise, suppose that $U$ and $V$ are finite-dimensional,
+and let $M\in \Mat_{n,m}(\kfield)$ be the matrix of $T$ relative to
+some fixed bases of $U$ and $V$. Then, the dual homomorphism $T\dual$
+is represented as the transposed matrix $M\supt\in\Mat_{m,n}(\kfield)$
+relative to the corresponding dual bases of $U\dual, V\dual$.
+
+
+%%%%%
+%%%%%
+\end{document}

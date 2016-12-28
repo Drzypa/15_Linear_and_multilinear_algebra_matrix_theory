@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DyadProduct}
+\pmcreated{2013-03-22 15:26:44}
+\pmmodified{2013-03-22 15:26:44}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{dyad product}
+\pmrecord{15}{37293}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A72}
+\pmrelated{Frame}
+\pmrelated{DotProduct}
+\pmrelated{CrossProduct}
+\pmrelated{PositionVector}
+\pmrelated{KalleVaisala}
+\pmdefines{dyad}
+\pmdefines{unit dyad}
+\pmdefines{product of dyads}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+A third kind of  ``products'' between two Euclidean vectors $\vec{a}$ and $\vec{b}$, besides the scalar product $\vec{a}\!\cdot\!\vec{b}$ and the vector product $\vec{a}\!\times\!\vec{b}$, is the\, {\em dyad product}\, $\vec{a}\,\vec{b}$,\, which is usually denoted without any multiplication symbol.\, The dyad products and the finite formal sums 
+\begin{align}
+\Phi := \sum_\mu \vec{a}_\mu \vec{b}_\mu
+\end{align}
+of them are called {\em dyads}.
+
+A dyad is not a vector, but an operator.\, It \PMlinkescapetext{functions} on any vector $\vec{v}$ producing from it new vectors or new dyads according to the definitions
+\begin{align}
+\Phi*\vec{v} := \sum_\mu \vec{a}_\mu(\vec{b}_\mu*\vec{v}), \quad  
+\vec{v}*\Phi := \sum_\mu (\vec{v}*\vec{a}_\mu)\vec{b}_\mu.
+\end{align}
+Here the asterisks \PMlinkescapetext{mean either dots (producing two vectors) or crosses (producing two dyads).\, One can also allow the asterisks to mean} empty, in which case the vector $\vec{v}$ must be replaced by a scalar $v$; the products $\Phi v$ and $v\Phi$ are dyads.
+
+The dyad product obeys the distributive laws
+$$\vec{a}(\vec{b}\!+\!\vec{c}) = \vec{a}\,\vec{b}\!+\!\vec{a}\,\vec{c}, \quad
+(\vec{b}\!+\!\vec{c})\vec{a} = \vec{b}\,\vec{a}\!+\!\vec{c}\,\vec{a},$$
+which can be verified by multiplying an arbitrary vector $\vec{v}$ and both \PMlinkescapetext{sides} of these equations and then comparing the results.\, Likewise, the scalar factor transfer rule is valid.\, It follows that if we have\; 
+$\vec{a} = a_1\vec{e_1}+a_2\vec{e_2}+a_3\vec{e_3}$\; and\; 
+$\vec{b} = b_1\vec{e_1}+b_2\vec{e_2}+b_3\vec{e_3}$\; in the orthonormal basis\, $\{\vec{e_1},\,\vec{e_2},\,\vec{e_3}\}$ (for the brevity, we confine us to vectors of $\mathbb{R}^3$), their dyad product is the sum    
+\begin{eqnarray*}
+\vec{a}\,\vec{b} =
+&a_1b_1\vec{e_1}\vec{e_1}+a_1b_2\vec{e_1}\vec{e_2}+a_1b_3\vec{e_1}\vec{e_3}+\\
+&a_2b_1\vec{e_2}\vec{e_1}+a_2b_2\vec{e_2}\vec{e_2}+a_2b_3\vec{e_2}\vec{e_3}+\\
+&a_3b_1\vec{e_3}\vec{e_1}+a_3b_2\vec{e_3}\vec{e_2}+a_3b_3\vec{e_3}\vec{e_3},\;\;
+\end{eqnarray*}
+which shows that the dyad product has been formed similarly as the matrix product of the vectors\, $(a_1,\,a_2,\,a_3)^{\mbox{\scriptsize{T}}}$\, and $(b_1,\,b_2,\,b_3)$.
+
+The {\em unit dyad}
+$$\mbox{I} := \vec{e_1}\vec{e_1}\!+\!\vec{e_2}\vec{e_2}\!+\!\vec{e_3}\vec{e_3} =  \nabla\vec{r},$$
+where $\vec{r}$ is the position vector, \PMlinkescapetext{satisfies}
+$$\mbox{I}\!\cdot\!\vec{v} = \vec{v}\!\cdot\!\mbox{I} = \vec{v}$$
+and 
+$$\mbox{I}\!\times\!(\vec{u}\!\times\!\vec{v}) = \vec{v}\,\vec{u}-\vec{u}\,\vec{v}$$
+for all vectors $\vec{u}$ and $\vec{v}$.
+
+The {\em product} of two dyad products\, $\vec{a}\,\vec{b}$\, and\, 
+$\vec{c}\,\vec{d}$\, is defined to be the dyad
+\begin{align}
+(\vec{a}\,\vec{b})(\vec{c}\,\vec{d}) := 
+  (\vec{b}\!\cdot\!\vec{c})(\vec{a}\,\vec{d})
+\end{align}
+and the product of such dyads as (1) to be the formal sum of individual products (3).\, The multiplication of dyads is associative and distributive over addition.\, The unit dyad acts as unity in the ring of dyads:
+$$\mbox{I}\Phi = \Phi\mbox{I} = \Phi \quad \forall \Phi$$
+
+
+\begin{thebibliography}{9}
+\bibitem{VV}{\sc K. V\"ais\"al\"a:} {\em Vektorianalyysi}. \,Werner S\"oderstr\"om Osakeyhti\"o, Helsinki (1961).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

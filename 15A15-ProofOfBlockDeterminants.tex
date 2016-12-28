@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBlockDeterminants}
+\pmcreated{2013-03-22 15:27:49}
+\pmmodified{2013-03-22 15:27:49}
+\pmowner{georgiosl}{7242}
+\pmmodifier{georgiosl}{7242}
+\pmtitle{proof of block determinants}
+\pmrecord{5}{37315}
+\pmprivacy{1}
+\pmauthor{georgiosl}{7242}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If $A^{-1}$ exists, then  
+$$\begin{pmatrix} A & B \\ C & D \end{pmatrix}
+=\begin{pmatrix} I & O \\ CA^{-1} & I \end{pmatrix}\begin{pmatrix} A & B \\ O & D-CA^{-1}B \end{pmatrix}.$$ So  $$\det \begin{pmatrix} A & B \\ C & D \end{pmatrix}
+=\det \begin{pmatrix} I & O \\ CA^{-1} & I \end{pmatrix}\det \begin{pmatrix} A & B \\ O & D-CA^{-1}B \end{pmatrix}. $$
+Each of the first matrices in the decompositions are triangular.  Hence their determinants equal $1$.  This means that the determinant of the original matrix equals the determinant of either of the second matrices in the decomposition. Therefore $$\det \begin{pmatrix} A & B \\ C & D \end{pmatrix} =\det(A)\det(D-CA^{-1}B).$$
+The second formula follows by using a similar trick.
+%%%%%
+%%%%%
+\end{document}

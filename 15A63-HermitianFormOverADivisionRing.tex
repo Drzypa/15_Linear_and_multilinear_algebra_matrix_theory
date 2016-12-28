@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HermitianFormOverADivisionRing}
+\pmcreated{2013-03-22 15:41:04}
+\pmmodified{2013-03-22 15:41:04}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Hermitian form over a division ring}
+\pmrecord{12}{37626}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A63}
+\pmdefines{Hermitian form}
+\pmdefines{skew Hermitian form}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+Let $D$ be a division ring admitting an \PMlinkname{involution}{Involution2} $*$.  Let $V$ be a vector space over $D$.  A \emph{Hermitian form} over $D$ is a function from $V\times V$ to $D$, denoted by $(\cdot,\cdot)$ with the following properties, for any $v,w\in V$ and $d\in D$:
+
+\begin{enumerate}
+\item $(\cdot,\cdot)$ is additive in each of its arguments,
+\item $(du,v)=d(u,v)$,
+\item $(u,dv)=(u,v)d^*$,
+\item $(u,v)=(v,u)^*$.
+\end{enumerate}
+
+Note that if the Hermitian form $(\cdot,\cdot)$ is non-trivial and if $*$ is the identity on $D$, then $D$ is a field and $(\cdot,\cdot)$ is just a symmetric bilinear form.
+
+If we replace the last condition by $(u,v)=-(v,u)^*$, then $(\cdot,\cdot)$ over $D$ is called a \emph{skew Hermitian form}.
+
+\textbf{Remark.}  Every skew Hermitian form over a division ring induces a Hermitian form and vice versa.
+%%%%%
+%%%%%
+\end{document}

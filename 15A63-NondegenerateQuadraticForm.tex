@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NondegenerateQuadraticForm}
+\pmcreated{2013-03-22 15:05:58}
+\pmmodified{2013-03-22 15:05:58}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{non-degenerate quadratic form}
+\pmrecord{6}{36828}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A63}
+\pmclassification{msc}{11E39}
+\pmclassification{msc}{47A07}
+\pmsynonym{non degenerate quadratic form}{NondegenerateQuadraticForm}
+\pmsynonym{non singular quadratic form}{NondegenerateQuadraticForm}
+\pmdefines{non-degenerate quadratic form}
+\pmdefines{non-singular quadratic form}
+\pmdefines{regular quadratic form}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $k$ be a field of characteristic not 2.  Then a quadratic form $Q$ over a vector space $V$ (over a field $k$) is said to be \PMlinkescapetext{\emph{non-degenerate}}, if its associated bilinear form:
+$$B(x,y)=\frac{1}{2}(Q(x+y)-Q(x)-Q(y))$$
+is non-degenerate.
+
+If we fix a basis $\boldsymbol{b}$ for $V$, then $Q(x)$ can be written as 
+
+$$Q(x)=x^TAx$$
+
+for some symmetric matrix $A$ over $k$.  Then it's not hard to see that $Q$ is non-degenerate iff $A$ is non-singular.  Because of this, a non-degenerate quadratic form is also known as a \emph{non-singular} quadratic form.  A third name for a non-degenerate quadratic form is that of a \emph{regular quadratic form}.
+%%%%%
+%%%%%
+\end{document}

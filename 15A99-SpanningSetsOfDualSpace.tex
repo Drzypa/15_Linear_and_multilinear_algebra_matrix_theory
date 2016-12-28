@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SpanningSetsOfDualSpace}
+\pmcreated{2013-03-22 17:17:28}
+\pmmodified{2013-03-22 17:17:28}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{spanning sets of dual space}
+\pmrecord{6}{39634}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A99}
+
+% The standard font packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% For neatly defining theorems and definitions
+\usepackage{amsthm}
+
+% Including EPS/PDF graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% Making matrix-based graphics
+%%%\usepackage{xypic}
+
+% Enumeration lists with different styles
+%\usepackage{enumerate}
+
+% Set up the theorem environments
+%\newtheorem{thm}{Theorem}
+\newtheorem*{thm*}{Theorem}
+
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+% The standard number systems
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\intset}{\mathbb{Z}}
+
+% Absolute values and norms
+% Normal, wide, and big versions of the delimeters
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+
+% Differentiation operators
+\providecommand{\od}[2]{\frac{d #1}{d #2}}
+\providecommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\providecommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2}}
+\providecommand{\ipd}[2]{\partial #1 / \partial #2}
+
+% Differentials on integrals
+\newcommand{\dx}{\, dx}
+\newcommand{\dt}{\, dt}
+\newcommand{\dmu}{\, d\mu}
+
+% Inner products
+\providecommand{\ip}[2]{\langle {#1}, {#2} \rangle}
+
+% Calligraphic letters
+\newcommand{\sF}{\mathcal{F}}
+\newcommand{\sD}{\mathcal{D}}
+
+% Standard spaces
+\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\Le}{\mathbf{L}}
+
+% Operators and functions occassionally used in my articles
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\lindim}{dim}
+\DeclareMathOperator{\sinc}{sinc}
+
+% Probability stuff
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+
+\begin{document}
+\PMlinkescapeword{argument}
+\PMlinkescapeword{sides}
+
+\begin{thm*}
+Let $X$ be a vector space and $\phi_1, \dotsc, \phi_n \in X^*$ be 
+functionals belonging to the dual space.
+A linear functional $f \in X^*$ belongs to the linear span of 
+$\phi_1, \dotsc, \phi_n$ if and only if 
+$\ker f \supseteq \bigcap_{i=1}^n \ker \phi_i$.
+\end{thm*}
+
+$\ker$ refers to the kernel.
+Note that the domain $X$ need not be finite-dimensional.
+
+\begin{proof}
+The ``only if'' part is easy: if $f = \sum_{i=1}^n \lambda_i \phi_i$
+for some scalars $\lambda_i$, and $x \in X$ 
+is such that $\phi_i(x) = 0$ for all $i$, then clearly $f(x) = 0$ too.
+
+The ``if'' part will be proved by induction on $n$.
+
+Suppose $\ker f \supseteq \ker \phi_1$.
+If $f = 0$, then the result is trivial.
+Otherwise, there exists $y \in X$ such that $f(y) \neq 0$.
+By hypothesis, we also have $\phi_1(y) \neq 0$.
+Every $z \in X$ can be decomposed into $z = x+ ty$
+where $x \in \ker \phi_1 \subseteq \ker f$, and $t$ is a scalar.
+Indeed, just set $t = \phi_1(z)/\phi_1(y)$, and $x = z-ty$.
+Then we propose that 
+\[
+f(z) = \frac{f(y)}{\phi_1(y)} \phi_1(z)\,, \text{ for all $z \in X$.}
+\]
+To check this equation, simply evaluate both sides using the decomposition
+$z = x+ty$.
+
+Now suppose we have $\ker f \supseteq \bigcap_{i=1}^n \ker \phi_i$
+for $n > 1$.
+Restrict each of the functionals
+to the subspace $W = \ker \phi_n$, so that 
+$\ker f|_W \supseteq \bigcap_{i=1}^{n-1} \ker \phi_i|_W$.
+By the induction hypothesis, there exist scalars $\lambda_1, \dotsc, \lambda_{n-1}$
+such that $f|_W = \sum_{i=1}^{n-1} \lambda_i \phi_i|_W$.
+Then $\ker ( f - \sum_{i=1}^{n-1} \lambda_i \phi_i ) \supseteq 
+W = \ker \phi_n$, and the argument for the case $n=1$ 
+can be applied anew, to obtain the final $\lambda_n$.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

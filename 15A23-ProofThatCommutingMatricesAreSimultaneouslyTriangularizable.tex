@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatCommutingMatricesAreSimultaneouslyTriangularizable}
+\pmcreated{2013-03-22 15:27:08}
+\pmmodified{2013-03-22 15:27:08}
+\pmowner{georgiosl}{7242}
+\pmmodifier{georgiosl}{7242}
+\pmtitle{proof that commuting matrices are simultaneously triangularizable}
+\pmrecord{10}{37301}
+\pmprivacy{1}
+\pmauthor{georgiosl}{7242}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A23}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\usepackage[fleqn]{amsmath}
+\begin{document}
+Proof by induction on $n$, order of matrix.
+\\For $n=1$ we can simply take $Q=1$.
+We assume that there exists a common unitary matrix $S$ that triangularizes simultaneously commuting matrices ,$(n-1)\times (n-1)$.\\So we have to show that the statement is valid for commuting matrices, $n\times n$.
+From hypothesis $A$ and $B$ are commuting matrices $n\times n$ so these matrices have a common eigenvector.\\Let
+$Ax=\lambda x$,  $Bx=\mu x$ where $x$ be the common eigenvector of unit length and $\lambda$, $\mu$ are the eigenvalues of $A$ and $B$ respectively. Consider the matrix, $R=\begin{pmatrix} x & X \end{pmatrix}$ 
+where $X$ be orthogonal complement of $x$ and $R^HR=I$, then we have that 
+$$R^HAR = \begin{pmatrix} \lambda & x^HAX \\ 0 & X^HAX \end{pmatrix}$$
+$$R^HBR = \begin{pmatrix} \mu & x^HBX \\ 0 & X^HBX \end{pmatrix}$$
+It is obvious that the above matrices and also 
+$X^HBX$, $X^HAX$ ,$(n-1)\times(n-1)$ matrices are commuting matrices. Let $B_1=X^HBX$ and $A_1=X^HAX$ then 
+there exists unitary matrix $S$ such that $S^HB_1S=\bar T_2,\, S^HA_1S=\bar T_1.$ Now $Q=R\begin{pmatrix} 1 & 0 \\ 0 & S \end{pmatrix}$ is a unitary matrix,
+$Q^HQ=I$ and we have 
+$$Q^HAQ=\begin{pmatrix} 1 & 0 \\ 0 & S^H \end{pmatrix}R^HAR\begin{pmatrix} 1 & 0 \\ 0 & S \end{pmatrix}=\begin{pmatrix} \lambda & x^HAXS \\ 0 & \bar T_1 \end{pmatrix}=T_1.$$
+Analogously we have that $$Q^HBQ=T_2.$$
+%%%%%
+%%%%%
+\end{document}

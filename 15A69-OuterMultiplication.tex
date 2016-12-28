@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OuterMultiplication}
+\pmcreated{2013-03-22 12:40:31}
+\pmmodified{2013-03-22 12:40:31}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{outer multiplication}
+\pmrecord{4}{32951}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A69}
+\pmrelated{TensorProductClassical}
+\pmrelated{TensorProduct}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newcommand{\kfield}{\mathbb{K}}
+\newcommand{\rC}{\mathrm{C}}
+\newcommand{\rT}{\mathrm{T}}
+\newcommand{\tspace}[1]{\rT^{#1}}
+\begin{document}
+Note: the present entry employs the terminology and notation defined
+and described in the entry on tensor arrays.  To keep things
+reasonably self contained we mention that the symbol $\tspace{p,q}$ refers
+to the vector space of type $(p,q)$ tensor arrays, i.e. maps
+$$I^p\times I^q\rightarrow \kfield,$$
+where $I$ is some finite list of
+index labels, and where $\kfield$ is a field.
+
+
+Let $p_1,p_2,q_1,q_2$ be natural numbers.  Outer multiplication is a
+bilinear operation
+$$\tspace{p_1,q_1} \times \tspace{p_2,q_2} \rightarrow
+\tspace{p_1+p_2,q_1+q_2}$$
+that combines a type $(p_1,q_1)$
+tensor array $X$ and a type $(p_2,q_2)$ tensor array $Y$ to
+produce a type $(p_1+p_2,q_1+q_2)$ tensor array $XY$ (also
+written as $X\otimes Y$), defined by
+$$
+(XY)^{i_1\ldots i_{p_1} i_{p_1+1} \ldots i_{p_1+p_2}}_{j_1\ldots
+    j_{q_1} j_{q_1+1} \ldots j_{q_1+q_2} }
+=
+X^{i_1\ldots i_{p_1}}_{j_1\ldots j_{q_1}}
+Y^{i_{p_1+1}\ldots i_{p_1+p_2}}_{j_{q_1+1}\ldots j_{q_1+q_2}}
+$$
+Speaking informally, what is going on above is that we multiply
+every value of the $X$ array by every possible value of the $Y$ array,
+to create a new array, $XY$. Quite obviously then, the size of $XY$ is
+the size of $X$ times the size of $Y$, and the index slots of the
+product $XY$ are just the union of the index slots of $X$ and of $Y$.
+
+Outer multiplication is a non-commutative, associative operation.  The
+type $(0,0)$ arrays are the scalars, i.e. elements of
+$\kfield$; they commute with everything. Thus, we can embed $\kfield$ into
+the direct sum
+$$\bigoplus_{p,q\in\natnums} \tspace{p,q},$$
+and thereby endow the latter
+with the structure of an $\kfield$-algebra\footnote{We will not pursue this
+line of thought here, because the topic of algebra structure is best
+dealt with in the a more abstract context.  The same comment applies
+to the use of the tensor product sign $\otimes$ in denoting outer
+multiplication.  These topics are dealt with in the entry pertaining
+to abstract tensor algebra.}.
+
+By way of illustration we mention that the outer product of a column
+vector, i.e. a type $(1,0)$ array, and a row vector, i.e. a type
+$(0,1)$ array, gives a matrix, i.e. a type $(1,1)$
+tensor array.  For instance:
+$$
+\begin{pmatrix}
+a \\ b \\ c
+\end{pmatrix}\otimes
+\begin{pmatrix}
+x & y & z 
+\end{pmatrix} 
+= 
+\begin{pmatrix}
+ax & ay & az \\
+bx & by & bz \\
+cx & cy & cz
+\end{pmatrix}
+,\quad
+a,b,c,x,y,z\in \kfield
+$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfRotationMatrix}
+\pmcreated{2013-03-22 15:09:16}
+\pmmodified{2013-03-22 15:09:16}
+\pmowner{swiftset}{1337}
+\pmmodifier{swiftset}{1337}
+\pmtitle{example of rotation matrix}
+\pmrecord{5}{36902}
+\pmprivacy{1}
+\pmauthor{swiftset}{1337}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmrelated{Slope}
+\pmrelated{RotationMatrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\ensuremath{\mathcal{R}}}
+\begin{document}
+You can use rotation matrices to show that if the slope of one line is $m$, then the slope of the line perpendicular to it is $\frac{-1}{m}$:
+
+Let $L$ be a line with a slope of $m$ passing through the origin. The rotation matrix $R_{\frac{\pi}{2}}$ rotates $L$ into a line $L^\prime$ perpendicular to $L$:
+
+$$ R_{\pi/2} = 
+\begin{pmatrix}
+0 & -1 \\
+1 & 0 \\
+\end{pmatrix}
+$$
+
+Every point on $L$ can be represented as a multiple of the point 
+$ \vec{p} = \begin{pmatrix} 1 \\ m \end{pmatrix} $.
+
+Notice $ \vec{p}^\prime = R_{\frac{\pi}{2}} \vec{p} = \begin{pmatrix} -m \\ 1 \end{pmatrix} $. Since every point on $L^\prime$ can be represented as a multiple of the point $\vec{p}^\prime$, the slope of $L^\prime$ is $\frac{-1}{m}$.
+%%%%%
+%%%%%
+\end{document}

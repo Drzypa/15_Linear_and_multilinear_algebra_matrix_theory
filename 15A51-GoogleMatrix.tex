@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GoogleMatrix}
+\pmcreated{2013-03-22 17:01:05}
+\pmmodified{2013-03-22 17:01:05}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Google matrix}
+\pmrecord{6}{39302}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A51}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Google's PageRank algorithm uses a particular stochastic matrix called the Google matrix. 
+The purpose of the PageRank algorithm is to compute a stationary vector of the Google matrix.
+The stationary vector is then used to provide a ranking of the pages on the internet.
+
+A directed graph $D$ is constructed whose vertices correspond to web pages and a directed
+arc from vertex $i$ to vertex $j$ exists if and only if page $i$ has a link out to 
+page $j$. 
+Then a stochastic matrix $A=(a_{ij})$ is constructed from $D$: for each $i,j$
+set 
+$$
+a_{ij} = 1/d(i)
+$$ 
+if the outdegree of vertex $i, d(i)$ is positive and there is an arc from $i$ to $j$ in $D$.
+Set 
+$$
+a_{ij} = 0
+$$ 
+if $d(i) >0$  but there is no arc from $i$ to $j$ in $D$.
+
+Set
+$$
+a_{ij} = 1/n
+$$ 
+if $d(i) = 0$, where $n$ is the order of the matrix. 
+
+Having defined $A$ choose a positive row vector $v^T$ such that $v^T\textbf{1} = 1$
+where $\textbf{1}$ is a vector of all ones.
+Finally, choose a constant $c \in (0,1)$.
+The \emph{Google matrix} $G$
+is
+$$
+G = cA + (1-c)\textbf{1}v^T .
+$$
+Clearly, $G$ is stochastic. For the actual matrix that Google uses $c$ is about .85.
+
+%%%%%
+%%%%%
+\end{document}

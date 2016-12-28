@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternatingForm}
+\pmcreated{2013-03-22 15:42:17}
+\pmmodified{2013-03-22 15:42:17}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{alternating form}
+\pmrecord{7}{37649}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A63}
+\pmsynonym{alternate form}{AlternatingForm}
+\pmsynonym{alternating}{AlternatingForm}
+\pmsynonym{symplectic hyperbolic plane}{AlternatingForm}
+\pmrelated{SymplecticVectorSpace}
+\pmrelated{EverySymplecticManifoldHasEvenDimension}
+\pmdefines{alternating hyperbolic plane}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+A bilinear form $A$ on a vector space $V$ (over a field $k$) is called an \emph{alternating form} if for all $v\in V$, $A(v,v)=0$.
+
+Since for any $u,v\in V$, $$0=A(u+v,u+v)=A(u,u)+A(u,v)+A(v,u)+A(v,v)=A(u,v)+A(v,u),$$ we see that $A(u,v)=-A(v,u)$.  So an alternating form is automatically a anti-symmetric, or skew symmetric form.  The converse is true if the characteristic of $k$ is not $2$.
+
+Let $V$ be a two dimensional vector space over $k$ with an alternating form $A$. Let $\lbrace e_1,e_2\rbrace$ be a basis for $V$.  The matrix associated with $A$ looks like 
+
+\begin{center}$
+\begin{pmatrix}
+A(e_1,e_1) & A(e_1,e_2) \\
+A(e_2,e_1) & A(e_2,e_2)
+\end{pmatrix}=r
+\begin{pmatrix}
+0 & 1 \\
+-1 & 0
+\end{pmatrix}=rS,
+$\end{center}
+
+where $r=A(e_1,e_2)$.  The skew symmetric matrix $S$ has the property that its diagonal entries are all $0$.  $S$ is called the $2\times 2$ \emph{alternating} or \emph{symplectic matrix}.   
+
+$A$ is called \emph{non-singular} or \emph{non-degenerate} if there exist a vectors $u,v\in V$ such that $A(u,v)\neq 0$.  $u,v$ are necessarily non-zero.  Note that the associated matrix $rS$ is non-singular iff $r\neq 0$ iff $A$ is non-singular.  
+
+In the two dimensional vector space case above, if $A$ is non-singular, we can re-scale the basis elements so that $r=1$.  This means that the matrix associated with $A$ is the alternating matrix.  A two-dimensional vector space which carries a non-singular alternating form is sometimes called an \emph{alternating} or \emph{symplectic hyperbolic plane}.  Some authors also call it simply a hyperbolic plane.  But here on PlanetMath, we will reserve the shorter name for its cousin in the category of quadratic spaces.  Let's denote an alternating hyperbolic plane by $\mathcal{A}$.
+
+\textbf{Remark.}  In general, it can be shown that if $V$ is an $n$-dimensional vector space equipped with a non-singular alternating form $A$, then $V$ can be written as an orthogonal direct sum of the alternating hyperbolic planes $\mathcal{A}$.  In other words, the associated matrix for $A$ has the block form
+
+\begin{center}$
+\begin{pmatrix}
+S & \boldsymbol{0} & \cdots & \boldsymbol{0} \\
+\boldsymbol{0} & S & \cdots & \boldsymbol{0} \\
+\vdots & \vdots & \ddots & \vdots \\
+\boldsymbol{0} & \boldsymbol{0} & \cdots & S \\
+\end{pmatrix},\mbox{ where }\boldsymbol{0}=
+\begin{pmatrix}
+0 & 0 \\ 0 & 0
+\end{pmatrix}.
+$\end{center}
+
+Furthermore, $n$ is even.  $V$ is called a symplectic vector space.
+%%%%%
+%%%%%
+\end{document}

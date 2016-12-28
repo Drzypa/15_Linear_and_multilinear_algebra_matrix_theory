@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IdealsInMatrixAlgebras}
+\pmcreated{2013-03-22 13:59:28}
+\pmmodified{2013-03-22 13:59:28}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{ideals in matrix algebras}
+\pmrecord{10}{34767}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{claim}{Claim}
+\begin{document}
+Let $R$ be a ring with 1. Consider the ring $M_{n \times n}(R)$ of $n \times n$-matrices with entries taken from $R$.
+
+It will be shown that there exists a one-to-one 
+correspondence between the (two-sided) ideals of $R$ and the 
+(two-sided) ideals of $M_{n \times n}(R)$.
+
+For $1 \le i,j \le n$, let $E_{ij}$ denote the $n 
+\times n$-matrix having entry 1 at position 
+$(i,j)$ and 0 in all other places. It can be 
+easily checked that
+\begin{equation}
+E_{ij} \cdot E_{kl}=\left\{
+\begin{array}{lllll}
+0 & \mbox{iff}& k \ne j \\
+E_{il} & \mbox{otherwise.}
+\end{array}\right.
+\end{equation}
+Let $\mathfrak{m}$ be an ideal in $M_{n \times 
+n}(R)$.
+\begin{claim}
+The set $\mathfrak{i}\subseteq R$ given by
+\[\mathfrak{i}=\{x \in R \mid x\quad\mbox{is an entry 
+of } A \in \mathfrak{m}\}\]
+is an ideal in $R$, and 
+$\mathfrak{m}=M_{n \times n}(\mathfrak{i})$.
+\end{claim}
+\begin{proof}
+$\mathfrak{i} \ne \emptyset$ since $0 \in 
+\mathfrak{i}$. Now let $A=(a_{ij})$ and $B=(b_{ij})$ 
+be matrices in $\mathfrak{m}$, and $x,y \in R$ be 
+entries of $A$ and $B$ respectively, say 
+$x=a_{ij}$ and $y=b_{kl}$. Then the matrix $A \cdot 
+E_{jl} +E_{ik}\cdot B \in \mathfrak{m}$ has $x+y$ 
+at position $(i,l)$, and it follows: If $x,y \in 
+\mathfrak{i}$, then $x+y \in \mathfrak{i}$. Since 
+$\mathfrak{i}$ is an ideal in $M_{n \times n}(R)$ 
+it contains, in particular, the matrices $D_r \cdot A$ and $A \cdot D_r$, where 
+\begin{equation*}
+D_r :=\sum_{i=1}^n r\cdot E_{ii}, r \in R.
+\end{equation*}
+thus, $rx, xr \in \mathfrak{i}$. This shows 
+that $\mathfrak{i}$ is an ideal in $R$. 
+Furthermore, $M_{n \times n}(\mathfrak{i}) 
+\subseteq \mathfrak{m}$.
+
+By construction, any matrix $A \in \mathfrak{m}$ 
+has entries in $\mathfrak{i}$, so we have
+\begin{equation*}
+A=\sum\limits_{1 \le i,j \le n} a_{ij}E_{ij}, 
+a_{ij} \in \mathfrak{i}
+\end{equation*}
+so $A \in m_{n \times n}(\mathfrak{i})$. Therefore 
+$\mathfrak{m} \subseteq M_{n \times n}(\mathfrak{i})$.
+\end{proof}
+A consequence of this is: If $F$ is a field, then $M_{n \times n}(F)$ is simple.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BasalUnits}
+\pmcreated{2013-03-22 19:17:13}
+\pmmodified{2013-03-22 19:17:13}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{basal units}
+\pmrecord{7}{42220}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmrelated{MatrixRing}
+\pmrelated{StandardBasis}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The set of all $n\!\times\!n$ matrices over a skew field forms an $n^2$-dimensional associative algebra, for the basis of which one can take the \emph{basal units}.\, A basal unit of the algebra has all components zeroes except only one which is 1.\\
+
+E.g.
+$$\begin{pmatrix}
+0 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 0 & 0 
+\end{pmatrix}$$
+is a basal unit of the algebra of $3\!\times\!3$ matrices.
+
+\begin{thebibliography}{8}
+\bibitem{D}{\sc L. E. Dickson}: {\em Algebras and their arithmetics}.\, Dover Publications, Inc.\, New York (1923; second edition 1960).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

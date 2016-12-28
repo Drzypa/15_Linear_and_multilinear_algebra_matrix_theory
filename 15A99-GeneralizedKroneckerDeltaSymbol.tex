@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedKroneckerDeltaSymbol}
+\pmcreated{2013-03-22 13:31:38}
+\pmmodified{2013-03-22 13:31:38}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{generalized Kronecker delta symbol}
+\pmrecord{5}{34119}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A99}
+\pmrelated{LeviCivitaPermutationSymbol3}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $l$ and $n$ be natural numbers such that $1\le l \le n$. 
+Further,  let $i_k$  and $j_k$ be natural numbers in $\{1,\cdots, n\}$ 
+for all $k$ in $\{1,\cdots, l\}$. 
+Then the
+\emph{generalized Kronecker delta symbol}, denoted by 
+$\delta_{j_1\cdots j_l}\!\!\!\!\!\!\!\!\!\!^{i_1\cdots i_l}$, 
+is zero if $i_r=i_s$ 
+or $j_r=j_s$ for some $r\neq s$, or if
+$\{i_1,\cdots, i_l\} \neq \{j_1,\cdots, j_l\}$ as sets.
+If none of the above conditions are met, then 
+$\delta_{j_1\cdots j_l}\!\!\!\!\!\!\!\!\!\!^{i_1\cdots i_l}$ 
+is defined as the sign of the permutation that maps
+$i_1\cdots i_l$ to $j_1\cdots j_l$.
+
+From the definition, it follows that when $l=1$, 
+the generalized Kronecker delta symbol reduces to 
+the traditional delta symbol $\delta^i_j$. 
+Also, for $l=n$, we obtain 
+\begin{eqnarray*}
+\delta_{j_1\cdots j_n}\!\!\!\!\!\!\!\!\!\!\!\!^{i_1\cdots \,i_n}&=&\varepsilon^{i_1\cdots i_n}\varepsilon_{j_1\cdots j_n},\\
+\delta_{j_1\cdots j_n}\!\!\!\!\!\!\!\!\!\!\!\!^{1\cdots \,n}&=&\varepsilon_{j_1\cdots j_n},
+\end{eqnarray*}
+where $\varepsilon_{j_1\cdots j_n}$ is the Levi-Civita permutation symbol.
+
+For any $l$ we can write the generalized delta function 
+as a determinant of traditional delta symbols. Indeed,
+if $S(l)$ is the permutation group of $l$ elements, then 
+\begin{eqnarray*}
+\delta_{j_1\cdots j_l}\!\!\!\!\!\!\!\!\!\!\!^{i_1\cdots i_l} &=& \sum_{\tau\in S(l)} \mbox{sign} \, \tau\, \delta^{i_{\tau(1)}}_{j_1}\cdots \delta^{i_{\tau(l)}}_{j_l} \\
+&=& \det \left(  \begin {array}{lll} \delta^{i_1}_{j_1} & \cdots & \delta^{i_l}_{j_1} \\
+   \vdots & \ddots & \vdots \\
+   \delta^{i_1}_{j_l} &  \cdots & \delta^{i_l}_{j_l} 
+    \end{array} \right).
+\end{eqnarray*}
+The first equality follows since the sum one the first line has only one non-zero term; the term for
+which $i_{\tau(k)} = j_k$. The second equality follows from the 
+definition of the determinant.
+%%%%%
+%%%%%
+\end{document}

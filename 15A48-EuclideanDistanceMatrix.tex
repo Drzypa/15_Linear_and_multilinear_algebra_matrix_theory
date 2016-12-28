@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EuclideanDistanceMatrix}
+\pmcreated{2013-03-22 14:37:15}
+\pmmodified{2013-03-22 14:37:15}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Euclidean distance matrix}
+\pmrecord{7}{36200}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A48}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{Euclidean distance matrix} (EDM) is a real $m\times m$ matrix $X$ such that for some points $y_1,\ldots,y_m$ in $\mathbb{R}^m$, $X_{ik}=\left\Vert y_i-y_k\right\Vert_2^2$, where $\Vert\cdot\Vert_2$ is the 2-norm on $\mathbb{R}^m$.
+\par\bigskip
+A EDM $X$ inherits the following \PMlinkescapetext{identities} from the norm that defines it:
+\begin{itemize}
+\item $X_{ii}=0$;
+\item $X_{ij}=X_{ji}\ge 0$;
+\item $\sqrt{X_{ik}}\le\sqrt{X_{ij}}+\sqrt{X_{jk}}$.
+\end{itemize}
+\par
+Additionally, $X$ is a EDM if and only if the diagonal entries of $X$ are all 0 and for all $z\in\mathbb{R}^m$ whose components sum to 0, $z^TXz\le 0$.
+\par
+Finally, the set of $m\times m$ EDMs forms a convex \PMlinkname{cone}{Cone3} in the set of all $m\times m$ matrices.
+\par\bigskip
+\begin{thebibliography}{4}
+\bibitem{boyd} S. Boyd, L. Vandenberghe, \emph{Convex Optimization}, Cambridge University Press, 2004.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

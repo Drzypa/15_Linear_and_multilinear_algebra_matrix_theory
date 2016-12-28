@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TensorProductAndDualSpaces}
+\pmcreated{2013-03-22 18:31:51}
+\pmmodified{2013-03-22 18:31:51}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{tensor product and dual spaces}
+\pmrecord{6}{41237}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A69}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $k$ be a field and $V$ be a vector space over $k$. Recall that $$V^{*}=\{f:V\to k\ |\ f\mbox{ is linear}\}$$ denotes the dual space of $V$ (which is also a vector space over $k$).
+
+\textbf{Proposition}. Let $V$ and $W$ be vector spaces. Consider the map $\phi: V^{*}\otimes W^{*}\to (V\otimes W)^{*}$ such that $$\phi(f\otimes g)(v\otimes w)=f(v)g(w).$$ Then $\phi$ is a monomorphism. Moreover if one of the spaces $V$, $W$ is finite dimensional, then $\phi$ is an isomorphism.
+
+\textit{Proof}. One can easily check that $\phi$ is a well defined linear map, thus it is sufficient to show that $\mathrm{Ker}(\phi)=0$. So assume that $F\in V^{*}\otimes W^{*}$ is such that $\phi(F)=0$. It is clear that $F$ can be (uniquely) expressed in the form $$F=\sum_{i,j} \alpha_{i,j} f_{i}\otimes g_{j},$$
+where $(f_i)$ is a basis of $V^{*}$, $(g_{j})$ is a basis of $W^{*}$ and $\alpha_{i,j}\in k$. Then for any $v\in V$ and $w\in W$ we have: $$0=\phi(F)(v\otimes w)=\phi(\sum_{i,j}\alpha_{i,j} f_{i}\otimes g_{j})(v\otimes w)=$$
+$$=\sum_{i,j}\alpha_{i,j} \phi(f_{i}\otimes g_{j})(v\otimes w)=\sum_{i,j}\alpha_{i,j} f_{i}(v) g_{j}(w).$$
+Since $w\in W$ is arbitrary then we can write this equality in the form: $$0=\sum_{i,j}\alpha_{i,j}f_{i}(v)g_{j}=\sum_{j} (\sum_{i} \alpha_{i,j}f_{i}(v))g_{j}$$
+and since $(g_{j})$ are linearly independent we obtain that $\sum_{i}\alpha_{i,j}f_{i}(v)=0$ for all $j$. Again since $v\in V$ was arbitrary we obtain that $\sum_{i}\alpha_{i,j}f_{i}=0$ for all $j$. Now since $(f_{i})$ are linearly independent we obtain that $\alpha_{i,j}=0$ for all $i,j$. Thus $F=0$.
+
+
+Now assume that $\mathrm{dim}_{k}V=q<+\infty$. Let $(v_i)_{i=1}^{q}$ be a basis of $V$ and let $(v_{i}^{*})_{i=1}^{q}$ be an induced basis of $V^{*}$. Moreover let $(w_{p})_{p\,\in P}$ be a basis of $W$. We wish to show that $\phi$ is onto, so let $f:V\otimes W\to k$ be an element of $(V\otimes W)^{*}$. Define $F\in V^{*}\otimes W^{*}$ by the formula: $$F=\sum_{i=1}^{q} v_{i}^{*}\otimes g_{i},$$
+where $g_{i}:W\to k$ is such that $g_{i}(w_{p})=f(v_i \otimes w_p)$. Then for any $v_j$ from $(v_i)_{i=1}^{q}$ and for any $w_p$ from $(w_{p})_{p\,\in P}$ we have: $$\phi(F)(v_j\otimes w_p)=\phi(\sum_{i=1}^{q} v_{i}^{*}\otimes g_{i})(v_j\otimes w_p)=\sum_{i=1}^{q}\phi(v_{i}^{*}\otimes g_{i})(v_j \otimes w_p)=$$ $$=\sum_{i=1}^{q}v_{i}^{*}(v_{j})g_{i}(w_p)=g_{j}(w_p)=f(v_j\otimes w_p)$$
+and thus $\phi(F)=f$. $\square$
+
+\textbf{Remark}. The map $\phi$ from the previous proposition is very important in studying algebras and coalgebras (more precisly it is an essence in defining dual (co)algebras). Unfortunetly $\phi$ does not have to be an isomorphism in general. Nevertheless, the spaces $(V\otimes W)^{*}$ and $V^{*}\otimes W^{*}$ are always isomorphic (see \PMlinkname{this entry}{TensorProductOfDualSpacesIsADualSpaceOfTensorProduct} for more details).
+%%%%%
+%%%%%
+\end{document}

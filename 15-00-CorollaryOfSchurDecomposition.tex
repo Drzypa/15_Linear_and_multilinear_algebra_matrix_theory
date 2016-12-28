@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CorollaryOfSchurDecomposition}
+\pmcreated{2013-03-22 13:43:38}
+\pmmodified{2013-03-22 13:43:38}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{corollary of Schur decomposition}
+\pmrecord{7}{34413}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\textbf{theorem:}$A\in \mathbb{C}^{n\times n}$ is a normal matrix if and only if there exists a unitary matrix $Q \in \mathbb{C}^{n\times n}$ such that $Q^HAQ = \operatorname{diag}(\lambda_1,\ldots , \lambda_n)$\textit{(the diagonal matrix)} where $^H$ is the conjugate transpose. \cite{1}\\\\
+\textbf{proof:} Firstly we show that if there exists a unitary matrix $Q \in \mathbb{C}^{n\times n}$ such that $Q^HAQ = \operatorname{diag}(\lambda_1,\ldots , \lambda_n)$ then $A\in \mathbb{C}^{n\times n}$ is a normal matrix.  Let $D = \operatorname{diag}(\lambda_1,\ldots , \lambda_n)$ then $A$ may be written as $A = QDQ^H$.  Verifying that A is normal follows by the following observation $AA^H = QDQ^HQD^HQ^H = QDD^HQ^H$ and $A^HA = QD^HQ^HQDQ^H = QD^HDQ^H$.  Therefore $A$ is normal matrix because $DD^H = \operatorname{diag}(\lambda_1\bar{\lambda_1},\ldots , \lambda_n \bar{\lambda_n}) = D^HD$.\\
+Secondly we show that if $A\in \mathbb{C}^{n\times n}$ is a normal matrix then there exists a unitary matrix $Q \in \mathbb{C}^{n\times n}$ such that $Q^HAQ = \operatorname{diag}(\lambda_1,\ldots , \lambda_n)$.  By Schur decompostion we know that there exists a $Q\in \mathbb{C}^{n \times n}$ such that $Q^HAQ=T$\textit{($T$ is an upper triangular matrix)}.  Since $A$ is a normal matrix then $T$ is also a normal matrix.  The result that $T$ is a diagonal matrix comes from showing that a normal upper triangular matrix is diagonal (see theorem for normal triangular matrices).\\
+QED
+  
+\begin{thebibliography}{1}
+\bibitem[GVL]{1} Golub, H. Gene, Van Loan F. Charles: Matrix Computations \textit{(Third Edition)}. The Johns Hopkins University Press, London, 1996.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

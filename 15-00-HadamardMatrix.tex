@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HadamardMatrix}
+\pmcreated{2013-03-22 13:09:45}
+\pmmodified{2013-03-22 13:09:45}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Hadamard matrix}
+\pmrecord{13}{33605}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmclassification{msc}{05B20}
+\pmsynonym{Hadamard}{HadamardMatrix}
+\pmrelated{HadamardConjecture}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{rows}
+\PMlinkescapeword{row}
+\PMlinkescapeword{columns}
+\PMlinkescapeword{column}
+\PMlinkescapeword{contain}
+\PMlinkescapeword{property}
+
+\PMlinkescapeword{order}
+\PMlinkescapeword{states}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{integer}
+
+An $n\times n$ matrix $H = (h_{ij})$ is a \emph{Hadamard matrix} of order $n$ if the entries of $H$ are either 
+$+1$ or $-1$ and such that $HH^T = nI,$ where $H^T$ is the transpose of $H$ and $I$ is the order $n$
+identity matrix.
+
+In other words, an $n\times n$ matrix with only $+1$ and $-1$ as its elements is Hadamard if the inner product of two distinct rows is 
+$0$ and the inner product of a row with itself is $n$.
+
+A few examples of Hadamard matrices are 
+$$\begin{bmatrix} 1 & 1 \\ 1 & -1\end{bmatrix} ,   \begin{bmatrix} -1 & 1 & 1 & 1 \\ 1 & -1 & 1 & 1 \\ 1 & 1 & -1 & 1 \\ 1 & 1 & 1 & -1\end{bmatrix},   \begin{bmatrix} 1 & 1 & 1 & 1 \\ 1 & -1 & 1 & -1 \\ 1 & 1 & -1 & -1 \\ 1 & -1 & -1 & 1\end{bmatrix}$$
+These matrices were first considered as Hadamard determinants, because the determinant of a Hadamard matrix satisfies equality in Hadamard's determinant theorem, which states that if $X = (x_{ij})$ is a matrix of order $n$ where $|x_{ij}| \leq 1$ for all $i$ and $j,$ then
+$$det(X) \leq n^{n/2}$$
+
+\textbf{Property 1:}
+
+The order of a Hadamard matrix is $1, 2$ or $4n,$ where $n$ is an integer.
+
+\textbf{Property 2:}
+
+If the rows and columns of a Hadamard matrix are permuted, the matrix remains Hadamard.
+
+\textbf{Property 3:}
+
+If any row or column is multiplied  by $-1,$ the Hadamard property is retained.
+
+Hence it is always possible to arrange to have the first row and first column of  a Hadamard matrix contain
+only $+1$ entries. A Hadamard matrix in this form is said to be \emph{normalized}.
+
+Hadamard matrices are common in signal processing and coding applications.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Mmatrix}
+\pmcreated{2013-03-22 15:24:54}
+\pmmodified{2013-03-22 15:24:54}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{M-matrix}
+\pmrecord{7}{37257}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A57}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A Z-matrix $A$ is called an \emph{M-matrix} if it satisfies any one of
+the following equivalent conditions.
+
+
+\begin{enumerate}
+
+\item All principal minors of $A$ are positive.
+
+\item The leading principal minors of $A$ are positive.
+
+\item $A$ can be written in the form $A=kI-B$, where $B$ is a
+non-negative matrix whose spectral radius is strictly less than
+$k$.
+
+\item All real eigenvalues of $A$ are positive.
+
+\item The real part of any eigenvalue of $A$ is positive.
+
+\item $A$ is non-singular and the inverse of $A$ is non-negative.
+
+\item $Av \geq 0 $ implies $v\geq 0$.
+
+\item There exists a vector $v$ with non-negative entries such
+that $Av > 0$.
+
+\item $A+D$ is non-singular for every non-negative diagonal matrix
+$D$.
+
+\item $A+kI$ is non-singular for all $k\geq 0$.
+
+\item For each nonzero vector $v$, $v_i (Av)_i>0$ for some $i$.
+
+\item There is a positive diagonal matrix $D$ such that the matrix
+$DA + A^TD$ is positive definite.
+
+\item $A$ can be factorized as $LU$, where $L$ is lower
+triangular, $U$ is upper triangular, and the diagonal entries of
+both $L$ and $U$ are positive.
+
+\item The diagonal entries of $A$ are positive and $AD$ is
+strictly diagonally dominant for some positive diagonal matrix
+$D$.
+\end{enumerate}
+
+
+{\bf Reference:}
+
+
+M. Fiedler, {\it Special Matrices and Their Applications in
+Numerical Mathematics}, Martinus Nijhoff, Dordrecht, 1986.
+
+R. A. Horn and C. R. Johnson, {\it Topics in Matrix Analysis},
+Cambridge University Press, Cambridge, 1991.
+%%%%%
+%%%%%
+\end{document}

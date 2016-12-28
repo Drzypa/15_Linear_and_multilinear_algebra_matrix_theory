@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LinearTransformationIsContinuousIfItsDomainIsFiniteDimensional}
+\pmcreated{2013-03-22 15:17:59}
+\pmmodified{2013-03-22 15:17:59}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{linear transformation is continuous if its domain is finite dimensional}
+\pmrecord{7}{37098}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{thm}
+A linear transformation is continuous if the domain is finite dimensional.
+\end{thm}
+
+\begin{proof}
+Suppose $L\colon X\to Y$ is the transformation, $\dim X = n$,
+  and  $\Vert \cdot \Vert_X$, $\Vert \cdot \Vert_Y$ are the norms
+  on $X$, $Y$, respectively.
+By \PMlinkname{this result}{ContinuityIsPreservedWhenCodomainIsExtended}
+and \PMlinkname{this result}{SubspaceTopologyInAMetricSpace},
+it suffices to prove that $L\colon X\to L(X)$ is continuous
+when $L(X)$ is equipped with the topology given by $\Vert \cdot \Vert_Y$
+restricted onto $L(X)$. 
+Also, since continuity and boundedness are equivalent, it suffices to
+  prove that $L$ is bounded. 
+Let $e_1,\ldots, e_n$ be a basis for $X$ such that 
+$L$ is invertible on $\operatorname{span} \{e_{1}, \ldots, e_k\}$ and
+$\operatorname{ker} L = \operatorname{span} \{e_{k+1}, \ldots, e_n\}$ for 
+$k=1,\ldots, n$. (The zero map is always continuous.)
+Let $f_i=L(e_i)$ for $i=1,\ldots, k$, so that 
+$\operatorname{span}\{f_1, \ldots, f_k\}=L(X)$. 
+Let us define new norms on $X$ and $L(X)$,
+\begin{eqnarray*}
+  \Vert x \Vert'_X &=& \sqrt{\sum_{i=1}^n \alpha_i^2},\\
+  \Vert y \Vert'_X &=& \sqrt{\sum_{i=1}^k \beta_i^2},
+\end{eqnarray*}
+for $x=\sum_{i=1}^n \alpha_i e_i\in X$ and 
+    $y=\sum_{i=1}^k \beta_i f_i \in Y$.
+Since norms on finite dimensional vector spaces are equivalent, it follows
+that 
+\begin{eqnarray*}
+    1/C \Vert x \Vert'_X \le \Vert x \Vert_X \le C \Vert x \Vert'_X, \quad x\in X \\
+    1/D \Vert y \Vert'_Y \le \Vert y \Vert_Y \le D \Vert y \Vert'_Y, \quad y\in L(X)
+\end{eqnarray*}
+for some constants $C,D>0$.
+For $x=\sum_{i=1}^n \alpha_i e_i\in X$,
+\begin{eqnarray*}
+\Vert L(x)\Vert_Y &\le & D \Vert \sum_{i=1}^k \alpha_i f_i \Vert'_Y \\
+   &=& D \sqrt{\sum_{i=1}^k \alpha_i^2} \\
+   &\le& D \sqrt{\sum_{i=1}^n \alpha_i^2} \\
+   &=& D \Vert x \Vert'_X \\
+   &=& CD \Vert x \Vert_X.
+\end{eqnarray*}
+Thus $L\colon X\to L(X)$ is bounded.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

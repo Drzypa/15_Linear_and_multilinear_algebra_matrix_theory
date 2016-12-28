@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCauchySchwarzInequality}
+\pmcreated{2013-03-22 12:34:42}
+\pmmodified{2013-03-22 12:34:42}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{proof of Cauchy-Schwarz inequality}
+\pmrecord{6}{32827}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A63}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If $a$ and $b$ are linearly dependent, we write $\boldsymbol{b}=\lambda \boldsymbol{a}$. So we get:
+$$\langle \boldsymbol{a},\lambda \boldsymbol{a}\rangle^2=\lambda^2\langle \boldsymbol{a},\boldsymbol{a}\rangle^2=\lambda^2 ||\boldsymbol{a}||^4=||\boldsymbol{a}||^2||\boldsymbol{b}||^2.$$
+So we have equality if $\boldsymbol{a}$ and $\boldsymbol{b}$ are linearly dependent. In the other case we look at the quadratic function
+$$||x\cdot \boldsymbol{a}+\boldsymbol{b}||^2=x^2||\boldsymbol{a}||^2+2x\langle\boldsymbol{a} ,\boldsymbol{b}\rangle + ||\boldsymbol{b}||^2.$$
+This function is positive for every real $x$, if $\boldsymbol{a}$ and $\boldsymbol{b}$ are linearly independent. Thus it has no real zeroes, which means that
+$$\langle\boldsymbol{a}, \boldsymbol{b}\rangle^2 - ||\boldsymbol{a}||^2 ||\boldsymbol{b}||^2$$
+is always negative. So we have:
+$$\langle\boldsymbol{a}, \boldsymbol{b}\rangle^2 < ||\boldsymbol{a}||^2||\boldsymbol{b}||^2,$$
+which is the Cauchy-Schwarz inequality if $\boldsymbol{a}$ and $\boldsymbol{b}$ are linearly independent.
+%%%%%
+%%%%%
+\end{document}

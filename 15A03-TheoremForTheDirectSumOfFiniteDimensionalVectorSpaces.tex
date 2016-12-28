@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheoremForTheDirectSumOfFiniteDimensionalVectorSpaces}
+\pmcreated{2013-03-22 13:36:17}
+\pmmodified{2013-03-22 13:36:17}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{theorem for the direct sum of finite dimensional vector spaces}
+\pmrecord{8}{34233}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+{\bf Theorem} 
+Let $S$ and $T$ be subspaces of a finite dimensional vector space
+$V$. Then $V$ is the direct sum of $S$ and $T$, i.e., $V=S\oplus T$,
+if and only if $\dim V = \dim S + \dim T$ and $S\cap T = \{0\}$. 
+
+\emph{Proof.} Suppose that $V=S\oplus T$. Then, by definition, 
+$V=S+T$ and $S\cap T=\{0\}$.  
+The dimension theorem for subspaces states that 
+$$\dim (S+T) + \dim S\cap T = \dim S + \dim T.$$
+Since the dimension of the zero vector space $\{0\}$
+is zero, we have that 
+$$\dim V = \dim S + \dim T,$$
+and the first direction of the claim follows. 
+
+For the other direction, suppose $\dim V = \dim S + \dim T$ 
+and $S\cap T = \{0\}$. Then the 
+dimension theorem theorem for subspaces implies that 
+$$\dim (S+T) = \dim V.$$
+Now $S+T$ is a subspace of $V$ with the same dimension
+as $V$ so, 
+\PMlinkname{by Theorem 1 on this page}{VectorSubspace}, 
+$V=S+T$. This proves the second direction. $\Box$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlgebraicAndGeometricMultiplicityDoNotCoincide}
+\pmcreated{2013-03-22 15:15:18}
+\pmmodified{2013-03-22 15:15:18}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{algebraic and geometric multiplicity do not coincide}
+\pmrecord{5}{37037}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A18}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Zero is an eigenvalue of
+$$
+  A = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}
+$$
+with algebraic multiplicity $2$ and geometric multiplicity $1$. 
+
+Indeed, as
+$$
+   \det (A-\lambda I) = \lambda^2
+$$
+it follows that $0\,\!$ 
+is an eigenvalue of $A$ with algebraic multiplicity $2$. 
+To find the geometric multiplicity of $A$ we need to calculate 
+$\operatorname{ker} A$. Thus, suppose 
+$$
+\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix} \begin{pmatrix} a \\ b \end{pmatrix}= \begin{pmatrix} 0  \\ 0 \end{pmatrix}.
+$$
+This implies $b=0$, so 
+$$
+   \ker A = \operatorname{span} \begin{pmatrix} 1  \\ 0 \end{pmatrix},
+$$
+and the geometric multiplicity of $0\,\!$ is $1$.
+%%%%%
+%%%%%
+\end{document}

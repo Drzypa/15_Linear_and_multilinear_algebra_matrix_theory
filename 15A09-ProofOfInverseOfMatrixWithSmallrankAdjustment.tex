@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfInverseOfMatrixWithSmallrankAdjustment}
+\pmcreated{2013-03-22 15:46:08}
+\pmmodified{2013-03-22 15:46:08}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{proof of inverse of matrix with small-rank adjustment}
+\pmrecord{4}{37726}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A09}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We will first prove the formula when $A=I$.
+
+Suppose that $R^{-1}+Y^TX$ is invertible. Thus
+\[
+ (R^{-1}+Y^TX)(R^{-1}+Y^TX)^{-1} = I.
+\]
+and
+\[ R^{-1}(R^{-1}+Y^TX)^{-1}+Y^TX(R^{-1}+Y^TX)^{-1} = I.
+\]
+
+Multiply by $XR$ from the left, and multiply by $Y^T$ from the
+right, we get
+\[ X(R^{-1}+Y^TX)^{-1}Y^T + XR Y^TX(R^{-1}+Y^TX)^{-1}Y^T = XRY^T.
+\]
+
+The right hand side is equal to $B-I$, while the left hand side can
+be factorized as
+\[
+ (I+XRY^T)X(R^{-1}+Y^TX)^{-1}Y^T.
+\]
+
+So,
+\[
+ B\cdot (X(R^{-1}+Y^TX)^{-1}Y^T) = B-I.
+\]
+After rearranging, we obtain
+\[
+I =  B(I-X(R^{-1}+Y^TX)^{-1}Y^T).
+\]
+
+Therefore \begin{equation} (I+XRY^T)^{-1}  =
+I-X(R^{-1}+Y^TX)^{-1}Y^T \tag{*}
+\end{equation}
+
+For the general case $B=A+XRY^T$, consider
+\[
+ BA^{-1} = I+XRY^TA^{-1}.
+\]
+We can apply (*) with $Y^T$ replaced by $Y^TA^{-1}$.
+%%%%%
+%%%%%
+\end{document}

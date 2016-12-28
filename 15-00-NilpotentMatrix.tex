@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NilpotentMatrix}
+\pmcreated{2013-03-22 13:05:56}
+\pmmodified{2013-03-22 13:05:56}
+\pmowner{jgade}{861}
+\pmmodifier{jgade}{861}
+\pmtitle{nilpotent matrix}
+\pmrecord{17}{33520}
+\pmprivacy{1}
+\pmauthor{jgade}{861}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+
+\usepackage{amsmath, amssymb, amsthm}
+\newtheorem*{thm}{Theorem}
+\begin{document}
+The square matrix $A$ is said to be nilpotent if $A^n = \underbrace{AA\cdots A}_{\textrm{n times}} = \mathbf{0}$ for some positive integer $n$ (here $\mathbf{0}$ 
+denotes the matrix where every entry is 0).
+
+\begin{thm}[Characterization of nilpotent matrices]
+A matrix is nilpotent iff its eigenvalues are all 0.
+\end{thm}
+
+\begin{proof}
+Let $A$ be a nilpotent matrix. Assume $A^n = \mathbf{0}$. Let $\lambda$ be an eigenvalue of $A$.
+Then $A\mathbf{x} = \lambda \mathbf{x}$ for some nonzero vector $\mathbf{x}$.
+By induction $\lambda^n \mathbf{x} = A^n \mathbf{x} = 0$, so $\lambda = 0$.
+
+Conversely, suppose that all eigenvalues of $A$ are zero. Then the chararacteristic
+polynomial of $A$: $\det(\lambda I - A) = \lambda^n$. It now follows from the
+Cayley-Hamilton theorem that $A^n = \mathbf{0}$.
+\end{proof}
+
+Since the determinant is the product of the eigenvalues it follows that a nilpotent matrix has determinant 0. Similarly, since the trace of a square matrix is the sum of the eigenvalues, it follows that it has trace 0. 
+
+One class of nilpotent matrices are the \PMlinkid{strictly triangular matrices}{4381} (lower or upper), this follows from the fact that the eigenvalues of a triangular matrix are the diagonal elements, and thus are all zero in the case of \emph{strictly} triangular matrices.
+
+%\PMlinkid{strictly triangular matrices}{4381}
+
+Note for $2\times2$ matrices $A$ the theorem implies that $A$ is nilpotent iff $A=\mathbf{0}$ or $A^2=\mathbf{0}$.
+
+Also it is worth noticing that any matrix that is similar to a nilpotent matrix is nilpotent.
+%%%%%
+%%%%%
+\end{document}

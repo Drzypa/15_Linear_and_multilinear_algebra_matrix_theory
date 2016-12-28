@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DimensionvectorSpace}
+\pmcreated{2013-03-22 12:42:31}
+\pmmodified{2013-03-22 12:42:31}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{dimension (vector space)}
+\pmrecord{13}{32993}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmrelated{dimension3}
+\pmdefines{dimension}
+\pmdefines{codimension}
+\pmdefines{finite-dimensional}
+\pmdefines{infinite-dimensional}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{\PMlinkescapetext{{#1}}}
+\newcommand{\pln}[2]{\PMlinkname{#1}{#2}}
+\begin{document}
+Let $V$ be a vector space over a field $K$.  We say that $V$ is
+\emph{finite-dimensional} if there exists a finite basis of $V$. Otherwise we
+call $V$ \emph{infinite-dimensional}.
+
+It can be shown that every basis of $V$ has the same cardinality. We call this cardinality the \emph{dimension} of $V$. In particular, if
+$V$ is finite-dimensional,  then every basis of $V$ will consist of a finite set $v_1,\ldots, v_n$.  We then call the natural number $n$ the \emph{dimension} of $V$. 
+
+Next, let $U\subset V$ a subspace.  The dimension of the quotient
+vector space $V/U$ is called the \emph{codimension} of $U$ relative to $V$.
+
+In circumstances where the choice of field is ambiguous, the
+dimension of a vector space depends on the choice of field.  For
+example, every complex vector space is also a real vector space, and
+therefore has a real dimension, double its complex dimension.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Pfaffian}
+\pmcreated{2013-03-22 14:22:13}
+\pmmodified{2013-03-22 14:22:13}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Pfaffian}
+\pmrecord{26}{35857}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+%\pmkeywords{antisymmetric matrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The {\em Pfaffian} is an analog of the determinant that is defined only for a $2n\times 2n$ antisymmetric matrix. It is a polynomial of the polynomial ring in elements of the matrix, such that its square is equal to the determinant of the matrix. 
+
+The Pfaffian is applied in the generalized Gauss-Bonnet theorem.
+
+{\bf Examples}
+
+$Pf\begin{bmatrix} 0 & a \\ -a & 0 \end{bmatrix}=a,$
+
+$Pf\begin{bmatrix} 0 & a & b & c \\ -a & 0 & d & e \\ -b & -d & 0& f \\-c & -e & -f & 0 \end{bmatrix}=af-be+dc.$
+
+{\bf Standard definition}
+
+Let 
+
+$$A=\begin{bmatrix} 0 & a_{1,2} & \ldots & a_{1,2n} \\ -a_{1,2} & 0 & \ldots & a_{2,2n} \\ \vdots & \vdots & \vdots & \vdots \\-a_{2n,1} & -a_{2n,2} & \ldots & 0 \end{bmatrix}.$$
+
+Let $\Pi^{}_{}$ be the set of all partition of $\{1,2, \ldots ,2n\}$ into pairs of elements $\alpha\in \Pi^{}_{}$, can be represented as 
+$$\alpha^{}_{}=\{(i_1,j_1),(i_2,j_2), \ldots ,(i_n,j_n)\} $$ 
+with $i_k<j_k$ and $i_1 < i_2 < \cdots < i_n$, let
+$$\pi=\begin{bmatrix} 1 & 2 & 3 & 4 & \ldots & 2n \\ i_1 & j_1 & i_2 & j_2 & \ldots & j_{n} \end{bmatrix}$$ 
+be a corresponding permutation and let us define 
+$sgn(\alpha)$ to be the signature of a permutation $\pi^{}_{}$; clearly it depends only on the partition $\alpha$ and not on the particular choice of $\pi^{}_{}$.
+Given a partition $\alpha^{}_{}$ as above let us set
+$a_\alpha =a_{i_1,j_1}a_{i_2,j_2} \ldots a_{i_n,j_n},$
+then we can define the \emph{Pfaffian} of $A$ as 
+$$Pf(A)=\sum_{\alpha\in \Pi} sgn(\alpha)a_\alpha.$$
+
+{\bf Alternative definition}
+
+One can associate to any antisymmetric $2n\times 2n$ matrix $A=\{a_{ij}\}$ 
+a bivector 
+:$\omega=\sum_{i<j} a_{ij} e_i\wedge e_j$ 
+in a basis
+$\{e_1,e_2, \ldots ,e_{2n}\}$ of $\mathbb{R}^{2n}$, then 
+$$\omega^n= n!Pf(A)e_1\wedge e_2\wedge \cdots \wedge e_{2n},$$
+where $\omega^n_{}$ denotes exterior product of $n$ copies of $\omega^{}_{}$.
+
+{\bf Identities}
+
+For any antisymmetric $2n\times 2n$ matrix $A$' and any $2n\times 2n$ matrix $B$
+
+$$Pf(A)^2 = \det(A)$$
+$$Pf(BAB^T)= \det(B)Pf(A)$$
+%%%%%
+%%%%%
+\end{document}

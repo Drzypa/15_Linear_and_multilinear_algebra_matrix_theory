@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfJordanCanonicalFormTheorem}
+\pmcreated{2013-03-22 14:15:36}
+\pmmodified{2013-03-22 14:15:36}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{proof of Jordan canonical form theorem}
+\pmrecord{11}{35709}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A18}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+This theorem can be proved combining the cyclic decomposition theorem and the primary decomposition theorem.
+By hypothesis, the characteristic polynomial of $T$ factorizes completely over $F$, and then so does the minimal polynomial of $T$ (or its annihilator polynomial). This is because the minimal polynomial of $T$ has exactly the same factors on $F[X]$ as the characteristic polynomial of $T$. Let's suppose then that the minimal polynomial of $T$ factorizes as $m_{T}=(X-\lambda_1)^{\alpha_1} \ldots (X-\lambda_r)^{\alpha_r}$.
+We know, by the primary decomposition theorem, that 
+$$V=\bigoplus_{i=1}^{r}\ker((T-\lambda_iI)^{\alpha_i}).$$
+Let $T_{i}$ be the restriction of $T$ to $\ker((T-\lambda_iI)^{\alpha_{i}})$. We apply now the cyclic decomposition theorem to every linear operator $$(T_{i}-\lambda_iI) \colon \ker(T-\lambda_iI)^{\alpha_{i}}\to \ker(T-\lambda_iI)^{\alpha_{i}}.$$ We know then that $\ker(T-\lambda_iI)^{\alpha_i}$ has a basis $B_{i}$ of the form 
+$B_{i}= B_{1,i} \bigcup B_{2,i} \bigcup \ldots \bigcup B_{d_i,i}$
+such that each $B_{s,i}$ is of the form $$B_{s,i}=\{v_{s,i}, (T-\lambda_i)v_{s,i}, (T-\lambda_i)^{2}v_{s,i}, \ldots, 
+(T-\lambda_i)^{k_{s,i}}v_{s,i}\}.$$
+
+Let's see that $T$ in each of this ``cyclic sub-basis'' $B_{s,i}$ is a Jordan block: 
+Simply notice the following fact about this polynomials:
+\begin{eqnarray*}
+X(X-\lambda_i)^{j} &=&
+(X-\lambda_i)^{j+1}+X(X-\lambda_i)^{j}-(X-\lambda_i)^{j+1} \\
+&=& (X-\lambda_i)^{j+1}+(X-X+\lambda_i)(X-\lambda_i)^{j} \\
+&=& (X-\lambda_i)^{j+1}+\lambda_i(X-\lambda_i)^{j}
+\end{eqnarray*}
+and then $$T(T-\lambda_iI)^{j}(v_{s,i})=(T-\lambda_i)^{j+1}(v_{s,i})+\lambda_i(T-\lambda_iI)^{j}(v_{s,i}).$$ So, if we also notice that $(T-\lambda_iI)^{k_{s,i}+1}(v_{s,i})=0$, we have that $T$ in this sub-basis is the Jordan block
+$$\begin{pmatrix}
+\lambda_i & 0 & 0 & \cdots & 0 & 0\\
+1 & \lambda_i & 0 & \cdots & 0 & 0\\
+0 & 1 & \lambda_i & \cdots & 0 & 0\\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+0 & 0 & 0 & \cdots & \lambda_i & 0\\
+0 & 0 & 0 & \cdots & 1 & \lambda_{i}
+\end{pmatrix}$$
+
+So, taking the basis $B=B_{1} \bigcup B_{2} \bigcup \ldots \bigcup B_{r}$, we have that $T$ in this basis has a Jordan form.
+
+This form is unique (except for the order of the blocks) due to the uniqueness of the cyclic decomposition.
+%%%%%
+%%%%%
+\end{document}

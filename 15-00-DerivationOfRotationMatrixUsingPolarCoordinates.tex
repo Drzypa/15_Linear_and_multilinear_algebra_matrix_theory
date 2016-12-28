@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfRotationMatrixUsingPolarCoordinates}
+\pmcreated{2013-03-22 15:25:02}
+\pmmodified{2013-03-22 15:25:02}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{derivation of rotation matrix using polar coordinates}
+\pmrecord{9}{37261}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+%\pmkeywords{rotation matrix}
+\pmrelated{RotationMatrix}
+\pmrelated{PolarCoordinates}
+\pmrelated{DecompositionOfOrthogonalOperatorsAsRotationsAndReflections}
+\pmrelated{DerivationOf2DReflectionMatrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{enumerate}
+
+% define commands here
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+
+\newcommand{\vx}{\boldsymbol{x}}
+\newcommand{\vy}{\boldsymbol{y}}
+\newcommand{\vv}{\boldsymbol{v}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+\begin{document}
+We derive formally the expression for the rotation of a two-dimensional vector
+$\vv = a\vx + b\vy$ by an angle $\phi$ counter-clockwise.  Here 
+$\vx$ and $\vy$ are perpendicular unit vectors that are oriented counter-clockwise
+(the usual orientation).
+
+\begin{center}
+\includegraphics{rotation-matrix.eps}
+\end{center}
+
+In terms of polar coordinates, $\vv$ may be rewritten:
+\begin{align*}
+\vv &= r(\cos \theta \, \vx + \sin \theta \, \vy) \,, \quad a = r\cos \theta\,; b = r\sin\theta\,, \\
+\intertext{for some angle $\theta$ and radius $r \geq 0$.
+To rotate a vector $\vv$ by $\phi$ really means to shift its
+polar angle by a constant amount $\phi$ but leave its polar radius fixed.
+Therefore, the result of the rotation must be:}
+\vv' &= r\bigl(\cos(\theta + \phi) \, \vx + \sin(\theta + \phi) \, \vy\bigr) \\
+\intertext{Expanding using the angle addition formulae, we obtain}
+\vv' &= r\bigl(\cos \theta \cos \phi - \sin \theta \sin \phi) \, \vx + (\sin \theta \cos \phi + \cos \theta \sin \phi) \, \vy\bigr)  \\
+&= (a \cos \phi - b \sin \phi) \, \vx + (b \cos \phi + a \sin \phi) \, \vy\,.
+\end{align*}
+When this transformation is written out in $[\vx, \vy]$-coordinates, we obtain the formula for the rotation matrix:
+\[
+\vv' = \begin{bmatrix}
+\cos \phi & -\sin \phi \\
+\sin \phi & \cos \phi
+\end{bmatrix} \begin{bmatrix} a \\ b \end{bmatrix} \,.
+\]
+%%%%%
+%%%%%
+\end{document}

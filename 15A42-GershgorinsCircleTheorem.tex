@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GershgorinsCircleTheorem}
+\pmcreated{2013-03-22 13:14:15}
+\pmmodified{2013-03-22 13:14:15}
+\pmowner{lieven}{1075}
+\pmmodifier{lieven}{1075}
+\pmtitle{Gershgorin's circle theorem}
+\pmrecord{7}{33709}
+\pmprivacy{1}
+\pmauthor{lieven}{1075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A42}
+\pmsynonym{Gershgorin's disc theorem}{GershgorinsCircleTheorem}
+\pmsynonym{Gerschgorin's circle theorem}{GershgorinsCircleTheorem}
+\pmsynonym{Gerschgorin's disc theorem}{GershgorinsCircleTheorem}
+\pmrelated{BrauersOvalsTheorem}
+\pmdefines{Gershgorin disc}
+\pmdefines{Gerschgorin disc}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $A$ be a square complex matrix. Around every element $a_{ii}$ on the diagonal of the matrix, we draw a circle with radius the sum of the norms of the other elements on the same row $\sum_{j\neq i}|a_{ij}|$. Such circles are called \emph{Gershgorin discs}. 
+
+Theorem: Every eigenvalue of A lies in one of these Gershgorin discs.
+
+Proof: Let $\lambda$ be an eigenvalue of $A$ and $x$ its corresponding eigenvector. Choose $i$ such that $|x_i|={\max}_j |x_j|$. Since $x$ can't be $0$, $|x_i|>0$. Now $Ax=\lambda x$, or looking at the $i$-th component
+$$ (\lambda - a_{ii})x_i = \sum_{j\neq i} a_{ij}x_j.$$ Taking the norm on both sides gives $$|\lambda - a_{ii}|=|\sum_{j\neq i} \frac{a_{ij}x_j}{x_i}|\leq \sum_{j\neq i}|a_{ij}|.$$
+%%%%%
+%%%%%
+\end{document}

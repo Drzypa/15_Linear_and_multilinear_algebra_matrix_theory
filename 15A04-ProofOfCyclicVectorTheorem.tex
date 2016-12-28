@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCyclicVectorTheorem}
+\pmcreated{2013-03-22 14:14:42}
+\pmmodified{2013-03-22 14:14:42}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{proof of cyclic vector theorem}
+\pmrecord{12}{35690}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+First, let's assume $f$ has a cyclic vector $v$. Then $B=\{v,f(v),...,f^{n-1}(v)\}$ is a basis for $V$. Suppose $g$ is a linear transformation which commutes with $f$. Consider the coordinates $(\alpha_{0},...,\alpha_{n-1})$ of $g(v)$ in B, that is $$g(v)=\sum_{i=0}^{n-1}\alpha_{i}f^{i}(v).$$ 
+Let $$P=\sum_{i=0}^{n-1}\alpha_{i}X^{i} \in k[X].$$ We show that $g=P(f)$. 
+For $w \in V$, write $$w=\sum_{j=0}^{n-1}\beta_{j}f^{j}(v),$$ then
+\begin{eqnarray*}
+g(w) &=& \sum_{j=0}^{n-1}\beta_{j}g(f^{j}(v)) = \sum_{j=0}^{n-1}\beta_{j}f^{j}(g(v)) \\
+&=& \sum_{j=0}^{n-1}\beta_{j}f^{j}(\sum_{i=0}^{n-1}\alpha_{i}f^{i}(v))  
+= \sum_{j=0}^{n-1}\beta_{j}\sum_{i=0}^{n-1}\alpha_{i}f^{j+i}(v)
+= \sum_{j=0}^{n-1}\sum_{i=0}^{n-1}\beta_{j}\alpha_{i}f^{j+i}(v) \\
+&=& \sum_{i=0}^{n-1}\sum_{j=0}^{n-1}\beta_{j}\alpha_{i}f^{j+i}(v)
+= \sum_{i=0}^{n-1}\alpha_{i}f^{i}(\sum_{j=0}^{n-1}\beta_{j}f^{j}(v)) 
+= \sum_{i=0}^{n-1}\alpha_{i}f^{i}(w)
+\end{eqnarray*}
+
+Now, to finish the proof, suppose $f$ doesn't have a cyclic vector (we want to see that there is a linear transformation $g$ which commutes with $f$ but is not a polynomial evaluated in $f$). As $f$ doesn't have a cyclic vector, then due to the cyclic decomposition theorem $V$ has a basis of the form 
+$$B=\{v_{1}, f(v_{1}),...,f^{j_{1}}(v_{1}),v_{2},f(v_{2}),..., f^{j_{2}}(v_{2}),...,v_{r},f(v_{r}),...,f^{j_{r}}(v_{r})\}.$$ 
+Let $g$ be the linear transformation defined in $B$ as follows:
+\begin{displaymath}
+g(f^{k}(v_{1}))= \left\{
+\begin{array}{ll}
+0 & \textrm{for every } k=0,\ldots,j_1\\
+f^{k_{i}}(v_{i}) & \textrm{for every } i=2,\ldots,r\textrm{ and }k_{i}=0,\ldots,j_{i}. 
+\end{array}
+\right.
+\end{displaymath}
+The fact that $f$ and $g$ commute is a consequence of $g$ being defined as zero on one $f$-invariant subspace and as the identity on its complementary $f$-invariant subspace.  Observe that it's enough to see that $g$ and $f$ commute in the basis $B$ (this fact is trivial). We see that, if $k=0,...,j_{1}-1$, then 
+$$(gf)(f^{k}(v_{1}))=g(f^{k+1}(v_{1}))=0\quad \mbox{ and }\quad(fg)(f^{k}(v_{1}))=f(g(f^{k}(v_{1}))=f(0)=0.$$ 
+If $k=j_{1}$, we know there are $\lambda_{0},...,\lambda_{j_{1}}$ such that $$f^{j_{1}+1}(v_{1})=\sum_{k=0}^{j_{1}}\lambda_{k}f^{k}(v_{1}),$$ so $$(gf)(f^{j_{1}}(v_{1}))=\sum_{k=0}^{j_{1}}\lambda_{k}g(f^{k}(v_{1}))=0\quad\mbox{ and }\quad(fg)(f^{j_{1}}(v_{1}))=f(0)=0.$$ 
+Now, let $i=2,...,r$ and $k_{i}=0,...,j_{i}-1$, then 
+$$(gf)(f^{k_{i}}(v_{i}))=g(f^{k_{i}+1}(v_{i}))=f^{k_{i}+1}(v_{i})\quad\mbox{ and }\quad (fg)(f^{k_{i}}(v_{i})) =f(g(f^{k_{i}}(v_{i}))= f^{k_{i}+1}(v_{i}).$$ 
+In the case $k_{i}=j_{i}$, we know there are $\lambda_{0,i},...,\lambda_{j_{i},i}$ such that $$f^{j_{i}+1}(v_{i})=\sum_{k=0}^{j_{i}}\lambda_{k,i}f^{k}(v_{i})$$ then $$(gf)(f^{j_{i}}(v_{i}))=g(f^{j_{i}+1}(v_{i}))=\sum_{k=0}^{j_{i}}\lambda_{k,i}g(f^{k}(v_{i}))= \sum_{k=0}^{j_{i}}\lambda_{k,i}f^{k}(v_{i})=f^{j_{i}+1}(v_{i}),$$ and $$(fg)(f^{j_{i}}(v_{i}))=f(g(f^{j_{i}}(v_{i}))=f(f^{j_{i}}(v_{i}))=f^{j_{i}+1}(v_{i}).$$ This proves that $g$ and $f$ commute in $B$. Suppose now that $g$ is a polynomial evaluated in $f$. So there is a $$P=\sum_{k=0}^{h}c_{k}X^{k} \in K[X]$$ such that
+$g=P(f)$. Then, $0=g(v_{1})=P(f)(v_{1})$, and so the annihilator polynomial $m_{v_{1}}$ of $v_{1}$ divides $P$. But then, as the annihilator $m_{v_{2}}$ of $v_{2}$ divides $m_{v_{1}}$ (see the cyclic decomposition theorem), we have that $m_{v_{2}}$ divides $P$, and then $0=P(f)(v_{2})=g(v_{2})=v_{2}$ which is absurd because $v_{2}$ is a vector of the basis $B$. This finishes the proof.
+%%%%%
+%%%%%
+\end{document}

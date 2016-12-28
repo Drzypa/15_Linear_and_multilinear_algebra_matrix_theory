@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniquenessOfASparseSolution}
+\pmcreated{2013-03-22 19:36:26}
+\pmmodified{2013-03-22 19:36:26}
+\pmowner{kammerer}{26336}
+\pmmodifier{kammerer}{26336}
+\pmtitle{uniqueness of a sparse solution}
+\pmrecord{54}{42600}
+\pmprivacy{1}
+\pmauthor{kammerer}{26336}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A06}
+%\pmkeywords{Hamming weight}
+%\pmkeywords{spark of a matrix}
+%\pmkeywords{system of linear equations}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+Let $\mathbb{F}$ be a field, and let $m, n \in \mathbb{N} \setminus \{0\}.$ We denote by $\displaystyle \left\| x \right\|_0$ the Hamming weight of a column vector $\displaystyle x = [x_1, \ldots , x_n]^{\rm T} \in \mathbb{F}^n,$ i.e., $\displaystyle \left\| x \right\|_0 = \# \{j \in \{1, \ldots , n\} :\, x_j \neq 0\}.$ Consider a non-negative integer $k,$ and an $m \times n$ matrix $A$ whose entries belong to $\mathbb{F}.$  
+\begin{theorem}[Donoho and Elad]
+The following conditions are equivalent:\\
+\begin{tabular}{cl}
+(1)&for each column vector $\displaystyle y \in \mathbb{F}^m$ there exists at most one $\displaystyle x \in \mathbb{F}^n$ such that $A x = y$ and $\displaystyle \left\| x \right\|_0 \leq k,$\\
+(2)&$k < \frac{1}{2} {\rm spark} (A).$\\ 
+\end{tabular}
+\end{theorem}
+
+The standard proof of the theorem (see, for instance, \cite{ek}) goes as follows.
+
+\noindent
+{\bf Proof.} First, suppose that condition {\it (1)} is not satisfied. Then there exist column vectors $\displaystyle v, w \in \mathbb{F}^n$ such that $v \neq w,\, A v = A w,$ and $\displaystyle \max \left\{\left\| v \right\|_0, \left\| w \right\|_0\right\} \leq k.$ Consequently, $\displaystyle v - w \in \mathbb{F}^n \setminus \{{\bf 0}\}$ and $A (v - w) = {\bf 0}.$ Moreover, by the definition of the Hamming weight, $\displaystyle \left\| v - w \right\|_0 \leq 2 k.$ Thus, $\displaystyle {\rm spark} (A) = \inf \left\{\left\| x \right\|_0 :\, x \in \mathbb{F}^n \setminus \{{\bf 0}\},\, A x = {\bf 0}\right\} \leq 2 k,$ which means that condition {\it (2)} is not satisfied. 
+\newline
+Next, suppose that {\it (2)} is not satisfied. Then there exists a column vector $\displaystyle u \in \mathbb{F}^n \setminus \{{\bf 0}\}$ such that $A u = {\bf 0}$ and $\displaystyle \left\| u \right\|_0 \leq 2 k.$ It is easy to see that $u = p - q$ for some $\displaystyle p, q \in \mathbb{F}^n$ with $\displaystyle \max \left\{\left\| p \right\|_0, \left\| q \right\|_0\right\} \leq k.$ (If $\displaystyle h := \left\| u \right\|_0 > k,\, u = [u_1, \ldots , u_n]^{\rm T},$ and $\displaystyle \{j \in \{1, \ldots , n\} :\, u_j \neq 0\} = \{j_1, \ldots , j_h\},$ define $\displaystyle p = [p_1, \ldots , p_n]^{\rm T}$ by
+$$
+p_j = \left\{
+\begin{array}{ll}
+u_j,&\mbox{if $j \in \{j_1, \ldots , j_k\},$}\\
+0,&\mbox{otherwise.} 
+\end{array}
+\right.
+$$
+If $\displaystyle \left\| u \right\|_0 \leq k,$ define $p = u.)$ Since $p \neq q$ and $A p = A q,$ condition {\it (1)} is not satisfied. $\Box$   
+
+\begin{thebibliography}{99}
+\bibitem{de}
+D. L. Donoho and M. Elad, Optimally sparse representation in general (nonorthogonal) dictionaries via $\ell^1$ minimization, {\it Proc. Natl. Acad. Sci. USA} {\bf 100}, No. 5: 2197--2202 (2003). 
+\bibitem{ek}
+{\it Compressed Sensing: Theory and Applications}, edited by Y. C. Eldar and G. Kutyniok, Cambridge University Press, 2012.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

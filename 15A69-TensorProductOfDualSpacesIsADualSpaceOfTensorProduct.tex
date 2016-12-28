@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TensorProductOfDualSpacesIsADualSpaceOfTensorProduct}
+\pmcreated{2013-03-22 18:32:19}
+\pmmodified{2013-03-22 18:32:19}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{tensor product of dual spaces is a dual space of tensor product}
+\pmrecord{18}{41255}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A69}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\textbf{Proposition}. Let $k$ be a field and $V$, $W$ be vector spaces over $k$. Then $(V\otimes W)^{*}$ is isomorphic to $V^{*}\otimes W^{*}$.
+
+\textit{Proof}. If $V$ or $W$ is finite dimensional, then there is an explicit isomorphism between $(V\otimes W)^{*}$ and $V^{*}\otimes W^{*}$ (see \PMlinkname{this entry}{TensorProductAndDualSpaces} for more details). So assume that both $V$ and $W$ are infinite dimensional. \\
+
+First of all, note that if $V$ is a vector space, then $\mathrm{dim}_{k}(V)$ denotes its dimension, that is $\mathrm{dim}_{k}(V)$ is a cardinality of any basis of $V$. Thus we can compare dimensions of spaces, so $\mathrm{dim}_{k}(V)\leq\mathrm{dim}_{k}(W)$ if and only if there is an injection from a basis of $V$ to a basis of $W$ (note that this relation is well defined, i.e. it does not depend on the choice of bases). One can easily show that $\mathrm{dim}_{k}(V)\leq\mathrm{dim}_{k}(W)$ if and only if there is an injective linear map from $V$ to $W$ and this is if and only if there is a surjective linear map from $W$ to $V$. Therefore $V$ is isomorphic to $W$ if and only if $\mathrm{dim}_{k}(V)=\mathrm{dim}_{k}(W)$ (which here means that $\mathrm{dim}_{k}(V)\leq\mathrm{dim}_{k}(W)$ and $\mathrm{dim}_{k}(W)\leq\mathrm{dim}_{k}(V)$). \\
+
+Without loss of generality, we may assume that $\mathrm{dim}_{k}(V)\leq\mathrm{dim}_{k}(W)$ (we can always compare any two sets). Note that the basis of $V\otimes W$ is the product of bases of $V$ and $W$ (namely if $(e_i)_{i\in I}$ is a basis of $V$ and $(e'_{j})_{j\in J}$ a basis of $W$, then $(e_{i}\otimes e'_{j})_{i\in I,j\in J}$ is a basis of $V\otimes W$). If $X,Y$ are sets such that $Y$ is infinite and there is an injection $X\to Y$, then it is well known that there is a bijection from $Y$ to $X\times Y$. Thus (since $W$ is infinite dimensional) we have: $$\mathrm{dim}_{k}(V\otimes W)=\mathrm{dim}_{k}(W).$$
+Therefore $V\otimes W$ is isomorphic to $W$, so $(V\otimes W)^{*}$ is isomorphic to $W^{*}$.
+
+Now the inequality $\mathrm{dim}_{k}(V)\leq\mathrm{dim}_{k}(W)$ implies that $\mathrm{dim}_{k}(V^{*})\leq\mathrm{dim}_{k}(W^{*})$. Indeed, assume that there is an injective linear map $f:V\to W$. Then there is a (surjective) linear map $g:W\to V$ such that $g\circ f =\mathrm{id}_{V}$ (see \PMlinkname{this entry}{SomeFactsAboutInjectiveAndSurjectiveLinearMaps} for more details). Therefore (since $(\cdot)^{*}$ is a contravariant functor) we have that $$\mathrm{id}_{V^{*}}=(\mathrm{id}_{V})^{*}=(g\circ f)^{*}=f^{*}\circ g^{*}$$
+and this implies that $f^{*}:W^{*}\to V^{*}$ is a surjective linear map (on the other hand $g^{*}:V^{*}\to W^{*}$ is an injective linear map), so $\mathrm{dim}_{k}(V^{*})\leq\mathrm{dim}_{k}(W^{*})$.
+
+Now (due to previous arguments) we have $$\mathrm{dim}_{k}(V^{*}\otimes W^{*})=\mathrm{dim}_{k}(W^{*}),$$
+so $V^{*}\otimes W^{*}$ and $W^{*}$ are isomorphic.
+
+All in all, we have that $(V\otimes W)^{*}$ is isomorphic to $W^{*}$, which is isomorphic to $V^{*}\otimes W^{*}$. This completes the proof. $\square$
+
+
+
+\textbf{Remarks}. We know that there is an isomorphism between $(V\otimes W)^{*}$ and $V^{*}\otimes W^{*}$, but generally we know nothing about it, about its behaviour. Thus it is hard to find imprortant applications for this proposition. Also note, that this proposition is true for free modules over any unital ring.
+%%%%%
+%%%%%
+\end{document}

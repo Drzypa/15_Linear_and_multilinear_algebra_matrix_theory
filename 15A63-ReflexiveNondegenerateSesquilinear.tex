@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ReflexiveNondegenerateSesquilinear}
+\pmcreated{2013-03-22 15:51:04}
+\pmmodified{2013-03-22 15:51:04}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{reflexive non-degenerate sesquilinear}
+\pmrecord{10}{37834}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A63}
+\pmsynonym{reflexive non-degenerate bilinear}{ReflexiveNondegenerateSesquilinear}
+\pmsynonym{reflexive sesquilinear}{ReflexiveNondegenerateSesquilinear}
+\pmsynonym{reflexive bilinear}{ReflexiveNondegenerateSesquilinear}
+%\pmkeywords{Reflexive}
+\pmrelated{SesquilinearFormsOverGeneralFields}
+\pmdefines{Reflexive non-degenerate sesquilinear}
+\pmdefines{Reflexive non-degenerate bilinear}
+\pmdefines{Reflexive}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+\begin{document}
+A non-degenerate sesquilinear form $b:V\times V\rightarrow k$ is \emph{reflexive} if for all $v,w\in V$, if $b(v,w)=0$ then $b(w,v)=0$.  This means
+\[v\perp w\textnormal{ if and only if } w\perp v.\]
+It is rare to define perpendicularity for sesquilinear/bilinear maps which are not reflexive because it would require a version of left and right perpendicular.  Thus a reflexive sesquilinear/bilinear map is usually synonymous with the existence of perpendicularity.
+%%%%%
+%%%%%
+\end{document}

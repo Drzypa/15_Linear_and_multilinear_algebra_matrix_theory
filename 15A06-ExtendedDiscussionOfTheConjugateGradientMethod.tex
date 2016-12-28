@@ -1,0 +1,143 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExtendedDiscussionOfTheConjugateGradientMethod}
+\pmcreated{2013-03-22 17:28:24}
+\pmmodified{2013-03-22 17:28:24}
+\pmowner{ehremo}{15714}
+\pmmodifier{ehremo}{15714}
+\pmtitle{extended discussion of the conjugate gradient method}
+\pmrecord{13}{39859}
+\pmprivacy{1}
+\pmauthor{ehremo}{15714}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A06}
+\pmclassification{msc}{90C20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\v#1{\mathbf{#1}}
+\def\vtilde#1{\mathbf{\tilde{#1}}}
+\def\reals{\mathbb{R}}
+\def\T{^{T}}
+\def\grad{\nabla}
+\def\con#1{^{(#1)}}
+\def\sp#1{\mathrm{span}\{\; #1 \;\}}
+\def\eqn#1#2{\begin{equation} \label{#1} #2 \end{equation}}
+\def\eqna#1#2{\begin{eqnarray} \label{#1} #2 \end{eqnarray}}
+\def\dim{\mathrm{dim}\;}
+
+\begin{document}
+Suppose we wish to solve the system
+\eqn{system}{
+A\v x = \v b
+}
+where $A$ is a symmetric positive definite matrix. If we define the function
+\eqn{}{\Phi(\v x) = \frac 1 2 \v x\T A \v x - \v x\T \v b}
+we realise that solving (\ref{system}) is equivalent to minimizing $\Phi$. This is because if $\v x$ is a minimum of $\Phi$ then we must have
+\eqn{}{\grad \Phi(\v x) = A\v x - \v b = \v 0}
+These considerations give rise to the \emph{steepest descent algorithm}. Given an approximation $\vtilde x$ to the solution $\v x$, the idea is to improve the approximation by moving in the direction in which $\Phi$ decreases most rapidly. This direction is given by the gradient of $\Phi$ in $\vtilde x$. Therefore we formulate our algorithm as follows
+\begin{quote}
+Given an initial approximation $\v x\con 0$, for $k \in 1...N$,
+$$\v x\con{k} = \v x\con{k-1} + \alpha_k \v r\con k$$
+where $\v r\con k = \v b - A\v x \con{k-1} = -\grad \Phi(\v x \con{k-1})$ and $\alpha_k$ is a scalar to be determined.
+\end{quote}
+$\v r\con k$ is traditionally called the \emph{residual vector}. We wish to choose $\alpha_k$ in such a way that we reduce $\Phi$ as much as possibile in each iteration, in other words, we wish to minimize the function $\phi(\alpha_k) = \Phi(\v x\con{k-1} + \alpha_k \v r \con k)$ with respect to $\alpha_k$
+$$
+\begin{array}{rcl}
+\phi'(\alpha_k) &=& \grad \Phi(\v x\con{k-1} + \alpha_k \v r \con k)\T \v r\con{k} \\
+&=& [A\v x\con k - \v b + \alpha_k A\v r\con k]\T\v r \con k \\
+&=& [-\v r\con k + \alpha_k A\v r \con k]\T \v r \con k \\
+&=& 0
+\end{array}
+\Longleftrightarrow \alpha_k = \frac{\v r\con k{}\T\v r \con k}{\v r \con k{}\T A \v r \con k}
+$$
+
+It's possible to demonstrate that the steepest descent algorithm described above converges to the solution $\v x$, in an infinite time. The conjugate gradient method improves on this by finding the exact solution after only $n$ iterations. Let's see how we can achieve this.
+
+We say that $\vtilde x$ is \emph{optimal} with respect to a direction $\v d$ if $\lambda = 0$ is a local minimum for the function $\Phi(\vtilde x + \lambda \v d)$.
+
+In the steepest descent algorithm, $\v x\con k$ is optimal with respect to $\v r\con k$, but in general it is not optimal with respect to $\v r\con 0,...,\v r\con{k-1}$. If we could modify the algorithm such that the optimality with respect to the search directions is preserved we might hope that that $\v x\con n$ is optimal with respect to $n$ linearly independent directions, at which point we would have found the exact solution.
+
+Let's make the following modification
+\eqna{}{
+\v p\con k &=&
+\begin{cases}
+\v r \con 1 & \text{if } k = 1 \\
+\v r \con k - \beta_k \v p \con {k-1} & \text{if } k > 1
+\end{cases} \\
+\v x\con k &=& \v x\con {k-1} + \alpha_k \v p \con k
+}
+where $\alpha_k$ and $\beta_k$ are scalar multipliers to be determined
+
+We choose $\alpha_k$ in the same way as before, i.e. such that $\v x\con k$ is optimal with respect to $\v p \con k$
+\eqn{}{\alpha_k = \frac{\v r\con k{}\T\v p \con k}{\v p \con k{}\T A \v p \con k}}
+Now we wish to choose $\beta_k$ such that $\v x\con k$, is also optimal with respect to $\v p \con{k-1}$. We require that
+\eqn{}{\left.\frac{\partial \Phi(\v x\con k + \lambda \v p\con {k-1})}{\partial \lambda}\right|_{\lambda = 0} = [A\v x\con k - \v b]\T \v p\con{k-1} = 0}
+Since $\v x\con k = \v x \con{k-1} + \alpha_k \v p \con k$, and assuming that $\v x\con{k-1}$ is optimal with respect to $\v p\con {k-1}$ (i.e. that $[A\v x\con {k-1} - \v b]\T \v p\con{k-1} = 0$) we can rewrite this condition as
+\eqn{}{[A(\v x\con{k-1} + \alpha_k \v p\con k) - \v b]\T \v p\con{k-1} = \alpha_k [\v r\con k - \beta_k\v p \con{k-1}]\T A \v p\con{k-1} = 0}
+and therefore we obtain the required value for $\beta_k$,
+\eqn{}{\beta_k = \frac{\v r\con k{}\T A \v p\con{k-1}}{\v p\con{k-1}{}\T A \v p\con{k-1}}}
+
+Now we want to show that $\v x\con k$ is also optimal with respect to $\v p\con 1, ..., \v p\con{k-2}$, i.e. that
+\eqn{}{[A\v x\con k - \v b]\T\v p\con j = \v r \con{k+1}{}\T \v p \con j = 0 \qquad \forall\; j \in 1...k-2}
+We do this by strong induction on $k$, assuming that for all $\ell \in 1 ... k-1, j \in 1 ... \ell$, $\v x \con \ell$ is optimal with respect to $\v p\con j$ or equivalently that
+\eqn{orto}{[A\v x\con \ell - \v b]\T\v p \con j = \v r\con{\ell+1}{}\T \v p \con j = 0}
+Noticing that $\v r \con{k+1} = \v r \con k + \alpha_k A \v p \con k$, we want to show
+\eqn{}{\v r \con k {}\T \v p \con j + \alpha_k \v p \con k {}\T A \v p \con j = 0}
+and therefore since $\v r \con k {}\T \v p \con j = 0$ by inductive hypothesis, it suffices to prove that
+\eqn{}{\v p \con k{}\T A \v p \con j = 0 \qquad \forall \; j \in 1...k-2}
+But, again by the definition of $\v p \con k$, this is equivalent to proving
+\eqn{}{\v r \con k {}\T A \v p \con j - \beta_k \v p \con{k-1} {}\T A \v p \con j = 0}
+and since $\v p \con{k-1} {}\T A \v p \con j = 0$ by inductive hypothesis, all we need to prove is that 
+\eqn{}{\v r \con k {}\T A \v p \con j = 0}
+
+To proceed we require the following lemma.
+
+\begin{quote}
+Let $V_\ell = \sp{ A^{\ell-1} \v r \con 1, ..., A\v r \con 1, \v r \con 1 }$.
+\begin{itemize}
+\item $\v r \con \ell, \v p \con \ell \in V_{\ell}$
+\item If $\v y \in V_\ell$ then $\v r \con k \perp \v y$ for all $k > \ell$.
+\end{itemize}
+\end{quote}
+
+Since $\v p \con j \in V_j$, it follows that $A\v p \con j \in V_{j+1}$, and since $j + 1 < k$,
+\eqn{}{\v r \con k {}\T (A \v p \con j) = 0}
+
+To finish let's prove the lemma. The first point is by induction. The base case $\ell = 1$ holds. Assuming that $\v r \con{\ell - 1}, \v p \con {\ell - 1} \in V_{\ell - 1}$, we have that
+\eqn{}{\v r \con \ell = \v r \con{\ell-1} + \alpha_{\ell-1} A \v p \con {\ell-1} \in V_{\ell} \qquad \v p \con \ell = \v r \con \ell - \beta_\ell \v p \con{\ell-1} \in V_\ell}
+For the second point we need an alternative characterization of $V_\ell$. Since $\v p \con 1, ..., \v p \con \ell \in V_\ell$,
+\eqn{}{\sp{ \v p \con 1, ..., \v p \con \ell } \subseteq V_\ell}
+By (\ref{orto}), we have that if for some $s \in 1...\ell$
+\eqn{}{\v p\con s = \lambda_{s-1} \v p \con{s-1} + \cdots + \lambda_{1} \v p \con 1}
+then $\v p \con s {} \T \v r \con s = 0$, but we know that
+\eqn{}{\v p \con s{}\T \v r \con s = [\v r \con s - \beta_s \v p \con {s-1}]\T \v r \con s = \v r \con s {}\T \v r \con s}
+but were this zero, we'd have $\v r \con s = \v 0$ and we would have solved the original problem. Thus we conclude that $\v p \con s \not\in \sp{\v p \con 1, ..., \v p \con {s-1} }$, so the vectors $\v p \con 1, ..., \v p \con s$ are linearly independent. It follows that $\dim \sp{ \v p \con 1, ..., \v p \con \ell } = \ell$, which on the other hand is the maximum possible dimension of $V_\ell$ and thus we must have
+\eqn{}{V_\ell = \sp{ \v p \con 1, ..., \v p \con \ell }}
+which is the alternative characterization we were looking for.
+Now we have, again by (\ref{orto}), that if $\v y \in V_\ell$, and $\ell < k$, then
+\eqn{}{\v r \con k {}\T \v y = 0}
+thus the second point is proven.
+%%%%%
+%%%%%
+\end{document}

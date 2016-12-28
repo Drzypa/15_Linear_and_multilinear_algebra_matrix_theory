@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LevyDesplanquesTheorem}
+\pmcreated{2013-03-22 15:34:50}
+\pmmodified{2013-03-22 15:34:50}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{Levy-Desplanques theorem}
+\pmrecord{9}{37490}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A strictly diagonally dominant matrix is non-singular. In other words, let $A\in\mathbf{C}^{n,n}$ be a matrix satisfying the property
+\[
+\left|a_{ii}\right|>\sum_{j\ne i}\left|a_{ij}\right|\qquad \forall i;
+\]
+then $\det(A)\ne 0$.
+
+Proof:
+Let $\det(A)=0$; then a non-zero vector $\mathbf{x}$ exists such that $A\mathbf{x}=\mathbf{0}$; let $M$ be the index such that $\left|x_M\right|=\max(\left|x_1\right|,\left|x_2\right|,\cdots,\left|x_n\right|)$, so that $\left|x_j\right|\leq\left|x_M\right|\quad \forall j$; we have
+
+$a_{M1}x_1+a_{M2}x_2+\cdots+a_{MM}x_M+\cdots+a_{Mn}x_n=0$
+
+which implies:
+
+$\left|a_{MM}\right|\left|x_M\right|=\left|a_{MM}x_M\right|=\left|\sum_{j\ne M}a_{Mj}x_j\right|\leq\sum_{j\ne M}\left|a_{Mj}\right|\left|x_j\right|\leq\left|x_M\right|\sum_{j\ne M}\left|a_{Mj}\right|$
+
+that is
+
+$\left|a_{MM}\right|\leq\sum_{j\ne M}\left|a_{Mj}\right|,$
+
+in contrast with strictly diagonally dominance definition.$\square$
+
+
+Remark:
+the Levy-Desplanques theorem is equivalent to the well-known Gerschgorin circle theorem. In fact, let's assume Levy-Desplanques theorem is true, and let $A$ a $n\times n$ complex-valued matrix, with an eigenvalue $\lambda$; let's apply Levy-Desplanques theorem to the matrix $B=A-\lambda I$, which is singular by definition of eigenvalue: an index $i$ must exist for which $\left|a_{ii}-\lambda\right|=\left|b_{ii}\right|\leq\sum_{j\ne i}^n \left|b_{ij}\right|=\sum_{j\ne i}^n \left|a_{ij}\right|$, which is Gerschgorin circle theorem.
+On the other hand, let's assume Gerschgorin circle theorem is true, and let $A$ be a strictly diagonally dominant $n\times n$ complex matrix. Then, since the absolute value of each disc center $\left|a_{ii}\right|$ is strictly greater than the same disc radius $\sum_{j\ne i}^n \left|a_{ij}\right|$, the point $\lambda=0$ can't belong to any circle, so it doesn't belong to the spectrum of $A$, which therefore can't be singular.
+%%%%%
+%%%%%
+\end{document}

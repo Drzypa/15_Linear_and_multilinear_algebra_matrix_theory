@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConductorOfAVector}
+\pmcreated{2013-03-22 14:05:19}
+\pmmodified{2013-03-22 14:05:19}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{conductor of a vector}
+\pmrecord{5}{35455}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+\pmsynonym{T-conductor}{ConductorOfAVector}
+\pmsynonym{conductor}{ConductorOfAVector}
+\pmsynonym{annihilator}{ConductorOfAVector}
+\pmsynonym{annihilator polynomial}{ConductorOfAVector}
+\pmsynonym{conductor polynomial}{ConductorOfAVector}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $k$ be a field, $V$ a vector space, $T:V\to V$ a linear transformation, and $W$ a $T$-invariant subspace of $V$. Let $x \in V$. The \emph{$T$-conductor} of $x$ \emph{in} $W$ is the set $S_T(x, W)$ containing all polynomials $g \in k[X]$ such that $g(T)x \in W$. It happens to be that this set is an ideal of the polynomial ring. We also use the term $T$-conductor of $x$ in $W$ to refer to the generator of such ideal.
+
+In the special case $W=\{0\}$, the $T$-conductor is called \emph{$T$-annihilator} of $x$.
+Another way to define the $T$-conductor of $x$ in $W$ is by saying that it is a monic polynomial $p$ of lowest degree such that $p(T)x \in W$. Of course this polynomial happens to be unique. So the $T$-annihilator of $x$ is the monic polynomial $m_x$ of lowest degree such that $m_x(T)x = 0$.
+%%%%%
+%%%%%
+\end{document}

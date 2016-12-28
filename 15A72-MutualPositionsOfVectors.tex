@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MutualPositionsOfVectors}
+\pmcreated{2013-03-22 14:36:24}
+\pmmodified{2013-03-22 14:36:24}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{mutual positions of vectors}
+\pmrecord{25}{36178}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A72}
+%\pmkeywords{angle between two vectors}
+\pmrelated{AngleBetweenTwoLines}
+\pmrelated{DirectionCosines}
+\pmrelated{OrthogonalVectors}
+\pmrelated{PerpendicularityInEuclideanPlane}
+\pmrelated{MedianOfTrapezoid}
+\pmrelated{TriangleMidSegmentTheorem}
+\pmrelated{CommonPointOfTriangleMedians}
+\pmrelated{FluxOfVectorField}
+\pmrelated{NormalOfPlane}
+\pmdefines{parallel}
+\pmdefines{parallelism}
+\pmdefines{perpendicular}
+\pmdefines{perpendicularity}
+\pmdefines{diverging}
+\pmdefines{normal vector}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+In this entry, we work within a Euclidean space $E$.
+
+\begin{enumerate}
+\item Two non-zero Euclidean vectors $\vec{a}$ and $\vec{b}$ are said to be {\em parallel}, denoted by\, $\vec{a}\parallel\vec{b}$,\, iff there exists a real number $k$ such that
+$$\vec{a} = k\vec{b}.$$ 
+
+Since both $\vec{a}$ and $\vec{b}$ are non-zero, $k\neq 0$.\, So $\parallel$ is a binary relation on on\, $E\!\smallsetminus\!\lbrace\vec{0}\rbrace$\, and called the {\em parallelism}.\, If\, $k > 0$,\, then $a$ and $b$ are said to be in the \emph{same direction}, and we denote this by\, $\vec{a}\upuparrows\vec{b}$;\, if\, $k < 0$,\, then $a$ and $b$ are said to be in the \emph{opposite} or \emph{contrary directions}, and we denote this by\, $\vec{a}\downarrow\uparrow\vec{b}$.
+
+\textbf{Remarks} 
+ \begin{itemize}
+ \item Actually, the parallelism is an equivalence relation on\, 
+$E\!\smallsetminus\!\lbrace\vec{0}\rbrace$.\, If the zero vector $\vec{0}$ were allowed along, then the relation were not symmetric ($\vec{0} = 0\vec{b}$\, but not necessarily\, $\vec{b} = k\vec{0}$).
+ \item When two vectors $\vec{a}$ and $\vec{b}$ are not parallel to one another, written\, $\vec{a}\nparallel\vec{b}$,\, they are said to be {\em diverging}.
+ \end{itemize}
+
+\item Two Euclidean vectors $\vec{a}$ and $\vec{b}$ are {\em perpendicular}, denoted by\, $\vec{a}\perp\vec{b}$,\, iff 
+                      $$\vec{a}\cdot\vec{b} = 0,$$
+i.e. iff their scalar product vanishes.\, Then $\vec{a}$ and $\vec{b}$ are {\em normal vectors} of each other.
+
+\textbf{Remarks} 
+\begin{itemize}
+ \item We may say that $\vec{0}$ is perpendicular to all vectors, because its direction is \PMlinkescapetext{indefinite} and because\, $\vec{0}\cdot\vec{b} = 0$.
+ \item Perpendicularity is not an equivalence relation in the set of all vectors of the space in question, since it is neither reflexive nor transitive.
+ \end{itemize}
+
+\item The angle $\theta$ between two non-zero vectors $\vec{a}$ and $\vec{b}$ is obtained from
+$$\cos\theta = \frac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|}.$$
+The angle is chosen so that\, $0 \leqq \theta \leqq \pi$.
+
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

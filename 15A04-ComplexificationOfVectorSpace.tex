@@ -1,0 +1,137 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComplexificationOfVectorSpace}
+\pmcreated{2013-03-22 15:24:33}
+\pmmodified{2013-03-22 15:24:33}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{complexification of vector space}
+\pmrecord{9}{37249}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+\pmclassification{msc}{15A03}
+%\pmkeywords{complex matrix}
+\pmrelated{ComplexStructure2}
+\pmdefines{complexification}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{enumerate}
+
+% define commands here
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+
+\newcommand{\Vc}{V^\mathbb{C}}
+\newcommand{\Wc}{W^\mathbb{C}}
+\newcommand{\Tc}{T^\mathbb{C}}
+
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+\begin{document}
+\PMlinkescapeword{fix}
+\PMlinkescapeword{representation}
+\PMlinkescapeword{arguments}
+\PMlinkescapeword{bases}
+\PMlinkescapeword{mean}
+
+\subsection{Complexification of vector space}
+
+If $V$ is a real vector space,
+its \defnterm{complexification} $\Vc$
+is the complex vector space consisting of elements $x + iy$, where $x, y \in V$. Vector addition and scalar multiplication by complex numbers
+are defined in the obvious way:
+\begin{align*}
+(x + iy) + (u+iv) &= (x+u) + i(y+v)\,, & x, y, u, v \in V \\
+(\alpha + i\beta) (x+iy) &= (\alpha x - \beta y) + i(\beta x + \alpha y), & x, y \in V, \alpha, \beta \in \real\,.
+\end{align*}
+
+If $v_1, \dotsc, v_n$ is a basis for $V$, then $v_1 + i0, \dotsc, v_n + i0$
+is a basis for $\Vc$.  Naturally, $x + i0 \in \Vc$ is often written just as $x$.
+
+So, for example, the complexification of $\real^n$ is (isomorphic to) $\complex^n$.
+
+\subsection{Complexification of linear transformation}
+
+If $T\colon V \to W$ is a linear transformation between two real vector spaces $V$ and $W$,
+its complexification $\Tc\colon \Vc \to \Wc$
+is defined by
+\begin{align*}
+\Tc (x+iy) = Tx + iTy\,.
+\end{align*}
+It may be readily verified that $\Tc$ is complex-linear.
+
+If $v_1, \dotsc, v_n$ is a basis for $V$, $w_1, \dotsc, w_m$ is a basis for $W$,
+and $A$ is the matrix representation of $T$ with respect to these bases,
+then $A$, regarded as a complex matrix,
+is also the representation of $\Tc$ with respect to the corresponding bases
+in $\Vc$ and $\Wc$.
+
+So, the complexification process is a formal, coordinate-free way of saying: 
+take the matrix $A$ of $T$, with its real entries,
+but operate on it as a complex matrix.  The advantage of making this abstracted definition is that
+we are not required to fix a choice of coordinates and use matrix representations
+when otherwise there is no need to.
+For example, we might want to make arguments about the complex eigenvalues
+and eigenvectors for a transformation $T\colon V \to V$, while,
+of course, non-real eigenvalues and eigenvectors, by definition, cannot exist
+for a transformation between real vector spaces.
+What we really mean are the eigenvalues and eigenvectors of $\Tc$.
+
+Also, the complexification process generalizes without change for infinite-dimensional 
+spaces.
+
+\subsection{Complexification of inner product}
+
+Finally,
+if $V$ is also a real inner product space,
+its real inner product can be extended to a complex inner product for $\Vc$ by
+the obvious expansion:
+\[
+\langle x+iy, u+iv \rangle = \langle x, u \rangle + \langle y, v \rangle + i(\langle y, u \rangle - \langle x, v \rangle)\,.
+\]
+It follows that $\norm{x+iy}^2 = \norm{x}^2 + \norm{y}^2$.
+
+\subsection{Complexification of norm}
+
+More generally, for a real normed vector space $V$, 
+the equation 
+\[
+\norm{x+iy}^2 = \norm{x}^2 + \norm{y}^2
+\]
+can serve as a definition of the norm for $\Vc$.
+
+\begin{thebibliography}{3}
+\bibitem{arnold} Vladimir I. Arnol'd. {\it Ordinary Differential Equations}. Springer-Verlag, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

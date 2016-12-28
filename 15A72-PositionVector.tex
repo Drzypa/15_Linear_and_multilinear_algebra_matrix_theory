@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PositionVector}
+\pmcreated{2013-03-22 15:25:15}
+\pmmodified{2013-03-22 15:25:15}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{position vector}
+\pmrecord{18}{37265}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A72}
+\pmsynonym{radius vector}{PositionVector}
+\pmrelated{ExampleOfCurvatureSpaceCurve}
+\pmrelated{DyadProduct}
+\pmrelated{TiltCurve}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+In the space $\mathbb{R}^3$, the vector 
+$$\vec{r} \;:=\; (x,\,y,\,z) \;=\; x\vec{i}+y\vec{j}+z\vec{k}$$
+directed from the origin to a point \,$(x,\,y,\,z)$\, is the {\em position vector} of this point.  When the point is \PMlinkescapetext{variable}, $\vec{r}$ \PMlinkescapetext{represents} a vector field and its \PMlinkescapetext{length}
+$$r \;:=\; \sqrt{x^2\!+\!y^2\!+\!z^2}$$
+a scalar \PMlinkescapetext{field}.
+
+The \PMlinkescapetext{simple formulae}
+\begin{itemize}
+\item $\nabla\!\cdot\vec{r} \;=\; 3$
+\item $\nabla\!\times\!\vec{r} \;=\; \vec{0}$
+\item $\displaystyle\nabla r \;=\; \frac{\vec{r}}{r} \;=\; \vec{r}^{\,0}$
+\item $\displaystyle\nabla\frac{1}{r} \;=\; -\frac{\vec{r}}{r^3} \;=\; -\frac{\vec{r}^{\,0}}{r^2}$
+\item $\displaystyle\nabla^2\frac{1}{r} \;=\; 0$
+\end{itemize}
+are valid, where $\vec{r}^{\,0}$ is the unit vector having the direction of $\vec{r}$.
+
+If\, $\vec{c}$\, is a \PMlinkescapetext{constant} vector,\, $\vec{U}\!\!:\mathbb{R}^3\to\mathbb{R}^3$\, a vector function and\, $f\!\!:\mathbb{R}\to\mathbb{R}$\, is a twice differentiable function, then the formulae
+\begin{itemize}
+\item $\nabla(\vec{c}\cdot\!\vec{r})\; \;= \vec{c}$
+\item $\nabla\cdot(\vec{c}\times\vec{r}) \;=\; 0$
+\item $(\vec{U}\!\cdot\!\nabla)\vec{r} \;=\; \vec{U}$
+\item $(\vec{U}\!\times\!\nabla)\!\cdot\!\vec{r} \;=\; 0$
+\item $(\vec{U}\!\times\!\nabla)\!\times\!\vec{r} \;=\; -2\vec{U}$
+\item $\nabla f(r) \;=\; f'(r)\,\vec{r}^{\,0}$
+\item $\displaystyle\nabla^2f(r) \;=\; f''(r)\!+\frac{2}{r}f'(r)$
+\end{itemize}
+hold.
+
+\begin{thebibliography}{9}
+\bibitem{VV}{\sc K. V\"ais\"al\"a:} {\em Vektorianalyysi}. \,Werner S\"oderstr\"om Osakeyhti\"o, Helsinki (1961).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

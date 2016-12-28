@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RankOfALinearMapping}
+\pmcreated{2013-03-22 12:24:03}
+\pmmodified{2013-03-22 12:24:03}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{rank of a linear mapping}
+\pmrecord{13}{32236}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmsynonym{rank}{RankOfALinearMapping}
+\pmrelated{Nullity}
+\pmrelated{RankNullityTheorem2}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\rank}{\operatorname{rank}}
+\begin{document}
+The \emph{rank} of a linear mapping $L\colon U\to V$ is defined to be
+the $\dim L(U)$, the dimension of the mapping's image.  Speaking less
+formally, the rank gives the number of independent linear constraints
+on $u\in U$ imposed by the equation
+\[ L(u)=0. \]
+
+\subsubsection*{Properties}
+\begin{enumerate}
+\item If $V$ is finite-dimensional, then $\rank L=\dim V$ if and only
+  if $L$ is surjective.
+\item If $U$ is finite-dimensional, then $\rank L=\dim U$ if and only
+  if $L$ is injective.
+\item Composition of linear mappings does not increase rank.  If
+  $M\colon V\to W$ is another linear mapping, then \[\rank ML \le
+  \rank L\] and
+  \[\rank ML \le \rank M.\] Equality holds in the first case if
+  and only if $M$ is an isomorphism, and in the second case if and
+  only if $L$ is an isomorphism.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

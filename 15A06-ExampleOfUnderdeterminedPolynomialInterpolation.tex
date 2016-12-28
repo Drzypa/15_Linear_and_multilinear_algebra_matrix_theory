@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfUnderdeterminedPolynomialInterpolation}
+\pmcreated{2013-03-22 12:35:22}
+\pmmodified{2013-03-22 12:35:22}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{example of under-determined polynomial interpolation}
+\pmrecord{5}{32840}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A06}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\cP}{\mathcal{P}}
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\begin{document}
+Consider the following
+interpolation problem:
+\begin{quote}
+  \em
+  Given $x_1,y_1,x_2,y_2\in \reals$ with $x_1\neq x_2$ to determine
+  all cubic polynomials
+  $$p(x)= ax^3+bx^2+cx+d,\quad x,a,b,c,d\in \reals$$
+  such that 
+  $$p(x_1) = y_1,\quad p(x_2) = y_2.$$  
+\end{quote}
+This is a linear problem.  Let $\cP_3$ denote the vector space of
+cubic polynomials. The underlying linear mapping is the
+multi-evaluation mapping
+$$E:\cP_3\rightarrow\reals^2,$$
+given by
+$$ p\mapsto 
+\begin{pmatrix}
+  p(x_1)\\ p(x_2)
+\end{pmatrix},\quad p\in \cP_3
+$$
+The interpolation problem in question is represented by the equation
+$$E(p) = 
+\begin{pmatrix}
+  y_1 \\ y_2
+\end{pmatrix}
+$$
+where $p\in \cP_3$ is the unknown.  One can recast the problem into the
+traditional form by taking standard bases of  $\cP_3$ and $\reals^2$ and
+then seeking all possible $a,b,c,d\in\reals$ such that
+$$
+\begin{pmatrix}
+   \lp x_1\rp^3 &    \lp x_1\rp^2 & x_1 & 1 \\
+   \lp x_2\rp^3 &    \lp x_2\rp^2 & x_2 & 1 \\
+\end{pmatrix}
+\begin{pmatrix}
+  a\\b\\c\\d
+\end{pmatrix} 
+=
+\begin{pmatrix}
+  y_1 \\ y_2
+\end{pmatrix}
+$$
+However, it is best to treat this problem at an abstract level,
+rather than mucking about with row reduction.  The Lagrange
+interpolation formula gives us a particular solution, namely the linear
+polynomial 
+$$p_0(x) = \frac{x-x_1}{x_2-x_1}y_1 + \frac{x-x_2}{x_1-x_2} y_2,\quad
+x\in \reals$$
+The general solution of our interpolation problem is therefore given
+as
+$p_0 + q$, where $q\in \cP_3$ is a solution of the homogeneous
+problem
+$$E(q)=0.$$
+A basis of solutions for the latter is, evidently, 
+$$q_1(x) = (x-x_1)(x-x_2),\quad q_2(x) = x q_1(x),\qquad x\in \reals$$
+The general solution to our interpolation problem is therefore
+$$p(x) =  \frac{x-x_1}{x_2-x_1}y_1 + \frac{x-x_2}{x_1-x_2} y_2 +
+(ax+b)(x-x_1)(x-x_2),\quad x\in\reals,$$
+with $a,b\in \reals$ arbitrary.  The general under-determined
+interpolation problem is treated in an entirely analogous manner.
+%%%%%
+%%%%%
+\end{document}

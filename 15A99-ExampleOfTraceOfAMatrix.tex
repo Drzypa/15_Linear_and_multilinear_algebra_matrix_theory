@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfTraceOfAMatrix}
+\pmcreated{2013-03-22 13:33:20}
+\pmmodified{2013-03-22 13:33:20}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{example of trace of a matrix}
+\pmrecord{8}{34160}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $A = \left[ \begin{array}{ccc}
+2 & 4 & 6 \\
+8 & 10 & 12 \\
+14 & 16 & 18 
+\end{array}\right]$,
+$A' = \frac{1}{2}A = \left[\begin{array}{ccc}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{array}\right]$
+ and $B = \left[\begin{array}{ccc}
+9 & 8 & 7 \\
+6 & 5 & 4 \\
+3 & 2 & 1 
+\end{array}\right]$ then
+\begin{align*}
+\operatorname{trace}(A+B) & = \operatorname{trace}(A) + \operatorname{trace}(B)\\ 
+& = (2 + 10 + 18) + (9 + 5 + 1)\\ 
+& = 45
+\end{align*}
+\begin{align*}
+\operatorname{trace}(A)
+& = \operatorname{trace}(2A')\\
+& = 2\cdot \operatorname{trace}(A')\\
+& = 2\cdot \operatorname{trace}
+\left[\begin{array}{ccc}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{array}\right]\\
+& = 2\cdot (1 + 5 + 9)\\
+& = 30
+\end{align*}
+%%%%%
+%%%%%
+\end{document}

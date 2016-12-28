@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCauchySchwarzInequalityForRealNumbers}
+\pmcreated{2013-03-22 14:56:38}
+\pmmodified{2013-03-22 14:56:38}
+\pmowner{stitch}{17269}
+\pmmodifier{stitch}{17269}
+\pmtitle{proof of Cauchy-Schwarz inequality for real numbers}
+\pmrecord{5}{36635}
+\pmprivacy{1}
+\pmauthor{stitch}{17269}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A63}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\sse{\subseteq}
+\def\bigtimes{\mathop{\mbox{\Huge $\times$}}}
+\def\impl{\Rightarrow}
+\begin{document}
+The version of the Cauchy-Schwartz inequality we want to prove is
+\[
+  \left(\sum_{k=1}^n a_k b_k \right)^2 \le
+    \sum_{k=1}^n a_k^2 \cdot \sum_{k=1}^n b_k^2,
+\]
+where the $a_k$ and $b_k$ are real numbers, with equality holding only in the
+case of proportionality, $a_k=\lambda b_k$ for some real $\lambda$ for all $k$.
+
+The proof is by direct calculation:
+\begin{align*}
+	\sum_{k=1}^n a_k^2 \cdot \sum_{k=1}^n b_k^2 -
+		\left(\sum_{k=1}^n a_k b_k \right)^2
+	&= \sum_{k,l=1}^n a_k^2 b_l^2 - a_k b_k a_l b_l \\
+	&= \sum_{k,l=1}^n \frac{1}{2}(a_k^2 b_l^2 + a_l^2 b_k^2) - (a_k b_l)(a_l b_k) \\
+	&= \frac{1}{2}\sum_{k,l=1}^n (a_k b_l)^2 - 2(a_k b_l)(a_l b_k) + (a_l b_k)^2 \\
+	&= \frac{1}{2}\sum_{k,l=1}^n (a_k b_l - a_l b_k)^2 \\
+	&\ge 0 .
+\end{align*}
+The above identity implies that the Cauchy-Schwarz inequality holds.
+Moreover, it is an equality only when
+\[
+  a_k b_l - a_l b_k = 0 \quad \Longleftrightarrow \quad
+  \frac{a_k}{b_k} = \frac{a_l}{b_l}  \text{ or }
+  \frac{b_k}{a_k} = \frac{b_l}{a_l}  \text{ or }
+  a_k = b_k = 0,
+\]
+for all $k$ and $l$. In other words, equality holds only when $a_k = \lambda b_k$ for all $k$ for some real number $\lambda$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StrictlyUpperTriangularMatrix}
+\pmcreated{2013-03-22 13:42:15}
+\pmmodified{2013-03-22 13:42:15}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{strictly upper triangular matrix}
+\pmrecord{8}{34381}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmsynonym{supertriangular}{StrictlyUpperTriangularMatrix}
+\pmdefines{strictly lower triangular matrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{strictly \PMlinkescapetext{upper triangular matrix}} is an upper triangular matrix which has $0$ on the main diagonal.  Similarly a \emph{strictly lower triangular matrix} is a lower triangular matrix which has $0$ on the main diagonal. i.e.
+
+A strictly upper triangular matrix is of the form
+
+$$ \begin{bmatrix}
+0 & a_{12} & a_{13} & \cdots & a_{1n} \\
+0 & 0 & a_{23} & \cdots & a_{2n} \\
+0 & 0 & 0 & \cdots & a_{3n} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \cdots & 0
+\end{bmatrix} $$
+
+A strictly lower triangular matrix is of the form
+
+$$ \begin{bmatrix}
+0 & 0 & 0 & \cdots & 0 \\
+a_{21} & 0 & 0 & \cdots & 0 \\
+a_{31} & a_{32} & 0 & \cdots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & a_{n3} & \cdots & 0
+\end{bmatrix} $$
+%%%%%
+%%%%%
+\end{document}

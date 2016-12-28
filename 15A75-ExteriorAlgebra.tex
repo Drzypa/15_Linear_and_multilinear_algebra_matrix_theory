@@ -1,0 +1,398 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExteriorAlgebra}
+\pmcreated{2013-03-22 12:34:14}
+\pmmodified{2013-03-22 12:34:14}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{exterior algebra}
+\pmrecord{35}{32819}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A75}
+\pmsynonym{Grassmann algebra}{ExteriorAlgebra}
+\pmrelated{AntiSymmetric}
+\pmdefines{exterior product}
+\pmdefines{wedge product}
+\pmdefines{multivector}
+\pmdefines{exterior power}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+
+%%%\usepackage{xypic}
+%\usepackage{pstricks}
+%\usepackage{pst-node}
+
+
+\newcommand{\Zset}{\mathbb{Z}}
+\newcommand{\Sset}{\mathbb{S}}
+\newcommand{\Aset}{\mathbb{A}}
+\newcommand{\Vset}{\mathbb{V}}
+
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\sgn}{\operatorname{sgn}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\begin{document}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{closed}
+\PMlinkescapeword{section}
+\PMlinkescapeword{difference}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{structure}
+\PMlinkescapeword{characteristic}
+
+\section{Introductory remarks.}
+We begin with some informal remarks to motivate the formal definitions
+found in the next section. Throughout, $V$ is a vector space over a
+field $K$.  Many of the concepts and constructions discussed below
+apply verbatim to modules over commutative rings, but we will stick to
+vector spaces to keep things simple.
+
+The exterior product, commonly denoted by the wedge symbol $\wedge$
+and also known as the wedge product, is an antisymmetric variant of
+the tensor product.  The former, like the latter is an associative,
+bilinear operation. Thus, for all $u,v\in V$ and $a,b,c,d\in K$,
+we have
+\begin{align}
+  \label{eq:aubvwedge}
+  (au+bv) \wedge (cu + dv ) &= ac\, (u\wedge u) + ad\, (u\wedge v) + bc\,   (v\wedge u)
+  + bd\, (v\wedge v)\\
+  \label{eq:aubvotimes}
+  (au+bv) \otimes (cu + dv ) &= ac\, (u\otimes u) + ad\, (u\otimes v) + bc\,
+  (v\otimes u)   + bd\, (v\otimes v).
+\end{align}
+The essential difference between the two operations is that all
+squares formed using the exterior product vanish, by definition.
+Thus,
+\begin{equation}
+  \label{eq:vvzero}
+  v\wedge v =0,  
+\end{equation}
+whereas $v\otimes v\neq 0$. Hence, the expressions in
+\eqref{eq:aubvwedge} are equal to $(ad-bc) u\wedge v$, but there is no
+way to simplify further the right-hand side of \eqref{eq:aubvotimes}.
+
+A polarization argument shows
+that for $u,v\in V$ we have
+\begin{align*}
+  0 &= (u+v)\wedge (u+v) \\& = u\wedge u + u\wedge v + v\wedge u +
+  v\wedge
+  v\\
+  &= u\wedge v + v\wedge u.
+\end{align*}
+Therefore, if the \PMlinkname{characteristic}{characteristic} of the underlying field $K$ is not equal to $2$, that is if $1+1\neq 0$, then the key postulate \eqref{eq:vvzero} is
+logically equivalent to the antisymmetry condition
+\begin{equation}
+  \label{eq:antisym}
+  u\wedge v = -v\wedge u,\quad u,v\in V.
+\end{equation}
+However, if the characteristic is 2, that is if $K$ is a field where
+$1=-1$, then \eqref{eq:vvzero} does not, necessarily, follow from
+\eqref{eq:antisym}.  Therefore, to keep things as general as possible,
+we must use \eqref{eq:vvzero} to formulate the essential identity
+satisfied by the exterior product.
+
+
+
+So far so good, but we have not yet given a meaning to the symbol
+$u\wedge v$.  The geometric interpretation of $u\wedge v$ is that of
+an oriented area element in the plane spanned by $u$ and $v$.  Without
+additional structure, there is no way to assign a area measurement to
+a parallelogram in a vector space.  However, parallelograms that lie
+in the same plane are commensurate. If we adopt the parallelogram
+spanned by $u$ and $v$ as the standard area, we can say that the
+oriented area of another parallelogram, say one that is spanned by
+$au+bv$ and $cu+dv$, has an area that is $ad-bc$ times the area of the
+first parallelogram.  The exterior product allows us to express this
+algebraically. To wit,
+\[ (au+bv)\wedge(cu+dv) = (ad-bc) (u\wedge v),\quad u,v\in V,\;
+a,b,c,d\in K. \] The analogous interpretation for vectors is that of
+an oriented length element on a line.  For this reason, the object
+$u\wedge v$ is referred to as a bivector.
+
+
+From a more algebraic point of view, a bivector $u\wedge v$ can be
+considered as a formal antisymmetric product of vectors $u$ and $v$,
+in much the same way that $u\otimes v$ can be regarded as a formal
+non-commutative product of two vectors.  Such descriptions can hardly
+serve as rigorous definitions, but an explicit construction is not
+really the way to go here.  
+
+Take the case of the tensor product.  Formal sums of formal products
+$u\otimes v$, where $u,v\in V$, form a certain vector space, which we
+denote as $V\otimes V$.  However, rather than saying that $V\otimes V$
+\textbf{is} such and such a thing, it is better to state a certain
+universal property that describes $V\otimes V$ up to vector space
+isomorphism.  The property in question is that every \textbf{bilinear}
+map $f:V\times V\to W$ determines a unique \textbf{linear} map from
+$g:V\otimes V\to W$ such that
+\[ f(u,v) = g(u\otimes v),\quad u,v \in V.\] Similarly, formal sums of
+bivectors constitute a vector space $\Lambda^2(V)$, called the second
+exterior power of $V$.  This vector space is defined, up to
+isomorphism, by the condition that every antisymmetric, bilinear map
+$f:V\times V\to W$ determines a unique linear map $g:\Lambda^2(V) \to
+W$ with
+\[ f(u,v) = g(u\wedge v).\] Thus, in the same way that the tensor
+product replaces bilinear maps with a certain kind of linear map,
+the exterior product replaces bilinear, antisymmetric maps with linear
+maps from $\Lambda^2 V$.
+
+More generally, $k$-multivectors are $k$-fold products
+$v_1\wedge\cdots\wedge v_k$, and the $k\supth$ exterior power,
+$\Lambda^k(V)$, is the vector space of formal sums of
+$k$-multivectors.  The product of a $k$-multivector and an
+$\ell$-multivector is a $(k+\ell)$-multivector.  So, the direct sum
+$\bigoplus_k \Lambda^k(V)$ forms an associative algebra, which is
+closed with respect to the wedge product.  This algebra, commonly
+denoted by $\Lambda(V)$, is called the exterior algebra of $V$.
+
+Again, the analogy with the tensor product is useful.  The tensor
+algebra $T(V)$ can be characterized as the associative,
+non-commutative algebra freely generated by $V$.  If the
+characteristic of $k$ is not 2, then the wedge product satisfies the
+supercommutativity relations
+\[ \alpha\wedge \beta = (-1)^{k+\ell} \beta\wedge\alpha,\quad
+\alpha\in\Lambda^k(V),\; \beta\in\Lambda^\ell(V).\] Thus, $\Lambda(V)$
+can be characterized as the supercommutative algebra which is freely
+generated by $V$.
+
+\section{Formal definitions.}
+\paragraph{Supercommutative algebras.}
+For the purposes of this discussion, we define a supercommutative
+algebra to  be an associative, unital $K$-algebra $A$ with an
+$\Zset_2$-grading, $A=A^+\oplus A^-$, such that for all odd 
+$a\in A^-$ we have
+\[ a^2 = 0, \]
+and such that for all even $b\in A^+$ and all $a\in A$, we have
+\[ ab = ba.\] Using a polarization argument we see that the first
+condition implies that for all odd $a,b\in A^-$ we have
+\[ ab = -ba.\]
+If the characteristic of $K$ is different from $2$, then the converse
+is true, and we recover the usual definition of supercommutativity,
+namely that
+\[ ab = \pm ba,\quad a\in A^{\pm},\; b\in A^{\pm},\]
+with the minus sign employed if both $a$ and $b$ or odd, and with $+$
+employed otherwise.
+
+\paragraph{Exterior algebra.}
+Let $E$ be a supercommutative algebra and $\iota:V\to E^-$ a linear
+map.  We will say that $(E,\iota)$ is a model for the exterior algebra
+of $V$, if every linear map $f:V\to A^-$, where $A$ a supercommutative
+algebra, \PMlinkescapetext{lifts} to a unique algebra homomorphism $g:E\to A$, where
+``lifts'' means that $f = g\circ\iota$.
+Diagrammatically:
+ \begin{center}
+   \includegraphics[width=4cm]{extalg}
+\end{center}
+The above condition on $E$ is a universal property; this implies that
+all models are isomorphic as algebras.  Thus, when we speak of
+$\Lambda(V)$, the exterior algebra of $V$, we are referring to the
+isomorphism class of all such models.  It is also common to identify
+$V$ with its image $\iota(V)$, and to write $v$ rather than
+$\iota(v)$.
+
+\paragraph{Exterior powers.}
+For the purposes of the present entry, we define an antisymmetric map
+to be a $k$-multilinear map $f:V^{\times k}\to W$ such that $f(\dots,
+v,v,\dots)=0$ for all $v\in V$. A polarization argument then implies the
+usual antisymmetry condition, namely that for every permutation $\pi$
+of $\{ 1,2,\dots, k\}$ we have
+\[f(v_{\pi_1},\dots, v_{\pi_k}) = \sgn(\pi) f(v_1,\dots, v_k),\quad
+v_1,\dots,v_k \in V.\]
+As usual, if the characteristic of $K$ is different from $2$, the two
+assertions are equivalent.  However if $1=-1$, then the first
+assertion is stronger, and that is why we adopt it as the definition
+of antisymmetry.
+
+We now define a model of the $k\supth$ exterior power of $V$ to be a
+vector space $E^k$ and an antisymmetric map $\wedge: V^{\times k}\to E^k$ such that every antisymmetric map $f:V^{\times
+  k}\to W$ lifts to a unique linear map $g:E^k\to W$, where ``lifts''
+means that \[f(v_1,\dots,v_k) = g(v_1\wedge\cdots\wedge v_k),\quad
+v_1,\dots,v_k\in V.\]
+As above, all models are isomorphic as vector spaces, and we use
+$\Lambda^k(V)$ to denote the isomorphism class of all such.
+
+
+\paragraph{The standard model.}  
+A model of the exterior algebra
+$\Lambda(V)$, and the exterior powers $\Lambda^k(V)$ can be easily
+constructed as the antisymmetrized quotients of the tensor algebra
+\[T(V)=\bigoplus_{k=0}^\infty V^{\otimes k},\qquad V^{\otimes k} =
+V\otimes\cdots\otimes V \text{ (k times)}.\] To that end, let $S(V)$
+denote the two sided ideal of $T(V)$ generated by
+elements of the form $v\otimes v,\; v\in V$. Then
+
+\[S(V)=\bigoplus_{k=0}^\infty S^k(V),\qquad  \textrm{where} \quad S^k(V)=S(V)\cap
+V^{\otimes k},\]  and let 
+\[ E(V)=T(V)/S(V),\qquad E^k(V)=V^{\otimes k}/S^k(V)\] denote the
+indicated quotients, with $a:T(V)\to E(V)$ and $a_k: V^{\otimes k} \to
+E^k(V)$ denoting the corresponding antisymmetrization surjections.  It
+is easy to see that $S^1(V)$ is the trivial vector space, and hence
+that $E^1(V) \cong V$.  We leave it as an exercise for the reader to
+show that $E^k(V),\; k\geq 2$ is a model of the $k\supth$ exterior
+power, while $E(V)$ together with the map $V\to E^1(V)$ is a model of
+the full exterior algebra.
+
+\paragraph{The canonical grading.}
+An inspection of the above
+construction reveals that
+\[ E(V) = \bigoplus_{k=0}^\infty E^k(V).\] Indeed, every model of
+exterior algebra carries a canonical grading. Let $E$ be a particular
+model of the exterior algebra of $V$. For $k=1,2,\dots$, we will call
+$\alpha\in E$, a $k$-primitive element if $\alpha =
+v_1\wedge\cdots\wedge v_k,$ for some $v_i\in V$.  We now let
+$E^k\subset E$ denote the vector space spanned by all $k$-primitive
+elements, and let $E^0=K$.
+\begin{proposition}
+  The subspace $E^k$ is a model for the $k\supth$ exterior power of
+  $V$.  Furthermore, 
+  \[ E = \bigoplus_{k=0}^\infty E^k.\]
+\end{proposition} 
+
+
+
+\paragraph{Categorical formulation.}
+The above definition of exterior product has a very appealing
+categorical formulation.  Let $\Sset$ denote the category of
+supercommutative $K$-algebras, let $\Vset$ denote category of vector
+spaces over $K$, and let $(\cdot)^-:\Sset\to\Vset$ denote the
+forgetful functor $A\mapsto A^-$.  We may now say that the
+exterior algebra function $\Lambda:\Vset\to\Sset$ is the left
+adjoint of $(\cdot)^-$.  In other words,
+\[ \Hom_{\Vset}(V,A^-) \cong \Hom_{\Sset}(\Lambda(V), A),\quad V\in\Vset,\; A\in \Sset,\] with the
+isomorphism natural in $V$ and $A$.
+
+It is useful to compare the above definition to the categorical
+definition of the tensor algebra.  Let $\Aset$ denote the category of
+associative, unital $K$-algebras, and let $F:\Aset\to\Vset$ be the
+forgetful functor that gives the underlying vector space structure of
+a $K$-algebra.  We can then define the tensor algebra $T(V)$ of a
+vector space $V$ by saying that $T:\Vset\to\Aset$ is the left-adjoint
+of $F:\Aset\to\Vset$.  Thus, whereas $T(V)$ as the \textbf{associative
+  algebra} freely generated by $V$, the exterior algebra $\Lambda(V)$
+is the \textbf{supercommutative algebra} freely generated by $V$.  The
+antisymmetrization 
+quotient map $a_V\colon T(V)\to\Lambda(V)$ is a natural transformation between
+these two functors.
+
+
+
+\section{Finite dimensional models.}
+\paragraph{Basis models.}
+If $V$ is an $n$-dimensional vector space, there are some
+down-to-earth constructions of $\Lambda(V)$ that go a long way to
+illuminate the nature of the exterior product.  Suppose then, that $V$
+is $n$-dimensional, and let $e_1,\ldots,e_n$ be a basis of $V$. For
+every ascending sequence \[0\leq i_1<i_2<\cdots<i_k\leq n\] let us
+introduce the symbol $e_I=e_{i_1\dots i_k}$ to represent the primitive
+$k$-multivector $e_{i_1}\wedge\ldots\wedge e_{i_k}$.  If $I$ is the
+empty sequence, we let $e_I$ denote the unit element of the field
+$K$.
+\begin{proposition}
+  The $\binom{n}{k}$-dimensional vector space spanned by $e_{i_1\dots
+    i_k}$ is a model of $\Lambda^k(V)$.  
+\end{proposition}
+Note that $\Lambda^1(V)$ is just the $n$-dimensional space spanned by
+the basis symbols $e_1,\dots,e_n$.  As such, $\Lambda^1(V)$ is
+naturally isomorphic to $V$.  For disjoint sequences $I$ and $J$, let
+us define
+\[ e_I \wedge e_J = \sgn(IJ) e_{[IJ]},\] where $[IJ]$ denotes the
+ascending sequence composed of the union of $I$ and $J$, and where
+$\sgn(IJ)=\pm 1$ denotes the parity of the permutation that takes the
+sorted list $[IJ]$ to the unsorted concatenation $IJ$. If $I$ and $J$
+have one or more elements in common, we define
+\[ e_I\wedge e_J = 0.\]
+Here are some examples:
+\begin{align*}
+  &e_{3} \wedge e_{12} = e_{123},\\
+  &e_{2}\wedge e_{14} = - e_{124},\\
+  &e_{14} \wedge e_{23} = e_{1234},\\
+  &e_{24} \wedge e_{13} = -e_{1234},\\
+  &e_{24} \wedge e_{14} =0.
+\end{align*}
+\begin{proposition}
+  The $2^n$ dimensional vector spanned by the symbols $e_I$, together
+  with the above product and the linear isomorphism from $V$ to
+  $\Lambda^1(V)$ is a model of the exterior algebra $\Lambda(V)$.
+\end{proposition}
+
+Evidently, any list of numbers between $1$ and $n$ with length greater
+than $n$ will contain duplicates.  Thus, an immediate consequence of
+this construction is that $\Lambda^k(V)=0$ for $k>n$, and hence that
+\[ \Lambda(V) = \bigoplus_{k=0}^n \Lambda^n(V).\]
+
+\paragraph{Alternating forms.}
+If $V$ is finite-dimensional, we have the natural isomorphism between
+$V$ and the double-dual $V^{**}$.  We can exploit this natural
+isomorphism to construct the following model of exterior algebra.  Let
+$A^k(V)$ denote the vector space of $k$-multilinear mappings from
+$(V^*)\times\cdots\times (V^*)$ ($k$ times) to $K$.  Such an mapping
+is known as an alternating $k$-form.  Using the above duality we can
+prove that $A^k(V)$ is a model for the $k\supth$ exterior power of
+$V$.  
+
+Given alternating forms $u\in A^k(V)$ and $v\in A^\ell(V)$,
+let us define $u\wedge v\in A^{k+\ell}(V)$ according to
+\[ (u\wedge v)(a_1,\dots,a_{k+\ell})= \sum_{\pi}\operatorname{sgn}(\pi)
+u(a_{\pi_1},\dots,a_{\pi_k})
+v(a_{\pi_{k+1}},\dots,a_{\pi_{k+\ell}}),\]
+where $a_1,\dots,a_{k+\ell}\in V^*,$ and  where the sum is taken over
+all permutations $\pi$ of $\{1,2,\dots, k+\ell\}$ such that $\pi_1<
+\pi_2 < \cdots < \pi_k$ and $\pi_{k+1} < \cdots < \pi_{k+\ell}$, and
+where $\operatorname{sgn} \pi=\pm 1$ according to whether $\pi$ is an
+even or odd permutation.  With this definition, we can show that
+\[ A(V) = \bigoplus_{k=0}^n A^k(V) \]
+together with the above product, and the linear isomorphism $V\to
+A^1(V)\cong V^{**}$ is a model for the exterior algebra $\Lambda(V)$.
+
+
+% Another way to do this construction is to introduce symbols
+% $e_I$ for every sequences, sorted or unsorted, $0\leq
+% i_1,\dots,i_k\leq n$, and to make the identifications
+% \[ e_I = 0 \]
+% if $I$ contains duplicate numbers and
+% \[ e_I = \pm e_J \]
+% if $I$ and $J$ differ by a permutation 
+%  of The upshot of all this is that for finite-dimensional vector spaces we
+% have another way to construct a model of the exterior algebra.
+% Namely, we choose a basis $e_1,\ldots,e_n$ an define formal bivector
+% symbols $e_i\wedge e_j$ subject to the anti-symmetric relations
+% $$e_i\wedge e_i = 0,\quad\mbox{ and} \quad e_i\wedge e_j = - e_j\wedge
+% e_i.$$
+% We then define trivector symbols, and more generally
+% $k$-vector symbols subject to the obvious $k$-place anti-symmetric
+% relations.  The exterior algebra $\Lambda(V)$ is then defined to be
+% the vector space of all possible linear combinations of the $k$-vector
+% symbols, and the algebra product is defined by linearly extending the
+% wedge product to all of $\Lambda(V)$.  Also note that for $k>n$ all
+% $k$-vector symbols are identified with zero, and hence that
+% $\Lambda^k(V)=\{0\}$ for all $k>n$.
+
+\section{Historical Notes.} The exterior algebra is also known as the Grassmann
+algebra after its inventor \PMlinkexternal{Hermann Grassmann}{http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Grassmann.html}
+who created it \PMlinkescapetext{in order} to give algebraic treatment of linear
+geometry.  Grassmann was also one of the first people to talk about
+the geometry of an $n$-dimensional space with $n$ an arbitrary natural
+number.  The axiomatics of the exterior product are needed to define
+differential forms and therefore play an essential role in the theory
+of integration on manifolds. Exterior algebra is also an essential
+prerequisite to understanding de Rham's theory of differential
+cohomology.
+%%%%%
+%%%%%
+\end{document}

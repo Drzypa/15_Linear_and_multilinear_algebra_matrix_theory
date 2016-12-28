@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HasseMinkowskiTheorem}
+\pmcreated{2013-03-22 15:19:47}
+\pmmodified{2013-03-22 15:19:47}
+\pmowner{SirJective}{9710}
+\pmmodifier{SirJective}{9710}
+\pmtitle{Hasse-Minkowski theorem}
+\pmrecord{8}{37143}
+\pmprivacy{1}
+\pmauthor{SirJective}{9710}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A63}
+\pmclassification{msc}{14G05}
+\pmrelated{HassePrinciple}
+\pmrelated{QuadraticForm}
+\pmdefines{regular quadratic form}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\theoremstyle{definition}
+\newtheorem{thmplain}{Theorem}
+\newtheorem{defn}{Definition}
+\begin{document}
+The \emph{Hasse-Minkowski theorem} is a classical example of the Hasse principle.
+
+Let $F$ be a global field, i.e. a number field or a rational function field over a finite field of characteristic not $2$, $X$ a finite dimensional vector space over $F$ and $\phi$ a regular quadratic form over $X$.
+
+A regular quadratic form $\phi$ over $X$ is a quadratic form such that for every $x\neq 0$ in $X$ there is a $y$ in $X$ with $b(x,y)\neq0$. Here $b(x,y)=\frac{1}{2} (q(x+y)-q(x)-q(y))$ is the associated bilinear form.
+
+To every completion $F_v$ of $F$ with respect to a nontrivial valuation $v$ we assign the vector space $X_v := F_v \otimes_F X$ and the induced quadratic form $\phi_v$ on $X_v$.
+
+A quadratic form $\phi$ over $X$ is an isotropic quadratic form if there is a nonzero vector $x\in X$ with $\phi(x)=0$.
+
+The Hasse-Minkowski theorem can now be stated as:
+
+\begin{thmplain}
+A regular quadratic form $\phi$ over a global field $F$ is isotropic if and only if every completion $\phi_v$ is isotropic, where $v$ runs through the nontrivial valuations of $F$.
+\end{thmplain}
+
+The case of $\mathbb{Q}$ was first proved by Minkowski. It can be proved using the Hilbert symbol and Dirichlet's theorem on primes in arithmetic progressions.
+
+The general case was proved by Hasse. It can be proved using two local-global principles of class field theory, namely the \emph{Hasse norm theorem}:
+For a cyclic field extension $E/F$ of global fields an element $a\in F$ is a norm of $E/F$ and only if it is a norm of $E_v/F_v$ for every valuation $v$ of $E$.
+
+and the \emph{Global square theorem}:
+An element $a$ of a global field $F$ is a square if and only if it is a square in every $F_v$.
+%%%%%
+%%%%%
+\end{document}

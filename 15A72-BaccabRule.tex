@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BaccabRule}
+\pmcreated{2013-03-22 14:04:34}
+\pmmodified{2013-03-22 14:04:34}
+\pmowner{williamschips}{4069}
+\pmmodifier{williamschips}{4069}
+\pmtitle{bac-cab rule}
+\pmrecord{6}{35436}
+\pmprivacy{1}
+\pmauthor{williamschips}{4069}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A72}
+\pmclassification{msc}{15A90}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+The {\bf bac-cab rule} states that for vectors 
+$\mathbf{A}$, $\mathbf{B}$, and
+$\mathbf{C}$ (that can be either real or complex) in $\sR^3$, we have
+$$ \mathbf{A}\times (\mathbf{B}\times \mathbf{C}) = \mathbf{B} (\mathbf{A}\cdot \mathbf{C}) - \mathbf{C} (\mathbf{A} \cdot \mathbf{B}).$$
+Here $\times$ is the cross product, and $\cdot$ is the real inner product.
+%%%%%
+%%%%%
+\end{document}

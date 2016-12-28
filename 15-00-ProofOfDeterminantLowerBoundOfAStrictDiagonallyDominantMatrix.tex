@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDeterminantLowerBoundOfAStrictDiagonallyDominantMatrix}
+\pmcreated{2013-03-22 17:01:11}
+\pmmodified{2013-03-22 17:01:11}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{proof of determinant lower bound of a strict diagonally dominant matrix}
+\pmrecord{13}{39304}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let's define, for any $i=1,2,...,n$%
+\[
+h_{i}=\left\vert a_{ii}\right\vert -\sum_{j=1,j\neq i}\left\vert
+a_{ij}\right\vert 
+\]
+Then, by strict diagonally dominance, one has $h_{i}>0$ \ $\forall i$.
+Let $D=diag\{\left( h_{1}\right) ^{-1},\left( h_{2}\right)
+^{-1},...,\left( h_{n}\right) ^{-1}\}$ and $B=DA$, so that the i-th row of $B
+$ matrix is equal to the corresponding row of $A$ matrix multiplied by $%
+\left( h_{i}\right) ^{-1}$. In this way , one has
+\begin{eqnarray*}
+d_{i} &=&\left\vert b_{ii}\right\vert -\sum_{j=1,j\neq i}\left\vert
+b_{ij}\right\vert  \\
+&=&\frac{\left\vert a_{ii}\right\vert }{h_{i}}-\sum_{j=1,j\neq i}\frac{%
+\left\vert a_{ij}\right\vert }{h_{i}} \\
+&=&1
+\end{eqnarray*}
+Now, let $\lambda $ be an eigenvalue of $B$, and $v=[v_{1},v_{2},...,v_{n}]$
+the corresponding eigenvector; let moreover $p$ be the index of the maximal
+component of $v$, i.e. 
+\[
+\left\vert v_{p}\right\vert \geq \left\vert v_{i}\right\vert \text{ \ }%
+\forall i
+\]
+Of course, by definition of eigenvector, $\left\vert v_{p}\right\vert >0$.
+Writing the p-th characteristic equation, we have:%
+\begin{eqnarray*}
+\lambda v_{p} &=&\sum_{j=1}^{n}b_{pj}v_{j} \\
+&=&b_{pp}v_{p}+\sum_{j=1,j\neq p}^{n}b_{pj}v_{j}
+\end{eqnarray*}
+so that, being $\left\vert \frac{v_{j}}{v_{p}}\right\vert \leq 1$,%
+\begin{eqnarray*}
+\lambda  &=&b_{pp}+\sum_{j=1,j\neq p}^{n}b_{pj}\frac{v_{j}}{v_{p}} \\
+\left\vert \lambda \right\vert  &=&\left\vert b_{pp}+\sum_{j=1,j\neq
+p}^{n}b_{pj}\frac{v_{j}}{v_{p}}\right\vert  \\
+&\geq &\left\vert \left\vert b_{pp}\right\vert -\left\vert \sum_{j=1,j\neq
+p}^{n}b_{pj}\frac{v_{j}}{v_{p}}\right\vert \right\vert  \\
+&\geq &\left\vert \left\vert b_{pp}\right\vert -\sum_{j=1,j\neq
+p}^{n}\left\vert b_{pj}\right\vert \left\vert \frac{v_{j}}{v_{p}}\right\vert
+\right\vert \text{ \ \ \ \ \ \ \ \ \ (*)} \\  \\
+&\geq &\left\vert \left\vert b_{pp}\right\vert -\sum_{j=1,j\neq
+p}^{n}\left\vert b_{pj}\right\vert \right\vert \text{ \ \ \ \ \ \ \ \ \ (**)} \\  \\
+&=&\left\vert b_{pp}\right\vert -\sum_{j=1,j\neq p}^{n}\left\vert
+b_{pj}\right\vert  \\
+&=&d_{p}=1
+\end{eqnarray*}
+In this way, we found that each eigenvalue of $B$ is greater than one in
+absolute value; for this reason,%
+\[
+\left\vert \det (B)\right\vert =\left\vert \prod_{i=1}^{n}\lambda
+_{i}\right\vert \geq 1
+\]
+Finally,%
+\[
+\det (D)=\prod_{i=1}^{n}\left( h_{i}\right) ^{-1}=\left(
+\prod_{i=1}^{n}h_{i}\right) ^{-1}
+\]
+so that 
+\begin{eqnarray*}
+1 &\leq &\left\vert \det (B)\right\vert  \\
+&=&\left\vert \det (D)\right\vert \left\vert \det (A)\right\vert  \\
+&=&\left( \prod_{i=1}^{n}h_{i}\right) ^{-1}\left\vert \det (A)\right\vert 
+\end{eqnarray*}
+whence the thesis.\\ \\
+\textit{Remark:} Perhaps it could be not immediately evident where the
+hypothesis of strict diagonally dominance is employed in this proof; in
+fact, inequality (*) and (**) would be, in a general case, \textit{not valid}%
+; they can be stated only because we can assure, by virtue of strict
+diagonally dominance, that the final argument of the absolute value ($%
+\left\vert b_{pp}\right\vert -\sum_{j=1,j\neq p}^{n}\left\vert
+b_{pj}\right\vert $) does remain positive.
+%%%%%
+%%%%%
+\end{document}

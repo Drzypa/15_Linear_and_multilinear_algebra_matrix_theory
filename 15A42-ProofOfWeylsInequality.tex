@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfWeylsInequality}
+\pmcreated{2013-03-22 15:33:39}
+\pmmodified{2013-03-22 15:33:39}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{proof of Weyl's inequality}
+\pmrecord{9}{37464}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A42}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\lambda_i$ be the i-th eigenvalue of $A+E$. Then, by the Courant-Fisher min-max theorem and being $x^HEx \geq 0$ by hypothesis, we have:
+
+$\lambda_i(A+E)=\max\limits_{S, dim S=i}\min\limits_{\|x\|\ne 0}\frac{x^H(A+E)x}{x^H x}=$\\
+$=\max\limits_{S,\dim S=i}\min\limits_{\|x\|\ne 0}\left(\frac{x^HAx}{x^Hx}+\frac{x^HEx}{x^Hx}\right)\geq\max\limits_{S,\dim S=i}\min\limits_{\|x\|\ne 0}\frac{x^HAx}{x^Hx}=\lambda_i(A)$.
+%%%%%
+%%%%%
+\end{document}

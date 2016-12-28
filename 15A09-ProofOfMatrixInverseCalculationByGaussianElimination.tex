@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMatrixInverseCalculationByGaussianElimination}
+\pmcreated{2013-03-22 14:15:10}
+\pmmodified{2013-03-22 14:15:10}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of matrix inverse calculation by Gaussian elimination}
+\pmrecord{9}{35700}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A09}
+%\pmkeywords{Gaussian elimination}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+  Let $A$ be an invertible matrix, and $A^{-1}$ its inverse, whose
+  columns are $A^{-1}_1,\cdots,A^{-1}_n$.
+  Then, by definition of matrix inverse, $AA^{-1}=I_n$.
+  But this implies
+  $AA^{-1}_1 = e_1,\ldots,AA^{-1}_n = e_n$, 
+  with $e_1,\cdots,e_n$ being the first,$\ldots$,$n$-th column of $I_n$
+  respectively.
+
+  $A$ being non singular (or invertible), for all $k \leq n$, $AA^{-1}_k = e_k$ has a solution for $A^{-1}_k$, which can
+  be found by Gaussian elimination of $[A \mid e_k]$.
+
+  The only part that changes between the augmented matrices
+  constructed is the last column, and these last columns, once the
+  Gaussian elimination has been performed, correspond to the columns
+  of $A^{-1}$.  Because of this, the steps we need to take for the
+  Gaussian elimination are the same for each augmented matrix.
+
+  Therefore, we can solve the matrix equation by performing Gaussian
+  elimination on $[A \mid e_1 \cdots e_n]$, or $[A \mid I_n]$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TensorProductOfSubspacesOfVectorSpaces}
+\pmcreated{2013-03-22 18:49:16}
+\pmmodified{2013-03-22 18:49:16}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{tensor product of subspaces of vector spaces}
+\pmrecord{4}{41623}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A69}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\textbf{Proposition.} Let $V,W$ be vector spaces over a field $k$. Moreover let $A\subseteq V$, $B\subseteq W$ be subspaces. Then $V\otimes B\cap A\otimes W=A\otimes B$.
+
+\textit{Proof.} The inclusion ,,$\supseteq$'' is obvious. We will show the inclusion ,,$\subseteq$''.
+
+Let $\{e_i\}_{i\in I}$ and $\{e'_j\}_{j\in P}$ be bases of $A$ and $B$ respectively. Moreover let $\{e_i\}_{i\in I'}$ be a completion of given basis of $A$ to the basis of $V$, i.e. $\{e_i\}_{i\in I\cup I'}$ is a basis of $V$. Analogously let $\{e'_j\}_{j\in P'}$ be a completion of a basis of $B$ to the basis of $W$. Then each element $q\in V\otimes W$ can be uniquely written in a form 
+$$q=\sum_{i\in I,j\in P}\alpha_{i,j}\, e_i\otimes e'_j\ + \ \sum_{i\in I',j\in P}\beta_{i,j}\, e_i\otimes e'_j\ +$$
+$$+\ \sum_{i\in I,j\in P'}\delta_{i,j}\, e_i\otimes e'_j\ +\ \sum_{i\in I',j\in P'}\gamma_{i,j}\, e_i\otimes e'_j.$$
+Assume that $q\in V\otimes B\cap A\otimes W.$ Let $i\in I'$ and $j\in P'$. Consider the following linear map: $f_i:V\to k$ such that $f_i(e_t)=1$ if $i=t$ and $f_i(e_t)=0$ if $i\neq t$. Analogously we define $g_j:W\to k$. Then we combine these two mappings into one, i.e. $$f_i\otimes g_j:V\otimes W\to k;$$ $$(f_i\otimes g_j)(v\otimes w)=f_i(v)g_j(w).$$ Furthermore we have $$(f_i\otimes g_j)(q)=\gamma_{i,j}.$$ Note that since $q\in V\otimes B$, then $(f_i\otimes g_j)(q)=0$ and thus $$\gamma_{i,j}=0.$$ Similarly we obtain that all $\beta_{i,j}$ and $\delta_{i,j}$ are equal to $0$. Thus $$q=\sum_{i\in I,j\in P}\alpha_{i,j}\, e_i\otimes e'_j\in A\otimes B,$$ which completes the proof. $\square$
+%%%%%
+%%%%%
+\end{document}

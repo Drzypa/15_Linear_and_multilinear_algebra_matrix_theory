@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EinsteinSummationConvention}
+\pmcreated{2013-03-22 13:32:03}
+\pmmodified{2013-03-22 13:32:03}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Einstein summation convention}
+\pmrecord{6}{34130}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A69}
+\pmrelated{Summation}
+\pmdefines{dummy index}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \emph{Einstein summation convention} implies that when an index occurs
+more than once in the same expression, the expression is implicitly
+summed over all possible values for that index. Therefore, in order to
+use the summation convention, it must be clear from the context
+over what range indices should be summed.
+
+The Einstein summation convention is illustrated in the below examples.
+\begin{enumerate}
+\item Let $\{e_i\}_{i=1}^n$ be a orthogonal basis in $\mathbb{R}^n$.
+Then the inner product of the vectors $u=u^i e_i=(\sum_{i=1}^n) u^i e_i$
+and $v=v^i e_i =(\sum_{i=1}^n) v^i e_i$, is
+\begin{eqnarray*}
+u\cdot v &=& u^i v^j e_i\cdot e_j \\
+         &=& \delta_{ij} u^i v^j.
+\end{eqnarray*}
+\item Let $V$ be a  vector space with basis $\{e_i\}_{i=1}^n$ and
+a dual basis $\{e^i\}_{i=1}^n$. Then, for a vector $v=v^i e_i$
+and dual vectors $\alpha=\alpha_i e^i$ and $\beta=\beta_i e^i$, we have
+\begin{eqnarray*}
+ (\alpha+\beta)(v) &=& \alpha_iv^i + \beta_j v^j \\
+        &=& (\alpha_i + \beta_i) v^i.
+\end{eqnarray*}
+This  example shows that the summation convention is ``distributive'' in
+a natural way.
+\item Chain rule. Let
+$F:\mathbb{R}^m\to \mathbb{R}^n$,
+$x \mapsto (F^1,\cdots, F^n)$, and
+$G:\mathbb{R}^n\to \mathbb{R}^p$,
+$y \mapsto (G^1(y),\cdots, G^p(y))$ be smooth functions. Then
+$$ \frac{\partial (G\circ F)^i}{\partial x^j}(x) = \frac{\partial G^i}{\partial y^k} \big(F(x)\big) \frac{\partial F^k}{\partial x^j}(x),$$
+where the right hand side is summed over $k=1,\ldots,n$.
+\end{enumerate}
+
+An index which is summed is called a \emph{dummy index} or \emph{dummy variable}.
+For instance,
+$i$ is a dummy index in $v^i e_i$. An expression does not depend on
+a dummy index, i.e., $v^i e_i = v^j e_j$.
+It is common that one must change the name of dummy indices. For
+instance, above, in Example 2 when we calculated
+$u\cdot  v$, it was necessary to change the index $i$ in $v=v^i e_i$ to $j$
+so that it would not clash with $u=u^i e_i$.
+
+When using the Einstein summation convention, objects are usually indexed
+so that when summing, one index will always be an ``upper index'' and
+the other a ``lower index''.
+Then summing should only take place over upper and lower indices.
+In the above examples, we have followed
+this rule. Therefore we  did not write
+$\delta_{ij} u^i v^j = u^i v^i$ in the first example since $u^i v^i$
+has  two upper indices. This is consistent; it is not possible
+to take the inner product of two vectors without a metric, which is here
+$\delta_{ij}$.
+The last example illustrates that when we consider $k$  as a ``lower
+index'' in
+$\frac{\partial G^i}{\partial y^k}$, then the chain rule
+obeys this upper-lower rule for the indices.
+%%%%%
+%%%%%
+\end{document}

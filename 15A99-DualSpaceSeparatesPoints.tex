@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DualSpaceSeparatesPoints}
+\pmcreated{2013-03-22 17:30:55}
+\pmmodified{2013-03-22 17:30:55}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{dual space separates points}
+\pmrecord{6}{39906}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The following result is a corollary of the Hahn-Banach theorem.
+
+{\bf Theorem -} Let $X$ be a normed vector space. Given a linearly independent set $\{x_1,\dots ,x_n\} \subset X$ there exist continuous linear functionals $f_1, \dots , f_n \in X'$ such that
+\begin{displaymath}
+f_j(x_k)=\delta_{jk}\;\;\;\; , 1\leq j, k \leq n
+\end{displaymath}
+
+If $x \in span\{x_1, \dots , x_n\}$, then $\displaystyle x= \sum_{j=1}^n f_j(x)x_j$.
+
+The above theorem shows that if $f(x)=f(y)$ for every continuous linear functional $f$ then $x=y$, therefore the dual space $X'$ separates the points of $X$.
+%%%%%
+%%%%%
+\end{document}

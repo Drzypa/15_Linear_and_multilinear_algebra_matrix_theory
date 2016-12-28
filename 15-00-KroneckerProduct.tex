@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KroneckerProduct}
+\pmcreated{2013-03-22 13:33:31}
+\pmmodified{2013-03-22 13:33:31}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Kronecker product}
+\pmrecord{7}{34163}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmsynonym{tensor product (for matrices)}{KroneckerProduct}
+\pmsynonym{direct product}{KroneckerProduct}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\newcommand{\rank}{\mathop{\mathrm{rank}}}
+\newcommand{\trace}{\mathop{\mathrm{trace}}}
+
+{\bf Definition.}
+Let $A=(a_{ij})$ be a $n\times n$ matrix  and 
+let $B$ be a $m\times m$ matrix. Then the
+\emph{Kronecker product} of $A$ and $B$ is 
+the $mn\times mn$ block matrix
+\begin{eqnarray*}
+A\otimes B &=&\left( \begin{array}{ccc} 
+a_{11} B & \cdots & a_{1n} B \\
+\vdots & \ddots & \vdots \\
+a_{n1} B & \cdots & a_{nn} B \\
+\end{array} \right).
+\end{eqnarray*}
+The Kronecker product is also known as the \emph{direct product}
+or the \emph{tensor product} \cite{eves}. 
+
+
+{\bf Fundamental properties} \cite{eves, kailath}
+\begin{enumerate}
+\item The product is bilinear. If $k$ is a scalar, and $A,B$ and $C$ 
+are square matrices, such that $B$ and $C$
+are of the same order, then
+\begin{eqnarray*}
+A\otimes (B+C) &=& A\otimes B + A\otimes C,\\ 
+(B+C)\otimes A &=& B\otimes A + C\otimes A,\\
+k(A\otimes B) &=& (kA)\otimes B = A\otimes (kB).
+\end{eqnarray*}
+\item If $A,B,C,D$ are square matrices such that the products $AC$ and $BD$ 
+exist, then $(A\otimes B)(C\otimes D)$ exists and 
+\begin{eqnarray*}
+(A\otimes B)(C\otimes D) &=& AC\otimes BD.
+\end{eqnarray*}
+If $A$ and $B$ are invertible matrices, then
+\begin{eqnarray*}
+(A\otimes B)^{-1} &=& A^{-1} \otimes B^{-1}.
+\end{eqnarray*}
+\item If $A$ and $B$ are square matrices, then for the transpose ($A^T$) we have 
+\begin{eqnarray*}
+(A\otimes B)^{T} &=& A^{T} \otimes B^{T}.
+\end{eqnarray*}
+\item Let $A$ and $B$ be square matrices of orders $n$ and $m$, respectively. 
+If $\{\lambda_i | i=1,\ldots,n \}$ are the eigenvalues of $A$ and 
+ $\{\mu_j | j=1,\ldots, m \}$ are the eigenvalues of $B$, then 
+$\{\lambda_i \mu_j |  i=1,\ldots, n, \, j=1,\ldots, m \}$ are the eigenvalues of 
+$A\otimes B$. Also, 
+\begin{eqnarray*}
+\det (A\otimes B) &=& (\det A)^m (\det B)^n, \\
+\rank (A\otimes B) &=& \rank A\, \rank B, \\
+\trace (A\otimes B) &=& \trace A\, \trace B, \\
+\end{eqnarray*}
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem {eves} H. Eves,
+        \emph{Elementary Matrix Theory},
+        Dover publications, 1980.
+\bibitem {kailath} T. Kailath, A.H. Sayed, B. Hassibi,
+        \emph{Linear estimation},
+        Prentice Hall, 2000
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

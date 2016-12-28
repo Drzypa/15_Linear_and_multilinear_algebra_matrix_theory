@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SkewsymmetricBilinearForm}
+\pmcreated{2013-03-22 13:10:47}
+\pmmodified{2013-03-22 13:10:47}
+\pmowner{sleske}{997}
+\pmmodifier{sleske}{997}
+\pmtitle{skew-symmetric bilinear form}
+\pmrecord{9}{33626}
+\pmprivacy{1}
+\pmauthor{sleske}{997}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A63}
+\pmsynonym{antisymmetric bilinear form}{SkewsymmetricBilinearForm}
+\pmsynonym{anti-symmetric bilinear form}{SkewsymmetricBilinearForm}
+\pmrelated{AntiSymmetric}
+\pmrelated{SymmetricBilinearForm}
+\pmrelated{BilinearForm}
+\pmdefines{skew symmetric}
+\pmdefines{anti-symmetric}
+\pmdefines{antisymmetric}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A {\em skew-symmetric} (or {\em antisymmetric}) {\em bilinear form} is a special case of a bilinear form $B$, namely one which is skew-symmetric in the two coordinates; that is, $B(x,y) = -B(y,x)$ for all vectors $x$ and $y$. Note that this definition only makes sense if $B$ is defined over two identical vector spaces, so we must require this in the formal definition:
+
+a bilinear form $B: V \times V \rightarrow K$ ($V$ a vector
+space over a field $K$) is called {\em skew-symmetric} iff
+\begin{quote}
+$B(x,y) = -B(y,x)$ for all vectors $x, y \in V$.
+\end{quote}
+
+Suppose that the characteristic of $K$ is not $2$.  Set $x=y$ in the above equation.  Then $B(x,x)=-B(x,x)$ for all vectors $x \in V$, which means that $2B(x,x)=0$, or $B(x,x)=0$.  Therefore, $B$ is an alternating form.
+
+If, however, $\operatorname{char}(K)=2$, then $B(x,y)=-B(y,x)=B(y,x)$; $B$ is a symmetric bilinear form.
+
+If $V$ is finite-dimensional, then every bilinear form on $V$ can be represented
+by a matrix. In this case the following theorem applies:
+
+A bilinear form is skew-symmetric iff its representing matrix is skew-symmetric.
+(The fact that the representing matrix is skew-symmetric is independent of the
+choice of representing matrix).
+%%%%%
+%%%%%
+\end{document}

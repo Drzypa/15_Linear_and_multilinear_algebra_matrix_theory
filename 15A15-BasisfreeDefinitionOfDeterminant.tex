@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BasisfreeDefinitionOfDeterminant}
+\pmcreated{2013-03-22 16:51:39}
+\pmmodified{2013-03-22 16:51:39}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{basis-free definition of determinant}
+\pmrecord{9}{39109}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\sgn}{sgn}
+\newtheorem*{proposition*}{Theorem}
+\newtheorem*{definition*}{Definition}
+
+\begin{document}
+The definition of determinant as a multilinear mapping on rows can be
+modified to provide a basis-free definition of determinant.  In order
+to make it clear that we are not using bases. we shall speak in terms
+of an endomorphism of a vector space over $k$ rather than speaking of
+a matrix whose entries belong to $k$.  We start by recalling some
+preliminary facts.
+
+Suppose $V$ is a finite-dimensional vector space of dimension $n$ over
+a field $k$.  Recall that a multilinear map $f\colon V^n\to k$ is
+alternating if $f(x) = 0$ whenever there exist distinct indices
+$i,j\in[n]=\{1,\dots,n\}$ such that $x_i = x_j$.  Every alternating
+map $f\colon V^n\to k$ is skew-symmetric, that is, for each
+permutation $\pi\in\mathfrak{S}_n$, we have that $f(x) =
+\sgn(\pi)f(x^{\pi})$, where $x^{\pi}$ denotes
+$(x_{\pi(i)})_{i\in[n]}$, the result of $\pi$ permuting the entries of
+$x$.
+
+Since the trivial map $0\colon V^n\to k$ is alternating and any linear
+combination of alternating maps is alternating, it follows that
+alternating maps form a subspace of the space of multilinear maps.  In
+the following proposition we show that this subspace is
+one-dimensional.  
+
+\begin{proposition*}
+Suppose $V$ is a finite-dimensional vector space of dimension $n$ over
+a field $k$.  Then the space of alternating maps from $V^n$ to $k$ is
+one-dimensional.
+\end{proposition*}
+
+\begin{proof}
+We use a basis here, but we will throw it away later.  We need the
+basis here because each map we will consider has exactly as many
+elements as a basis of $V$.  So let $B = \{b_i\colon i\in[n]\}$ be a
+basis of $V$.
+
+Suppose $f$ and $g$ are nontrivial alternating maps from $V^n$ to $k$.
+We claim that $f$ and $g$ are linearly dependent.  Let $x\in V^n$.  We
+may assume that the entries of $x$ are basis vectors, that is, that $X
+= \{x_i\colon i\in[n]\}\subset\{b_i\colon i\in[n]\}$.  
+If $X\subsetneq B$, then there exist distinct indices $i,j\in[n]$ such
+that $x_i = x_j$.  Since $f$ and $g$ are alternating, it follows that
+$f(x) = g(x) = 0$, which implies that $f(b)g(x) = g(b)f(x)$.
+On the other hand, if $X = B$, then there is a permutation
+$\pi\in\mathfrak{S}_n$ such that $x = b^{\pi}$.  Since $f$ and $g$ are
+skew-symmetric, it follows that
+\[
+f(b)g(x) = \sgn(\pi)f(b)g(b) = g(b)f(x).
+\]
+In either case we find that $f(b) g(x) = g(b) f(x)$.  Since $f(b)$ and
+$g(b)$ are fixed scalars, it follows that $f$ and $g$ are linearly
+dependent.
+
+So far we have shown only that the dimension of the space of
+alternating maps is less than or equal to one.  In order to show that
+the space is one-dimensional we simply need to find a nontrivial
+alternating form.  To do this, let $\{b^*_i\colon i\in[n]\}$ be the
+natural basis of $V^*$, so that $b^*_i(b_j)$ is the Kronecker delta of
+$i$ and $j$ for any $i,j\in[n]$.  Define a map $f\colon V^n\to k$ by
+\[
+f(x) = \sum_{\pi\in\mathfrak{S}_n} \sgn(\pi)\prod_{i\in[n]} b^*_i(x_{\pi(i)}).
+\]
+One can check that $f$ is multilinear and alternating.  Moreover,
+$f(b) = 1$, so it is nontrivial.  Hence the space of alternating maps
+is one-dimensional.
+\end{proof}
+
+For an alternate view of the above results, we could look instead at
+linear maps from the exterior product $\bigwedge^n V$ into $k$.  The
+proposition above can be viewed as saying that the dimension of
+$\bigwedge^n V$ is $\displaystyle\binom{n}{n} = 1$.
+
+We define the determinant of an endomorphism in terms of the action of
+the endomorphism on alternating maps.  Recall that if $M\colon V\to V$
+is an endomorphism, its pullback $M^*$ is the unique operator such
+that
+\[
+(M^*f)(x_i)_{i\in [n]} = f(M(x_i))_{i\in [n]}.
+\]
+Since the space of alternating maps is one-dimensional and
+endomorphisms of a one-dimensional space reduce to scalar
+multiplication, it follows that $M^*f$ is a scalar multiple of $f$.
+We call this scalar the determinant.  It is well-defined because the
+scalar depends on $M$ but not on $f$.
+
+\begin{definition*}
+Suppose $V$ is a finite-dimensional vector space of dimension $n$ over
+a field $k$, and let $M\colon V\to V$ be an endomorphism.  Then the
+\emph{determinant} of $M$ is the unique scalar $\det(M)$ such that 
+\[
+M^* f = \det(M) f
+\]
+for all alternating maps $f\colon V^n\to k$.
+\end{definition*}
+
+% bleargh
+\PMlinkescapeword{clear}
+\PMlinkescapeword{order}
+\PMlinkescapeword{proposition}
+\PMlinkescapeword{rows}
+\PMlinkescapeword{terms}
+%%%%%
+%%%%%
+\end{document}

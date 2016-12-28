@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartitionedMatrix}
+\pmcreated{2013-03-22 13:32:55}
+\pmmodified{2013-03-22 13:32:55}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{partitioned matrix}
+\pmrecord{11}{34150}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+%\pmkeywords{Jordan canonical form}
+%\pmkeywords{rational canonical form}
+%\pmkeywords{smith normal form}
+\pmrelated{JordanCanonicalForm}
+\pmrelated{JordanCanonicalFormTheorem}
+\pmdefines{block matrix}
+\pmdefines{sub-matrix}
+\pmdefines{submatrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{partitioned matrix}, or a \emph{block matrix}, is
+ a matrix $M$ that has been constructed from other smaller matrices.
+ These smaller matrices are called \emph{blocks} or \emph{sub-matrices}
+ of $M$.
+ 
+ For instance, if we partition the below $5\times 5$ matrix
+ as follows
+ \begin{eqnarray*}
+ L&=&\left( \begin{array}{cc|ccc}
+ 1 & 0 & 1 & 2 & 3 \\
+ 0 & 1 & 1 & 2 & 3 \\
+ \hline
+ 2 & 3 & 9 & 9 & 9 \\
+ 2 & 3 & 9 & 9 & 9 \\
+ 2 & 3 & 9 & 9 & 9 \\
+ \end{array} \right),
+ \end{eqnarray*}
+ then we can define the matrices
+
+\begin{equation*}
+A=\left( \begin{array}{cc}
+ 1 & 0 \\
+ 0 & 1
+ \end{array} \right),
+ B=\left( \begin{array}{ccc}
+ 1 & 2 & 3\\
+ 1 & 2 & 3
+ \end{array} \right),
+ C=\left( \begin{array}{cc}
+ 2 & 3 \\
+ 2 & 3 \\
+ 2 & 3
+ \end{array} \right),
+ D=\left( \begin{array}{ccc}
+ 9 & 9 & 9 \\
+ 9 & 9 & 9 \\
+ 9 & 9 & 9 \\
+ \end{array} \right)
+\end{equation*}
+and write $L$ as
+
+\begin{equation*}
+ L=\left( \begin{array}{cc}
+ A & B \\
+ C & D
+ \end{array} \right),\, \mbox{or\,\,}
+ L=\left( \begin{array}{c|c}
+ A & B \\
+\hline
+ C & D
+ \end{array} \right).
+\end{equation*}
+
+If $A_1,\ldots, A_n$ are square matrices (of possibly
+different sizes), then we define the \emph{direct sum} of
+the matrices $A_1,\ldots, A_n$
+as the partitioned matrix
+$$\operatorname{diag}(A_1,\ldots, A_n) =\left( \begin{array}{c|c|c}
+ A_1 &  &  \\
+\hline
+  & \ddots &  \\
+\hline
+  &  & A_n \\
+ \end{array} \right),$$
+where the off-diagonal blocks are zero.
+
+If $A$ and $B$ are matrices of the same size partitioned into blocks of the same size, the partition of the sum is the sum of the partitions.
+
+If $A$ and $B$ are $m\times n$ and $n\times k$ matrices, respectively, then if the blocks of $A$ and $B$ are of the correct size to be multiplied, then the blocks of the product are the products of the blocks.
+%%%%%
+%%%%%
+\end{document}

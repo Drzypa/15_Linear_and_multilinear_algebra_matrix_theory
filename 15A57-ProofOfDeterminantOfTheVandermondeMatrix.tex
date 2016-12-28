@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDeterminantOfTheVandermondeMatrix}
+\pmcreated{2013-03-22 15:44:50}
+\pmmodified{2013-03-22 15:44:50}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of determinant of the Vandermonde matrix}
+\pmrecord{10}{37699}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A57}
+\pmclassification{msc}{65F99}
+\pmclassification{msc}{65T50}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+To begin, note that the determinant of the $n \times n$ Vandermonde
+matrix (which we shall denote as `$\Delta$') is a homogeneous
+polynomial of order $n(n-1)/2$ because every term in the determinant
+is, up to sign, the product of a zeroth power of some variable times the first
+power of some other variable , $\ldots$, the $n-1$-st power of some
+variable and $0 + 1 + \cdots + (n-1) = n(n-1)/2$.
+
+Next, note that if $a_i = a_j$ with $i \neq j$, then $\Delta = 0$
+because two columns of the matrix would be equal.  Since $\Delta$ is a
+polynomial, this implies that $a_i - a_j$ is a factor of $\Delta$.
+Hence, 
+ \[ \Delta = C \prod_{1 \leq i < j \leq n}(a_j - a_i) \]
+where C is some polynomial.  However, since both $\Delta$ and the
+product on the right hand side have the same degree, $C$ must have
+degree zero, i.e. $C$ must be a constant.  So all that remains is the
+determine the value of this constant.
+
+One way to determine this constant is to look at the coefficient of
+the leading diagonal, $\prod_n (a_n)^{n-1}$.  Since it equals 1 in both
+the determinant and the product, we conclude that $C = 1$, hence
+ \[ \Delta = \prod_{1 \leq i < j \leq n}(a_j - a_i). \]
+%%%%%
+%%%%%
+\end{document}

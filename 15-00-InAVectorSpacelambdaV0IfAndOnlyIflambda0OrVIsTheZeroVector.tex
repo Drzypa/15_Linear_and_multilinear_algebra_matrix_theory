@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InAVectorSpacelambdaV0IfAndOnlyIflambda0OrVIsTheZeroVector}
+\pmcreated{2013-03-22 13:37:34}
+\pmmodified{2013-03-22 13:37:34}
+\pmowner{aoh45}{5079}
+\pmmodifier{aoh45}{5079}
+\pmtitle{in a vector space, $\lambda v = 0$ if and only if $\lambda =0$ or $v$ is the zero vector}
+\pmrecord{10}{34264}
+\pmprivacy{1}
+\pmauthor{aoh45}{5079}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmclassification{msc}{13-00}
+\pmclassification{msc}{16-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{axiom}
+
+{\bf Theorem} 
+Let $V$ be a vector space over the field $F$. 
+Further, let $\lambda \in F$ and  $v\in V$.
+Then 
+$\lambda v = 0$ if and only if $\lambda$ is zero, or
+if $v$ is the zero vector, or if both $\lambda$ and $v$ are zero. 
+
+\newcommand{\axiom}[1]{\PMlinkname{axiom #1}{VectorSpace}}
+
+\emph{Proof.} Let us denote by $0_F$ and by $1_F$ the zero and unit
+elements in $F$ respectively. Similarly, we denote by $0_V$ the zero vector in $V$. 
+Suppose $\lambda = 0_F$. 
+Then, by \axiom{8}, we have that
+$$  1_Fv + 0_F v = 1_Fv,$$
+for all $v\in V$. By \axiom{6}, there is an element in $V$ that cancels
+$1_F v$. Adding this element to both \PMlinkescapetext{sides} yields $ 0_F v = 0_V$.
+Next, suppose that $v=0_V$. We claim 
+that $\lambda 0_V = 0_V$ for all $\lambda\in F$.
+This follows from the previous claim if $\lambda = 0$, so
+let us assume that $\lambda \neq 0_F$. Then $\lambda^{-1}$ exists, and 
+ \axiom{7} implies that
+$$ \lambda \lambda^{-1} v +\lambda 0_V = \lambda(\lambda^{-1} v + 0_V)$$
+holds for all $v\in V$. Then using
+ \axiom{3}, we have that
+$$  v + \lambda 0_V = v$$
+for all $v\in V$. 
+Thus $\lambda 0_V$ satisfies the axiom for the zero vector, and
+$\lambda 0_V = 0_V$ for all $\lambda \in F$.
+
+For the other direction, suppose $\lambda v = 0_V$ and $\lambda\neq 0_F$. 
+Then, using \axiom{3}, we have that  
+$$ v = 1_F v = \lambda^{-1} \lambda v    = \lambda^{-1} 0_V    = 0_V.$$
+On the other hand, suppose $\lambda v = 0_V$ and $v \neq 0_V$.
+If $\lambda \neq 0$, then the above calculation for $v$ 
+is again valid whence
+$$ 0_V \neq v = 0_V,$$
+which is a contradiction, so $\lambda = 0$. 
+$\Box$
+
+This result with proof can be found in \cite{greub}, page 6.
+
+\begin{thebibliography}{9}
+\bibitem{greub}
+W. Greub,
+\emph{Linear Algebra},
+Springer-Verlag, Fourth edition, 1975.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

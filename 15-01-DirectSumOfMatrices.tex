@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirectSumOfMatrices}
+\pmcreated{2013-03-22 17:36:48}
+\pmmodified{2013-03-22 17:36:48}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{direct sum of matrices}
+\pmrecord{8}{40030}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-01}
+\pmrelated{DirectSum}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\subsubsection*{Direct sum of matrices}
+
+Let $A$ be an $m\times n$ matrix and $B$ be a $p\times q$ matrix.  By the direct sum of $A$ and $B$, written $A\oplus B$, we mean the $(m+p)\times (n+q)$ matrix of the form 
+$$
+\begin{pmatrix}
+A & O \\
+O & B 
+\end{pmatrix}
+$$
+where the $O$'s represent zero matrices.  The $O$ on the top right is an $m\times q$ matrix, while the $O$ on the bottom left is $n\times p$.
+
+For example, if $A=\begin{pmatrix} 3 &-1\\ 2&5\end{pmatrix}$ and $B=\begin{pmatrix} 1&2\\ 4&0\\ -7&8 \end{pmatrix}$, then 
+$$
+\begin{pmatrix}
+A & O \\
+O & B 
+\end{pmatrix}=
+\begin{pmatrix}
+3&-1 & 0&0 \\
+2&5 & 0&0 \\
+0&0 & 1&2 \\
+0&0 & 4&2 \\
+0&0 & -7&8 \\
+\end{pmatrix}
+$$
+\textbf{Remark}.  
+It is not hard to see that the $\oplus$ operation on matrices is associative: $$(A\oplus B)\oplus C = A \oplus (B\oplus C),$$ because both sides lead to  
+$$
+\begin{pmatrix}
+A & O & O \\
+O & B & O \\
+O & O & C 
+\end{pmatrix}
+$$
+In fact, we can inductively define the direct sum of $n$ matrices unambiguously.
+
+\subsubsection*{Direct sums of linear transformations}
+The direct sum of matrices is closely related to the direct sum of vector spaces and linear transformations.  Let $A$ and $B$ be as above, over some field $k$.  We may view $A$ and $B$ as linear transformations $T_A:k^n\to k^m$ and $T_B: k^q\to k^p$ using the standard ordered bases.  Then $A\oplus B$ may be viewed as the linear transformation $$T_{A\oplus B}: k^{n+q}\to k^{m+p}$$ using the standard ordered basis, such that 
+\begin{itemize}
+\item the restriction of $T_{A\oplus B}$ to the subspace $k^n$ (embedded in $k^{n+q}$) is $T_A$, and 
+\item the restriction of $T_{A\oplus B}$ to $k^q$ is $T_B$.
+\end{itemize}
+
+The above suggests that we can define direct sums on linear transformations.  Let $T_1:V_1\to W_1$ and $T_2:V_2\to W_2$ be linear transformations, where $V_i$ and $W_j$ are finite dimensional vector spaces over some field $k$ such that $V_1\cap V_2=0$.  Then define $T_1\oplus T_2: V_1\oplus V_2 \to W_1\oplus W_2$ such that for any $v\in V_1\oplus V_2$, $$(T_1\oplus T_2)(v_1,v_2):=(T_1(v_1),T_2(v_2))$$ where $v_i\in V_i$.
+Based on this definition, it is not hard to see that $$T_{A\oplus B}=T_A \oplus T_B$$ for any matrices $A$ and $B$.
+
+More generally, if $\beta_i$ is an ordered basis for $V_i$, then $\beta:=\beta_1\cup \beta_2$ extending the linear orders on $\beta_i$, such that if $v_i\in \beta_1$ and $v_j\in \beta_2$, then $v_i<v_j$ is an ordered basis for $V_1\oplus V_2$, and $$[T_1\oplus T_2]_{\beta}=[T_1]_{\beta_1}\oplus [T_2]_{\beta_2}.$$
+%%%%%
+%%%%%
+\end{document}

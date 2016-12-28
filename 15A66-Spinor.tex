@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Spinor}
+\pmcreated{2013-03-22 17:04:25}
+\pmmodified{2013-03-22 17:04:25}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{spinor}
+\pmrecord{7}{39366}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A66}
+%\pmkeywords{spinor}
+%\pmkeywords{spin group}
+%\pmkeywords{spin}
+\pmrelated{SpinGroup}
+\pmrelated{DiracEquation}
+\pmrelated{PauliMatrices}
+\pmrelated{SpinNetworksAndSpinFoams}
+\pmrelated{SpinGroup}
+\pmrelated{ElieJosephCartan}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A {\em spinor} is a certain kind of auxiliary mathematical object introduced to expand the notion of spatial vector. Spinors are needed because the full structure of rotations in a given number of dimensions requires some extra number of dimensions to exhibit it.
+
+More formally, spinors can be defined as geometrical objects constructed from a given vector space endowed with an inner product by means of an algebraic or quantization procedure. The rotation group acts upon the space of spinors, but for an ambiguity in the sign of the action. Spinors thus form a projective representation of the rotation group. One can remove this sign ambiguity by regarding the space of spinors as a (linear) group representation of the spin group Spin(n). In this alternative point of view, many of the intrinsic and algebraic properties of spinors are more clearly visible, but the connection with the original spatial geometry is more obscure. On the other hand the use of complex number scalars can be kept to a minimum.
+
+Historically, spinors in general were discovered by \'Elie Cartan in 1913. Later spinors were adopted by quantum mechanics in order to study the properties of the intrinsic angular momentum of the electron and other fermions. Today spinors enjoy a wide range of physics applications. Classically, spinors in three dimensions are used to describe the spin of the non-relativistic electron. Via the Dirac equation, Dirac spinors are required in the mathematical description of the quantum state of the relativistic electron. In quantum field theory, spinors describe the state of relativistic many-particle systems.
+
+In the classical geometry of space, a vector exhibits a certain behavior when it is acted upon by a rotation or reflected in a hyperplane. However, in a certain sense rotations and reflections contain finer geometrical information than can be expressed in terms of their actions on vectors. Spinors are objects constructed in order to encompass more fully this geometry.
+
+There are essentially two frameworks for viewing the notion of a spinor. 
+
+One is representation theoretic. In this point of view, one knows a priori that there are some representations of the Lie algebra of the orthogonal group which cannot be formed by the usual tensor constructions. These missing representations are then labeled the ''spin representations'', and their constituents spinors. In this view, a spinor must belong to a group representation|representation of the covering space|double cover of the rotation group $SO(n, R)$, or more generally of the generalized special orthogonal group $SO(p, q, R)$ on spaces with metric signature $(p, q)$. These double-covers are Lie groups, called the spin groups $Spin(p, q)$. All the properties of spinors, and their applications and derived objects, are manifested first in the spin group.
+
+The other point of view is geometrical. One can explicitly construct the spinors, and then examine how they behave under the action of the relevant Lie groups. This latter approach has the advantage of being able to say precisely what a spinor is, without invoking some non-constructive theorem from representation theory. Representation theory must eventually supplement the geometrical machinery once the latter becomes too unwieldy.
+
+The most general mathematical form of spinors was discovered by Ã‰lie Cartan in 1913. The word "spinor" was coined by Paul Ehrenfest in his work on quantum physics. 
+
+Spinors were first applied to mathematical physics by Wolfgang Pauli in 1927, when he introduced Pauli matrices|spin matrices. The following 1928|year, Paul Dirac discovered the fully special relativity|relativistic theory of electron spin (physics)|spin by showing the connection between spinors and the Lorentz group. By the 1930s, Dirac, Piet Hein  and others at the Niels Bohr Institute created games such as ``Tangloids'' to teach and model the calculus of spinors.
+
+Some important simple examples of spinors in low dimensions arise from considering the even-graded subalgebras of the Clifford algebra $Cl_{p, q}(R)$. This is an algebra built up from an orthonormal basis of $n = p + q$ mutually orthogonal vectors under addition and multiplication, $p$ of which have norm +1 and $q$ of which have norm $-1$, with the product rule for the basis vectors
+
+$$e_i e_j = \Bigg\{ \begin{matrix} +1 & i=j, \, i \in (1 \ldots p) \\
+      -1 & i=j, \, i \in (p+1 \ldots n) \\
+      - e_j e_i &  i \not = j \end{matrix} $$
+
+A space of spinors can be constructed explicitly. For a complete example in dimension 3, see spinors in three dimensions. There are two different, but essentially equivalent, ways to proceed. One approach seeks to identify the minimal ideals for the left action of $Cl(V, g)$ on itself. These are subspaces of the Clifford algebra of the form $Cl(V, g)\omega$, admitting the evident action of $Cl(V, g)$ by left-multiplication: $c : x\omega \to cx\omega$. There are two variations on this theme: one can either find a primitive element $\omega$ which is a nilpotent element of the Clifford algebra, or one which is an idempotent. The construction via nilpotent elements is more fundamental in the sense that an idempotent may then be produced from it. In this way, the spinor representations are identified with certain subspaces of the Clifford algebra itself. The second approach is to construct a vector space using a distinguished subspace of $V$, and then specify the action of the Clifford algebra externally to that vector space.
+
+In either approach, the fundamental notion is that of an isotropic line|isotropic subspace $W$. Each construction depends on an initial freedom in choosing this subspace. In physical terms, this corresponds to the fact that there is no measurement protocol which can specify a basis of the spin space, even should a preferred basis of $V$ already be given.
+
+{\it This entry was adapted from the Wikipedia article \PMlinkexternal{Spinor}{http://en.wikipedia.org/wiki/Spinor} as of May 10, 2007.}
+
+See also: spin groups
+
+\begin{thebibliography}{1}
+\bibitem{ec} E. Cartan, ``Les groupes prejectifs qui ne laissent invariante aucune multiplicitÃ© plane'', {\it Bul. Soc. Math. France}, {\bf 41} (1913): 53 - 96
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

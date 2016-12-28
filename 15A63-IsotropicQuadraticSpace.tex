@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IsotropicQuadraticSpace}
+\pmcreated{2013-03-22 15:41:57}
+\pmmodified{2013-03-22 15:41:57}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{isotropic quadratic space}
+\pmrecord{10}{37643}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A63}
+\pmclassification{msc}{11E81}
+\pmrelated{QuadraticMap2}
+\pmrelated{QuadraticForm}
+\pmdefines{isotropic vector}
+\pmdefines{isotropic quadratic form}
+\pmdefines{anisotropic vector}
+\pmdefines{anisotropic quadratic form}
+\pmdefines{anisotropic quadratic space}
+\pmdefines{totally isotropic quadratic space}
+\pmdefines{totally isotropic quadratic form}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+A vector $v$ (an element of $V$) in a quadratic space $(V,Q)$ is \emph{isotropic} if
+\begin{enumerate}
+\item $v\ne0$ and
+\item $Q(v)=0$.
+\end{enumerate}
+Otherwise, it is called \emph{anisotropic}.  A quadratic space $(V,Q)$ is isotropic if it contains an isotropic vector.  Otherwise, it is anisotropic.  A quadratic space $(V,Q)$ is \emph{totally isotropic} if every one of its non-zero vector is isotropic, or that $Q(V)=0$.
+
+Similarly, an \emph{isotropic quadratic form} is one which has a non-trivial kernel, or that there exists a vector $v$ such that $Q(v)=0$.  The definitions for that of an \emph{anisotropic quadratic form} and that of a \emph{totally isotropic quadratic form} should now be clear from the above discussion (anisotropic: $\operatorname{ker}(Q)=0$; totally isotropic: $\operatorname{ker}(Q)=V$).
+
+\textbf{Examples.}
+\begin{itemize}
+\item Consider the quadratic form $Q(x,y)=x^2+y^2$ in the vector space $\mathbb{R}^2$ over the reals.  It is clearly anisotropic since there are no real numbers $a,b$ not both $0$, such that $a^2+b^2=0$.
+\item However, the same form is isotropic in $\mathbb{C}^2$ over $\mathbb{C}$, since $1^2+i^2=0$; the complex numbers are algebraically closed.
+\item Again, using the same form $x^2+y^2$, but in $\mathbb{R}^3$ over the reals , we see that it is isotropic since the $z$ term is missing, so that $Q(0,0,1)=0^2+0^2=0$.  
+\item If we restrict $Q$ to the subspace consisting of the $z$-axis ($x=y=0$) and call it $Q_z$, then $Q_z$ is totally isotropic, and the $z$-axis is a totally isotropic subspace.
+\item The quadratic form $Q(x,y)=x^2-y^2$ is clearly isotropic in any vector space over any field.  In general, this is true if the coefficients of a diagonal quadratic form $Q$ consist of $1, -1, 0$ ($0$ is optional) and nothing else.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PeetresInequality}
+\pmcreated{2013-03-22 13:55:26}
+\pmmodified{2013-03-22 13:55:26}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Peetre's inequality}
+\pmrecord{10}{34681}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmclassification{msc}{15A39}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+{\bf Theorem\, [Peetre's inequality]}  \cite{barros, trevesI}
+If $t$ is a real number and $x,y$ are vectors in
+$\sR^n$, then
+$$ \Big( \frac{1+|x|^2}{1+|y|^2} \Big)^t \le 2^{|t|} (1+|x-y|^2)^{|t|}.$$
+
+{\bf Proof.} (Following \cite{barros}.)
+Suppose $b$ and $c$ are vectors in $\sR^n$. Then, from
+$(|b|-|c|)^2\ge 0$, we obtain
+$$ 2|b| \cdot |c| \le |b|^2 + |c|^2.$$
+Using this inequality and the Cauchy-Schwarz inequality, we obtain
+\begin{eqnarray*}
+1+ |b-c|^2 &=& 1+ |b|^2 - 2 b\cdot c + |c|^2 \\
+&\le & 1+ |b|^2 + 2 |b| |c| + |c|^2 \\
+&\le & 1+ 2|b|^2 + 2|c|^2 \\
+&\le & 2\big( 1+|b|^2+ |c|^2+|b|^2 |c|^2\big)\\
+&= & 2( 1+|b|^2)(1+ |c|^2)
+\end{eqnarray*}
+Let us define $a=b-c$. Then for any vectors $a$ and $b$, we have
+\begin{eqnarray}
+\label{AA}
+    \frac{1+|a|^2}{1+|b|^2}   \le 2 (1+|a-b|^2).
+\end{eqnarray}
+Let us now return to the given inequality.
+If $t=0$, the claim is trivially true for all $x,y$ in $\sR^n$.
+If $t>0$, then raising both sides in inequality \ref{AA} to
+the power of $t$, using $t=|t|$, and setting $a=x$, $b=y$ yields the result.
+On the other hand, if $t<0$, then raising both sides in inequality
+\ref{AA} to the power to $-t$, using $-t=|t|$, and setting
+$a=y$, $b=x$ yields the result.
+$\Box$
+
+
+\begin{thebibliography}{9}
+ \bibitem{barros} J. Barros-Neta, \emph{An introduction to the theory of distributions},
+ Marcel Dekker, Inc., 1973.
+ \bibitem{trevesI} F. Treves,
+ \emph{Introduction To Pseudodifferential and Fourier Integral Operators},
+Vol. I, Plenum Press, 1980.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

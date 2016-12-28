@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SchurDecompositionProofOf}
+\pmcreated{2013-03-22 14:04:01}
+\pmmodified{2013-03-22 14:04:01}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{Schur decomposition, proof of}
+\pmrecord{6}{35424}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The columns of the unitary matrix $Q$ in Schur's decomposition theorem form an orthonormal basis of $\mathbb{C}^n$.  The matrix $A$ takes the upper-triangular form $D+N$ on this basis.  Conversely, if $v_1, \ldots, v_n$ is an orthonormal basis for which $A$ is of this form then the matrix $Q$ with $v_i$ as its $i$-th column satisfies the theorem.
+
+To find such a basis we proceed by induction on $n$.  For $n=1$ we can simply take $Q=1$.  If $n > 1$ then let $v \in \mathbb{C}^n$ be an eigenvector of $A$ of unit length and let $V = v^{\perp}$ be its orthogonal complement.  If $\pi$ denotes the orthogonal projection onto the line spanned by $v$ then $(1-\pi)A$ maps $V$ into $V$.
+
+By induction there is an orthonormal basis $v_2, \ldots, v_n$ of $V$ for which $(1-\pi)A$ takes the desired form on $V$.  Now $A = \pi A + (1-\pi)A$ so $Av_i \equiv (1-\pi)Av_i (\mod v)$ for $i \in \{2, \ldots, n\}$.  Then $v, v_2, \ldots, v_n$ can be used as a basis for the Schur decomposition on $\mathbb{C}^n$.
+%%%%%
+%%%%%
+\end{document}

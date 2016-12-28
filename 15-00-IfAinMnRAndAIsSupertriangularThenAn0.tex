@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IfAinMnRAndAIsSupertriangularThenAn0}
+\pmcreated{2013-03-22 13:44:39}
+\pmmodified{2013-03-22 13:44:39}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{If $A \in M_n(R)$ and $A$ is supertriangular then $A^n=0$}
+\pmrecord{12}{34438}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\textbf{theorem:}  Let $R$ be commutative ring with identity.
+If an n-square matrix $A \in Mat_{n}(R)$
+ is supertriangular then $A^n = 0$.\\\\
+\textbf{proof:}  Find the characteristic polynomial of $A$ by computing the determinant of $A-tI$.  The square matrix $A-tI$ is a triangular matrix.  The determinant of a triangular matrix is the product of the diagonal element of the matrix.  Therefore the characteristic polynomial is $p(t) =t^n$ and by the Cayley-Hamilton theorem the matrix $A$ satisfies the polynomial.  That is $A^n = 0$.\\
+QED
+%%%%%
+%%%%%
+\end{document}

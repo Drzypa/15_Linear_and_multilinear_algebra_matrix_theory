@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnApplicationOfZmatrixInAMobileRadioSystem}
+\pmcreated{2013-03-22 16:14:16}
+\pmmodified{2013-03-22 16:14:16}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{an application of Z-matrix in a mobile radio system}
+\pmrecord{6}{38339}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The following is an application of Z-matrix in wireless communication called power balancing problem.
+
+Consider $n$ pairs of mobile users and receiving antennae. For
+$i=1,\ldots, n$, mobile user $i$ transmits radio signal to antenna
+$i$. Mobile user $i$ transmits at power $P_i$. The radio channel
+attenuate the signal and user $i$'s signal is received at antenna
+$i$ with power $G_{ii} P_i$, where $G_{ii}$ denote the channel
+gain. The radio signals also interfere each other. At antenna $i$,
+the interference due to user $j$ has power $G_{ij} P_j$. The
+receiver noise power at antenna $i$ is denoted by $n_i$. The
+signal to interference plus noise at receiver $i$ is
+\[
+ \Gamma_i = \frac{G_{ii}P_i}{\sum_{j\neq i} G_{ij} P_j + n_i}
+\]
+To guarantee the quality of received signal, it is required that
+the signal to interference plus noise ratio $\Gamma_i$ is equal to
+a predefined constant $\gamma_i$ for all $i$. Given $\gamma_i$,
+$i=1,\ldots, n$, we want to find $P_1,\ldots, P_n$ such that the
+above equation holds for $i=1,\ldots, n$. Let $A$ be the $n\times
+n$ matrix with zero diagonal and $(i,j)$-entry
+$(G_{ij}\gamma_i)/G_{ii}$ for $i\neq j$. We want to solve
+\[
+  (I -A) \mathbf{p} = \mathbf{n}
+\]
+where $\mathbf{p} = (P_1,\ldots, P_n)^T$ is the power vector and
+$\mathbf{n} = (n_i \gamma_i/G_{ii})_{i=1}^n$. The matrix $I -A$ is
+a Z-matrix, since all $G_{ij}$ and $\gamma_i$ are positive
+constants. The required power vector is $(I-A)^{-1}\mathbf{n}$ if
+$I-A$ is invertible. We also required that the components of
+$\mathbf{p}$ to be positive as power cannot be negative. The
+resulting power vector $(I-A)^{-1} \mathbf{n}$ has positive
+components if $(I-A)^{-1}$ is a non-negative matrix. In such case,
+$I-A$ is an M-matrix.
+%%%%%
+%%%%%
+\end{document}

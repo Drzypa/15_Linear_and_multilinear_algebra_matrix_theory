@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeometricAlgebra}
+\pmcreated{2013-03-22 13:17:03}
+\pmmodified{2013-03-22 13:17:03}
+\pmowner{PhysBrain}{974}
+\pmmodifier{PhysBrain}{974}
+\pmtitle{geometric algebra}
+\pmrecord{15}{33770}
+\pmprivacy{1}
+\pmauthor{PhysBrain}{974}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A66}
+\pmclassification{msc}{15A75}
+\pmsynonym{Clifford algebra}{GeometricAlgebra}
+%\pmkeywords{Hestenes}
+%\pmkeywords{Clifford}
+%\pmkeywords{Grassmann}
+\pmrelated{ExteriorAlgebra}
+\pmrelated{CliffordAlgebra2}
+\pmrelated{CCliffordAlgebra}
+\pmrelated{SpinGroup}
+\pmdefines{geometric product}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Geometric algebra is a \PMlinkname{Clifford algebra}{CliffordAlgebra2} which has been used with great success in the modeling of a wide variety of physical phenomena.  Clifford algebra is considered a more general algebraic framework than geometric algebra.  The primary distinction is that geometric algebra utilizes only real numbers as scalars and to represent magnitudes.  The underlying philosophical justification for this is the interpretation that the unit imaginary has geometric significance which naturally arises from the properties of the algebra and the interaction of its various subspaces.
+
+Let ${\cal{V}}^n$ be an $n$--dimensional vector space over the real numbers.  As with traditional vector algebra, the vector space is spanned by a set of $n$ linearly independent basis vectors.  Any vector in this space may be represented by a linear combination of the basis vectors.  In the geometric algebra literature, such basis entities are also called \emph{blades}.
+
+Since vectors are one-dimensional directed quantities, they are assigned a \emph{grade} of 1.  Scalars are considered to be grade-0 entities.  In geometric algebra, there exist higher dimensional analogues to vectors.  Two-dimensional directed quantites are termed bivectors and they are grade-2 entites.  In general a $k$-dimensional entity is known as a $k$-vector.
+
+The \emph{geometric algebra} ${\cal{G}}_n={\cal{G}}({\cal{V}}^n)$ is a multi-graded algebra similar to Grassmann's exterior algebra, except that the exterior product is replaced by a more fundamental multiplication operation known as the \emph{geometric product}.  In general, the result of the geometric product is a multi-graded object called a \emph{multivector}.  A multivector is a linear combination of basis blades.
+
+For vectors $\mathbf{a}, \mathbf{b}, \mathbf{c} \in {\cal{V}}^n$ and real scalars $\alpha, \beta \in \mathbf{R}$, the geometric product satisfies the following axioms:
+
+\[
+\begin{array}{lll}
+\mbox{\textbf{associativity:}} & \mathbf{a}(\mathbf{b}\mathbf{c}) = (\mathbf{a}\mathbf{b})\mathbf{c} & \mathbf{a}+(\mathbf{b}+\mathbf{c}) = (\mathbf{a}+\mathbf{b})+\mathbf{c} \\
+\mbox{\textbf{commutativity:}} & \alpha\beta = \beta\alpha & \alpha+\beta = \beta+\alpha \\
+& \alpha\mathbf{b} = \mathbf{b}\alpha & \alpha+\mathbf{b} = \mathbf{b}+\alpha \\
+& \mathbf{ab} = \frac{1}{2}(\mathbf{ab} + \mathbf{ba}) + \frac{1}{2}(\mathbf{ab} - \mathbf{ba})
+& \mathbf{a}+\mathbf{b} = \mathbf{b}+\mathbf{a} \\
+\mbox{\textbf{distributivity:}} & \mathbf{a}(\mathbf{b}+\mathbf{c}) = \mathbf{a}\mathbf{b}+\mathbf{a}\mathbf{c} & (\mathbf{b}+\mathbf{c})\mathbf{a} = \mathbf{b}\mathbf{a}+\mathbf{c}\mathbf{a}  \\
+\mbox{\textbf{linearity}} & \alpha(\mathbf{b}+\mathbf{c}) = \alpha\mathbf{b}+\alpha\mathbf{c} = (\mathbf{b}+\mathbf{c})\alpha \\
+\mbox{\textbf{contraction:}} & \mathbf{a}^2 = \mathbf{a}\mathbf{a} = \sum_{i=1}^{n}\epsilon_{i}|\mathbf{a}_{i}|^2 = \alpha & \mbox{where } \epsilon_{i} \in \{-1,0,1\}
+\end{array}
+\]
+
+Commutativity of scalar--scalar multiplication and vector--scalar multiplication is symmetric; however, in general, vector--vector multiplication is not commutative.  The order of multiplication of vectors is significant.  In particular, for parallel vectors:
+\[
+\mathbf{a}\mathbf{b} = \mathbf{b}\mathbf{a}
+\]
+and for orthogonal vectors:
+\[
+\mathbf{a}\mathbf{b} = -\mathbf{b}\mathbf{a}
+\]
+The parallelism of vectors is encoded as a symmetric property, while orthogonality of vectors is encoded as an antisymmetric property.
+
+The contraction rule specifies that the square of any vector is a scalar equal to the sum of the square of the magnitudes of its components in each basis direction.  Depending on the contraction rule for each of the basis directions, the magnitude of the vector may be positive, negative, or zero.  A vector with a magnitude of zero is called a \emph{null vector}.
+
+The graded algebra ${\cal{G}}_{n}$ generated from ${\cal{V}}^{n}$ is defined over a $2^{n}$-dimensional linear space.  This basis entities for this space can be generated by successive application of the geometric product to the basis vectors of ${\cal{V}}^{n}$ until a closed set of basis entities is obtained.  The basis entites for the space are known as \emph{blades}.  The following multiplication table illustrates the generation of basis blades from the basis vectors $\mathbf{e}_{1}, \mathbf{e}_{2} \in {\cal{V}}^{n}$.
+
+\[
+\begin{array}{cccc}
+\epsilon_{0} & \mathbf{e}_{1} & \mathbf{e}_{2} & \mathbf{e}_{12} \\
+\mathbf{e}_{1} & \epsilon_{1} & \mathbf{e}_{12} & \epsilon_{1}\mathbf{e}_{2} \\
+\mathbf{e}_{2} & -\mathbf{e}_{12} & \epsilon_{2} & -\epsilon_{2}\mathbf{e}_{1} \\
+\mathbf{e}_{12} & -\epsilon_{1}\mathbf{e}_{2} & \epsilon_{2}\mathbf{e}_{1} & -\epsilon_{1}\epsilon_{2}
+\end{array}
+\]
+
+Here, $\epsilon_{1}$ and $\epsilon_{2}$ represent the contraction rule for $\mathbf{e}_{1}$ and $\mathbf{e}_{2}$ respectively.  Note that the basis vectors of ${\cal{V}}^{n}$ become blades themselves in addition to the multiplicative identity, $\epsilon_{0} \equiv 1$ and the new \emph{bivector} $\mathbf{e}_{12} \equiv \mathbf{e}_{1}\mathbf{e}_{2}$.  As the table demonstrates, this set of basis blades is closed under the geometric product.
+
+The \emph{geometric product} $\mathbf{a}\mathbf{b}$ is related to the inner product $\mathbf{a}\cdot\mathbf{b}$ and the exterior product $\mathbf{a}\wedge\mathbf{b}$ by
+
+\[
+\mathbf{a}\mathbf{b} = \mathbf{a}\cdot\mathbf{b}+\mathbf{a}\wedge\mathbf{b} = \mathbf{b}\cdot\mathbf{a}-\mathbf{b}\wedge\mathbf{a} = 2\mathbf{a}\cdot\mathbf{b}-\mathbf{b}\mathbf{a}.
+\]
+
+In the above example, the result of the inner (dot) product is a scalar (grade-0), while the result of the exterior (wedge) product is a \emph{bivector} (grade-2).
+
+\section*{Bibliography}
+\begin{enumerate}
+\item David Hestenes, {\em New Foundations for Classical Mechanics}, Kluwer, Dordrecht, 1999
+\item David Hestenes, Garret Sobczyk, {\em Clifford Algebra to Geometric Calculus}, Kluwer, Dordrecht, 1984
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

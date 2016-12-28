@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCayleyHamiltonTheoremInACommutativeRing}
+\pmcreated{2013-03-22 16:03:16}
+\pmmodified{2013-03-22 16:03:16}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{proof of Cayley-Hamilton theorem in a commutative ring}
+\pmrecord{11}{38106}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A18}
+\pmclassification{msc}{15A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $R$ be a commutative ring with identity and let $A$ be an order $n$ matrix
+with elements from $R[x]$. 
+For example, if $A$ is
+$\begin{pmatrix}
+x^2+2x & 7x^2 \\
+x+1 & 5
+\end{pmatrix}$
+
+then we can also associate with $A$ the following polynomial having matrix coefficents:
+\begin{displaymath}
+A^\sigma = \left[ {0 \atop 1}\quad {0 \atop 5} \right] + \left[{2 \atop 1 } \quad{ 0 \atop 0} \right]x + \left[ {1 \atop 0 } \quad{ 7 \atop 0 } \right]x^2 .
+\end{displaymath}
+
+In this way we have a mapping $A\longrightarrow A^\sigma$ which is an isomorphism of the rings $M_{n}(R[x])$ and $M_{n}(R)[x]$. 
+
+Now let $A \in M_{n}(R)$ and 
+consider the characteristic polynomial of $A$: $p_{A}(x) = \det(xI - A)$, which is a monic
+polynomial of degree $n$ with coefficients in $R$. 
+Using a property of the adjugate matrix we have
+$$(xI-A)\operatorname{adj}(xI-A) = p_{A}(x)I.$$
+Now view this as an equation in $M_{n}(R)[x]$. It says that $xI-A$ is a left factor
+of $p_{A}(x)$. So by the factor theorem, the left hand value of $p_{A}(x)$ 
+at $x=A$ is 0. The coefficients of $p_{A}(x)$ have the form $cI$, for $c\in R$,
+so they commute with $A$. Therefore right and left hand values are the same.
+
+\begin{thebibliography}{9}
+\bibitem{Smiley} Malcom F. Smiley. Algebra of Matrices. Allyn and Bacon, Inc., 1965. Boston, Mass. 
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

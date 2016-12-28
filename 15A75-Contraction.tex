@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Contraction}
+\pmcreated{2013-03-22 13:37:28}
+\pmmodified{2013-03-22 13:37:28}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{contraction}
+\pmrecord{4}{34261}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A75}
+\pmclassification{msc}{58A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+{\bf Definition} Let $\omega$ be a smooth $k$-form on a smooth manifold $M$,
+and let $\xi$ be a smooth vector field on $M$. The \emph{contraction}
+of $\omega$ with $\xi$ is the smooth $(k-1)$-form that maps $x\in M$ to
+$\omega_x(\xi_x, \cdot)$.
+In other words, $\omega$ is
+point-wise evaluated with $\xi$ in the first slot.
+We shall denote this $(k-1)$-form by  $\iota_\xi\omega$.
+If $\omega$ is a $0$-form, we set $\iota_\xi \omega = 0$ for all $\xi$.
+
+{\bf Properties} Let $\omega$ and $\xi$ be as above. Then
+the following properties hold:
+\begin{enumerate}
+\item For any real number $k$
+$$\iota_{k \xi} \omega = k\iota_\xi \omega.$$
+\item For vector fields $\xi$ and $\eta$
+\begin{eqnarray*}
+\iota_{\xi+\eta} \omega &=& \iota_\xi \omega + \iota_\eta \omega, \\
+\iota_{\xi} \iota_\eta \omega &=& -\iota_\eta \iota_\xi \omega, \\
+\iota_{\xi} \iota_\xi \omega &=& 0.
+\end{eqnarray*}
+\item Contraction is an anti-derivation \cite{frankel}. If
+$\omega^1$ is a $p$-form, and $\omega^2$ is a $q$-form, then
+$$ \iota_\xi \big(\omega^1\wedge \omega^2\big) = (\iota_\xi \omega^1) \wedge \omega^2 + (-1)^p\ \omega^1\wedge (\iota_\xi \omega^2).$$
+ \end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem {frankel} T. Frankel,
+        \emph{Geometry of physics},
+        Cambridge University press,
+        1997.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

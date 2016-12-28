@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FarkasLemma}
+\pmcreated{2013-03-22 13:47:37}
+\pmmodified{2013-03-22 13:47:37}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Farkas lemma}
+\pmrecord{11}{34508}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A39}
+\pmsynonym{Farkas theorem}{FarkasLemma}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Given an $m\times n$ matrix $A$ and an $1\times n$ real row vector $c$, both with real coefficients, one and only one of the following systems has a solution:
+\begin{enumerate}
+\item $Ax\leq 0$ and $cx > 0$ for some $n$-column vector $x$;
+\item $wA = c$ and $w\geq 0$ for some $m$-row vector $w$.
+\end{enumerate}
+Equivalently, one and only one of the following has a solution:
+\begin{enumerate}
+\item $Ax\leq 0$, $x\leq 0$ and $cx>0$ for some $n$-column vector $x$;
+\item $wA\leq c$ and $w\geq 0$ for some $m$-row vector $w$.
+\end{enumerate}
+
+\textbf{Remark.} Here, $Ax\geq 0$ means that every \PMlinkescapetext{component} of $Ax$ is nonnegative, and similarly with the other expressions.
+%%%%%
+%%%%%
+\end{document}

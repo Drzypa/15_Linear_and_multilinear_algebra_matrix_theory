@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FrobeniusMethod}
+\pmcreated{2013-03-22 17:43:49}
+\pmmodified{2013-03-22 17:43:49}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Frobenius method}
+\pmrecord{18}{40179}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A06}
+\pmclassification{msc}{34A05}
+\pmsynonym{method of Frobenius}{FrobeniusMethod}
+%\pmkeywords{Frobenius' method}
+%\pmkeywords{series solution}
+\pmrelated{FuchsianSingularity}
+\pmrelated{BesselsEquation}
+\pmrelated{SpecialCasesOfHypergeometricFunction}
+\pmdefines{indicial equation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let us consider the linear homogeneous differential equation
+$$\sum_{\nu=0}^n k_\nu(x) y^{(n-\nu)}(x) \;=\; 0$$
+of \PMlinkname{order}{DifferentialEquation} $n$.\, If the coefficient functions $k_\nu(x)$ are continuous and the coefficient $k_0(x)$ of the highest \PMlinkname{order derivative}{HigherOrderDerivatives} does not vanish on a certain interval (resp. a \PMlinkname{domain}{Domain2} in $\mathbb{C}$), then all solutions $y(x)$ are continuous on this interval (resp. \PMlinkescapetext{domain}).\, If all coefficients have the continuous derivatives up to a certain \PMlinkescapetext{order}, the same concerns the solutions.
+
+If, instead, $k_0(x)$ vanishes in a point $x_0$, this point is in general a singular point.\, After dividing the differential equation by $k_0(x)$ and then getting the form
+$$y^{(n)}(x)+\sum_{\nu=1}^n c_\nu(x)y^{(n-\nu)}(x) \;=\; 0,$$
+some new coefficients $c_\nu(x)$ are discontinuous in the singular point.\, However, if the discontinuity is \PMlinkescapetext{restricted} so, that the products
+$$(x-x_0)c_1(x),\quad (x-x_0)^2c_2(x),\quad \ldots,\quad (x-x_0)^nc_n(x)$$
+are continuous, and \PMlinkescapetext{even} analytic in $x_0$, the point $x_0$ is a regular singular point of the differential equation.\\
+
+We introduce the so-called\, {\em Frobenius method}\, for finding solution functions in a neighbourhood of the regular singular point $x_0$, confining us to the case of a \PMlinkname{second order}{DifferentialEquation} differential equation.\, When we use the \PMlinkname{quotient}{Division} forms
+$$(x-x_0)c_1(x) \;:=\; \frac{p(x)}{r(x)},\quad (x-x_0)^2c_2(x) \;:\;= \frac{q(x)}{r(x)},$$
+where $r(x)$, $p(x)$ and $q(x)$ are analytic in a neighbourhood of $x_0$ and\, $r(x) \neq 0$,\, our differential equation reads
+\begin{align}
+(x-x_0)^2r(x)y''(x)+(x-x_0)p(x)y'(x)+q(x)y(x) \;=\; 0.
+\end{align}
+Since a \PMlinkescapetext{simple} change\, $x\!-\!x_0\mapsto x$\, of variable brings to the case that the singular point is the origin, we may suppose such a starting situation.\, Thus we can study the equation
+\begin{align}
+x^2r(x)y''(x)+xp(x)y'(x)+q(x)y(x) \;=\; 0,
+\end{align}
+where the coefficients have the converging power series expansions
+\begin{align}
+r(x) \;=\; \sum_{n=0}^\infty r_nx^n,\quad p(x) \;=\; \sum_{n=0}^\infty p_nx^n,\quad q(x) \;=\; \sum_{n=0}^\infty q_nx^n
+\end{align}
+and
+$$r_0 \;\neq\; 0.$$
+In the Frobenius method one examines whether the equation (2) allows a series solution of the form
+\begin{align}
+y(x) \;=\; x^s\sum_{n=0}^\infty a_nx^n \;=\; a_0x^s+a_1x^{s+1}+a_2x^{s+2}+\ldots,
+\end{align}
+where $s$ is a constant and\, $a_0 \neq 0$.
+
+Substituting (3) and (4) to the differential equation (2) converts the left hand \PMlinkescapetext{side} to
+\begin{align*}
+& [r_0s(s\!-\!1)\!+\!p_0s\!+\!q_0]a_0x^s+\\
+& [[r_0(s\!+\!1)s\!+\!p_0(s\!+\!1)\!+\!q_0]a_1\!+\![r_1s(s\!-\!1)\!+\!p_1s\!+\!q_1]a_0]x^{s+1}+\\
+& [[r_0(s\!+\!2)(s\!+\!1)\!+\!p_0(s\!+\!2)\!+\!q_0]a_2\!+\![r_1(s\!+\!1)s\!+\!p_1(s\!+\!1)\!+\!q_1]a_1\!+\![r_2s(s\!-\!1)\!+\!p_2s\!+\!q_2]a_0]x^{s+2}\!+\ldots
+\end{align*}
+Our equation seems clearer when using the notations\, $f_\nu(s) := r_\nu{s}(s\!-\!1)+p_\nu{s}+q_nu$:
+\begin{align}
+f_0(s)a_0x^s+[f_0(s\!+\!1)a_1+f_1(s)a_0]x^{s+1}+[f_0(s\!+\!2)a_2+f_1(s\!+\!1)a_1+f_2(s)a_0]x^{s+2}+\ldots \;=\; 0
+\end{align}
+Thus the condition of satisfying the differential equation by (4) is the infinite system of equations
+\begin{align}
+\begin{cases}
+f_0(s)a_0 \;=\; 0\\
+f_0(s\!+\!1)a_1+f_1(s)a_0 \;=\; 0\\
+f_0(s\!+\!2)a_2+f_1(s\!+\!1)a_1+f_2(s)a_0 \;=\; 0\\
+\qquad\cdots\qquad\cdots\qquad\cdots
+\end{cases}
+\end{align}
+In the first \PMlinkescapetext{place}, since\, $a_0 \neq 0$,\, the {\em indicial equation}
+\begin{align}
+f_0(s) \equiv r_0s^2+(p_0-r_0)s+q_0 \;=\; 0
+\end{align}
+must be satisfied.\, Because\, $r_0 \neq 0$,\, this quadratic equation determines for $s$ two values, which in special case may coincide.
+
+The first of the equations (6) leaves $a_0\,(\neq 0)$ arbitrary.\, The next linear equations in $a_n$ allow to solve successively the constants $a_1,\,a_2,\,\ldots$ provided that the first coefficients $f_0(s\!+\!1)$,\, $f_0(s\!+\!2),$\,$\ldots$ do not vanish; this is evidently the case when the \PMlinkname{roots}{Equation} of the indicial equation don't differ by an integer (e.g. when the \PMlinkescapetext{roots} are complex conjugates or when $s$ is the \PMlinkescapetext{root} having greater real part).\, In any case, one obtains at least for one of the \PMlinkescapetext{roots} of the indicial equation the definite values of the coefficients $a_n$ in the series (4).\, It is not hard to show that then this series converges in a neighbourhood of the origin.
+
+For obtaining the \PMlinkescapetext{complete} solution of the differential equation (2) it suffices to have only one solution $y_1(x)$ of the form (4), because another solution $y_2(x)$, linearly independent on $y_1(x)$, is gotten via mere integrations; then it is possible in the cases\, $s_1\!-\!s_2 \in\mathbb{Z}$\, that $y_2(x)$ has no expansion of the form (4).
+
+\begin{thebibliography}{9}
+\bibitem{LP}{\sc Pentti Laasonen:} {\em Matemaattisia erikoisfunktioita}.\, Handout No. 261. Teknillisen Korkeakoulun Ylioppilaskunta; Otaniemi, Finland (1969).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

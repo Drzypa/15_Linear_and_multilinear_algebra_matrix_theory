@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CyclicDecompositionTheorem}
+\pmcreated{2013-03-22 14:05:10}
+\pmmodified{2013-03-22 14:05:10}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{cyclic decomposition theorem}
+\pmrecord{16}{35449}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+\pmsynonym{T-admissible}{CyclicDecompositionTheorem}
+\pmsynonym{$T$-admissible}{CyclicDecompositionTheorem}
+\pmrelated{CyclicSubspace}
+\pmdefines{admissible subspace}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $k$ be a field, $V$ a finite dimensional vector space over $k$ and $T$ a linear operator over $V$.  Call a subspace $W\subseteq V$ \emph{$T$-admissible} if $W$ is $T$-invariant and for any polynomial $f(X)\in k[X]$ with $f(T)(v)\in W$ for $v\in V$, there is a $w\in W$ such that $f(T)(v)=f(T)(w)$.  
+
+Let $W_0$ be a proper $T$-admissible subspace of $V$. There are non zero vectors $x_1,...,x_r$ in $V$ with respective annihilator polynomials $p_1,...,p_r$ such that
+\begin{enumerate}
+\item $V=W_0\oplus Z(x_1,T)\oplus \cdots \oplus Z(x_r,T)$ (See the cyclic subspace definition)
+\item $p_k$ divides $p_{k-1}$ for every $k=2,...,r$
+\end{enumerate}
+Moreover, the integer $r$ and the \PMlinkname{minimal polynomials}{MinimalPolynomialEndomorphism} $p_1,...,p_r$ are uniquely determined by (1),(2) and the fact that none of $x_k$ is zero.
+
+This is ``one of the deepest results in linear algebra'' (Hoffman \& Kunze)
+%%%%%
+%%%%%
+\end{document}

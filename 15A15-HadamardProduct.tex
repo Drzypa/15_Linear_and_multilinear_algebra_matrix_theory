@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HadamardProduct}
+\pmcreated{2013-03-22 14:15:28}
+\pmmodified{2013-03-22 14:15:28}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{Hadamard product}
+\pmrecord{8}{35706}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+\pmdefines{Oppenheim inequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+{\bf Definition}
+Suppose $A=(a_{ij})$ and $B=(b_{ij})$ are two $n\times m$-matrices
+with entries in some field. Then their \emph{Hadamard product} is
+the entry-wise product of $A$ and $B$, that is, 
+the $n\times m$-matrix $A\circ B$ whose $(i,j)$th entry is $a_{ij} b_{ij}$.
+
+\subsubsection*{Properties}
+Suppose $A,B,C$ are matrices of the same size and $\lambda$
+is a scalar. Then
+\begin{eqnarray*}
+A\circ B &=& B\circ A, \\
+A\circ (B+C) &=& A\circ B + A\circ C, \\
+A\circ (\lambda B) &=& \lambda (A\circ B),
+\end{eqnarray*}
+
+\begin{itemize}
+\item If $A,B$ are diagonal matrices, then $A\circ B=AB$. 
+\item (\emph{Oppenheim inequality}) \cite{prasolov}: If $A,B$ are positive definite matrices, and
+$(a_{ii})$ are the diagonal entries of $A$, then
+$$\det A\circ B \ge \det B\,\prod{a_{ii}}$$
+with equality if and only if $A$ is a diagonal matrix.
+\end{itemize}
+
+\subsubsection*{Remark}
+There is also a Hadamard product for two power series: Then the
+Hadamard product of $\sum_{i=1}^\infty a_i$ and $\sum_{i=1}^\infty b_i$ is
+$\sum_{i=1}^\infty a_i b_i$. 
+
+\begin{thebibliography}{9}
+\bibitem{horn} R. A. Horn, C. R. Johnson,
+  \emph{Topics in Matrix Analysis},
+  Cambridge University Press, 1994.
+\bibitem{prasolov} V.V. Prasolov,
+ \emph{Problems and Theorems in Linear Algebra},
+ American Mathematical Society, 1994.
+\bibitem{mond}  B. Mond, J. E. Pecaric,
+ \emph{Inequalities for the Hadamard product of matrices},
+ SIAM Journal on Matrix Analysis and Applications,
+ Vol. 19, Nr. 1, pp. 66-70.
+\PMlinkexternal{(link)}{http://epubs.siam.org/sam-bin/dbq/article/30295}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

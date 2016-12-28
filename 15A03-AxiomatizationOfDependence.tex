@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AxiomatizationOfDependence}
+\pmcreated{2013-03-22 16:27:46}
+\pmmodified{2013-03-22 16:27:46}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{axiomatization of dependence}
+\pmrecord{8}{38621}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmrelated{DependenceRelation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{axiom}{Axiom}
+\begin{document}
+As noted by van der Waerden, it is possible to define the notion of dependence axiomatically in such a way that one can deal with linear dependence, algebraic dependence, and other sorts of dependence via a general theory.  In this general theoretical framework, one can prove results about bases, dimension, and the like.
+
+Let $S$ be a set.  The basic object of this theory is a relation $D$ between $S$ and the power set of $S$.  This relation satisfies the following three axioms:
+
+\begin{axiom} 
+If $Y$ is a subset of $S$ and $x \in Y$, then $D(x,Y)$.
+\end{axiom}
+
+\begin{axiom}
+If, for some set $X \subseteq S$ and some $y,z \in S$, it happens that $D(y,X \cup \{z\})$ but not $D(y,X)$, then $D(z, X \cup \{y\})$.
+\end{axiom}
+
+\begin{axiom}
+If,  for some sets $Y,Z \subseteq S$ and some $x \in S$, it happens that $D(x,Y)$ and, for every $y \in Y$, it is the case that $D(y,Z)$, then $D(x,Z)$.
+\end{axiom}
+%%%%%
+%%%%%
+\end{document}

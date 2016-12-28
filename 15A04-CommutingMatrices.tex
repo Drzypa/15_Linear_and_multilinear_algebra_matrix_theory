@@ -1,0 +1,193 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CommutingMatrices}
+\pmcreated{2013-03-22 15:54:12}
+\pmmodified{2013-03-22 15:54:12}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{commuting matrices}
+\pmrecord{20}{37906}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+%\pmkeywords{diagonalizable}
+%\pmkeywords{triangularizable}
+\pmrelated{SimultaneousTriangularisationOfCommutingMatricesOverAnyField2}
+\pmrelated{CommonEigenvectorOfADiagonalElementCrossSection}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+We consider the properties of commuting matrices and linear transformations over a vector space $V$.  
+Two linear transformations $\varphi_i:V\rightarrow V$, $i=1,2$ are said to commute if for every $v\in V$, $$\varphi_1(\varphi_2(v))=\varphi_2(\varphi_1(v)).$$  If $V$ has finite dimension $n$ and we fix a basis of $V$ then we may represent the linear transformations as $n\times n$ matrices $A_i$ and here the condition of commuting linear transformations is equivalent to testing if their corresponding matrices commute: $$A_1 A_2=A_2 A_1.$$  Simultaneous triangularisation of commuting matrices over any field can be achieved but may require an extension of the field.  The reason begins to be apparent from the study of eigenvalues.
+
+\begin{remark}
+Because the implication of commuting matrices is best expressed through eigenvectors, we prefer the treatment of linear transformations for the \PMlinkescapetext{moment}.
+\end{remark}
+
+Recall a linear transformation $f:V\rightarrow V$ is said to leave a subspace $E\leq V$ \emph{invariant} if $f(E)\leq E$.  
+
+\begin{prop}
+If $\{\varphi\}_{i\in I}$ are commuting linear transformations and $E$ is
+an eigenspace of $\varphi_{i_0}$ for some $i_0\in I$, then for all $i\in I$,
+$\varphi_i(E)\leq E$.
+\end{prop}
+\begin{proof}
+Let $\lambda$ be the eigenvalue of $\varphi_{i_0}$ on $E$.  Take any $i\in I$
+and $v\in E$.  Then
+\[\varphi_{i_0}(\varphi_i(v))=\varphi_i(\varphi_{i_0}(v))=\varphi_i(\lambda v)
+=\lambda \varphi_i(v).\]
+Therefore $\varphi_i(v)\in E$ as $E$ is the $\lambda$ eigenspace of $\varphi_{i_0}$.  In particular, $\varphi_i(E)\leq E$.
+\end{proof}
+
+We have just shown that commuting linear transformations preserve each other's eigenspaces.  This property does not depend on a finite dimension for $V$ or a finite set of commuting transformations.  However, to characterize commuting linear transformations further will require that $V$ have finite dimension.
+
+\begin{prop}
+Let $V$ be a finite dimensional vector space and let 
+$\{\varphi\}_{i\in I}$ be a family of commuting diagonalizable
+linear transformations from $V$ to $V$.  Then $\varphi_i$
+can be simultaneously diagonalized.
+\end{prop}
+
+\begin{proof}
+If a finite dimensional linear transformation is diagonalizable
+over its field then it has all its eigenvalues in the field 
+(under some basis the matrix is diagonal and the eigenvalues
+are simply those elements on the diagonal.)  
+
+If all the eigenvalues of a linear transformation are the same then
+the associated diagonal matrix is scalar.  If all $\varphi_i$
+are scalar then they are simultaneously diagonalized.
+
+Now presume that each $\varphi_i$ is
+not a scalar transformation.  Hence there are at least two distinct eigenspaces. It follows each eigenspace of $\varphi_i$ has dimension 
+less than that of $V$.
+
+Now we set up an induction on the dimension of $V$.  When the 
+dimension of $V$ is 1, all linear transformations are scalar.  
+Now suppose that for all vector spaces of dimension $n$, any commuting 
+diagonalizable linear transformations can be simultaneously 
+diagonalized.  Then in the case where $\dim V=n+1$, either all the
+linear transformations are scalar and so simultaneously 
+diagonalized, or at least one is not scalar in which case its eigenspaces
+are proper subspaces.  Since the maps commute they respect each others eigenspaces.  So we restrict the maps to any eigenspace
+and by induction simultaneously diagonalize on  this subspace.
+As the linear transformations are diagonalizable, the sum of the eigenspaces of any $\varphi_i$ is $V$ so this process simultaneously diagonalizes each of the
+$\varphi_i$.
+\end{proof}
+
+Of course it is possible to have commuting matrices which are not diagonalizable.  At the other extreme are unipotent matrices, that is, matrices with all eigenvalues 1.  Aside from the identity matrix, unipotent matrices are never diagonal.  Yet they often commute.  But here the generalized eigenspaces substitute for the usual eigenspaces.
+
+It is generally not true that two unipotent matrices commute, even if they share the same eigenspace.  For example, the set of unitriangular matrices forms a nilpotent group which is abelian only for $2\times 2$-matrices.
+
+However, if we consider unipotent matrices of the form
+\[\begin{bmatrix} I_k & * \\ 0 & I_j\end{bmatrix}\]
+we find these to correspond to $k\times j$ matrices under addition.  Thus this large family of unipotent matrices do commute.
+%%%%%
+%%%%%
+\end{document}

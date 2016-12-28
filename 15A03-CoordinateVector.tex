@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CoordinateVector}
+\pmcreated{2013-03-22 19:02:16}
+\pmmodified{2013-03-22 19:02:16}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{coordinate vector}
+\pmrecord{6}{41914}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmrelated{ListVector}
+\pmdefines{coordinates}
+\pmdefines{components}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $V$ be a vector space of dimension $n$ over a field $K$.\, If\, $(b_1,\,\ldots,\,b_n)$\, is a basis of $V$, then any element $v$ of $V$ can be uniquely expressed in the form
+$$v \;=\; \xi_1b_1\!+\ldots+\!\xi_nb_n$$
+with\, $\xi_1,\,\ldots,\,\xi_n \in K$.\, The \PMlinkname{$n$-tuplet}{OrderedTuplet} \,$(\xi_1,\,\ldots,\,\xi_n)$\ is called the \emph{coordinate vector} of $v$ with respect to the basis in question.\, The scalars $\xi_i$ are the \emph{coordinates} (or the \emph{components} of $v$).
+
+It's evident that the correspondence
+$$v \;\mapsto\; (\xi_1,\,\ldots,\,\xi_n)$$
+provides a linear isomorphism between the vector space $V$ and the vector space formed by the Cartesian product $K^n$.
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,139 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BasicTensor}
+\pmcreated{2013-03-22 12:40:37}
+\pmmodified{2013-03-22 12:40:37}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{basic tensor}
+\pmrecord{7}{32953}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A69}
+\pmsynonym{characteristic array}{BasicTensor}
+\pmrelated{TensorArray}
+\pmrelated{Basis}
+\pmrelated{Frame}
+\pmrelated{SimpleTensor}
+
+\newcommand{\kfield}{\mathbb{K}}
+\newcommand{\rT}{\mathrm{T}}
+\newcommand{\tspace}[1]{\rT^{#1}}
+\newcommand{\ca}{\varepsilon}
+\newcommand{\ud}[2]{^{#1}_{\!\hphantom{#1}#2}}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{\PMlinkescapetext{{#1}}}
+\newcommand{\pln}[2]{\PMlinkname{#1}{#2}}
+\begin{document}
+The present entry employs the terminology and notation defined and
+described in the entry on tensor arrays.  To keep things reasonably
+self-contained we mention that the symbol $\tspace{p,q}$ refers to the
+vector space of type $(p,q)$ tensor arrays, i.e. maps $$I^p\times I^q\rightarrow \kfield,$$ where $I$ is some finite list of
+index labels, and where $\kfield$ is a field.  
+
+We say that a tensor array is a {\em characteristic array}, a.k.a. a
+{\em basic tensor}, if all but one of its values are $0$, and the
+remaining non-zero value is equal to $1$.  For tuples $A\in I^p$ and
+$B\in I^q$, we let
+$$\ca^B_A:I^p\times I^q\rightarrow\kfield,$$
+denote the characteristic
+array defined by
+$$(\ca^B_A)^{i_1\ldots i_p}_{j_1\ldots j_q} = 
+\left\{ 
+  \begin{array}{rl}
+    1 & \mbox{ if $(i_1,\ldots,i_p) = A$ and $(j_1,\ldots, j_p)=B$},\\
+    0 & \mbox{ otherwise.}
+  \end{array}
+  \right.
+$$
+The type $(p,q)$ characteristic arrays form a natural basis for
+$\tspace{p,q}$.  
+
+Furthermore the outer multiplication of two characteristic arrays
+gives a characteristic array of larger valence.  In other words, for
+$$
+A_1\in I^{p_1},\;
+B_1\in I^{q_1},\;
+A_2\in I^{p_2},\;
+B_2\in I^{q_2},
+$$
+we have that
+$$\ca^{B_1}_{A_1} \ca^{B_2}_{A_2} = \ca^{B_1 B_2}_{A_1 A_2},$$
+where
+the product on the left-hand side is performed by outer
+multiplication, and where $A_1 A_2$ on the right-hand side refers to
+the element of $I^{p_1+p_2}$ obtained by concatenating the tuples
+$A_1$ and $A_2$, and similarly for $B_1 B_2$.
+
+In this way we see that the type $(1,0)$ characteristic arrays
+$\ca_{(i)},\; i\in I$ (the natural basis of $\kfield^I$), and the type
+$(0,1)$ characteristic arrays $\ca^{(i)},\; i\in I$ (the natural basis of
+$\lp\kfield^I\rp^*$) generate the tensor array algebra relative to the
+outer multiplication operation.  
+
+The just-mentioned fact gives us an alternate way of writing and
+thinking about tensor arrays.  We introduce the basic symbols
+$$\ca_{(i)},\; \ca^{(i)} ,\quad i\in I$$
+subject to the commutation relations
+$$\ca_{(i)} \ca^{(i')} = \ca^{(i')}\ca_{(i)} ,\quad i, i'\in I,$$
+ add and multiply these symbols using coefficients in
+$\kfield$, and use
+$$\ca^{(i_1 \ldots i_q)}_{(j_1 \ldots j_p)},\quad
+i_1,\ldots,i_q,j_1,\ldots,j_p\in I$$ 
+as a handy abbreviation for
+$$\ca^{(i_1)} \ldots \ca^{(i_q)} \ca_{(j_1)} \ldots \ca_{(j_p)}.$$
+We
+then interpret the resulting expressions as tensor arrays in the
+obvious fashion: the values of the tensor array are just the
+coefficients of the $\ca$ symbol matching the given index.  However,
+note that in the $\ca$ symbols, the covariant data is written as a
+superscript, and the contravariant data as a subscript.  This is done
+to facilitate the Einstein summation convention.
+
+By way of illustration, suppose that $I=(1,2)$.  We can now write down
+a type $(1,0)$ tensor, i.e. a column vector
+$$u=
+\begin{pmatrix}
+  u^1 \\ u^2
+\end{pmatrix}\in \tspace{1,0}
+$$
+as
+$$u = u^1 \ca_{(1)} + u^2 \ca_{(2)}.$$
+Similarly, a row-vector
+$$\phi = (\phi_1,\phi_2) \in \tspace{0,1}$$
+can be written down as
+$$\phi = \phi_1 \ca^{(1)} + \phi_2 \ca^{(2)}.$$
+In the case of a matrix
+$$
+M = 
+\begin{pmatrix}
+  M\ud{1}{1} & M\ud{2}{1} \\
+  M\ud{1}{2} & M\ud{2}{2}
+\end{pmatrix}\in \tspace{1,1}
+$$
+we would write
+$$ M = 
+M\ud{1}{1}\, \ca^{(1)}_{(1)}+
+M\ud{1}{2}\, \ca^{(2)}_{(1)}+
+M\ud{2}{1}\, \ca^{(1)}_{(2)}+
+M\ud{2}{2}\, \ca^{(2)}_{(2)}.
+$$
+%%%%%
+%%%%%
+\end{document}

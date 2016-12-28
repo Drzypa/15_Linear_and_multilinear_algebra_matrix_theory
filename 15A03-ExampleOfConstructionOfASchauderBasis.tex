@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfConstructionOfASchauderBasis}
+\pmcreated{2013-03-22 17:49:18}
+\pmmodified{2013-03-22 17:49:18}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{example of construction of a Schauder basis}
+\pmrecord{5}{40285}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmclassification{msc}{42-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\begin{document}
+Consider an uniformly continuous function $f:[0,1]\rightarrow\mathbb{R}$. A Schauder basis $\{f_n(x)\}_0^\infty\in C[0,1]$ is constructed. For this purpose we set $f_0(x)=1$, $f_1(x)=x$. Let us consider the sequence of semi-open intervals in $[0,1]$
+\begin{equation*}
+I_n=[2^{-k}(2n-2),2^{-k}(2n-1)), \qquad J_n=[2^{-k}(2n-1),2^{-k}2n),
+\end{equation*}
+where $2^{k-1}<n\leq 2^k$, $k\geq 1$. Define now
+\begin{eqnarray*}
+f_n(x) &=& \left\{\begin{array}{ll}
+2^k[x-(2^{-k}(2n-2)-1)] & \text{if}\,\, x\in I_n, \\
+1-2^k[x-(2^{-k}(2n-1)-1)] & \text{if}\,\, x\in J_n, \\
+0 & \text{otherwise.}
+\end{array} \right.
+\end{eqnarray*}
+Geometrically these functions form a sequence of triangular functions of height {\em one} and width $2^{-(k-1)}$, sweeping $[0,1]$. So that if $f\in C([0,1])$, it is expressible in Fourier series $f(x)\sim \sum_{n=0}^\infty c_nf_n(x)$ and computing the coefficients $c_n$ by equating the values of $f(x)$ and the series at the points $x=2^{-k}m$, $m=0,1,\ldots,2^k$. The resulting series converges uniformly to $f(x)$ by the imposed premise.
+
+%%%%%
+%%%%%
+\end{document}

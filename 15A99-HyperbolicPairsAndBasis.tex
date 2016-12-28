@@ -1,0 +1,236 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HyperbolicPairsAndBasis}
+\pmcreated{2013-03-22 15:50:59}
+\pmmodified{2013-03-22 15:50:59}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{hyperbolic pairs and basis}
+\pmrecord{13}{37833}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A99}
+\pmclassification{msc}{15A63}
+\pmsynonym{symplectic pair}{HyperbolicPairsAndBasis}
+\pmdefines{hyperbolic pair}
+\pmdefines{hyperbolic basis}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+\begin{document}
+\begin{defn}
+Given a reflexive non-degenerate sesquilinear form $b:V\times V\rightarrow k$,
+a \emph{hyperbolic pair} is a pair $e,f\in V$ such that 
+\[b(e,e)=0=b(f,f)\textnormal{ and } b(e,f)=1.\]
+\end{defn}
+
+The span of a hyperbolic pair is a hyperbolic line (recall that a line refers to the projective dimension thus we have a 2-dimensional subspace but a 1-dimensional projective space).
+
+\begin{defn}
+A \emph{hyperbolic basis} for a vector space $V$ with respect to a reflexive 
+non-degenerate sesquilinear form $b$ is a basis
+$\{e_1,f_1,\dots,e_m,f_m\}$ where 
+\[b(e_i,e_j)=0=b(f_i,f_j)\textnormal{ and } b(e_i,f_j)=\delta_{ij}.\]
+\end{defn}
+
+Thus a hyperbolic basis is a basis composed of hyperbolic pairs.  Furthermore,
+if $V$ has a hyperbolic basis then setting $H_i=\langle e_i,f_i\rangle$ shows
+\[V=H_1\perp H_2\perp\cdots \perp H_m\]
+where $X\perp Y=X\oplus Y$ with the added condition $b(X,Y)=0$.
+
+Hyperbolic bases are the foundation of a ``standard basis'' for a vector spaces $V$ equipped with a reflexive non-degenerate sesquilinear form.
+
+\section{Symmetric pairs}
+
+A symmetric hyperbolic pair is a hyperbolic pair $e,f$ for which $b$ restricted to $L=\langle e,f\rangle$ is a symmetric bilinear form.  This requires the additional condition that $b(e,f)=1=b(f,e)$.
+
+This means that the form restricted the \emph{hyperbolic line} $L=\langle e,f\rangle$ can be represented by the matrix
+\[\begin{bmatrix} 0 & 1\\ 1 & 0\end{bmatrix}.\]
+When $1/2\in k$ we can consider the associated quadratic form
+\[q(v)=\frac{1}{2}b(v,v)\]
+so if $v=x e+y f$ we arrive at the polynomial 
+\[q(xe+yf)=\frac{1}{2}\left([x, y]\begin{bmatrix} 0 & 1\\ 1 & 0\end{bmatrix}\begin{bmatrix} x\\ y\end{bmatrix}\right)=x y.\]
+
+Suppose the field is $\mathbb{R}$.  Then we can associate a graph to the
+equations $c=q(xe+yf)=xy$ for any fixed $c\in \mathbb{R}$.  If $c=0$ then
+$x=0$ or $y=0$ so the graph is the $x$ and $y$-axis -- also called the
+degenerate hyperbola.  If $c\neq 0$ then $x\neq 0$ and so $y=\frac{c}{x}$.
+This is the graph of a a hyperbola, hence the title of a hyperbolic pair.
+
+Symmetric bilinear maps are often preferred to be presented as diagonal
+matrices so that they reflect the content of Sylvester's Law of Inertia.
+When $1/2\in k$ (characteristic of $k$ is not 2) we can 
+diagonalize any symmetric hyperbolic pair as follows:
+\[\begin{bmatrix} \frac{1}{2} & 1 \\ -\frac{1}{2} & 1\end{bmatrix}
+\begin{bmatrix} 0 & 1\\ 1 & 0 \end{bmatrix}
+\begin{bmatrix} \frac{1}{2} & -\frac{1}{2}\\ 1 & 1\end{bmatrix}
+=\begin{bmatrix} 1 & 0\\ 0 & -1\end{bmatrix}.\]
+That is, we can change the basis to
+\[e\mapsto u:=\frac{1}{2}e+f,\qquad f\mapsto v:=-\frac{1}{2}e+f.\]
+Then $b(u,u)=1$, $b(v,v)=-1$, and $b(u,v)=b(v,u)=0$.  Alternatively we find 
+under this basis we have the quadratic form $q(xu+yv)=x^2-y^2$ which is also
+seen as the standard equation of a hyperbola.
+
+If we think of a quadratic form as generalizing norms -- that is length, then
+we are observing that on a hyperbolic line length is not Euclidean, in fact, 
+as the usual Euclidean length of $(x,y)$, $x^2+y^2$, gets large, the associated hyperbolic length get small: $x^2-y^2$ may get small, even 0 or negative.  Thus the curvature of this space is negative (consider the graph of $z=x^2-y^2$ which is a saddle.)
+
+All symmetric hyperbolic pairs are isometric so decomposing a bilinear form into
+the radical plus hyperbolic pairs plus any left over anisotropic complement produces 
+a standard basis which allows for easy comparison of one symmetric bilinear form to another.
+
+\section{Alternating pairs}
+
+An alternating hyperbolic pair is a hyperbolic pair $e,f$ for which $b$ restricted 
+to $L=\langle e,f\rangle$ is an alternating bilinear form.  This requires the 
+additional condition that $b(e,f)=1=-b(f,e)$.
+
+This means that the form restricted the hyperbolic line $L=\langle e,f\rangle$ 
+can be represented by the matrix
+\[\begin{bmatrix} 0 & 1\\ -1 & 0\end{bmatrix}.\]
+Although we do not associate a quadratic form with an alternating bilinear
+(since $b(v,v)=0$ for all $v\in V$) we can still derive the equations of
+a hyperbola.  Specifically
+\[b(xe,yf)=xy.\]
+So again setting $c=b(xe,yf)=xy$ we observe the various hyperbola graphs.
+
+Alternating hyperbolic pairs cannot be diagonalized as every element 
+$v\in V$ has $b(v,v)=0$.
+
+All alternating bilinear forms decompose into hyperbolic lines and the radical and 
+any two alternating hyperbolic lines are isometric and thus simply indicating the number 
+of hyperbolic pairs in an alternating bilinear form specifies the form uniquely.  If we 
+further insist the form is non-degenerate then the dimension of the vector space
+specifies the form completely.
+
+\section{Hermitian pairs}
+
+A \emph{\PMlinkescapetext{Hermitian hyperbolic pair}} is a hyperbolic pair $e,f$ for which $b$ restricted to 
+$L=\langle e,f\rangle$ is an Hermitian bilinear form.  This requires the 
+additional condition that $b(e,f)=1=b(f,e)$.  The associated matrix does not reveal
+ much difference from the symmetric as we still obtain
+\[\begin{bmatrix} 0 & 1\\ 1 & 0\end{bmatrix}.\]
+What is different is how the matrix is used to compute the bilinear products:
+\[b(x_1e+y_1 f,x_2 e+y_2 f)=
+[x_1,y_1]\begin{bmatrix} 0 & 1\\ 1 & 0\end{bmatrix}
+\begin{bmatrix} \bar{x_2}\\ \bar{y_2}\end{bmatrix}.\]
+So if we compute $b(v,v)$ we find:
+\[b(xe+y f,x e+y f)=
+[x,y]\begin{bmatrix} 0 & 1\\ 1 & 0\end{bmatrix}
+\begin{bmatrix} \bar{x}\\ \bar{y}\end{bmatrix}
+=x\bar{y}+y\bar{x}=(x\bar{y})+\overline{(x\bar{y})}.\]
+We see from this that two hyperbolic pairs of Hermitian type need not be isometric 
+unless we further consider the automorphism of the two forms.
+
+
+\section{Characteristic 2}
+
+Hyperbolic pairs over fields of characteristic 2 are a special breed because they 
+are at the same time symmetric and alternating.  That is, the form
+is the matrix:
+\[\begin{bmatrix} 0 & 1\\ 1 & 0\end{bmatrix}=\begin{bmatrix} 0 & 1 \\ -1 & 0
+\end{bmatrix}.\]
+Thus the form cannot be diagonalized as it is alternating.  Here it is generally 
+more useful to use a quadratic form then the bilinear form.  Unfortunately
+because we cannot recover the quadratic form from the bilinear form
+on account that $b(v,v)=0$, such a quadratic form must be provided externally
+from some other method.  Thus it is not always feasible.
+
+%%%%%
+%%%%%
+\end{document}

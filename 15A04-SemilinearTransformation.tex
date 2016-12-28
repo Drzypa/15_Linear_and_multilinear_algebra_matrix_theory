@@ -1,0 +1,222 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SemilinearTransformation}
+\pmcreated{2013-03-22 15:51:06}
+\pmmodified{2013-03-22 15:51:06}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{semilinear transformation}
+\pmrecord{20}{37835}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+\pmsynonym{semilinear map}{SemilinearTransformation}
+\pmsynonym{semilinear transform}{SemilinearTransformation}
+\pmsynonym{semi-linear transformation}{SemilinearTransformation}
+\pmsynonym{semi-linear map}{SemilinearTransformation}
+%\pmkeywords{field automorphism}
+%\pmkeywords{linear}
+%\pmkeywords{Gamma L}
+\pmrelated{ClassicalGroups}
+\pmrelated{ProjectiveSpace}
+\pmdefines{semilinear transform}
+\pmdefines{Gamma L}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+\begin{document}
+Let $K$ be a field and $k$ its prime subfield.  For example, if $K$ is $\mathbb{C}$ then $k$ is $\mathbb{Q}$, and if $K$ is the finite field of order $q=p^i$, then $k$ is $\mathbb{Z}_p$.
+
+\begin{defn}
+Given a field automorphism $\theta$ of $K$, a function
+$f:V\rightarrow W$ between two $K$ vector spaces $V$ and $W$ is 
+$\theta$-semilinear, or simply semilinear, if for all $x,y\in V$ and $l\in K$ 
+it follows:  (shown here first in left hand notation and then in the preferred right hand notation.)
+\begin{enumerate}
+\item $f(x+y)=f(x)+f(y)$,  (in right hand notation: $(x+y)f=xf+yf$.)
+\item $f(lx)=l^\theta f(x)$, (in right hand notation: $(lx)f=l^\theta xf$.)
+\end{enumerate}
+where $l^\theta$ denotes the image of $l$ under $\theta$.
+\end{defn}
+
+\begin{remark}
+$\theta$ must be a field automorphism for $f$ to remain additive, for example,
+$\theta$ must fix the prime subfield as
+\[n^\theta xf=(nx)f=(x+\cdots +x)f=n(xf).\]
+Also 
+\[(l_1+l_2)^\theta xf=((l_1+l_2)x)f=(l_1 x)f+(l_2 x)f=(l_1^\theta + l_2^\theta)xf\]
+so $(l_1+l_2)^\theta=l_1^\theta+l_2^\theta$.  Finally,
+\[(l_1 l_2)^\theta xf=((l_1 l_2 x)f=l_1^\theta (l_2 x)f=l_1^\theta l_2^\theta xf.\]
+\end{remark}
+
+Every linear transformation is semilinear, but the converse is generally not true.  If we treat $V$ and $W$ as vector spaces over $k$, (by considering $K$ as  vector space over $k$ first) then every $\theta$-semilinear map is a $k$-linear map, where $k$ is the prime subfield of $K$.  
+
+\textbf{Example}
+\begin{itemize}
+\item
+Let $K=\mathbb{C}$, $V=\mathbb{C}^n$ with standard basis $e_1,\dots,e_n$.  Define the map $f:V\rightarrow V$ by 
+      \[f\left(\sum_{i=1}z_i e_i\right)=\sum_{i=1}^n \bar{z}_i e_i.\]
+$f$ is semilinear (with respect to the complex conjugation field automorphism)
+but not linear. 
+\item
+Let $K=GF(q)$ -- the Galois field of order $q=p^i$, $p$ the characteristic.
+Let $l^\theta=l^p$, for $l\in K$.  By the Freshman's dream it is known that this is a field automorphism.  To every linear map $f:V\rightarrow W$ between 
+vector spaces $V$ and $W$ over $K$ we can establish a $\theta$-semilinear map
+      \[\left(\sum_{i=1}l_i e_i\right)\tilde{f}=\sum_{i=1}^n l_i^\theta e_i f.\]
+\end{itemize}
+$\Box$
+
+
+Indeed every linear map can be converted into a semilinear map in such a way.
+This is part of a general observation collected into the following result.
+
+\begin{defn}
+Given a vector space $V$, the set of all invertible semilinear maps (over all field automorphisms) is the group $\Gamma L(V)$.
+\end{defn}
+
+\begin{prop}
+Given a vector space $V$ over $K$, and $k$ the prime subfield of $K$, then
+$\Gamma L(V)$ decomposes as the semidirect product
+\[\Gamma L(V)=GL(V)\rtimes Gal(K/k)\]
+where $Gal(K/k)$ is the Galois group of $K/k$.
+\end{prop}
+\begin{remark}
+We identify $Gal(K/k)$ with a subgroup of $\Gamma L(V)$ by fixing a basis
+$B$ for $V$ and defining the semilinear maps:
+\[\sum_{b\in B} l_b b\mapsto \sum_{b\in B} l_b^\sigma b\]
+for any $\sigma\in Gal(K/k)$.  We shall denoted this subgroup by $Gal(K/k)_B$.  We also see these complements to $GL(V)$ in $\Gamma L(V)$ are acted on regularly by $GL(V)$ as they correspond to a change of basis.
+\end{remark}
+\begin{proof}
+Every linear map is semilinear thus $GL(V)\leq \Gamma L(V)$.  Fix a basis
+$B$ of $V$.  Now given any semilinear map $f$ with respect to a field automorphism $\sigma\in Gal(K/k)$, then define $g:V\rightarrow V$ by \[\left(\sum_{b\in B} l_b b\right)g=\sum_{b\in B} (l_b^{\sigma^{-1}} b)f
+=\sum_{b\in B} l_b (b)f.\]
+As $(B)f$ is also a basis of $V$, it follows $g$ is simply a basis exchange
+of $V$ and so linear and invertible: $g\in GL(V)$.
+
+Set $h:=g^{-1}f$.  For every $v=\sum_{b\in B}l_b\neq 0$ in $V$,
+\[vh=vg^{-1}f=\sum_{b\in B} l_b^{\sigma} b\]
+thus $h$ is in the $Gal(K/k)$ subgroup relative to the fixed basis $B$.
+This factorization is unique to the fixed basis $B$.  Furthermore, $GL(V)$ is normalized by the action of $Gal(K/k)_B$, so $\Gamma L(V)=GL(V)\rtimes Gal(K/k)$.
+\end{proof}
+
+The $\Gamma L(V)$ groups extend the typical classical groups in $GL(V)$.  The importance in considering such maps follows from the consideration of projective geometry.
+
+The projective geometry of a vector space $V$, denoted $PG(V)$, is the lattice of all subspaces of $V$.  Although the typical semilinear map is not a linear map, it does follow that every semilinear map $f:V\rightarrow W$ induces an order-preserving map $f:PG(V)\rightarrow PG(W)$.  That is, every semilinear map induces a projectivity.  The converse of this observation is the Fundamental Theorem of Projective Geometry.  Thus semilinear maps are useful because they define the automorphism group of the projective geometry of a vector space.
+
+
+\bibliographystyle{amsplain}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+\href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+
+\bibitem{HP}
+Gruenberg, K. W. and Weir, A.J.
+\emph{Linear Geometry 2nd Ed.} (English)
+[B] Graduate Texts in Mathematics. 49. New York - Heidelberg - Berlin: Springer-Verlag. X, 198 p. DM 29.10; \$ 12.80 (1977).
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

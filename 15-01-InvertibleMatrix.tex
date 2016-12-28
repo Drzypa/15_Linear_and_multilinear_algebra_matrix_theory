@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InvertibleMatrix}
+\pmcreated{2013-03-22 19:23:09}
+\pmmodified{2013-03-22 19:23:09}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{invertible matrix}
+\pmrecord{11}{42340}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-01}
+\pmclassification{msc}{15A09}
+\pmclassification{msc}{15A33}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+
+\begin{document}
+Let $R$ be a ring and $M$ an $m\times n$ matrix over $R$.  $M$ is said to be \emph{left invertible} if there is an $n\times m$ matrix such that $NM=I_n$, where $I_n$ is the $n\times n$ identity matrix.  We call $N$ a \emph{left inverse} of $M$.  Similarly, $M$ is \emph{right invertible} if there is an $n\times m$ matrix $P$, called a \emph{right inverse} of $M$, such that $MP=I_m$, where $I_m$ is the $m\times m$ identity matrix.  If $M$ is both left invertible and right invertible, we say that $M$ is \emph{invertible}.  If $R$ is an associative ring, and $M$ is invertible, then it has a unique left and a unique right inverse, and they are in fact equal, we call this matrix the \emph{inverse} of $M$.
+
+If $R$ is a division ring, then it can be shown that for any matrix $M$ over $R$, $M$ is left invertible iff it is invertible iff it is right invertible.  In addition, when $M$ is invertible, it is a square matrix.  Furthermore, $R$ is a field iff for any square matrix $M$ (over $R$), $M$ is invertible implies that $M^T$, its transpose, is invertible as well.  Invertibility of matrices over a division ring can also be determined by quantities known as ranks and determinants.  It can be shown that a matrix over a division ring is invertible iff its left row rank (or right column rank) is full iff its determinant is non-zero.  For example, the $2\times 2$ matrix
+$$\begin{pmatrix}
+1 & j \\
+i & k
+\end{pmatrix}$$
+over the Hamiltonian quaternions is not invertible, as its determinant $k-ji=0$.  It is interesting to note that, however, its transpose
+$$\begin{pmatrix}
+1 & i \\
+j & k
+\end{pmatrix}$$
+is invertible, whose determinant is $2k\ne 0$.  The relationship between determinants and matrix invertibility can also be used to prove the following: preservation of matrix invertibility upon matrix transposition implies commutativity of division ring $D$.  This can be done as follows: given any $a,b\in D$, the $2\times 2$ matrix
+$$\begin{pmatrix}
+ab & b \\
+a & 1
+\end{pmatrix}$$
+is not invertible because its determinant is $0$.  Therefore, its transpose
+$$\begin{pmatrix}
+ab & a \\
+b & 1
+\end{pmatrix}$$
+is also not invertible, and its determinant is $0=ab-ba$, whence $D$ is a field.
+
+%%%%%
+%%%%%
+\end{document}

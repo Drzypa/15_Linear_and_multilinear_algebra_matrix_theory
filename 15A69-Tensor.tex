@@ -1,0 +1,217 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Tensor}
+\pmcreated{2013-03-22 12:47:46}
+\pmmodified{2013-03-22 12:47:46}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{tensor}
+\pmrecord{15}{33112}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A69}
+\pmrelated{TensorProduct}
+\pmrelated{TensorArray}
+\pmdefines{valence}
+\pmdefines{rank}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\rT}{\mathrm{T}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{\PMlinkescapetext{{#1}}}
+\newcommand{\pln}[2]{\PMlinkname{{#1}}{#2}}
+
+\newcommand{\kfield}{\mathbb{K}}
+\newcommand{\Uspace}{U}
+
+
+\newcommand{\veps}{\varepsilon}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\bA}{\mathsf{A}}
+\newcommand{\ve}{e}
+\newcommand{\bv}{\mathbf{v}}
+
+
+\newcommand{\hv}{\hat{v}}
+\newcommand{\hT}{\hat{T}}
+\newcommand{\hA}{\hat{A}}
+\newcommand{\halpha}{\hat{\alpha}}
+
+\newcommand{\hbe}{\hat{\ve}}
+\newcommand{\hve}{\hat{\veps}}
+
+\newcommand{\bal}{\alpha}
+\begin{document}
+\paragraph{Overview}
+A \emph{tensor} is the mathematical idealization of a geometric or
+physical quantity whose analytic description, relative to a fixed
+frame of reference, consists of an array of numbers\footnote{\PMlinkexternal{``Ceci
+  n'est pas une pipe,''}{http://aux.planetmath.org/files/objects/3112/tensor-pipe.jpg} as Rene Magritte put it.  The image and the
+  object represented by the image are not the same thing.  The mass of
+  a stone is not a number.  Rather the mass can be described by a
+  number relative to some specified unit mass.}.  Some well known
+examples of tensors in geometry are quadratic forms, and the curvature
+tensor.  Examples of physical tensors are the energy-momentum tensor,
+and the polarization tensor.
+
+Geometric and physical quantities may be categorized by considering
+the degrees of freedom inherent in their description.  The scalar
+quantities are those that can be represented by a single number ---
+speed, mass, temperature, for example.  There are also vector-like
+quantities, such as force, that require a list of numbers for their
+description.  Finally, quantities such as quadratic forms
+naturally require a multiply indexed array for their description.
+These latter quantities can only be conceived of as \emph{tensors}.
+
+Actually, the tensor notion is quite general, and applies to all of
+the above examples; scalars and vectors are  special kinds of
+tensors.  The feature that distinguishes a scalar from a vector, and
+distinguishes both of those from a more general tensor quantity is
+the number of indices in the representing array.  This number is
+called the \emph{rank} of a tensor.  Thus, scalars are rank zero tensors (no
+indices at all), and vectors are rank one tensors.
+
+It is also necessary to distinguish between two types of indices,
+depending on whether the corresponding numbers transform covariantly
+or contravariantly relative to a change in the frame of reference.
+\emph{Contravariant indices} are written as superscripts, while the
+\emph{covariant indices} are written as subscripts.  The \emph{valence}
+of a tensor is the pair $(p,q)$, where $p$ is the number contravariant
+and $q$ the number of covariant indices, respectively.
+
+It is customary to represent the actual tensor, as a stand-alone
+entity, by a bold-face symbol such as $\bA$.  The corresponding array
+of numbers for a type $(p,q)$ tensor is denoted by the symbol
+$A^{i_1\ldots i_p}_{j_1\ldots j_q},$ where the superscripts and
+subscripts are indices that vary from $1$ to $n$. This number $n$, the
+range of the indices, is called the dimension of the tensor.  The
+total degrees of freedom required for the specification of a
+particular tensor is the product of the tensor's rank and its dimension.
+
+Again, it must be emphasized that the tensor $\bA$ and the
+representing array $A^{i_1\ldots i_q}_{j_1\ldots j_p}$ are not the
+same thing.  The values of the representing array are given relative
+to some frame of reference, and undergo a linear transformation when
+the frame is changed.  
+
+
+Finally, it must be mentioned that most physical and geometric
+applications are concerned with \emph{tensor fields}, that is to say
+tensor valued functions, rather than tensors themselves.  Some care is
+required, because it is common to see a tensor field called simply a
+tensor.  There is a difference, however; the entries of a tensor array
+$A^{i_1\ldots i_q}_{j_1\ldots j_p}$ are numbers, whereas the entries
+of a tensor field are functions.  The present entry treats the purely
+algebraic aspect of tensors.  Tensor field concepts, which typically
+involved derivatives of some kind, are discussed elsewhere.
+
+\paragraph{Definition.}
+The formal definition of a tensor quantity begins with a
+finite-dimensional vector space $\Uspace$, which furnishes the uniform
+``building blocks'' for tensors of all valences. In typical
+applications, $\Uspace$ is the tangent space at a point of a manifold; the
+elements of $\Uspace$ represent velocities and forces.  The space of
+$(p,q)$-valent tensors, denoted here by $\cT_{p,q}(\Uspace)$ is obtained by
+taking the tensor product of $p$ copies of $\Uspace$, and $q$ copies of
+the dual vector space $\Uspace^*$.  To wit,
+$$\cT_{p,q}(\Uspace) = \overbrace{\Uspace\otimes\ldots\otimes\Uspace}^{p\text{
+    times}}
+\otimes
+\overbrace{\Uspace^*\otimes\ldots\otimes\Uspace^*}^{q\text{ times}}.$$
+
+In order to represent a tensor by a concrete array of numbers, we
+require a frame of reference, which is essentially a basis of $\Uspace$,
+say
+$\ve_1,\ldots,\ve_n \in \Uspace.$
+Every vector in $\Uspace$ can be
+``measured'' relative to this basis, meaning that for every
+$\bv\in\Uspace$ there exist unique scalars $v^i$, such
+that (note the use of the Einstein summation convention)
+$$\bv = v^i\ve_i.$$
+These scalars are called the components of $\bv$ relative to the frame
+in question.
+
+Let $\veps^1,\ldots,\veps^n\in\Uspace^*$ be the corresponding dual
+basis, i.e.,  
+$$\veps^i(\ve_j) = \delta^i_j,$$
+where the latter is the Kronecker delta array.  For every covector
+$\bal\in\Uspace^*$ there exists a unique array of components $\alpha_i$ such
+that 
+$$\bal = \alpha_i\, \veps^i.$$
+
+More generally, every tensor $\bA\in\cT_{p,q}(\Uspace)$ has a unique
+description in terms of components.  That is to say, there exists a
+unique array of scalars $A^{i_1\ldots i_q}_{j_1\ldots j_p}$ such that
+$$\bA = A^{i_1\ldots i_q}_{j_1\ldots j_p}\, \ve_{i_1} \otimes
+\ldots\otimes \ve_{i_q} \otimes \veps^{j_1}\otimes\ldots\otimes \veps^{j_p}.$$
+
+\paragraph{Transformation rule.}
+Next, suppose that a change is made to a  different frame of
+reference, say
+$\hbe_1,\ldots,\hbe_n\in\Uspace.$
+Any two frames are uniquely related by
+an invertible transition matrix $X^i_{\,j}$, having the property that for
+all values of $j$ we have
+\begin{equation}
+  \label{eq:frametran}
+  \hbe_j = X^i_{\,j}\, \ve_i.  
+\end{equation}
+Let $\bv\in\Uspace$ be a  vector, and let $v^i$
+and $\hv^i$ denote the corresponding component arrays relative to
+the two frames.  From 
+$$\bv = v^i\ve_i = \hv^i\hbe_i,$$
+and from \eqref{eq:frametran} we infer that
+\begin{equation}
+  \label{eq:vectran}
+  \hv^i = Y^i_{\,j}\, v^j,  
+\end{equation}
+where $Y^i_{\,j}$ is the matrix inverse of $X^i_{\,j}$, i.e.,
+$$X^i_{\,k} Y^k_{\,j } = \delta^i_{\,j}.$$
+Thus, the
+transformation rule for a vector's components \eqref{eq:vectran} is
+contravariant to the transformation rule for the frame of reference
+\eqref{eq:frametran}.  It is for this reason that the superscript
+indices of a vector are called contravariant.
+
+To establish \eqref{eq:vectran}, we note that the transformation rule
+for the dual basis takes the form
+$$\hve^i = Y^i_{\,j}\, \veps^j,$$
+and that
+$$v^i = \veps^i(\bv),$$
+while
+$$\hv^i = \hve^i(\bv).$$
+
+The transformation rule for covector components is covariant.  Let
+$\bal\in \Uspace^*$ be a given covector, and let $\alpha_i$ and
+$\halpha_i$ be the corresponding component arrays. Then
+$$\halpha_j = X^i_{\,j}\, \alpha_i.$$
+The above relation is easily established.  We need only remark that
+$$\alpha_i = \bal(\ve_i),$$
+and that
+$$\halpha_j = \bal(\hbe_j),$$
+and then use \eqref{eq:frametran}.
+
+In light of the above discussion, we see that the transformation rule
+for a general type $(p,q)$ tensor takes the form
+$$\hA^{i_1\ldots i_q}_{\,j_1\ldots j_p} =
+X^{i_1}_{\,k_1}\cdots X^{i_q}_{\,k_q}
+Y^{l_1}_{\,j_1}\cdots Y^{l_1}_{\,j_p}
+A^{k_1\ldots k_q}_{\,l_1\ldots l_p}.
+$$
+%%%%%
+%%%%%
+\end{document}

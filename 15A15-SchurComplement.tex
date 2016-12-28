@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SchurComplement}
+\pmcreated{2013-03-22 15:27:11}
+\pmmodified{2013-03-22 15:27:11}
+\pmowner{georgiosl}{7242}
+\pmmodifier{georgiosl}{7242}
+\pmtitle{Schur complement}
+\pmrecord{8}{37302}
+\pmprivacy{1}
+\pmauthor{georgiosl}{7242}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+\pmrelated{BlockDeterminants}
+\pmrelated{MatrixInversionLemma}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let A,B,C,D be matrices of sizes $p\times p$, $p\times q$, $q\times p$ and $q\times q$ respectively and suppose that $D$ is invertible. Let 
+$$M=\begin{pmatrix} A & B \\ C & D \end{pmatrix}$$
+so that $M$ is a $(p+q)\times(p+q)$ matrix.
+\\Then the \emph{Schur complement} of the block $D$ of the matrix $M$ is the 
+$p\times p$ matrix, $A-BD^{-1}C$. Analogously if $A$ is invertible then the \emph{Schur complement} of the block $A$ of the matrix $M$ is the 
+$q\times q$ matrix, $D-CA^{-1}B$.
+In the first case, when  $D$ is invertible, the Schur complement arises as the result of performing a partial Gaussian elimination by multiplying the matrix $M$ from the right with the lower triangular block matrix,
+$$T=\begin{pmatrix} I & O \\ -D^{-1}C & D^{-1} \end{pmatrix}$$ 
+where $I$ is the $p\times p$ identity matrix and $O$ is the $p\times q$ zero matrix. Analogously, in the second case, we take the Schur complement by multiplying the matrix $M$ from the left with the lower triangular block matrix 
+$$T=\begin{pmatrix} A^{-1} & O \\ -CA^{-1} & I \end{pmatrix}$$ 
+\\\textbf{see also:}
+\begin{itemize}
+\item Wikipedia, \PMlinkexternal{Schur complement}{http://en.wikipedia.org/wiki/Schur_complement}
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

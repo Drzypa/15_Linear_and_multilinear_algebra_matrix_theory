@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompanionMatrix}
+\pmcreated{2013-03-22 13:17:12}
+\pmmodified{2013-03-22 13:17:12}
+\pmowner{aoh45}{5079}
+\pmmodifier{aoh45}{5079}
+\pmtitle{companion matrix}
+\pmrecord{7}{33773}
+\pmprivacy{1}
+\pmauthor{aoh45}{5079}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A21}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Given a monic polynomial $p(x)=x^n+a_{n-1}x^{n-1}+\dots+a_1x+a_0$ the \emph{companion matrix} of $p(x)$, denoted $\mathcal{C}_{p(x)}$, is the $n \times n$ matrix with $1$'s down the first subdiagonal and minus the coefficients of $p(x)$ down the last column, or alternatively, as the transpose of this matrix. Adopting the first convention this is simply
+\begin{equation*}
+\mathcal{C}_{p(x)} = \begin{pmatrix}
+0 & 0 & \hdots & \hdots & \hdots & -a_0 \\
+1 & 0 & \hdots & \hdots & \hdots & -a_1\\
+0 & 1 & \hdots & \hdots & \hdots & -a_2 \\
+0 & 0 & \ddots &   &   & \vdots \\
+\vdots & \vdots &  & \ddots & &  \vdots \\
+0 & 0 & \hdots & \hdots & 1 & -a_{n-1}
+\end{pmatrix}.
+\end{equation*}
+
+Regardless of which convention is used the \PMlinkname{minimal polynomial}{MinimalPolynomialEndomorphism} of $\mathcal{C}_{p(x)}$ equals $p(x)$, and the characteristic polynomial of $\mathcal{C}_{p(x)}$ is just $(-1)^n p(x)$. The 
+$(-1)^n$ is needed because we have defined the characteristic polynomial to be $\det(\mathcal{C}_{p(x)}- xI)$. If we had instead defined the characteristic polynomial to be $\det(xI - \mathcal{C}_{p(x)})$ then this would not be needed.
+%%%%%
+%%%%%
+\end{document}

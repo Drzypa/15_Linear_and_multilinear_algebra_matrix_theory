@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AdjointEndomorphism}
+\pmcreated{2013-03-22 12:29:36}
+\pmmodified{2013-03-22 12:29:36}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{adjoint endomorphism}
+\pmrecord{12}{32718}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+\pmclassification{msc}{15A63}
+\pmsynonym{adjoint}{AdjointEndomorphism}
+\pmrelated{Transpose}
+\pmdefines{Hermitian adjoint}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%%\usepackage{xypic}
+\newcommand{\Hom}{\mathop{\mathrm{Hom}}\nolimits}
+\newcommand{\Mat}{\mathop{\mathrm{Mat}}\nolimits}
+\newcommand{\kfield}{\mathbb{K}}
+\newcommand{\supt}{^t}
+\newcommand{\dual}{^*}
+\newcommand{\adj}{^{\displaystyle \star}}
+
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+\newcommand{\bu}{\mathbf{u}}
+
+\newtheorem{proposition}{Proposition}
+\begin{document}
+\paragraph{Definition (the bilinear case).} Let $U$ be a
+finite-dimensional vector space over a field $\kfield$, and $B:U\times
+U\to\kfield$ a symmetric, non-degenerate bilinear mapping, for example
+a real inner product.  For an endomorphism $T:U\rightarrow U$ we
+define the adjoint of $T$ relative to $B$ to be the endomorphism
+$T\adj:U\rightarrow U$, characterized by
+$$B(u,Tv) = B(T\adj u,v),\quad u,v\in U.$$
+
+It is convenient to identify $B$
+with a linear isomorphism $B:U\rightarrow U\dual$ in the sense that
+$$B(u,v) = (Bu)(v),\quad u,v\in U.$$
+We then have
+$$T\adj = B^{-1} T\dual B.$$
+To put it another way, $B$ gives an
+isomorphism between $U$ and
+the dual $U^*$, and  the 
+adjoint $T\adj$ is  the endomorphism of $U$  that corresponds to the
+\PMlinkname{dual homomorphism}{DualHomomorphism}
+$T\dual:U\dual\rightarrow U\dual$.  Here is a commutative diagram to
+illustrate this idea:
+$$
+\xymatrix{%
+U \ar[r]^{T^\star} \ar[d]^B & U \ar[d]^{B} \\
+\;U^* \ar[r]^{T^*} & \;U^{*}
+}
+$$
+
+
+\paragraph{Relation to the matrix transpose.} Let $\bu_1,\ldots,\bu_n$
+be a basis of $U$, and let $M\in
+\Mat_{n,n}(\kfield)$ be the matrix of $T$ relative to this basis, i.e.
+$$\sum_j M^j_{\,i}\, \bu_j = T(\bu_i).$$
+Let $P\in\Mat_{n,n}(\kfield)$ denote the matrix of the inner product
+relative to the same basis, i.e.
+$$P_{ij} = B(\bu_i,\bu_j).$$
+Then, the representing matrix of $T\adj$ relative to the same basis
+is given by $ P^{-1} M\supt P.$ Specializing further, suppose that the
+basis in question is orthonormal, i.e. that
+$$B(\bu_i,\bu_j) = \delta_{ij}.$$
+Then, the matrix of $T\adj$ is
+simply the transpose $M\supt$.
+
+\paragraph{The Hermitian (sesqui-linear) case.}
+If $T:U\rightarrow U$ is an endomorphism of a unitary space (a complex
+vector space equipped with a \PMlinkname{Hermitian inner product}{HermitianForm}). In this setting we can define we define
+the Hermitian adjoint $T\adj:U\rightarrow U$ by means of the familiar
+adjointness condition
+$$\langle u,Tv\rangle = \langle T\adj u,v\rangle,\quad u,v\in U.$$
+
+
+However, the analogous operation at the matrix level is the conjugate
+transpose. Thus, if $M\in \Mat_{n,n}(\cnums)$ is the matrix of $T$
+relative to an orthonormal basis, then $\overline{M\supt}$ is the
+matrix of $T\adj$ relative to the same basis.
+%%%%%
+%%%%%
+\end{document}

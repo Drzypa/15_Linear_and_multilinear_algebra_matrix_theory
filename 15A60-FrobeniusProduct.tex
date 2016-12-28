@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FrobeniusProduct}
+\pmcreated{2013-03-22 18:11:34}
+\pmmodified{2013-03-22 18:11:34}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Frobenius product}
+\pmrecord{8}{40769}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A60}
+\pmclassification{msc}{15A63}
+\pmsynonym{Frobenius inner product}{FrobeniusProduct}
+\pmrelated{NormedVectorSpace}
+\pmrelated{FrobeniusMatrixNorm}
+\pmrelated{Product}
+\pmdefines{Frobenius norm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If\, $A = (a_{ij})$\, and\, $B = (b_{ij})$\, are real $m\!\times\!n$ matrices, their {\em Frobenius product} is defined as 
+$$\langle A,\,B \rangle_F \;:=\; \sum_{i,\,j}a_{ij}b_{ij}.$$
+It is easily seen that\, $\langle A,\,B \rangle_F$\, is equal to the trace of the matrix $A^\intercal B$ and $AB^\intercal $, and that the Frobenius product is an inner product of the vector space formed by the $m\!\times\!n$ matrices; it \PMlinkescapetext{induces} the {\em Frobenius norm} of this vector space.
+%%%%%
+%%%%%
+\end{document}

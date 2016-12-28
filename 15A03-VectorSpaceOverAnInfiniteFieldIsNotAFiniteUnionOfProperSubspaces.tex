@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VectorSpaceOverAnInfiniteFieldIsNotAFiniteUnionOfProperSubspaces}
+\pmcreated{2013-03-22 17:29:43}
+\pmmodified{2013-03-22 17:29:43}
+\pmowner{loner}{106}
+\pmmodifier{loner}{106}
+\pmtitle{vector space over an infinite field is not a finite union of proper subspaces}
+\pmrecord{9}{39883}
+\pmprivacy{1}
+\pmauthor{loner}{106}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+%\documentclass{amsart}
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{bbm}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+\begin{thm}
+A vector space $V$ over an infinite field $\mathbbmss{F}$ cannot be
+a finite union of proper subspaces of itself.
+\end{thm}
+
+\begin{proof}
+Let $V = V_{1} \cup V_{2} \cup \ldots \cup V_{n}$ where
+each $V_{i}$ is a proper subspace of $V$ and $n > 1$ is minimal.
+Because $n$ is minimal, $V_{n} \not\subset V_{1} \cup V_{2}
+\cup \ldots \cup V_{n-1}$.
+
+Let $u \not\in V_{n}$ and let $v \in V_{n} \setminus \left(V_{1}
+\cup V_{2} \cup \ldots \cup V_{n-1}\right)$.
+
+Define $S = \left\{v + tu : t \in \mathbbmss{F}\right\}$. Since 
+$u\not\in V_{n}$ is not the zero vector and the field 
+$\mathbbmss{F}$ is infinite, $S$ must be infinite.
+
+Since $S \subset V = V_{1} \cup V_{2} \cup \ldots \cup
+V_{n}$ one of the $V_{i}$ must contain infinitely many vectors in
+$S$.
+
+However, if $V_{n}$ were to contain a vector, other than $v$, from $S$ there would
+exist non-zero $t \in \mathbbmss{F}$ such that $v + tu \in V_{n}$.
+But then $tu = v + tu - v \in V_{n}$ and we would have $u \in V_{n}$
+contrary to the choice of $u$. Thus $V_{n}$ cannot contain
+infinitely many elements in $S$.
+
+If some $V_{i}, 1 \leq i < n$ contained two distinct vectors in $S$,
+then there would exist distinct $t_{1}, t_{2} \in \mathbbmss{F}$
+such that $v + t_{1}u, v + t_{2}u \in V_{i}$. But then $\left(t_{2}
+- t_{1}\right)v = t_{2}\left(v + t_{1}u\right) - t_{1}\left(v +
+t_{2}u\right) \in V_{i}$ and we would have $v \in V_{i}$ contrary to
+the choice of $v$. Thus for $1 \leq i < n, V_{i}$ cannot contain
+infinitely many elements in $S$ either.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

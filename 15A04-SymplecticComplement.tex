@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SymplecticComplement}
+\pmcreated{2013-03-22 13:32:25}
+\pmmodified{2013-03-22 13:32:25}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{symplectic complement}
+\pmrecord{8}{34139}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+\pmdefines{symplectic complement}
+\pmdefines{isotropic subspace}
+\pmdefines{coisotropic subspace}
+\pmdefines{symplectic subspace}
+\pmdefines{Lagrangian subspace}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+{\bf Definition} \cite{mcduff, abraham} 
+Let $(V,\omega)$ be a  symplectic vector space and let $W$ be a
+vector subspace of $V$. Then the \emph{symplectic complement} of $W$
+is
+$$W^\omega = \{x\in V\, | \, \omega(x,y)=0\,\, \mbox{for all}\,\, y\in W\}.$$
+
+It is easy to see that $W^\omega$  is also a vector subspace of $V$.
+Depending on the relation between $W$ and $W^\omega$, 
+$W$ is given different names.
+\begin{enumerate}
+\item If $W\subset W^\omega$, then $W$ is an \emph{isotropic subspace} (of $V$).
+\item If $W^\omega \subset W$, then $W$ is an \emph{coisotropic subspace}.
+\item If $W \cap W^\omega=\{0\}$, then $W$ is an \emph{symplectic subspace}.
+\item If $W = W^\omega$, then $W$ is an \emph{Lagrangian subspace}.
+\end{enumerate}
+
+For the symplectic complement, we have the
+following dimension theorem.
+
+{\bf Theorem} \cite{mcduff, abraham} Let $(V,\omega)$ be a symplectic vector
+space, and let $W$ be a vector subspace of $V$. Then
+$$\dim V = \dim W^\omega + \dim W.$$
+
+\begin{thebibliography}{9}
+ \bibitem {mcduff} D. McDuff, D. Salamon,
+ \emph{Introduction to Symplectic Topology},
+ Clarendon Press, 1997.
+\bibitem{abraham} R. Abraham, J.E. Marsden, \emph{Foundations of Mechanics},
+2nd ed., Perseus Books, 1978.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

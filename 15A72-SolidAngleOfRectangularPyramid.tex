@@ -1,0 +1,131 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SolidAngleOfRectangularPyramid}
+\pmcreated{2013-03-22 19:16:02}
+\pmmodified{2013-03-22 19:16:02}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{solid angle of rectangular pyramid}
+\pmrecord{16}{42198}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A72}
+\pmclassification{msc}{51M25}
+\pmrelated{CyclometricFunctions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{formula} \PMlinkescapeword{length}
+We calculate the apical solid angle of a \PMlinkescapetext{right} rectangular pyramid, as an example of using the \PMlinkid{formula of van Oosterom and Strackee}{7266} for determining the solid angle $\Omega$ subtended at the origin by a triangle:
+\begin{align}
+\tan\frac{\Omega}{2} \;=\; \frac{\vec{r}_1\!\times\!\vec{r}_2\!\cdot\!\vec{r}_3}
+{(\vec{r}_1\!\cdot\!\vec{r}_2)r_3+(\vec{r}_2\!\cdot\!\vec{r}_3)r_1+(\vec{r}_3\!\cdot\!\vec{r}_1)r_2+r_1r_2r_3}
+\end{align}
+Here, $\vec{r}_1$, $\vec{r}_2$, $\vec{r}_3$ are the position vectors of the vertices of the triangle and 
+$r_1,\,r_2,\,r_3$ their \PMlinkescapetext{lengths}.\\
+
+Let the apex of the pyramid be in the origin and the vertices of the base rectangle be
+$$(\pm a,\, \pm b,\, h)$$
+where $a$, $b$ and $h$ are positive numbers.\, We take the half-triangle of the base determined by the three vertices
+$$(a,\,b,\,h), \;\, (-a,\,b,\,h), \;\, (a,\,-b,\,h),$$
+with the position vectors $\vec{r}_1$, $\vec{r}_2$, $\vec{r}_3$, respectively.\, Then we have in the numerator of (1) the scalar triple product 
+$$\vec{r}_1\!\times\!\vec{r}_2\!\cdot\!\vec{r}_3 \;=\; 
+\left|\begin{matrix}
+a & b & h\\
+-a & b & h\\
+a & -b & h 
+\end{matrix}\right| \;=\; 
+a\left|\begin{matrix} 
+b & h\\
+-b & h
+\end{matrix}\right|+ 
+b\left|\begin{matrix} 
+h & -a\\
+h & a
+\end{matrix}\right|+
+h\left|\begin{matrix}
+-a & b\\
+a & -b
+\end{matrix}\right| \;=\; 4abh.
+$$
+The vectors have the common length $\sqrt{a^2\!+\!b^2\!+\!h^2}$, and the denominator of (1) then attains the value 
+$4h^2\sqrt{a^2\!+\!b^2\!+\!h^2}$.\, Thus the formula (1) gives
+$$\tan\frac{\Omega}{2} \;=\; \frac{ab}{h\sqrt{a^2\!+\!b^2\!+\!h^2}}$$
+which result may be reformulated by using the goniometric formula
+$$\sin x \;=\; \frac{\tan x}{\sqrt{1+\tan^2 x}}$$
+as
+\begin{align}
+\sin\frac{\Omega}{2} \;=\; \frac{ab}{\sqrt{(a^2\!+\!h^2)(b^2\!+\!h^2)}}.
+\end{align}
+Thus the whole apical solid angle of the \PMlinkid{right}{7357} rectangular pyramid is
+\begin{align}
+\Omega \;=\; 4\arcsin\frac{ab}{\sqrt{(a^2\!+\!h^2)(b^2\!+\!h^2)}}.
+\end{align}
+A variant of (3) is found in [3].\\
+
+In the special case of a regular pyramid we have simply
+\begin{align}
+\Omega \;=\; 4\arcsin\frac{a^2}{a^2\!+\!h^2}
+\end{align}
+where $2a$ is the \PMlinkname{side}{Polygon} of the base square.\\
+
+Note that in (2), the quotients $\frac{a}{\sqrt{a^2+h^2}}$ and $\frac{b}{\sqrt{b^2+h^2}}$ are sines of certain angles in the pyramid.
+
+\begin{center}
+\begin{pspicture}(-2.5,-0.5)(2.5,5.5)
+\psdot(0,4)
+\pspolygon(-2,3.5)(1,3.5)(2,4.5)(-1,4.5)
+\psline(-2,3.5)(2,4.5)
+\psline(1,3.5)(-1,4.5)
+\psline(-2,3.5)(0,0)
+\psline(1,3.5)(0,0)
+\psline(2,4.5)(0,0)
+\psline[linestyle=dotted](-1,4.5)(0,0)
+\psline[linestyle=dashed](0,4)(0,0)
+\rput(0.5,4.75){$2b$}
+\rput(-1.8,4.1){$2a$}
+\rput(0.2,2.4){$h$}
+\rput(-2.4,-0.4){.}
+\rput(+2.4,+5.4){.}
+\end{pspicture}
+\end{center}
+
+
+\begin{thebibliography}{8}
+\bibitem{O}{\sc A. van Oosterom \& J. Strackee}:\, A solid angle of a plane triangle.\; -- \emph{IEEE Trans. Biomed. Eng.} \textbf{30}:2 (1983); 125--126.
+\bibitem{G}{\sc M. S. Gossman \& A. J. Pahikkala \& M. B. Rising \& P. H. McGinley}:\, Providing solid angle formalism for skyshine calculations.\; -- \emph{Journal of Applied Clinical Medical Physics} \textbf{11}:4 (2010); 278--282.
+\bibitem{L}{\sc M. S. Gossman \& A. J. Pahikkala \& M. B. Rising \& P. H. McGinley}:\, Letter to the editor.\; -- \emph{Journal of Applied Clinical Medical Physics} \textbf{12}:1 (2011); 242--243.
+\bibitem{R}{\sc M. S. Gossman \& M. B. Rising \& P. H. McGinley \& A. J. Pahikkala}:\, Radiation skyshine from a 6 MeV medical accelerator.\; -- \emph{Journal of Applied Clinical Medical Physics} \textbf{11}:3 (2010); 259--264.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PrimaryDecompositionTheorem}
+\pmcreated{2013-03-22 14:15:30}
+\pmmodified{2013-03-22 14:15:30}
+\pmowner{gumau}{3545}
+\pmmodifier{gumau}{3545}
+\pmtitle{primary decomposition theorem}
+\pmrecord{8}{35707}
+\pmprivacy{1}
+\pmauthor{gumau}{3545}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+This is an important theorem in linear algebra. It states the following:
+Let $k$ be a field, $V$ a vector space over $k$, $\dim V =n$, and $T\colon V\to V$ a linear operator, such that its minimal polynomial (or its annihilator polynomial) is $m_{T}$, which decomposes in $k[X]$ into irreducible factors as $m_{T}=p_{1}^{\alpha_{1}} \ldots p_{r}^{\alpha_{r}}$. Then,
+\begin{enumerate}
+\item  $V=\bigoplus_{i=1}^{r}\ker (p_{i}^{\alpha_{i}}(T))$
+\item $\ker (p_{i}^{\alpha_{i}}(T))$ is $T$-invariant for every $i$
+\item If $T_{i}$ is the restriction of $T$ to $\ker (p_{i}^{\alpha_{i}}(T))$, then $m_{T_{i}}=p_{i}^{\alpha_{i}}$
+\end{enumerate}
+
+This is a consequence of a more general theorem:
+Let $V$, $T$ be as above, and $f \in k[X]$ such that $f(T)=0$, with $f=f_{1} \ldots f_{r}$ and $(f_{i},f_{j})=1$ if $i \neq j$, then
+\begin{enumerate}
+\item $V=\bigoplus _{i=1}^{r}\ker(f_{i}(T))$
+\item $\ker(f_{i}(T))$ is $T$-invariant for every $i$
+\end{enumerate}
+
+To illustrate its importance, the primary decomposition theorem, together with the cyclic decomposition theorem, imply the existence and uniqueness of the Jordan canonical form.
+%%%%%
+%%%%%
+\end{document}

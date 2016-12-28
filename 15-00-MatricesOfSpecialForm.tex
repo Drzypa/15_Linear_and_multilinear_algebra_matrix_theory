@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MatricesOfSpecialForm}
+\pmcreated{2013-03-22 14:13:49}
+\pmmodified{2013-03-22 14:13:49}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{matrices of special form}
+\pmrecord{15}{35670}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+The aim of the present entry is to list matrices with special properties.
+
+\subsubsection*{Restriction on form}
+\begin{itemize}
+\item diagonal matrices
+\item anti-diagonal matrices
+\item triangular matrices
+\item block matrices of either form above or of some other form
+\item nilpotent matrices
+\item elementary matrices
+\item Hadamard matrices
+\item partly decomposable matrices
+\item fully indecomposable matrices
+\item nearly decomposable matrices
+\item doubly stochastic matrices
+\item stochastic matrices
+\end{itemize}
+
+In numerical applications, sparse matrices (matrices with few nonzero entries) are important; these can be of any of the forms above.
+
+\subsubsection*{Other restrictions}
+\begin{itemize}
+\item singular matrices
+\item $\operatorname{GL}(n)$: invertible matrices
+\item $\operatorname{SU}(n)$: unitary matrices with determinant $1$
+\item $\operatorname{O}(n)$: orthogonal matrices
+\item $\operatorname{SO}(n)$: 
+\PMlinkname{orthogonal matrices with determinant $1$}{RotationMatrix}
+\item normal matrices
+\item positive definite matrices
+\item symmetric matrices, antisymmetric matrices, Hermitian matrices, anti-Hermitian matrices
+\item $\operatorname{Sp}(2n)$: symplectic matrices (also called $\operatorname{Sp}(n)$)
+\end{itemize}
+
+
+\subsubsection*{Special matrices}
+\begin{itemize}
+\item zero matrix
+\item identity matrix
+\item Hilbert matrix
+\item Vandermonde matrix
+\item Toeplitz matrix
+\item Pascal matrix
+\item Cauchy matrix
+\item M-matrix
+\item magic square
+\item Latin square
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

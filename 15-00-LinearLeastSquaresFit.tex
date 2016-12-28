@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LinearLeastSquaresFit}
+\pmcreated{2013-03-22 17:24:16}
+\pmmodified{2013-03-22 17:24:16}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{linear least squares fit}
+\pmrecord{13}{39776}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmrelated{RegressionModel}
+\pmrelated{GaussMarkovTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+One of the most common uses of least squares fitting is fitting a straight line to 
+data.  Whilst, in general, it is difficult to determine the curve which best fits
+the data, in this case there is a relatively simple formula which can be used.
+
+\begin{thm}
+Suppose we have a data set $(x_1,y_1), \ldots, (x_n,y_n)$.  Then the straight 
+line which best fits this set is given as 
+\[ 
+y = {ns - pq \over nr - p^2} x + {qr - ps \over nr - p^2}
+\]
+where
+\begin{align}
+p &= \sum_{k=1}^n x_k \\
+q &= \sum_{k=1}^n y_k \\
+r &= \sum_{k=1}^n x_k^2 \\
+s &= \sum_{k=1}^n x_k y_k
+\end{align}
+\end{thm}
+
+\begin{proof}
+Being the best fitting line means minimizing the merit function $M$, given as
+\[
+M(a,b) = \sum_{k=0}^n (a x_k + b - y_k)^2
+\]
+with respect to the parameters $a$ and $b$.  Expanding the square, this can be 
+written as 
+\[
+M(a,b) = r a^2 + 2pab + nb^2 - 2sa - 2qb + t
+\]
+where $p,q,r,s$ are as above and 
+\[
+t = \sum_{k=1}^n y_k^2 .
+\]
+
+This function $M$ is a quadratic polynomial; moreover, from its definition as a 
+sum of squares, it is clear that the highest order terms are positive definite, 
+hence it has a minimum and all that remains is to find that minimum.  To do this, 
+we set the derivatives equal to zero to obtain the following equations:
+\begin{align}
+0 = {\partial M(a,b) \over \partial a} & = 2ar + 2pb - 2s \\
+0 = {\partial M(a,b) \over \partial b} & = 2pa + 2nb - 2q
+\end{align}
+These equations are easily solved to give
+\begin{align}
+a &= {ns - pq \over nr - p^2} \\
+b &= {qr - ps \over nr - p^2} ;
+\end{align}
+substituting in the equation $y = ax  + b$ for a straight line, we obtain 
+the answer given above.
+\end{proof}
+
+Because of the ease with which one can make a least squares fit of a line, this
+technique is often adapted to fitting other sorts of curves by making a change
+of variables.  Two common cases of this practice are power laws and exponentials.
+
+Suppose that one wants to fit some data to a curve of the form $y = c e^{kx}$.
+Making a change of variable $y = e^u$ and defining $b = \log c$, the equation of 
+the curve becomes $u = kx + b$.  One can therefore fit the data set $(x_1, \log y_1),
+\ldots (x_n, \log y_n)$ to a straight line.
+
+Suppose that one wants to fit some data to a curve of the form $y = cx^p$.  Making
+a change of variable $x = e^v$, $y = e^u$ and defining $b = \log c$, the equation of 
+the curve becomes $u = pv + b$.  One can therefore fit the data set $(\log x_1, \log y_1),
+\ldots (\log x_n, \log y_n)$ to a straight line.
+
+Although convenient and common, this procedure can be a cheat because changing variables
+and making a least squares fit of a line is not the same as making a least squares fit
+to a curve.  The reason for this is that the merit functions are different and will not,
+in general have a minimum in the same place.  However, if the data happen to approximately
+lie on a power curve or an exponential, then the answer obtained by changing variables
+and fitting will be an approximation to the correct answer.  Depending on what one is
+doing, this approximation may be good enough or one may use it as a starting point for
+some algorithm to compute the correct minimum.
+%%%%%
+%%%%%
+\end{document}

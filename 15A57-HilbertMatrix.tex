@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HilbertMatrix}
+\pmcreated{2013-03-22 13:04:14}
+\pmmodified{2013-03-22 13:04:14}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{Hilbert matrix}
+\pmrecord{6}{33479}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A57}
+\pmclassification{msc}{15A09}
+\pmclassification{msc}{15A12}
+\pmclassification{msc}{65F35}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+\section{Hilbert Matrix}
+
+A \emph{Hilbert matrix} $H$ of order $n$ is a square matrix defined by
+
+$$ H_{ij} = \frac{1}{i + j - 1} $$
+
+An example of a Hilbert matrix when $n = 5$ is 
+
+$$ \begin{bmatrix}
+  \frac{1}{1} & \frac{1}{2} & \frac{1}{3} & \frac{1}{4} & \frac{1}{5} \\
+  \frac{1}{2} & \frac{1}{3} & \frac{1}{4} & \frac{1}{5} & \frac{1}{6} \\
+  \frac{1}{3} & \frac{1}{4} & \frac{1}{5} & \frac{1}{6} & \frac{1}{7} \\
+  \frac{1}{4} & \frac{1}{5} & \frac{1}{6} & \frac{1}{7} & \frac{1}{8} \\
+  \frac{1}{5} & \frac{1}{6} & \frac{1}{7} & \frac{1}{8} & \frac{1}{9}
+\end{bmatrix} $$
+
+Hilbert matrices are ill-conditioned.
+
+\section{Inverse}
+
+The inverse of a Hilbert matrix  $H^{-1}\in M_N(\mathbb{R})$ is given by
+
+$$ H^{-1}_{ij} = (-1)^{i+j}(i+j-1){N+i-1 \choose N-j}{N+j-1 \choose N-i}{i+j-2 \choose i-1}^2 $$
+
+An example of an inverted Hilbert matrix when $n=5$ case is:
+
+$$ \begin{bmatrix}
+         25    &    -300    &    1050    &   -1400    &     630  \\
+        -300   &     4800   &   -18900   &    26880   &   -12600 \\
+        1050   &   -18900   &    79380   &  -117600   &    56700 \\
+       -1400   &    26880   &  -117600   &   179200   &   -88200 \\
+         630   &   -12600   &    56700   &   -88200   &    44100 
+\end{bmatrix} $$
+
+For more fun with Hilbert matrices, see \cite{Choi}.
+
+\begin{thebibliography}{3}
+\bibitem{Choi}  Choi,  Man-Duen. Tricks or Treats with the Hilbert Matrix. American Mathematical Monthly 90, 301-312, 1983.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

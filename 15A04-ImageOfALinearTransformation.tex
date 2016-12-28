@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ImageOfALinearTransformation}
+\pmcreated{2013-03-22 13:48:32}
+\pmmodified{2013-03-22 13:48:32}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{image of a linear transformation}
+\pmrecord{8}{34530}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+\pmrelated{RankNullityTheorem}
+\pmrelated{KernelOfALinearTransformation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+\PMlinkescapeword{image}
+{\bf Definition} 
+Let $T:V\to W$ be a linear transformation. Then the {\bf image} of
+$T$ is the set
+$$ \operatorname{Im} (T) = \{ w\in W \mid w=T(v) \,\mbox{for some}\, v\in V\} = T(V).$$
+
+\subsubsection{Properties}
+%Let $T$ be as above.
+\begin{enumerate}
+\item The dimension of $\operatorname{Im}(T)$ is called the rank of $T$;
+\item $T$ is a surjection, if and only if  $\operatorname{Im}(T)=W$;
+\item $\operatorname{Im}(T)$ is a vector subspace of $W$;
+\item If $L\colon W\to U$ is a linear transformation, then $\operatorname{Im}(LT) =L(\operatorname{Im}(T))$;
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,190 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProportionsOfInvertibleMatrices}
+\pmcreated{2013-03-22 15:57:35}
+\pmmodified{2013-03-22 15:57:35}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{proportions of invertible matrices}
+\pmrecord{16}{37973}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A33}
+\pmsynonym{proportions invertible linear transformations}{ProportionsOfInvertibleMatrices}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+Let $GL(d,R)$ denote the invertible $d\times d$-matrices over a ring $R$, and
+$M_d(R)$ the set of all $d\times d$-matrices over $R$.  When $R$ is a finite field of order $q$, commonly denoted $GF(q)$ or $\mathbb{F}_q$, we prefer to write simply $q$.  In particular, $q$ is a power of a prime.
+
+\begin{prop}
+\[
+\frac{|GL(d,q)|}{|M_d(q)|}=\prod_{i=1}^d \left( 1-\frac{1}{q^i}\right).
+\]
+\end{prop}
+\begin{proof}
+The number of $d\times d$-matrices over a $GF(q)$ is $q^{d^2}$.  When a matrix
+is invertible, its rows form a basis of the vector space $GF(q)^d$ and this 
+leads to the following formula 
+\[|GL(d,q)|=q^{\binom{d}{2}}\prod_{i=1}^d (q^i-1).\]
+(Refer to \PMlinkname{order of the general linear group.}{OrdersAndStructureOfClassicalGroups})
+
+Now we prove the ratio holds:
+\[
+\prod_{i=1}^d \left( 1-\frac{1}{q^i}\right)
+= \prod_{i=1}^d \frac{q^i-1}{q^i}
+= \frac{1}{q^{\binom{d+1}{2}}}\prod_{i=1}^d (q^i-1)
+= \frac{1}{q^{d^2}}q^{\binom{d}{2}}\prod_{i=1}^d (q^i-1)
+   = \frac{|GL(d,q)|}{|M_d(q)|}.
+\]
+\end{proof}
+
+
+\begin{coro}
+As $q\rightarrow \infty$ with $d$ fixed, the proportion of invertible matrices
+to all matrices converges to 1.  That is:
+\[
+\lim_{q\rightarrow \infty} \frac{|GL(d,q)|}{|M_d(q)|}=1.
+\]
+\end{coro}
+
+\begin{coro}\label{coro:random-mat}
+As $d\rightarrow \infty$ and $q$ is fixed, the proportion of invertible matrices decreases monotonically and converges towards a positive limit.  Furthermore,
+\[\frac{1}{4} \leq 1-\frac{q^2-q+1}{q^2 (q-1)} \leq 
+\prod_{i=1}^d\left(1-\frac{1}{q^i}\right) \leq 1-\frac{1}{q}.\]
+\end{coro}
+\begin{proof}
+By direct expansion we find
+\[
+\prod_{i=1}^\infty (1-a_i)=1-\sum_{1\leq i} a_i+\sum_{1\leq i<j} a_i a_j
+	- \sum_{1\leq i<j<k} a_i a_j a_k +\cdots.
+\]
+So setting $a_0=1$ and
+\[a_{i+1}=a_i\sum_{j=i+1}^\infty \frac{1}{q^j}=a_i\frac{1}{q^{i}(q-1)}\]
+for all $i\in\mathbb{N}$, we have
+\[
+\prod_{i=1}^\infty\left(1-\frac{1}{q^i}\right) = \sum_{i=0}^\infty (-1)^i a_i.
+\]
+As $a_i\geq 0$, $a_{i}\geq a_{i+1}$ for all $i\in\mathbb{N}$ and $a_i\rightarrow 0$ 
+as $i\rightarrow \infty$, we may use Leibniz's theorem to conclude the alternating
+series converges.  Furthermore, we may estimate the error to the $N$-th term with
+error within $\pm a_{N+1}$.  Using $N=2$ we have an estimate of $1-1/q$ with error
+$\pm \frac{1}{q^2(q-1)}$.  Since $q\geq 2$ this gives $1/2$ with error $\pm 1/4$.  Thus
+we have at least $1/4$ chance of choosing an invertible matrix at random.
+\end{proof}
+
+\begin{remark}
+$q=2$ is the only field size where the proportion of invertible matrices to all matrices is less than $1/2$.
+\end{remark}
+
+
+Acknowledgements: due to discussions with Wei Zhou, silverfish and mathcam.  
+%%%%%
+%%%%%
+\end{document}

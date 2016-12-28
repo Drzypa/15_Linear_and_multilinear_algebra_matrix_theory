@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LinearComplexStructure}
+\pmcreated{2013-03-22 16:16:48}
+\pmmodified{2013-03-22 16:16:48}
+\pmowner{Mazzu}{14365}
+\pmmodifier{Mazzu}{14365}
+\pmtitle{linear complex structure}
+\pmrecord{12}{38392}
+\pmprivacy{1}
+\pmauthor{Mazzu}{14365}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmrelated{ComplexificationOfVectorSpace}
+\pmdefines{linear complex structure}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\newcommand{\mm}{\mathrm{M}}
+\newcommand{\oo}{\mathrm{O}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\I}{\mathbf{I}}
+
+A \emph{\PMlinkescapetext{(linear) complex structure}}  on a real vector space $V$, with $\mathrm{dim}(V)=m$, is a linear automorphism $J\in\mathrm{Aut}(V)$ such that $J^2=J\circ J=-\mathrm{id}_V$. With a complex structure $J$ we can consider $V$ as a complex vector space with the product $\C\times V\rightarrow V$ given by $$(x+iy)\mathbf v=x\mathbf v+y J(\mathbf v),\ \ \forall x,y\in\R,\ \mathbf v\in V.$$
+This implies  that the dimension $m$ of $V$ must be even.
+
+A common example is $V=\mathbb R^{2n}$ with the standard basis $\mathbf e_1,...,\mathbf e_n,\mathbf f_1,...,\mathbf f_n$, for which we can obtain a complex structure $J_0\in\mathrm{Aut}(\mathbb R^{2n})$ represented by the matrix 
+$$\left( \begin{array}{cc}
+\mathbf 0 & \I_n \\
+-\I_n & \mathbf 0
+\end{array} \right).$$
+Here $\I_n\in\mm_n(\R)$ is the identity $n\times n$ matrix and
+$\mathbf 0\in\mm_n(\R)$ is the zero $n\times n$ matrix.
+%%%%%
+%%%%%
+\end{document}

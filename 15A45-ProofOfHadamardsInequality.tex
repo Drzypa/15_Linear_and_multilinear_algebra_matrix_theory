@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHadamardsInequality}
+\pmcreated{2013-03-22 15:37:02}
+\pmmodified{2013-03-22 15:37:02}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{proof of Hadamard's inequality}
+\pmrecord{17}{37541}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A45}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let's first prove the second inequality. If $A$ is singular, the thesis is
+trivially verified, since for a Hermitian positive semidefinite matrix the
+right-hand side is always nonnegative, all the diagonal entries being nonnegative. Let's thus assume $\det (A)\neq 0$, which means, $A$ being
+Hermitian positive semidefinite, $\det (A)>0$. Then no diagonal entry of $A$
+can be $0$ (otherwise, since for a Hermitian positive semidefinite matrix, $0\leq \lambda_{min}\leq a_{ii}\leq \lambda _{max}$, $\lambda_{min}$ and $\lambda_{max}$ being respectively the minimal and the maximal eigenvalue, this would imply $\lambda_{min}=0$, that is $A$ is singular); for this reason we can define $D=diag(d_{11},d_{22},\ldots ,d_{nn})$, with $d_{ii}=a_{ii}^{-\frac{1}{2}}\in \mathbb{R}$, since all $a_{ii}\in \mathbb{R}^{+}$. Let's furthermore define $B=DAD$. It's easy to check that $B$ too is Hermitian positive semidefinite, so its eigenvalues $\lambda_{B}$ are all non-negative (actually, since $A=A^{H}$ and since $D$ is real and diagonal, $B^{H}=(DAD)^{H}=D^{H}(DA)^{H}=D^{H}A^{H}D^{H}=DAD=B$; on the other hand, for any $\mathbf{x}\neq \mathbf{0}$, $\mathbf{x}^{H}B\mathbf{x}=\mathbf{x}^{H}DAD\mathbf{x}=(\mathbf{x}^{H}D)A(D\mathbf{x})=(D^{H}\mathbf{x})^{H}A(D\mathbf{x})=(D\mathbf{x})^{H}A(D\mathbf{x})=\mathbf{y}^{H}A\mathbf{y}\geq 0$).
+Moreover, we have obviously $b_{ii}=d_{ii}a_{ii}d_{ii}=1$ so that $tr(B)=n$
+and, recalling the \PMlinkname{geometric-arithmetic mean inequality}{ArithmeticGeometricMeansInequality}, which holds in this
+case because the eigenvalues of $B$ are all non-negative,
+
+$\det (B)=\prod_{i=1}^{n}\lambda _{B}^{(i)}\leq \left( \frac{1}{n}%
+\sum_{i=1}^{n}\lambda _{B}^{(i)}\right) ^{n}=\left( \frac{1}{n}tr(B\right)
+)^{n}=1$,
+
+and since $\det (B)=\det (D)^{2}\det (A)=\left(\prod_{i=1}^{n}a_{ii}\right) ^{-1}\det (A)$, we have the thesis.
+Since $\det (A)=\prod_{i=1}^{n}a_{ii}$ if and only if $\det
+(B)=1$ and since in the geometric-arithmetic inequality equality holds if
+and only if all terms are equal, we must have $\lambda _{B}^{(i)}=\lambda
+_{B}$, so that $\prod_{i=1}^{n}\lambda _{B}^{(i)}=\lambda _{B}^{n}=1$,
+whence $\lambda _{B}=1$ ($\lambda _{B}$ having to be non-negative), and since 
+$B$ is Hermitian and hence is diagonalizable, we obtain $B=I$, and so $%
+A=D^{-1}BD^{-1}=D^{-2}=diag(a_{11},a_{22},\ldots ,a_{nn})$. So we can
+conclude that equality holds if and only if $A$ is diagonal.
+
+Let's now derive the more general first inequality.
+Let $A$ be a complex-valued $n\times n$ matrix. If $A$ is singular,
+the thesis is trivially verified. Let's thus assume $\det (A)\neq 0$; then $B=AA^{H}$ is a Hermitian positive semidefinite matrix (actually, $B^{H}=(AA^{H})^{H}=(A^{H})^{H}A^{H}=AA^{H}=B$ and, for any $\mathbf{x}\neq\mathbf{0}$,$\mathbf{x}^{H}B\mathbf{x}=\mathbf{x}^{H}AA^{H}\mathbf{x}=(\mathbf{x}^{H}A)(A^{H}\mathbf{x})=(A^{H}\mathbf{x})^{H}(A^{H}\mathbf{x})=\mathbf{y}^{H}\mathbf{y}=\Vert \mathbf{y}\Vert _{2}^{2}\geq 0$). Therefore, the second inequality can be applied to $B$, yielding:
+
+$\left\vert \det (A)\right\vert ^{2}=\det (A)\det^{\ast }(A)=\det (A)\det
+(A^{H})=\det (AA^{H})=$\\
+$=\det (B)\leq\prod_{i=1}^{n}b_{ii}=\prod_{i=1}^{n}\sum_{j=1}^{n}a_{ij}(a^{H})_{ji}=\prod_{i=1}^{n}\sum_{j=1}^{n}a_{ij}a_{ij}^{\ast
+}=\prod_{i=1}^{n}\sum_{j=1}^{n}\left\vert a_{ij}\right\vert ^{2}$.
+
+As we proved above, for $\det (B)$ to be equal to $\prod_{i=1}^{n}b_{ii}$, $B$ must be diagonal, which means that $\sum_{k=1}^{n}a_{ik}a_{jk}^{\ast }=|a_{ii}|^{2}\delta _{ij}$. So we can conclude that equality holds if and only if the rows of $A$ are orthogonal.
+$\square $
+
+\begin{thebibliography}{6}
+\bibitem{Horn} R. A. Horn, C. R. Johnson,
+\emph{Matrix Analysis}, Cambridge University Press, 1985
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

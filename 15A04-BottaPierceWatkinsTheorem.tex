@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BottaPierceWatkinsTheorem}
+\pmcreated{2013-03-22 19:20:21}
+\pmmodified{2013-03-22 19:20:21}
+\pmowner{kammerer}{26336}
+\pmmodifier{kammerer}{26336}
+\pmtitle{Botta - Pierce - Watkins theorem}
+\pmrecord{6}{42287}
+\pmprivacy{1}
+\pmauthor{kammerer}{26336}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+%\pmkeywords{linear preserver}
+%\pmkeywords{nilpotent matrix}
+\pmrelated{FundamentalTheoremOfProjectiveGeometry}
+\pmrelated{GerstenhaberSerezhkinTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+
+\begin{document}
+Let $\mathbb{F}$ be an arbitrary field, and let $n$ be a positive integer. Consider $\mathcal{M}_n (\mathbb{F}),$ the vector space of all $n \times n$ matrices over $\mathbb{F}.$ Define
+\begin{itemize}
+\item
+$\mathfrak{sl}_n (\mathbb{F}) = \{A \in \mathcal{M}_n (\mathbb{F}):\, {\rm tr} (A) = 0\},$
+\item
+$\mathcal{N} = \{A \in \mathcal{M}_n (\mathbb{F}):\, A\, \, \mbox{is nilpotent}\},$
+\item
+$\mathcal{GL}_n (\mathbb{F}) = \{A \in \mathcal{M}_n (\mathbb{F}):\, \det (A) \neq 0\}.$
+\end{itemize}
+
+Notice that $\mathfrak{sl}_n (\mathbb{F})$ is a linear subspace of $\mathcal{M}_n (\mathbb{F})$ and $\mathcal{N} \subseteq \mathfrak{sl}_n (\mathbb{F}).$
+
+The Botta -- Pierce -- Watkins theorem on linear preservers of the nilpotent matrices \cite{BPW} can be formulated as follows.
+\begin{thm}
+Let $\varphi : \mathfrak{sl}_n (\mathbb{F}) \longrightarrow \mathfrak{sl}_n (\mathbb{F})$ be a linear automorphism. Assume that $\varphi (\mathcal{N}) \subseteq \mathcal{N}.$ Then either $\exists\, P \in \mathcal{GL}_n (\mathbb{F})\, \exists\, c \in \mathbb{F} \setminus \{0\}\, \forall\, A \in \mathfrak{sl}_n (\mathbb{F}) :\, \varphi (A) = c P A P^{-1},$ or $\exists\, P \in \mathcal{GL}_n (\mathbb{F})\, \exists\, c \in \mathbb{F} \setminus \{0\}\, \forall\, A \in \mathfrak{sl}_n (\mathbb{F}) :\, \varphi (A) = c P A^{\rm T} P^{-1}.$
+\end{thm}
+
+The original proof is based on the Gerstenhaber - Serezhkin theorem, some elementary algebraic geometry, and the fundamental theorem of projective geometry.
+\begin{thebibliography}{99}
+\bibitem[BPW]{BPW}
+P. Botta, S. Pierce, W. Watkins, Linear transformations that preserve the nilpotent matrices, \emph{Pacific J. Math.} {\bf 104} (No. 1): 39--46 (1983).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

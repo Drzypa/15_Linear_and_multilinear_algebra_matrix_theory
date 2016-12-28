@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PentadiagonalMatrix}
+\pmcreated{2013-03-22 13:23:23}
+\pmmodified{2013-03-22 13:23:23}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{pentadiagonal matrix}
+\pmrecord{6}{33927}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmclassification{msc}{65-00}
+\pmsynonym{penta-diagonal matrix}{PentadiagonalMatrix}
+%\pmkeywords{pentadiagonal penta-diagonal}
+\pmrelated{TridiagonalMatrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+An $n \times n$ {\bf pentadiagonal} matrix (with $n\ge 3$) is 
+a matrix of the form
+\[
+\begin{pmatrix}
+c_1    &   d_1  &   e_1     &   0       &  \cdots  & \cdots  &  0       \\ 
+b_1    &   c_2  &   d_2     &   e_2     &  \ddots  &         &  \vdots  \\
+a_1    &   b_2  &   \ddots  &   \ddots  &  \ddots  & \ddots  &  \vdots  \\
+  0    &   a_2  &  \ddots   &  \ddots   & \ddots   & e_{n-3} &  0       \\ 
+\vdots & \ddots &   \ddots   &   \ddots  &  \ddots  & d_{n-2} &  e_{n-2} \\
+\vdots &        &   \ddots  &   a_{n-3} &  b_{n-2} & c_{n-1} &  d_{n-1} \\
+0      & \cdots &   \cdots  &   0       &  a_{n-2} & b_{n-1} &  c_n
+\end{pmatrix}.
+\]
+It follows that a pentadiagonal matrix is determined by five vectors:
+one $n$-vector $c=(c_1,\ldots, c_n)$, 
+two $(n-1)$-vectors $b=(b_1,\ldots, b_{n-1})$ 
+               and  $d=(d_1,\ldots, d_{n-1})$,
+and two $(n-2)$-vectors $a=(a_1,\ldots, a_{n-2})$ 
+               and  $e=(e_1,\ldots, e_{n-2})$.
+It follows that a pentadiagonal matrix is completely determined
+by $n+2(n-1)+2(n-2)=5n-6$ scalars.
+%%%%%
+%%%%%
+\end{document}

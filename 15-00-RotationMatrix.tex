@@ -1,0 +1,122 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RotationMatrix}
+\pmcreated{2013-03-22 15:03:57}
+\pmmodified{2013-03-22 15:03:57}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{rotation matrix}
+\pmrecord{17}{36786}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmsynonym{rotational matrix}{RotationMatrix}
+\pmrelated{OrthogonalMatrices}
+\pmrelated{ExampleOfRotationMatrix}
+\pmrelated{DecompositionOfOrthogonalOperatorsAsRotationsAndReflections}
+\pmrelated{DerivationOfRotationMatrixUsingPolarCoordinates}
+\pmrelated{DerivationOf2DReflectionMatrix}
+\pmrelated{TransitionToSkewAngledCoordinates}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{defn} A \emph{rotation matrix} is a 
+    (real) orthogonal matrix whose determinant is $+1$. 
+All $n\times n$ rotation matrices form a group called
+    the \emph{specia{l} orthogona{l} grou{p}} and it is denoted by 
+    $\operatorname{SO}(n)$. 
+\end{defn}
+
+\subsubsection*{Examples}
+\begin{enumerate}
+\item The identity matrix in $\R^n$ is a rotation matrix.
+\item The most general rotation matrix in $\R^2$ can be written as 
+$$
+  \begin{pmatrix} 
+       \cos \theta & -\sin \theta \\  
+      \sin \theta & \cos \theta
+  \end{pmatrix},
+$$
+where $\theta\in \R$. 
+Multiplication (from the left) with this matrix 
+rotates a vector (in $\R^2$) $\theta$ radians in the anti-clockwise
+direction. 
+\end{enumerate}
+
+\subsubsection*{Properties}
+\begin{enumerate}
+\item Suppose $v\in \R^n$ is a unit vector. 
+  Then there exists a rotation matrix $R$
+  such that $R\cdot v = (1,0,\ldots, 0)$.
+\item 
+In fact, for $v\in \R^n$, $n\ge 3$, there are many rotation matrices 
+$\mathbf{R} \in \operatorname{SO}(n)$ such that 
+$R\cdot v = (1,0,\ldots, 0)^T$.
+To see this, let $f$ be the mapping   
+  $f\colon \operatorname{SO}(n-1)\rightarrow \operatorname{SO}(n)$,
+  defined as
+$$
+ f(Q)=
+ \begin{pmatrix}
+ 1 & 0_{1\times n-1}\\
+ 0_{n-1\times 1} & Q_{n-1\times n-1}
+ \end{pmatrix}.
+$$
+Then for each $Q\in \operatorname{SO}(n-1)$, $f(Q)$ 
+    maps $(1,0,\ldots, 0)^T$ onto itself. Thus, if 
+    $R_0 \in \operatorname{SO}(n)$ satisfies $R\cdot v=(1,0,\ldots, 0)^T$, 
+    then $f(Q)\cdot R$ satisfies the same property for all 
+    $Q\in \operatorname{SO}(n-1)$. 
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

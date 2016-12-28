@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedBezoutTheoremOnMatrices}
+\pmcreated{2013-03-22 17:43:35}
+\pmmodified{2013-03-22 17:43:35}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{generalized B\'ezout theorem on matrices}
+\pmrecord{8}{40173}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-01}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor*}{Corollary}
+\newtheorem{theorem*}{Generalized B\'ezout theorem}
+\begin{document}
+\begin{theorem*} Let $M[x]$ be an arbitrary matrix polynomial of order $n$ and $A$ a square matrix of the same order. Then, when the matrix polynomial is divided on the right (left) by the characteristic polynomial $xI-A$, the remainder is $M(A)$ ($\widehat{M}(A)$). 
+\end{theorem*}
+\begin{proof} 
+Consider $M[x]$ given by
+\begin{equation}
+M[x] = M_0 x^m + M_1 x^{m-1} + \cdots + M_m, \qquad (M_0\neq 0).
+\end{equation}
+The polynomial can also be written as
+\begin{equation}
+M[x]=x^mM_0+x^{m-1}M_1+\cdots +M_m.
+\end{equation}
+We are now substituting the scalar argument (real or complex) $x$ by the matrix $A$ and therefore (1) and (2) will, in general, be distinct, as the powers of $A$ need not be permutable with the polynomial matrix coefficients. So that,
+\begin{equation*}
+M(A) = M_0 A^m + M_1 A^{m-1} + \cdots + M_m
+\end{equation*}
+and
+\begin{equation*}
+\widehat{M}(A)=A^mM_0+A^{m-1}M_1+\cdots +M_m,
+\end{equation*}
+calling $M(A)$ ($\widehat{M}(A)$) the right (left) value of $M[x]$ on substitution of $A$ for $x$. \\
+If we divide $M[x]$ by the binomial $xI-A$ ($I$ is the correspondent  identity matrix), we shall prove that the right (left) remainder $R$ ($\widehat{R}$) does not depend on $x$. In fact,
+\begin{align*}
+M[x]=& M_0 x^m + M_1 x^{m-1} + \cdots + M_m \\
+    =& M_0 x^{m-1} (xI-A) + (M_0 A + M_1) x^{m-1} + M_2 x^{m-2} + \cdots + M_m \\
+    =& [M_0 x^{m-1} + (M_0 A + M_1) x^{m-2}](xI-A) + (M_0A^2 + M_1A + M_2)x^{m-2} + M_3x^{m-3} + \cdots + M_m \\
+    =& [M_0 x^{m-1} + (M_0A + M_1)x^{m-2} + (M_0A^2 + M_1A + M_2)x^{m-3}](xI-A) \\
+     & + (M_0A^3 + M_1A^2 + M_2A + M_3)x^{m-3} + M_4x^{m-4} + \cdots + M_m \\
+    =& [M_0 x^{m-1}+(M_0A+M_1)x^{m-2}+(M_0A^2+M_1A+M_2)x^{m-3}+\cdots \\
+     & +(M_0A^{m-1}+M_1A^{m-2}+\cdots+M_{m-1})](xI-A) + M_0A^m+M_1A^{m-1}+\cdots+M_m, 
+\end{align*}
+whence we have found that
+\begin{equation*}
+R= M_0A^m+M_1A^{m-1}+\cdots+M_m\equiv M(A),
+\end{equation*}
+and analogously that
+\begin{equation*}
+\widehat{R}= A^mM_0+A^{m-1}M_1+\cdots+M_m\equiv \widehat{M}(A),
+\end{equation*}
+which proves the theorem.
+\end{proof}
+From this theorem we have the following
+\begin{cor*}
+A polynomial $M[x]$ is divisible by the characteristic polynomial $xI-A$ on the right (left) without remainder 
+if\mbox{}f $M(A)=0$ ($\widehat{M}(A)=0$).
+\end{cor*}
+
+%%%%%
+%%%%%
+\end{document}

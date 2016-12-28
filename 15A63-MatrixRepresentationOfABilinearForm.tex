@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MatrixRepresentationOfABilinearForm}
+\pmcreated{2013-03-22 14:56:22}
+\pmmodified{2013-03-22 14:56:22}
+\pmowner{vitriol}{148}
+\pmmodifier{vitriol}{148}
+\pmtitle{matrix representation of a bilinear form}
+\pmrecord{5}{36630}
+\pmprivacy{1}
+\pmauthor{vitriol}{148}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A63}
+\pmclassification{msc}{11E39}
+\pmclassification{msc}{47A07}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Given a bilinear form, $B : U \times V \rightarrow K$, we show how we can represent it with a matrix, with respect to a particular pair of bases for $U$ and $V$
+
+Suppose $U$ and $V$ are finite-dimensional and we have chosen bases, ${{\cal B}_1} = \{e_1, \ldots\}$ and ${{\cal B}_2}=\{f_1, \ldots\}$. Now we define the matrix $C$ with entries $C_{ij} = B(e_i, f_j)$. This will be the matrix associated to $B$ with respect to this basis as follows; If we write $x,y \in V$ as column vectors in terms of the chosen bases, then check $B(x,y) = x^T C y$. Further if we choose the corresponding dual bases for $U^\ast$ and $V^\ast$ then $C$ and $C^T$ are the corresponding matrices for $B_R$ and $B_L$, respectively (in the sense of linear maps). Thus we see that a symmetric bilinear form is represented by a symmetric matrix, and similarly for skew-symmetric forms.
+
+Let ${{\cal B}_1^\prime}$ and ${{\cal B}_2^\prime}$ be new bases, and $P$ and $Q$ the corresponding change of basis matrices. Then the new matrix is $C^\prime = P^{T}CQ$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GramMatrix}
+\pmcreated{2013-03-22 17:56:55}
+\pmmodified{2013-03-22 17:56:55}
+\pmowner{lalberti}{18937}
+\pmmodifier{lalberti}{18937}
+\pmtitle{Gram matrix}
+\pmrecord{5}{40447}
+\pmprivacy{1}
+\pmauthor{lalberti}{18937}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A63}
+\pmsynonym{Gram matrices}{GramMatrix}
+\pmsynonym{Gram bilinear form}{GramMatrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+For a vector space $V$ of dimension $n$ over a field $k$, endowed with an inner product $<.,.>: V\times V\to k$, and for any given sequence of elements $x_1,\ldots,x_l \in V$, consider the following inclusion map $\iota$ associated to the $(x_i)_{i=1,\ldots,l}$:
+$$\begin{array}{cccc}
+\iota:& k^l & \to & k^n=V\\
+      & (\lambda_1,\ldots,\lambda_l)& \mapsto & \sum_{i=1}^l \lambda_i x_i
+\end{array}
+$$
+The \emph{Gram bilinear form} of the $(x_i)_{i=1,\ldots,l}$ is the function
+$$x,y\in k^l\times k^l \mapsto <\iota(x),\iota(y)>$$
+The \emph{Gram matrix} of the $(x_i)_{i=1,\ldots,l}$ is the matrix associated to the Gram bilinear form in the canonical basis of $k^l$. The Gram form (resp. matrix) is a symmetric bilinear form (resp. matrix).\\
+
+Gram forms/matrices are usually considered with $k=\mathbb R$ and $<.,.>$ the usual scalar products on vector spaces over $\mathbb R$. In that context they have a strong geometrical meaning:
+\begin{itemize}
+\item The determinant of the Gram form/matrix is $0$ \underline{iff} $\iota$ is an injection.
+\item If $\iota$ is injective, the Gram matrix (resp. form) is a positive symmetric matrix (resp. bilinear form).
+\item $\det(G)^{-2}=\mathrm{Vol}(\iota^{-1}(B_{0,1}))$ where $G$ is the gram form/matrix, $\mathrm{Vol}$ denotes the volume of a subset of ${\mathbb R}^n$, and $B_{0,1}$ is the unit ball of ${\mathbb R}^n$ centered at $0$.
+\item Let $\Delta: \lambda\in {\mathbb R}^l \mapsto G(\lambda,\lambda)$, where $G$ is the Gram bilinear form, then $\iota^{-1}(B_{0,1})=\Delta^{-1}([0,1])$.
+\item If $\iota$ is injective and $s:\mathrm{Im}(\iota)\subset{\mathbb R}^n \to {\mathbb R}^l$ is an isometry, then $\det(s\circ\iota)^2=\det(G)$.
+\item Let $f$ be an endomorphism of ${\mathbb R}^n$ and $M$ its matrix. Let $H,U$ be the polar decomposition of $M$, $H$ is a symmetric positive matrix and $U$ an orthogonal matrix. Let the $x_i$ be the columns of $M$ ($l=n$) and let $G$ be the Gram matrix the $x_i$. Then $H^2=G$. (N.B.: this is one way to prove the existence of the polar decomposition, take the square root of the Gram matrix, multiply $M$ by its inverse and it easily follows that what is obtained is an orthogonal matrix).
+\end{itemize}
+
+They are utilized in statistics in Principal components analysis. One wants to determine the general trend in terms of few characteristics ($l$ of them) in a large sample ($n$ individuals). Each $x_i (\in {\mathbb R}^n)$ represents the results of the $n$ individuals in the sample for the $i^\mathrm{th}$ characteristic. Each one of the $l$ dimensions represents a characteristic and one wants to know what are the predominant characteristics and if they bear some kind of linear relations between them. This is achieved by diagonalizing the Gram matrix (often called dispersion matrix or covariance matrix in that context). The higher the eigenvalue, the more important the eigenvector associated to it.
+%%%%%
+%%%%%
+\end{document}

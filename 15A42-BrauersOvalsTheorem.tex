@@ -1,0 +1,122 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BrauersOvalsTheorem}
+\pmcreated{2013-03-22 15:35:30}
+\pmmodified{2013-03-22 15:35:30}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{Brauer's ovals theorem}
+\pmrecord{15}{37503}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A42}
+\pmrelated{GershgorinsCircleTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $A$ be a square complex matrix, $R_i=\sum_{j\ne i}\left|a_{ij}\right|\quad 1\leq i\leq n$. Let's consider the ovals of this kind: $O_{ij}=\left\{z\in\mathbb{C}:\left|z-a_{ii}\right|\left|z-a_{jj}\right|\leq R_iR_j\right\}\quad \forall i\ne j$. Such ovals are called \emph{Cassini ovals}.
+
+Theorem (A. Brauer): All the eigenvalues of A lie inside the union of these $\frac{n(n-1)}{2}$ ovals of Cassini:$\sigma(A)\subseteq\bigcup_{i\ne j}O_{ij}$.
+
+Proof:
+Let $(\lambda,\mathbf{v})$ be an eigenvalue-eigenvector pair for $A$, and let $v_p,v_q$ be the components of $\mathbf{v}$ with the two maximal absolute values, that is $\left|v_p\right|\geq\left|v_q\right|\geq\left|v_i\right|\quad \forall i\ne p$. (Note that $\left|v_p\right|\ne 0$, otherwise $\mathbf{v}$ should be all-zero, in contrast with eigenvector definition). We can also assume that $\left|v_q\right|$ is not zero, because otherwise $A\mathbf{v}=\lambda\mathbf{v}$ would imply $a_{pp}=\lambda$, which trivially verifies the thesis. Then, since $A\mathbf{v}=\lambda\mathbf{v}$, we have:
+
+$(\lambda-a_{pp})v_p=\sum_{j=1,j\ne p}^n a_{pj}v_j$
+
+and so
+
+$\left|\lambda-a_{pp}\right|\left|v_p\right|=\left|\sum_{j=1,j\ne p}^n a_{pj}v_j\right|\leq\sum_{j=1,j\ne p}^n\left|a_{pj}\right|\left|v_j\right|\leq\sum_{j=1,j\ne p}^n\left|a_{pj}\right|\left|v_q\right|=R_p\left|v_q\right|$
+
+that is
+
+$\left|\lambda-a_{pp}\right|\leq R_p\frac{\left|v_q\right|}{\left|v_p\right|}$.
+
+In the same way, we obtain:
+
+$\left|\lambda-a_{qq}\right|\leq R_q\frac{\left|v_p\right|}{\left|v_q\right|}$.
+
+Multiplying the two inequalities, the two fractional terms vanish, and we get:
+
+$\left|\lambda-a_{pp}\right|\left|\lambda-a_{qq}\right|\leq R_pR_q$
+
+which is the thesis.$\square$
+
+Remarks:
+
+1) Much like the Levy-Desplanques theorem states a sufficient condition, based on Gerschgorin circles, for non-singularity of a matrix, Brauer's theorem can be employed to state a similar sufficient condition; namely, the following result of Ostrowski holds:
+
+Corollary: Let $A$ be a $n\times n$ complex-valued matrix; if for all $i\ne j$ we have $\left|a_{ii}\right|\left|a_{jj}\right|>R_iR_j$, then $A$ is non singular.
+
+The proof is obvious, since, by Brauer's theorem, the above condition excludes the point $z=0$ from the spectrum of $A$, implying this way $\det(A)\ne 0$.
+
+2) Since both Gerschgorin's and Brauer's results rely upon the same $2n$ numbers, namely $\left\{a_{ii}\right\}_{i=1}^n$ and $\left\{R_i\right\}_{i=1}^n$, one may wonder if Brauer's result is stronger than Gerschgorin's one; actually, the answer is positive, as the following inclusion shows:
+
+Corollary: Let $G(A)=\bigcup_{i=1}^n D_i(A)$ and $B(A)=\bigcup_{i\ne j}^n O_{ij}(A)$ be respectively Gershgorin and Brauer eigenvalues inclusion regions ($D_i(A)$ are the Gerschgorin circles and $O_{ij}(A)$ are the Brauer's Cassini ovals); then
+
+$B(A)\subseteq G(A)$.
+
+Proof:
+Let $O_{ij}$ be one of the $n(n-1)/2$ ovals of Cassini for matrix $A$ and be $z\in O_{ij}$. If $R_i=0$ or $R_j=0$, Brauer's theorem imply $z=a_{ii}$ or $z=a_{jj}$ respectively; but since both $a_{ii}$ and $a_{jj}$ belong to their respective Gerschgorin circles, we have $z\in(D_i\cup D_j)$. If both $R_i>0$ and $R_j>0$, then we can write:
+
+$\frac{\left|z-a_{ii}\right|}{R_i}\cdot\frac{\left|z-a_{jj}\right|}{R_j}\leq 1.$
+
+For the left-hand side to be not greater than 1, $\frac{\left|z-a_{ii}\right|}{R_i}$ or $\frac{\left|z-a_{jj}\right|}{R_j}$ must be not greater than 1, which in turn means $z\in D_i$ or $z\in D_j$, that is $z\in(D_i\cup D_j)$. This way, we proved that $O_{ij}\subseteq(D_i\cup D_j)$; now, we have:
+
+$B(A)=\bigcup_{i\ne j}O_{ij}\subseteq\bigcup_{i=1}^n D_i=G(A)$.
+
+
+3) It's obvious from definition that there are infinitely many matrices which generate the same ovals of Cassini: namely, let's define
+
+$\Omega(A)=\left\{M\in\mathbf{C}^{n\times n}: m_{ii}=a_{ii}, R_i(M)=R_i(A)\right\}$
+
+as the set of all matrices which share the same ovals of Cassini as $A$. Then, by Brauer's theorem, we have, for all $M\in\Omega$ matrices,
+\[
+\sigma(M)\subseteq B(A),
+\]
+and therefore, having defined $\sigma(\Omega)=\bigcup_{M\in\Omega}\sigma(M)$, we have
+\[
+\sigma(\Omega)\subseteq B(A).
+\]
+
+One may then ask how sharp this inclusion is, which, informally speaking, is equivalent to asking how "efficient" is the "use", by Brauer's theorem, of the 2n pieces of information $\left\{a_{ii}\right\}_{i=1}^n$ and $\left\{R_i\right\}_{i=1}^n$ in the construction of inclusion sets (if for example we found the inclusion to be very loose, that is $\sigma(\Omega)$ to be a very little subset of $B(A)$, we could conjecture that the knowledge of the 2n numbers used by Brauer's theorem should have led to a more precise bounding, since the spectra of all matrices which share these numbers lie in a much smaller region). It has been proven that actually
+\[
+\sigma(\Omega)=B(A),
+\]
+thus showing Brauer's ovals are \emph{optimal ones} under this point of view. 
+
+\begin{thebibliography}{6}
+\bibitem{Gersch} S. Gerschgorin,
+\emph{Uber die Abgrenzung der Eigenwerte einer Matrix}, Isv. Akad. Nauk USSR Ser. Mat., 7 (1931), pp. 749-754
+\bibitem{Brauer} A. Brauer,
+\emph{Limits for the characteristic roots of a matrix II}, Duke Math. J. 14 (1947), pp. 21-26
+\bibitem{Varga1} R. S. Varga and A. Krautstengl, 
+\emph{On Gersgorin-type problems and ovals of Cassini}, Electron. Trans. Numer. Anal., 8 (1999), pp. 15-20
+\bibitem{Varga2} Richard S. Varga,
+\emph{Gersgorin-type eigenvalue inclusion theorems and their sharpness},Electronic Transactions on Numerical Analysis.
+Volume 12 (2001), pp. 113-133
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

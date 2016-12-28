@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomogeneousFunction}
+\pmcreated{2013-03-22 14:44:37}
+\pmmodified{2013-03-22 14:44:37}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{homogeneous function}
+\pmrecord{8}{36381}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+\pmsynonym{positively homogeneous function of degree}{HomogeneousFunction}
+\pmsynonym{homogeneous function of degree}{HomogeneousFunction}
+\pmsynonym{positively homogeneous function}{HomogeneousFunction}
+\pmrelated{HomogeneousPolynomial}
+\pmrelated{SubLinear}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{defn} Suppose $V,\,W$ are a vector spaces over $\R$, 
+and $f\colon V \to W$ is a mapping. 
+\begin{itemize}
+\item 
+   If there exists an $r \in \R$, such that
+   $$
+     f(\lambda v) = \lambda^r f(v)
+   $$
+   for all $\lambda \in \R$ and $v\in V$, then $f$ is 
+   a \PMlinkescapetext{\emph{homogeneous function of degree $r$}}.
+\item 
+   If there exists an $r\in \R$, such that
+   $$
+     f(\lambda v) = |\lambda|^r f(v)
+   $$
+   for all $\lambda \in \R$ and $v\in V$, 
+   then $f$ is 
+   \PMlinkescapetext{\emph{absolutely homogeneous function of degree $r$}}.
+\item 
+   If there exists an $r\in \R$, such that
+   $$
+     f(\lambda v) = \lambda^r f(v)
+   $$
+   for all $\lambda \ge 0$ and $v\in V$, then $f$ is 
+   a \PMlinkescapetext{\emph{positively homogeneous function of degree $r$}}.
+\end{itemize}
+\end{defn}
+
+\subsubsection*{Notes}
+For any homogeneous function as above, $f(0)=0$.
+
+When the \PMlinkescapetext{type} of homegeneity is clear one simply talks about
+$r$-homogeneous functions.
+%%%%%
+%%%%%
+\end{document}

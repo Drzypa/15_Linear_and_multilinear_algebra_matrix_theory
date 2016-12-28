@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfDiagonallyDominantMatrix}
+\pmcreated{2013-03-22 15:34:32}
+\pmmodified{2013-03-22 15:34:32}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{properties of diagonally dominant matrix}
+\pmrecord{15}{37483}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+1)(Levy-Desplanques theorem) A strictly diagonally dominant matrix is non-singular.
+
+\begin{proof}
+Let $A$ be a strictly diagonally dominant matrix and let's assume $A$ is singular, that is, $\lambda=0\in\sigma(A)$. Then, by Gershgorin's circle theorem, an index $i$ exists such that:
+\[
+\sum_{j\ne i}\left|a_{ij}\right|\geq\left|\lambda-a_{ii}\right|=\left|a_{ii}\right|,
+\]
+which is in contrast with strictly diagonally dominance definition.
+\end{proof}
+
+2)(\PMlinkescapetext{Ostrowski theorem}) $\left\vert\det(A)\right\vert\geq\prod_{i=1}^{n}\left(\left\vert a_{ii}\right\vert -\sum_{j=1,j\neq i}\left\vert
+a_{ij}\right\vert\right)$ (See \PMlinkname{here}{ProofOfDeterminantLowerBoundOfAStrictDiagonallyDominantMatrix} for a proof.)
+
+3) A Hermitian diagonally dominant matrix with real nonnegative diagonal entries is positive semidefinite.
+
+\begin{proof}
+Let $A$ be a Hermitian diagonally dominant matrix with real nonnegative diagonal entries; then its eigenvalues are real and, by Gershgorin's circle theorem, for each eigenvalue an index $i$ exists such that:
+\[
+\lambda\in[a_{ii}-\sum_{j\ne i}\left|a_{ij}\right|, a_{ii}+\sum_{i\ne j}\left|a_{ij}\right| ],
+\]
+which implies, by definition of diagonally dominance,$\lambda\geq 0.$
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfWielandtHoffmanTheorem}
+\pmcreated{2013-03-22 14:58:51}
+\pmmodified{2013-03-22 14:58:51}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{proof of Wielandt-Hoffman theorem}
+\pmrecord{6}{36682}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A18}
+\pmclassification{msc}{15A42}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\sse{\subseteq}
+\def\bigtimes{\mathop{\mbox{\Huge $\times$}}}
+\def\impl{\Rightarrow}
+\def\tr{\operatorname{tr}}
+\def\Re{\operatorname{Re}}
+\begin{document}
+Since both $A$ and $B$ are normal, they can be diagonalized by unitary transformations:
+\[
+  A = V^\dagger C V \quad \text{and} \quad B = W^\dagger D W,
+\]
+where $C$ and $D$ are diagonal, $V$ and $W$ are unitary, and $(~)^\dagger$
+denotes the conjugate transpose. The Frobenius matrix norm is defined by the quadratic form $\|A\|_F^2 = \tr[A^\dagger A]$ and is invariant
+under unitary transformations, hence
+\[
+  \|A-B\|_F^2 = \|V^\dagger C V - W^\dagger D W\|_F^2
+    = \|C\|_F^2 + \|D\|_F^2
+      - 2\Re\tr[C^\dagger U^\dagger D U],
+\]
+where $U=W V^\dagger$. The matrix $U$ is also unitary, let its matrix elements
+be given by $(U)_{ij} = u_{ij}$. Unitarity implies that the matrix with
+elements $|u_{ij}|^2$ has its row and column sums equal to $1$, in other words,
+it is doubly stochastic.
+
+The diagonal elements $C_{ii} = a_i$ are eigenvalues of $A$ and
+$D_{ii} = b_i$ are those of $B$. Writing out the Frobenius norm explicitly,
+we get
+\[
+  \|A-B\|_F^2 = \sum_{i} (|a_i|^2+|b_i|^2)
+    - 2\Re\sum_{ij} \overline{a}_i |u_{ij}|^2 b_j
+    \ge \sum_{i} (|a_i|^2+|b_i|^2)
+      - 2\min_{S} \Re \sum_{ij} \overline{a}_i s_{ij} b_j,
+\]
+where the minimum is taken over all doubly stochastic matrices $S$, whose
+elements are $(S)_{ij} = s_{ij}$. By the Birkoff-von Neumann theorem, doubly
+stochastic matrices form a closed \PMlinkname{convex}{ConvexSet} polyhedron
+with permutation matrices at the vertices. The expression
+$\sum_{ij} \overline{a}_i s_{ij} b_j$ is a linear functional on this polyhedron,
+hence its minimum is achieved at one of the vertices, that is when $S$
+is a permutation matrix.
+
+If $S$ represents the permutation $\sigma$, its action can be written as
+$\sum_{j} s_{ij} b_j = b_{\sigma(i)}$. Finally, we can write the last
+inequality as
+\[
+  \|A-B\|_F^2 \ge \sum_{i} (|a_i|^2+|b_{\sigma(i)}|^2)
+    - 2\min_{\sigma} \Re\sum_{ij} \overline{a}_i b_{\sigma(i)}
+    = \min_{\sigma} |a_i-b_{\sigma(i)}|^2,
+\]
+which is exactly the statement of the Wielandt-Hoffman theorem.
+%%%%%
+%%%%%
+\end{document}

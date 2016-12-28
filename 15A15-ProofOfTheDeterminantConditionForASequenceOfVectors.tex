@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTheDeterminantConditionForASequenceOfVectors}
+\pmcreated{2013-03-22 14:33:46}
+\pmmodified{2013-03-22 14:33:46}
+\pmowner{GeraW}{6138}
+\pmmodifier{GeraW}{6138}
+\pmtitle{proof of the determinant condition for a sequence of vectors}
+\pmrecord{5}{36117}
+\pmprivacy{1}
+\pmauthor{GeraW}{6138}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newtheorem*{theorem}{Theorem}
+
+\DeclareMathOperator{\spn}{span}
+\begin{document}
+\begin{theorem} Let $x_1,x_2,...$ be a sequence of $d$ dimensional vectors. Assume that there is $C: \N^d \to \R \smallsetminus \{0\}$
+such that
+\begin{equation}\label{Eq:assump}
+\sum_{\substack{n_1+\cdots+n_d=n \\ 0< n_1 < \cdots < n_d }}C(n_1,...,n_d) \det[x_{n_1},x_{n_2},...,x_{n_d}] = 0
+\end{equation} for every $n \in \N$. Then $\det[x_{n_1},x_{n_2},...,x_{n_d}]\!=\!0$ for all $(n_1,...,n_d) \in \N^d$. \end{theorem}
+\begin{proof}
+Introduce a linear order over the set of ordered tuples: $(n_1,n_2,...,n_d) \prec (\hat{n}_1,\hat{n}_2,...,\hat{n}_d)$ if $\left(\sum_{i=1}^d n_i,\hat{n}_d,\hat{n}_{d-1},...,\hat{n}_1\right)$ precedes $\left(\sum_{i=1}^d\hat{n}_i,n_d,n_{d-1},...,n_1\right)$
+lexicographically. Let $(n_1,n_2,...,n_d)$ be the minimal (according to the above order) ordered tuple for which
+\begin{equation}\label{Eq:det-is-not-zero}
+\det[x_{n_1},x_{n_2},...,x_{n_d}] \ne 0.
+\end{equation}
+Take another ordered tuple, $(\hat{n}_1,\hat{n}_2,...,\hat{n}_d)$, such that $\sum_{i=1}^d n_i = \sum_{i=1}^d \hat{n}_i$. By minimality, if
+$(n_d,n_{d-1},...,n_1)$ precedes $(\hat{n}_d,\hat{n}_{d-1},...,\hat{n}_1)$ lexicographically then
+$\det[x_{\hat{n}_1},x_{\hat{n}_2},...,x_{\hat{n}_d}]=0$. %
+Otherwise, let $i \in \{0,1,...,d-1\}$ be the first index such that $n_{d-i} \ne \hat{n}_{d-i}$ (more specifically, $n_{d-i} > \hat{n}_{d-i}$). Then,
+$\hat{n}_{d-j} = n_{d-j}$ for $j=0,...,i-1$ and $\hat{n}_{d-j} < n_{d-i}$ for $j=i,...,d-1$. Therefore,
+\[\det[x_{n_1},...,x_{n_{d-i-1}},x_{\hat{n}_m},x_{n_{d-i+1}},...,x_{n_d}] = 0\] for all $m=1,2,...,d$ (some because of repeated columns and the others
+because $\sum_{j=1}^d n_j - n_{d-i} + \hat{n}_m < \sum_{j=1}^d n_j$). Since the vectors $x_{n_1},x_{n_2},...,x_{n_d}$ are linearly independent, we get
+that
+\[\{x_{\hat{n}_1},x_{\hat{n}_2},...,x_{\hat{n}_d}\} \subset \spn \left(\{x_{n_1},x_{n_2},...,x_{n_d}\} \smallsetminus \{x_{n_{d-i}}\}\right).\]
+In particular $\det[x_{\hat{n}_1},x_{\hat{n}_2},...,x_{\hat{n}_d}]=0$. Therefore, \eqref{Eq:assump} reduces to $\det[x_{n_1},x_{n_2},...,x_{n_d}]=0$
+which contradicts \eqref{Eq:det-is-not-zero}.
+
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

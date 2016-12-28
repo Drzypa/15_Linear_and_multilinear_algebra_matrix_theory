@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SelfConsistentMatrixNorm}
+\pmcreated{2013-03-22 13:39:22}
+\pmmodified{2013-03-22 13:39:22}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{self consistent matrix norm}
+\pmrecord{10}{34310}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A60}
+\pmrelated{GelfandSpectralRadiusTheorem}
+\pmdefines{self consistent norm}
+\pmdefines{self-consistent matrix norm}
+\pmdefines{self-consistent norm}
+\pmdefines{self-consistent}
+\pmdefines{self consistent}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\mv}[1]{\mathbf{#1}}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A matrix norm $N$ is said to be \emph{self consistent} if
+\begin{displaymath}
+N(\mv{A}\mv{B})\leq N(\mv{A})\cdot N(\mv{B})
+\end{displaymath}
+for all pairs of matrices $\mv{A}$ and $\mv{B}$ such that $\mv{A}\mv{B}$ is defined.
+%%%%%
+%%%%%
+\end{document}

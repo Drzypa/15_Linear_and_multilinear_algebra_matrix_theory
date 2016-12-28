@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LinearInvolution}
+\pmcreated{2013-03-22 13:34:37}
+\pmmodified{2013-03-22 13:34:37}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{linear involution}
+\pmrecord{14}{34197}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A21}
+\pmsynonym{involution}{LinearInvolution}
+\pmrelated{Projection}
+\pmrelated{AntiIdempotent}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+{\bf Definition.}
+ Let $V$ be a vector space.
+ A \emph{ linear involution} is a linear
+ operator $L:V\to V$ such that $L^2$ is the identity operator on $V$.
+An equivalent definition is that  a linear involution is a linear operator that 
+equals its own inverse.
+
+{\bf Theorem 1.} Let $V$ be a vector space and let $A:V\to V$ be a linear involution.
+Then the eigenvalues of $A$ are $\pm 1$. Further,
+if $V$ is $\sC^n$, and $A$ is a $n\times n$ complex matrix, then we have that:
+\begin{enumerate}
+\item $\det A = \pm 1$.
+\item The characteristic polynomial of $A$, $p(\lambda) = \det( A-\lambda I)$,
+is a reciprocal polynomial, i.e.,
+$$ p(\lambda) = \pm \lambda^n p(1/\lambda).$$
+\end{enumerate}
+(\PMlinkname{proof.}{EigenvaluesOfAnInvolution})
+
+The next theorem gives a correspondence between involution
+ operators and projection operators.
+
+{\bf Theorem 2.} Let $L$ and $P$ be linear operators on a
+ vector space $V$ over a field of characteristic not 2, and let $I$ be the identity operator on $V$.
+ If $L$ is an involution then
+ the operators $\frac{1}{2}\big(I\pm L\big)$
+ are projection operators.
+ Conversely, if $P$ is a projection operator, then
+ the operators $\pm(2P-I)$ are involutions. \\
+
+Involutions have important application in expressing hermitian-orthogonal operators, that is, $H^t=\overline{H}=H^{-1}$. In fact, it may be represented as 
+$$H=Le^{iS},$$
+being $L$ a real symmetric involution operator and $S$ a real skew-symmetric operator permutable with it, i.e.
+
+$$L=\overline{L}=L^t, \qquad L^2=I, \qquad S=\overline{S}=-S^t, \qquad LS=SL.$$
+%%%%%
+%%%%%
+\end{document}

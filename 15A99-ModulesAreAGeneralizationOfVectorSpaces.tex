@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ModulesAreAGeneralizationOfVectorSpaces}
+\pmcreated{2013-03-22 13:38:18}
+\pmmodified{2013-03-22 13:38:18}
+\pmowner{jgade}{861}
+\pmmodifier{jgade}{861}
+\pmtitle{modules are a generalization of vector spaces}
+\pmrecord{7}{34288}
+\pmprivacy{1}
+\pmauthor{jgade}{861}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A99}
+%\pmkeywords{Vector Space}
+%\pmkeywords{Generalization}
+%\pmkeywords{Module}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+
+
+
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \PMlinkid{module}{1022} is the natural generalization of a vector space, in fact, when working over a field it is just another word for a vector space.
+
+If $M$ and $N$ are $R$-modules then a mapping $f: M\to N$ is called an $R$-morphism (or homomorphism) if:
+\[
+\forall x,y\in M: f(x+y) = f(x) + f(y) \quad \mathrm{ and } \quad
+\forall x\in M \forall \lambda \in R: f(\lambda x) = \lambda f(x)
+\] Note as mentioned in the beginning, if $R$ is a field, these properties are the defining properties for a linear transformation.
+
+Similarly in vector space terminology the image $\mathrm{Im} f := \{f(x): x\in M\}$ and kernel
+$\mathrm{Ker} f := \{x\in M : f(x) = 0_N \}$ are called the range and null-space respectively.
+%%%%%
+%%%%%
+\end{document}

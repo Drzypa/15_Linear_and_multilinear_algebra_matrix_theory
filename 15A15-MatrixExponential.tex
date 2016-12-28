@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MatrixExponential}
+\pmcreated{2013-03-22 13:33:27}
+\pmmodified{2013-03-22 13:33:27}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{matrix exponential}
+\pmrecord{13}{34162}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+\pmclassification{msc}{15-00}
+\pmrelated{ProofOfEquivalenceOfFormulasForExp}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\newcommand{\diag}{\mathop{\mathrm{diag}}}
+\newcommand{\trace}{\mathop{\mathrm{tr}}}
+
+The \emph{exponential} of a real valued square matrix $A$, denoted 
+by $e^A$, is defined as
+\begin{eqnarray*}
+e^A &=& \sum_{k=0}^\infty \frac{1}{k!}A^k \\
+    &=& I + A + \frac{1}{2} A^2 + \cdots
+\end{eqnarray*}
+Let us check that $e^A$ is a real valued square matrix.
+Suppose $M$ is a real number such $|A_{ij}| < M$ for all 
+entries $A_{ij}$ of $A$. 
+Then $|(A^2)_{ij}| < nM^2$ for all entries in $A^2$, 
+where $n$ is the order of $A$. (Alternatively, one could argue using matrix norms:  We have $||e^A||\leq e^{||A||}$ for the 2-norm, and hence the entries of $e^A$ are bounded by $M=||e^A||$.)  Thus, 
+in general, we have $|(A^k)_{i,j}| < n^k M^{k+1}$. Since
+$\sum_{k=0}^\infty \frac{n^k}{k!} M^{k+1}$ converges, we see that
+$e^A$ converges to real valued $n\times n$ matrix.  
+
+{\bf Example 1.} Suppose $A$ is nilpotent, i.e., $A^r = 0$ for some natural 
+number $r$. Then 
+\begin{eqnarray*}
+e^A &=& I + A + \frac{1}{2!} A^2 + \cdots + \frac{1}{(r-1)!} A^{r-1}. 
+\end{eqnarray*}
+
+{\bf Example 2.} If $A$ is diagonalizable, i.e., of the form 
+$A=L D L^{-1}$, where $D$ is a diagonal matrix, then
+\begin{eqnarray*}
+e^A &=& \sum_{k=0}^\infty \frac{1}{k!}(LDL^{-1})^k \\
+ &=& \sum_{k=0}^\infty \frac{1}{k!}LD^kL^{-1} \\ 
+    &=& L e^D L^{-1}.
+\end{eqnarray*}
+Further, if 
+$D=\diag\{a_1,\cdots, a_n\}$, then
+ $D^k = \diag\{a_1^k, \cdots, a_n^k\}$ whence
+\begin{eqnarray*}
+e^A &=& L \diag\{e^{a_1}, \cdots, e^{a_n}\} L^{-1}.
+\end{eqnarray*}
+For diagonalizable matrix $A$, it follows that
+$\det e^A = e^{\trace A}$.
+However, this formula is, in fact, valid for all $A$. 
+
+{\bf \PMlinkescapetext{Properties}} \\
+Let $A$ be a square $n\times n$ real valued matrix.
+Then the matrix exponential satisfies the following properties
+\begin{enumerate}
+\item For the $n\times n$ zero matrix $O$, $e^O=I$, where $I$ is the
+$n\times n$ identity matrix.
+\item If $A=L\diag\{a_1,\cdots, a_n\} L^{-1}$ for an invertible $n\times n$
+matrix $L$, then 
+$$ e^A = L \diag\{e^{a_1},\cdots, e^{a_n}\} L^{-1}.$$
+\item If $A$ and $B$ commute, 
+then $e^{A+B} = e^{A} e^B$.
+\item The trace of $A$ and the determinant of $e^A$ are related by the formula
+$$ \det e^A = e^{\trace A}.$$
+In effect, $e^A$ is always invertible. The inverse is given by 
+$$ (e^A)^{-1} = e^{-A}.$$
+\item If $e^A$ is a rotational matrix, then $\trace A=0$. 
+%\item Let $F(t) = e^{At}$ for $t\in \mathbb{R}$. Then 
+%$F(s+t)=F(s)F(t)$ and $\frac{d}{dt} F(t) = F e^{Ft}$. 
+\end{enumerate}
+{\bf A relevant example on property 3.} \\
+We report an interesting example where the cited property is valid. In the field of complex numbers consider the complex matrix 
+\begin{equation}
+C = A + iB,
+\end{equation} 
+being $C$ hermitian, i.e. $C^\intercal = \bar{C}$ (here "$\intercal$" and overline "$-$" stand for tranposition and conjugation, respectively) and orthogonal, i.e $C^{-1} = C^\intercal$ . From (1), 
+\begin{equation*}
+C^\intercal = A^\intercal + iB^\intercal.
+\end{equation*}
+Since $C$ is orthogonal, from the complex equation $CC^\intercal = I$ ($I$ is the identity matrix), we have
+\begin{equation*}
+CC^\intercal = (A + iB)(A^\intercal + iB^\intercal) = (AA^\intercal - BB^\intercal) + i(BA^\intercal + AB^\intercal) = I,
+\end{equation*}
+whence the imaginary part leads to the equation
+\begin{equation}
+BA^\intercal + AB^\intercal = 0.
+\end{equation}
+But $C$ is also hermitian, so that
+\begin{equation*}
+C^\intercal = A^\intercal + iB^\intercal = \bar{C} = A - iB,
+\end{equation*}
+therefore $A^\intercal = A$ is symmetric, and $B^\intercal = -B$ is skew-symmetric. From these and (2), $BA = AB$, and this implies that $\exp(A)\cdot \exp(B) = \exp(A + B)$. So that, the real and imaginary parts of an orthogonal and hermitian matrix verifies the property. Likewise, it is easy to show that if the complex matrix is symmetric and unitary, its real an imaginary components also verify this property.
+
+%%%%%
+%%%%%
+\end{document}

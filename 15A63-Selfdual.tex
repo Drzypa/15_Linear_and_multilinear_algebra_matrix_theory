@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Selfdual}
+\pmcreated{2013-03-22 12:29:40}
+\pmmodified{2013-03-22 12:29:40}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{self-dual}
+\pmrecord{5}{32719}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A63}
+\pmclassification{msc}{15A57}
+\pmclassification{msc}{15A04}
+\pmsynonym{self-adjoint}{Selfdual}
+\pmrelated{HermitianMatrix}
+\pmrelated{SymmetricMatrix}
+\pmrelated{SkewSymmetricMatrix}
+\pmdefines{anti self-dual}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\Hom}{\mathop{\mathrm{Hom}}\nolimits}
+\newcommand{\Mat}{\mathop{\mathrm{Mat}}\nolimits}
+\newcommand{\kfield}{\mathbb{K}}
+\newcommand{\supt}{^t}
+\newcommand{\dual}{^*}
+\newcommand{\adj}{^{\displaystyle \star}}
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\begin{document}
+\paragraph{Definition.}  Let $U$ be a finite-dimensional inner-product space
+over a field $\kfield$.  Let $T:U\rightarrow U$ be an endomorphism,
+and note that the adjoint endomorphism $T\adj$ is also an endomorphism
+of $U$.  It is therefore possible to add, subtract, and compare $T$
+and $T\adj$, and we are able to make the following definitions. An
+endomorphism $T$ is said to be {\em self-dual} (a.k.a.  {\em
+  self-adjoint}) if
+$$T=T\adj.$$
+By contrast, we say that the endomorphism is {\em anti self-dual} if 
+$$T=-T\adj.$$
+
+Exactly the same definitions can be made for an endomorphism of
+a complex vector space with a Hermitian inner product.
+
+\paragraph{Relation to the matrix transpose.} All of these definitions have
+their counterparts in the matrix setting.  Let $M\in
+\Mat_{n,n}(\kfield)$ be the matrix of $T$ relative to an orthogonal
+basis of $U$. Then $T$ is self-dual if and only if $M$ is a symmetric matrix,
+and anti self-dual if and only if $M$ is a skew-symmetric matrix.
+
+In the case of a Hermitian inner product we must replace the transpose
+with the conjugate transpose. Thus $T$ is self dual if and only if $M$ is a Hermitian matrix, i.e.
+$$M = \overline{M^t}.$$
+It is anti self-dual if and only if
+$$M = -\overline{M^t}.$$
+%%%%%
+%%%%%
+\end{document}

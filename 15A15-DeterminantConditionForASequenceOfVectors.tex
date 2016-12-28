@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeterminantConditionForASequenceOfVectors}
+\pmcreated{2013-03-22 14:33:44}
+\pmmodified{2013-03-22 14:33:44}
+\pmowner{GeraW}{6138}
+\pmmodifier{GeraW}{6138}
+\pmtitle{determinant condition for a sequence of vectors}
+\pmrecord{10}{36116}
+\pmprivacy{1}
+\pmauthor{GeraW}{6138}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\begin{document}
+Let $x_1,x_2,...$ be a sequence of $d$ dimensional vectors. Assume that there is a function $C \colon \N^d \to \R \smallsetminus \{0\}$
+such that
+\[\sum_{\substack{n_1+\cdots+n_d=n \\ 0< n_1 < \cdots < n_d }}C(n_1,...,n_d)\det[x_{n_1},x_{n_2},...,x_{n_d}] = 0 \]
+for every $n \in \N$. Then the sequence is contained within a proper linear subspace.
+%%%%%
+%%%%%
+\end{document}

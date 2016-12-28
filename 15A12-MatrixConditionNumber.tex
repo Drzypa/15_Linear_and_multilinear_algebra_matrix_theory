@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MatrixConditionNumber}
+\pmcreated{2013-03-22 13:04:17}
+\pmmodified{2013-03-22 13:04:17}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{matrix condition number}
+\pmrecord{10}{33480}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A12}
+\pmclassification{msc}{65F35}
+\pmsynonym{matrix condition number}{MatrixConditionNumber}
+\pmsynonym{condition number}{MatrixConditionNumber}
+\pmrelated{PropertyOfMatrixConditionNumber}
+\pmdefines{ill-conditioned}
+\pmdefines{well-conditioned}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\begin{document}
+\section{Matrix Condition Number}
+
+The \emph{condition number for matrix inversion} with respect to a matrix norm
+$\norm{\cdot}$ of a square matrix $A$ is defined by
+\[
+\kappa(A) = \Vert A \Vert \Vert A^{-1} \Vert\,,
+\]
+if $A$ is non-singular; and $\kappa(A) = +\infty$ if $A$ is singular.
+
+The condition number is a measure of stability or sensitivity of a matrix (or the linear system it represents) to numerical operations. In other words, we may not be able to trust the results of computations on an ill-conditioned matrix.
+
+Matrices with condition numbers near 1 are said to be \emph{well-conditioned}.  Matrices with condition numbers much greater than one (such as around $10^5$ for  a $5 \times 5$ Hilbert matrix) are said to be \emph{ill-conditioned}.  
+
+If $\kappa(A)$ is the condition number of $A$, then $\kappa(A)$ measures 
+a sort of inverse distance from $A$ to the set of singular matrices,
+normalized by $\norm{A}$.
+Precisely, if $A$ is invertible, and $\norm{B - A} < \norm{A^{-1}}^{-1}$,
+then $B$ must also be invertible.  On the other hand, in the case of the $2$-norm,
+there always exists a singular matrix $B$ such that $\norm{B-A}_2 = \norm{A^{-1}}_2^{-1}$
+(so the distance estimate is sharp).
+
+\begin{thebibliography}{3}
+\bibitem{Golub} Golub and Van Loan. \emph{Matrix Computations}, 3rd edition. Johns Hopkins University Press, 1996.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

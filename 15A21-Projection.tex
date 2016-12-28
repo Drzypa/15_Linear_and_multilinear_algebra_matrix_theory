@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Projection}
+\pmcreated{2013-03-22 12:52:13}
+\pmmodified{2013-03-22 12:52:13}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{projection}
+\pmrecord{8}{33208}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A21}
+\pmclassification{msc}{15A57}
+\pmdefines{orthogonal projection}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{{\PMlinkescapetext{{#1}}}}
+\newcommand{\pln}[2]{{\PMlinkname{{#1}}{#2}}}
+
+\newcommand{\adj}{^{\displaystyle \star}}
+\newcommand{\img}{\mathop{\mathrm{img}}\nolimits}
+\begin{document}
+A linear transformation $P:V\rightarrow V$ of a vector space $V$ is called a
+\emph{projection} if it acts like the identity on its image. This
+condition can be more succinctly expressed by the equation
+\begin{equation}
+  \label{eq:proj}
+  P^2 = P.  
+\end{equation}
+\begin{proposition}
+  If $P:V\rightarrow V$ is a projection, then
+  its image and the kernel are complementary subspaces, namely
+  \begin{equation}
+    \label{eq:comp}
+    V = \ker P \oplus \img P.
+  \end{equation}
+\end{proposition}
+\emph{Proof. }
+  Suppose that $P$ is a projection.  Let $v\in V$ be given, and set 
+  $$u=v-Pv.$$
+  The projection condition \eqref{eq:proj} then implies
+  that $u\in \ker P$, and we can write $v$ as the sum of an image and
+  kernel vectors:
+  $$v = u + Pv.$$
+  This decomposition is unique, because the
+  intersection of the image and the kernel is the trivial subspace.
+  Indeed, suppose that $v\in V$ is in both the image and the kernel of $P$.
+  Then, $Pv=v$ and $Pv=0$, and hence $v=0$. QED
+
+
+Conversely, every direct sum decomposition
+$$V = V_1 \oplus V_2$$
+corresponds to a projection $P:V\rightarrow V$ defined by
+$$
+Pv =\begin{cases}
+v & v\in V_1 \\
+0 & v\in V_2
+\end{cases}$$
+
+Specializing somewhat, suppose that the ground field is $\reals$ or
+$\cnums$ and that $V$ is equipped with a positive-definite inner
+product.  In this setting we call an endomorphism
+$P:V\rightarrow V$ an \emph{orthogonal projection} if it is self-dual
+$$P\adj = P,$$
+in addition to  satisfying the projection condition \eqref{eq:proj}.
+\begin{proposition}
+  The kernel and image of an orthogonal projection are orthogonal subspaces.
+\end{proposition}
+\emph{Proof. }
+  Let $u\in\ker P$ and $v\in \img P$ be given.  Since $P$
+  is self-dual we have
+  $$0 = \langle Pu,v\rangle = \langle u,Pv\rangle = \langle
+  u,v\rangle.$$
+QED
+
+Thus we see that a orthogonal projection $P$ projects a $v \in V$ onto
+$Pv$ in an orthogonal fashion, i.e.
+$$\langle v-Pv,u\rangle = 0$$
+for all $u\in \img P$.
+%%%%%
+%%%%%
+\end{document}

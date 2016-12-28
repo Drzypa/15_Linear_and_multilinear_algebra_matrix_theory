@@ -1,0 +1,256 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RayleighRitzTheorem}
+\pmcreated{2013-03-22 15:37:18}
+\pmmodified{2013-03-22 15:37:18}
+\pmowner{gufotta}{12050}
+\pmmodifier{gufotta}{12050}
+\pmtitle{Rayleigh-Ritz theorem}
+\pmrecord{8}{37546}
+\pmprivacy{1}
+\pmauthor{gufotta}{12050}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A18}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $A\in \mathbf{C}^{n\times n}$ be a Hermitian matrix. Then its
+eigenvectors are the critical points (vectors) of the "Rayleigh quotient",
+which is the real function $R:\mathbb{C}^{n}\backslash \{\mathbf{0}%
+\}\rightarrow \mathbb{R}$%
+\begin{equation*}
+R(\mathbf{x})=\frac{\mathbf{x}^{H}A\mathbf{x}}{\mathbf{x}^{H}\mathbf{x}},\Vert \mathbf{x}\Vert \neq 0
+\end{equation*}
+
+and its eigenvalues are its values at such critical points.
+
+As a consequence, we have:
+\begin{equation*}
+\lambda_{max}=\max_{\Vert \mathbf{x}\Vert \neq 0}\frac{\mathbf{x}^{H}A\mathbf{x}}{\mathbf{x}^{H}\mathbf{x}}
+\end{equation*}
+and
+\begin{equation*}
+\lambda_{min}=\min_{\Vert \mathbf{x}\Vert \neq 0}\frac{\mathbf{x}^{H}A\mathbf{x}}{\mathbf{x}^{H}\mathbf{x}}
+\end{equation*}
+
+Proof:
+
+First of all, let's observe that for a hermitian matrix, the number $\mathbf{x}^{H}A\mathbf{x}$ is a real one (actually, $<\mathbf{x},A\mathbf{x}>=$ $%
+\mathbf{x}^{H}A\mathbf{x=(}A^{H}\mathbf{x)}^{H}\mathbf{x=(}A\mathbf{x)}^{H}%
+\mathbf{x=}<A\mathbf{x},\mathbf{x>=}<\mathbf{x},A\mathbf{x>}^{\ast }$,
+whence $<\mathbf{x},A\mathbf{x>=x}^{H}A\mathbf{x}$ is real), so that the
+Rayleigh quotient is real as well.
+
+Let's now compute the critical points $\overline{\mathbf{x}}$ of the
+Rayleigh quotient, i.e. let's solve the equations system $\frac{dR(\overline{%
+\mathbf{x}})}{d\mathbf{x}}=\mathbf{0}^{T}$. Let's write $\mathbf{x=x}^{(R)}+j%
+\mathbf{x}^{(I)}$, $\mathbf{x}^{(R)}$ and $\mathbf{x}^{(I)}$ being
+respectively the real and imaginary part of $\mathbf{x}$. We have:
+
+\begin{equation*}
+\frac{dR(\mathbf{x})}{d\mathbf{x}}=\frac{dR(\mathbf{x})}{d\mathbf{x}^{(R)}}+j\frac{dR(\mathbf{x})}{d\mathbf{x}^{(I)}}
+\end{equation*}
+
+so that we must have:%
+\begin{equation*}
+\frac{dR(\overline{\mathbf{x}})}{d\mathbf{x}^{(R)}}=\frac{dR(\overline{\mathbf{x}})}{d\mathbf{x}^{(I)}}=\mathbf{0}^{T}
+\end{equation*}
+
+Using derivatives rules, we obtain:
+
+\begin{eqnarray*}
+\frac{dR(\mathbf{x})}{d\mathbf{x}^{(R)}} &=&\frac{d}{d\mathbf{x}^{(R)}}
+\left( \frac{\mathbf{x}^{H}A\mathbf{x}}{\mathbf{x}^{H}\mathbf{x}}\right) =
+\frac{\frac{d\left( \mathbf{x}^{H}A\mathbf{x}\right) }{d\mathbf{x}^{(R)}}
+\mathbf{x}^{H}\mathbf{x-x}^{H}A\mathbf{x}\frac{d\left( \mathbf{x}^{H}\mathbf{
+x}\right) }{d\mathbf{x}^{(R)}}}{\left( \mathbf{x}^{H}\mathbf{x}\right) ^{2}}=\frac{\frac{d\left( \mathbf{x}^{H}A\mathbf{x}\right) }{d\mathbf{x}^{(R)}}
+-R(\mathbf{x})\frac{d\left( \mathbf{x}^{H}\mathbf{x}\right) }{d\mathbf{x}
+^{(R)}}}{\mathbf{x}^{H}\mathbf{x}}\text{.}
+\end{eqnarray*}
+
+Applying matrix calculus rules, we find:
+\begin{eqnarray*}
+\frac{d\left( \mathbf{x}^{H}A\mathbf{x}\right) }{d\mathbf{x}^{(R)}} &=&%
+\mathbf{x}^{H}A\frac{d\mathbf{x}}{d\mathbf{x}^{(R)}}+\mathbf{x}^{T}A^{T}%
+\frac{d\mathbf{x}^{\ast }}{d\mathbf{x}^{(R)}}=\mathbf{x}^{H}A+\mathbf{x}^{T}A^{T}=\mathbf{x}^{H}A+\left( \mathbf{x}%
+^{H}A^{H}\right) ^{\ast }=
+\end{eqnarray*}
+
+and since $A=A^{H}$,%
+\begin{equation*}
+=\mathbf{x}^{H}A+\left( \mathbf{x}^{H}A\right) ^{\ast }=2\Re\left( 
+\mathbf{x}^{H}A\right) \text{.}
+\end{equation*}
+
+In a similar way, we get:%
+\begin{equation*}
+\frac{d\left( \mathbf{x}^{H}\mathbf{x}\right) }{d\mathbf{x}^{(R)}}=2\Re%
+\left( \mathbf{x}^{H}\right) \text{.}
+\end{equation*}
+
+Substituting, we obtain:%
+\begin{equation*}
+\frac{dR(\mathbf{x})}{d\mathbf{x}^{(R)}}=2\frac{\Re\left( \mathbf{x}^{H}A\right) -R(\mathbf{x})\Re\left( \mathbf{x}^{H}\right) }{\mathbf{x}^{H}\mathbf{x}}
+\end{equation*}
+
+and, after a transposition, equating to the null column vector,%
+\begin{eqnarray*}
+\mathbf{0} &=&\left( \Re\left( \overline{\mathbf{x}}^{H}A\right) -R(%
+\overline{\mathbf{x}})\Re\left( \overline{\mathbf{x}}^{H}\right)
+\right) ^{T}= \\
+&=&\Re\left( A^{T}\overline{\mathbf{x}}^{\ast }\right) -R(\overline{%
+\mathbf{x}})\Re\left( \overline{\mathbf{x}}^{\ast }\right) =\Re%
+\left( (A^{H}\overline{\mathbf{x}}\mathbf{)}^{\ast }\right) -R(\overline{%
+\mathbf{x}})\Re\left( \overline{\mathbf{x}}^{\ast }\right) = \\
+&=&\Re\left( (A\overline{\mathbf{x}}\mathbf{)}^{\ast }\right) -R(%
+\overline{\mathbf{x}})\Re\left( \overline{\mathbf{x}}^{\ast }\right) =%
+\Re(A\overline{\mathbf{x}}\mathbf{)}-R(\overline{\mathbf{x}})\Re%
+\left( \overline{\mathbf{x}}\right)
+\end{eqnarray*}%
+\newline
+and, since $R(\mathbf{x})$ is real,%
+\begin{equation*}
+\Re(A\overline{\mathbf{x}}-R(\overline{\mathbf{x}})\overline{\mathbf{x}}\mathbf{)=0}
+\end{equation*}
+
+Let's then evaluate $\frac{dR(\mathbf{x})}{d\mathbf{x}^{(I)}}$:%
+\begin{eqnarray*}
+\frac{dR(\mathbf{x})}{d\mathbf{x}^{(I)}} &=&\frac{d}{d\mathbf{x}^{(I)}}%
+\left( \frac{\mathbf{x}^{H}A\mathbf{x}}{\mathbf{x}^{H}\mathbf{x}}\right) =%
+\frac{\frac{d\left( \mathbf{x}^{H}A\mathbf{x}\right) }{d\mathbf{x}^{(I)}}%
+\mathbf{x}^{H}\mathbf{x-x}^{H}A\mathbf{x}\frac{d\left( \mathbf{x}^{H}\mathbf{%
+x}\right) }{d\mathbf{x}^{(I)}}}{\left( \mathbf{x}^{H}\mathbf{x}\right) ^{2}}=
+\frac{\frac{d\left( \mathbf{x}^{H}A\mathbf{x}\right) }{d\mathbf{x}^{(I)}}%
+-R(\mathbf{x})\frac{d\left( \mathbf{x}^{H}\mathbf{x}\right) }{d\mathbf{x}%
+^{(I)}}}{\mathbf{x}^{H}\mathbf{x}}\text{.}
+\end{eqnarray*}
+
+\ Applying again matrix calculus rules, we find:
+\begin{eqnarray*}
+\frac{d\left( \mathbf{x}^{H}A\mathbf{x}\right) }{d\mathbf{x}^{(I)}} &=&%
+\mathbf{x}^{H}A\frac{d\mathbf{x}}{d\mathbf{x}^{(I)}}+\mathbf{x}^{T}A^{T}\frac{d\mathbf{x}^{\ast }}{d\mathbf{x}^{(I)}}=j\mathbf{x}^{H}A-j\mathbf{x}^{T}A^{T}=j(\mathbf{x}^{H}A-\left( \mathbf{x}^{H}A^{H}\right) ^{\ast })=
+\end{eqnarray*}
+
+and since $A=A^{H}$,
+\begin{equation*}
+=j(\mathbf{x}^{H}A-\left( \mathbf{x}^{H}A\right) ^{\ast })=j(2j\Im\left( \mathbf{x}^{H}A\right) )=-2\Im\left( \mathbf{x}^{H}A\right) 
+\text{.}
+\end{equation*}
+
+In a similar way, we get:
+\begin{equation*}
+\frac{d\left( \mathbf{x}^{H}\mathbf{x}\right) }{d\mathbf{x}^{(I)}}=j\mathbf{x}^{H}-j\mathbf{x}^{T}=j(\mathbf{x}^{H}-\left( \mathbf{x}^{H}\right) ^{\ast
+})=j(2j\Im(\mathbf{x}^{H}))=-2\Im\left( \mathbf{x}^{H}\right) 
+\text{.}
+\end{equation*}
+
+Substituting, we obtain:%
+\begin{equation*}
+\frac{dR(\mathbf{x})}{d\mathbf{x}^{(I)}}=-2\frac{\Im\left( \mathbf{x}^{H}A\right) -R(\mathbf{x})\Im\left( \mathbf{x}^{H}\right) }{\mathbf{x}^{H}\mathbf{x}}
+\end{equation*}
+
+and, after a transposition, equating to the null column vector,%
+\begin{eqnarray*}
+\mathbf{0} &=&\left( \Im\left( \overline{\mathbf{x}}^{H}A\right) -R(%
+\overline{\mathbf{x}})\Im\left( \overline{\mathbf{x}}^{H}\right)
+\right) ^{T}= \\
+&=&\Im\left( A^{T}\overline{\mathbf{x}}^{\ast }\right) -R(\overline{%
+\mathbf{x}})\Im\left( \overline{\mathbf{x}}^{\ast }\right) =\Im%
+\left( (A^{H}\overline{\mathbf{x}}\mathbf{)}^{\ast }\right) -R(\overline{%
+\mathbf{x}})\Im\left( \overline{\mathbf{x}}^{\ast }\right) = \\
+&=&\Im\left( (A\overline{\mathbf{x}}\mathbf{)}^{\ast }\right) -R(%
+\overline{\mathbf{x}})\Im\left( \overline{\mathbf{x}}^{\ast }\right) =-%
+\Im(A\overline{\mathbf{x}}\mathbf{)}+R(\overline{\mathbf{x}})\Im%
+\left( \overline{\mathbf{x}}\right)
+\end{eqnarray*}
+
+and, since $R(\mathbf{x})$ is real,
+\begin{equation*}
+\Im(A\overline{\mathbf{x}}-R(\overline{\mathbf{x}})\overline{\mathbf{x}
+}\mathbf{)=0}
+\end{equation*}
+
+In conclusion, we have that a stationary vector $\overline{\mathbf{x}}$ for
+the Rayleigh quotient satisfies the complex eigenvalue equation%
+\begin{equation*}
+A\overline{\mathbf{x}}-R(\overline{\mathbf{x}})\overline{\mathbf{x}}=\mathbf{0}
+\end{equation*}
+
+whence the thesis.$\square $
+
+Remarks: 
+
+1) The two relations $\lambda _{\max }=\max_{\Vert \mathbf{x}\Vert\neq 0}
+\frac{\mathbf{x}^{H}A\mathbf{x}}{\mathbf{x}^{H}\mathbf{x}}$ and $\lambda
+_{\min }=\min_{\Vert \mathbf{x\Vert \neq 0}}\frac{\mathbf{x}^{H}A\mathbf{x}}{%
+\mathbf{x}^{H}\mathbf{x}}$ can also be obtained in a simpler way.
+By Schur's canonical form theorem, any normal (and hence any hermitian)
+matrix is unitarily diagonalizable, i.e. a unitary matrix $U$ exists such
+that $A=U\Lambda U^{H}$ with $\Lambda =diag(\lambda _{1},\lambda
+_{2},\cdots,\lambda _{n})$. So, since all eigenvalues of a hermitian matrix are
+real, it's possible to write:
+\begin{eqnarray*}
+\mathbf{x}^{H}A\mathbf{x} &\mathbf{=x}&^{H}U\Lambda U^{H}\mathbf{x=}\left(
+U^{H}\mathbf{x}\right) ^{H}\Lambda \left( U^{H}\mathbf{x}\right) =\mathbf{y}^{H}\Lambda \mathbf{y}=\sum_{i=1}^{n}\lambda _{i}\left\vert y_{i}\right\vert
+^{2}\leq \lambda _{\max }\sum_{i=1}^{n}\left\vert y_{i}\right\vert ^{2}= \\
+&=&\lambda _{\max }\mathbf{y}^{H}\mathbf{y=}\lambda _{\max }\left( U^{H}\mathbf{x}\right) ^{H}\left( U^{H}\mathbf{x}\right) =\lambda _{\max }\left( 
+\mathbf{x}^{H}UU^{H}\mathbf{x}\right) \mathbf{=}\lambda _{\max }\left( 
+\mathbf{x}^{H}\mathbf{x}\right) 
+\end{eqnarray*}
+whence
+\begin{equation*}
+\lambda _{\max }\geq \frac{\mathbf{x}^{H}A\mathbf{x}}{\mathbf{x}^{H}\mathbf{x}}
+\end{equation*}
+But, having defined $A\mathbf{v}_{M}=\lambda _{\max }\mathbf{v}_{M}$, we
+have:
+\begin{equation*}
+\frac{\mathbf{v}_{M}^{H}A\mathbf{v}_{M}}{\mathbf{v}_{M}^{H}\mathbf{v}_{M}}=\frac{\mathbf{v}_{M}^{H}\lambda _{\max }\mathbf{v}_{M}}{\mathbf{v}_{M}^{H}\mathbf{v}_{M}}=\lambda _{\max }
+\end{equation*}
+so that
+\begin{equation*}
+\lambda _{\max }=\max_{\Vert \mathbf{x\Vert \neq 0}}\frac{\mathbf{x}^{H}A\mathbf{x}}{\mathbf{x}^{H}\mathbf{x}}
+\end{equation*}
+In a much similar way, we obtain
+\begin{equation*}
+\lambda _{\min }=\min_{\Vert \mathbf{x\Vert \neq 0}}\frac{\mathbf{x}^{H}A\mathbf{x}}{\mathbf{x}^{H}\mathbf{x}}
+\end{equation*}
+
+
+2) The above relations yield the following noteworthing bounds for the
+diagonal entries of a hermitian matrix:
+\begin{equation*}
+\lambda _{\min }\leq a_{ii}\leq \lambda _{\max }
+\end{equation*}
+In fact, having defined 
+\begin{equation*}
+\mathbf{e}_{i}=[\overbrace{0,0,...,0,}^{i-1}1,0,...,0]^{T}
+\end{equation*}
+and observing that $a_{ii}=\frac{\mathbf{e}_{i}^{H}A\mathbf{e}_{i}}{\mathbf{e}_{i}^{H}\mathbf{e}_{i}}=R(\mathbf{e}_{i})$, we have:
+\begin{equation*}
+\lambda _{\min }=\min_{\Vert \mathbf{x\Vert \neq 0}}R(\mathbf{x})\leq R(\mathbf{e}_{i})\leq \max_{\Vert \mathbf{x\Vert \neq 0}}R(\mathbf{x})=\lambda
+_{\max }\text{.}
+\end{equation*}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,160 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DimensionOfTheSpecialOrthogonalGroup}
+\pmcreated{2013-03-22 15:24:22}
+\pmmodified{2013-03-22 15:24:22}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{dimension of the special orthogonal group}
+\pmrecord{8}{37245}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+\pmclassification{msc}{15A75}
+\pmclassification{msc}{20G20}
+%\pmkeywords{rotation}
+%\pmkeywords{special orthogonal group}
+\pmrelated{ProofOfRodriguesRotationFormula}
+\pmrelated{DecompositionOfOrthogonalOperatorsAsRotationsAndReflections}
+\pmrelated{OrthogonalMatrices}
+\pmrelated{ExteriorAlgebra}
+\pmrelated{OrthogonalGroup}
+\pmdefines{special orthogonal group}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{enumerate}
+
+% define commands here
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+
+\newcommand{\GLV}{\mathrm{GL}(V)}
+
+\DeclareMathOperator{\D}{D}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+\begin{document}
+Let $V$ be a $n$-dimensional real inner product space.
+The group of orthogonal operators on $V$ with positive determinant
+(i.e. the group of ``rotations'' on $V$)
+is called the special orthogonal group, denoted $SO(n)$.
+
+The \PMlinkname{theorem on decomposing orthogonal operators as rotations and reflections}{DecompositionOfOrthogonalOperatorsAsRotationsAndReflections}
+suggests that all elements of $SO(n)$ are all fundamentally two-dimensional in some sense.
+This article is an elementary exploration of this aspect.
+
+\bigskip
+
+First observe that the set of orthogonal operators $O(n)$ is a manifold embedded
+in the real vector space $\GLV \simeq \real^{n \times n}$,
+defined by
+the condition $f(X)  = X X^* - I = 0$, where $X \in GL(V)$, and $X^*$ is the 
+transpose of $X$ (represented as a matrix in orthonormal coordinates).
+$f(X) = 0$ is simply shorthand for the condition that the columns of $X$ are 
+orthonormal --- we see there are $n + n(n-1)/2 = n(n+1)/2$ scalar equations\footnote{$f(X)=0$ viewed as a matrix equation of course has $n^2$ scalar equations,
+but many of them are duplicated. For simplicity,
+we prefer to view $f$'s codomain to be the space of symmetric matrices, which is $n(n+1)/2$-dimensional.} in $n^2$ variables.  Then if we can show that the derivative $\D f(X)$ as full rank everywhere,
+then we will have established that $O(n)$ is a manifold of dimension $n(n-1)/2$.
+This is an easy computation if organized in the right way:
+for any $y \in \GLV$, by the product rule we have
+\[
+\D f(X) \cdot Y = X Y^* + Y X^*\,.
+\]
+Consider first the case that $X = I$.  Then $\D f(I) \cdot Y = 0$ implies $Y^* = - Y$;
+in other words, $Y$ is skew-symmetric.  But the skew-symmetric matrices have dimension 
+$(n^2 - n)/2$, so the kernel of $\D f(I)$ has this dimension.
+By the dimension theorem of linear algebra, the rank of $\D f(I)$ is $n^2 - (n^2 - n)/2 = n(n+1)/2$,
+which is the full rank.
+
+For general $X \in O(n)$, let $Y' = X^* Y$.  Then $\D f(X) \cdot Y = 0$ reduces to $Y'^* = -Y$,
+again the skew-symmetric condition. 
+The set of all such $Y'$ have dimension $(n^2 -n)/2$; but multiplication by $X^*$
+is an automorphism of $\GLV$, so the set of all $Y$ also have the same dimension.
+Thus $\D f(X)$ has full rank, as before.
+
+$SO(n)$ is of course just the part of $O(n)$ that satisfies the additional condition
+$\det X = 1$. It has the same dimension as a manifold.
+
+Notice that $n(n-1)/2 = \binom{n}{2}$, the number of ways to choose $2$ basis elements out of $n$.
+We might na\"ively think that an element $X$ of $SO(n)$ can be decomposed
+into rotations on each of the coordinate 2-dimensional planes in $n$-dimensional space.
+This does not quite work, because rotations do not commute, even though
+we expect that the order of the decomposition should not matter (after all,
+there is no canonical order on the pairs of basis elements of $V$).
+
+Nevertheless, on an ``infinitesimal level'', the decomposition does work.
+Suppose we are given a one-parameter subgroup\footnote{Given $X \in SO(n)$, it can be shown with the orthogonal operator decomposition theorem that there is a one-parameter subgroup containing X. Hint: 
+\[
+e^A = \begin{pmatrix}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta
+\end{pmatrix}\,,
+\qquad \textrm{if } A = \begin{pmatrix}
+0 & -\theta \\
+\theta & 0
+\end{pmatrix}\,.
+\]
+} $X^t$ of $SO(n)$.
+From ODE theory,
+it is known that $X^t$ is given by the matrix exponential $e^{tA}$,
+where $A$ is derivative of $X^t$ at $t = 0$.
+Also, $A$ must be skew-symmetric, because it is a tangent vector
+to the curve $X^t$ and so must lie in the tangent space to $SO(n)$ (the kernel of $\D f(X)$).
+
+Since $X^t = e^{tA}$, we may reasonably ask: in what way does the matrix $A$ represent
+the rotations $X^t$?  The answer is suggested by the simpler case of $n=3$;
+by Rodrigues' rotation formula, $A$ is the operator $A v = \omega \times v$
+where $\omega$ is the angular velocity vector of the rotation.
+
+The wedge product of the exterior algebra on $V$
+generalizes the cross product in higher dimensions ($n>3$),
+so we should start looking there,
+and one cannot but help notice that $\Lambda^2(V)$ also has dimension $\binom{n}{2}$.
+The basis elements of this space are of the form $\hat{x} \wedge \hat{y}$,
+where $x$ and $y$ are orthonormal basis vectors of $V$, and $\hat{x}, \hat{y} \in V^*$
+are defined by $\hat{x}(w) = \langle x, w\rangle$,
+$\hat{y}(w) = \langle y, w\rangle$.  By attempting to generalize the cross product representation for $A$, we can derive that the natural isomorphism between elements $\eta \in \Lambda^2(V)$ and the skew-symmetric matrices $A$ should be given by:
+\[
+\langle Av, w \rangle = \eta(v, w)\,.
+\]
+If $\eta = \omega \, \hat{x} \wedge \hat{y}$, 
+a simple calculation shows $X^t = e^{tA}$ is a rotation on the plane spanned by $x$ and $y$
+with angular velocity $\omega$!
+
+So one can think of the infinitesimal decomposition of $X^t$, as the ``angular velocity'' with  its $\binom{n}{2}$ components.  The fact that angular velocity in our physical world
+can be represented by one vector, and the fact that rotations in $\real^3$ have a single axis,
+is a consequence of the fact that $\binom{3}{2} = 3$. 
+
+So although rotations do not commute in general, the correspondence between rotations
+and alternating 2-tensors, shows that rotations do add up
+and commute at the infinitesimal level\footnote{This really just boils down to the fact that a manifold looks like a vector space locally.}.
+%%%%%
+%%%%%
+\end{document}

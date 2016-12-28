@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConjugateGradientAlgorithm}
+\pmcreated{2013-03-22 14:58:54}
+\pmmodified{2013-03-22 14:58:54}
+\pmowner{aplant}{12431}
+\pmmodifier{aplant}{12431}
+\pmtitle{conjugate gradient algorithm}
+\pmrecord{16}{36685}
+\pmprivacy{1}
+\pmauthor{aplant}{12431}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A06}
+\pmclassification{msc}{90C20}
+\pmsynonym{method of conjugate gradients}{ConjugateGradientAlgorithm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The conjugate gradient algorithm is used to solve the quadratic minimization problem:
+$$
+ \min\left( \frac{1}{2} x^T Q x - b^T x\right)
+$$
+or equivalently to solve the linear system $Q x - b = 0$, where $Q$ is a given $n$ by $n$ symmetric positive definite matrix and $b$ is a given $n$ vector.
+
+The algorithm requires n iterations, starting from an arbitrary initial guess $x_0$ (often $x_0 = 0$ is used). We will use the following notation:
+\begin{itemize}
+\item $i$ --- iteration number;
+\item $x_i$ --- solution approximation;
+\item $d_i$ --- search direction;
+\item $r_i$ --- residual, which is defined as $b-Q x_i$.
+\end{itemize}
+
+\textbf{Algorithm}
+
+\begin{enumerate}
+\item Initialization. Let $x_0=0$ (or other starting point). Let $r_0 = d_0 = -Q x_0 + b$. (The initial search direction is set to minus the gradient of the quadratic function being minimized, evaluated at the starting point).
+\item For $i = 0$ to $n-1$ compute
+\[
+\alpha =  \frac{r_i^T d_i}{d_i^T Q d_i}
+\]
+\[
+x_{i+1} = x_i + \alpha d_i
+\]
+\[
+r_{i+1} = r_i - \alpha Q d_i
+\]
+If $\|r_i\| < \varepsilon$ or $i = n-1$ Stop, the solution has been found.  Otherwise, continue:
+\[
+\beta = \frac{r_{i+1}^T Q d_i}{d_i^T Q d_i}
+\]
+\[
+d_{i+1} = -r_{i+1}+\beta d_i
+\]
+(In each iteration the solution estimate is set to the previous estimate plus a multiple of the previous search direction. The next search direction is then set to the gradient plus a multiple of the previous search direction).
+\end{enumerate}
+
+\textbf{Discussion}
+
+The conjugate gradient method was developed in 1952 by Hestenes and Stiefel as an improvement to the steepest descent method.  Whereas steepest descent approaches the solution asymptotically, the conjugate gradient method will find the solution in n iterations (assuming no roundoff error).
+
+Why the name? The search directions $d_i$ are conjugate in the sense that $d_j^T Q d_i = 0$ for $j<i$.  In addition these directions are computed from (but are not equal to) the gradient.
+
+The conjugate gradient method has been generalized to the case where the function being minimized is only approximately quadratic.  In that case the explicit formula for $\alpha$ given above is replaced by a line-search procedure; this is a trial and error method in which various values of $\alpha$ are tried, and the value that leads to the smallest value of the objective is chosen.  Well known generalized c.g. methods include the Fletcher-Reeves method and the Polak-Ribiere method.
+
+\textbf{Example}
+
+Solve \begin{displaymath}\left(\begin{array}{rr}
+1 & 2\\
+2 & 1
+\end{array}\right) 
+x = 
+\left(\begin{array}{rr}
+-3\\
+0
+\end{array}\right)
+\end{displaymath}
+We have \begin{displaymath}x_0 = \left(\begin{array}{rr} 
+0\\
+0 \end{array}\right)\end{displaymath}
+then \begin{displaymath}x_1 = \left(\begin{array}{rr} 
+-3\\
+0 \end{array}\right)\end{displaymath}
+and finally \begin{displaymath}x_2 = \left(\begin{array}{rr} 
+1\\
+-2 \end{array}\right)\end{displaymath} which is the solution.
+
+\textbf{References}
+
+Luenberger: Introduction to Linear and Nonlinear Programming, Addison-Wesley, 1973
+
+Jonathan Richard Shewchuk: An Introduction to the Conjugate Gradient Method Without the Agonizing Pain, August 1994.  \htmladdnormallink{http://www-2.cs.cmu.edu/~jrs/jrspapers.html}
+{http://www-2.cs.cmu.edu/~jrs/jrspapers.html} [A detailed derivation of the method from first principles].
+
+Press, et al.: Numerical Recipes in C, Cambridge University Press, 1995 [Chapter 10.6 contains an implementation of the generalized conjugate gradient method of Polak and Ribiere].
+%%%%%
+%%%%%
+\end{document}

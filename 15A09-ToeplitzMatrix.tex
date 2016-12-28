@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ToeplitzMatrix}
+\pmcreated{2013-03-22 13:04:22}
+\pmmodified{2013-03-22 13:04:22}
+\pmowner{akrowne}{2}
+\pmmodifier{akrowne}{2}
+\pmtitle{Toeplitz matrix}
+\pmrecord{8}{33482}
+\pmprivacy{1}
+\pmauthor{akrowne}{2}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A09}
+\pmclassification{msc}{65F35}
+\pmclassification{msc}{15A57}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+\section{Toeplitz Matrix}
+
+A \emph{Toeplitz matrix} is any $n\times n$ matrix with values constant along each (top-left to lower-right) diagonal.  That is, a Toeplitz matrix has the form
+
+$$ \begin{bmatrix}
+ a_0 & a_1 & a_2 & \cdots & a_{n-1} \\
+ a_{-1} & a_0 & a_1 & \ddots & \vdots \\
+ a_{-2} & a_{-1} & a_0 & \ddots & a_2 \\
+ \vdots & \ddots & \ddots & \ddots & a_1 \\
+ a_{-(n-1)} & \cdots & a_{-2} & a_{-1} & a_0
+\end{bmatrix} $$
+
+Numerical problems involving Toeplitz matrices typically have fast solutions (only $2n-1$ distinct elements need to be solved for, as opposed to $n^2$).  For example, the inverse of a symmetric, positive-definite $n\times n$ Toeplitz matrix can be found in $\mathcal{O}(n^2)$ \PMlinkname{time}{TimeComplexity}.
+
+\begin{thebibliography}{3}
+\bibitem{Golub} Golub and Van Loan, \emph{Matrix Computations}, Johns Hopkins University Press 1993
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

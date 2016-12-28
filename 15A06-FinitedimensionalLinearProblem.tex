@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FinitedimensionalLinearProblem}
+\pmcreated{2013-03-22 12:26:05}
+\pmmodified{2013-03-22 12:26:05}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{finite-dimensional linear problem}
+\pmrecord{12}{32502}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A06}
+\pmrelated{LinearProblem}
+\pmrelated{RankNullityTheorem}
+\pmdefines{system of linear equations}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\Rset}{\mathbb{R}}
+\newcommand{\bmat}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\begin{document}
+Let $L:U\rightarrow V$ be a linear mapping, and let $v\in V$ be given.
+When both the domain $U$ and codomain $V$ are finite-dimensional, a
+linear equation
+$$L(u)=v,$$
+where $u\in U$ is the unknown,
+can be solved by means of row reduction.  To do so, we need
+to choose a basis $a_1,\ldots, a_m$ of the domain $U$, and a basis
+$b_1,\ldots, b_n$ of the codomain $V$.  Let $M$ be the $n\times m$
+transformation matrix of $L$ relative to these bases, and let
+$y\in\Rset^n$ be the coordinate vector of $v$ relative to the
+basis of $V$.  Expressing this in terms of matrix notation, we have
+\begin{gather*}
+  \bmat{L(a_1),\ldots, L(a_m)} = 
+\bmat{b_1,\ldots, b_n}
+\bmat{ 
+M_{11} & \ldots & M_{1m} \\
+\vdots & \ddots & \vdots \\
+M_{n1} & \ldots & M_{nm}},\\
+v = \bmat{b_1,\ldots, b_n} \bmat{y_1\\ \vdots \\ y_n}
+\end{gather*}
+We can now restate the abstract linear equation as the matrix-vector
+equation
+\[ Mx =y,\]
+with $x\in \Rset^m$ unknown, or equivalently, as  the following
+system of $n$ linear equations
+\[
+  \begin{array}{ccccl}
+  M_{11} x_1 + &\cdots &+ M_{1m}\, x_m &=& y_1 \\
+  \vdots & \ddots & \vdots & &\vdots\\
+  M_{n1} x_1  + &\cdots&  + M_{nm}\, x_m &=& y_n
+  \end{array}
+\]
+with $x_1,\ldots, x_m$ unknown.  Solutions  $u\in U$ of the abstract linear
+equation $L(u)=v$ are in one-to-one correspondence with solutions of
+the matrix-vector equation $Mx=y$.  The correspondence is given by
+\[ u = \bmat{a_1,\ldots, a_m} \bmat{x_1 \\ \vdots \\ x_m}.\]
+
+Note that the dimension of the domain is the number of variables,
+while the dimension of the codomain is the number of equations.  The
+equation is called under-determined or over-determined depending on
+whether the former is greater than the latter, or vice versa.  In
+general, over-determined systems are inconsistent, while
+under-determined ones have multiple solutions.  However, this is a
+``rule of thumb'' only, and exceptions are not hard to find.  A full
+understanding of consistency, and multiple solutions relies on the
+notions of kernel, image, rank, and is described by the rank-nullity
+theorem.
+
+\paragraph{Remark.} Elementary applications \PMlinkescapetext{focus} exclusively on the
+coefficient matrix and the right-hand vector, and neglect to mention
+the underlying linear mapping.  This is unfortunate, because the
+concept of a linear equation is much more general than the traditional
+notion of ``variables and equations'', and relies in an essential way
+on the idea of a linear mapping.  See the
+\PMlinkname{example}{UnderDeterminedPolynomialInterpolation} on
+polynomial as a case in point.  Polynomial interpolation
+is a linear problem, but one that is specified abstractly, rather than
+in terms of variables and equations.
+%%%%%
+%%%%%
+\end{document}

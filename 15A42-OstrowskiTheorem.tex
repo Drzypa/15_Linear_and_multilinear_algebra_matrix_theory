@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OstrowskiTheorem}
+\pmcreated{2013-03-22 15:36:29}
+\pmmodified{2013-03-22 15:36:29}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{Ostrowski theorem}
+\pmrecord{22}{37528}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A42}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $A$ be a complex $n\times n$ matrix, $R_i=\sum_{j\ne i}\left|a_{ij}\right|, C_j=\sum_{i\ne j}\left|a_{ij}\right|\quad 1\leq i\leq n, 1\leq j\leq n$. Let's consider, for any $\alpha\in (0,1)$, the circles of this kind: $O_i=\left\{z\in\mathbf{C}:\left|z-a_{ii}\right|\leq R_i^\alpha C_i^{1-\alpha}\right\}\quad 1\leq i\leq n$.
+
+Theorem (A. Ostrowski): For any $\alpha\in (0,1)$, all the eigenvalues of $A$ lie in the union of these $n$ circles:$\sigma(A)\subseteq\bigcup_{i}O_i$.
+
+\begin{proof}
+If $R_i=0$, the theorem says $a_{ii}$ is an eigenvalue, which
+is obviously true. Let's then concentrate on the $R_i\neq 0$. By eigenvalue definition, we have:
+
+\[
+(\lambda -a_{ii})x_{i}=\sum_{j\neq i}a_{ij}x_{j} 
+\]
+
+so that, recalling H\"older's inequality with $p=1/\alpha $ and $q=1/(1-\alpha
+)$ (to have $p,q>1$, we must have $\alpha \in (0,1)$)
+
+\begin{eqnarray*}
+\left\vert \lambda -a_{ii}\right\vert \left\vert x_{i}\right\vert &\leq
+&\sum_{j\neq i}\left\vert a_{ij}\right\vert \left\vert x_{j}\right\vert \\
+&=&\sum_{j\neq i}\left\vert a_{ij}\right\vert ^{\alpha }\left\vert
+a_{ij}\right\vert ^{1-\alpha }\left\vert x_{j}\right\vert \\
+&\leq &\left( \sum_{j\neq i}(\left\vert a_{ij}\right\vert ^{\alpha
+})^{1/\alpha }\right) ^{\alpha }\left( \sum_{j\neq i}(\left\vert
+a_{ij}\right\vert ^{1-\alpha }\left\vert x_{j}\right\vert )^{1/(1-\alpha
+)}\right) ^{1-\alpha } \\
+&=&\left( \sum_{j\neq i}\left\vert a_{ij}\right\vert \right) ^{\alpha
+}\left( \sum_{j\neq i}\left\vert a_{ij}\right\vert \left\vert
+x_{j}\right\vert ^{1/(1-\alpha )}\right) ^{1-\alpha } \\
+ &=&R_{i}^{\alpha }\left(
+\sum_{j\neq i}\left\vert a_{ij}\right\vert \left\vert x_{j}\right\vert
+^{1/(1-\alpha )}\right) ^{1-\alpha }
+\end{eqnarray*}
+which means%
+\[
+\frac{\left\vert \lambda -a_{ii}\right\vert ^{1/(1-\alpha )}}{R_{i}^{\alpha
+/(1-\alpha )}}\left\vert x_{i}\right\vert ^{1/(1-\alpha )}\leq \sum_{j\neq
+i}\left\vert a_{ij}\right\vert \left\vert x_{j}\right\vert ^{1/(1-\alpha )} 
+\]
+
+Summing over all $i$, one obtains
+\[
+\sum_{i=1}^{n}\frac{\left\vert \lambda -a_{ii}\right\vert ^{1/(1-\alpha )}}{%
+R_{i}^{\alpha /(1-\alpha )}}\left\vert x_{i}\right\vert ^{1/(1-\alpha )}\leq
+\sum_{i=1}^{n}\sum_{j\neq i}\left\vert a_{ij}\right\vert \left\vert x_{j}\right\vert ^{1/(1-\alpha)}=\sum_{j=1}^{n}C_{j}\left\vert x_{j}\right\vert ^{1/(1-\alpha )} 
+\]
+
+If, for each $i$, the coefficient of $\left\vert x_{i}\right\vert ^{1/(1-\alpha )}$ in the first
+sum would be greater than the coefficient of the same term in the right-hand
+side, inequality couldn't hold. So we can conclude that at least one index $p$ exists
+such as
+
+\[
+\frac{\left\vert \lambda -a_{pp}\right\vert ^{1/(1-\alpha )}}{R_{p}^{\alpha
+/(1-\alpha )}}\leq C_{p} 
+\]
+
+that is
+
+\[
+\left\vert \lambda -a_{pp}\right\vert \leq R_{p}^{\alpha }C_{p}^{1-\alpha } 
+\]
+
+which is the thesis.
+\end{proof}
+
+\bigskip
+
+Remarks:
+
+The Gershgorin theorem is obtained as a limit for $\alpha \rightarrow 0$ or
+for $\alpha \rightarrow 1$; in other words, Ostrowski's theorem represents a kind of "continuous deformation" between the two Gershgorin rows and columns sets.
+
+\begin{thebibliography}{6}
+\bibitem{Horn} R. A. Horn, C. R. Johnson,
+\emph{Matrix Analysis}, Cambridge University Press, 1985
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

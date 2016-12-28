@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComplementarySubspace}
+\pmcreated{2013-03-22 12:52:16}
+\pmmodified{2013-03-22 12:52:16}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{complementary subspace}
+\pmrecord{11}{33209}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A03}
+\pmsynonym{algebraic complement}{ComplementarySubspace}
+\pmdefines{complementary}
+\pmdefines{direct sum}
+\pmdefines{decomposition}
+\pmdefines{orthogonal complement}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{{\PMlinkescapetext{{#1}}}}
+\newcommand{\pln}[2]{{\PMlinkname{{#1}}{#2}}}
+\newcommand{\kf}{\mathbb{K}}
+\begin{document}
+\paragraph{Direct sum decomposition.}
+Let $U$ be a vector space, and $V,W\subset U$ subspaces.  We say that
+$V$ and $W$ span $U$, and write
+$$U=V+W$$ if 
+every $u\in U$ can be expressed as a sum
+$$u=v+w$$
+for some $v\in V$ and $w\in W$.
+
+If in addition, such a decomposition is unique for all $u\in U$, or
+equivalently if 
+$$V\cap W=\{ 0\},$$
+then we say that $V$ and $W$ form a \emph{direct sum decomposition} of  $U$
+and write
+$$U=V\oplus W.$$
+In such circumstances, we also say that $V$ and $W$
+are \emph{complementary} subspaces, and also say that $W$ is an \emph{algebraic complement} of $V$.
+
+Here is useful  characterization of complementary subspaces if $U$ is
+finite-dimensional. 
+\begin{proposition}
+  Let $U, V, W$ be as above, and suppose that $U$ is
+  finite-dimensional.  The subspaces $V$ and $W$ are complementary if
+  and only if for every basis  $v_1,\ldots, v_m$  of $V$ and
+  every basis
+  $w_1,\ldots,w_n$  of $W$, the combined list
+  $$v_1,\ldots,v_m,w_1,\ldots,w_n$$
+  is a basis of $U$.
+\end{proposition}
+
+\textbf{Remarks}.
+\begin{itemize}
+\item
+Since every linearly independent subset of a vector space can be extended to a basis, every subspace has a complement, and the complement is necessarily unique.
+\item
+Also, direct sum decompositions of a vector space $U$ are in a one-to correspondence fashion with projections on $U$.
+\end{itemize}
+
+\paragraph{Orthogonal decomposition.}
+Specializing somewhat, suppose that the ground field $\kf$ is either
+the real or complex numbers, and that $U$ is either an inner product
+space or a unitary space, i.e. $U$ comes equipped with a
+positive-definite inner product
+$$\langle,\rangle:U\times U\rightarrow \kf.$$
+In such circumstances,
+for every subspace $V\subset U$ we define the orthogonal complement of
+$V$, denoted by $V^\perp$ to be the subspace
+$$V^\perp = \{ u\in U: \langle v,u\rangle = 0,\text{ for all }
+v\in V\}.$$
+\begin{proposition}
+  Suppose that $U$ is finite-dimensional and $V\subset U$ a subspace.
+  Then,  $V$ and its orthogonal
+  complement $V^\perp$ determine a direct sum decomposition  of $U$.
+  \end{proposition}
+  
+  Note: the Proposition is false if either the finite-dimensionality
+  or the positive-definiteness assumptions are violated.
+%%%%%
+%%%%%
+\end{document}

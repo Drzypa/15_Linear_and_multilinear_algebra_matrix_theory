@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ThereExistAdditiveFunctionsWhichAreNotLinear}
+\pmcreated{2013-03-22 16:17:50}
+\pmmodified{2013-03-22 16:17:50}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{there exist additive functions which are not linear}
+\pmrecord{5}{38417}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{15A04}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{example}{Example}
+\begin{document}
+\begin{example}
+There exists a function $f\colon \R\to\R$ which is additive but not linear.
+\end{example}
+\begin{proof}
+Let $V$ be the infinite dimensional vector space $\R$ over the 
+field $\Q$. Since $1$ and $\sqrt 2$ are two independent vectors in $V$, we can extend the set $\{1,\sqrt 2\}$ to a basis $E$ of $V$ (notice that here the axiom of choice is used).
+
+Now we consider a linear function $f\colon V \to \R$ such that $f(1)=1$ while $f(e)=0$ for all $e\in E\setminus\{1\}$. This function is $\Q$-linear (i.e.\ it is additive on $\R$) but it is not $\R$-linear because $f(\sqrt 2)=0\neq \sqrt 2 f(1)$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}
