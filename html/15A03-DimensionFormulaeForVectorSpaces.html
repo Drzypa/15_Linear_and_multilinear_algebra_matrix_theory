@@ -1,0 +1,468 @@
+<!DOCTYPE html><html>
+<head>
+<title>dimension formulae for vector spaces</title>
+<!--Generated on Fri Feb  9 18:18:23 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">dimension formulae for vector spaces</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">In this entry we look at various formulae
+involving the dimension of a vector space.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Throughout this entry, <math id="p3.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> will be a field,
+and <math id="p3.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> and <math id="p3.m3" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> will be vector spaces over <math id="p3.m4" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>.
+The dimension of a vector space <math id="p3.m5" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> over <math id="p3.m6" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>
+will be denoted by <math id="p3.m7" class="ltx_Math" alttext="\dim(U)" display="inline"><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math>,
+or by <math id="p3.m8" class="ltx_Math" alttext="\dim_{K}(U)" display="inline"><mrow><msub><mo>dim</mo><mi>K</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math> if the ground field needs to be emphasized.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">All of these formulae potentially involve infinite cardinals,
+so the reader should have a basic knowledge of cardinal arithmetic
+in order to understand them in full generality.</p>
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Subspaces</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="Sx1.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> and <math id="Sx1.p1.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> are subspaces of <math id="Sx1.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, then</p>
+<table id="Sx1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.Ex1.m1" class="ltx_Math" alttext="\dim(S)+\dim(T)=\dim(S\cap T)+\dim(S+T)." display="block"><mrow><mrow><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>∩</mo><mi>T</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>+</mo><mi>T</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Rank-nullity theorem</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">The rank-nullity theorem states that if <math id="Sx2.p1.m1" class="ltx_Math" alttext="\phi\colon V\to W" display="inline"><mrow><mi>ϕ</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>W</mi></mrow></mrow></math> is a linear mapping,
+then the dimension of <math id="Sx2.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>
+is the sum of the dimensions of the image and kernel of <math id="Sx2.p1.m3" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>:</p>
+<table id="Sx2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex2.m1" class="ltx_Math" alttext="\dim(V)=\dim(\operatorname{Im}\phi)+\dim(\operatorname{Ker}\phi)." display="block"><mrow><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Im</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Ker</mi><mo>⁡</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx2.p2" class="ltx_para">
+<p class="ltx_p">In particular, if <math id="Sx2.p2.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is a subspace of <math id="Sx2.p2.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> then</p>
+<table id="Sx2.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex3.m1" class="ltx_Math" alttext="\dim(V)=\dim(V/U)+\dim(U)." display="block"><mrow><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>V</mi><mo>/</mo><mi>U</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx2.p3" class="ltx_para">
+<p class="ltx_p">The rank-nullity theorem can also be stated in terms of short exact sequences:
+if</p>
+<table id="Sx2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex4.m1" class="ltx_Math" alttext="0\longrightarrow U\longrightarrow V\longrightarrow W\longrightarrow 0" display="block"><mrow><mn>0</mn><mo>⟶</mo><mi>U</mi><mo>⟶</mo><mi>V</mi><mo>⟶</mo><mi>W</mi><mo>⟶</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is a short exact sequence of vector spaces over <math id="Sx2.p3.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>,
+then</p>
+<table id="Sx2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex5.m1" class="ltx_Math" alttext="\dim(V)=\dim(U)+\dim(W)." display="block"><mrow><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>W</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This can be generalized to infinite exact sequences:
+if</p>
+<table id="Sx2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex6.m1" class="ltx_Math" alttext="\cdots\longrightarrow V_{n+1}\longrightarrow V_{n}\longrightarrow V_{n-1}\longrightarrow\cdots" display="block"><mrow><mi mathvariant="normal">⋯</mi><mo>⟶</mo><msub><mi>V</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⟶</mo><msub><mi>V</mi><mi>n</mi></msub><mo>⟶</mo><msub><mi>V</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⟶</mo><mi mathvariant="normal">⋯</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is an exact sequence of vector spaces over <math id="Sx2.p3.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>,
+then</p>
+<table id="Sx2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex7.m1" class="ltx_Math" alttext="\sum_{n\rm{~{}even}}\!\!\dim(V_{n})\,=\sum_{n\rm{~{}odd}}\!\dim(V_{n})." display="block"><mrow><mrow><mrow><mpadded width="-3.3pt"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mpadded width="+3.3pt"><mi>n</mi></mpadded><mo>⁢</mo><mi>even</mi></mrow></munder></mpadded><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>V</mi><mi>n</mi></msub><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mpadded width="-1.7pt"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mpadded width="+3.3pt"><mi>n</mi></mpadded><mo>⁢</mo><mi>odd</mi></mrow></munder></mpadded><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>V</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(This is indeed a generalization,
+because any finite exact sequence of vectors spaces
+terminating with <math id="Sx2.p3.m3" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> at both ends
+can be considered as an infinite exact sequence
+in which all remaining terms are <math id="Sx2.p3.m4" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.)</p>
+</div>
+</section>
+<section id="Sx3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Direct sums</h2>
+
+<div id="Sx3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="Sx3.p1.m1" class="ltx_Math" alttext="(V_{i})_{i\in I}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>V</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></msub></math> is a family of vector spaces over <math id="Sx3.p1.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>,
+then</p>
+<table id="Sx3.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.Ex8.m1" class="ltx_Math" alttext="\dim\!\left(\bigoplus_{i\in I}V_{i}\right)=\sum_{i\in I}\dim(V_{i})." display="block"><mrow><mrow><mrow><mo rspace="0.8pt">dim</mo><mo>⁡</mo><mrow><mo>(</mo><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⊕</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></munder><msub><mi>V</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></munder><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>V</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="Sx4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Cardinality of a vector space</h2>
+
+<div id="Sx4.p1" class="ltx_para">
+<p class="ltx_p">The cardinality of a vector space
+is determined by its dimension and the cardinality of the ground field:</p>
+<table id="Sx4.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.Ex9.m1" class="ltx_Math" alttext="|V|=\begin{cases}|K|^{\dim(V)},&amp;\hbox{if }\dim(V)\hbox{ is finite};\\
+\max\{|K|,\dim(V)\},&amp;\hbox{if }\dim(V)\hbox{ is infinite}.\cr\end{cases}" display="block"><mrow><mrow><mo stretchy="false">|</mo><mi>V</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><msup><mrow><mo stretchy="false">|</mo><mi>K</mi><mo stretchy="false">|</mo></mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></msup><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext> is finite</mtext></mrow></mrow></mrow><mo>;</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">|</mo><mi>K</mi><mo stretchy="false">|</mo></mrow><mo>,</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext> is infinite</mtext></mrow></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx4.p2" class="ltx_para">
+<p class="ltx_p">The effect of the above formula is somewhat different
+depending on whether <math id="Sx4.p2.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is finite (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/FiniteField</span>) or infinite.
+If <math id="Sx4.p2.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is finite, then it reduces to</p>
+<table id="Sx4.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.Ex10.m1" class="ltx_Math" alttext="|V|=\begin{cases}|K|^{\dim(V)},&amp;\hbox{if }\dim(V)\hbox{ is finite};\\
+\dim(V),&amp;\hbox{if }\dim(V)\hbox{ is infinite}.\end{cases}" display="block"><mrow><mrow><mo stretchy="false">|</mo><mi>V</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><msup><mrow><mo stretchy="false">|</mo><mi>K</mi><mo stretchy="false">|</mo></mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></msup><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext> is finite</mtext></mrow></mrow></mrow><mo>;</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext> is infinite</mtext></mrow></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="Sx4.p2.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is infinite, then it can be expressed as</p>
+<table id="Sx4.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.Ex11.m1" class="ltx_Math" alttext="|V|=\begin{cases}1,&amp;\hbox{if }\dim(V)=0;\\
+|K|,&amp;\hbox{if }0&lt;\dim(V)\leq|K|;\\
+\dim(V),&amp;\hbox{if }\dim(V)\geq|K|.\end{cases}" display="block"><mrow><mrow><mo stretchy="false">|</mo><mi>V</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mn>1</mn><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>;</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mo stretchy="false">|</mo><mi>K</mi><mo stretchy="false">|</mo></mrow><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mn>0</mn></mrow><mo>&lt;</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mo stretchy="false">|</mo><mi>K</mi><mo stretchy="false">|</mo></mrow></mrow><mo>;</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≥</mo><mrow><mo stretchy="false">|</mo><mi>K</mi><mo stretchy="false">|</mo></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="Sx5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Change of ground field</h2>
+
+<div id="Sx5.p1" class="ltx_para">
+<p class="ltx_p">If <math id="Sx5.p1.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is a subfield of <math id="Sx5.p1.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>,
+then <math id="Sx5.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> can be considered as a vector space over <math id="Sx5.p1.m4" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>.
+The dimensions of <math id="Sx5.p1.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> over <math id="Sx5.p1.m6" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> and <math id="Sx5.p1.m7" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> are related by the formula</p>
+<table id="Sx5.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx5.Ex12.m1" class="ltx_Math" alttext="\dim_{F}(V)=[K:F]\cdot\dim_{K}(V)." display="block"><mrow><msub><mo>dim</mo><mi>F</mi></msub><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>K</mi><mo>:</mo><mi>F</mi><mo stretchy="false">]</mo></mrow><mo>⋅</mo><msub><mo>dim</mo><mi>K</mi></msub><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In this formula, <math id="Sx5.p1.m8" class="ltx_Math" alttext="[K:F]" display="inline"><mrow><mo stretchy="false">[</mo><mrow><mi>K</mi><mo>:</mo><mi>F</mi></mrow><mo stretchy="false">]</mo></mrow></math> is the degree of the field extension <math id="Sx5.p1.m9" class="ltx_Math" alttext="K/F" display="inline"><mrow><mi>K</mi><mo>/</mo><mi>F</mi></mrow></math>,
+that is, the dimension of <math id="Sx5.p1.m10" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> considered as a vector space over <math id="Sx5.p1.m11" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>.</p>
+</div>
+</section>
+<section id="Sx6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Space of functions into a vector space</h2>
+
+<div id="Sx6.p1" class="ltx_para">
+<p class="ltx_p">If <math id="Sx6.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is any set,
+then the set <math id="Sx6.p1.m2" class="ltx_Math" alttext="K^{S}" display="inline"><msup><mi>K</mi><mi>S</mi></msup></math> of all functions from <math id="Sx6.p1.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> into <math id="Sx6.p1.m4" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>
+becomes a vector space over <math id="Sx6.p1.m5" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> if we define the operations pointwise,
+that is, <math id="Sx6.p1.m6" class="ltx_Math" alttext="(f+g)(x)=f(x)+g(x)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> and <math id="Sx6.p1.m7" class="ltx_Math" alttext="(\lambda f)(x)=\lambda f(x)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+for all <math id="Sx6.p1.m8" class="ltx_Math" alttext="f,g\in K^{S}" display="inline"><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo>∈</mo><msup><mi>K</mi><mi>S</mi></msup></mrow></math>, all <math id="Sx6.p1.m9" class="ltx_Math" alttext="x\in S" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>S</mi></mrow></math>, and all <math id="Sx6.p1.m10" class="ltx_Math" alttext="\lambda\in K" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>K</mi></mrow></math>.
+The dimension of this vector space is given by</p>
+<table id="Sx6.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex13.m1" class="ltx_Math" alttext="\dim(K^{S})=\begin{cases}|S|,&amp;\hbox{if }S\hbox{ is finite};\\
+|K|^{|S|},&amp;\hbox{if }S\hbox{ is infinite}.\end{cases}" display="block"><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi>K</mi><mi>S</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mo stretchy="false">|</mo><mi>S</mi><mo stretchy="false">|</mo></mrow><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mtext> is finite</mtext></mrow><mo>;</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><msup><mrow><mo stretchy="false">|</mo><mi>K</mi><mo stretchy="false">|</mo></mrow><mrow><mo stretchy="false">|</mo><mi>S</mi><mo stretchy="false">|</mo></mrow></msup><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mtext> is infinite</mtext></mrow><mo>.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The case where <math id="Sx6.p1.m11" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is infinite is not straightforward to prove.
+Proofs can be found in books by Baer<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite> and Jacobson<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>,
+among others.</p>
+</div>
+<div id="Sx6.p2" class="ltx_para">
+<p class="ltx_p">More generally, we can consider the space <math id="Sx6.p2.m1" class="ltx_Math" alttext="V^{S}" display="inline"><msup><mi>V</mi><mi>S</mi></msup></math>,
+which is really just the direct product (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/DirectProduct</span>) of copies of <math id="Sx6.p2.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> indexed by <math id="Sx6.p2.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>.
+We get</p>
+<table id="Sx6.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx6.Ex14.m1" class="ltx_Math" alttext="\dim(V^{S})=\begin{cases}0,&amp;\hbox{if }\dim(V)=0;\\
+|S|\cdot\dim(V),&amp;\hbox{if }S\hbox{ is finite};\\
+|V|^{|S|},&amp;\hbox{otherwise}.\end{cases}" display="block"><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi>V</mi><mi>S</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mn>0</mn><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>;</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mrow><mo stretchy="false">|</mo><mi>S</mi><mo stretchy="false">|</mo></mrow><mo>⋅</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>S</mi><mo>⁢</mo><mtext> is finite</mtext></mrow><mo>;</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><msup><mrow><mo stretchy="false">|</mo><mi>V</mi><mo stretchy="false">|</mo></mrow><mrow><mo stretchy="false">|</mo><mi>S</mi><mo stretchy="false">|</mo></mrow></msup><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mtext>otherwise</mtext><mo>.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="Sx7" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Dual space</h2>
+
+<div id="Sx7.p1" class="ltx_para">
+<p class="ltx_p">Given any basis <math id="Sx7.p1.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> of <math id="Sx7.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>,
+the dual space <math id="Sx7.p1.m3" class="ltx_Math" alttext="V^{*}" display="inline"><msup><mi>V</mi><mo>*</mo></msup></math>
+is isomorphic to <math id="Sx7.p1.m4" class="ltx_Math" alttext="K^{B}" display="inline"><msup><mi>K</mi><mi>B</mi></msup></math> via the mapping <math id="Sx7.p1.m5" class="ltx_Math" alttext="f\mapsto f|_{B}" display="inline"><mrow><mi>f</mi><mo>↦</mo><msub><mrow><mi>f</mi><mo fence="true" stretchy="false">|</mo></mrow><mi>B</mi></msub></mrow></math>.
+So the formula of the previous section
+can be applied to give a formula for the dimension of <math id="Sx7.p1.m6" class="ltx_Math" alttext="V^{*}" display="inline"><msup><mi>V</mi><mo>*</mo></msup></math>:</p>
+<table id="Sx7.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx7.Ex15.m1" class="ltx_Math" alttext="\dim(V^{*})=\begin{cases}\dim(V),&amp;\hbox{if }\dim(V)\hbox{ is finite};\\
+|K|^{\dim(V)},&amp;\hbox{if }\dim(V)\hbox{ is infinite}.\end{cases}" display="block"><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi>V</mi><mo>*</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext> is finite</mtext></mrow></mrow></mrow><mo>;</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><msup><mrow><mo stretchy="false">|</mo><mi>K</mi><mo stretchy="false">|</mo></mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></msup><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext> is infinite</mtext></mrow></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In particular, this formula implies that <math id="Sx7.p1.m7" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is isomorphic to <math id="Sx7.p1.m8" class="ltx_Math" alttext="V^{*}" display="inline"><msup><mi>V</mi><mo>*</mo></msup></math>
+if and only if <math id="Sx7.p1.m9" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is finite-dimensional.
+(Students who are familiar with the fact that
+an infinite-dimensional Banach space can be isomorphic to its dual
+are sometimes surprised to learn that an infinite-dimensional vector space
+cannot be isomorphic to its dual,
+for a Banach space is surely a vector space.
+But the term <span class="ltx_text ltx_font_italic">dual</span> is used in different senses in these two statements,
+so there is no contradiction.
+In the theory of Banach spaces
+one is usually only interested in the <span class="ltx_text ltx_font_italic">continuous</span> linear functionals,
+and the resulting ‘continuous’ dual
+is a subspace of the full dual used in the above formula.)</p>
+</div>
+</section>
+<section id="Sx8" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Space of linear mappings</h2>
+
+<div id="Sx8.p1" class="ltx_para">
+<p class="ltx_p">The set <math id="Sx8.p1.m1" class="ltx_Math" alttext="\operatorname{Hom}_{K}(V,W)" display="inline"><mrow><msub><mi>Hom</mi><mi>K</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>W</mi><mo stretchy="false">)</mo></mrow></mrow></math> of all linear mappings from <math id="Sx8.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> into <math id="Sx8.p1.m3" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math>
+is itself a vector space over <math id="Sx8.p1.m4" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>,
+with the operations defined in the obvious way,
+namely <math id="Sx8.p1.m5" class="ltx_Math" alttext="(f+g)(x)=f(x)+g(x)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> and <math id="Sx8.p1.m6" class="ltx_Math" alttext="(\lambda f)(x)=\lambda f(x)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+for all <math id="Sx8.p1.m7" class="ltx_Math" alttext="f,g\in\operatorname{Hom}_{K}(V,W)" display="inline"><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo>∈</mo><mrow><msub><mi>Hom</mi><mi>K</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>W</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, all <math id="Sx8.p1.m8" class="ltx_Math" alttext="x\in V" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow></math>, and all <math id="Sx8.p1.m9" class="ltx_Math" alttext="\lambda\in K" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>K</mi></mrow></math>.
+The dual space <math id="Sx8.p1.m10" class="ltx_Math" alttext="V^{*}=\operatorname{Hom}_{K}(V,K)" display="inline"><mrow><msup><mi>V</mi><mo>*</mo></msup><mo>=</mo><mrow><msub><mi>Hom</mi><mi>K</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>K</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> considered in the previous section
+is a special case of this.
+For any basis <math id="Sx8.p1.m11" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> of <math id="Sx8.p1.m12" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, the mapping <math id="Sx8.p1.m13" class="ltx_Math" alttext="f\mapsto f|_{B}" display="inline"><mrow><mi>f</mi><mo>↦</mo><msub><mrow><mi>f</mi><mo fence="true" stretchy="false">|</mo></mrow><mi>B</mi></msub></mrow></math>
+defines an isomorphism between <math id="Sx8.p1.m14" class="ltx_Math" alttext="\operatorname{Hom}_{K}(V,W)" display="inline"><mrow><msub><mi>Hom</mi><mi>K</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>W</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="Sx8.p1.m15" class="ltx_Math" alttext="W^{B}" display="inline"><msup><mi>W</mi><mi>B</mi></msup></math>,
+so that from an earlier section we get</p>
+<table id="Sx8.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx8.Ex16.m1" class="ltx_Math" alttext="\dim(\operatorname{Hom}_{K}(V,W))=\begin{cases}0,&amp;\hbox{if }\dim(W)=0;\\
+\dim(V)\cdot\dim(W),&amp;\hbox{if }\dim(V)\hbox{ is finite};\\
+|W|^{\dim(V)},&amp;\hbox{otherwise}.\end{cases}" display="block"><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>Hom</mi><mi>K</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>W</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mn>0</mn><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>W</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>;</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>W</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext> is finite</mtext></mrow></mrow></mrow><mo>;</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><msup><mrow><mo stretchy="false">|</mo><mi>W</mi><mo stretchy="false">|</mo></mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></msup><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mtext>otherwise</mtext><mo>.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Sx8.p2" class="ltx_para">
+<p class="ltx_p">In the special case <math id="Sx8.p2.m1" class="ltx_Math" alttext="W=V" display="inline"><mrow><mi>W</mi><mo>=</mo><mi>V</mi></mrow></math> this can be simplified to</p>
+<table id="Sx8.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx8.Ex17.m1" class="ltx_Math" alttext="\dim(\operatorname{End}_{K}(V))=\begin{cases}\dim(V)^{2},&amp;\hbox{if }\dim(V)%
+\hbox{ is finite};\\
+|K|^{\dim(V)},&amp;\hbox{otherwise}.\end{cases}" display="block"><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>End</mi><mi>K</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mo>dim</mo><mo>⁡</mo><msup><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext> is finite</mtext></mrow></mrow></mrow><mo>;</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><msup><mrow><mo stretchy="false">|</mo><mi>K</mi><mo stretchy="false">|</mo></mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></msup><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mtext>otherwise</mtext><mo>.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="Sx9" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Tensor products</h2>
+
+<div id="Sx9.p1" class="ltx_para">
+<p class="ltx_p">The dimension of the tensor product (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/TensorProduct</span>) of <math id="Sx9.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> and <math id="Sx9.p1.m2" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> is given by</p>
+<table id="Sx9.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx9.Ex18.m1" class="ltx_Math" alttext="\dim(V\otimes W)=\dim(V)\cdot\dim(W)." display="block"><mrow><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>V</mi><mo>⊗</mo><mi>W</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>W</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="Sx10" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Banach spaces</h2>
+
+<div id="Sx10.p1" class="ltx_para">
+<p class="ltx_p">The dimension of a Banach space,
+considered as a vector space,
+is sometimes called the <span class="ltx_text ltx_font_italic">Hamel dimension</span>,
+in order to distinguish it from other concepts of dimension.
+For an infinite-dimensional Banach space <math id="Sx10.p1.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> we have</p>
+<table id="Sx10.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx10.Ex19.m1" class="ltx_Math" alttext="\dim(B)=|B|." display="block"><mrow><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">|</mo><mi>B</mi><mo stretchy="false">|</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The tricky part of establishing this formula
+is to show that the dimension is always
+at least the cardinality of the continuum.
+A short proof of this is given in a paper by Lacey<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>]</cite>.</p>
+</div>
+<div id="Sx10.p2" class="ltx_para">
+<p class="ltx_p">The above formula suggests that Hamel dimension
+is not a very useful concept for infinite-dimensional Banach spaces,
+which is indeed the case.
+Nonetheless, it is interesting to see how Hamel dimension relates to
+the usual concept of dimension in Hilbert spaces.
+If <math id="Sx10.p2.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is a Hilbert space,
+and <math id="Sx10.p2.m2" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> is its dimension
+(meaning the cardinality of an orthonormal basis),
+then the Hamel dimension <math id="Sx10.p2.m3" class="ltx_Math" alttext="\dim(H)" display="inline"><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> is given by</p>
+<table id="Sx10.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx10.Ex20.m1" class="ltx_Math" alttext="\dim(H)=\begin{cases}d,&amp;\hbox{if }d\hbox{ is finite};\\
+d^{\aleph_{0}},&amp;\hbox{if }d\hbox{ is infinite}.\end{cases}" display="block"><mrow><mrow><mo>dim</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mi>d</mi><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mtext> is finite</mtext></mrow><mo>;</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><msup><mi>d</mi><msub><mi mathvariant="normal">ℵ</mi><mn>0</mn></msub></msup><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mtext> is infinite</mtext></mrow><mo>.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Reinhold Baer,
+<span class="ltx_text ltx_font_italic">Linear Algebra and Projective Geometry</span>,
+Academic Press, 1952.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+Nathan Jacobson,
+<span class="ltx_text ltx_font_italic">Lectures in Abstract Algebra</span>,
+Volume II: <span class="ltx_text ltx_font_italic">Linear Algebra</span>,
+D. Van Nostrand Company Inc., 1953.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+H. Elton Lacey,
+<span class="ltx_text ltx_font_italic">The Hamel Dimension of any Infinite Dimensional Separable Banach Space is c</span>,
+Amer. Math. Mon. 80 (1973), 298.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">dimension formulae for vector spaces</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DimensionFormulaeForVectorSpaces</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:31:19</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:31:19</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">yark (2760)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">yark (2760)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">25</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">yark (2760)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Feature</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 15A03</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:18:23 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

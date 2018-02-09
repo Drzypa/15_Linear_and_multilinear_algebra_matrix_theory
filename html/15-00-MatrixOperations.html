@@ -1,0 +1,317 @@
+<!DOCTYPE html><html>
+<head>
+<title>matrix operations</title>
+<!--Generated on Fri Feb  9 18:15:21 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">matrix operations</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A <span class="ltx_text ltx_font_italic">matrix</span> is an array, or a rectangular grid, of numbers. An <math id="p1.m1" class="ltx_Math" alttext="m\times n" display="inline"><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math> matrix is one which has <math id="p1.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> rows and <math id="p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> columns. Examples of
+matrices include:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">The <math id="I1.i1.p1.m1" class="ltx_Math" alttext="2\times 3" display="inline"><mrow><mn>2</mn><mo>×</mo><mn>3</mn></mrow></math> matrix</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="A=\begin{pmatrix}1&amp;-2&amp;2\\
+1&amp;0&amp;2\end{pmatrix}" display="block"><mrow><mi>A</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The <math id="I1.i2.p1.m1" class="ltx_Math" alttext="3\times 3" display="inline"><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math> matrix</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="B=\begin{pmatrix}1&amp;0&amp;1\\
+3&amp;-1&amp;5\\
+4&amp;2&amp;0\end{pmatrix}" display="block"><mrow><mi>B</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>5</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>4</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">The <math id="I1.i3.p1.m1" class="ltx_Math" alttext="3\times 1" display="inline"><mrow><mn>3</mn><mo>×</mo><mn>1</mn></mrow></math> matrix</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="C=\begin{pmatrix}7\\
+7\\
+2\end{pmatrix}" display="block"><mrow><mi>C</mi><mo>=</mo><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>7</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>7</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>2</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">The <math id="I1.i4.p1.m1" class="ltx_Math" alttext="1\times 2" display="inline"><mrow><mn>1</mn><mo>×</mo><mn>2</mn></mrow></math> matrix
+</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="D=\begin{pmatrix}\frac{1}{2}&amp;2\end{pmatrix}" display="block"><mrow><mi>D</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd columnalign="center"><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">All of our example matrices (except the last one) have entries which are
+integers. In general, matrices are allowed to have their entries taken
+from any ring <math id="p2.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>. The set of all <math id="p2.m2" class="ltx_Math" alttext="m\times n" display="inline"><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math> matrices with entries in
+a ring <math id="p2.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is denoted <math id="p2.m4" class="ltx_Math" alttext="M_{m\times n}(R)" display="inline"><mrow><msub><mi>M</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow></math>. If a matrix has exactly as
+many rows as it has columns, we say it is a square matrix.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Addition of two matrices is allowed provided that both matrices have the
+same number of rows and the same number of columns. The sum of two such
+matrices is obtained by adding their respective entries. For example,</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\begin{pmatrix}7\\
+7\\
+2\end{pmatrix}+\begin{pmatrix}-1\\
+4.5\\
+0\end{pmatrix}=\begin{pmatrix}7+(-1)\\
+7+4.5\\
+2+0\end{pmatrix}=\begin{pmatrix}6\\
+11.5\\
+2\end{pmatrix}" display="block"><mrow><mrow><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>7</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>7</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>2</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>+</mo><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>4.5</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mn>7</mn><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mn>7</mn><mo>+</mo><mn>4.5</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mn>2</mn><mo>+</mo><mn>0</mn></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>6</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>11.5</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>2</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Multiplication of two matrices is allowed provided that the number of
+columns of the first matrix equals the number of rows of the second
+matrix. (For example, multiplication of a <math id="p4.m1" class="ltx_Math" alttext="2\times 3" display="inline"><mrow><mn>2</mn><mo>×</mo><mn>3</mn></mrow></math> matrix with a <math id="p4.m2" class="ltx_Math" alttext="3\times 3" display="inline"><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math> is allowed, but multiplication of a <math id="p4.m3" class="ltx_Math" alttext="3\times 3" display="inline"><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math> matrix with a
+<math id="p4.m4" class="ltx_Math" alttext="2\times 3" display="inline"><mrow><mn>2</mn><mo>×</mo><mn>3</mn></mrow></math> matrix is not allowed, since the first matrix has 3
+columns, and the second matrix has 2 rows, and 3 doesn’t equal 2.)
+In this case the matrix multiplication is defined by</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="(AB)_{ij}=\sum_{k}(A)_{ik}(B)_{kj}\;." display="block"><mrow><mrow><msub><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>k</mi></munder><mrow><msub><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⁢</mo><mpadded width="+2.8pt"><msub><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mrow><mi>k</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">We will describe how matrix multiplication works is with an
+example. Let</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="A=\begin{pmatrix}1&amp;-2&amp;2\\
+1&amp;0&amp;2\end{pmatrix},\ \ \ \ B=\begin{pmatrix}1&amp;0&amp;1\\
+3&amp;-1&amp;5\\
+4&amp;2&amp;0\end{pmatrix}" display="block"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>B</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>5</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>4</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">be the two matrices that we used above as our very first two examples of
+matrices. Since <math id="p5.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a <math id="p5.m2" class="ltx_Math" alttext="2\times 3" display="inline"><mrow><mn>2</mn><mo>×</mo><mn>3</mn></mrow></math> matrix, and <math id="p5.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is a <math id="p5.m4" class="ltx_Math" alttext="3\times 3" display="inline"><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math>
+matrix, it is legal to multiply <math id="p5.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="p5.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, but it is not legal to
+multiply <math id="p5.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> and <math id="p5.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. The method for computing the product <math id="p5.m9" class="ltx_Math" alttext="AB" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow></math> is to
+place <math id="p5.m10" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> below and to the left of <math id="p5.m11" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, as follows:</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\begin{matrix}&amp;\begin{pmatrix}1&amp;0&amp;1\\
+3&amp;-1&amp;5\\
+4&amp;2&amp;0\end{pmatrix}\\
+\begin{pmatrix}1&amp;-2&amp;2\\
+1&amp;0&amp;2\end{pmatrix}&amp;\begin{pmatrix}X&amp;Y&amp;\\
+&amp;&amp;\end{pmatrix}\end{matrix}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>5</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>4</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr></mtable><mo>)</mo></mrow></mtd><mtd columnalign="center"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>X</mi></mtd><mtd columnalign="center"><mi>Y</mi></mtd><mtd columnalign="center"><mi></mi></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd></mtr></mtable><mo>)</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><math id="p5.m12" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is always in the bottom left corner, <math id="p5.m13" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is in the top right corner,
+and the product, <math id="p5.m14" class="ltx_Math" alttext="AB" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow></math>, is always in the bottom right corner. We see from
+the picture that <math id="p5.m15" class="ltx_Math" alttext="AB" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow></math> will be a <math id="p5.m16" class="ltx_Math" alttext="2\times 3" display="inline"><mrow><mn>2</mn><mo>×</mo><mn>3</mn></mrow></math> matrix. (In general, <math id="p5.m17" class="ltx_Math" alttext="AB" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow></math>
+has as many rows as <math id="p5.m18" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, and as many columns as <math id="p5.m19" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.)</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Let us compute the top left entry of <math id="p6.m1" class="ltx_Math" alttext="AB" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow></math>, denoted by <math id="p6.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> in the above
+picture. The way to calculate this entry of <math id="p6.m3" class="ltx_Math" alttext="AB" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow></math> (or any other entry) is
+to take the dot product of the stuff above it [which is <math id="p6.m4" class="ltx_Math" alttext="(1,3,4)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></math>] and
+the stuff to the left of it [which is <math id="p6.m5" class="ltx_Math" alttext="(1,-2,2)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>-</mo><mn>2</mn></mrow><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math>]. In this case, we have</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="X=1\cdot 1+3\cdot(-2)+4\cdot 2=3." display="block"><mrow><mrow><mi>X</mi><mo>=</mo><mrow><mrow><mn>1</mn><mo>⋅</mo><mn>1</mn></mrow><mo>+</mo><mrow><mn>3</mn><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mn>4</mn><mo>⋅</mo><mn>2</mn></mrow></mrow><mo>=</mo><mn>3</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Similarly, the top middle entry of <math id="p6.m6" class="ltx_Math" alttext="AB" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow></math> (where the <math id="p6.m7" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is in the above
+picture) is gotten by taking the dot product of the stuff above it:
+<math id="p6.m8" class="ltx_Math" alttext="(0,-1,2)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math>, and the stuff to the left of it: <math id="p6.m9" class="ltx_Math" alttext="(1,-2,2)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>-</mo><mn>2</mn></mrow><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math>, which gives</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="Y=0\cdot 1+(-1)\cdot(-2)+2\cdot 2=6" display="block"><mrow><mi>Y</mi><mo>=</mo><mrow><mrow><mn>0</mn><mo>⋅</mo><mn>1</mn></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⋅</mo><mn>2</mn></mrow></mrow><mo>=</mo><mn>6</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Continuing in this way, we can compute every entry of <math id="p7.m1" class="ltx_Math" alttext="AB" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow></math> one by one to
+get</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\begin{matrix}&amp;\begin{pmatrix}1&amp;0&amp;1\\
+3&amp;-1&amp;5\\
+4&amp;2&amp;0\end{pmatrix}\\
+\begin{pmatrix}1&amp;-2&amp;2\\
+1&amp;0&amp;2\end{pmatrix}&amp;\begin{pmatrix}3&amp;6&amp;-9\\
+9&amp;4&amp;1\end{pmatrix}\end{matrix}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>5</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>4</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr></mtable><mo>)</mo></mrow></mtd><mtd columnalign="center"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mn>6</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>9</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>9</mn></mtd><mtd columnalign="center"><mn>4</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and so</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="AB=\begin{pmatrix}3&amp;6&amp;-9\\
+9&amp;4&amp;1\end{pmatrix}." display="block"><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mn>6</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>9</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>9</mn></mtd><mtd columnalign="center"><mn>4</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If one tries to compute the <span class="ltx_text ltx_font_bold">illegal</span> product <math id="p7.m2" class="ltx_Math" alttext="BA" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mi>A</mi></mrow></math> using this
+procedure, one winds up with</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\begin{matrix}&amp;\begin{pmatrix}1&amp;-2&amp;2\\
+1&amp;0&amp;2\end{pmatrix}\\
+\begin{pmatrix}1&amp;0&amp;1\\
+3&amp;-1&amp;5\\
+4&amp;2&amp;0\end{pmatrix}&amp;\begin{pmatrix}?&amp;&amp;\\
+&amp;&amp;\\
+&amp;&amp;\end{pmatrix}\end{matrix}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr></mtable><mo>)</mo></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>5</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>4</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mtd><mtd columnalign="center"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi mathvariant="normal">?</mi></mtd><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd></mtr><mtr><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd></mtr></mtable><mo>)</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The top left entry of this illegal product (marked with a <math id="p7.m3" class="ltx_Math" alttext="?" display="inline"><mi mathvariant="normal">?</mi></math> above)
+would have to be the dot product of the stuff above it: <math id="p7.m4" class="ltx_Math" alttext="(1,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math>, and the
+stuff to the left of it: <math id="p7.m5" class="ltx_Math" alttext="(1,0,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math>, but these vectors do not have the same
+length, so it is impossible to take their dot product, and consequently
+it is impossible to take the product of the matrices <math id="p7.m6" class="ltx_Math" alttext="BA" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mi>A</mi></mrow></math>.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Under the correspondence of matrices and linear transformations, one can
+show that matrix multiplication is equivalent to composition of linear
+transformations, which explains why matrix multiplication is
+defined in a manner which is so odd at first sight, and why this strange
+manner of multiplication is so useful in mathematics.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">matrix operations</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">MatrixOperations</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:57:54</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:57:54</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">djao (24)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">djao (24)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">djao (24)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15-00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">matrix addition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">matrix multiplication</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">matrix product</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">standard matrix multiplication</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:15:21 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

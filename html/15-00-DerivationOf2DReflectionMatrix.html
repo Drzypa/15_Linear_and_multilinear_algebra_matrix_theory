@@ -1,0 +1,315 @@
+<!DOCTYPE html><html>
+<head>
+<title>derivation of 2D reflection matrix</title>
+<!--Generated on Fri Feb  9 18:13:56 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">derivation of 2D reflection matrix</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Reflection across a line of given angle</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Sx1.p1.m1" class="ltx_Math" alttext="\mathbf{x},\mathbf{y}" display="inline"><mrow><mi>𝐱</mi><mo>,</mo><mi>𝐲</mi></mrow></math> be perpendicular unit vectors in the plane.
+Suppose we want to reflect vectors (perpendicularly) over a line that makes an angle <math id="Sx1.p1.m2" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> with
+the positive <math id="Sx1.p1.m3" class="ltx_Math" alttext="\mathbf{x}" display="inline"><mi>𝐱</mi></math> axis. More precisely, we are given
+a direction direction vector <math id="Sx1.p1.m4" class="ltx_Math" alttext="\mathbf{u}=\cos\theta\,\mathbf{x}+\sin\theta\,\mathbf{y}" display="inline"><mrow><mi>𝐮</mi><mo>=</mo><mrow><mrow><mi>cos</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><mi>θ</mi></mpadded><mo>⁢</mo><mi>𝐱</mi></mrow></mrow><mo>+</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><mi>θ</mi></mpadded><mo>⁢</mo><mi>𝐲</mi></mrow></mrow></mrow></mrow></math> for the line of reflection.
+A unit vector perpendicular to <math id="Sx1.p1.m5" class="ltx_Math" alttext="\mathbf{u}" display="inline"><mi>𝐮</mi></math> is <math id="Sx1.p1.m6" class="ltx_Math" alttext="\mathbf{v}=-\sin\theta\,\mathbf{x}+\cos\theta\,\mathbf{y}" display="inline"><mrow><mi>𝐯</mi><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><mi>θ</mi></mpadded><mo>⁢</mo><mi>𝐱</mi></mrow></mrow></mrow><mo>+</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><mi>θ</mi></mpadded><mo>⁢</mo><mi>𝐲</mi></mrow></mrow></mrow></mrow></math>
+(as is easily checked). Then to reflect an arbitrary vector <math id="Sx1.p1.m7" class="ltx_Math" alttext="\mathbf{w}" display="inline"><mi>𝐰</mi></math>,
+we write <math id="Sx1.p1.m8" class="ltx_Math" alttext="\mathbf{w}" display="inline"><mi>𝐰</mi></math> in  of its components in the <math id="Sx1.p1.m9" class="ltx_Math" alttext="\mathbf{u},\mathbf{v}" display="inline"><mrow><mi>𝐮</mi><mo>,</mo><mi>𝐯</mi></mrow></math> axes:
+<math id="Sx1.p1.m10" class="ltx_Math" alttext="\mathbf{w}=a\mathbf{u}+b\mathbf{v}" display="inline"><mrow><mi>𝐰</mi><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>𝐮</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>𝐯</mi></mrow></mrow></mrow></math>, and the result of the reflection is to be <math id="Sx1.p1.m11" class="ltx_Math" alttext="\mathbf{w}^{\prime}=a\mathbf{u}-b\mathbf{v}" display="inline"><mrow><msup><mi>𝐰</mi><mo>′</mo></msup><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>𝐮</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>𝐯</mi></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para ltx_centering">
+<img src="reflection.eps" id="Sx1.p2.g1" class="ltx_graphics" alt="">
+</div>
+<div id="Sx1.p3" class="ltx_para">
+<p class="ltx_p">We compute the matrix for such a reflection in the original <math id="Sx1.p3.m1" class="ltx_Math" alttext="x,y" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow></math> coordinates.</p>
+</div>
+<div id="Sx1.p4" class="ltx_para">
+<p class="ltx_p">Denote the reflection by <math id="Sx1.p4.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>. By the matrix change-of-coordinates formula,
+we have</p>
+<table id="Sx4.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Sx1.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx1.Ex1.m1" class="ltx_Math" alttext="\displaystyle[T]_{xy}=[I]_{uv}^{xy}\&gt;[T]_{uv}\&gt;[I]_{xy}^{uv}\,," display="inline"><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>T</mi><mo stretchy="false">]</mo></mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msub><mo>=</mo><mrow><mpadded width="+2.2pt"><msubsup><mrow><mo stretchy="false">[</mo><mi>I</mi><mo stretchy="false">]</mo></mrow><mrow><mi>u</mi><mo>⁢</mo><mi>v</mi></mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msubsup></mpadded><mo>⁢</mo><mpadded width="+2.2pt"><msub><mrow><mo stretchy="false">[</mo><mi>T</mi><mo stretchy="false">]</mo></mrow><mrow><mi>u</mi><mo>⁢</mo><mi>v</mi></mrow></msub></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msubsup><mrow><mo stretchy="false">[</mo><mi>I</mi><mo stretchy="false">]</mo></mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mi>u</mi><mo>⁢</mo><mi>v</mi></mrow></msubsup></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="Sx1.p4.m2" class="ltx_Math" alttext="[T]_{xy}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>T</mi><mo stretchy="false">]</mo></mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msub></math> and <math id="Sx1.p4.m3" class="ltx_Math" alttext="[T]_{uv}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>T</mi><mo stretchy="false">]</mo></mrow><mrow><mi>u</mi><mo>⁢</mo><mi>v</mi></mrow></msub></math> denote the matrix representing <math id="Sx1.p4.m4" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> with
+respect to the <math id="Sx1.p4.m5" class="ltx_Math" alttext="x,y" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow></math> and <math id="Sx1.p4.m6" class="ltx_Math" alttext="u,v" display="inline"><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow></math> coordinates respectively; <math id="Sx1.p4.m7" class="ltx_Math" alttext="[I]_{uv}^{xy}" display="inline"><msubsup><mrow><mo stretchy="false">[</mo><mi>I</mi><mo stretchy="false">]</mo></mrow><mrow><mi>u</mi><mo>⁢</mo><mi>v</mi></mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msubsup></math> is the
+matrix that changes from <math id="Sx1.p4.m8" class="ltx_Math" alttext="u,v" display="inline"><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow></math> coordinates to <math id="Sx1.p4.m9" class="ltx_Math" alttext="x,y" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow></math> coordinates, and <math id="Sx1.p4.m10" class="ltx_Math" alttext="[I]_{xy}^{uv}" display="inline"><msubsup><mrow><mo stretchy="false">[</mo><mi>I</mi><mo stretchy="false">]</mo></mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mi>u</mi><mo>⁢</mo><mi>v</mi></mrow></msubsup></math> is the matrix that changes coordinates the other way.</p>
+</div>
+<div id="Sx1.p5" class="ltx_para">
+<p class="ltx_p">The three matrices on the right-hand side are all easily derived
+from the description we gave for the reflection <math id="Sx1.p5.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>:</p>
+<table id="Sx4.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Sx1.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx1.Ex2.m1" class="ltx_Math" alttext="\displaystyle[I]_{uv}^{xy}=\begin{bmatrix}\cos\theta&amp;-\sin\theta\\
+\sin\theta&amp;\cos\theta\end{bmatrix}\,,\quad[T]_{uv}=\begin{bmatrix}1&amp;0\\
+0&amp;-1\end{bmatrix}\,,\quad[I]_{xy}^{uv}=\Bigl{(}[I]_{uv}^{xy}\Bigr{)}^{-1}=%
+\begin{bmatrix}\cos\theta&amp;\sin\theta\\
+-\sin\theta&amp;\cos\theta\end{bmatrix}\,." display="inline"><mrow><mrow><mrow><msubsup><mrow><mo stretchy="false">[</mo><mi>I</mi><mo stretchy="false">]</mo></mrow><mrow><mi>u</mi><mo>⁢</mo><mi>v</mi></mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msubsup><mo>=</mo><mpadded width="+1.7pt"><mrow><mo>[</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow></mtd><mtd columnalign="center"><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mpadded></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>T</mi><mo stretchy="false">]</mo></mrow><mrow><mi>u</mi><mo>⁢</mo><mi>v</mi></mrow></msub><mo>=</mo><mpadded width="+1.7pt"><mrow><mo>[</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mpadded></mrow><mo rspace="12.5pt">,</mo><mrow><msubsup><mrow><mo stretchy="false">[</mo><mi>I</mi><mo stretchy="false">]</mo></mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mi>u</mi><mo>⁢</mo><mi>v</mi></mrow></msubsup><mo>=</mo><msup><mrow><mo maxsize="160%" minsize="160%">(</mo><msubsup><mrow><mo stretchy="false">[</mo><mi>I</mi><mo stretchy="false">]</mo></mrow><mrow><mi>u</mi><mo>⁢</mo><mi>v</mi></mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msubsup><mo maxsize="160%" minsize="160%">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>=</mo><mpadded width="+1.7pt"><mrow><mo>[</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mtd><mtd columnalign="center"><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow></mtd><mtd columnalign="center"><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Computing the matrix product (with the help of the double angle identity) yields:</p>
+<table id="Sx1.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.E1.m1" class="ltx_Math" alttext="[T]_{xy}=\begin{bmatrix}\cos 2\theta&amp;\sin 2\theta\\
+\sin 2\theta&amp;-\cos 2\theta\end{bmatrix}\,." display="block"><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>T</mi><mo stretchy="false">]</mo></mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msub><mo>=</mo><mpadded width="+1.7pt"><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>cos</mi><mo>⁡</mo><mrow><mn>2</mn><mo>⁢</mo><mi>θ</mi></mrow></mrow></mtd><mtd columnalign="center"><mrow><mi>sin</mi><mo>⁡</mo><mrow><mn>2</mn><mo>⁢</mo><mi>θ</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>sin</mi><mo>⁡</mo><mrow><mn>2</mn><mo>⁢</mo><mi>θ</mi></mrow></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mn>2</mn><mo>⁢</mo><mi>θ</mi></mrow></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mpadded></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+</div>
+<div id="Sx1.p6" class="ltx_para">
+<p class="ltx_p">For the  of the reader, we note that there are other ways of “deriving” this result.
+One is by the use of a diagram, which would show that <math id="Sx1.p6.m1" class="ltx_Math" alttext="(1,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> gets reflected
+to <math id="Sx1.p6.m2" class="ltx_Math" alttext="(\cos 2\theta,\sin 2\theta)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mn>2</mn><mo>⁢</mo><mi>θ</mi></mrow></mrow><mo>,</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mn>2</mn><mo>⁢</mo><mi>θ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math> and <math id="Sx1.p6.m3" class="ltx_Math" alttext="(0,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> gets reflected to <math id="Sx1.p6.m4" class="ltx_Math" alttext="(\sin 2\theta,-\cos 2\theta)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mn>2</mn><mo>⁢</mo><mi>θ</mi></mrow></mrow><mo>,</mo><mrow><mo>-</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mn>2</mn><mo>⁢</mo><mi>θ</mi></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></math>.
+Another way is to observe that we can rotate an arbitrary mirror line
+onto the x-axis, then reflect across the x-axis, and rotate back.
+(The matrix product <math id="Sx1.p6.m5" class="ltx_Math" alttext="[T]_{xy}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>T</mi><mo stretchy="false">]</mo></mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msub></math> can be seen as operating this way.)
+We took neither of these two approaches, because to justify them rigorously takes a bit of work,
+that is avoided by the pure linear algebra approach.</p>
+</div>
+<div id="Sx1.p7" class="ltx_para">
+<p class="ltx_p">Note also that <math id="Sx1.p7.m1" class="ltx_Math" alttext="[T]_{uv}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>T</mi><mo stretchy="false">]</mo></mrow><mrow><mi>u</mi><mo>⁢</mo><mi>v</mi></mrow></msub></math> and <math id="Sx1.p7.m2" class="ltx_Math" alttext="[T]_{xy}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>T</mi><mo stretchy="false">]</mo></mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msub></math> are orthogonal matrices,
+with determinant <math id="Sx1.p7.m3" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math>, as expected.</p>
+</div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Reflection across a line of given direction vector</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">Suppose instead of being given an angle <math id="Sx2.p1.m1" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>,
+we are given the unit direction vector <math id="Sx2.p1.m2" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> to reflect the vector <math id="Sx2.p1.m3" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math>.
+We can derive the matrix for the reflection directly, without involving any trigonometric functions.</p>
+</div>
+<div id="Sx2.p2" class="ltx_para">
+<p class="ltx_p">In the decomposition <math id="Sx2.p2.m1" class="ltx_Math" alttext="\mathbf{w}=a\mathbf{u}+b\mathbf{v}" display="inline"><mrow><mi>𝐰</mi><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>𝐮</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>𝐯</mi></mrow></mrow></mrow></math>,
+we note that <math id="Sx2.p2.m2" class="ltx_Math" alttext="b=\mathbf{w}\cdot\mathbf{v}" display="inline"><mrow><mi>b</mi><mo>=</mo><mrow><mi>𝐰</mi><mo>⋅</mo><mi>𝐯</mi></mrow></mrow></math>. Therefore</p>
+<table id="Sx2.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex3.m1" class="ltx_Math" alttext="\mathbf{w}^{\prime}=(a\mathbf{u}+b\mathbf{v})-2b\mathbf{v}=\mathbf{w}-2(%
+\mathbf{w}\cdot\mathbf{v})\mathbf{v}\,." display="block"><mrow><mrow><msup><mi>𝐰</mi><mo>′</mo></msup><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>𝐮</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>𝐯</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>𝐯</mi></mrow></mrow><mo>=</mo><mrow><mi>𝐰</mi><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐰</mi><mo>⋅</mo><mi>𝐯</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><mi>𝐯</mi></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(In fact, this is the formula used in the  to draw the diagram in this entry.)
+To derive the matrix with respect to <math id="Sx2.p2.m3" class="ltx_Math" alttext="x,y" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow></math> coordinates, we resort to a trick:</p>
+<table id="Sx2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex4.m1" class="ltx_Math" alttext="\mathbf{w}^{\prime}=I\mathbf{w}-2\mathbf{v}(\mathbf{w}\cdot\mathbf{v})=I%
+\mathbf{w}-2\mathbf{v}(\mathbf{v}^{\textrm{tr}}\mathbf{w})=I\mathbf{w}-2(%
+\mathbf{v}\mathbf{v}^{\textrm{tr}})\mathbf{w}\,." display="block"><mrow><mrow><msup><mi>𝐰</mi><mo>′</mo></msup><mo>=</mo><mrow><mrow><mi>I</mi><mo>⁢</mo><mi>𝐰</mi></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>𝐯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐰</mi><mo>⋅</mo><mi>𝐯</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi>I</mi><mo>⁢</mo><mi>𝐰</mi></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>𝐯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>𝐯</mi><mtext>tr</mtext></msup><mo>⁢</mo><mi>𝐰</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi>I</mi><mo>⁢</mo><mi>𝐰</mi></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>𝐯𝐯</mi><mtext>tr</mtext></msup><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><mi>𝐰</mi></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore the matrix of the transformation is</p>
+<table id="Sx2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.Ex5.m1" class="ltx_Math" alttext="I-2\mathbf{v}\mathbf{v}^{\textrm{tr}}=\begin{bmatrix}u_{x}^{2}-u_{y}^{2}&amp;2u_{x%
+}u_{y}\\
+2u_{x}u_{y}&amp;u_{y}^{2}-u_{x}^{2}\end{bmatrix}\,,\quad\mathbf{u}=(u_{x},u_{y})^{%
+\textrm{tr}}\,,\quad\mathbf{v}=(-u_{y},u_{x})^{\textrm{tr}}\,." display="block"><mrow><mrow><mrow><mrow><mi>I</mi><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>𝐯𝐯</mi><mtext>tr</mtext></msup></mrow></mrow><mo>=</mo><mpadded width="+1.7pt"><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msubsup><mi>u</mi><mi>x</mi><mn>2</mn></msubsup><mo>-</mo><msubsup><mi>u</mi><mi>y</mi><mn>2</mn></msubsup></mrow></mtd><mtd columnalign="center"><mrow><mn>2</mn><mo>⁢</mo><msub><mi>u</mi><mi>x</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>y</mi></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mn>2</mn><mo>⁢</mo><msub><mi>u</mi><mi>x</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>y</mi></msub></mrow></mtd><mtd columnalign="center"><mrow><msubsup><mi>u</mi><mi>y</mi><mn>2</mn></msubsup><mo>-</mo><msubsup><mi>u</mi><mi>x</mi><mn>2</mn></msubsup></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mpadded></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>𝐮</mi><mo>=</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mi>x</mi></msub><mo>,</mo><msub><mi>u</mi><mi>y</mi></msub><mo stretchy="false">)</mo></mrow><mtext>tr</mtext></msup></mpadded></mrow><mo rspace="12.5pt">,</mo><mrow><mi>𝐯</mi><mo>=</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><msub><mi>u</mi><mi>y</mi></msub></mrow><mo>,</mo><msub><mi>u</mi><mi>x</mi></msub><mo stretchy="false">)</mo></mrow><mtext>tr</mtext></msup></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="Sx2.p2.m4" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> was not a unit vector to begin with, it of course suffices to divide by its magnitude before proceeding. Taking this into account, we obtain the following matrix for a reflection
+about a line with direction <math id="Sx2.p2.m5" class="ltx_Math" alttext="\mathbf{u}" display="inline"><mi>𝐮</mi></math>:</p>
+<table id="Sx2.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.E2.m1" class="ltx_Math" alttext="\frac{1}{u_{x}^{2}+u_{y}^{2}}\begin{bmatrix}u_{x}^{2}-u_{y}^{2}&amp;2u_{x}u_{y}\\
+2u_{x}u_{y}&amp;u_{y}^{2}-u_{x}^{2}\end{bmatrix}\,." display="block"><mrow><mrow><mfrac><mn>1</mn><mrow><msubsup><mi>u</mi><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>u</mi><mi>y</mi><mn>2</mn></msubsup></mrow></mfrac><mo>⁢</mo><mpadded width="+1.7pt"><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msubsup><mi>u</mi><mi>x</mi><mn>2</mn></msubsup><mo>-</mo><msubsup><mi>u</mi><mi>y</mi><mn>2</mn></msubsup></mrow></mtd><mtd columnalign="center"><mrow><mn>2</mn><mo>⁢</mo><msub><mi>u</mi><mi>x</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>y</mi></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mn>2</mn><mo>⁢</mo><msub><mi>u</mi><mi>x</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>y</mi></msub></mrow></mtd><mtd columnalign="center"><mrow><msubsup><mi>u</mi><mi>y</mi><mn>2</mn></msubsup><mo>-</mo><msubsup><mi>u</mi><mi>x</mi><mn>2</mn></msubsup></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mpadded></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Notice that if we put <math id="Sx2.p2.m6" class="ltx_Math" alttext="u_{x}=\cos\theta" display="inline"><mrow><msub><mi>u</mi><mi>x</mi></msub><mo>=</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow></math> and <math id="Sx2.p2.m7" class="ltx_Math" alttext="u_{y}=\sin\theta" display="inline"><mrow><msub><mi>u</mi><mi>y</mi></msub><mo>=</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow></math> in matrix (<a href="#Sx2.E2" title="(2) ‣ Reflection across a line of given direction vector ‣ derivation of 2D reflection matrix" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>),
+we get matrix (<a href="#Sx1.E1" title="(1) ‣ Reflection across a line of given angle ‣ derivation of 2D reflection matrix" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>), as it should be.</p>
+</div>
+</section>
+<section id="Sx3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Reflection across a line of given slope</h2>
+
+<div id="Sx3.p1" class="ltx_para">
+<p class="ltx_p">There is another form for the matrix (<a href="#Sx1.E1" title="(1) ‣ Reflection across a line of given angle ‣ derivation of 2D reflection matrix" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>).
+We set <math id="Sx3.p1.m1" class="ltx_Math" alttext="m=\tan\theta" display="inline"><mrow><mi>m</mi><mo>=</mo><mrow><mi>tan</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow></math> to be the slope of the line of reflection
+and use the identities:</p>
+<table id="Sx4.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Sx3.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx3.Ex6.m1" class="ltx_Math" alttext="\displaystyle\cos^{2}\theta" display="inline"><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mi>θ</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex6.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\tan^{2}\theta+1}=\frac{1}{m^{2}+1}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mrow><msup><mi>tan</mi><mn>2</mn></msup><mo>⁡</mo><mi>θ</mi></mrow><mo>+</mo><mn>1</mn></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx3.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx3.Ex7.m1" class="ltx_Math" alttext="\displaystyle\cos 2\theta" display="inline"><mrow><mi>cos</mi><mo>⁡</mo><mrow><mn>2</mn><mo>⁢</mo><mi>θ</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex7.m2" class="ltx_Math" alttext="\displaystyle=2\cos^{2}\theta-1" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mi>θ</mi></mrow></mrow><mo>-</mo><mn>1</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="Sx3.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx3.Ex8.m1" class="ltx_Math" alttext="\displaystyle\sin 2\theta" display="inline"><mrow><mi>sin</mi><mo>⁡</mo><mrow><mn>2</mn><mo>⁢</mo><mi>θ</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx3.Ex8.m2" class="ltx_Math" alttext="\displaystyle=2\sin\theta\cos\theta=2\tan\theta\cos^{2}\theta=2m\cos^{2}\theta\,." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi>tan</mi><mo>⁡</mo><mi>θ</mi></mrow><mo>⁢</mo><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mi>θ</mi></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mpadded width="+1.7pt"><mi>θ</mi></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">When these equations are substituted in matrix (<a href="#Sx1.E1" title="(1) ‣ Reflection across a line of given angle ‣ derivation of 2D reflection matrix" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>),
+we obtain an alternate expression for it in  of <math id="Sx3.p1.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> only:</p>
+<table id="Sx3.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx3.E3.m1" class="ltx_Math" alttext="\frac{1}{m^{2}+1}\begin{bmatrix}1-m^{2}&amp;2m\\
+2m&amp;m^{2}-1\end{bmatrix}\,." display="block"><mrow><mrow><mfrac><mn>1</mn><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mfrac><mo>⁢</mo><mpadded width="+1.7pt"><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mn>1</mn><mo>-</mo><msup><mi>m</mi><mn>2</mn></msup></mrow></mtd><mtd columnalign="center"><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mtd><mtd columnalign="center"><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mpadded></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Thus we have derived the matrix for a reflection about a line of slope <math id="Sx3.p1.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>.</p>
+</div>
+<div id="Sx3.p2" class="ltx_para">
+<p class="ltx_p">Alternatively, we could have also substituted <math id="Sx3.p2.m1" class="ltx_Math" alttext="u_{x}=1" display="inline"><mrow><msub><mi>u</mi><mi>x</mi></msub><mo>=</mo><mn>1</mn></mrow></math> and <math id="Sx3.p2.m2" class="ltx_Math" alttext="u_{y}=m" display="inline"><mrow><msub><mi>u</mi><mi>y</mi></msub><mo>=</mo><mi>m</mi></mrow></math>
+in matrix (<a href="#Sx2.E2" title="(2) ‣ Reflection across a line of given direction vector ‣ derivation of 2D reflection matrix" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) to arrive at the same result.</p>
+</div>
+</section>
+<section id="Sx4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Topology of reflection matrices</h2>
+
+<div id="Sx4.p1" class="ltx_para">
+<p class="ltx_p">Of course, formula (<a href="#Sx3.E3" title="(3) ‣ Reflection across a line of given slope ‣ derivation of 2D reflection matrix" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) does not work literally when
+<math id="Sx4.p1.m1" class="ltx_Math" alttext="m=\pm\infty" display="inline"><mrow><mi>m</mi><mo>=</mo><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math> (the line is vertical).
+However, that case may be derived by taking the limit <math id="Sx4.p1.m2" class="ltx_Math" alttext="\lvert m\rvert\to\infty" display="inline"><mrow><mrow><mo fence="true" stretchy="false">|</mo><mi>m</mi><mo fence="true" stretchy="false">|</mo></mrow><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math> —
+this limit operation can be justified by considerations of the topology of
+the space of two-dimensional reflection matrices.</p>
+</div>
+<div id="Sx4.p2" class="ltx_para">
+<p class="ltx_p">What is this topology? It is the one-dimensional projective plane <math id="Sx4.p2.m1" class="ltx_Math" alttext="\mathbb{RP}^{1}" display="inline"><mrow><mi>ℝ</mi><mo>⁢</mo><msup><mi>ℙ</mi><mn>1</mn></msup></mrow></math>,
+or simply, the “real projective line”.
+It is formed by taking the circle, and identifying opposite points, so
+that each pair of opposite points specify a unique mirror line of reflection in <math id="Sx4.p2.m2" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>.
+Formula (<a href="#Sx1.E1" title="(1) ‣ Reflection across a line of given angle ‣ derivation of 2D reflection matrix" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) is a parameterization of <math id="Sx4.p2.m3" class="ltx_Math" alttext="\mathbb{RP}^{1}" display="inline"><mrow><mi>ℝ</mi><mo>⁢</mo><msup><mi>ℙ</mi><mn>1</mn></msup></mrow></math>.
+Note that (<a href="#Sx1.E1" title="(1) ‣ Reflection across a line of given angle ‣ derivation of 2D reflection matrix" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) involves the quantity <math id="Sx4.p2.m4" class="ltx_Math" alttext="2\theta" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>θ</mi></mrow></math>, not <math id="Sx4.p2.m5" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>,
+because for a point <math id="Sx4.p2.m6" class="ltx_Math" alttext="(\cos\theta,\sin\theta)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow><mo>,</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></math> on the circle,
+its opposite point <math id="Sx4.p2.m7" class="ltx_Math" alttext="(\cos(\theta+\pi),\sin(\theta+\pi))" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>θ</mi><mo>+</mo><mi>π</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>θ</mi><mo>+</mo><mi>π</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> specify the same reflection,
+so formula (<a href="#Sx1.E1" title="(1) ‣ Reflection across a line of given angle ‣ derivation of 2D reflection matrix" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) has to be invariant when <math id="Sx4.p2.m8" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> is replaced by <math id="Sx4.p2.m9" class="ltx_Math" alttext="\theta+\pi" display="inline"><mrow><mi>θ</mi><mo>+</mo><mi>π</mi></mrow></math>.</p>
+</div>
+<div id="Sx4.p3" class="ltx_para">
+<p class="ltx_p">But (<a href="#Sx1.E1" title="(1) ‣ Reflection across a line of given angle ‣ derivation of 2D reflection matrix" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) might as well be written</p>
+<table id="Sx4.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx4.E4.m1" class="ltx_Math" alttext="[T]_{xy}=\begin{bmatrix}\cos\phi&amp;\sin\phi\\
+\sin\phi&amp;-\cos\phi\end{bmatrix}\,." display="block"><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>T</mi><mo stretchy="false">]</mo></mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></msub><mo>=</mo><mpadded width="+1.7pt"><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>cos</mi><mo>⁡</mo><mi>ϕ</mi></mrow></mtd><mtd columnalign="center"><mrow><mi>sin</mi><mo>⁡</mo><mi>ϕ</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>sin</mi><mo>⁡</mo><mi>ϕ</mi></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>ϕ</mi></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mpadded></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="Sx4.p3.m1" class="ltx_Math" alttext="\phi=2\theta" display="inline"><mrow><mi>ϕ</mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>θ</mi></mrow></mrow></math>. For this parameterization of <math id="Sx4.p3.m2" class="ltx_Math" alttext="RP^{1}" display="inline"><mrow><mi>R</mi><mo>⁢</mo><msup><mi>P</mi><mn>1</mn></msup></mrow></math> to be one-to-one,
+<math id="Sx4.p3.m3" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> can range over interval <math id="Sx4.p3.m4" class="ltx_Math" alttext="(0,2\pi)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo stretchy="false">)</mo></mrow></math>, and the endpoints at <math id="Sx4.p3.m5" class="ltx_Math" alttext="\phi=0,2\pi" display="inline"><mrow><mi>ϕ</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></mrow></mrow></math> overlap just
+as for a circle, without identifying pairs of opposite points. What does this mean? It is the fact that <math id="Sx4.p3.m6" class="ltx_Math" alttext="\mathbb{RP}^{1}" display="inline"><mrow><mi>ℝ</mi><mo>⁢</mo><msup><mi>ℙ</mi><mn>1</mn></msup></mrow></math> is homeomorphic to the circle <math id="Sx4.p3.m7" class="ltx_Math" alttext="S^{1}" display="inline"><msup><mi>S</mi><mn>1</mn></msup></math>.</p>
+</div>
+<div id="Sx4.p4" class="ltx_para">
+<p class="ltx_p">The real projective line <math id="Sx4.p4.m1" class="ltx_Math" alttext="\mathbb{RP}^{1}" display="inline"><mrow><mi>ℝ</mi><mo>⁢</mo><msup><mi>ℙ</mi><mn>1</mn></msup></mrow></math> is also the one-point compactification of <math id="Sx4.p4.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>
+(i.e. <math id="Sx4.p4.m3" class="ltx_Math" alttext="\mathbb{RP}^{1}=\mathbb{R}\cup\{\infty\}" display="inline"><mrow><mrow><mi>ℝ</mi><mo>⁢</mo><msup><mi>ℙ</mi><mn>1</mn></msup></mrow><mo>=</mo><mrow><mi>ℝ</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></math>),
+as shown by formula (<a href="#Sx3.E3" title="(3) ‣ Reflection across a line of given slope ‣ derivation of 2D reflection matrix" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>); the number <math id="Sx4.p4.m4" class="ltx_Math" alttext="m=\infty" display="inline"><mrow><mi>m</mi><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math> corresponds to
+a reflection across the vertical axis. Note that this “<math id="Sx4.p4.m5" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math>”
+is not the same as the usual <math id="Sx4.p4.m6" class="ltx_Math" alttext="\pm\infty" display="inline"><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow></math>, because here <math id="Sx4.p4.m7" class="ltx_Math" alttext="-\infty" display="inline"><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></math> and <math id="Sx4.p4.m8" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math>
+are actually the same number, both representing the slope of a vertical line.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">derivation of 2D reflection matrix</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DerivationOf2DReflectionMatrix</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:25:05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:25:05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">14</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15-00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">RotationMatrix</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DecompositionOfOrthogonalOperatorsAsRotationsAndReflections</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">DerivationOfRotationMatrixUsingPolarCoordinates</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:13:56 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

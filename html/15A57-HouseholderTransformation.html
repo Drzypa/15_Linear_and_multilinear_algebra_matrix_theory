@@ -1,0 +1,202 @@
+<!DOCTYPE html><html>
+<head>
+<title>Householder transformation</title>
+<!--Generated on Fri Feb  9 18:29:07 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Householder transformation</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">This entry describes the <em class="ltx_emph ltx_font_italic">Householder transformation</em> <math id="p1.m1" class="ltx_Math" alttext="u=Hv" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mi>H</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></math>, the most frequently used algorithm for performing QR decomposition. The key object here is the <em class="ltx_emph ltx_font_italic">Householder matrix</em> <math id="p1.m2" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>, a symmetric and orthogonal matrix of the form</p>
+</div>
+<div id="p2" class="ltx_para">
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="H=I-2xx^{T}," display="block"><mrow><mrow><mi>H</mi><mo>=</mo><mrow><mi>I</mi><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><msup><mi>x</mi><mi>T</mi></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">where <math id="p3.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is the identity matrix and we have used any normalized vector <math id="p3.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> with <math id="p3.m3" class="ltx_Math" alttext="||x||_{2}^{2}=x^{T}x=1" display="inline"><mrow><msubsup><mrow><mo fence="true">||</mo><mi>x</mi><mo fence="true">||</mo></mrow><mn>2</mn><mn>2</mn></msubsup><mo>=</mo><mrow><msup><mi>x</mi><mi>T</mi></msup><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The Householder transformation zeroes the last <math id="p4.m1" class="ltx_Math" alttext="m-1" display="inline"><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></math> elements of a column vector below the first element:</p>
+</div>
+<div id="p5" class="ltx_para">
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\begin{bmatrix}v_{1}\\
+v_{2}\\
+\vdots\\
+v_{m}\end{bmatrix}\rightarrow\begin{bmatrix}c\\
+0\\
+\vdots\\
+0\end{bmatrix}\text{with}\;c=\pm||v||_{2}=\pm\left(\sum_{i=1}^{m}v_{i}^{2}%
+\right)^{1/2}" display="block"><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>v</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>v</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>v</mi><mi>m</mi></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>→</mo><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>c</mi></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mpadded width="+2.8pt"><mtext>with</mtext></mpadded><mo>⁢</mo><mi>c</mi></mrow><mo>=</mo><mrow><mo>±</mo><msub><mrow><mo fence="true">||</mo><mi>v</mi><mo fence="true">||</mo></mrow><mn>2</mn></msub></mrow><mo>=</mo><mrow><mo>±</mo><msup><mrow><mo>(</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><msubsup><mi>v</mi><mi>i</mi><mn>2</mn></msubsup></mrow><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">One can verify that</p>
+</div>
+<div id="p7" class="ltx_para">
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="x=f\begin{bmatrix}v_{1}-c\\
+v_{2}\\
+\vdots\\
+v_{m}\end{bmatrix}\text{with}\;f=\frac{1}{\sqrt{2c(c-v_{1})}}" display="block"><mrow><mi>x</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>-</mo><mi>c</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>v</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>v</mi><mi>m</mi></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mpadded width="+2.8pt"><mtext>with</mtext></mpadded><mo>⁢</mo><mi>f</mi></mrow><mo>=</mo><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>-</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">fulfils <math id="p8.m1" class="ltx_Math" alttext="x^{T}x=1" display="inline"><mrow><mrow><msup><mi>x</mi><mi>T</mi></msup><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mn>1</mn></mrow></math> and that with <math id="p8.m2" class="ltx_Math" alttext="H=I-2xx^{T}" display="inline"><mrow><mi>H</mi><mo>=</mo><mrow><mi>I</mi><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><msup><mi>x</mi><mi>T</mi></msup></mrow></mrow></mrow></math> one obtains the vector <math id="p8.m3" class="ltx_Math" alttext="\begin{bmatrix}c&amp;0&amp;\cdots&amp;0\end{bmatrix}^{T}" display="inline"><msup><mrow><mo>[</mo><mtable columnspacing="5pt"><mtr><mtd columnalign="center"><mi>c</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mi>T</mi></msup></math>.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">To perform the decomposition of the <math id="p9.m1" class="ltx_Math" alttext="m\times n" display="inline"><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math> matrix <math id="p9.m2" class="ltx_Math" alttext="A=QR" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mi>Q</mi><mo>⁢</mo><mi>R</mi></mrow></mrow></math> (with <math id="p9.m3" class="ltx_Math" alttext="m\geq n" display="inline"><mrow><mi>m</mi><mo>≥</mo><mi>n</mi></mrow></math>) we construct an <math id="p9.m4" class="ltx_Math" alttext="m\times m" display="inline"><mrow><mi>m</mi><mo>×</mo><mi>m</mi></mrow></math> matrix <math id="p9.m5" class="ltx_Math" alttext="H^{(1)}" display="inline"><msup><mi>H</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msup></math> to change the <math id="p9.m6" class="ltx_Math" alttext="m-1" display="inline"><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></math> elements of the first column to zero. Similarly, an <math id="p9.m7" class="ltx_Math" alttext="m-1\times m-1" display="inline"><mrow><mi>m</mi><mo>-</mo><mrow><mn>1</mn><mo>×</mo><mi>m</mi></mrow><mo>-</mo><mn>1</mn></mrow></math> matrix <math id="p9.m8" class="ltx_Math" alttext="G^{(2)}" display="inline"><msup><mi>G</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msup></math> will change the <math id="p9.m9" class="ltx_Math" alttext="m-2" display="inline"><mrow><mi>m</mi><mo>-</mo><mn>2</mn></mrow></math> elements of the second column to zero. With <math id="p9.m10" class="ltx_Math" alttext="G^{(2)}" display="inline"><msup><mi>G</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msup></math> we produce the <math id="p9.m11" class="ltx_Math" alttext="m\times m" display="inline"><mrow><mi>m</mi><mo>×</mo><mi>m</mi></mrow></math> matrix</p>
+</div>
+<div id="p10" class="ltx_para">
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="H^{(2)}=\begin{bmatrix}1&amp;0&amp;\cdots&amp;0\\
+0&amp;&amp;&amp;\\
+\vdots&amp;&amp;G^{(2)}&amp;\\
+0&amp;&amp;&amp;\end{bmatrix}." display="block"><mrow><mrow><msup><mi>H</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msup><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><msup><mi>G</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msup></mtd><mtd columnalign="center"><mi></mi></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd><mtd columnalign="center"><mi></mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">After <math id="p11.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> such orthogonal transformations (<math id="p11.m2" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math> times in the case that <math id="p11.m3" class="ltx_Math" alttext="m=n" display="inline"><mrow><mi>m</mi><mo>=</mo><mi>n</mi></mrow></math>), we let
+</p>
+</div>
+<div id="p12" class="ltx_para">
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="R=H^{(n)}\cdots H^{(2)}H^{(1)}A." display="block"><mrow><mrow><mi>R</mi><mo>=</mo><mrow><msup><mi>H</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msup><mi>H</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><msup><mi>H</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><mi>A</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p"><math id="p13.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is upper triangular and the orthogonal matrix <math id="p13.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> becomes</p>
+</div>
+<div id="p14" class="ltx_para">
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="Q=H^{(1)}H^{(2)}\cdots H^{(n)}." display="block"><mrow><mrow><mi>Q</mi><mo>=</mo><mrow><msup><mi>H</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><msup><mi>H</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msup><mi>H</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">In practice the <math id="p15.m1" class="ltx_Math" alttext="H^{(i)}" display="inline"><msup><mi>H</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup></math> are never explicitly computed.</p>
+</div>
+<div id="p16" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">References</span></p>
+</div>
+<div id="p17" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Originally from The Data Analysis Briefbook
+(<span class="ltx_text ltx_font_typewriter">http://rkb.home.cern.ch/rkb/titleA.html</span>http://rkb.home.cern.ch/rkb/titleA.html)</p>
+</div>
+</li>
+</ul>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Householder transformation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">HouseholderTransformation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:06:07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:06:07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A57</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 65F25</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Householder reflection</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Householder matrix</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">GramSchmidtOrthogonalization</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:29:07 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

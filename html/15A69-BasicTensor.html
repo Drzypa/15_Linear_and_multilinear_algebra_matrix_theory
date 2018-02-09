@@ -1,0 +1,283 @@
+<!DOCTYPE html><html>
+<head>
+<title>basic tensor</title>
+<!--Generated on Fri Feb  9 18:30:46 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">basic tensor</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The present entry employs the terminology and notation defined and
+described in the entry on tensor arrays. To keep things reasonably
+self-contained we mention that the symbol <math id="p1.m1" class="ltx_Math" alttext="\mathrm{T}^{p,q}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></msup></math> refers to the
+vector space of type <math id="p1.m2" class="ltx_Math" alttext="(p,q)" display="inline"><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></math> tensor arrays, i.e. maps</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="I^{p}\times I^{q}\rightarrow\mathbb{K}," display="block"><mrow><mrow><mrow><msup><mi>I</mi><mi>p</mi></msup><mo>×</mo><msup><mi>I</mi><mi>q</mi></msup></mrow><mo>→</mo><mi>𝕂</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p1.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is some finite list of
+index labels, and where <math id="p1.m4" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math> is a field.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">We say that a tensor array is a <span class="ltx_text ltx_font_italic">characteristic array</span>, a.k.a. a
+<span class="ltx_text ltx_font_italic">basic tensor</span>, if all but one of its values are <math id="p2.m1" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>, and the
+remaining non-zero value is equal to <math id="p2.m2" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>. For tuples <math id="p2.m3" class="ltx_Math" alttext="A\in I^{p}" display="inline"><mrow><mi>A</mi><mo>∈</mo><msup><mi>I</mi><mi>p</mi></msup></mrow></math> and
+<math id="p2.m4" class="ltx_Math" alttext="B\in I^{q}" display="inline"><mrow><mi>B</mi><mo>∈</mo><msup><mi>I</mi><mi>q</mi></msup></mrow></math>, we let</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\varepsilon^{B}_{A}:I^{p}\times I^{q}\rightarrow\mathbb{K}," display="block"><mrow><mrow><msubsup><mi>ε</mi><mi>A</mi><mi>B</mi></msubsup><mo>:</mo><mrow><mrow><msup><mi>I</mi><mi>p</mi></msup><mo>×</mo><msup><mi>I</mi><mi>q</mi></msup></mrow><mo>→</mo><mi>𝕂</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">denote the characteristic
+array defined by</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="(\varepsilon^{B}_{A})^{i_{1}\ldots i_{p}}_{j_{1}\ldots j_{q}}=\left\{\begin{%
+array}[]{rl}1&amp;\mbox{ if $(i_{1},\ldots,i_{p})=A$ and $(j_{1},\ldots,j_{p})=B$}%
+,\\
+0&amp;\mbox{ otherwise.}\end{array}\right." display="block"><mrow><msubsup><mrow><mo stretchy="false">(</mo><msubsup><mi>ε</mi><mi>A</mi><mi>B</mi></msubsup><mo stretchy="false">)</mo></mrow><mrow><msub><mi>j</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>j</mi><mi>q</mi></msub></mrow><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>i</mi><mi>p</mi></msub></mrow></msubsup><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="left"><mrow><mrow><mtext> if </mtext><mrow><mrow><mo stretchy="false">(</mo><msub><mi>i</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>i</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>A</mi></mrow><mtext> and </mtext><mrow><mrow><mo stretchy="false">(</mo><msub><mi>j</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>j</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>B</mi></mrow></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="left"><mtext> otherwise.</mtext></mtd></mtr></mtable><mi></mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The type <math id="p2.m5" class="ltx_Math" alttext="(p,q)" display="inline"><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></math> characteristic arrays form a natural basis for
+<math id="p2.m6" class="ltx_Math" alttext="\mathrm{T}^{p,q}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></msup></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Furthermore the outer multiplication of two characteristic arrays
+gives a characteristic array of larger valence. In other words, for</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="A_{1}\in I^{p_{1}},\;B_{1}\in I^{q_{1}},\;A_{2}\in I^{p_{2}},\;B_{2}\in I^{q_{%
+2}}," display="block"><mrow><mrow><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>∈</mo><msup><mi>I</mi><msub><mi>p</mi><mn>1</mn></msub></msup></mrow><mo rspace="5.3pt">,</mo><mrow><mrow><msub><mi>B</mi><mn>1</mn></msub><mo>∈</mo><msup><mi>I</mi><msub><mi>q</mi><mn>1</mn></msub></msup></mrow><mo rspace="5.3pt">,</mo><mrow><mrow><msub><mi>A</mi><mn>2</mn></msub><mo>∈</mo><msup><mi>I</mi><msub><mi>p</mi><mn>2</mn></msub></msup></mrow><mo rspace="5.3pt">,</mo><mrow><msub><mi>B</mi><mn>2</mn></msub><mo>∈</mo><msup><mi>I</mi><msub><mi>q</mi><mn>2</mn></msub></msup></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">we have that</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\varepsilon^{B_{1}}_{A_{1}}\varepsilon^{B_{2}}_{A_{2}}=\varepsilon^{B_{1}B_{2}%
+}_{A_{1}A_{2}}," display="block"><mrow><mrow><mrow><msubsup><mi>ε</mi><msub><mi>A</mi><mn>1</mn></msub><msub><mi>B</mi><mn>1</mn></msub></msubsup><mo>⁢</mo><msubsup><mi>ε</mi><msub><mi>A</mi><mn>2</mn></msub><msub><mi>B</mi><mn>2</mn></msub></msubsup></mrow><mo>=</mo><msubsup><mi>ε</mi><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>A</mi><mn>2</mn></msub></mrow><mrow><msub><mi>B</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>B</mi><mn>2</mn></msub></mrow></msubsup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where
+the product on the left-hand side is performed by outer
+multiplication, and where <math id="p3.m1" class="ltx_Math" alttext="A_{1}A_{2}" display="inline"><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>A</mi><mn>2</mn></msub></mrow></math> on the right-hand side refers to
+the element of <math id="p3.m2" class="ltx_Math" alttext="I^{p_{1}+p_{2}}" display="inline"><msup><mi>I</mi><mrow><msub><mi>p</mi><mn>1</mn></msub><mo>+</mo><msub><mi>p</mi><mn>2</mn></msub></mrow></msup></math> obtained by concatenating the tuples
+<math id="p3.m3" class="ltx_Math" alttext="A_{1}" display="inline"><msub><mi>A</mi><mn>1</mn></msub></math> and <math id="p3.m4" class="ltx_Math" alttext="A_{2}" display="inline"><msub><mi>A</mi><mn>2</mn></msub></math>, and similarly for <math id="p3.m5" class="ltx_Math" alttext="B_{1}B_{2}" display="inline"><mrow><msub><mi>B</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>B</mi><mn>2</mn></msub></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">In this way we see that the type <math id="p4.m1" class="ltx_Math" alttext="(1,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> characteristic arrays
+<math id="p4.m2" class="ltx_Math" alttext="\varepsilon_{(i)},\;i\in I" display="inline"><mrow><mrow><msub><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msub><mo rspace="5.3pt">,</mo><mi>i</mi></mrow><mo>∈</mo><mi>I</mi></mrow></math> (the natural basis of <math id="p4.m3" class="ltx_Math" alttext="\mathbb{K}^{I}" display="inline"><msup><mi>𝕂</mi><mi>I</mi></msup></math>), and the type
+<math id="p4.m4" class="ltx_Math" alttext="(0,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> characteristic arrays <math id="p4.m5" class="ltx_Math" alttext="\varepsilon^{(i)},\;i\in I" display="inline"><mrow><mrow><msup><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo rspace="5.3pt">,</mo><mi>i</mi></mrow><mo>∈</mo><mi>I</mi></mrow></math> (the natural basis of
+<math id="p4.m6" class="ltx_Math" alttext="\left(\mathbb{K}^{I}\right)^{*}" display="inline"><msup><mrow><mo>(</mo><msup><mi>𝕂</mi><mi>I</mi></msup><mo>)</mo></mrow><mo>*</mo></msup></math>) generate the tensor array algebra relative to the
+outer multiplication operation.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">The just-mentioned fact gives us an alternate way of writing and
+thinking about tensor arrays. We introduce the basic symbols</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\varepsilon_{(i)},\;\varepsilon^{(i)},\quad i\in I" display="block"><mrow><mrow><msub><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msub><mo rspace="5.3pt">,</mo><msup><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo rspace="12.5pt">,</mo><mi>i</mi></mrow><mo>∈</mo><mi>I</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">subject to the commutation relations</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\varepsilon_{(i)}\varepsilon^{(i^{\prime})}=\varepsilon^{(i^{\prime})}%
+\varepsilon_{(i)},\quad i,i^{\prime}\in I," display="block"><mrow><mrow><mrow><mrow><msub><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msub><mo>⁢</mo><msup><mi>ε</mi><mrow><mo stretchy="false">(</mo><msup><mi>i</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></msup></mrow><mo>=</mo><mrow><mrow><msup><mi>ε</mi><mrow><mo stretchy="false">(</mo><msup><mi>i</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><msub><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msub></mrow><mo rspace="12.5pt">,</mo><mi>i</mi></mrow></mrow><mo>,</mo><mrow><msup><mi>i</mi><mo>′</mo></msup><mo>∈</mo><mi>I</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">add and multiply these symbols using coefficients in
+<math id="p5.m1" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math>, and use</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\varepsilon^{(i_{1}\ldots i_{q})}_{(j_{1}\ldots j_{p})},\quad i_{1},\ldots,i_{%
+q},j_{1},\ldots,j_{p}\in I" display="block"><mrow><mrow><msubsup><mi>ε</mi><mrow><mo stretchy="false">(</mo><mrow><msub><mi>j</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>j</mi><mi>p</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>i</mi><mi>q</mi></msub></mrow><mo stretchy="false">)</mo></mrow></msubsup><mo rspace="12.5pt">,</mo><msub><mi>i</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>i</mi><mi>q</mi></msub><mo>,</mo><msub><mi>j</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>j</mi><mi>p</mi></msub></mrow><mo>∈</mo><mi>I</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">as a handy abbreviation for</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\varepsilon^{(i_{1})}\ldots\varepsilon^{(i_{q})}\varepsilon_{(j_{1})}\ldots%
+\varepsilon_{(j_{p})}." display="block"><mrow><mrow><msup><mi>ε</mi><mrow><mo stretchy="false">(</mo><msub><mi>i</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msup><mi>ε</mi><mrow><mo stretchy="false">(</mo><msub><mi>i</mi><mi>q</mi></msub><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><msub><mi>ε</mi><mrow><mo stretchy="false">(</mo><msub><mi>j</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>ε</mi><mrow><mo stretchy="false">(</mo><msub><mi>j</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We
+then interpret the resulting expressions as tensor arrays in the
+obvious fashion: the values of the tensor array are just the
+coefficients of the <math id="p5.m2" class="ltx_Math" alttext="\varepsilon" display="inline"><mi>ε</mi></math> symbol matching the given index. However,
+note that in the <math id="p5.m3" class="ltx_Math" alttext="\varepsilon" display="inline"><mi>ε</mi></math> symbols, the covariant data is written as a
+superscript, and the contravariant data as a subscript. This is done
+to facilitate the Einstein summation convention.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">By way of illustration, suppose that <math id="p6.m1" class="ltx_Math" alttext="I=(1,2)" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math>. We can now write down
+a type <math id="p6.m2" class="ltx_Math" alttext="(1,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> tensor, i.e. a column vector</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="u=\begin{pmatrix}u^{1}\\
+u^{2}\end{pmatrix}\in\mathrm{T}^{1,0}" display="block"><mrow><mi>u</mi><mo>=</mo><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msup><mi>u</mi><mn>1</mn></msup></mtd></mtr><mtr><mtd columnalign="center"><msup><mi>u</mi><mn>2</mn></msup></mtd></mtr></mtable><mo>)</mo></mrow><mo>∈</mo><msup><mi mathvariant="normal">T</mi><mrow><mn>1</mn><mo>,</mo><mn>0</mn></mrow></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">as</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="u=u^{1}\varepsilon_{(1)}+u^{2}\varepsilon_{(2)}." display="block"><mrow><mrow><mi>u</mi><mo>=</mo><mrow><mrow><msup><mi>u</mi><mn>1</mn></msup><mo>⁢</mo><msub><mi>ε</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msub></mrow><mo>+</mo><mrow><msup><mi>u</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>ε</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Similarly, a row-vector</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\phi=(\phi_{1},\phi_{2})\in\mathrm{T}^{0,1}" display="block"><mrow><mi>ϕ</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>ϕ</mi><mn>1</mn></msub><mo>,</mo><msub><mi>ϕ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi mathvariant="normal">T</mi><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">can be written down as</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\phi=\phi_{1}\varepsilon^{(1)}+\phi_{2}\varepsilon^{(2)}." display="block"><mrow><mrow><mi>ϕ</mi><mo>=</mo><mrow><mrow><msub><mi>ϕ</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>ε</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>ϕ</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>ε</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In the case of a matrix
+</p>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="M=\begin{pmatrix}M^{1}_{\!\hphantom{1}1}&amp;M^{2}_{\!\hphantom{2}1}\\
+M^{1}_{\!\hphantom{1}2}&amp;M^{2}_{\!\hphantom{2}2}\end{pmatrix}\in\mathrm{T}^{1,1}" display="block"><mrow><mi>M</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msubsup><mi>M</mi><mpadded lspace="3.5pt" width="+3.5pt"><mn>1</mn></mpadded><mn>1</mn></msubsup></mtd><mtd columnalign="center"><msubsup><mi>M</mi><mpadded lspace="3.5pt" width="+3.5pt"><mn>1</mn></mpadded><mn>2</mn></msubsup></mtd></mtr><mtr><mtd columnalign="center"><msubsup><mi>M</mi><mpadded lspace="3.5pt" width="+3.5pt"><mn>2</mn></mpadded><mn>1</mn></msubsup></mtd><mtd columnalign="center"><msubsup><mi>M</mi><mpadded lspace="3.5pt" width="+3.5pt"><mn>2</mn></mpadded><mn>2</mn></msubsup></mtd></mtr></mtable><mo>)</mo></mrow><mo>∈</mo><msup><mi mathvariant="normal">T</mi><mrow><mn>1</mn><mo>,</mo><mn>1</mn></mrow></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">we would write</p>
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="M=M^{1}_{\!\hphantom{1}1}\,\varepsilon^{(1)}_{(1)}+M^{1}_{\!\hphantom{1}2}\,%
+\varepsilon^{(2)}_{(1)}+M^{2}_{\!\hphantom{2}1}\,\varepsilon^{(1)}_{(2)}+M^{2}%
+_{\!\hphantom{2}2}\,\varepsilon^{(2)}_{(2)}." display="block"><mrow><mrow><mi>M</mi><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><msubsup><mi>M</mi><mpadded lspace="3.5pt" width="+3.5pt"><mn>1</mn></mpadded><mn>1</mn></msubsup></mpadded><mo>⁢</mo><msubsup><mi>ε</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><msubsup><mi>M</mi><mpadded lspace="3.5pt" width="+3.5pt"><mn>2</mn></mpadded><mn>1</mn></msubsup></mpadded><mo>⁢</mo><msubsup><mi>ε</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><msubsup><mi>M</mi><mpadded lspace="3.5pt" width="+3.5pt"><mn>1</mn></mpadded><mn>2</mn></msubsup></mpadded><mo>⁢</mo><msubsup><mi>ε</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><msubsup><mi>M</mi><mpadded lspace="3.5pt" width="+3.5pt"><mn>2</mn></mpadded><mn>2</mn></msubsup></mpadded><mo>⁢</mo><msubsup><mi>ε</mi><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">basic tensor</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">BasicTensor</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:40:37</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:40:37</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A69</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">characteristic array</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TensorArray</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Basis</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Frame</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">SimpleTensor</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:30:46 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

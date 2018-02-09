@@ -1,0 +1,237 @@
+<!DOCTYPE html><html>
+<head>
+<title>tensor array</title>
+<!--Generated on Fri Feb  9 18:31:19 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">tensor array</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Introduction.</h2>
+
+<div id="S0.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">, or tensors for short<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>The term <span class="ltx_text ltx_font_italic">tensor</span> has other meanings, c.f. the tensor entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Tensor</span>).</span></span></span>
+are multidimensional arrays with two types of (covariant and
+contravariant) indices. Tensors are widely used in science and
+mathematics, because these data structures are the natural choice of
+representation for a variety of important physical and geometric
+quantities.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">In this entry we give the definition of a tensor array and establish
+some related terminology and notation. The theory of tensor arrays
+incorporates a number of other essential topics: basic tensors, tensor
+transformations, outer multiplication, contraction, inner
+multiplication, and generalized transposition. These are fully
+described in their separate entries.
+</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Valences and the space of tensors arrays.</h2>
+
+<div id="S0.SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math> be a field<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>In physics and differential
+geometry, <math id="S0.SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math> is typically <math id="S0.SS0.SSS0.Px2.p1.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> or <math id="S0.SS0.SSS0.Px2.p1.m4" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>.</span></span></span> and let <math id="S0.SS0.SSS0.Px2.p1.m5" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>
+be a finite list of indices<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">3</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">3</sup>It is advantageous to allow
+general indexing sets, because one can indicate the use of multiple
+frames of reference by employing multiple, disjoint sets of
+indices.</span></span></span>, such as <math id="S0.SS0.SSS0.Px2.p1.m6" class="ltx_Math" alttext="(1,2,\ldots,n)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></math>. A tensor array of type</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="(p,q),\quad p,q\in\mathbb{N}" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo rspace="12.5pt">,</mo><mi>p</mi><mo>,</mo><mi>q</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is a mapping</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="I^{p}\times I^{q}\rightarrow\mathbb{K}." display="block"><mrow><mrow><mrow><msup><mi>I</mi><mi>p</mi></msup><mo>×</mo><msup><mi>I</mi><mi>q</mi></msup></mrow><mo>→</mo><mi>𝕂</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The set of all such mappings
+will be denoted by <math id="S0.SS0.SSS0.Px2.p1.m7" class="ltx_Math" alttext="\mathrm{T}^{p,q}(I,\mathbb{K})" display="inline"><mrow><msup><mi mathvariant="normal">T</mi><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>𝕂</mi><mo stretchy="false">)</mo></mrow></mrow></math>, or when <math id="S0.SS0.SSS0.Px2.p1.m8" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> and
+<math id="S0.SS0.SSS0.Px2.p1.m9" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math> are clear from the context, simply as <math id="S0.SS0.SSS0.Px2.p1.m10" class="ltx_Math" alttext="\mathrm{T}^{p,q}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></msup></math>. The
+numbers <math id="S0.SS0.SSS0.Px2.p1.m11" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="S0.SS0.SSS0.Px2.p1.m12" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> are called, respectively, the contravariant and
+the covariant valence of the tensor array.</p>
+</div>
+<div id="S0.SS0.SSS0.Px2.p2" class="ltx_para">
+<p class="ltx_p">Point-wise addition and scaling give <math id="S0.SS0.SSS0.Px2.p2.m1" class="ltx_Math" alttext="\mathrm{T}^{p,q}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></msup></math> the structure of a
+a vector space of dimension <math id="S0.SS0.SSS0.Px2.p2.m2" class="ltx_Math" alttext="n^{p+q}" display="inline"><msup><mi>n</mi><mrow><mi>p</mi><mo>+</mo><mi>q</mi></mrow></msup></math>, where <math id="S0.SS0.SSS0.Px2.p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is the cardinality of
+<math id="S0.SS0.SSS0.Px2.p2.m4" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>. We will interpret <math id="S0.SS0.SSS0.Px2.p2.m5" class="ltx_Math" alttext="I^{0}" display="inline"><msup><mi>I</mi><mn>0</mn></msup></math> as signifying a singleton set.
+Consequently <math id="S0.SS0.SSS0.Px2.p2.m6" class="ltx_Math" alttext="\mathrm{T}^{p,0}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mi>p</mi><mo>,</mo><mn>0</mn></mrow></msup></math> and <math id="S0.SS0.SSS0.Px2.p2.m7" class="ltx_Math" alttext="\mathrm{T}^{0,q}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mn>0</mn><mo>,</mo><mi>q</mi></mrow></msup></math> are just the maps from,
+respectively, <math id="S0.SS0.SSS0.Px2.p2.m8" class="ltx_Math" alttext="I^{p}" display="inline"><msup><mi>I</mi><mi>p</mi></msup></math> and <math id="S0.SS0.SSS0.Px2.p2.m9" class="ltx_Math" alttext="I^{q}" display="inline"><msup><mi>I</mi><mi>q</mi></msup></math> to <math id="S0.SS0.SSS0.Px2.p2.m10" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math>. It is also customary to
+identify <math id="S0.SS0.SSS0.Px2.p2.m11" class="ltx_Math" alttext="\mathrm{T}^{1,0}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mn>1</mn><mo>,</mo><mn>0</mn></mrow></msup></math> with <math id="S0.SS0.SSS0.Px2.p2.m12" class="ltx_Math" alttext="\mathbb{K}^{I}" display="inline"><msup><mi>𝕂</mi><mi>I</mi></msup></math>, the vector space of list
+vectors indexed by <math id="S0.SS0.SSS0.Px2.p2.m13" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, and to identify <math id="S0.SS0.SSS0.Px2.p2.m14" class="ltx_Math" alttext="\mathrm{T}^{0,1}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow></msup></math> with dual space
+<math id="S0.SS0.SSS0.Px2.p2.m15" class="ltx_Math" alttext="\left(\mathbb{K}^{I}\right)^{*}" display="inline"><msup><mrow><mo>(</mo><msup><mi>𝕂</mi><mi>I</mi></msup><mo>)</mo></mrow><mo>*</mo></msup></math> of linear forms on <math id="S0.SS0.SSS0.Px2.p2.m16" class="ltx_Math" alttext="\mathbb{K}^{I}" display="inline"><msup><mi>𝕂</mi><mi>I</mi></msup></math>. Finally,
+<math id="S0.SS0.SSS0.Px2.p2.m17" class="ltx_Math" alttext="\mathrm{T}^{0,0}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mn>0</mn><mo>,</mo><mn>0</mn></mrow></msup></math> can be identified with <math id="S0.SS0.SSS0.Px2.p2.m18" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math> itself. In other
+words, scalars are tensor arrays of zero valence.</p>
+</div>
+<div id="S0.SS0.SSS0.Px2.p3" class="ltx_para">
+<p class="ltx_p">Let
+<math id="S0.SS0.SSS0.Px2.p3.m1" class="ltx_Math" alttext="X:I^{p}\times I^{q}\rightarrow\mathbb{K}" display="inline"><mrow><mi>X</mi><mo>:</mo><mrow><mrow><msup><mi>I</mi><mi>p</mi></msup><mo>×</mo><msup><mi>I</mi><mi>q</mi></msup></mrow><mo>→</mo><mi>𝕂</mi></mrow></mrow></math>
+be a type <math id="S0.SS0.SSS0.Px2.p3.m2" class="ltx_Math" alttext="(p,q)" display="inline"><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></math> tensor array.
+In writing the values of <math id="S0.SS0.SSS0.Px2.p3.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, it is customary to write contravariant
+indices using superscripts, and covariant indices using subscripts.
+Thus, for indices <math id="S0.SS0.SSS0.Px2.p3.m4" class="ltx_Math" alttext="i_{1},\ldots,i_{p},j_{1},\ldots,j_{q}\in I" display="inline"><mrow><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>i</mi><mi>p</mi></msub><mo>,</mo><msub><mi>j</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>j</mi><mi>q</mi></msub></mrow><mo>∈</mo><mi>I</mi></mrow></math> we write</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="X^{i_{1}\ldots i_{p}}_{j_{1}\ldots j_{q}}" display="block"><msubsup><mi>X</mi><mrow><msub><mi>j</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>j</mi><mi>q</mi></msub></mrow><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>i</mi><mi>p</mi></msub></mrow></msubsup></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">instead of <span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">4</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">4</sup>Curiously, the latter notation is preferred by some
+authors. See H. Weyl’s books and papers, for example.</span></span></span></p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="X(i_{1},\ldots,i_{p};j_{1},\ldots,j_{p})." display="block"><mrow><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>i</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>i</mi><mi>p</mi></msub><mo>;</mo><msub><mi>j</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>j</mi><mi>p</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSS0.Px2.p4" class="ltx_para">
+<p class="ltx_p">We also mention that it is customary to use columns to represent
+contravariant index dimensions, and rows to represent the covariant
+index dimensions. Thus column vectors are type <math id="S0.SS0.SSS0.Px2.p4.m1" class="ltx_Math" alttext="(1,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> tensor arrays,
+row vectors are type <math id="S0.SS0.SSS0.Px2.p4.m2" class="ltx_Math" alttext="(0,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> tensor arrays, and matrices, in as much
+as they can be regarded either as rows of columns or as columns of
+rows, are type <math id="S0.SS0.SSS0.Px2.p4.m3" class="ltx_Math" alttext="(1,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> tensor arrays.<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">5</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">5</sup>It is also customary to
+use matrices to also represent type <math id="S0.SS0.SSS0.Px2.p4.m4" class="ltx_Math" alttext="(2,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> and type <math id="S0.SS0.SSS0.Px2.p4.m5" class="ltx_Math" alttext="(0,2)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math> tensor
+arrays (The latter are used to represent quadratic forms.)
+Speaking idealistically, such objects should be typeset,
+respectively, as a column of column vectors and as a row of row
+vectors. However typographical constraints and notational
+convenience dictate that they be displayed as matrices.</span></span></span></p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px3" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Notes.</h2>
+
+<div id="S0.SS0.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">It must be noted that our usage of the term <span class="ltx_text ltx_font_italic">tensor array</span> is
+non-standard. The traditionally inclined authors simply call these
+data structures tensors. We bother to make the distinction because
+the traditional nomenclature is ambiguous and doesn’t include the
+modern mathematical understanding of the tensor concept. (This is
+explained more fully in the tensor entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Tensor</span>).) Precise and
+meaningful definitions can only be given by treating the concept of a
+tensor array as distinct from the concept of a geometric/abstract
+tensor.
+</p>
+</div>
+<div id="S0.SS0.SSS0.Px3.p2" class="ltx_para">
+<p class="ltx_p">We also mention that the term <span class="ltx_text ltx_font_italic">tensor</span> is often applied to objects
+that should more appropriately be termed a <span class="ltx_text ltx_font_italic">tensor field</span>. The
+latter are tensor-valued functions, or more generally sections of a
+tensor bundle. A tensor is what one gets by evaluating a tensor field
+at one point. Informally, one can also think of a tensor field as a
+tensor whose values are functions, rather than constants.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">tensor array</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TensorArray</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:40:25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:40:25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A69</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Frame</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Vector2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">BasicTensor</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TensorProductClassical</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Tensor</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">covariant index</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">contravariant index</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">valence</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:31:19 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

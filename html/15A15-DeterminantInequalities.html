@@ -1,0 +1,123 @@
+<!DOCTYPE html><html>
+<head>
+<title>determinant inequalities</title>
+<!--Generated on Fri Feb  9 18:24:00 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">determinant inequalities</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">There are a number of interesting inequalities bounding the determinant of a <math id="p1.m1" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> complex matrix <math id="p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, where <math id="p1.m3" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> is its spectral radius:</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">1) <math id="p2.m1" class="ltx_Math" alttext="\left|\det(A)\right|\leq\rho^{n}(A)" display="inline"><mrow><mrow><mo>|</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>|</mo></mrow><mo>≤</mo><mrow><msup><mi>ρ</mi><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+<br class="ltx_break">2) <math id="p2.m2" class="ltx_Math" alttext="\left|\det(A)\right|\leq\prod_{i=1}^{n}\left(\sum_{j=1}^{n}\left|a_{ij}\right|%
+\right)=\prod_{i=1}^{n}\|a_{i}\|_{1}" display="inline"><mrow><mrow><mo>|</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>|</mo></mrow><mo>≤</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mo>(</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mo>|</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>|</mo></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mrow><mo>∥</mo><msub><mi>a</mi><mi>i</mi></msub><mo>∥</mo></mrow><mn>1</mn></msub></mrow></mrow></math>
+<br class="ltx_break">3) <math id="p2.m3" class="ltx_Math" alttext="\left|\det(A)\right|\leq\prod_{j=1}^{n}\left(\sum_{i=1}^{n}\left|a_{ij}\right|%
+\right)=\prod_{j=1}^{n}\|a_{j}\|_{1}" display="inline"><mrow><mrow><mo>|</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>|</mo></mrow><mo>≤</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mo>(</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mo>|</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>|</mo></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mrow><mo>∥</mo><msub><mi>a</mi><mi>j</mi></msub><mo>∥</mo></mrow><mn>1</mn></msub></mrow></mrow></math>
+<br class="ltx_break">4) <math id="p2.m4" class="ltx_Math" alttext="\left|\det(A)\right|\leq\prod_{i=1}^{n}\left(\sum_{j=1}^{n}\left|a_{ij}\right|%
+^{2}\right)^{\frac{1}{2}}=\prod_{i=1}^{n}\|a_{i}\|_{2}" display="inline"><mrow><mrow><mo>|</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>|</mo></mrow><mo>≤</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msup><mrow><mo>(</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msup><mrow><mo>|</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>|</mo></mrow><mn>2</mn></msup></mrow><mo>)</mo></mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></msup></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mrow><mo>∥</mo><msub><mi>a</mi><mi>i</mi></msub><mo>∥</mo></mrow><mn>2</mn></msub></mrow></mrow></math>
+<br class="ltx_break">5) <math id="p2.m5" class="ltx_Math" alttext="\left|\det(A)\right|\leq\prod_{j=1}^{n}\left(\sum_{i=1}^{n}\left|a_{ij}\right|%
+^{2}\right)^{\frac{1}{2}}=\prod_{j=1}^{n}\|a_{j}\|_{2}" display="inline"><mrow><mrow><mo>|</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>|</mo></mrow><mo>≤</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msup><mrow><mo>(</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msup><mrow><mo>|</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>|</mo></mrow><mn>2</mn></msup></mrow><mo>)</mo></mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></msup></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mrow><mo>∥</mo><msub><mi>a</mi><mi>j</mi></msub><mo>∥</mo></mrow><mn>2</mn></msub></mrow></mrow></math>
+<br class="ltx_break">6) if <math id="p2.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is Hermitian positive semidefinite, <math id="p2.m7" class="ltx_Math" alttext="\det(A)\leq\prod_{i=1}^{n}a_{ii}" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow></mrow></math>, with equality if and only if <math id="p2.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is diagonal.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Inequalities 4)-6) are known as ”Hadamard’s inequalities”.
+</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">(Note that inequalities 2)-5) may suggest the idea that such inequalities could hold: <math id="p4.m1" class="ltx_Math" alttext="\left|\det(A)\right|\leq\prod_{i=1}^{n}\|a_{i}\|_{p}" display="inline"><mrow><mrow><mo>|</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>|</mo></mrow><mo>≤</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mrow><mo>∥</mo><msub><mi>a</mi><mi>i</mi></msub><mo>∥</mo></mrow><mi>p</mi></msub></mrow></mrow></math> or <math id="p4.m2" class="ltx_Math" alttext="\left|\det(A)\right|\leq\prod_{j=1}^{n}\|a_{j}\|_{p}" display="inline"><mrow><mrow><mo>|</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>|</mo></mrow><mo>≤</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mrow><mo>∥</mo><msub><mi>a</mi><mi>j</mi></msub><mo>∥</mo></mrow><mi>p</mi></msub></mrow></mrow></math> for any <math id="p4.m3" class="ltx_Math" alttext="p\in\mathbf{N}" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>𝐍</mi></mrow></math>; however, this is not true, as one can easily see with <math id="p4.m4" class="ltx_Math" alttext="A=\begin{bmatrix}1&amp;1\\
+-1&amp;1\end{bmatrix}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math> and <math id="p4.m5" class="ltx_Math" alttext="p=3" display="inline"><mrow><mi>p</mi><mo>=</mo><mn>3</mn></mrow></math>. Actually, inequalities 2)-5) give the best possible estimate of this kind.)</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Proofs:</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">1) <math id="p6.m1" class="ltx_Math" alttext="\left|\det(A)\right|=\left|\prod_{i=1}^{n}\lambda_{i}\right|=\prod_{i=1}^{n}%
+\left|\lambda_{i}\right|\leq\prod_{i=1}^{n}\rho(A)=\rho^{n}(A)." display="inline"><mrow><mrow><mrow><mo>|</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>|</mo></mrow><mo>=</mo><mrow><mo>|</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>λ</mi><mi>i</mi></msub></mrow><mo>|</mo></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mo>|</mo><msub><mi>λ</mi><mi>i</mi></msub><mo>|</mo></mrow></mrow><mo>≤</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msup><mi>ρ</mi><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">2) If <math id="p7.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is singular, the thesis is trivial. Let then <math id="p7.m2" class="ltx_Math" alttext="\det(A)\neq 0" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math>. Let’s define <math id="p7.m3" class="ltx_Math" alttext="B=DA" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mi>D</mi><mo>⁢</mo><mi>A</mi></mrow></mrow></math>, <math id="p7.m4" class="ltx_Math" alttext="D=diag(d_{11},d_{22},\cdots,d_{nn})" display="inline"><mrow><mi>D</mi><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>d</mi><mn>11</mn></msub><mo>,</mo><msub><mi>d</mi><mn>22</mn></msub><mo>,</mo><mi mathvariant="normal">⋯</mi><mo>,</mo><msub><mi>d</mi><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,<math id="p7.m5" class="ltx_Math" alttext="d_{ii}=\left(\sum_{j=1}^{n}\left|a_{ij}\right|\right)^{-1}" display="inline"><mrow><msub><mi>d</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>=</mo><msup><mrow><mo>(</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mo>|</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>|</mo></mrow></mrow><mo>)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>. (Note that <math id="p7.m6" class="ltx_Math" alttext="d_{ii}" display="inline"><msub><mi>d</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub></math> exist for any <math id="p7.m7" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>, because <math id="p7.m8" class="ltx_Math" alttext="\det(A)\neq 0" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math> implies no all-zero row exists.) So <math id="p7.m9" class="ltx_Math" alttext="\|B\|_{\infty}=\max_{i}\left(\sum_{j=1}^{n}\left|b_{ij}\right|\right)=1" display="inline"><mrow><msub><mrow><mo>∥</mo><mi>B</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>=</mo><mrow><msub><mi>max</mi><mi>i</mi></msub><mo>⁡</mo><mrow><mo>(</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mo>|</mo><msub><mi>b</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>|</mo></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> and, since <math id="p7.m10" class="ltx_Math" alttext="\rho(B)\leq\|B\|_{\infty}" display="inline"><mrow><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><msub><mrow><mo>∥</mo><mi>B</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></math>, we have:</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p"><math id="p8.m1" class="ltx_Math" alttext="\left|\det(B)\right|=\left|\det(D)\right|\left|\det(A)\right|=\left(\prod_{i=1%
+}^{n}\sum_{j=1}^{n}\left|a_{ij}\right|\right)^{-1}\left|\det(A)\right|\leq\rho%
+^{n}(B)\leq\|B\|_{\infty}^{n}=1" display="inline"><mrow><mrow><mo>|</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>|</mo></mrow><mo>=</mo><mrow><mrow><mo>|</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>D</mi><mo stretchy="false">)</mo></mrow></mrow><mo>|</mo></mrow><mo>⁢</mo><mrow><mo>|</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>|</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo>(</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mo>|</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>|</mo></mrow></mrow></mrow><mo>)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo>|</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>|</mo></mrow></mrow><mo>≤</mo><mrow><msup><mi>ρ</mi><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><msubsup><mrow><mo>∥</mo><mi>B</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi><mi>n</mi></msubsup><mo>=</mo><mn>1</mn></mrow></math>,</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">from which:</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p"><math id="p10.m1" class="ltx_Math" alttext="\left|\det(A)\right|\leq\prod_{i=1}^{n}\left(\sum_{j=1}^{n}\left|a_{ij}\right|%
+\right)." display="inline"><mrow><mrow><mrow><mo>|</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>|</mo></mrow><mo>≤</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mo>(</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mo>|</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>|</mo></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">3) Same as 2), but applied to <math id="p11.m1" class="ltx_Math" alttext="A^{T}" display="inline"><msup><mi>A</mi><mi>T</mi></msup></math>.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">4)-6) See related proofs attached to ”Hadamard’s inequalities”.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">determinant inequalities</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DeterminantInequalities</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:34:46</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:34:46</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Andrea Ambrosio (7332)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Andrea Ambrosio (7332)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Andrea Ambrosio (7332)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Result</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 15A15</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:24:00 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

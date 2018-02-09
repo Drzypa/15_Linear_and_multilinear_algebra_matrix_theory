@@ -1,0 +1,221 @@
+<!DOCTYPE html><html>
+<head>
+<title>geometric algebra</title>
+<!--Generated on Fri Feb  9 18:30:38 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">geometric algebra</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Geometric algebra is a Clifford algebra (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CliffordAlgebra2</span>) which has been used with great success in the modeling of a wide variety of physical phenomena. Clifford algebra is considered a more general algebraic framework than geometric algebra. The primary distinction is that geometric algebra utilizes only real numbers as scalars and to represent magnitudes. The underlying philosophical justification for this is the interpretation that the unit imaginary has geometric significance which naturally arises from the properties of the algebra and the interaction of its various subspaces.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="{\cal{V}}^{n}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒱</mi><mi>n</mi></msup></math> be an <math id="p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>–dimensional vector space over the real numbers. As with traditional vector algebra, the vector space is spanned by a set of <math id="p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> linearly independent basis vectors. Any vector in this space may be represented by a linear combination of the basis vectors. In the geometric algebra literature, such basis entities are also called <em class="ltx_emph ltx_font_italic">blades</em>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Since vectors are one-dimensional directed quantities, they are assigned a <em class="ltx_emph ltx_font_italic">grade</em> of 1. Scalars are considered to be grade-0 entities. In geometric algebra, there exist higher dimensional analogues to vectors. Two-dimensional directed quantites are termed bivectors and they are grade-2 entites. In general a <math id="p3.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-dimensional entity is known as a <math id="p3.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-vector.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">geometric algebra</em> <math id="p4.m1" class="ltx_Math" alttext="{\cal{G}}_{n}={\cal{G}}({\cal{V}}^{n})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒢</mi><mi>n</mi></msub><mo>=</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi class="ltx_font_mathcaligraphic">𝒱</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is a multi-graded algebra similar to Grassmann’s exterior algebra, except that the exterior product is replaced by a more fundamental multiplication operation known as the <em class="ltx_emph ltx_font_italic">geometric product</em>. In general, the result of the geometric product is a multi-graded object called a <em class="ltx_emph ltx_font_italic">multivector</em>. A multivector is a linear combination of basis blades.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">For vectors <math id="p5.m1" class="ltx_Math" alttext="\mathbf{a},\mathbf{b},\mathbf{c}\in{\cal{V}}^{n}" display="inline"><mrow><mrow><mi>𝐚</mi><mo>,</mo><mi>𝐛</mi><mo>,</mo><mi>𝐜</mi></mrow><mo>∈</mo><msup><mi class="ltx_font_mathcaligraphic">𝒱</mi><mi>n</mi></msup></mrow></math> and real scalars <math id="p5.m2" class="ltx_Math" alttext="\alpha,\beta\in\mathbf{R}" display="inline"><mrow><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow><mo>∈</mo><mi>𝐑</mi></mrow></math>, the geometric product satisfies the following axioms:</p>
+</div>
+<div id="p6" class="ltx_para">
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\begin{array}[]{lll}\mbox{{associativity:}}&amp;\mathbf{a}(\mathbf{b}\mathbf{c})=(%
+\mathbf{a}\mathbf{b})\mathbf{c}&amp;\mathbf{a}+(\mathbf{b}+\mathbf{c})=(\mathbf{a}%
++\mathbf{b})+\mathbf{c}\\
+\mbox{{commutativity:}}&amp;\alpha\beta=\beta\alpha&amp;\alpha+\beta=\beta+\alpha\\
+&amp;\alpha\mathbf{b}=\mathbf{b}\alpha&amp;\alpha+\mathbf{b}=\mathbf{b}+\alpha\\
+&amp;\mathbf{ab}=\frac{1}{2}(\mathbf{ab}+\mathbf{ba})+\frac{1}{2}(\mathbf{ab}-%
+\mathbf{ba})&amp;\mathbf{a}+\mathbf{b}=\mathbf{b}+\mathbf{a}\\
+\mbox{{distributivity:}}&amp;\mathbf{a}(\mathbf{b}+\mathbf{c})=\mathbf{a}\mathbf{b%
+}+\mathbf{a}\mathbf{c}&amp;(\mathbf{b}+\mathbf{c})\mathbf{a}=\mathbf{b}\mathbf{a}+%
+\mathbf{c}\mathbf{a}\\
+\mbox{{linearity}}&amp;\alpha(\mathbf{b}+\mathbf{c})=\alpha\mathbf{b}+\alpha%
+\mathbf{c}=(\mathbf{b}+\mathbf{c})\alpha\\
+\mbox{{contraction:}}&amp;\mathbf{a}^{2}=\mathbf{a}\mathbf{a}=\sum_{i=1}^{n}%
+\epsilon_{i}|\mathbf{a}_{i}|^{2}=\alpha&amp;\mbox{where }\epsilon_{i}\in\{-1,0,1\}%
+\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mtext mathvariant="bold">associativity:</mtext></mtd><mtd columnalign="left"><mrow><mrow><mi>𝐚</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐛𝐜</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mi>𝐚𝐛</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>𝐜</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mrow><mi>𝐚</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐛</mi><mo>+</mo><mi>𝐜</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>𝐚</mi><mo>+</mo><mi>𝐛</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mi>𝐜</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="left"><mtext mathvariant="bold">commutativity:</mtext></mtd><mtd columnalign="left"><mrow><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow><mo>=</mo><mrow><mi>β</mi><mo>⁢</mo><mi>α</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mrow><mi>α</mi><mo>+</mo><mi>β</mi></mrow><mo>=</mo><mrow><mi>β</mi><mo>+</mo><mi>α</mi></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mrow><mi>α</mi><mo>⁢</mo><mi>𝐛</mi></mrow><mo>=</mo><mrow><mi>𝐛</mi><mo>⁢</mo><mi>α</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mrow><mi>α</mi><mo>+</mo><mi>𝐛</mi></mrow><mo>=</mo><mrow><mi>𝐛</mi><mo>+</mo><mi>α</mi></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mi>𝐚𝐛</mi><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐚𝐛</mi><mo>+</mo><mi>𝐛𝐚</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐚𝐛</mi><mo>-</mo><mi>𝐛𝐚</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mtd><mtd columnalign="left"><mrow><mrow><mi>𝐚</mi><mo>+</mo><mi>𝐛</mi></mrow><mo>=</mo><mrow><mi>𝐛</mi><mo>+</mo><mi>𝐚</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="left"><mtext mathvariant="bold">distributivity:</mtext></mtd><mtd columnalign="left"><mrow><mrow><mi>𝐚</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐛</mi><mo>+</mo><mi>𝐜</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>𝐚𝐛</mi><mo>+</mo><mi>𝐚𝐜</mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>𝐛</mi><mo>+</mo><mi>𝐜</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>𝐚</mi></mrow><mo>=</mo><mrow><mi>𝐛𝐚</mi><mo>+</mo><mi>𝐜𝐚</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="left"><mtext>𝐥𝐢𝐧𝐞𝐚𝐫𝐢𝐭𝐲</mtext></mtd><mtd columnalign="left"><mrow><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝐛</mi><mo>+</mo><mi>𝐜</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>α</mi><mo>⁢</mo><mi>𝐛</mi></mrow><mo>+</mo><mrow><mi>α</mi><mo>⁢</mo><mi>𝐜</mi></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>𝐛</mi><mo>+</mo><mi>𝐜</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>α</mi></mrow></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mtext mathvariant="bold">contraction:</mtext></mtd><mtd columnalign="left"><mrow><msup><mi>𝐚</mi><mn>2</mn></msup><mo>=</mo><mi>𝐚𝐚</mi><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>ϵ</mi><mi>i</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><msub><mi>𝐚</mi><mi>i</mi></msub><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow></mrow><mo>=</mo><mi>α</mi></mrow></mtd><mtd columnalign="left"><mrow><mrow><mtext>where </mtext><mo>⁢</mo><msub><mi>ϵ</mi><mi>i</mi></msub></mrow><mo>∈</mo><mrow><mo stretchy="false">{</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Commutativity of scalar–scalar multiplication and vector–scalar multiplication is symmetric; however, in general, vector–vector multiplication is not commutative. The order of multiplication of vectors is significant. In particular, for parallel vectors:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\mathbf{a}\mathbf{b}=\mathbf{b}\mathbf{a}" display="block"><mrow><mi>𝐚𝐛</mi><mo>=</mo><mi>𝐛𝐚</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and for orthogonal vectors:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\mathbf{a}\mathbf{b}=-\mathbf{b}\mathbf{a}" display="block"><mrow><mi>𝐚𝐛</mi><mo>=</mo><mrow><mo>-</mo><mi>𝐛𝐚</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The parallelism of vectors is encoded as a symmetric property, while orthogonality of vectors is encoded as an antisymmetric property.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">The contraction rule specifies that the square of any vector is a scalar equal to the sum of the square of the magnitudes of its components in each basis direction. Depending on the contraction rule for each of the basis directions, the magnitude of the vector may be positive, negative, or zero. A vector with a magnitude of zero is called a <em class="ltx_emph ltx_font_italic">null vector</em>.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">The graded algebra <math id="p9.m1" class="ltx_Math" alttext="{\cal{G}}_{n}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒢</mi><mi>n</mi></msub></math> generated from <math id="p9.m2" class="ltx_Math" alttext="{\cal{V}}^{n}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒱</mi><mi>n</mi></msup></math> is defined over a <math id="p9.m3" class="ltx_Math" alttext="2^{n}" display="inline"><msup><mn>2</mn><mi>n</mi></msup></math>-dimensional linear space. This basis entities for this space can be generated by successive application of the geometric product to the basis vectors of <math id="p9.m4" class="ltx_Math" alttext="{\cal{V}}^{n}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒱</mi><mi>n</mi></msup></math> until a closed set of basis entities is obtained. The basis entites for the space are known as <em class="ltx_emph ltx_font_italic">blades</em>. The following multiplication table illustrates the generation of basis blades from the basis vectors <math id="p9.m5" class="ltx_Math" alttext="\mathbf{e}_{1},\mathbf{e}_{2}\in{\cal{V}}^{n}" display="inline"><mrow><mrow><msub><mi>𝐞</mi><mn>1</mn></msub><mo>,</mo><msub><mi>𝐞</mi><mn>2</mn></msub></mrow><mo>∈</mo><msup><mi class="ltx_font_mathcaligraphic">𝒱</mi><mi>n</mi></msup></mrow></math>.</p>
+</div>
+<div id="p10" class="ltx_para">
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\begin{array}[]{cccc}\epsilon_{0}&amp;\mathbf{e}_{1}&amp;\mathbf{e}_{2}&amp;\mathbf{e}_{12%
+}\\
+\mathbf{e}_{1}&amp;\epsilon_{1}&amp;\mathbf{e}_{12}&amp;\epsilon_{1}\mathbf{e}_{2}\\
+\mathbf{e}_{2}&amp;-\mathbf{e}_{12}&amp;\epsilon_{2}&amp;-\epsilon_{2}\mathbf{e}_{1}\\
+\mathbf{e}_{12}&amp;-\epsilon_{1}\mathbf{e}_{2}&amp;\epsilon_{2}\mathbf{e}_{1}&amp;-%
+\epsilon_{1}\epsilon_{2}\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>ϵ</mi><mn>0</mn></msub></mtd><mtd columnalign="center"><msub><mi>𝐞</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><msub><mi>𝐞</mi><mn>2</mn></msub></mtd><mtd columnalign="center"><msub><mi>𝐞</mi><mn>12</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>𝐞</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><msub><mi>ϵ</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><msub><mi>𝐞</mi><mn>12</mn></msub></mtd><mtd columnalign="center"><mrow><msub><mi>ϵ</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>𝐞</mi><mn>2</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>𝐞</mi><mn>2</mn></msub></mtd><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>𝐞</mi><mn>12</mn></msub></mrow></mtd><mtd columnalign="center"><msub><mi>ϵ</mi><mn>2</mn></msub></mtd><mtd columnalign="center"><mrow><mo>-</mo><mrow><msub><mi>ϵ</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>𝐞</mi><mn>1</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>𝐞</mi><mn>12</mn></msub></mtd><mtd columnalign="center"><mrow><mo>-</mo><mrow><msub><mi>ϵ</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>𝐞</mi><mn>2</mn></msub></mrow></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>ϵ</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>𝐞</mi><mn>1</mn></msub></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mrow><msub><mi>ϵ</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>ϵ</mi><mn>2</mn></msub></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Here, <math id="p11.m1" class="ltx_Math" alttext="\epsilon_{1}" display="inline"><msub><mi>ϵ</mi><mn>1</mn></msub></math> and <math id="p11.m2" class="ltx_Math" alttext="\epsilon_{2}" display="inline"><msub><mi>ϵ</mi><mn>2</mn></msub></math> represent the contraction rule for <math id="p11.m3" class="ltx_Math" alttext="\mathbf{e}_{1}" display="inline"><msub><mi>𝐞</mi><mn>1</mn></msub></math> and <math id="p11.m4" class="ltx_Math" alttext="\mathbf{e}_{2}" display="inline"><msub><mi>𝐞</mi><mn>2</mn></msub></math> respectively. Note that the basis vectors of <math id="p11.m5" class="ltx_Math" alttext="{\cal{V}}^{n}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒱</mi><mi>n</mi></msup></math> become blades themselves in addition to the multiplicative identity, <math id="p11.m6" class="ltx_Math" alttext="\epsilon_{0}\equiv 1" display="inline"><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><mo>≡</mo><mn>1</mn></mrow></math> and the new <em class="ltx_emph ltx_font_italic">bivector</em> <math id="p11.m7" class="ltx_Math" alttext="\mathbf{e}_{12}\equiv\mathbf{e}_{1}\mathbf{e}_{2}" display="inline"><mrow><msub><mi>𝐞</mi><mn>12</mn></msub><mo>≡</mo><mrow><msub><mi>𝐞</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>𝐞</mi><mn>2</mn></msub></mrow></mrow></math>. As the table demonstrates, this set of basis blades is closed under the geometric product.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">geometric product</em> <math id="p12.m1" class="ltx_Math" alttext="\mathbf{a}\mathbf{b}" display="inline"><mi>𝐚𝐛</mi></math> is related to the inner product <math id="p12.m2" class="ltx_Math" alttext="\mathbf{a}\cdot\mathbf{b}" display="inline"><mrow><mi>𝐚</mi><mo>⋅</mo><mi>𝐛</mi></mrow></math> and the exterior product <math id="p12.m3" class="ltx_Math" alttext="\mathbf{a}\wedge\mathbf{b}" display="inline"><mrow><mi>𝐚</mi><mo>∧</mo><mi>𝐛</mi></mrow></math> by</p>
+</div>
+<div id="p13" class="ltx_para">
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\mathbf{a}\mathbf{b}=\mathbf{a}\cdot\mathbf{b}+\mathbf{a}\wedge\mathbf{b}=%
+\mathbf{b}\cdot\mathbf{a}-\mathbf{b}\wedge\mathbf{a}=2\mathbf{a}\cdot\mathbf{b%
+}-\mathbf{b}\mathbf{a}." display="block"><mrow><mrow><mi>𝐚𝐛</mi><mo>=</mo><mrow><mrow><mrow><mi>𝐚</mi><mo>⋅</mo><mi>𝐛</mi></mrow><mo>+</mo><mi>𝐚</mi></mrow><mo>∧</mo><mi>𝐛</mi></mrow><mo>=</mo><mrow><mrow><mrow><mi>𝐛</mi><mo>⋅</mo><mi>𝐚</mi></mrow><mo>-</mo><mi>𝐛</mi></mrow><mo>∧</mo><mi>𝐚</mi></mrow><mo>=</mo><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>𝐚</mi></mrow><mo>⋅</mo><mi>𝐛</mi></mrow><mo>-</mo><mi>𝐛𝐚</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">In the above example, the result of the inner (dot) product is a scalar (grade-0), while the result of the exterior (wedge) product is a <em class="ltx_emph ltx_font_italic">bivector</em> (grade-2).</p>
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Bibliography</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">David Hestenes, <span class="ltx_text ltx_font_italic">New Foundations for Classical Mechanics</span>, Kluwer, Dordrecht, 1999</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">David Hestenes, Garret Sobczyk, <span class="ltx_text ltx_font_italic">Clifford Algebra to Geometric Calculus</span>, Kluwer, Dordrecht, 1984</p>
+</div>
+</li>
+</ol>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">geometric algebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GeometricAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:17:03</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:17:03</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PhysBrain (974)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PhysBrain (974)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PhysBrain (974)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A66</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A75</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Clifford algebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ExteriorAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CliffordAlgebra2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CCliffordAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SpinGroup</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">geometric product</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:30:38 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

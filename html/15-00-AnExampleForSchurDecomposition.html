@@ -1,0 +1,211 @@
+<!DOCTYPE html><html>
+<head>
+<title>an example for Schur decomposition</title>
+<!--Generated on Fri Feb  9 18:13:36 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">an example for Schur decomposition</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="A=\begin{pmatrix}5&amp;7\\
+-2&amp;-4\end{pmatrix}." display="block"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>5</mn></mtd><mtd columnalign="center"><mn>7</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>4</mn></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We will find an orthogonal matrix <math id="p1.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and an upper triangular matrix <math id="p1.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> such that <math id="p1.m3" class="ltx_Math" alttext="P^{t}AP=T" display="inline"><mrow><mrow><msup><mi>P</mi><mi>t</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>P</mi></mrow><mo>=</mo><mi>T</mi></mrow></math> applying the proof of Schur’s decomposition.
+We ’re following the steps below</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">We find the eigenvalues of <math id="I1.i1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>
+
+<br class="ltx_break">The eigenvalues of a matrix are precisely the solutions to the equation</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\det(\lambda I-A)=0\leftrightarrow\lambda^{2}-\lambda-6=0" display="block"><mrow><mrow><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>↔</mo><mrow><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo>-</mo><mi>λ</mi><mo>-</mo><mn>6</mn></mrow><mo>=</mo><mn>0</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<br class="ltx_break">
+<p class="ltx_p">Hence the roots of the quadratic equation (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/QuadraticFormula</span>) are the eigenvalues
+<math id="I1.i1.p1.m2" class="ltx_Math" alttext="\lambda_{1}=-2,\lambda_{2}=3" display="inline"><mrow><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>=</mo><mrow><mo>-</mo><mn>2</mn></mrow></mrow><mo>,</mo><mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>=</mo><mn>3</mn></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">We find the eigenvectors
+
+<br class="ltx_break">For each eigenvalue <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\lambda_{i}" display="inline"><msub><mi>λ</mi><mi>i</mi></msub></math>, solving the system</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="(A-\lambda_{i}I)X_{i}=0" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><msub><mi>λ</mi><mi>i</mi></msub><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>X</mi><mi>i</mi></msub></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So we have that
+for <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\lambda_{1}=-2" display="inline"><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>=</mo><mrow><mo>-</mo><mn>2</mn></mrow></mrow></math></p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="(A+2I)=0\leftrightarrow\begin{pmatrix}7&amp;7\\
+-2&amp;-2\end{pmatrix}\begin{pmatrix}x_{1}\\
+x_{2}\end{pmatrix}=\begin{pmatrix}0\\
+0\end{pmatrix}\rightarrow X_{1}=(1,-1)" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mn>0</mn></mrow><mo>↔</mo><mrow><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>7</mn></mtd><mtd columnalign="center"><mn>7</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>→</mo><msub><mi>X</mi><mn>1</mn></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<br class="ltx_break">
+<p class="ltx_p">Analogously for <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\lambda_{2}=3" display="inline"><mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>=</mo><mn>3</mn></mrow></math>
+the eigenvector <math id="I1.i2.p1.m4" class="ltx_Math" alttext="X_{2}=(7,-2)" display="inline"><mrow><msub><mi>X</mi><mn>2</mn></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>7</mn><mo>,</mo><mrow><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">We get an orthonormal set of eigenvectors using Gram-Schmidt orthogonalization
+
+<br class="ltx_break">Consider the above two eigenvectors which are linearly independent but are not orthogonal</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle X_{1}" display="inline"><msub><mi>X</mi><mn>1</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=(1,-1)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle X_{2}" display="inline"><msub><mi>X</mi><mn>2</mn></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=(7,-2)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>7</mn><mo>,</mo><mrow><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">First we take <math id="I1.i3.p1.m1" class="ltx_Math" alttext="w_{1}=X_{1}=(1,-1)" display="inline"><mrow><msub><mi>w</mi><mn>1</mn></msub><mo>=</mo><msub><mi>X</mi><mn>1</mn></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. Therefore</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="w_{2}=X_{2}-\frac{w_{1}\cdot X_{2}}{\|w_{1}\|^{2}}w_{1}" display="block"><mrow><msub><mi>w</mi><mn>2</mn></msub><mo>=</mo><mrow><msub><mi>X</mi><mn>2</mn></msub><mo>-</mo><mrow><mfrac><mrow><msub><mi>w</mi><mn>1</mn></msub><mo>⋅</mo><msub><mi>X</mi><mn>2</mn></msub></mrow><msup><mrow><mo>∥</mo><msub><mi>w</mi><mn>1</mn></msub><mo>∥</mo></mrow><mn>2</mn></msup></mfrac><mo>⁢</mo><msub><mi>w</mi><mn>1</mn></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">that is,</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="w_{2}=(\frac{5}{2},\frac{5}{2})" display="block"><mrow><msub><mi>w</mi><mn>2</mn></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mo>,</mo><mfrac><mn>5</mn><mn>2</mn></mfrac><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and finally the orthonormal set is
+<math id="I1.i3.p1.m2" class="ltx_Math" alttext="\{w_{1}/\|w_{1}\|,w_{2}/\|w_{2}\|\}=\{(\frac{1}{\sqrt{2}},\frac{-1}{\sqrt{2}})%
+,(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})\}" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mrow><msub><mi>w</mi><mn>1</mn></msub><mo>/</mo><mrow><mo>∥</mo><msub><mi>w</mi><mn>1</mn></msub><mo>∥</mo></mrow></mrow><mo>,</mo><mrow><msub><mi>w</mi><mn>2</mn></msub><mo>/</mo><mrow><mo>∥</mo><msub><mi>w</mi><mn>2</mn></msub><mo>∥</mo></mrow></mrow><mo stretchy="false">}</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo>,</mo><mfrac><mrow><mo>-</mo><mn>1</mn></mrow><msqrt><mn>2</mn></msqrt></mfrac><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo>,</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math>
+
+<br class="ltx_break">So</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="P=\frac{1}{\sqrt{2}}\begin{pmatrix}1&amp;1\\
+-1&amp;1\end{pmatrix}." display="block"><mrow><mrow><mi>P</mi><mo>=</mo><mrow><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="T=P^{t}AP=\begin{pmatrix}-2&amp;9\\
+0&amp;3\end{pmatrix}." display="block"><mrow><mrow><mi>T</mi><mo>=</mo><mrow><msup><mi>P</mi><mi>t</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>P</mi></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="center"><mn>9</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>3</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">an example for Schur decomposition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">AnExampleForSchurDecomposition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:27:02</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:27:02</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">georgiosl (7242)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">georgiosl (7242)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">georgiosl (7242)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Application</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15-00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SchurDecomposition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">GramSchmidtOrthogonalization</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:13:36 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

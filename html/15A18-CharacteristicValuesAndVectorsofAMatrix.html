@@ -1,0 +1,451 @@
+<!DOCTYPE html><html>
+<head>
+<title>characteristic values and vectors (of a matrix)</title>
+<!--Generated on Fri Feb  9 18:25:17 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">characteristic values and vectors (of a matrix)</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Over the spectrum <math id="p1.m1" class="ltx_Math" alttext="\sigma(A)" display="inline"><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math> of a matrix <math id="p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, its eigenvalues <math id="p1.m3" class="ltx_Math" alttext="\lambda_{1},\lambda_{2},\ldots,\lambda_{s}" display="inline"><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>,</mo><msub><mi>λ</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>λ</mi><mi>s</mi></msub></mrow></math> possess multiplicities <math id="p1.m4" class="ltx_Math" alttext="n_{1},n_{2},\ldots,n_{s}" display="inline"><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>,</mo><msub><mi>n</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>n</mi><mi>s</mi></msub></mrow></math>, respectively, with <math id="p1.m5" class="ltx_Math" alttext="\sum_{k=1}^{s}n_{k}=n" display="inline"><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>s</mi></msubsup><msub><mi>n</mi><mi>k</mi></msub></mrow><mo>=</mo><mi>n</mi></mrow></math>. Its associated characteristic polynomial is then factored as</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\Delta(\lambda)\equiv|\lambda I-A|=\Pi_{k=1}^{s}(\lambda-\lambda_{k})^{n_{k}}." display="block"><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><mo stretchy="false">|</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><msubsup><mi mathvariant="normal">Π</mi><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>s</mi></msubsup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>-</mo><msub><mi>λ</mi><mi>k</mi></msub></mrow><mo stretchy="false">)</mo></mrow><msub><mi>n</mi><mi>k</mi></msub></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let us set <math id="p2.m1" class="ltx_Math" alttext="\mathrm{mult}(\lambda_{k})=n_{k}" display="inline"><mrow><mrow><mi>mult</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>n</mi><mi>k</mi></msub></mrow></math> for multiplicity of <math id="p2.m2" class="ltx_Math" alttext="\lambda_{k}" display="inline"><msub><mi>λ</mi><mi>k</mi></msub></math>(<math id="p2.m3" class="ltx_Math" alttext="k=1,\ldots,s" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>s</mi></mrow></mrow></math>). We will now prove the following theorem.</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="\sigma(A)=\{\lambda_{k}\}_{k=1}^{s}" display="inline"><mrow><mrow><mi>σ</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>A</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><msubsup><mrow><mo mathvariant="normal" stretchy="false">{</mo><msub><mi>λ</mi><mi>k</mi></msub><mo mathvariant="normal" stretchy="false">}</mo></mrow><mrow><mi>k</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">1</mn></mrow><mi>s</mi></msubsup></mrow></math>, <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="\mathrm{mult}(\lambda_{k})=n_{k}" display="inline"><mrow><mrow><mi mathvariant="normal">mult</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>λ</mi><mi>k</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><msub><mi>n</mi><mi>k</mi></msub></mrow></math>, and <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="g(\mu)" display="inline"><mrow><mi>g</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>μ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is a scalar polynomial, then <math id="Thmtheorem1.p1.m4" class="ltx_Math" alttext="\sigma(g(A))=\{g(\lambda_{k})\}_{k=1}^{s}" display="inline"><mrow><mrow><mi>σ</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mi>g</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>A</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><msubsup><mrow><mo mathvariant="normal" stretchy="false">{</mo><mrow><mi>g</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>λ</mi><mi>k</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">}</mo></mrow><mrow><mi>k</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">1</mn></mrow><mi>s</mi></msubsup></mrow></math>, <math id="Thmtheorem1.p1.m5" class="ltx_Math" alttext="\mathrm{mult}(g(\lambda_{k}))=n_{k}" display="inline"><mrow><mrow><mi mathvariant="normal">mult</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mi>g</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>λ</mi><mi>k</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><msub><mi>n</mi><mi>k</mi></msub></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Let <math id="p3.m1" class="ltx_Math" alttext="g(\mu)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math> be an arbitrary scalar polynomial. We want to find the characteristic values of <math id="p3.m2" class="ltx_Math" alttext="g(A)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math>. For this purpose we split <math id="p3.m3" class="ltx_Math" alttext="g(\mu)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math> into linear factors</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="g(\mu)=a_{0}\Pi_{i=1}^{t}(\mu-\mu_{i})^{l_{i}},\qquad a_{0}\neq 0,\qquad\sum_{%
+i=1}^{t}l_{i}=l." display="block"><mrow><mrow><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>⁢</mo><msubsup><mi mathvariant="normal">Π</mi><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>t</mi></msubsup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>μ</mi><mo>-</mo><msub><mi>μ</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow><msub><mi>l</mi><mi>i</mi></msub></msup></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>≠</mo><mn>0</mn></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>t</mi></munderover><msub><mi>l</mi><mi>i</mi></msub></mrow><mo>=</mo><mi>l</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">On substitution <math id="p3.m4" class="ltx_Math" alttext="\mu\mapsto A" display="inline"><mrow><mi>μ</mi><mo>↦</mo><mi>A</mi></mrow></math>, we have</p>
+<table id="S0.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E3.m1" class="ltx_Math" alttext="g(A)=a_{0}\Pi_{i=1}^{t}(A-\mu_{i}I)^{l_{i}}," display="block"><mrow><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>⁢</mo><msubsup><mi mathvariant="normal">Π</mi><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>t</mi></msubsup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><msub><mi>μ</mi><mi>i</mi></msub><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><msub><mi>l</mi><mi>i</mi></msub></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">being <math id="p3.m5" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> the identity matrix. Let us compute the determinant of <math id="p3.m6" class="ltx_Math" alttext="g(A)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math>. (Coefficient <math id="p3.m7" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math> will be powered to <math id="p3.m8" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, the order of the square matrix <math id="p3.m9" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>).</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle|g(A)|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=a_{0}^{n}\Pi_{i=1}^{t}|(-1)(\mu_{i}I-A)|^{l_{i}}=a_{0}^{n}\Pi_{i%
+=1}^{t}(-1)^{nl_{i}}|\mu_{i}I-A|^{l_{i}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msubsup><mi>a</mi><mn>0</mn><mi>n</mi></msubsup><mo>⁢</mo><msubsup><mi mathvariant="normal">Π</mi><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>t</mi></msubsup><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>μ</mi><mi>i</mi></msub><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><msub><mi>l</mi><mi>i</mi></msub></msup></mrow><mo>=</mo><mrow><msubsup><mi>a</mi><mn>0</mn><mi>n</mi></msubsup><mo>⁢</mo><msubsup><mi mathvariant="normal">Π</mi><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>t</mi></msubsup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>⁢</mo><msub><mi>l</mi><mi>i</mi></msub></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mrow><msub><mi>μ</mi><mi>i</mi></msub><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">|</mo></mrow><msub><mi>l</mi><mi>i</mi></msub></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=a_{0}^{n}(-1)^{n\sum_{i=1}^{t}l_{i}}\Pi_{i=1}^{t}|\mu_{i}I-A|^{l%
+_{i}}=a_{0}^{n}(-1)^{nl}\Pi_{i=1}^{t}\Delta(\mu_{i})^{l_{i}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msubsup><mi>a</mi><mn>0</mn><mi>n</mi></msubsup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>⁢</mo><mrow><mstyle displaystyle="false"><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>t</mi></msubsup></mstyle><msub><mi>l</mi><mi>i</mi></msub></mrow></mrow></msup><mo>⁢</mo><msubsup><mi mathvariant="normal">Π</mi><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>t</mi></msubsup><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mrow><msub><mi>μ</mi><mi>i</mi></msub><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">|</mo></mrow><msub><mi>l</mi><mi>i</mi></msub></msup></mrow><mo>=</mo><mrow><msubsup><mi>a</mi><mn>0</mn><mi>n</mi></msubsup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>⁢</mo><mi>l</mi></mrow></msup><mo>⁢</mo><msubsup><mi mathvariant="normal">Π</mi><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>t</mi></msubsup><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>μ</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><msub><mi>l</mi><mi>i</mi></msub></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=a_{0}^{n}(-1)^{nl}\Pi_{i=1}^{t}[\Pi_{k=1}^{s}(\mu_{i}-\lambda_{k%
+})^{n_{k}}]^{l_{i}}," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msubsup><mi>a</mi><mn>0</mn><mi>n</mi></msubsup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>⁢</mo><mi>l</mi></mrow></msup><mo>⁢</mo><msubsup><mi mathvariant="normal">Π</mi><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>t</mi></msubsup><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mrow><msubsup><mi mathvariant="normal">Π</mi><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>s</mi></msubsup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>μ</mi><mi>i</mi></msub><mo>-</mo><msub><mi>λ</mi><mi>k</mi></msub></mrow><mo stretchy="false">)</mo></mrow><msub><mi>n</mi><mi>k</mi></msub></msup></mrow><mo stretchy="false">]</mo></mrow><msub><mi>l</mi><mi>i</mi></msub></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">because on substitution <math id="p3.m10" class="ltx_Math" alttext="\lambda\mapsto\mu_{i}" display="inline"><mrow><mi>λ</mi><mo>↦</mo><msub><mi>μ</mi><mi>i</mi></msub></mrow></math> in (1). Next we commute the binomial by introducing <math id="p3.m11" class="ltx_Math" alttext="(-1)^{nl}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>⁢</mo><mi>l</mi></mrow></msup></math> into the product signs and also we note that <math id="p3.m12" class="ltx_Math" alttext="a_{0}^{n}=a_{0}^{\sum_{k=1}^{s}n_{k}}=\Pi_{k=1}^{s}a_{0}^{n_{k}}" display="inline"><mrow><msubsup><mi>a</mi><mn>0</mn><mi>n</mi></msubsup><mo>=</mo><msubsup><mi>a</mi><mn>0</mn><mrow><mstyle displaystyle="false"><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>s</mi></msubsup></mstyle><msub><mi>n</mi><mi>k</mi></msub></mrow></msubsup><mo>=</mo><mrow><msubsup><mi mathvariant="normal">Π</mi><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>s</mi></msubsup><mo>⁢</mo><msubsup><mi>a</mi><mn>0</mn><msub><mi>n</mi><mi>k</mi></msub></msubsup></mrow></mrow></math>, so that</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="|g(A)|=\Pi_{k=1}^{s}[a_{0}\Pi_{i=1}^{t}(\lambda_{k}-\mu_{i})^{l_{i}}]^{n_{k}}," display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><msubsup><mi mathvariant="normal">Π</mi><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>s</mi></msubsup><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>⁢</mo><msubsup><mi mathvariant="normal">Π</mi><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>t</mi></msubsup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>λ</mi><mi>k</mi></msub><mo>-</mo><msub><mi>μ</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow><msub><mi>l</mi><mi>i</mi></msub></msup></mrow><mo stretchy="false">]</mo></mrow><msub><mi>n</mi><mi>k</mi></msub></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and we may use (2) for <math id="p3.m13" class="ltx_Math" alttext="\mu=\lambda_{k}" display="inline"><mrow><mi>μ</mi><mo>=</mo><msub><mi>λ</mi><mi>k</mi></msub></mrow></math> to obtain</p>
+<table id="S0.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E4.m1" class="ltx_Math" alttext="|g(A)|=\Pi_{k=1}^{s}g(\lambda_{k})^{n_{k}}." display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><msubsup><mi mathvariant="normal">Π</mi><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>s</mi></msubsup><mo>⁢</mo><mi>g</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow><msub><mi>n</mi><mi>k</mi></msub></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Finally we substitute the polynomial <math id="p3.m14" class="ltx_Math" alttext="g(\mu)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math> by <math id="p3.m15" class="ltx_Math" alttext="\lambda-g(\mu)" display="inline"><mrow><mi>λ</mi><mo>-</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, where <math id="p3.m16" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> is an arbitrary parameter, getting for (4)</p>
+<table id="S0.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E5.m1" class="ltx_Math" alttext="\Delta(g(A))\equiv|\lambda I-g(A)|=\Pi_{k=1}^{s}[\lambda-g(\lambda_{k})]^{n_{k%
+}}." display="block"><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><mo stretchy="false">|</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><msubsup><mi mathvariant="normal">Π</mi><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>s</mi></msubsup><mo>⁢</mo><msup><mrow><mo stretchy="false">[</mo><mrow><mi>λ</mi><mo>-</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">]</mo></mrow><msub><mi>n</mi><mi>k</mi></msub></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr>
+</table>
+<p class="ltx_p">This proves the theorem.
+∎</p>
+</div>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">As an important particular case we have: <math id="p4.m1" class="ltx_Math" alttext="\sigma(A^{m})=\{\lambda_{k}^{m}\}_{k=1}^{s}" display="inline"><mrow><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>A</mi><mi>m</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msubsup><mrow><mo stretchy="false">{</mo><msubsup><mi>λ</mi><mi>k</mi><mi>m</mi></msubsup><mo stretchy="false">}</mo></mrow><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>s</mi></msubsup></mrow></math>, (<math id="p4.m2" class="ltx_Math" alttext="m=0,1,\cdots" display="inline"><mrow><mi>m</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">⋯</mi></mrow></mrow></math>), <math id="p4.m3" class="ltx_Math" alttext="\mathrm{mult}(\lambda_{k})=n_{k}" display="inline"><mrow><mrow><mi>mult</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>n</mi><mi>k</mi></msub></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Connection between the characteristic polynomial <math id="p5.m1" class="ltx_Math" alttext="\Delta(\lambda)" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo mathvariant="bold">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>λ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> and the adjugate matrix <math id="p5.m2" class="ltx_Math" alttext="B(\lambda)" display="inline"><mrow><mi>B</mi><mo mathvariant="bold">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>λ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> of <math id="p5.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</span> 
+<br class="ltx_break">As it is well known, the adjugate matrix <math id="p5.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> of a matrix <math id="p5.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> there corresponds to the algebraic complement or cofactor matrix of the transpose of <math id="p5.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. From this definition we have</p>
+<table id="S0.E6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E6.m1" class="ltx_Math" alttext="B(\lambda)(\lambda I-A)=\Delta(\lambda)I\qquad\mathrm{and}\qquad(\lambda I-A)B%
+(\lambda)=\Delta(\lambda)I." display="block"><mrow><mrow><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>I</mi></mrow><mo mathvariant="italic" separator="true">  </mo><mi>and</mi></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>I</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Let us suppose <math id="p5.m7" class="ltx_Math" alttext="\Delta(\lambda)" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is given by</p>
+<table id="S0.E7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E7.m1" class="ltx_Math" alttext="\Delta(\lambda)=\lambda^{n}-\sum_{k=1}^{n}c_{k}\lambda^{n-k}." display="block"><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>λ</mi><mi>n</mi></msup><mo>-</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>c</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>λ</mi><mrow><mi>n</mi><mo>-</mo><mi>k</mi></mrow></msup></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr>
+</table>
+<p class="ltx_p">It is clear that the difference <math id="p5.m8" class="ltx_Math" alttext="\Delta(\lambda)-\Delta(\mu)" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is divisible by <math id="p5.m9" class="ltx_Math" alttext="\lambda-\mu" display="inline"><mrow><mi>λ</mi><mo>-</mo><mi>μ</mi></mrow></math> without remainder, hence</p>
+<table id="S0.E8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E8.m1" class="ltx_Math" alttext="\delta(\lambda,\mu)\equiv\frac{\Delta(\lambda)-\Delta(\mu)}{\lambda-\mu}=%
+\lambda^{n-1}+(\mu-c_{1})\lambda^{n-2}+(\mu^{2}-c_{1}\mu-c_{2})\lambda^{n-3}+\cdots" display="block"><mrow><mrow><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mfrac><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mi>λ</mi><mo>-</mo><mi>μ</mi></mrow></mfrac><mo>=</mo><mrow><msup><mi>λ</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>μ</mi><mo>-</mo><msub><mi>c</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>λ</mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>μ</mi><mn>2</mn></msup><mo>-</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mi>μ</mi></mrow><mo>-</mo><msub><mi>c</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>λ</mi><mrow><mi>n</mi><mo>-</mo><mn>3</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr>
+</table>
+<p class="ltx_p">is a polynomial in <math id="p5.m10" class="ltx_Math" alttext="\lambda,\mu" display="inline"><mrow><mi>λ</mi><mo>,</mo><mi>μ</mi></mrow></math>. If we replace in (8) <math id="p5.m11" class="ltx_Math" alttext="(\lambda,\mu)" display="inline"><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></math> by the permutable matrices <math id="p5.m12" class="ltx_Math" alttext="(\lambda I,A)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo>,</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></math> and recalling that from Cayley-Hamilton theorem <math id="p5.m13" class="ltx_Math" alttext="\Delta(A)=0" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, then</p>
+<table id="S0.E9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E9.m1" class="ltx_Math" alttext="\delta(\lambda I,A)(\lambda I-A)=\Delta(\lambda)I," display="block"><mrow><mrow><mrow><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo>,</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>I</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr>
+</table>
+<p class="ltx_p">which by comparing it with (6)<math id="p5.m14" class="ltx_Math" alttext="{}_{1}" display="inline"><msub><mi></mi><mn>1</mn></msub></math> we conclude that</p>
+<table id="S0.E10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E10.m1" class="ltx_Math" alttext="B(\lambda)=\delta(\lambda I,A)" display="block"><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo>,</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(10)</span></td>
+</tr>
+</table>
+<p class="ltx_p">is the desired formula by virtue of the uniqueness of the quotient. Therefore (10) and (8) let to write the adjugate <math id="p5.m15" class="ltx_Math" alttext="B(\lambda)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></math> as the matrix polynomial</p>
+<table id="S0.E11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E11.m1" class="ltx_Math" alttext="B(\lambda)=I\lambda^{n-1}+\sum_{k=1}^{n-1}B_{k}\lambda^{n-k-1}," display="block"><mrow><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>I</mi><mo>⁢</mo><msup><mi>λ</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><msub><mi>B</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>λ</mi><mrow><mi>n</mi><mo>-</mo><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(11)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where (<math id="p5.m16" class="ltx_Math" alttext="\mu\mapsto A" display="inline"><mrow><mi>μ</mi><mo>↦</mo><mi>A</mi></mrow></math> in (8))</p>
+<table id="S0.E12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E12.m1" class="ltx_Math" alttext="B_{k}=A^{k}-\sum_{i=1}^{k}c_{i}A^{k-i},\qquad(k=1,\ldots,n-1)," display="block"><mrow><msub><mi>B</mi><mi>k</mi></msub><mo>=</mo><msup><mi>A</mi><mi>k</mi></msup><mo>-</mo><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><msub><mi>c</mi><mi>i</mi></msub><msup><mi>A</mi><mrow><mi>k</mi><mo>-</mo><mi>i</mi></mrow></msup><mo rspace="22.5pt">,</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(12)</span></td>
+</tr>
+</table>
+<p class="ltx_p">which can also be obtained from the recurrence equation</p>
+<table id="S0.E13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E13.m1" class="ltx_Math" alttext="B_{k}=AB_{k-1}-c_{k}I,\qquad(k=1,\ldots,n-1;\quad B_{0}=I)." display="block"><mrow><msub><mi>B</mi><mi>k</mi></msub><mo>=</mo><mi>A</mi><msub><mi>B</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>c</mi><mi>k</mi></msub><mi>I</mi><mo rspace="22.5pt">,</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo rspace="12.5pt">;</mo><msub><mi>B</mi><mn>0</mn></msub><mo>=</mo><mi>I</mi><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(13)</span></td>
+</tr>
+</table>
+<p class="ltx_p">What is more,</p>
+<table id="S0.E14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E14.m1" class="ltx_Math" alttext="AB_{n-1}-c_{n}I=0\equiv B_{n}." display="block"><mrow><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mi>B</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo>-</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><mi>I</mi></mrow></mrow><mo>=</mo><mn>0</mn><mo>≡</mo><msub><mi>B</mi><mi>n</mi></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(14)</span></td>
+</tr>
+</table>
+<p class="ltx_p">(13) as well as (14) follow inmediately from (6)<math id="p5.m17" class="ltx_Math" alttext="{}_{2}" display="inline"><msub><mi></mi><mn>2</mn></msub></math> if we equate the coefficients of equal powers of <math id="p5.m18" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> on both sides. Also, if we substitute <math id="p5.m19" class="ltx_Math" alttext="B_{n-1}" display="inline"><msub><mi>B</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></math> from (12), into (14), we get <math id="p5.m20" class="ltx_Math" alttext="\Delta(A)=0" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> (Cayley-Hamilton), an implicit consequence of generalized Bézout theorem. On the other hand, by setting <math id="p5.m21" class="ltx_Math" alttext="\lambda=0" display="inline"><mrow><mi>λ</mi><mo>=</mo><mn>0</mn></mrow></math> in (7) we obtain <math id="p5.m22" class="ltx_Math" alttext="c_{n}=\Delta(0)/(-1)=|-A|/(-1)=(-1)^{n-1}|A|\neq 0" display="inline"><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>=</mo><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">|</mo></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>A</mi><mo stretchy="false">|</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math>, whenever <math id="p5.m23" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be non- singular. From this and from (14) follow that</p>
+<table id="S0.E15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E15.m1" class="ltx_Math" alttext="A^{-1}=\frac{1}{c_{n}}B_{n-1}." display="block"><mrow><mrow><msup><mi>A</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mfrac><mn>1</mn><msub><mi>c</mi><mi>n</mi></msub></mfrac><mo>⁢</mo><msub><mi>B</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(15)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Let now <math id="p5.m24" class="ltx_Math" alttext="\lambda_{c}" display="inline"><msub><mi>λ</mi><mi>c</mi></msub></math> be a characteristic value of <math id="p5.m25" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, then <math id="p5.m26" class="ltx_Math" alttext="\Delta(\lambda_{c})=0" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mi>c</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> and (6)<math id="p5.m27" class="ltx_Math" alttext="{}_{2}" display="inline"><msub><mi></mi><mn>2</mn></msub></math> becomes</p>
+<table id="S0.E16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E16.m1" class="ltx_Math" alttext="(\lambda_{c}I-A)B(\lambda_{c})=0." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>λ</mi><mi>c</mi></msub><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mi>c</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(16)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Let us assume that <math id="p5.m28" class="ltx_Math" alttext="B(\lambda_{c})\neq 0" display="inline"><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mi>c</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math> and denote by <math id="p5.m29" class="ltx_Math" alttext="\mathbf{b}" display="inline"><mi>𝐛</mi></math> an arbitrary non-zero column of this matrix. From (16) we have <math id="p5.m30" class="ltx_Math" alttext="(\lambda_{c}I-A)\mathbf{b}=\mathbf{0}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>λ</mi><mi>c</mi></msub><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>𝐛</mi></mrow><mo>=</mo><mn>𝟎</mn></mrow></math>. That is,</p>
+<table id="S0.E17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E17.m1" class="ltx_Math" alttext="A\mathbf{b}=\lambda_{c}\mathbf{b}." display="block"><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>𝐛</mi></mrow><mo>=</mo><mrow><msub><mi>λ</mi><mi>c</mi></msub><mo>⁢</mo><mi>𝐛</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(17)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore every non-zero column of <math id="p5.m31" class="ltx_Math" alttext="B(\lambda_{c})" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mi>c</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> determines a characteristic vector corresponding to the characteristic value <math id="p5.m32" class="ltx_Math" alttext="\lambda_{c}" display="inline"><msub><mi>λ</mi><mi>c</mi></msub></math>. Moreover, if to the characteristic value <math id="p5.m33" class="ltx_Math" alttext="\lambda_{c}" display="inline"><msub><mi>λ</mi><mi>c</mi></msub></math> there correspond <math id="p5.m34" class="ltx_Math" alttext="l" display="inline"><mi>l</mi></math> linearly independent characteristic vectors, <math id="p5.m35" class="ltx_Math" alttext="n-l" display="inline"><mrow><mi>n</mi><mo>-</mo><mi>l</mi></mrow></math> will be the rank of <math id="p5.m36" class="ltx_Math" alttext="\lambda_{c}I-A" display="inline"><mrow><mrow><msub><mi>λ</mi><mi>c</mi></msub><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mi>A</mi></mrow></math> and so the rank of <math id="p5.m37" class="ltx_Math" alttext="B(\lambda_{c})" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mi>c</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> does not exceed <math id="p5.m38" class="ltx_Math" alttext="l" display="inline"><mi>l</mi></math>. In particular, if only one characteristic vector there corresponds to <math id="p5.m39" class="ltx_Math" alttext="\lambda_{c}" display="inline"><msub><mi>λ</mi><mi>c</mi></msub></math>, then in <math id="p5.m40" class="ltx_Math" alttext="B(\lambda_{c})" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mi>c</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> the elements of any two columns will be proportional (In such a case <math id="p5.m41" class="ltx_Math" alttext="l=1" display="inline"><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow></math>, hence the rank of <math id="p5.m42" class="ltx_Math" alttext="\lambda_{c}I-A" display="inline"><mrow><mrow><msub><mi>λ</mi><mi>c</mi></msub><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mi>A</mi></mrow></math> will be <math id="p5.m43" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math>). 
+<br class="ltx_break">In conclusion: <span class="ltx_text ltx_font_italic">If the coefficients of the characteristic polynomial are known, then the adjugate matrix may be found by (10). In addition, if the given matrix <math id="p5.m44" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is non-singular, then the inverse matrix <math id="p5.m45" class="ltx_Math" alttext="A^{-1}" display="inline"><msup><mi>A</mi><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msup></math> can be found from (15). Also if <math id="p5.m46" class="ltx_Math" alttext="\lambda_{c}" display="inline"><msub><mi>λ</mi><mi>c</mi></msub></math> is a characteristic value of <math id="p5.m47" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, the non-zero columns of <math id="p5.m48" class="ltx_Math" alttext="B(\lambda_{c})" display="inline"><mrow><mi>B</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>λ</mi><mi>c</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> are characteristc vectors of A for <math id="p5.m49" class="ltx_Math" alttext="\lambda=\lambda_{c}" display="inline"><mrow><mi>λ</mi><mo mathvariant="normal">=</mo><msub><mi>λ</mi><mi>c</mi></msub></mrow></math>. 
+<br class="ltx_break"></span></p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example.</span><span class="ltx_text ltx_font_italic">  We find out the characteristic values and vectors from the matrix</span></p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="A=\begin{bmatrix}3&amp;-3&amp;2\\
+-1&amp;5&amp;-2\\
+-1&amp;3&amp;0\end{bmatrix}." display="block"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>3</mn></mrow></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>5</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">From (1),</span></p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\Delta(\lambda)=|\lambda I-A|=\begin{vmatrix}\lambda-3&amp;3&amp;-2\\
+1&amp;\lambda-5&amp;2\\
+1&amp;-3&amp;\lambda\end{vmatrix}=\lambda^{3}-8\lambda^{2}+20\lambda-16." display="block"><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">|</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>|</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>λ</mi><mo>-</mo><mn>3</mn></mrow></mtd><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mi>λ</mi><mo>-</mo><mn>5</mn></mrow></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>3</mn></mrow></mtd><mtd columnalign="center"><mi>λ</mi></mtd></mtr></mtable><mo>|</mo></mrow><mo>=</mo><mrow><mrow><mrow><msup><mi>λ</mi><mn>3</mn></msup><mo>-</mo><mrow><mn>8</mn><mo>⁢</mo><msup><mi>λ</mi><mn>2</mn></msup></mrow></mrow><mo>+</mo><mrow><mn>20</mn><mo>⁢</mo><mi>λ</mi></mrow></mrow><mo>-</mo><mn>16</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Comparing with (7), we have</span></p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="c_{1}=8,\qquad c_{2}=-20,\qquad c_{3}=16." display="block"><mrow><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>=</mo><mn>8</mn></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>=</mo><mrow><mo>-</mo><mn>20</mn></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><msub><mi>c</mi><mn>3</mn></msub><mo>=</mo><mn>16</mn></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Next we use (8),</span></p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\delta(\lambda,\mu)=\frac{\Delta(\lambda)-\Delta(\mu)}{\lambda-\mu}=\lambda^{2%
+}+(\mu-8)\lambda+\mu^{2}-8\mu+20," display="block"><mrow><mrow><mrow><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mi>λ</mi><mo>-</mo><mi>μ</mi></mrow></mfrac><mo>=</mo><mrow><mrow><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>μ</mi><mo>-</mo><mn>8</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>λ</mi></mrow><mo>+</mo><msup><mi>μ</mi><mn>2</mn></msup></mrow><mo>-</mo><mrow><mn>8</mn><mo>⁢</mo><mi>μ</mi></mrow></mrow><mo>+</mo><mn>20</mn></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">so that from (11)</span></p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="B(\lambda)=\delta(\lambda I,A)=\lambda^{2}I+(\underbrace{A-8I}_{B_{1}})\lambda%
++\underbrace{A^{2}-8A+20I}_{B_{2}}." display="block"><mrow><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo>,</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo>⁢</mo><mi>I</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><munder><munder accentunder="true"><mrow><mi>A</mi><mo movablelimits="false">-</mo><mrow><mn>8</mn><mo movablelimits="false">⁢</mo><mi>I</mi></mrow></mrow><mo movablelimits="false">⏟</mo></munder><msub><mi>B</mi><mn>1</mn></msub></munder><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>λ</mi></mrow><mo>+</mo><munder><munder accentunder="true"><mrow><mrow><msup><mi>A</mi><mn>2</mn></msup><mo movablelimits="false">-</mo><mrow><mn>8</mn><mo movablelimits="false">⁢</mo><mi>A</mi></mrow></mrow><mo movablelimits="false">+</mo><mrow><mn>20</mn><mo movablelimits="false">⁢</mo><mi>I</mi></mrow></mrow><mo movablelimits="false">⏟</mo></munder><msub><mi>B</mi><mn>2</mn></msub></munder></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">We will now evaluate <math id="p6.m1" class="ltx_Math" alttext="B_{1}" display="inline"><msub><mi>B</mi><mn mathvariant="normal">1</mn></msub></math> and <math id="p6.m2" class="ltx_Math" alttext="B_{2}" display="inline"><msub><mi>B</mi><mn mathvariant="normal">2</mn></msub></math> by using (12) and (13), respectively.</span></p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="B_{1}=A-8I=\begin{bmatrix}-5&amp;-3&amp;2\\
+-1&amp;-3&amp;-2\\
+-1&amp;3&amp;-8\end{bmatrix},\qquad B_{2}=AB_{1}+20I=\begin{bmatrix}6&amp;6&amp;-4\\
+2&amp;2&amp;4\\
+2&amp;-6&amp;12\end{bmatrix}," display="block"><mrow><mrow><mrow><msub><mi>B</mi><mn>1</mn></msub><mo>=</mo><mrow><mi>A</mi><mo>-</mo><mrow><mn>8</mn><mo>⁢</mo><mi>I</mi></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>5</mn></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>3</mn></mrow></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>3</mn></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>8</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><msub><mi>B</mi><mn>2</mn></msub><mo>=</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mi>B</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mn>20</mn><mo>⁢</mo><mi>I</mi></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>6</mn></mtd><mtd columnalign="center"><mn>6</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>2</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd><mtd columnalign="center"><mn>4</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>2</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>6</mn></mrow></mtd><mtd columnalign="center"><mn>12</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">thus <math id="p6.m3" class="ltx_Math" alttext="B(\lambda)" display="inline"><mrow><mi>B</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>λ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is</span></p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="B(\lambda)=\begin{bmatrix}\lambda^{2}-5\lambda+6&amp;-3\lambda+6&amp;2\lambda-4\\
+-\lambda+2&amp;\lambda^{2}-3\lambda+2&amp;-2\lambda+4\\
+-\lambda+2&amp;3\lambda-6&amp;\lambda^{2}-8\lambda+12\end{bmatrix}." display="block"><mrow><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo>-</mo><mrow><mn>5</mn><mo>⁢</mo><mi>λ</mi></mrow></mrow><mo>+</mo><mn>6</mn></mrow></mtd><mtd columnalign="center"><mrow><mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>λ</mi></mrow></mrow><mo>+</mo><mn>6</mn></mrow></mtd><mtd columnalign="center"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>λ</mi></mrow><mo>-</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mrow><mo>-</mo><mi>λ</mi></mrow><mo>+</mo><mn>2</mn></mrow></mtd><mtd columnalign="center"><mrow><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>λ</mi></mrow></mrow><mo>+</mo><mn>2</mn></mrow></mtd><mtd columnalign="center"><mrow><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>λ</mi></mrow></mrow><mo>+</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mrow><mo>-</mo><mi>λ</mi></mrow><mo>+</mo><mn>2</mn></mrow></mtd><mtd columnalign="center"><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>λ</mi></mrow><mo>-</mo><mn>6</mn></mrow></mtd><mtd columnalign="center"><mrow><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo>-</mo><mrow><mn>8</mn><mo>⁢</mo><mi>λ</mi></mrow></mrow><mo>+</mo><mn>12</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Also <math id="p6.m4" class="ltx_Math" alttext="|A|=16" display="inline"><mrow><mrow><mo mathvariant="normal" stretchy="false">|</mo><mi>A</mi><mo mathvariant="normal" stretchy="false">|</mo></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">16</mn></mrow></math> and <math id="p6.m5" class="ltx_Math" alttext="A^{-1}" display="inline"><msup><mi>A</mi><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msup></math> is obtained from (15), i.e.
+</span></p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="A^{-1}=\frac{1}{16}B_{2}=\frac{1}{8}\begin{bmatrix}3&amp;3&amp;-2\\
+1&amp;1&amp;2\\
+1&amp;-3&amp;6\end{bmatrix}." display="block"><mrow><mrow><msup><mi>A</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mfrac><mn>1</mn><mn>16</mn></mfrac><mo>⁢</mo><msub><mi>B</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>8</mn></mfrac><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>3</mn></mrow></mtd><mtd columnalign="center"><mn>6</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Furthermore,</span></p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\Delta(\lambda)=(\lambda-2)^{2}(\lambda-4)." display="block"><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>-</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">We notice the eigenvalue <math id="p6.m6" class="ltx_Math" alttext="\lambda=2" display="inline"><mrow><mi>λ</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">2</mn></mrow></math> possesses multiplicity <math id="p6.m7" class="ltx_Math" alttext="2" display="inline"><mn mathvariant="normal">2</mn></math> and also that all the entries of the adjugate
+<math id="p6.m8" class="ltx_Math" alttext="B(\lambda)" display="inline"><mrow><mi>B</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>λ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> are divisible by the binomial <math id="p6.m9" class="ltx_Math" alttext="\lambda-2" display="inline"><mrow><mi>λ</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">2</mn></mrow></math> (<math id="p6.m10" class="ltx_Math" alttext="|B(2)|=0" display="inline"><mrow><mrow><mo mathvariant="normal" stretchy="false">|</mo><mrow><mi>B</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">2</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">|</mo></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">0</mn></mrow></math>, i.e. <math id="p6.m11" class="ltx_Math" alttext="\lambda=2" display="inline"><mrow><mi>λ</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">2</mn></mrow></math> annihilates it), therefore it can be reduced which makes instructive this problem. Thus,</span></p>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="C(\lambda)=\begin{bmatrix}\lambda-3&amp;-3&amp;2\\
+-1&amp;\lambda-1&amp;-2\\
+-1&amp;3&amp;\lambda-6\end{bmatrix}," display="block"><mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>λ</mi><mo>-</mo><mn>3</mn></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>3</mn></mrow></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mrow><mi>λ</mi><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mrow><mi>λ</mi><mo>-</mo><mn>6</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">which for <math id="p6.m12" class="ltx_Math" alttext="\lambda=2" display="inline"><mrow><mi>λ</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">2</mn></mrow></math> it becomes
+</span></p>
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="C(2)=\begin{bmatrix}-1&amp;-3&amp;2\\
+-1&amp;1&amp;-2\\
+-1&amp;3&amp;-4\end{bmatrix}." display="block"><mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>3</mn></mrow></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>4</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">From this we get the charactreristic vectors <math id="p6.m13" class="ltx_Math" alttext="(1,1,1)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">1</mn><mo mathvariant="normal">,</mo><mn mathvariant="normal">1</mn><mo mathvariant="normal">,</mo><mn mathvariant="normal">1</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> by multiplying the first colum by <math id="p6.m14" class="ltx_Math" alttext="-1" display="inline"><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></math>, and also <math id="p6.m15" class="ltx_Math" alttext="(-3,1,3)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">3</mn></mrow><mo mathvariant="normal">,</mo><mn mathvariant="normal">1</mn><mo mathvariant="normal">,</mo><mn mathvariant="normal">3</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>, both correponding to <math id="p6.m16" class="ltx_Math" alttext="\lambda=2" display="inline"><mrow><mi>λ</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">2</mn></mrow></math>. Third column is a linear combination of the first two (subtract it). Likewise we find for the another characteristic value <math id="p6.m17" class="ltx_Math" alttext="\lambda=4" display="inline"><mrow><mi>λ</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">4</mn></mrow></math></span></p>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="C(4)=\begin{bmatrix}1&amp;-3&amp;2\\
+-1&amp;3&amp;-2\\
+-1&amp;3&amp;-2\end{bmatrix}," display="block"><mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>3</mn></mrow></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="center"><mn>3</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">whence we get the eigenvector <math id="p6.m18" class="ltx_Math" alttext="(1,-1,-1)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">1</mn><mo mathvariant="normal">,</mo><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow><mo mathvariant="normal">,</mo><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>, being the remaining two columns clearly proportional to the first one.</span></p>
+</div>
+<div id="p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t"><span class="ltx_text ltx_font_italic">Title</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_italic">characteristic values and vectors (of a matrix)</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Canonical name</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">CharacteristicValuesAndVectorsofAMatrix</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Date of creation</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">2013-03-22 17:43:58</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Last modified on</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">2013-03-22 17:43:58</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Owner</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">perucho (2192)</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Last modified by</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">perucho (2192)</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Numerical id</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">6</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Author</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">perucho (2192)</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Entry type</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">Topic</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Classification</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">msc 15A18</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_italic">Synonym</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_italic">eigenvalues</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l"><span class="ltx_text ltx_font_italic">Synonym</span></th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r"><span class="ltx_text ltx_font_italic">eigenvectors</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:25:17 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

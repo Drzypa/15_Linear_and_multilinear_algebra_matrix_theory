@@ -1,0 +1,178 @@
+<!DOCTYPE html><html>
+<head>
+<title>dual homomorphism of the derivative</title>
+<!--Generated on Fri Feb  9 18:21:23 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">dual homomorphism of the derivative</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="\mathcal{P}_{n}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mi>n</mi></msub></math> denote the vector space of real
+polynomials of degree <math id="p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> or less, and let <math id="p1.m3" class="ltx_Math" alttext="\mathrm{D}_{n}:\mathcal{P}_{n}\rightarrow\mathcal{P}_{n-1}" display="inline"><mrow><msub><mi mathvariant="normal">D</mi><mi>n</mi></msub><mo>:</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mi>n</mi></msub><mo>→</mo><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></mrow></math> denote the ordinary derivative. Linear forms on <math id="p1.m4" class="ltx_Math" alttext="\mathcal{P}_{n}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mi>n</mi></msub></math>
+can be given in terms of evaluations, and so we introduce the
+following notation. For every scalar <math id="p1.m5" class="ltx_Math" alttext="k\in\mathbb{R}" display="inline"><mrow><mi>k</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>, let <math id="p1.m6" class="ltx_Math" alttext="\mathrm{Ev}^{(n)}_{k}\in(\mathcal{P}_{n})^{*}" display="inline"><mrow><msubsup><mi>Ev</mi><mi>k</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>∈</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></mrow></math> denote the evaluation functional</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\mathrm{Ev}^{(n)}_{k}:p\mapsto p(k),\quad p\in\mathcal{P}_{n}." display="block"><mrow><mrow><msubsup><mi>Ev</mi><mi>k</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>:</mo><mrow><mrow><mi>p</mi><mo>↦</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>p</mi><mo>∈</mo><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mi>n</mi></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Note: the degree superscript matters! For example:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\mathrm{Ev}^{(1)}_{2}=2\,\mathrm{Ev}^{(1)}_{1}-\mathrm{Ev}^{(1)}_{0}," display="block"><mrow><mrow><msubsup><mi>Ev</mi><mn>2</mn><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><mn>2</mn></mpadded><mo>⁢</mo><msubsup><mi>Ev</mi><mn>1</mn><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup></mrow><mo>-</mo><msubsup><mi>Ev</mi><mn>0</mn><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whereas <math id="p1.m7" class="ltx_Math" alttext="\mathrm{Ev}^{(2)}_{0},\mathrm{Ev}^{(2)}_{1},\mathrm{Ev}^{(2)}_{2}" display="inline"><mrow><msubsup><mi>Ev</mi><mn>0</mn><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup><mo>,</mo><msubsup><mi>Ev</mi><mn>1</mn><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup><mo>,</mo><msubsup><mi>Ev</mi><mn>2</mn><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup></mrow></math> are
+linearly independent. Let us consider the dual homomorphism
+<math id="p1.m8" class="ltx_Math" alttext="\mathrm{D}_{2}^{*}" display="inline"><msubsup><mi mathvariant="normal">D</mi><mn>2</mn><mo>*</mo></msubsup></math>, i.e. the adjoint of <math id="p1.m9" class="ltx_Math" alttext="\mathrm{D}_{2}" display="inline"><msub><mi mathvariant="normal">D</mi><mn>2</mn></msub></math>. We have the following
+relations:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\begin{array}[]{rrrr}\mathrm{D}_{2}^{*}\left(\mathrm{Ev}^{(1)}_{0}\right)=&amp;-%
+\frac{3}{2}\,\mathrm{Ev}^{(2)}_{0}&amp;+2\,\mathrm{Ev}^{(2)}_{1}&amp;-\frac{1}{2}\,%
+\mathrm{Ev}^{(2)}_{2},\\
+\mathrm{D}_{2}^{*}\left(\mathrm{Ev}^{(1)}_{1}\right)=&amp;-\frac{1}{2}\,\mathrm{Ev%
+}^{(2)}_{0}&amp;&amp;+\frac{1}{2}\,\mathrm{Ev}^{(2)}_{2}.\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><mrow><msubsup><mi mathvariant="normal">D</mi><mn>2</mn><mo>*</mo></msubsup><mo>⁢</mo><mrow><mo>(</mo><msubsup><mi>Ev</mi><mn>0</mn><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup><mo>)</mo></mrow></mrow><mo>=</mo><mi></mi></mrow></mtd><mtd columnalign="right"><mrow><mo>-</mo><mrow><mpadded width="+1.7pt"><mfrac><mn>3</mn><mn>2</mn></mfrac></mpadded><mo>⁢</mo><msubsup><mi>Ev</mi><mn>0</mn><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup></mrow></mrow></mtd><mtd columnalign="right"><mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mn>2</mn></mpadded><mo>⁢</mo><msubsup><mi>Ev</mi><mn>1</mn><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup></mrow></mrow></mtd><mtd columnalign="right"><mrow><mrow><mo>-</mo><mrow><mpadded width="+1.7pt"><mfrac><mn>1</mn><mn>2</mn></mfrac></mpadded><mo>⁢</mo><msubsup><mi>Ev</mi><mn>2</mn><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup></mrow></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><msubsup><mi mathvariant="normal">D</mi><mn>2</mn><mo>*</mo></msubsup><mo>⁢</mo><mrow><mo>(</mo><msubsup><mi>Ev</mi><mn>1</mn><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup><mo>)</mo></mrow></mrow><mo>=</mo><mi></mi></mrow></mtd><mtd columnalign="right"><mrow><mo>-</mo><mrow><mpadded width="+1.7pt"><mfrac><mn>1</mn><mn>2</mn></mfrac></mpadded><mo>⁢</mo><msubsup><mi>Ev</mi><mn>0</mn><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup></mrow></mrow></mtd><mtd></mtd><mtd columnalign="right"><mrow><mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mfrac><mn>1</mn><mn>2</mn></mfrac></mpadded><mo>⁢</mo><msubsup><mi>Ev</mi><mn>2</mn><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In other words, taking <math id="p1.m10" class="ltx_Math" alttext="\mathrm{Ev}^{(1)}_{0},\mathrm{Ev}^{(1)}_{1}" display="inline"><mrow><msubsup><mi>Ev</mi><mn>0</mn><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup><mo>,</mo><msubsup><mi>Ev</mi><mn>1</mn><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup></mrow></math> as the basis of
+<math id="p1.m11" class="ltx_Math" alttext="(\mathcal{P}_{1})^{*}" display="inline"><msup><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></math> and <math id="p1.m12" class="ltx_Math" alttext="\mathrm{Ev}^{(2)}_{0},\mathrm{Ev}^{(2)}_{1},\mathrm{Ev}^{(2)}_{2}" display="inline"><mrow><msubsup><mi>Ev</mi><mn>0</mn><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup><mo>,</mo><msubsup><mi>Ev</mi><mn>1</mn><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup><mo>,</mo><msubsup><mi>Ev</mi><mn>2</mn><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></msubsup></mrow></math> as the basis of
+<math id="p1.m13" class="ltx_Math" alttext="(\mathcal{P}_{2})^{*}" display="inline"><msup><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></math>, the matrix that represents <math id="p1.m14" class="ltx_Math" alttext="\mathrm{D}_{2}^{*}" display="inline"><msubsup><mi mathvariant="normal">D</mi><mn>2</mn><mo>*</mo></msubsup></math> is just</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\left(\begin{array}[]{rr}-\frac{3}{2}&amp;-\frac{1}{2}\\
+2&amp;0\\
+-\frac{1}{2}&amp;\frac{1}{2}\end{array}\right)" display="block"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><mo>-</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mrow></mtd><mtd columnalign="right"><mrow><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd></mtr><mtr><mtd columnalign="right"><mn>2</mn></mtd><mtd columnalign="right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mrow><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mtd><mtd columnalign="right"><mfrac><mn>1</mn><mn>2</mn></mfrac></mtd></mtr></mtable><mo>)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Note the contravariant relationship between <math id="p1.m15" class="ltx_Math" alttext="\mathrm{D}_{2}" display="inline"><msub><mi mathvariant="normal">D</mi><mn>2</mn></msub></math> and <math id="p1.m16" class="ltx_Math" alttext="\mathrm{D}_{2}^{*}" display="inline"><msubsup><mi mathvariant="normal">D</mi><mn>2</mn><mo>*</mo></msubsup></math>. The
+former turns second degree polynomials into first degree polynomials,
+where as the latter turns first degree evaluations into second degree
+evaluations. The matrix of <math id="p1.m17" class="ltx_Math" alttext="\mathrm{D}_{2}^{*}" display="inline"><msubsup><mi mathvariant="normal">D</mi><mn>2</mn><mo>*</mo></msubsup></math> has 2 columns and 3 rows
+precisely because <math id="p1.m18" class="ltx_Math" alttext="\mathrm{D}_{2}^{*}" display="inline"><msubsup><mi mathvariant="normal">D</mi><mn>2</mn><mo>*</mo></msubsup></math> is a homomorphism from a 2-dimensional
+vector space to a 3-dimensional vector space.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">By contrast, <math id="p2.m1" class="ltx_Math" alttext="\mathrm{D}_{2}" display="inline"><msub><mi mathvariant="normal">D</mi><mn>2</mn></msub></math> will be represented by a <math id="p2.m2" class="ltx_Math" alttext="2\times 3" display="inline"><mrow><mn>2</mn><mo>×</mo><mn>3</mn></mrow></math> matrix. The
+dual basis of <math id="p2.m3" class="ltx_Math" alttext="\mathcal{P}_{1}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mn>1</mn></msub></math> is</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="-x+1,\quad x" display="block"><mrow><mrow><mrow><mo>-</mo><mi>x</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo rspace="12.5pt">,</mo><mi>x</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and the dual basis of <math id="p2.m4" class="ltx_Math" alttext="\mathcal{P}_{2}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mn>2</mn></msub></math> is</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\frac{1}{2}(x-1)(x-2),\quad x(2-x),\quad\frac{1}{2}x(x-1)." display="block"><mrow><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Relative to these bases, <math id="p2.m5" class="ltx_Math" alttext="\mathrm{D}_{2}" display="inline"><msub><mi mathvariant="normal">D</mi><mn>2</mn></msub></math> is represented by the transpose of the
+matrix for <math id="p2.m6" class="ltx_Math" alttext="\mathrm{D}_{2}^{*}" display="inline"><msubsup><mi mathvariant="normal">D</mi><mn>2</mn><mo>*</mo></msubsup></math>, namely</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\begin{pmatrix}-\frac{3}{2}&amp;2&amp;-\frac{1}{2}\\
+-\frac{1}{2}&amp;0&amp;\frac{1}{2}\end{pmatrix}" display="block"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mo>-</mo><mstyle displaystyle="false"><mfrac><mn>3</mn><mn>2</mn></mfrac></mstyle></mrow></mtd><mtd columnalign="center"><mn>2</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mrow></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mtd></mtr></mtable><mo>)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This corresponds to the following three relations:</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\begin{array}[]{lcrr}\mathrm{D}_{2}\left[\frac{1}{2}(x-1)(x-2)\right]&amp;=&amp;-\frac%
+{3}{2}\,(-x+1)&amp;-\frac{1}{2}\,x\\
+\mathrm{D}_{2}\left[x(2-x)\right]&amp;=&amp;2\,(-x+1)&amp;+0\,x\\
+\mathrm{D}_{2}\left[\frac{1}{2}x(x-1)\right]&amp;=&amp;-\frac{1}{2}\,(-x+1)&amp;+\frac{1}{%
+2}\,x\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><msub><mi mathvariant="normal">D</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>]</mo></mrow></mrow></mtd><mtd columnalign="center"><mo>=</mo></mtd><mtd columnalign="right"><mrow><mo>-</mo><mrow><mpadded width="+1.7pt"><mfrac><mn>3</mn><mn>2</mn></mfrac></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mi>x</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd><mtd columnalign="right"><mrow><mo>-</mo><mrow><mpadded width="+1.7pt"><mfrac><mn>1</mn><mn>2</mn></mfrac></mpadded><mo>⁢</mo><mi>x</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><msub><mi mathvariant="normal">D</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>]</mo></mrow></mrow></mtd><mtd columnalign="center"><mo>=</mo></mtd><mtd columnalign="right"><mrow><mpadded width="+1.7pt"><mn>2</mn></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mi>x</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="right"><mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mn>0</mn></mpadded><mo>⁢</mo><mi>x</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><msub><mi mathvariant="normal">D</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>]</mo></mrow></mrow></mtd><mtd columnalign="center"><mo>=</mo></mtd><mtd columnalign="right"><mrow><mo>-</mo><mrow><mpadded width="+1.7pt"><mfrac><mn>1</mn><mn>2</mn></mfrac></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mi>x</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd><mtd columnalign="right"><mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mfrac><mn>1</mn><mn>2</mn></mfrac></mpadded><mo>⁢</mo><mi>x</mi></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">dual homomorphism of the derivative</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DualHomomorphismOfTheDerivative</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:35:28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:35:28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A04</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 15A72</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:21:23 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

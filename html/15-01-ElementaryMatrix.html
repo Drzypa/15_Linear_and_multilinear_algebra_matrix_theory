@@ -1,0 +1,288 @@
+<!DOCTYPE html><html>
+<head>
+<title>elementary matrix</title>
+<!--Generated on Fri Feb  9 18:17:00 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">elementary matrix</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS0.SSSx1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Elementary Operations on Matrices</h2>
+
+<div id="S0.SS0.SSSx1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS0.SSSx1.p1.m1" class="ltx_Math" alttext="\mathbb{M}" display="inline"><mi>𝕄</mi></math> be the set of all <math id="S0.SS0.SSSx1.p1.m2" class="ltx_Math" alttext="m\times n" display="inline"><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math> matrices (over some commutative ring <math id="S0.SS0.SSSx1.p1.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>). An operation on <math id="S0.SS0.SSSx1.p1.m4" class="ltx_Math" alttext="\mathbb{M}" display="inline"><mi>𝕄</mi></math> is called an <em class="ltx_emph ltx_font_italic">elementary row operation</em> if it takes a matrix <math id="S0.SS0.SSSx1.p1.m5" class="ltx_Math" alttext="M\in\mathbb{M}" display="inline"><mrow><mi>M</mi><mo>∈</mo><mi>𝕄</mi></mrow></math>, and does one of the following:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">interchanges of two rows of <math id="I1.i1.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>,</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">multiply a row of <math id="I1.i2.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> by a non-zero element of <math id="I1.i2.p1.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>,</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">add a (constant) multiple of a row of <math id="I1.i3.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> to another row of <math id="I1.i3.p1.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">An <em class="ltx_emph ltx_font_italic">elementary column operation</em> is defined similarly. An operation on <math id="S0.SS0.SSSx1.p1.m6" class="ltx_Math" alttext="\mathbb{M}" display="inline"><mi>𝕄</mi></math> is an <em class="ltx_emph ltx_font_italic">elementary operation</em> if it is either an elementary row operation or elementary column operation.</p>
+</div>
+<div id="S0.SS0.SSSx1.p2" class="ltx_para">
+<p class="ltx_p">For example, if <math id="S0.SS0.SSSx1.p2.m1" class="ltx_Math" alttext="M=\begin{pmatrix}a&amp;b\\
+c&amp;d\\
+e&amp;f\end{pmatrix}" display="inline"><mrow><mi>M</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>a</mi></mtd><mtd columnalign="center"><mi>b</mi></mtd></mtr><mtr><mtd columnalign="center"><mi>c</mi></mtd><mtd columnalign="center"><mi>d</mi></mtd></mtr><mtr><mtd columnalign="center"><mi>e</mi></mtd><mtd columnalign="center"><mi>f</mi></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math>, then the following operations correspond respectively to the three types of elementary row operations described above</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="\begin{pmatrix}a&amp;b\\
+e&amp;f\\
+c&amp;d\end{pmatrix}" display="inline"><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>a</mi></mtd><mtd columnalign="center"><mi>b</mi></mtd></mtr><mtr><mtd columnalign="center"><mi>e</mi></mtd><mtd columnalign="center"><mi>f</mi></mtd></mtr><mtr><mtd columnalign="center"><mi>c</mi></mtd><mtd columnalign="center"><mi>d</mi></mtd></mtr></mtable><mo>)</mo></mrow></math> is obtained by interchanging rows 2 and 3 of <math id="I2.i1.p1.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>,</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="\begin{pmatrix}a&amp;b\\
+rc&amp;rd\\
+e&amp;f\end{pmatrix}" display="inline"><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>a</mi></mtd><mtd columnalign="center"><mi>b</mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>r</mi><mo>⁢</mo><mi>c</mi></mrow></mtd><mtd columnalign="center"><mrow><mi>r</mi><mo>⁢</mo><mi>d</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi>e</mi></mtd><mtd columnalign="center"><mi>f</mi></mtd></mtr></mtable><mo>)</mo></mrow></math> is obtained by multiplying <math id="I2.i2.p1.m2" class="ltx_Math" alttext="r\neq 0" display="inline"><mrow><mi>r</mi><mo>≠</mo><mn>0</mn></mrow></math> to the second row of <math id="I2.i2.p1.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>,</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i3.p1.m1" class="ltx_Math" alttext="\begin{pmatrix}a&amp;b\\
+c&amp;d\\
+sa+e&amp;sb+f\end{pmatrix}" display="inline"><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>a</mi></mtd><mtd columnalign="center"><mi>b</mi></mtd></mtr><mtr><mtd columnalign="center"><mi>c</mi></mtd><mtd columnalign="center"><mi>d</mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><mrow><mi>s</mi><mo>⁢</mo><mi>a</mi></mrow><mo>+</mo><mi>e</mi></mrow></mtd><mtd columnalign="center"><mrow><mrow><mi>s</mi><mo>⁢</mo><mi>b</mi></mrow><mo>+</mo><mi>f</mi></mrow></mtd></mtr></mtable><mo>)</mo></mrow></math> is obtained by adding to row 1 multiplied by <math id="I2.i3.p1.m2" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> to row 3 of <math id="I2.i3.p1.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S0.SS0.SSSx1.p3" class="ltx_para">
+<p class="ltx_p">Some immediate observation: elementary operations of type 1 and 3 are always invertible. The inverse of type 1 elementary operation is itself, as interchanging of rows twice gets you back the original matrix. The inverse of type 3 elementary operation is to add the negative of the multiple of the first row to the second row, thus returning the second row back to its original form. Type 2 is invertible provided that the multiplier has an inverse.</p>
+</div>
+<div id="S0.SS0.SSSx1.p4" class="ltx_para">
+<p class="ltx_p">Some notation: for each type <math id="S0.SS0.SSSx1.p4.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> (where <math id="S0.SS0.SSSx1.p4.m2" class="ltx_Math" alttext="k=1,2,3" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn></mrow></mrow></math>) of elementary operations, let <math id="S0.SS0.SSSx1.p4.m3" class="ltx_Math" alttext="E_{c}^{k}(A)" display="inline"><mrow><msubsup><mi>E</mi><mi>c</mi><mi>k</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the set of all matrices obtained from <math id="S0.SS0.SSSx1.p4.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> via an elementary column operation of type <math id="S0.SS0.SSSx1.p4.m5" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>, and <math id="S0.SS0.SSSx1.p4.m6" class="ltx_Math" alttext="E_{r}^{k}(A)" display="inline"><mrow><msubsup><mi>E</mi><mi>r</mi><mi>k</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math> the set of all matrices obtained from <math id="S0.SS0.SSSx1.p4.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> via an elementary row operation of type <math id="S0.SS0.SSSx1.p4.m8" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>.</p>
+</div>
+</section>
+<section id="S0.SS0.SSSx2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Elementary Matrices</h2>
+
+<div id="S0.SS0.SSSx2.p1" class="ltx_para">
+<p class="ltx_p">Now, assume <math id="S0.SS0.SSSx2.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> has <math id="S0.SS0.SSSx2.p1.m2" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>. An <math id="S0.SS0.SSSx2.p1.m3" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> <em class="ltx_emph ltx_font_italic">elementary matrix</em> is a (square) matrix obtained from the identity matrix <math id="S0.SS0.SSSx2.p1.m4" class="ltx_Math" alttext="I_{n}" display="inline"><msub><mi>I</mi><mi>n</mi></msub></math> by performing an elementary operation. As a result, we have three types of elementary matrices, each corresponding to a type of elementary operations:
+</p>
+<ol id="I3" class="ltx_enumerate">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">transposition matrix</em> <math id="I3.i1.p1.m1" class="ltx_Math" alttext="T_{ij}" display="inline"><msub><mi>T</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math>: an matrix obtained from <math id="I3.i1.p1.m2" class="ltx_Math" alttext="I_{n}" display="inline"><msub><mi>I</mi><mi>n</mi></msub></math> with rows <math id="I3.i1.p1.m3" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> and <math id="I3.i1.p1.m4" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> switched,</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">basic diagonal matrix</em> <math id="I3.i2.p1.m1" class="ltx_Math" alttext="D_{i}(r)" display="inline"><mrow><msub><mi>D</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></math>: a diagonal matrix whose entries are <math id="I3.i2.p1.m2" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> except in cell <math id="I3.i2.p1.m3" class="ltx_Math" alttext="(i,i)" display="inline"><mrow><mo stretchy="false">(</mo><mi>i</mi><mo>,</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></math>, whose entry is a non-zero element <math id="I3.i2.p1.m4" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> of <math id="I3.i2.p1.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math></p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">row replacement matrix</em> <math id="I3.i3.p1.m1" class="ltx_Math" alttext="E_{ij}(s)" display="inline"><mrow><msub><mi>E</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math>: <math id="I3.i3.p1.m2" class="ltx_Math" alttext="I_{n}+sU_{ij}" display="inline"><mrow><msub><mi>I</mi><mi>n</mi></msub><mo>+</mo><mrow><mi>s</mi><mo>⁢</mo><msub><mi>U</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow></math>, where <math id="I3.i3.p1.m3" class="ltx_Math" alttext="s\in R" display="inline"><mrow><mi>s</mi><mo>∈</mo><mi>R</mi></mrow></math> and <math id="I3.i3.p1.m4" class="ltx_Math" alttext="U_{ij}" display="inline"><msub><mi>U</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math> is a matrix unit with <math id="I3.i3.p1.m5" class="ltx_Math" alttext="i\neq j" display="inline"><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S0.SS0.SSSx2.p2" class="ltx_para">
+<p class="ltx_p">For example, among the <math id="S0.SS0.SSSx2.p2.m1" class="ltx_Math" alttext="3\times 3" display="inline"><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math> matrices, we have</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="T_{12}=\begin{pmatrix}0&amp;1&amp;0\\
+1&amp;0&amp;0\\
+0&amp;0&amp;1\end{pmatrix},\quad D_{3}(r)=\begin{pmatrix}1&amp;0&amp;0\\
+0&amp;1&amp;0\\
+0&amp;0&amp;r\end{pmatrix},\quad\mbox{and}\quad E_{32}(s)=\begin{pmatrix}1&amp;0&amp;0\\
+0&amp;1&amp;0\\
+0&amp;s&amp;1\end{pmatrix}" display="block"><mrow><mrow><msub><mi>T</mi><mn>12</mn></msub><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mrow><msub><mi>D</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi>r</mi></mtd></mtr></mtable><mo>)</mo></mrow><mo rspace="12.5pt">,</mo><mtext>and</mtext></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><msub><mi>E</mi><mn>32</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi>s</mi></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSSx2.p3" class="ltx_para">
+<p class="ltx_p">For each positive integer <math id="S0.SS0.SSSx2.p3.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, let <math id="S0.SS0.SSSx2.p3.m2" class="ltx_Math" alttext="\mathbb{E}^{k}(n)" display="inline"><mrow><msup><mi>𝔼</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the collection of all <math id="S0.SS0.SSSx2.p3.m3" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> elementary matrices of type <math id="S0.SS0.SSSx2.p3.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>, where <math id="S0.SS0.SSSx2.p3.m5" class="ltx_Math" alttext="k=1,2,3" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn></mrow></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSSx2.p4" class="ltx_para">
+<p class="ltx_p">Below are some basic properties of elementary matrices:</p>
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.i1.p1.m1" class="ltx_Math" alttext="T_{ij}=T_{ji}" display="inline"><mrow><msub><mi>T</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><msub><mi>T</mi><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow></math>, and <math id="I4.i1.p1.m2" class="ltx_Math" alttext="T_{ij}^{2}=I_{n}" display="inline"><mrow><msubsup><mi>T</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mn>2</mn></msubsup><mo>=</mo><msub><mi>I</mi><mi>n</mi></msub></mrow></math>.</p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.i2.p1.m1" class="ltx_Math" alttext="D_{i}(r)D_{i}(r^{-1})=I_{n}" display="inline"><mrow><mrow><msub><mi>D</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>D</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>r</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>I</mi><mi>n</mi></msub></mrow></math>, provided that <math id="I4.i2.p1.m2" class="ltx_Math" alttext="r^{-1}" display="inline"><msup><mi>r</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> exists.</p>
+</div>
+</li>
+<li id="I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.i3.p1.m1" class="ltx_Math" alttext="E_{ij}(s)E_{ij}(-s)=I_{n}" display="inline"><mrow><mrow><msub><mi>E</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>E</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>I</mi><mi>n</mi></msub></mrow></math>.</p>
+</div>
+</li>
+<li id="I4.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I4.i4.p1.m1" class="ltx_Math" alttext="\det(T_{ij})=-1" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>T</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>, <math id="I4.i4.p1.m2" class="ltx_Math" alttext="\det(D_{i}(r))=r" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>D</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>r</mi></mrow></math>, and <math id="I4.i4.p1.m3" class="ltx_Math" alttext="\det(E_{ij}(s))=1" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>E</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="I4.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i5.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I4.i5.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is an <math id="I4.i5.p1.m2" class="ltx_Math" alttext="m\times n" display="inline"><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math> matrix, then</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="E_{c}^{k}(A)=\{AE\mid E\in\mathbb{E}^{k}(n)\}\qquad\mbox{and}\qquad E_{r}^{k}(%
+A)=\{EA\mid E\in\mathbb{E}^{k}(m)\}." display="block"><mrow><mrow><mrow><mrow><msubsup><mi>E</mi><mi>c</mi><mi>k</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">{</mo><mrow><mi>A</mi><mo>⁢</mo><mi>E</mi></mrow><mo>∣</mo><mrow><mi>E</mi><mo>∈</mo><mrow><msup><mi>𝔼</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow><mo mathvariant="italic" separator="true">  </mo><mtext>and</mtext></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mrow><msubsup><mi>E</mi><mi>r</mi><mi>k</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>E</mi><mo>⁢</mo><mi>A</mi></mrow><mo>∣</mo><mrow><mi>E</mi><mo>∈</mo><mrow><msup><mi>𝔼</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I4.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i6.p1" class="ltx_para">
+<p class="ltx_p">Every non-singular matrix can be written as a product of elementary matrices. This is the same as saying: given a non-singular matrix, one can perform a finite number of elementary row (column) operations on it to obtain the identity matrix.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S0.SS0.SSSx2.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span>.</p>
+<ul id="I5" class="ltx_itemize">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I5.i1.p1" class="ltx_para">
+<p class="ltx_p">One can also define elementary matrix operations on matrices over general rings. However, care must be taken to consider left scalar multiplications and right scalar multiplications as separate operations.</p>
+</div>
+</li>
+<li id="I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I5.i2.p1" class="ltx_para">
+<p class="ltx_p">The discussion above pertains to elementary linear algebra. In algebraic K-theory, an elementary matrix is defined only as a row replacement matrix (type 3) above.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S0.SS0.SSSx2.p6" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">elementary matrix</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ElementaryMatrix</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:30:38</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:30:38</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">13</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15-01</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">MatrixUnit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GaussianElimination</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">elementary operation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">elementary column operation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">elementary row operation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">basic diagonal matrix</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">transposition matrix</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">row replacement matrix</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p"></p>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:17:00 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

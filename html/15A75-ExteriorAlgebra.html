@@ -1,0 +1,698 @@
+<!DOCTYPE html><html>
+<head>
+<title>exterior algebra</title>
+<!--Generated on Fri Feb  9 18:33:26 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">exterior algebra</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introductory remarks.</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">We begin with some informal remarks to motivate the formal definitions
+found in the next section. Throughout, <math id="S1.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a vector space over a
+field <math id="S1.p1.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>. Many of the concepts and constructions discussed below
+apply verbatim to modules over commutative rings, but we will stick to
+vector spaces to keep things simple.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">The exterior product, commonly denoted by the wedge symbol <math id="S1.p2.m1" class="ltx_Math" alttext="\wedge" display="inline"><mo>∧</mo></math>
+and also known as the wedge product, is an antisymmetric variant of
+the tensor product. The former, like the latter is an associative,
+bilinear operation. Thus, for all <math id="S1.p2.m2" class="ltx_Math" alttext="u,v\in V" display="inline"><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math> and <math id="S1.p2.m3" class="ltx_Math" alttext="a,b,c,d\in K" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi></mrow><mo>∈</mo><mi>K</mi></mrow></math>,
+we have</p>
+<table id="S4.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S1.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.E1.m1" class="ltx_Math" alttext="\displaystyle(au+bv)\wedge(cu+dv)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>u</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>c</mi><mo>⁢</mo><mi>u</mi></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.E1.m2" class="ltx_Math" alttext="\displaystyle=ac\,(u\wedge u)+ad\,(u\wedge v)+bc\,(v\wedge u)+bd\,(v\wedge v)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>c</mi></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>∧</mo><mi>u</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>a</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>d</mi></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>∧</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>c</mi></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>∧</mo><mi>u</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>d</mi></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>∧</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+<tbody id="S1.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.E2.m1" class="ltx_Math" alttext="\displaystyle(au+bv)\otimes(cu+dv)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>u</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⊗</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>c</mi><mo>⁢</mo><mi>u</mi></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.E2.m2" class="ltx_Math" alttext="\displaystyle=ac\,(u\otimes u)+ad\,(u\otimes v)+bc\,(v\otimes u)+bd\,(v\otimes
+v)." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>c</mi></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>⊗</mo><mi>u</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>a</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>d</mi></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>⊗</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>c</mi></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>⊗</mo><mi>u</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>d</mi></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>⊗</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The essential difference between the two operations is that all
+squares formed using the exterior product vanish, by definition.
+Thus,</p>
+<table id="S1.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E3.m1" class="ltx_Math" alttext="v\wedge v=0," display="block"><mrow><mrow><mrow><mi>v</mi><mo>∧</mo><mi>v</mi></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">whereas <math id="S1.p2.m4" class="ltx_Math" alttext="v\otimes v\neq 0" display="inline"><mrow><mrow><mi>v</mi><mo>⊗</mo><mi>v</mi></mrow><mo>≠</mo><mn>0</mn></mrow></math>. Hence, the expressions in
+(<a href="#S1.E1" title="(1) ‣ 1 Introductory remarks. ‣ exterior algebra" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) are equal to <math id="S1.p2.m5" class="ltx_Math" alttext="(ad-bc)u\wedge v" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>u</mi></mrow><mo>∧</mo><mi>v</mi></mrow></math>, but there is no
+way to simplify further the right-hand side of (<a href="#S1.E2" title="(2) ‣ 1 Introductory remarks. ‣ exterior algebra" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>).</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">A polarization argument shows
+that for <math id="S1.p3.m1" class="ltx_Math" alttext="u,v\in V" display="inline"><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math> we have</p>
+<table id="S4.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S1.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex1.m1" class="ltx_Math" alttext="\displaystyle 0" display="inline"><mn>0</mn></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex1.m2" class="ltx_Math" alttext="\displaystyle=(u+v)\wedge(u+v)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S1.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex2.m2" class="ltx_Math" alttext="\displaystyle=u\wedge u+u\wedge v+v\wedge u+v\wedge v" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><mrow><mrow><mrow><mi>u</mi><mo>∧</mo><mi>u</mi></mrow><mo>+</mo><mi>u</mi></mrow><mo>∧</mo><mi>v</mi></mrow><mo>+</mo><mi>v</mi></mrow><mo>∧</mo><mi>u</mi></mrow><mo>+</mo><mi>v</mi></mrow><mo>∧</mo><mi>v</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S1.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex3.m2" class="ltx_Math" alttext="\displaystyle=u\wedge v+v\wedge u." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mi>u</mi><mo>∧</mo><mi>v</mi></mrow><mo>+</mo><mi>v</mi></mrow><mo>∧</mo><mi>u</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore, if the characteristic (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/characteristic</span>) of the underlying field <math id="S1.p3.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is not equal to <math id="S1.p3.m3" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>, that is if <math id="S1.p3.m4" class="ltx_Math" alttext="1+1\neq 0" display="inline"><mrow><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow><mo>≠</mo><mn>0</mn></mrow></math>, then the key postulate (<a href="#S1.E3" title="(3) ‣ 1 Introductory remarks. ‣ exterior algebra" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) is
+logically equivalent to the antisymmetry condition</p>
+<table id="S1.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.E4.m1" class="ltx_Math" alttext="u\wedge v=-v\wedge u,\quad u,v\in V." display="block"><mrow><mrow><mrow><mrow><mi>u</mi><mo>∧</mo><mi>v</mi></mrow><mo>=</mo><mrow><mrow><mrow><mo>-</mo><mi>v</mi></mrow><mo>∧</mo><mi>u</mi></mrow><mo rspace="12.5pt">,</mo><mi>u</mi></mrow></mrow><mo>,</mo><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr>
+</table>
+<p class="ltx_p">However, if the characteristic is 2, that is if <math id="S1.p3.m5" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is a field where
+<math id="S1.p3.m6" class="ltx_Math" alttext="1=-1" display="inline"><mrow><mn>1</mn><mo>=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>, then (<a href="#S1.E3" title="(3) ‣ 1 Introductory remarks. ‣ exterior algebra" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) does not, necessarily, follow from
+(<a href="#S1.E4" title="(4) ‣ 1 Introductory remarks. ‣ exterior algebra" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>). Therefore, to keep things as general as possible,
+we must use (<a href="#S1.E3" title="(3) ‣ 1 Introductory remarks. ‣ exterior algebra" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) to formulate the essential identity
+satisfied by the exterior product.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">So far so good, but we have not yet given a meaning to the symbol
+<math id="S1.p4.m1" class="ltx_Math" alttext="u\wedge v" display="inline"><mrow><mi>u</mi><mo>∧</mo><mi>v</mi></mrow></math>. The geometric interpretation of <math id="S1.p4.m2" class="ltx_Math" alttext="u\wedge v" display="inline"><mrow><mi>u</mi><mo>∧</mo><mi>v</mi></mrow></math> is that of
+an oriented area element in the plane spanned by <math id="S1.p4.m3" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="S1.p4.m4" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>. Without
+additional structure, there is no way to assign a area measurement to
+a parallelogram in a vector space. However, parallelograms that lie
+in the same plane are commensurate. If we adopt the parallelogram
+spanned by <math id="S1.p4.m5" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="S1.p4.m6" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> as the standard area, we can say that the
+oriented area of another parallelogram, say one that is spanned by
+<math id="S1.p4.m7" class="ltx_Math" alttext="au+bv" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>u</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></math> and <math id="S1.p4.m8" class="ltx_Math" alttext="cu+dv" display="inline"><mrow><mrow><mi>c</mi><mo>⁢</mo><mi>u</mi></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></math>, has an area that is <math id="S1.p4.m9" class="ltx_Math" alttext="ad-bc" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></math> times the area of the
+first parallelogram. The exterior product allows us to express this
+algebraically. To wit,
+</p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="(au+bv)\wedge(cu+dv)=(ad-bc)(u\wedge v),\quad u,v\in V,\;a,b,c,d\in K." display="block"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>u</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∧</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>c</mi><mo>⁢</mo><mi>u</mi></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>∧</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="12.5pt">,</mo><mi>u</mi></mrow></mrow><mo>,</mo><mrow><mrow><mi>v</mi><mo>∈</mo><mrow><mi>V</mi><mo rspace="5.3pt">,</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow></mrow><mo>,</mo><mrow><mi>d</mi><mo>∈</mo><mi>K</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The analogous interpretation for vectors is that of
+an oriented length element on a line. For this reason, the object
+<math id="S1.p4.m10" class="ltx_Math" alttext="u\wedge v" display="inline"><mrow><mi>u</mi><mo>∧</mo><mi>v</mi></mrow></math> is referred to as a bivector.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">From a more algebraic point of view, a bivector <math id="S1.p5.m1" class="ltx_Math" alttext="u\wedge v" display="inline"><mrow><mi>u</mi><mo>∧</mo><mi>v</mi></mrow></math> can be
+considered as a formal antisymmetric product of vectors <math id="S1.p5.m2" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="S1.p5.m3" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>,
+in much the same way that <math id="S1.p5.m4" class="ltx_Math" alttext="u\otimes v" display="inline"><mrow><mi>u</mi><mo>⊗</mo><mi>v</mi></mrow></math> can be regarded as a formal
+non-commutative product of two vectors. Such descriptions can hardly
+serve as rigorous definitions, but an explicit construction is not
+really the way to go here.</p>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">Take the case of the tensor product. Formal sums of formal products
+<math id="S1.p6.m1" class="ltx_Math" alttext="u\otimes v" display="inline"><mrow><mi>u</mi><mo>⊗</mo><mi>v</mi></mrow></math>, where <math id="S1.p6.m2" class="ltx_Math" alttext="u,v\in V" display="inline"><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>, form a certain vector space, which we
+denote as <math id="S1.p6.m3" class="ltx_Math" alttext="V\otimes V" display="inline"><mrow><mi>V</mi><mo>⊗</mo><mi>V</mi></mrow></math>. However, rather than saying that <math id="S1.p6.m4" class="ltx_Math" alttext="V\otimes V" display="inline"><mrow><mi>V</mi><mo>⊗</mo><mi>V</mi></mrow></math>
+<span class="ltx_text ltx_font_bold">is</span> such and such a thing, it is better to state a certain
+universal property that describes <math id="S1.p6.m5" class="ltx_Math" alttext="V\otimes V" display="inline"><mrow><mi>V</mi><mo>⊗</mo><mi>V</mi></mrow></math> up to vector space
+isomorphism. The property in question is that every <span class="ltx_text ltx_font_bold">bilinear</span>
+map <math id="S1.p6.m6" class="ltx_Math" alttext="f:V\times V\to W" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><mi>V</mi><mo>×</mo><mi>V</mi></mrow><mo>→</mo><mi>W</mi></mrow></mrow></math> determines a unique <span class="ltx_text ltx_font_bold">linear</span> map from
+<math id="S1.p6.m7" class="ltx_Math" alttext="g:V\otimes V\to W" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mrow><mi>V</mi><mo>⊗</mo><mi>V</mi></mrow><mo>→</mo><mi>W</mi></mrow></mrow></math> such that</p>
+<table id="S1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex5.m1" class="ltx_Math" alttext="f(u,v)=g(u\otimes v),\quad u,v\in V." display="block"><mrow><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>⊗</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="12.5pt">,</mo><mi>u</mi></mrow></mrow><mo>,</mo><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Similarly, formal sums of
+bivectors constitute a vector space <math id="S1.p6.m8" class="ltx_Math" alttext="\Lambda^{2}(V)" display="inline"><mrow><msup><mi mathvariant="normal">Λ</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>, called the second
+exterior power of <math id="S1.p6.m9" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. This vector space is defined, up to
+isomorphism, by the condition that every antisymmetric, bilinear map
+<math id="S1.p6.m10" class="ltx_Math" alttext="f:V\times V\to W" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><mi>V</mi><mo>×</mo><mi>V</mi></mrow><mo>→</mo><mi>W</mi></mrow></mrow></math> determines a unique linear map <math id="S1.p6.m11" class="ltx_Math" alttext="g:\Lambda^{2}(V)\to W" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mrow><msup><mi mathvariant="normal">Λ</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mi>W</mi></mrow></mrow></math> with</p>
+<table id="S1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex6.m1" class="ltx_Math" alttext="f(u,v)=g(u\wedge v)." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>∧</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, in the same way that the tensor
+product replaces bilinear maps with a certain kind of linear map,
+the exterior product replaces bilinear, antisymmetric maps with linear
+maps from <math id="S1.p6.m12" class="ltx_Math" alttext="\Lambda^{2}V" display="inline"><mrow><msup><mi mathvariant="normal">Λ</mi><mn>2</mn></msup><mo>⁢</mo><mi>V</mi></mrow></math>.</p>
+</div>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">More generally, <math id="S1.p7.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-multivectors are <math id="S1.p7.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-fold products
+<math id="S1.p7.m3" class="ltx_Math" alttext="v_{1}\wedge\cdots\wedge v_{k}" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>∧</mo><mi mathvariant="normal">⋯</mi><mo>∧</mo><msub><mi>v</mi><mi>k</mi></msub></mrow></math>, and the <math id="S1.p7.m4" class="ltx_Math" alttext="k^{\text{th}}" display="inline"><msup><mi>k</mi><mtext>th</mtext></msup></math> exterior power,
+<math id="S1.p7.m5" class="ltx_Math" alttext="\Lambda^{k}(V)" display="inline"><mrow><msup><mi mathvariant="normal">Λ</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>, is the vector space of formal sums of
+<math id="S1.p7.m6" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-multivectors. The product of a <math id="S1.p7.m7" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-multivector and an
+<math id="S1.p7.m8" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>-multivector is a <math id="S1.p7.m9" class="ltx_Math" alttext="(k+\ell)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mi mathvariant="normal">ℓ</mi></mrow><mo stretchy="false">)</mo></mrow></math>-multivector. So, the direct sum
+<math id="S1.p7.m10" class="ltx_Math" alttext="\bigoplus_{k}\Lambda^{k}(V)" display="inline"><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⊕</mo><mi>k</mi></msub><mrow><msup><mi mathvariant="normal">Λ</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> forms an associative algebra, which is
+closed with respect to the wedge product. This algebra, commonly
+denoted by <math id="S1.p7.m11" class="ltx_Math" alttext="\Lambda(V)" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>, is called the exterior algebra of <math id="S1.p7.m12" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+<div id="S1.p8" class="ltx_para">
+<p class="ltx_p">Again, the analogy with the tensor product is useful. The tensor
+algebra <math id="S1.p8.m1" class="ltx_Math" alttext="T(V)" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> can be characterized as the associative,
+non-commutative algebra freely generated by <math id="S1.p8.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. If the
+characteristic of <math id="S1.p8.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is not 2, then the wedge product satisfies the
+supercommutativity relations</p>
+<table id="S1.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex7.m1" class="ltx_Math" alttext="\alpha\wedge\beta=(-1)^{k+\ell}\beta\wedge\alpha,\quad\alpha\in\Lambda^{k}(V),%
+\;\beta\in\Lambda^{\ell}(V)." display="block"><mrow><mrow><mrow><mrow><mi>α</mi><mo>∧</mo><mi>β</mi></mrow><mo>=</mo><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>k</mi><mo>+</mo><mi mathvariant="normal">ℓ</mi></mrow></msup><mo>⁢</mo><mi>β</mi></mrow><mo>∧</mo><mi>α</mi></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>α</mi><mo>∈</mo><mrow><msup><mi mathvariant="normal">Λ</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="5.3pt">,</mo><mrow><mi>β</mi><mo>∈</mo><mrow><msup><mi mathvariant="normal">Λ</mi><mi mathvariant="normal">ℓ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, <math id="S1.p8.m4" class="ltx_Math" alttext="\Lambda(V)" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+can be characterized as the supercommutative algebra which is freely
+generated by <math id="S1.p8.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.
+</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Formal definitions.</h2>
+
+<section id="S2.SS0.SSS0.Px1" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Supercommutative algebras.</h3>
+
+<div id="S2.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">For the purposes of this discussion, we define a supercommutative
+algebra to be an associative, unital <math id="S2.SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>-algebra <math id="S2.SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> with an
+<math id="S2.SS0.SSS0.Px1.p1.m3" class="ltx_Math" alttext="\mathbb{Z}_{2}" display="inline"><msub><mi>ℤ</mi><mn>2</mn></msub></math>-grading, <math id="S2.SS0.SSS0.Px1.p1.m4" class="ltx_Math" alttext="A=A^{+}\oplus A^{-}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><msup><mi>A</mi><mo>+</mo></msup><mo>⊕</mo><msup><mi>A</mi><mo>-</mo></msup></mrow></mrow></math>, such that for all odd
+<math id="S2.SS0.SSS0.Px1.p1.m5" class="ltx_Math" alttext="a\in A^{-}" display="inline"><mrow><mi>a</mi><mo>∈</mo><msup><mi>A</mi><mo>-</mo></msup></mrow></math> we have</p>
+<table id="S2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex8.m1" class="ltx_Math" alttext="a^{2}=0," display="block"><mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and such that for all even <math id="S2.SS0.SSS0.Px1.p1.m6" class="ltx_Math" alttext="b\in A^{+}" display="inline"><mrow><mi>b</mi><mo>∈</mo><msup><mi>A</mi><mo>+</mo></msup></mrow></math> and all <math id="S2.SS0.SSS0.Px1.p1.m7" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow></math>, we have</p>
+<table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex9.m1" class="ltx_Math" alttext="ab=ba." display="block"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo>=</mo><mrow><mi>b</mi><mo>⁢</mo><mi>a</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Using a polarization argument we see that the first
+condition implies that for all odd <math id="S2.SS0.SSS0.Px1.p1.m8" class="ltx_Math" alttext="a,b\in A^{-}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><msup><mi>A</mi><mo>-</mo></msup></mrow></math> we have</p>
+<table id="S2.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex10.m1" class="ltx_Math" alttext="ab=-ba." display="block"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>a</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If the characteristic of <math id="S2.SS0.SSS0.Px1.p1.m9" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is different from <math id="S2.SS0.SSS0.Px1.p1.m10" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>, then the converse
+is true, and we recover the usual definition of supercommutativity,
+namely that</p>
+<table id="S2.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex11.m1" class="ltx_Math" alttext="ab=\pm ba,\quad a\in A^{\pm},\;b\in A^{\pm}," display="block"><mrow><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo>=</mo><mrow><mo>±</mo><mrow><mi>b</mi><mo>⁢</mo><mi>a</mi></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>a</mi><mo>∈</mo><msup><mi>A</mi><mo>±</mo></msup></mrow><mo rspace="5.3pt">,</mo><mrow><mi>b</mi><mo>∈</mo><msup><mi>A</mi><mo>±</mo></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with the minus sign employed if both <math id="S2.SS0.SSS0.Px1.p1.m11" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="S2.SS0.SSS0.Px1.p1.m12" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> or odd, and with <math id="S2.SS0.SSS0.Px1.p1.m13" class="ltx_Math" alttext="+" display="inline"><mo>+</mo></math>
+employed otherwise.</p>
+</div>
+</section>
+<section id="S2.SS0.SSS0.Px2" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Exterior algebra.</h3>
+
+<div id="S2.SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> be a supercommutative algebra and <math id="S2.SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="\iota:V\to E^{-}" display="inline"><mrow><mi>ι</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><msup><mi>E</mi><mo>-</mo></msup></mrow></mrow></math> a linear
+map. We will say that <math id="S2.SS0.SSS0.Px2.p1.m3" class="ltx_Math" alttext="(E,\iota)" display="inline"><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi>ι</mi><mo stretchy="false">)</mo></mrow></math> is a model for the exterior algebra
+of <math id="S2.SS0.SSS0.Px2.p1.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, if every linear map <math id="S2.SS0.SSS0.Px2.p1.m5" class="ltx_Math" alttext="f:V\to A^{-}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><msup><mi>A</mi><mo>-</mo></msup></mrow></mrow></math>, where <math id="S2.SS0.SSS0.Px2.p1.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> a supercommutative
+algebra,  to a unique algebra homomorphism <math id="S2.SS0.SSS0.Px2.p1.m7" class="ltx_Math" alttext="g:E\to A" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mi>A</mi></mrow></mrow></math>, where
+“lifts” means that <math id="S2.SS0.SSS0.Px2.p1.m8" class="ltx_Math" alttext="f=g\circ\iota" display="inline"><mrow><mi>f</mi><mo>=</mo><mrow><mi>g</mi><mo>∘</mo><mi>ι</mi></mrow></mrow></math>.
+Diagrammatically:</p>
+<img src="extalg" id="S2.SS0.SSS0.Px2.p1.g1" class="ltx_graphics ltx_centering" alt="">
+<p class="ltx_p">The above condition on <math id="S2.SS0.SSS0.Px2.p1.m9" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is a universal property; this implies that
+all models are isomorphic as algebras. Thus, when we speak of
+<math id="S2.SS0.SSS0.Px2.p1.m10" class="ltx_Math" alttext="\Lambda(V)" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>, the exterior algebra of <math id="S2.SS0.SSS0.Px2.p1.m11" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, we are referring to the
+isomorphism class of all such models. It is also common to identify
+<math id="S2.SS0.SSS0.Px2.p1.m12" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> with its image <math id="S2.SS0.SSS0.Px2.p1.m13" class="ltx_Math" alttext="\iota(V)" display="inline"><mrow><mi>ι</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>, and to write <math id="S2.SS0.SSS0.Px2.p1.m14" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> rather than
+<math id="S2.SS0.SSS0.Px2.p1.m15" class="ltx_Math" alttext="\iota(v)" display="inline"><mrow><mi>ι</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S2.SS0.SSS0.Px3" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Exterior powers.</h3>
+
+<div id="S2.SS0.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">For the purposes of the present entry, we define an antisymmetric map
+to be a <math id="S2.SS0.SSS0.Px3.p1.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-multilinear map <math id="S2.SS0.SSS0.Px3.p1.m2" class="ltx_Math" alttext="f:V^{\times k}\to W" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msup><mi>V</mi><mrow><mi></mi><mo>×</mo><mi>k</mi></mrow></msup><mo>→</mo><mi>W</mi></mrow></mrow></math> such that <math id="S2.SS0.SSS0.Px3.p1.m3" class="ltx_Math" alttext="f(\dots,v,v,\dots)=0" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>v</mi><mo>,</mo><mi>v</mi><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for all <math id="S2.SS0.SSS0.Px3.p1.m4" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math>. A polarization argument then implies the
+usual antisymmetry condition, namely that for every permutation <math id="S2.SS0.SSS0.Px3.p1.m5" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math>
+of <math id="S2.SS0.SSS0.Px3.p1.m6" class="ltx_Math" alttext="\{1,2,\dots,k\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>k</mi><mo stretchy="false">}</mo></mrow></math> we have</p>
+<table id="S2.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex12.m1" class="ltx_Math" alttext="f(v_{\pi_{1}},\dots,v_{\pi_{k}})=\operatorname{sgn}(\pi)f(v_{1},\dots,v_{k}),%
+\quad v_{1},\dots,v_{k}\in V." display="block"><mrow><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><msub><mi>π</mi><mn>1</mn></msub></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><msub><mi>π</mi><mi>k</mi></msub></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mi>sgn</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>π</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo rspace="12.5pt">,</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><msub><mi>v</mi><mi>k</mi></msub><mo>∈</mo><mi>V</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As usual, if the characteristic of <math id="S2.SS0.SSS0.Px3.p1.m7" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is different from <math id="S2.SS0.SSS0.Px3.p1.m8" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>, the two
+assertions are equivalent. However if <math id="S2.SS0.SSS0.Px3.p1.m9" class="ltx_Math" alttext="1=-1" display="inline"><mrow><mn>1</mn><mo>=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>, then the first
+assertion is stronger, and that is why we adopt it as the definition
+of antisymmetry.</p>
+</div>
+<div id="S2.SS0.SSS0.Px3.p2" class="ltx_para">
+<p class="ltx_p">We now define a model of the <math id="S2.SS0.SSS0.Px3.p2.m1" class="ltx_Math" alttext="k^{\text{th}}" display="inline"><msup><mi>k</mi><mtext>th</mtext></msup></math> exterior power of <math id="S2.SS0.SSS0.Px3.p2.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> to be a
+vector space <math id="S2.SS0.SSS0.Px3.p2.m3" class="ltx_Math" alttext="E^{k}" display="inline"><msup><mi>E</mi><mi>k</mi></msup></math> and an antisymmetric map <math id="S2.SS0.SSS0.Px3.p2.m4" class="ltx_Math" alttext="\wedge:V^{\times k}\to E^{k}" display="inline"><mrow><mo>∧</mo><mo>:</mo><msup><mi>V</mi><mrow><mi></mi><mo>×</mo><mi>k</mi></mrow></msup><mo>→</mo><msup><mi>E</mi><mi>k</mi></msup></mrow></math> such that every antisymmetric map <math id="S2.SS0.SSS0.Px3.p2.m5" class="ltx_Math" alttext="f:V^{\times k}\to W" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msup><mi>V</mi><mrow><mi></mi><mo>×</mo><mi>k</mi></mrow></msup><mo>→</mo><mi>W</mi></mrow></mrow></math> lifts to a unique linear map <math id="S2.SS0.SSS0.Px3.p2.m6" class="ltx_Math" alttext="g:E^{k}\to W" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><msup><mi>E</mi><mi>k</mi></msup><mo>→</mo><mi>W</mi></mrow></mrow></math>, where “lifts”
+means that</p>
+<table id="S2.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex13.m1" class="ltx_Math" alttext="f(v_{1},\dots,v_{k})=g(v_{1}\wedge\cdots\wedge v_{k}),\quad v_{1},\dots,v_{k}%
+\in V." display="block"><mrow><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>∧</mo><mi mathvariant="normal">⋯</mi><mo>∧</mo><msub><mi>v</mi><mi>k</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo rspace="12.5pt">,</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><msub><mi>v</mi><mi>k</mi></msub><mo>∈</mo><mi>V</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As above, all models are isomorphic as vector spaces, and we use
+<math id="S2.SS0.SSS0.Px3.p2.m7" class="ltx_Math" alttext="\Lambda^{k}(V)" display="inline"><mrow><msup><mi mathvariant="normal">Λ</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> to denote the isomorphism class of all such.</p>
+</div>
+</section>
+<section id="S2.SS0.SSS0.Px4" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">The standard model.</h3>
+
+<div id="S2.SS0.SSS0.Px4.p1" class="ltx_para">
+<p class="ltx_p">A model of the exterior algebra
+<math id="S2.SS0.SSS0.Px4.p1.m1" class="ltx_Math" alttext="\Lambda(V)" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>, and the exterior powers <math id="S2.SS0.SSS0.Px4.p1.m2" class="ltx_Math" alttext="\Lambda^{k}(V)" display="inline"><mrow><msup><mi mathvariant="normal">Λ</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> can be easily
+constructed as the antisymmetrized quotients of the tensor algebra</p>
+<table id="S2.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex14.m1" class="ltx_Math" alttext="T(V)=\bigoplus_{k=0}^{\infty}V^{\otimes k},\qquad V^{\otimes k}=V\otimes\cdots%
+\otimes V\text{ (k times)}." display="block"><mrow><mrow><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⊕</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><msup><mi>V</mi><mrow><mi></mi><mo>⊗</mo><mi>k</mi></mrow></msup></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><msup><mi>V</mi><mrow><mi></mi><mo>⊗</mo><mi>k</mi></mrow></msup><mo>=</mo><mrow><mrow><mi>V</mi><mo>⊗</mo><mi mathvariant="normal">⋯</mi><mo>⊗</mo><mi>V</mi></mrow><mo>⁢</mo><mtext> (k times)</mtext></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">To that end, let <math id="S2.SS0.SSS0.Px4.p1.m3" class="ltx_Math" alttext="S(V)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+denote the two sided ideal of <math id="S2.SS0.SSS0.Px4.p1.m4" class="ltx_Math" alttext="T(V)" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> generated by
+elements of the form <math id="S2.SS0.SSS0.Px4.p1.m5" class="ltx_Math" alttext="v\otimes v,\;v\in V" display="inline"><mrow><mrow><mrow><mi>v</mi><mo>⊗</mo><mi>v</mi></mrow><mo rspace="5.3pt">,</mo><mi>v</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>. Then</p>
+</div>
+<div id="S2.SS0.SSS0.Px4.p2" class="ltx_para">
+<table id="S2.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex15.m1" class="ltx_Math" alttext="S(V)=\bigoplus_{k=0}^{\infty}S^{k}(V),\qquad\textrm{where}\quad S^{k}(V)=S(V)%
+\cap V^{\otimes k}," display="block"><mrow><mrow><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><munderover><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⊕</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msup><mi>S</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mtext>where</mtext></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><msup><mi>S</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><msup><mi>V</mi><mrow><mi></mi><mo>⊗</mo><mi>k</mi></mrow></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and let</p>
+<table id="S2.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex16.m1" class="ltx_Math" alttext="E(V)=T(V)/S(V),\qquad E^{k}(V)=V^{\otimes k}/S^{k}(V)" display="block"><mrow><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mi>S</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><msup><mi>E</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>V</mi><mrow><mi></mi><mo>⊗</mo><mi>k</mi></mrow></msup><mo>/</mo><msup><mi>S</mi><mi>k</mi></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">denote the
+indicated quotients, with <math id="S2.SS0.SSS0.Px4.p2.m1" class="ltx_Math" alttext="a:T(V)\to E(V)" display="inline"><mrow><mi>a</mi><mo>:</mo><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> and <math id="S2.SS0.SSS0.Px4.p2.m2" class="ltx_Math" alttext="a_{k}:V^{\otimes k}\to E^{k}(V)" display="inline"><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>:</mo><mrow><msup><mi>V</mi><mrow><mi></mi><mo>⊗</mo><mi>k</mi></mrow></msup><mo>→</mo><mrow><msup><mi>E</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> denoting the corresponding antisymmetrization surjections. It
+is easy to see that <math id="S2.SS0.SSS0.Px4.p2.m3" class="ltx_Math" alttext="S^{1}(V)" display="inline"><mrow><msup><mi>S</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the trivial vector space, and hence
+that <math id="S2.SS0.SSS0.Px4.p2.m4" class="ltx_Math" alttext="E^{1}(V)\cong V" display="inline"><mrow><mrow><msup><mi>E</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≅</mo><mi>V</mi></mrow></math>. We leave it as an exercise for the reader to
+show that <math id="S2.SS0.SSS0.Px4.p2.m5" class="ltx_Math" alttext="E^{k}(V),\;k\geq 2" display="inline"><mrow><mrow><mrow><msup><mi>E</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">,</mo><mi>k</mi></mrow><mo>≥</mo><mn>2</mn></mrow></math> is a model of the <math id="S2.SS0.SSS0.Px4.p2.m6" class="ltx_Math" alttext="k^{\text{th}}" display="inline"><msup><mi>k</mi><mtext>th</mtext></msup></math> exterior
+power, while <math id="S2.SS0.SSS0.Px4.p2.m7" class="ltx_Math" alttext="E(V)" display="inline"><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> together with the map <math id="S2.SS0.SSS0.Px4.p2.m8" class="ltx_Math" alttext="V\to E^{1}(V)" display="inline"><mrow><mi>V</mi><mo>→</mo><mrow><msup><mi>E</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is a model of
+the full exterior algebra.</p>
+</div>
+</section>
+<section id="S2.SS0.SSS0.Px5" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">The canonical grading.</h3>
+
+<div id="S2.SS0.SSS0.Px5.p1" class="ltx_para">
+<p class="ltx_p">An inspection of the above
+construction reveals that</p>
+<table id="S2.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex17.m1" class="ltx_Math" alttext="E(V)=\bigoplus_{k=0}^{\infty}E^{k}(V)." display="block"><mrow><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⊕</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msup><mi>E</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Indeed, every model of
+exterior algebra carries a canonical grading. Let <math id="S2.SS0.SSS0.Px5.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> be a particular
+model of the exterior algebra of <math id="S2.SS0.SSS0.Px5.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. For <math id="S2.SS0.SSS0.Px5.p1.m3" class="ltx_Math" alttext="k=1,2,\dots" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>, we will call
+<math id="S2.SS0.SSS0.Px5.p1.m4" class="ltx_Math" alttext="\alpha\in E" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi>E</mi></mrow></math>, a <math id="S2.SS0.SSS0.Px5.p1.m5" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-primitive element if <math id="S2.SS0.SSS0.Px5.p1.m6" class="ltx_Math" alttext="\alpha=v_{1}\wedge\cdots\wedge v_{k}," display="inline"><mrow><mrow><mi>α</mi><mo>=</mo><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>∧</mo><mi mathvariant="normal">⋯</mi><mo>∧</mo><msub><mi>v</mi><mi>k</mi></msub></mrow></mrow><mo>,</mo></mrow></math> for some <math id="S2.SS0.SSS0.Px5.p1.m7" class="ltx_Math" alttext="v_{i}\in V" display="inline"><mrow><msub><mi>v</mi><mi>i</mi></msub><mo>∈</mo><mi>V</mi></mrow></math>. We now let
+<math id="S2.SS0.SSS0.Px5.p1.m8" class="ltx_Math" alttext="E^{k}\subset E" display="inline"><mrow><msup><mi>E</mi><mi>k</mi></msup><mo>⊂</mo><mi>E</mi></mrow></math> denote the vector space spanned by all <math id="S2.SS0.SSS0.Px5.p1.m9" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-primitive
+elements, and let <math id="S2.SS0.SSS0.Px5.p1.m10" class="ltx_Math" alttext="E^{0}=K" display="inline"><mrow><msup><mi>E</mi><mn>0</mn></msup><mo>=</mo><mi>K</mi></mrow></math>.</p>
+</div>
+<div id="Thmproposition1" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 1</span>.</h6>
+<div id="Thmproposition1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The subspace <math id="Thmproposition1.p1.m1" class="ltx_Math" alttext="E^{k}" display="inline"><msup><mi>E</mi><mi>k</mi></msup></math> is a model for the <math id="Thmproposition1.p1.m2" class="ltx_Math" alttext="k^{\text{th}}" display="inline"><msup><mi>k</mi><mtext>𝑡ℎ</mtext></msup></math> exterior power of
+<math id="Thmproposition1.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Furthermore,</span></p>
+<table id="S2.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex18.m1" class="ltx_Math" alttext="E=\bigoplus_{k=0}^{\infty}E^{k}." display="block"><mrow><mrow><mi>E</mi><mo>=</mo><mrow><munderover><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⊕</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><msup><mi>E</mi><mi>k</mi></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+</section>
+<section id="S2.SS0.SSS0.Px6" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Categorical formulation.</h3>
+
+<div id="S2.SS0.SSS0.Px6.p1" class="ltx_para">
+<p class="ltx_p">The above definition of exterior product has a very appealing
+categorical formulation. Let <math id="S2.SS0.SSS0.Px6.p1.m1" class="ltx_Math" alttext="\mathbb{S}" display="inline"><mi>𝕊</mi></math> denote the category of
+supercommutative <math id="S2.SS0.SSS0.Px6.p1.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>-algebras, let <math id="S2.SS0.SSS0.Px6.p1.m3" class="ltx_Math" alttext="\mathbb{V}" display="inline"><mi>𝕍</mi></math> denote category of vector
+spaces over <math id="S2.SS0.SSS0.Px6.p1.m4" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>, and let <math id="S2.SS0.SSS0.Px6.p1.m5" class="ltx_Math" alttext="(\cdot)^{-}:\mathbb{S}\to\mathbb{V}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow><mo>-</mo></msup><mo>:</mo><mrow><mi>𝕊</mi><mo>→</mo><mi>𝕍</mi></mrow></mrow></math> denote the
+forgetful functor <math id="S2.SS0.SSS0.Px6.p1.m6" class="ltx_Math" alttext="A\mapsto A^{-}" display="inline"><mrow><mi>A</mi><mo>↦</mo><msup><mi>A</mi><mo>-</mo></msup></mrow></math>. We may now say that the
+exterior algebra function <math id="S2.SS0.SSS0.Px6.p1.m7" class="ltx_Math" alttext="\Lambda:\mathbb{V}\to\mathbb{S}" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>:</mo><mrow><mi>𝕍</mi><mo>→</mo><mi>𝕊</mi></mrow></mrow></math> is the left
+adjoint of <math id="S2.SS0.SSS0.Px6.p1.m8" class="ltx_Math" alttext="(\cdot)^{-}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow><mo>-</mo></msup></math>. In other words,</p>
+<table id="S2.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex19.m1" class="ltx_Math" alttext="\operatorname{Hom}_{\mathbb{V}}(V,A^{-})\cong\operatorname{Hom}_{\mathbb{S}}(%
+\Lambda(V),A),\quad V\in\mathbb{V},\;A\in\mathbb{S}," display="block"><mrow><mrow><mrow><mrow><msub><mi>Hom</mi><mi>𝕍</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><msup><mi>A</mi><mo>-</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>≅</mo><mrow><msub><mi>Hom</mi><mi>𝕊</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>V</mi><mo>∈</mo><mi>𝕍</mi></mrow><mo rspace="5.3pt">,</mo><mrow><mi>A</mi><mo>∈</mo><mi>𝕊</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with the
+isomorphism natural in <math id="S2.SS0.SSS0.Px6.p1.m9" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> and <math id="S2.SS0.SSS0.Px6.p1.m10" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+<div id="S2.SS0.SSS0.Px6.p2" class="ltx_para">
+<p class="ltx_p">It is useful to compare the above definition to the categorical
+definition of the tensor algebra. Let <math id="S2.SS0.SSS0.Px6.p2.m1" class="ltx_Math" alttext="\mathbb{A}" display="inline"><mi>𝔸</mi></math> denote the category of
+associative, unital <math id="S2.SS0.SSS0.Px6.p2.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>-algebras, and let <math id="S2.SS0.SSS0.Px6.p2.m3" class="ltx_Math" alttext="F:\mathbb{A}\to\mathbb{V}" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><mi>𝔸</mi><mo>→</mo><mi>𝕍</mi></mrow></mrow></math> be the
+forgetful functor that gives the underlying vector space structure of
+a <math id="S2.SS0.SSS0.Px6.p2.m4" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>-algebra. We can then define the tensor algebra <math id="S2.SS0.SSS0.Px6.p2.m5" class="ltx_Math" alttext="T(V)" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> of a
+vector space <math id="S2.SS0.SSS0.Px6.p2.m6" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> by saying that <math id="S2.SS0.SSS0.Px6.p2.m7" class="ltx_Math" alttext="T:\mathbb{V}\to\mathbb{A}" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><mi>𝕍</mi><mo>→</mo><mi>𝔸</mi></mrow></mrow></math> is the left-adjoint
+of <math id="S2.SS0.SSS0.Px6.p2.m8" class="ltx_Math" alttext="F:\mathbb{A}\to\mathbb{V}" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><mi>𝔸</mi><mo>→</mo><mi>𝕍</mi></mrow></mrow></math>. Thus, whereas <math id="S2.SS0.SSS0.Px6.p2.m9" class="ltx_Math" alttext="T(V)" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> as the <span class="ltx_text ltx_font_bold">associative
+algebra</span> freely generated by <math id="S2.SS0.SSS0.Px6.p2.m10" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, the exterior algebra <math id="S2.SS0.SSS0.Px6.p2.m11" class="ltx_Math" alttext="\Lambda(V)" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+is the <span class="ltx_text ltx_font_bold">supercommutative algebra</span> freely generated by <math id="S2.SS0.SSS0.Px6.p2.m12" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. The
+antisymmetrization
+quotient map <math id="S2.SS0.SSS0.Px6.p2.m13" class="ltx_Math" alttext="a_{V}\colon T(V)\to\Lambda(V)" display="inline"><mrow><msub><mi>a</mi><mi>V</mi></msub><mo>:</mo><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> is a natural transformation between
+these two functors.</p>
+</div>
+</section>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Finite dimensional models.</h2>
+
+<section id="S3.SS0.SSS0.Px1" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Basis models.</h3>
+
+<div id="S3.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S3.SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is an <math id="S3.SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional vector space, there are some
+down-to-earth constructions of <math id="S3.SS0.SSS0.Px1.p1.m3" class="ltx_Math" alttext="\Lambda(V)" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> that go a long way to
+illuminate the nature of the exterior product. Suppose then, that <math id="S3.SS0.SSS0.Px1.p1.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>
+is <math id="S3.SS0.SSS0.Px1.p1.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional, and let <math id="S3.SS0.SSS0.Px1.p1.m6" class="ltx_Math" alttext="e_{1},\ldots,e_{n}" display="inline"><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub></mrow></math> be a basis of <math id="S3.SS0.SSS0.Px1.p1.m7" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. For
+every ascending sequence</p>
+<table id="S3.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex20.m1" class="ltx_Math" alttext="0\leq i_{1}&lt;i_{2}&lt;\cdots&lt;i_{k}\leq n" display="block"><mrow><mn>0</mn><mo>≤</mo><msub><mi>i</mi><mn>1</mn></msub><mo>&lt;</mo><msub><mi>i</mi><mn>2</mn></msub><mo>&lt;</mo><mi mathvariant="normal">⋯</mi><mo>&lt;</mo><msub><mi>i</mi><mi>k</mi></msub><mo>≤</mo><mi>n</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">let us
+introduce the symbol <math id="S3.SS0.SSS0.Px1.p1.m8" class="ltx_Math" alttext="e_{I}=e_{i_{1}\dots i_{k}}" display="inline"><mrow><msub><mi>e</mi><mi>I</mi></msub><mo>=</mo><msub><mi>e</mi><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>i</mi><mi>k</mi></msub></mrow></msub></mrow></math> to represent the primitive
+<math id="S3.SS0.SSS0.Px1.p1.m9" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-multivector <math id="S3.SS0.SSS0.Px1.p1.m10" class="ltx_Math" alttext="e_{i_{1}}\wedge\ldots\wedge e_{i_{k}}" display="inline"><mrow><msub><mi>e</mi><msub><mi>i</mi><mn>1</mn></msub></msub><mo>∧</mo><mi mathvariant="normal">…</mi><mo>∧</mo><msub><mi>e</mi><msub><mi>i</mi><mi>k</mi></msub></msub></mrow></math>. If <math id="S3.SS0.SSS0.Px1.p1.m11" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is the
+empty sequence, we let <math id="S3.SS0.SSS0.Px1.p1.m12" class="ltx_Math" alttext="e_{I}" display="inline"><msub><mi>e</mi><mi>I</mi></msub></math> denote the unit element of the field
+<math id="S3.SS0.SSS0.Px1.p1.m13" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>.</p>
+</div>
+<div id="Thmproposition2" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 2</span>.</h6>
+<div id="Thmproposition2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The <math id="Thmproposition2.p1.m1" class="ltx_Math" alttext="\binom{n}{k}" display="inline"><mrow><mo mathvariant="normal">(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>k</mi></mfrac><mo mathvariant="normal">)</mo></mrow></math>-dimensional vector space spanned by <math id="Thmproposition2.p1.m2" class="ltx_Math" alttext="e_{i_{1}\dots i_{k}}" display="inline"><msub><mi>e</mi><mrow><msub><mi>i</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="italic">⁢</mo><mi mathvariant="normal">…</mi><mo mathvariant="italic">⁢</mo><msub><mi>i</mi><mi>k</mi></msub></mrow></msub></math> is a model of <math id="Thmproposition2.p1.m3" class="ltx_Math" alttext="\Lambda^{k}(V)" display="inline"><mrow><msup><mi mathvariant="normal">Λ</mi><mi>k</mi></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>V</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div id="S3.SS0.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">Note that <math id="S3.SS0.SSS0.Px1.p2.m1" class="ltx_Math" alttext="\Lambda^{1}(V)" display="inline"><mrow><msup><mi mathvariant="normal">Λ</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> is just the <math id="S3.SS0.SSS0.Px1.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional space spanned by
+the basis symbols <math id="S3.SS0.SSS0.Px1.p2.m3" class="ltx_Math" alttext="e_{1},\dots,e_{n}" display="inline"><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub></mrow></math>. As such, <math id="S3.SS0.SSS0.Px1.p2.m4" class="ltx_Math" alttext="\Lambda^{1}(V)" display="inline"><mrow><msup><mi mathvariant="normal">Λ</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> is
+naturally isomorphic to <math id="S3.SS0.SSS0.Px1.p2.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. For disjoint sequences <math id="S3.SS0.SSS0.Px1.p2.m6" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> and <math id="S3.SS0.SSS0.Px1.p2.m7" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math>, let
+us define</p>
+<table id="S3.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex21.m1" class="ltx_Math" alttext="e_{I}\wedge e_{J}=\operatorname{sgn}(IJ)e_{[IJ]}," display="block"><mrow><mrow><mrow><msub><mi>e</mi><mi>I</mi></msub><mo>∧</mo><msub><mi>e</mi><mi>J</mi></msub></mrow><mo>=</mo><mrow><mrow><mi>sgn</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>⁢</mo><mi>J</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>e</mi><mrow><mo stretchy="false">[</mo><mrow><mi>I</mi><mo>⁢</mo><mi>J</mi></mrow><mo stretchy="false">]</mo></mrow></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S3.SS0.SSS0.Px1.p2.m8" class="ltx_Math" alttext="[IJ]" display="inline"><mrow><mo stretchy="false">[</mo><mrow><mi>I</mi><mo>⁢</mo><mi>J</mi></mrow><mo stretchy="false">]</mo></mrow></math> denotes the
+ascending sequence composed of the union of <math id="S3.SS0.SSS0.Px1.p2.m9" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> and <math id="S3.SS0.SSS0.Px1.p2.m10" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math>, and where
+<math id="S3.SS0.SSS0.Px1.p2.m11" class="ltx_Math" alttext="\operatorname{sgn}(IJ)=\pm 1" display="inline"><mrow><mrow><mi>sgn</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>⁢</mo><mi>J</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>±</mo><mn>1</mn></mrow></mrow></math> denotes the parity of the permutation that takes the
+sorted list <math id="S3.SS0.SSS0.Px1.p2.m12" class="ltx_Math" alttext="[IJ]" display="inline"><mrow><mo stretchy="false">[</mo><mrow><mi>I</mi><mo>⁢</mo><mi>J</mi></mrow><mo stretchy="false">]</mo></mrow></math> to the unsorted concatenation <math id="S3.SS0.SSS0.Px1.p2.m13" class="ltx_Math" alttext="IJ" display="inline"><mrow><mi>I</mi><mo>⁢</mo><mi>J</mi></mrow></math>. If <math id="S3.SS0.SSS0.Px1.p2.m14" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> and <math id="S3.SS0.SSS0.Px1.p2.m15" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math>
+have one or more elements in common, we define</p>
+<table id="S3.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex22.m1" class="ltx_Math" alttext="e_{I}\wedge e_{J}=0." display="block"><mrow><mrow><mrow><msub><mi>e</mi><mi>I</mi></msub><mo>∧</mo><msub><mi>e</mi><mi>J</mi></msub></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Here are some examples:</p>
+<table id="S4.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S3.Ex23" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex23.m1" class="ltx_Math" alttext="\displaystyle e_{3}\wedge e_{12}=e_{123}," display="inline"><mrow><mrow><mrow><msub><mi>e</mi><mn>3</mn></msub><mo>∧</mo><msub><mi>e</mi><mn>12</mn></msub></mrow><mo>=</mo><msub><mi>e</mi><mn>123</mn></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S3.Ex24" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex24.m1" class="ltx_Math" alttext="\displaystyle e_{2}\wedge e_{14}=-e_{124}," display="inline"><mrow><mrow><mrow><msub><mi>e</mi><mn>2</mn></msub><mo>∧</mo><msub><mi>e</mi><mn>14</mn></msub></mrow><mo>=</mo><mrow><mo>-</mo><msub><mi>e</mi><mn>124</mn></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S3.Ex25" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex25.m1" class="ltx_Math" alttext="\displaystyle e_{14}\wedge e_{23}=e_{1234}," display="inline"><mrow><mrow><mrow><msub><mi>e</mi><mn>14</mn></msub><mo>∧</mo><msub><mi>e</mi><mn>23</mn></msub></mrow><mo>=</mo><msub><mi>e</mi><mn>1234</mn></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S3.Ex26" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex26.m1" class="ltx_Math" alttext="\displaystyle e_{24}\wedge e_{13}=-e_{1234}," display="inline"><mrow><mrow><mrow><msub><mi>e</mi><mn>24</mn></msub><mo>∧</mo><msub><mi>e</mi><mn>13</mn></msub></mrow><mo>=</mo><mrow><mo>-</mo><msub><mi>e</mi><mn>1234</mn></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S3.Ex27" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex27.m1" class="ltx_Math" alttext="\displaystyle e_{24}\wedge e_{14}=0." display="inline"><mrow><mrow><mrow><msub><mi>e</mi><mn>24</mn></msub><mo>∧</mo><msub><mi>e</mi><mn>14</mn></msub></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmproposition3" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 3</span>.</h6>
+<div id="Thmproposition3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The <math id="Thmproposition3.p1.m1" class="ltx_Math" alttext="2^{n}" display="inline"><msup><mn mathvariant="normal">2</mn><mi>n</mi></msup></math> dimensional vector spanned by the symbols <math id="Thmproposition3.p1.m2" class="ltx_Math" alttext="e_{I}" display="inline"><msub><mi>e</mi><mi>I</mi></msub></math>, together
+with the above product and the linear isomorphism from <math id="Thmproposition3.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> to
+<math id="Thmproposition3.p1.m4" class="ltx_Math" alttext="\Lambda^{1}(V)" display="inline"><mrow><msup><mi mathvariant="normal">Λ</mi><mn mathvariant="normal">1</mn></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>V</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is a model of the exterior algebra <math id="Thmproposition3.p1.m5" class="ltx_Math" alttext="\Lambda(V)" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>V</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div id="S3.SS0.SSS0.Px1.p3" class="ltx_para">
+<p class="ltx_p">Evidently, any list of numbers between <math id="S3.SS0.SSS0.Px1.p3.m1" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> and <math id="S3.SS0.SSS0.Px1.p3.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> with length greater
+than <math id="S3.SS0.SSS0.Px1.p3.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> will contain duplicates. Thus, an immediate consequence of
+this construction is that <math id="S3.SS0.SSS0.Px1.p3.m4" class="ltx_Math" alttext="\Lambda^{k}(V)=0" display="inline"><mrow><mrow><msup><mi mathvariant="normal">Λ</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for <math id="S3.SS0.SSS0.Px1.p3.m5" class="ltx_Math" alttext="k&gt;n" display="inline"><mrow><mi>k</mi><mo>&gt;</mo><mi>n</mi></mrow></math>, and hence that</p>
+<table id="S3.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex28.m1" class="ltx_Math" alttext="\Lambda(V)=\bigoplus_{k=0}^{n}\Lambda^{n}(V)." display="block"><mrow><mrow><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⊕</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><msup><mi mathvariant="normal">Λ</mi><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S3.SS0.SSS0.Px2" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Alternating forms.</h3>
+
+<div id="S3.SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S3.SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is finite-dimensional, we have the natural isomorphism between
+<math id="S3.SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> and the double-dual <math id="S3.SS0.SSS0.Px2.p1.m3" class="ltx_Math" alttext="V^{**}" display="inline"><msup><mi>V</mi><mrow><mi></mi><mo>*</mo><mo>*</mo></mrow></msup></math>. We can exploit this natural
+isomorphism to construct the following model of exterior algebra. Let
+<math id="S3.SS0.SSS0.Px2.p1.m4" class="ltx_Math" alttext="A^{k}(V)" display="inline"><mrow><msup><mi>A</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> denote the vector space of <math id="S3.SS0.SSS0.Px2.p1.m5" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-multilinear mappings from
+<math id="S3.SS0.SSS0.Px2.p1.m6" class="ltx_Math" alttext="(V^{*})\times\cdots\times(V^{*})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msup><mi>V</mi><mo>*</mo></msup><mo stretchy="false">)</mo></mrow><mo>×</mo><mi mathvariant="normal">⋯</mi><mo>×</mo><mrow><mo stretchy="false">(</mo><msup><mi>V</mi><mo>*</mo></msup><mo stretchy="false">)</mo></mrow></mrow></math> (<math id="S3.SS0.SSS0.Px2.p1.m7" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> times) to <math id="S3.SS0.SSS0.Px2.p1.m8" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>. Such an mapping
+is known as an alternating <math id="S3.SS0.SSS0.Px2.p1.m9" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-form. Using the above duality we can
+prove that <math id="S3.SS0.SSS0.Px2.p1.m10" class="ltx_Math" alttext="A^{k}(V)" display="inline"><mrow><msup><mi>A</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a model for the <math id="S3.SS0.SSS0.Px2.p1.m11" class="ltx_Math" alttext="k^{\text{th}}" display="inline"><msup><mi>k</mi><mtext>th</mtext></msup></math> exterior power of
+<math id="S3.SS0.SSS0.Px2.p1.m12" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.
+</p>
+</div>
+<div id="S3.SS0.SSS0.Px2.p2" class="ltx_para">
+<p class="ltx_p">Given alternating forms <math id="S3.SS0.SSS0.Px2.p2.m1" class="ltx_Math" alttext="u\in A^{k}(V)" display="inline"><mrow><mi>u</mi><mo>∈</mo><mrow><msup><mi>A</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S3.SS0.SSS0.Px2.p2.m2" class="ltx_Math" alttext="v\in A^{\ell}(V)" display="inline"><mrow><mi>v</mi><mo>∈</mo><mrow><msup><mi>A</mi><mi mathvariant="normal">ℓ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,
+let us define <math id="S3.SS0.SSS0.Px2.p2.m3" class="ltx_Math" alttext="u\wedge v\in A^{k+\ell}(V)" display="inline"><mrow><mrow><mi>u</mi><mo>∧</mo><mi>v</mi></mrow><mo>∈</mo><mrow><msup><mi>A</mi><mrow><mi>k</mi><mo>+</mo><mi mathvariant="normal">ℓ</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> according to</p>
+<table id="S3.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex29.m1" class="ltx_Math" alttext="(u\wedge v)(a_{1},\dots,a_{k+\ell})=\sum_{\pi}\operatorname{sgn}(\pi)u(a_{\pi_%
+{1}},\dots,a_{\pi_{k}})v(a_{\pi_{k+1}},\dots,a_{\pi_{k+\ell}})," display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>∧</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>+</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>π</mi></munder><mrow><mrow><mi>sgn</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>π</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><msub><mi>π</mi><mn>1</mn></msub></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><msub><mi>π</mi><mi>k</mi></msub></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><msub><mi>π</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><msub><mi>π</mi><mrow><mi>k</mi><mo>+</mo><mi mathvariant="normal">ℓ</mi></mrow></msub></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S3.SS0.SSS0.Px2.p2.m4" class="ltx_Math" alttext="a_{1},\dots,a_{k+\ell}\in V^{*}," display="inline"><mrow><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mrow><mi>k</mi><mo>+</mo><mi mathvariant="normal">ℓ</mi></mrow></msub></mrow><mo>∈</mo><msup><mi>V</mi><mo>*</mo></msup></mrow><mo>,</mo></mrow></math> and where the sum is taken over
+all permutations <math id="S3.SS0.SSS0.Px2.p2.m5" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> of <math id="S3.SS0.SSS0.Px2.p2.m6" class="ltx_Math" alttext="\{1,2,\dots,k+\ell\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>k</mi><mo>+</mo><mi mathvariant="normal">ℓ</mi></mrow><mo stretchy="false">}</mo></mrow></math> such that <math id="S3.SS0.SSS0.Px2.p2.m7" class="ltx_Math" alttext="\pi_{1}&lt;\pi_{2}&lt;\cdots&lt;\pi_{k}" display="inline"><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>&lt;</mo><msub><mi>π</mi><mn>2</mn></msub><mo>&lt;</mo><mi mathvariant="normal">⋯</mi><mo>&lt;</mo><msub><mi>π</mi><mi>k</mi></msub></mrow></math> and <math id="S3.SS0.SSS0.Px2.p2.m8" class="ltx_Math" alttext="\pi_{k+1}&lt;\cdots&lt;\pi_{k+\ell}" display="inline"><mrow><msub><mi>π</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>&lt;</mo><mi mathvariant="normal">⋯</mi><mo>&lt;</mo><msub><mi>π</mi><mrow><mi>k</mi><mo>+</mo><mi mathvariant="normal">ℓ</mi></mrow></msub></mrow></math>, and
+where <math id="S3.SS0.SSS0.Px2.p2.m9" class="ltx_Math" alttext="\operatorname{sgn}\pi=\pm 1" display="inline"><mrow><mrow><mi>sgn</mi><mo>⁡</mo><mi>π</mi></mrow><mo>=</mo><mrow><mo>±</mo><mn>1</mn></mrow></mrow></math> according to whether <math id="S3.SS0.SSS0.Px2.p2.m10" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> is an
+even or odd permutation. With this definition, we can show that</p>
+<table id="S3.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex30.m1" class="ltx_Math" alttext="A(V)=\bigoplus_{k=0}^{n}A^{k}(V)" display="block"><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⊕</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><msup><mi>A</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">together with the above product, and the linear isomorphism <math id="S3.SS0.SSS0.Px2.p2.m11" class="ltx_Math" alttext="V\to A^{1}(V)\cong V^{**}" display="inline"><mrow><mi>V</mi><mo>→</mo><mrow><msup><mi>A</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≅</mo><msup><mi>V</mi><mrow><mi></mi><mo>*</mo><mo>*</mo></mrow></msup></mrow></math> is a model for the exterior algebra <math id="S3.SS0.SSS0.Px2.p2.m12" class="ltx_Math" alttext="\Lambda(V)" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</section>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Historical Notes.</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">The exterior algebra is also known as the Grassmann
+algebra after its inventor <span class="ltx_text ltx_font_typewriter">http://www-groups.dcs.st-and.ac.uk/ history/Mathematicians/Grassmann.html</span>Hermann Grassmann
+who created it  to give algebraic treatment of linear
+geometry. Grassmann was also one of the first people to talk about
+the geometry of an <math id="S4.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional space with <math id="S4.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> an arbitrary natural
+number. The axiomatics of the exterior product are needed to define
+differential forms and therefore play an essential role in the theory
+of integration on manifolds. Exterior algebra is also an essential
+prerequisite to understanding de Rham’s theory of differential
+cohomology.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">exterior algebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ExteriorAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:34:14</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:34:14</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">35</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A75</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Grassmann algebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AntiSymmetric</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">exterior product</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">wedge product</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">multivector</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">exterior power</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:33:26 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

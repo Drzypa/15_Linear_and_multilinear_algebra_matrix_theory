@@ -1,0 +1,205 @@
+<!DOCTYPE html><html>
+<head>
+<title>Berlekamp-Massey algorithm</title>
+<!--Generated on Fri Feb  9 18:18:06 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Berlekamp-Massey algorithm</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The Berlekamp-Massey algorithm is used for finding the minimal polynomial of a linearly recurrent sequence. The algorithm itself is presented at the end of this article.
+</p>
+</div>
+<div id="Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1</span>.</h6>
+<div id="Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose the infinite sequence <math id="Thmdefinition1.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> with elements from a field <math id="Thmdefinition1.p1.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> has the property that there exist constants <math id="Thmdefinition1.p1.m3" class="ltx_Math" alttext="c_{1},\ldots,c_{k}" display="inline"><mrow><msub><mi>c</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>c</mi><mi>k</mi></msub></mrow></math> in <math id="Thmdefinition1.p1.m4" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> such that, for all <math id="Thmdefinition1.p1.m5" class="ltx_Math" alttext="t&gt;k" display="inline"><mrow><mi>t</mi><mo mathvariant="normal">&gt;</mo><mi>k</mi></mrow></math>,</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="a_{t}=a_{t-1}c_{1}+a_{t-2}c_{2}+...+a_{t-k}c_{k}." display="block"><mrow><mrow><msub><mi>a</mi><mi>t</mi></msub><mo>=</mo><mrow><mrow><msub><mi>a</mi><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>c</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>a</mi><mrow><mi>t</mi><mo>-</mo><mn>2</mn></mrow></msub><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>a</mi><mrow><mi>t</mi><mo>-</mo><mi>k</mi></mrow></msub><mo>⁢</mo><msub><mi>c</mi><mi>k</mi></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Then <math id="Thmdefinition1.p1.m6" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is called a <span class="ltx_text ltx_font_bold">linearly recurrent sequence</span>.</span></p>
+</div>
+</div>
+<div id="Thmdefinition2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 2</span>.</h6>
+<div id="Thmdefinition2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Given a linearly recurrent sequence <math id="Thmdefinition2.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, suppose <math id="Thmdefinition2.p1.m2" class="ltx_Math" alttext="c_{0}\ldots c_{k}\in K" display="inline"><mrow><mrow><msub><mi>c</mi><mn mathvariant="normal">0</mn></msub><mo mathvariant="italic">⁢</mo><mi mathvariant="normal">…</mi><mo mathvariant="italic">⁢</mo><msub><mi>c</mi><mi>k</mi></msub></mrow><mo mathvariant="normal">∈</mo><mi>K</mi></mrow></math> with <math id="Thmdefinition2.p1.m3" class="ltx_Math" alttext="c_{0}\neq 0" display="inline"><mrow><msub><mi>c</mi><mn mathvariant="normal">0</mn></msub><mo mathvariant="normal">≠</mo><mn mathvariant="normal">0</mn></mrow></math> satisfy, for all <math id="Thmdefinition2.p1.m4" class="ltx_Math" alttext="t&gt;k," display="inline"><mrow><mrow><mi>t</mi><mo mathvariant="normal">&gt;</mo><mi>k</mi></mrow><mo mathvariant="normal">,</mo></mrow></math></span></p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="c_{0}a_{t}=a_{t-1}c_{1}+a_{t-2}c_{2}+...+a_{t-k}c_{k}." display="block"><mrow><mrow><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>a</mi><mi>t</mi></msub></mrow><mo>=</mo><mrow><mrow><msub><mi>a</mi><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>c</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>a</mi><mrow><mi>t</mi><mo>-</mo><mn>2</mn></mrow></msub><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>a</mi><mrow><mi>t</mi><mo>-</mo><mi>k</mi></mrow></msub><mo>⁢</mo><msub><mi>c</mi><mi>k</mi></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Then the polynomial</span></p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="c_{0}x^{k}-c_{1}x^{k-1}-c_{2}x^{k-2}-...-c_{k}" display="block"><mrow><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>x</mi><mi>k</mi></msup></mrow><mo>-</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>x</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>-</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>x</mi><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>-</mo><mi mathvariant="normal">…</mi><mo>-</mo><msub><mi>c</mi><mi>k</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">is called an <span class="ltx_text ltx_font_bold">annihilator</span> for <math id="Thmdefinition2.p1.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>.</span></p>
+</div>
+</div>
+<div id="Thmproposition1" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 1</span>.</h6>
+<div id="Thmproposition1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The annihilators of <math id="Thmproposition1.p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> form an ideal of <math id="Thmproposition1.p1.m2" class="ltx_Math" alttext="K[x]" display="inline"><mrow><mi>K</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div id="Thmdefinition3" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 3</span>.</h6>
+<div id="Thmdefinition3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Since <math id="Thmdefinition3.p1.m1" class="ltx_Math" alttext="K[x]" display="inline"><mrow><mi>K</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math> is a principal ideal domain, the ideal of <math id="Thmdefinition3.p1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>’s annihilators have a unique monic generator of minimal degree. This annihilator is called the <span class="ltx_text ltx_font_bold">minimal polynomial</span> of <math id="Thmdefinition3.p1.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>.</span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">To find the minimal polynomial, we need to be given an upper bound <math id="p2.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> on its degree; having done so, the minimal polynomial is uniquely determined by the first <math id="p2.m2" class="ltx_Math" alttext="2m" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></math> elements of <math id="p2.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> (since we need to get <math id="p2.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> equations to solve for the unknowns <math id="p2.m5" class="ltx_Math" alttext="c_{1},\ldots c_{m}" display="inline"><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>c</mi><mi>m</mi></msub></mrow></mrow></math>).</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">There is another way to determine the minimal polynomial, originally presented by Dornstetter, which uses the Euclidean Algorithm. It can be shown that the characteristic polynomial of a sequence is the unique monic polynomial <math id="p3.m1" class="ltx_Math" alttext="C(x)" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> of least degree for which the infinite product</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="C(x)(a_{1}+a_{2}x+a_{3}x^{2}+...)" display="block"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">has finitely many nonzero terms. (In fact, the nonzero terms will have coefficients up to <math id="p3.m2" class="ltx_Math" alttext="x^{k-1}" display="inline"><msup><mi>x</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup></math> where <math id="p3.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is the degree of <math id="p3.m4" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>).</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">We can rewrite this as</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="C(x)\cdot(a_{1}+a_{2}x+...+a_{2m}x^{2m-1})-Q(x)\cdot x^{2m}=R(x)" display="block"><mrow><mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>a</mi><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msub><mo>⁢</mo><msup><mi>x</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>x</mi><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msup></mrow></mrow><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">where <math id="p5.m1" class="ltx_Math" alttext="R(x)" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a remainder polynomial of degree ¡ <math id="p5.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, and <math id="p5.m3" class="ltx_Math" alttext="Q(x)" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a quotient polynomial. Denote by <math id="p5.m4" class="ltx_Math" alttext="A(x)" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> the sum <math id="p5.m5" class="ltx_Math" alttext="\Sigma_{i=1}^{2m}a_{i}x^{i-1}" display="inline"><mrow><msubsup><mi mathvariant="normal">Σ</mi><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msubsup><mo>⁢</mo><msub><mi>a</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>x</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">This is where the Euclidean Algorithm comes in; if we take the GCD of <math id="p6.m1" class="ltx_Math" alttext="A(x)" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p6.m2" class="ltx_Math" alttext="x^{2m}" display="inline"><msup><mi>x</mi><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msup></math>, keeping track of remainders, we get two sequences <math id="p6.m3" class="ltx_Math" alttext="P_{i}(x),Q_{i}(x)" display="inline"><mrow><mrow><msub><mi>P</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><msub><mi>Q</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> such that</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="P_{i}(x)\cdot A(x)-Q_{i}(x)\cdot x^{2m}" display="block"><mrow><mrow><mrow><mrow><msub><mi>P</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>A</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mrow><msub><mi>Q</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><msup><mi>x</mi><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">forms a series of polynomials whose degree is decreasing; as soon as this degree is less than <math id="p6.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, we have the needed polynomials with <math id="p6.m5" class="ltx_Math" alttext="C=P_{i},Q=Q_{i}" display="inline"><mrow><mrow><mi>C</mi><mo>=</mo><msub><mi>P</mi><mi>i</mi></msub></mrow><mo>,</mo><mrow><mi>Q</mi><mo>=</mo><msub><mi>Q</mi><mi>i</mi></msub></mrow></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">There is more info about the Extended Euclidean Algorithm in “Modern Computer Algebra” by von zur Gathen and Gerhard.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">(Berlekamp’s algorithm proper to come)</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">The original algorithm is from <em class="ltx_emph ltx_font_italic">Algebraic Coding Theory</em> by Elwyn R. Berlekamp, McGraw-Hill, 1968. Its application to linearly recurrent sequences was noted by J.L.Massey, in “Shift-register synthesis and BCH decoding”, 1969.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Berlekamp-Massey algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">BerlekampMasseyAlgorithm</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:28:55</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:28:55</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A03</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11B37</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RecurrenceRelation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">MapleImplementationOfBerlekampMasseyAlgorithm</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">linear recurrent sequence</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">minimal polynomial of a sequence</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">annihilator</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:18:06 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

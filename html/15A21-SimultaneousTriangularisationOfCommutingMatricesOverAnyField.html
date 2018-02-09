@@ -1,0 +1,270 @@
+<!DOCTYPE html><html>
+<head>
+<title>simultaneous triangularisation of commuting matrices over any field</title>
+<!--Generated on Fri Feb  9 18:26:54 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">simultaneous triangularisation of commuting matrices over any field</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="\mathbf{e}_{i}" display="inline"><msub><mi>𝐞</mi><mi>i</mi></msub></math> denote the (column) vector whose <math id="p1.m2" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>th position is <math id="p1.m3" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>
+and where all other positions are <math id="p1.m4" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>. Denote by <math id="p1.m5" class="ltx_Math" alttext="[n]" display="inline"><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></math> the set
+<math id="p1.m6" class="ltx_Math" alttext="\{1,\ldots,n\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></math>. Denote by <math id="p1.m7" class="ltx_Math" alttext="\mathrm{M}_{n}(\mathcal{K})" display="inline"><mrow><msub><mi mathvariant="normal">M</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒦</mi><mo stretchy="false">)</mo></mrow></mrow></math> the set of all <math id="p1.m8" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrices over <math id="p1.m9" class="ltx_Math" alttext="\mathcal{K}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒦</mi></math>, and by <math id="p1.m10" class="ltx_Math" alttext="\mathrm{GL}_{n}(\mathcal{K})" display="inline"><mrow><msub><mi>GL</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒦</mi><mo stretchy="false">)</mo></mrow></mrow></math> the set of all
+invertible elements of <math id="p1.m11" class="ltx_Math" alttext="\mathrm{M}_{n}(\mathcal{K})" display="inline"><mrow><msub><mi mathvariant="normal">M</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒦</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Let <math id="p1.m12" class="ltx_Math" alttext="d_{i}" display="inline"><msub><mi>d</mi><mi>i</mi></msub></math> be the function
+which extracts the <math id="p1.m13" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>th diagonal element of a matrix, i.e., <math id="p1.m14" class="ltx_Math" alttext="d_{i}(A)=\mathbf{e}_{i}^{\mathrm{T}}\!A\mathbf{e}_{i}" display="inline"><mrow><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mpadded width="-1.7pt"><msubsup><mi>𝐞</mi><mi>i</mi><mi mathvariant="normal">T</mi></msubsup></mpadded><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msub><mi>𝐞</mi><mi>i</mi></msub></mrow></mrow></math>.</p>
+</div>
+<div id="Thmtheoremx1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem</span>.</h6>
+<div id="Thmtheoremx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheoremx1.p1.m1" class="ltx_Math" alttext="\mathcal{K}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">K</mi></math> be a field, let <math id="Thmtheoremx1.p1.m2" class="ltx_Math" alttext="A_{1},\ldots,A_{r}\in\mathrm{M}_{n}(\mathcal{K})" display="inline"><mrow><mrow><msub><mi>A</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>A</mi><mi>r</mi></msub></mrow><mo mathvariant="normal">∈</mo><mrow><msub><mi mathvariant="normal">M</mi><mi>n</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">K</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>
+be pairwise commuting matrices, and let <math id="Thmtheoremx1.p1.m3" class="ltx_Math" alttext="\mathcal{L}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">L</mi></math> be a field extension
+of <math id="Thmtheoremx1.p1.m4" class="ltx_Math" alttext="\mathcal{K}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">K</mi></math> in which the characteristic polynomials of all <math id="Thmtheoremx1.p1.m5" class="ltx_Math" alttext="A_{k}" display="inline"><msub><mi>A</mi><mi>k</mi></msub></math>
+split (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/SplittingField</span>). Then there exists some
+<math id="Thmtheoremx1.p1.m6" class="ltx_Math" alttext="P\in\mathrm{GL}_{n}(\mathcal{L})" display="inline"><mrow><mi>P</mi><mo mathvariant="normal">∈</mo><mrow><msub><mi mathvariant="normal">GL</mi><mi>n</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">L</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> such that</span></p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">1.</span></span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="P^{-1}A_{k}P" display="inline"><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow></math><span class="ltx_text ltx_font_italic"> is upper triangular for all </span><math id="I1.i1.p1.m2" class="ltx_Math" alttext="k=1,\ldots,r" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>r</mi></mrow></mrow></math><span class="ltx_text ltx_font_italic">,
+</span><span class="ltx_text ltx_font_italic">and</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">2.</span></span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">if </span><math id="I1.i2.p1.m1" class="ltx_Math" alttext="i,j,l\in[n]" display="inline"><mrow><mrow><mi>i</mi><mo>,</mo><mi>j</mi><mo>,</mo><mi>l</mi></mrow><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></mrow></math><span class="ltx_text ltx_font_italic"> are such that </span><math id="I1.i2.p1.m2" class="ltx_Math" alttext="i\leqslant l\leqslant j" display="inline"><mrow><mi>i</mi><mo>⩽</mo><mi>l</mi><mo>⩽</mo><mi>j</mi></mrow></math><span class="ltx_text ltx_font_italic">
+and </span><math id="I1.i2.p1.m3" class="ltx_Math" alttext="d_{i}(P^{-1}A_{k}P)=d_{j}(P^{-1}A_{k}P)" display="inline"><mrow><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>d</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic"> for all
+</span><math id="I1.i2.p1.m4" class="ltx_Math" alttext="k=1,\ldots,r" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>r</mi></mrow></mrow></math><span class="ltx_text ltx_font_italic">, then </span><math id="I1.i2.p1.m5" class="ltx_Math" alttext="d_{l}(P^{-1}A_{k}P)=d_{j}(P^{-1}A_{k}P)" display="inline"><mrow><mrow><msub><mi>d</mi><mi>l</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>d</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic">
+for all </span><math id="I1.i2.p1.m6" class="ltx_Math" alttext="k=1,\ldots,r" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>r</mi></mrow></mrow></math><span class="ltx_text ltx_font_italic"> as well.</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The proof relies on two lemmas.</p>
+</div>
+<div id="Thmlemma1" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Lemma 1</span>.</h6>
+<div id="Thmlemma1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmlemma1.p1.m1" class="ltx_Math" alttext="\mathcal{K}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">K</mi></math> be a field, let <math id="Thmlemma1.p1.m2" class="ltx_Math" alttext="A_{1},\ldots,A_{r}\in\mathrm{M}_{n}(\mathcal{K})" display="inline"><mrow><mrow><msub><mi>A</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>A</mi><mi>r</mi></msub></mrow><mo mathvariant="normal">∈</mo><mrow><msub><mi mathvariant="normal">M</mi><mi>n</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">K</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>
+be pairwise commuting matrices, and let <math id="Thmlemma1.p1.m3" class="ltx_Math" alttext="\mathcal{L}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">L</mi></math> be a field extension
+of <math id="Thmlemma1.p1.m4" class="ltx_Math" alttext="\mathcal{K}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">K</mi></math> in which the characteristic polynomials of all <math id="Thmlemma1.p1.m5" class="ltx_Math" alttext="A_{k}" display="inline"><msub><mi>A</mi><mi>k</mi></msub></math>
+split. Then there exists some nonzero <math id="Thmlemma1.p1.m6" class="ltx_Math" alttext="\mathbf{u}\in\mathcal{L}^{n}" display="inline"><mrow><mi mathvariant="normal">u</mi><mo mathvariant="normal">∈</mo><msup><mi class="ltx_font_mathcaligraphic" mathvariant="normal">L</mi><mi>n</mi></msup></mrow></math> which
+is an eigenvector of <math id="Thmlemma1.p1.m7" class="ltx_Math" alttext="A_{k}" display="inline"><msub><mi>A</mi><mi>k</mi></msub></math> for all <math id="Thmlemma1.p1.m8" class="ltx_Math" alttext="k=1,\ldots,r" display="inline"><mrow><mi>k</mi><mo mathvariant="normal">=</mo><mrow><mn mathvariant="normal">1</mn><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><mi>r</mi></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div id="Thmlemma2" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Lemma 2</span>.</h6>
+<div id="Thmlemma2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For any sequence <math id="Thmlemma2.p1.m1" class="ltx_Math" alttext="R_{1},\ldots,R_{r}\in\mathrm{M}_{n}(\mathcal{L})" display="inline"><mrow><mrow><msub><mi>R</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>R</mi><mi>r</mi></msub></mrow><mo mathvariant="normal">∈</mo><mrow><msub><mi mathvariant="normal">M</mi><mi>n</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">L</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> of upper
+triangular pairwise commuting matrices and every row index
+<math id="Thmlemma2.p1.m2" class="ltx_Math" alttext="i\in[n]" display="inline"><mrow><mi>i</mi><mo mathvariant="normal">∈</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>n</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math>, there exists <math id="Thmlemma2.p1.m3" class="ltx_Math" alttext="\mathbf{v}\in\mathcal{L}^{n}\setminus\{0\}" display="inline"><mrow><mi mathvariant="normal">v</mi><mo mathvariant="normal">∈</mo><mrow><msup><mi class="ltx_font_mathcaligraphic" mathvariant="normal">L</mi><mi>n</mi></msup><mo mathvariant="normal">∖</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><mn mathvariant="normal">0</mn><mo mathvariant="normal" stretchy="false">}</mo></mrow></mrow></mrow></math>
+such that</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="R_{k}\mathbf{v}=d_{i}(R_{k})\mathbf{v}\quad\text{for all \(k\in[r]\).}" display="block"><mrow><mrow><msub><mi>R</mi><mi>k</mi></msub><mo>⁢</mo><mi>𝐯</mi></mrow><mo>=</mo><mrow><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>R</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>𝐯</mi></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mtext mathvariant="italic">for all </mtext><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow></mrow><mtext mathvariant="italic">.</mtext></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">This is by induction on <math id="p3.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. The induction hypothesis is that given
+pairwise commuting matrices <math id="p3.m2" class="ltx_Math" alttext="A_{1},\ldots,A_{r}\in\mathrm{M}_{n}(\mathcal{L})" display="inline"><mrow><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>A</mi><mi>r</mi></msub></mrow><mo>∈</mo><mrow><msub><mi mathvariant="normal">M</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">ℒ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,
+whose characteristic polynomials all split in <math id="p3.m3" class="ltx_Math" alttext="\mathcal{L}" display="inline"><mi class="ltx_font_mathcaligraphic">ℒ</mi></math>, and a
+sequence of arbitrary scalars <math id="p3.m4" class="ltx_Math" alttext="\mu_{1},\ldots,\mu_{r}\in\mathcal{L}" display="inline"><mrow><mrow><msub><mi>μ</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>μ</mi><mi>r</mi></msub></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℒ</mi></mrow></math>,
+there exists some <math id="p3.m5" class="ltx_Math" alttext="P\in\mathrm{GL}_{n}(\mathcal{L})" display="inline"><mrow><mi>P</mi><mo>∈</mo><mrow><msub><mi>GL</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">ℒ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> such that:</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="P^{-1}A_{k}P" display="inline"><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow></math> is upper triangular for all <math id="I2.i1.p1.m2" class="ltx_Math" alttext="k=1,\ldots,r" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>r</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">If some <math id="I2.i2.p1.m1" class="ltx_Math" alttext="i,j\in[n]" display="inline"><mrow><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></mrow></math> are such that <math id="I2.i2.p1.m2" class="ltx_Math" alttext="i&lt;j" display="inline"><mrow><mi>i</mi><mo>&lt;</mo><mi>j</mi></mrow></math> and
+<math id="I2.i2.p1.m3" class="ltx_Math" alttext="d_{j}(P^{-1}A_{k}P)=d_{i}(P^{-1}A_{k}P)" display="inline"><mrow><mrow><msub><mi>d</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="I2.i2.p1.m4" class="ltx_Math" alttext="k\in[r]" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow></mrow></math>,
+then <math id="I2.i2.p1.m5" class="ltx_Math" alttext="d_{i+1}(P^{-1}A_{k}P)=d_{i}(P^{-1}A_{k}P)" display="inline"><mrow><mrow><msub><mi>d</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">If some <math id="I2.i3.p1.m1" class="ltx_Math" alttext="j\in[n]" display="inline"><mrow><mi>j</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></mrow></math> is such that <math id="I2.i3.p1.m2" class="ltx_Math" alttext="d_{j}(P^{-1}A_{k}P)=\mu_{k}" display="inline"><mrow><mrow><msub><mi>d</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>μ</mi><mi>k</mi></msub></mrow></math>
+for all <math id="I2.i3.p1.m3" class="ltx_Math" alttext="k\in[r]" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow></mrow></math>, then <math id="I2.i3.p1.m4" class="ltx_Math" alttext="d_{1}(P^{-1}A_{k}P)=\mu_{k}" display="inline"><mrow><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>μ</mi><mi>k</mi></msub></mrow></math>
+for all <math id="I2.i3.p1.m5" class="ltx_Math" alttext="k\in[r]" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">For <math id="p3.m6" class="ltx_Math" alttext="n=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math> this hypothesis is trivially fulfilled (all <math id="p3.m7" class="ltx_Math" alttext="1\times 1" display="inline"><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow></math>
+matrices are upper triangular). Assume that it holds for <math id="p3.m8" class="ltx_Math" alttext="n=m" display="inline"><mrow><mi>n</mi><mo>=</mo><mi>m</mi></mrow></math> and
+consider the case <math id="p3.m9" class="ltx_Math" alttext="n=m+1" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">It is easy to see that condition <a href="#I2.i1" title="1. ‣ simultaneous triangularisation of commuting matrices over any field" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a> implies
+that <math id="p4.m1" class="ltx_Math" alttext="P\mathbf{e}_{1}" display="inline"><mrow><mi>P</mi><mo>⁢</mo><msub><mi>𝐞</mi><mn>1</mn></msub></mrow></math> must be an eigenvector that is common to all the
+matrices. If there exists a nonzero vector <math id="p4.m2" class="ltx_Math" alttext="\mathbf{u}_{1}\in\mathcal{L}^{n}" display="inline"><mrow><msub><mi>𝐮</mi><mn>1</mn></msub><mo>∈</mo><msup><mi class="ltx_font_mathcaligraphic">ℒ</mi><mi>n</mi></msup></mrow></math>
+such that <math id="p4.m3" class="ltx_Math" alttext="A_{k}\mathbf{u}_{1}=\mu_{k}\mathbf{u}_{1}" display="inline"><mrow><mrow><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow><mo>=</mo><mrow><msub><mi>μ</mi><mi>k</mi></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow></mrow></math> for all <math id="p4.m4" class="ltx_Math" alttext="k=1,\ldots,r" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>r</mi></mrow></mrow></math>
+then this is such a common eigenvector, and in that case let
+<math id="p4.m5" class="ltx_Math" alttext="\lambda_{k}=\mu_{k}" display="inline"><mrow><msub><mi>λ</mi><mi>k</mi></msub><mo>=</mo><msub><mi>μ</mi><mi>k</mi></msub></mrow></math> for all <math id="p4.m6" class="ltx_Math" alttext="k=1,\ldots,r" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>r</mi></mrow></mrow></math>. Otherwise there by
+Lemma <a href="#Thmlemma1" title="Lemma 1. ‣ simultaneous triangularisation of commuting matrices over any field" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a> exists a vector
+<math id="p4.m7" class="ltx_Math" alttext="\mathbf{u}_{1}\in\mathcal{L}^{n}\setminus\{\mathbf{0}\}" display="inline"><mrow><msub><mi>𝐮</mi><mn>1</mn></msub><mo>∈</mo><mrow><msup><mi class="ltx_font_mathcaligraphic">ℒ</mi><mi>n</mi></msup><mo>∖</mo><mrow><mo stretchy="false">{</mo><mn>𝟎</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></math> such that
+<math id="p4.m8" class="ltx_Math" alttext="A_{k}\mathbf{u}_{1}=\lambda_{k}\mathbf{u}_{1}" display="inline"><mrow><mrow><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow><mo>=</mo><mrow><msub><mi>λ</mi><mi>k</mi></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow></mrow></math> for some
+<math id="p4.m9" class="ltx_Math" alttext="\{\lambda_{k}\}_{k=1}^{r}\subseteq\mathcal{L}" display="inline"><mrow><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>λ</mi><mi>k</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>r</mi></msubsup><mo>⊆</mo><mi class="ltx_font_mathcaligraphic">ℒ</mi></mrow></math>. Either way, one gets a
+suitable candidate <math id="p4.m10" class="ltx_Math" alttext="\mathbf{u}_{1}" display="inline"><msub><mi>𝐮</mi><mn>1</mn></msub></math> for <math id="p4.m11" class="ltx_Math" alttext="P\mathbf{e}_{1}" display="inline"><mrow><mi>P</mi><mo>⁢</mo><msub><mi>𝐞</mi><mn>1</mn></msub></mrow></math> and eigenvalues
+<math id="p4.m12" class="ltx_Math" alttext="\lambda_{1},\ldots,\lambda_{r}" display="inline"><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>λ</mi><mi>r</mi></msub></mrow></math> that incidentally will satisfy
+<math id="p4.m13" class="ltx_Math" alttext="d_{1}(P^{-1}A_{k}P)=\lambda_{k}" display="inline"><mrow><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>λ</mi><mi>k</mi></msub></mrow></math> for all <math id="p4.m14" class="ltx_Math" alttext="k\in[r]" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Let <math id="p5.m1" class="ltx_Math" alttext="\mathbf{u}_{2},\ldots,\mathbf{u}_{n}\in\mathcal{L}^{n}" display="inline"><mrow><mrow><msub><mi>𝐮</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>𝐮</mi><mi>n</mi></msub></mrow><mo>∈</mo><msup><mi class="ltx_font_mathcaligraphic">ℒ</mi><mi>n</mi></msup></mrow></math> be arbitrary
+vectors such that <math id="p5.m2" class="ltx_Math" alttext="\{\mathbf{u}_{i}\}_{i=1}^{n}" display="inline"><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>𝐮</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup></math> is a basis of
+<math id="p5.m3" class="ltx_Math" alttext="\mathcal{L}^{n}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">ℒ</mi><mi>n</mi></msup></math>. Let <math id="p5.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> be the <math id="p5.m5" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrix whose <math id="p5.m6" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>th column
+is <math id="p5.m7" class="ltx_Math" alttext="\mathbf{u}_{i}" display="inline"><msub><mi>𝐮</mi><mi>i</mi></msub></math> for <math id="p5.m8" class="ltx_Math" alttext="1\leqslant i\leqslant n" display="inline"><mrow><mn>1</mn><mo>⩽</mo><mi>i</mi><mo>⩽</mo><mi>n</mi></mrow></math>.<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>By
+imposing extra conditions on the choice of the basis
+<math id="p5.m9" class="ltx_Math" alttext="\{\mathbf{u}_{i}\}_{i=1}^{n}" display="inline"><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>𝐮</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup></math> (such as for example requesting that
+it is orthonormal) at this point, one can often prove a stronger
+claim where the choice of <math id="p5.m10" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is restricted to some smaller
+group of matrices (for example the group of orthogonal
+matrices), but this requires assuming additional things about
+the fields <math id="p5.m11" class="ltx_Math" alttext="\mathcal{K}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒦</mi></math> and <math id="p5.m12" class="ltx_Math" alttext="\mathcal{L}" display="inline"><mi class="ltx_font_mathcaligraphic">ℒ</mi></math>.</span></span></span>
+Then <math id="p5.m13" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is invertible and for each <math id="p5.m14" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> the first column of
+<math id="p5.m15" class="ltx_Math" alttext="B_{k}=U^{-1}A_{k}U" display="inline"><mrow><msub><mi>B</mi><mi>k</mi></msub><mo>=</mo><mrow><msup><mi>U</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>U</mi></mrow></mrow></math> is</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="U^{-1}A_{k}U\mathbf{e}_{1}=U^{-1}A_{k}\mathbf{u}_{1}=\lambda_{k}U^{-1}\mathbf{%
+u}_{1}=\lambda_{k}\mathbf{e}_{1}\text{.}" display="block"><mrow><mrow><msup><mi>U</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>U</mi><mo>⁢</mo><msub><mi>𝐞</mi><mn>1</mn></msub></mrow><mo>=</mo><mrow><msup><mi>U</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow><mo>=</mo><mrow><msub><mi>λ</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>U</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow><mo>=</mo><mrow><msub><mi>λ</mi><mi>k</mi></msub><mo>⁢</mo><msub><mi>𝐞</mi><mn>1</mn></msub><mo>⁢</mo><mtext>.</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Furthermore</p>
+<table class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="p5.m16" class="ltx_Math" alttext="\displaystyle B_{j}B_{k}=U^{-1}A_{j}UU^{-1}A_{k}U=U^{-1}A_{j}A_{k}U=\\
+\displaystyle=U^{-1}A_{k}A_{j}U=U^{-1}A_{k}UU^{-1}A_{j}U=B_{k}B_{j}" display="block"><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><msub><mi>B</mi><mi>j</mi></msub><mo>⁢</mo><msub><mi>B</mi><mi>k</mi></msub></mrow><mo>=</mo><mrow><msup><mi>U</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>j</mi></msub><mo>⁢</mo><mi>U</mi><mo>⁢</mo><msup><mi>U</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>U</mi></mrow><mo>=</mo><mrow><msup><mi>U</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>j</mi></msub><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>U</mi></mrow><mo>=</mo><mi></mi></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mi></mi><mo>=</mo><mrow><msup><mi>U</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><msub><mi>A</mi><mi>j</mi></msub><mo>⁢</mo><mi>U</mi></mrow><mo>=</mo><mrow><msup><mi>U</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>U</mi><mo>⁢</mo><msup><mi>U</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>j</mi></msub><mo>⁢</mo><mi>U</mi></mrow><mo>=</mo><mrow><msub><mi>B</mi><mi>k</mi></msub><mo>⁢</mo><msub><mi>B</mi><mi>j</mi></msub></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all <math id="p5.m17" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> and <math id="p5.m18" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Now let <math id="p6.m1" class="ltx_Math" alttext="A_{k}^{\prime}" display="inline"><msubsup><mi>A</mi><mi>k</mi><mo>′</mo></msubsup></math> be the matrix formed from rows and columns <math id="p6.m2" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math> though
+<math id="p6.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> of <math id="p6.m4" class="ltx_Math" alttext="B_{k}" display="inline"><msub><mi>B</mi><mi>k</mi></msub></math>. Since <math id="p6.m5" class="ltx_Math" alttext="\det(A_{k}-\nobreak xI)=\det(B_{k}-\nobreak xI)=(\lambda_{k}-\nobreak x)\det(A%
+_{k}^{\prime}-\nobreak xI)" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>A</mi><mi>k</mi></msub><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>B</mi><mi>k</mi></msub><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>λ</mi><mi>k</mi></msub><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>A</mi><mi>k</mi><mo>′</mo></msubsup><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> by
+expansion (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/LaplaceExpansion</span>) along the first column,
+it follows that the characteristic polynomial of <math id="p6.m6" class="ltx_Math" alttext="A_{k}^{\prime}" display="inline"><msubsup><mi>A</mi><mi>k</mi><mo>′</mo></msubsup></math> splits in
+<math id="p6.m7" class="ltx_Math" alttext="\mathcal{L}" display="inline"><mi class="ltx_font_mathcaligraphic">ℒ</mi></math>. Furthermore all the <math id="p6.m8" class="ltx_Math" alttext="A_{k}^{\prime}" display="inline"><msubsup><mi>A</mi><mi>k</mi><mo>′</mo></msubsup></math> have side <math id="p6.m9" class="ltx_Math" alttext="m=n-1" display="inline"><mrow><mi>m</mi><mo>=</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mrow></math> and
+commute pairwise with each other, whence by the induction hypothesis
+there exists some <math id="p6.m10" class="ltx_Math" alttext="P^{\prime}\in\mathrm{GL}_{n-1}(\mathcal{L})" display="inline"><mrow><msup><mi>P</mi><mo>′</mo></msup><mo>∈</mo><mrow><msub><mi>GL</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">ℒ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> such that every
+<math id="p6.m11" class="ltx_Math" alttext="P^{\prime-1}A_{k}^{\prime}P^{\prime}" display="inline"><mrow><msup><mi>P</mi><mrow><mo mathsize="142%" stretchy="false">′</mo><mo>⁣</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></msup><mo>⁢</mo><msubsup><mi>A</mi><mi>k</mi><mo>′</mo></msubsup><mo>⁢</mo><msup><mi>P</mi><mo>′</mo></msup></mrow></math> is upper triangular. Let <math id="p6.m12" class="ltx_Math" alttext="P=U\left(\begin{smallmatrix}1&amp;0\\
+0&amp;P^{\prime}\end{smallmatrix}\right)" display="inline"><mrow><mi>P</mi><mo>=</mo><mrow><mi>U</mi><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn mathsize="70%">1</mn></mtd><mtd columnalign="center"><mn mathsize="70%">0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn mathsize="70%">0</mn></mtd><mtd columnalign="center"><msup><mi mathsize="70%">P</mi><mo mathsize="70%" stretchy="false">′</mo></msup></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow></math>. Then the submatrix consisting of rows and columns <math id="p6.m13" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math> through
+<math id="p6.m14" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> of <math id="p6.m15" class="ltx_Math" alttext="P^{-1}A_{k}P" display="inline"><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow></math> is equal to <math id="p6.m16" class="ltx_Math" alttext="P^{\prime-1}A_{k}^{\prime}P^{\prime}" display="inline"><mrow><msup><mi>P</mi><mrow><mo mathsize="142%" stretchy="false">′</mo><mo>⁣</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></msup><mo>⁢</mo><msubsup><mi>A</mi><mi>k</mi><mo>′</mo></msubsup><mo>⁢</mo><msup><mi>P</mi><mo>′</mo></msup></mrow></math> and hence
+contains no nonzero subdiagonal elements. Furthermore the first
+column of <math id="p6.m17" class="ltx_Math" alttext="P^{-1}A_{k}P" display="inline"><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow></math> is equal to the first column of <math id="p6.m18" class="ltx_Math" alttext="B_{k}" display="inline"><msub><mi>B</mi><mi>k</mi></msub></math> and
+thus the <math id="p6.m19" class="ltx_Math" alttext="P^{-1}A_{k}P" display="inline"><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow></math> are all upper triangular, as claimed.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">It also follows from the induction hypothesis that <math id="p7.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> can be chosen
+such that <math id="p7.m2" class="ltx_Math" alttext="d_{2}(P^{-1}A_{k}P)=d_{1}(P^{\prime-1}A_{k}^{\prime}P^{\prime})=\lambda_{k}=d_%
+{1}(P^{-1}A_{k}P)" display="inline"><mrow><mrow><msub><mi>d</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo mathsize="142%" stretchy="false">′</mo><mo>⁣</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></msup><mo>⁢</mo><msubsup><mi>A</mi><mi>k</mi><mo>′</mo></msubsup><mo>⁢</mo><msup><mi>P</mi><mo>′</mo></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>λ</mi><mi>k</mi></msub><mo>=</mo><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="p7.m3" class="ltx_Math" alttext="k\in[r]" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow></mrow></math> if there is any <math id="p7.m4" class="ltx_Math" alttext="j\geqslant 2" display="inline"><mrow><mi>j</mi><mo>⩾</mo><mn>2</mn></mrow></math> for which <math id="p7.m5" class="ltx_Math" alttext="d_{j}(P^{-1}A_{k}P)=d_{j-1}(P^{\prime-1}A_{k}^{\prime}P^{\prime})=\lambda_{k}=%
+d_{1}(P^{-1}A_{k}P)" display="inline"><mrow><mrow><msub><mi>d</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>d</mi><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo mathsize="142%" stretchy="false">′</mo><mo>⁣</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></msup><mo>⁢</mo><msubsup><mi>A</mi><mi>k</mi><mo>′</mo></msubsup><mo>⁢</mo><msup><mi>P</mi><mo>′</mo></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>λ</mi><mi>k</mi></msub><mo>=</mo><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="p7.m6" class="ltx_Math" alttext="k\in[r]" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow></mrow></math> and
+more generally if <math id="p7.m7" class="ltx_Math" alttext="2\leqslant i&lt;j" display="inline"><mrow><mn>2</mn><mo>⩽</mo><mi>i</mi><mo>&lt;</mo><mi>j</mi></mrow></math> are such that
+<math id="p7.m8" class="ltx_Math" alttext="d_{j}(P^{-1}A_{k}P)=d_{i}(P^{-1}A_{k}P)" display="inline"><mrow><mrow><msub><mi>d</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="p7.m9" class="ltx_Math" alttext="k\in[r]" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow></mrow></math>
+then similarly <math id="p7.m10" class="ltx_Math" alttext="d_{i+1}(P^{-1}A_{k}P)=d_{i}(P^{-1}A_{k}P)" display="inline"><mrow><mrow><msub><mi>d</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+for all <math id="p7.m11" class="ltx_Math" alttext="k\in[r]" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow></mrow></math>. This has verified
+condition <a href="#I2.i2" title="2. ‣ simultaneous triangularisation of commuting matrices over any field" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> of the induction hypothesis.
+For the remaining condition <a href="#I2.i3" title="3. ‣ simultaneous triangularisation of commuting matrices over any field" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>, one may first observe
+that if there is some <math id="p7.m12" class="ltx_Math" alttext="i\in[n]" display="inline"><mrow><mi>i</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></mrow></math> such that <math id="p7.m13" class="ltx_Math" alttext="d_{i}(P^{-1}A_{k}P)=\mu_{k}" display="inline"><mrow><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>μ</mi><mi>k</mi></msub></mrow></math> for all <math id="p7.m14" class="ltx_Math" alttext="k\in[r]" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow></mrow></math> then by Lemma <a href="#Thmlemma2" title="Lemma 2. ‣ simultaneous triangularisation of commuting matrices over any field" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>
+there exists a nonzero <math id="p7.m15" class="ltx_Math" alttext="\mathbf{v}\in\mathcal{L}^{n}" display="inline"><mrow><mi>𝐯</mi><mo>∈</mo><msup><mi class="ltx_font_mathcaligraphic">ℒ</mi><mi>n</mi></msup></mrow></math> such that
+<math id="p7.m16" class="ltx_Math" alttext="P^{-1}A_{k}P\mathbf{v}=\mu_{k}\mathbf{v}" display="inline"><mrow><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mi>𝐯</mi></mrow><mo>=</mo><mrow><msub><mi>μ</mi><mi>k</mi></msub><mo>⁢</mo><mi>𝐯</mi></mrow></mrow></math> for all <math id="p7.m17" class="ltx_Math" alttext="k\in[r]" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow></mrow></math>. This
+means <math id="p7.m18" class="ltx_Math" alttext="P\mathbf{v}" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mi>𝐯</mi></mrow></math> will fulfill the condition for choice of
+<math id="p7.m19" class="ltx_Math" alttext="\mathbf{u}_{1}" display="inline"><msub><mi>𝐮</mi><mn>1</mn></msub></math>, and hence <math id="p7.m20" class="ltx_Math" alttext="d_{1}(P^{-1}A_{k}P)=\lambda_{k}=\mu_{k}" display="inline"><mrow><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>λ</mi><mi>k</mi></msub><mo>=</mo><msub><mi>μ</mi><mi>k</mi></msub></mrow></math> as
+claimed.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">The theorem now follows from the principle of induction.
+∎</p>
+</div>
+</div>
+<div id="p9" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">simultaneous triangularisation of commuting matrices over any field</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SimultaneousTriangularisationOfCommutingMatricesOverAnyField</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:29:38</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:29:38</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">lars_h (9802)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">lars_h (9802)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">lars_h (9802)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A21</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">CommutingMatrices</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:26:54 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

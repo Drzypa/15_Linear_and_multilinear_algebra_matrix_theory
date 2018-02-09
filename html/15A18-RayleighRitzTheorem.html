@@ -1,0 +1,503 @@
+<!DOCTYPE html><html>
+<head>
+<title>Rayleigh-Ritz theorem</title>
+<!--Generated on Fri Feb  9 18:26:25 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Rayleigh-Ritz theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="A\in\mathbf{C}^{n\times n}" display="inline"><mrow><mi>A</mi><mo>∈</mo><msup><mi>𝐂</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow></math> be a Hermitian matrix. Then its
+eigenvectors are the critical points (vectors) of the ”Rayleigh quotient”,
+which is the real function <math id="p1.m2" class="ltx_Math" alttext="R:\mathbb{C}^{n}\backslash\{\mathbf{0}\}\rightarrow\mathbb{R}" display="inline"><mrow><mi>R</mi><mo>:</mo><mrow><mrow><msup><mi>ℂ</mi><mi>n</mi></msup><mo>\</mo><mrow><mo stretchy="false">{</mo><mn>𝟎</mn><mo stretchy="false">}</mo></mrow></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="R(\mathbf{x})=\frac{\mathbf{x}^{H}A\mathbf{x}}{\mathbf{x}^{H}\mathbf{x}},\|%
+\mathbf{x}\|\neq 0" display="block"><mrow><mrow><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow></mfrac></mrow><mo>,</mo><mrow><mrow><mo>∥</mo><mi>𝐱</mi><mo>∥</mo></mrow><mo>≠</mo><mn>0</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">and its eigenvalues are its values at such critical points.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">As a consequence, we have:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\lambda_{max}=\max_{\|\mathbf{x}\|\neq 0}\frac{\mathbf{x}^{H}A\mathbf{x}}{%
+\mathbf{x}^{H}\mathbf{x}}" display="block"><mrow><msub><mi>λ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow></msub><mo>=</mo><mrow><munder><mi>max</mi><mrow><mrow><mo>∥</mo><mi>𝐱</mi><mo>∥</mo></mrow><mo>≠</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mfrac><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\lambda_{min}=\min_{\|\mathbf{x}\|\neq 0}\frac{\mathbf{x}^{H}A\mathbf{x}}{%
+\mathbf{x}^{H}\mathbf{x}}" display="block"><mrow><msub><mi>λ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>=</mo><mrow><munder><mi>min</mi><mrow><mrow><mo>∥</mo><mi>𝐱</mi><mo>∥</mo></mrow><mo>≠</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mfrac><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Proof:</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">First of all, let’s observe that for a hermitian matrix, the number <math id="p5.m1" class="ltx_Math" alttext="\mathbf{x}^{H}A\mathbf{x}" display="inline"><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow></math> is a real one (actually, <math id="p5.m2" class="ltx_Math" alttext="&lt;\mathbf{x},A\mathbf{x}&gt;=" display="inline"><mrow><mo>&lt;</mo><mi>𝐱</mi><mo>,</mo><mi>A</mi><mi>𝐱</mi><mo>≥</mo></mrow></math> <math id="p5.m3" class="ltx_Math" alttext="\mathbf{x}^{H}A\mathbf{x=(}A^{H}\mathbf{x)}^{H}\mathbf{x=(}A\mathbf{x)}^{H}%
+\mathbf{x=}&lt;A\mathbf{x},\mathbf{x&gt;=}&lt;\mathbf{x},A\mathbf{x&gt;}^{\ast}" display="inline"><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mi>A</mi><mi>𝐱</mi><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>A</mi><mi>H</mi></msup><mi>𝐱</mi><mo stretchy="false">)</mo></mrow><mi>H</mi></msup><mi>𝐱</mi><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mi>A</mi><mi>𝐱</mi><mo stretchy="false">)</mo></mrow><mi>H</mi></msup><mi>𝐱</mi><mo>=</mo><mo>&lt;</mo><mi>A</mi><mi>𝐱</mi><mo>,</mo><mi>𝐱</mi><mo>≥</mo><mo>&lt;</mo><mi>𝐱</mi><mo>,</mo><mi>A</mi><mi>𝐱</mi><msup><mo>&gt;</mo><mo>∗</mo></msup></mrow></math>,
+whence <math id="p5.m4" class="ltx_Math" alttext="&lt;\mathbf{x},A\mathbf{x&gt;=x}^{H}A\mathbf{x}" display="inline"><mrow><mrow><mi></mi><mo>&lt;</mo><mi>𝐱</mi></mrow><mo>,</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo>≥</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow></mrow></mrow></math> is real), so that the
+Rayleigh quotient is real as well.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Let’s now compute the critical points <math id="p6.m1" class="ltx_Math" alttext="\overline{\mathbf{x}}" display="inline"><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover></math> of the
+Rayleigh quotient, i.e. let’s solve the equations system <math id="p6.m2" class="ltx_Math" alttext="\frac{dR(\overline{\mathbf{x}})}{d\mathbf{x}}=\mathbf{0}^{T}" display="inline"><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>𝐱</mi></mrow></mfrac><mo>=</mo><msup><mn>𝟎</mn><mi>T</mi></msup></mrow></math>. Let’s write <math id="p6.m3" class="ltx_Math" alttext="\mathbf{x=x}^{(R)}+j\mathbf{x}^{(I)}" display="inline"><mrow><mi>𝐱</mi><mo>=</mo><mrow><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></msup><mo>+</mo><mrow><mi>j</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mrow></mrow></math>, <math id="p6.m4" class="ltx_Math" alttext="\mathbf{x}^{(R)}" display="inline"><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></msup></math> and <math id="p6.m5" class="ltx_Math" alttext="\mathbf{x}^{(I)}" display="inline"><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></msup></math> being
+respectively the real and imaginary part of <math id="p6.m6" class="ltx_Math" alttext="\mathbf{x}" display="inline"><mi>𝐱</mi></math>. We have:</p>
+</div>
+<div id="p7" class="ltx_para">
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\frac{dR(\mathbf{x})}{d\mathbf{x}}=\frac{dR(\mathbf{x})}{d\mathbf{x}^{(R)}}+j%
+\frac{dR(\mathbf{x})}{d\mathbf{x}^{(I)}}" display="block"><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>𝐱</mi></mrow></mfrac><mo>=</mo><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac><mo>+</mo><mrow><mi>j</mi><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">so that we must have:</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\frac{dR(\overline{\mathbf{x}})}{d\mathbf{x}^{(R)}}=\frac{dR(\overline{\mathbf%
+{x}})}{d\mathbf{x}^{(I)}}=\mathbf{0}^{T}" display="block"><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac><mo>=</mo><msup><mn>𝟎</mn><mi>T</mi></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Using derivatives rules, we obtain:</p>
+</div>
+<div id="p10" class="ltx_para">
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle\frac{dR(\mathbf{x})}{d\mathbf{x}^{(R)}}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle\frac{d}{d\mathbf{x}^{(R)}}\left(\frac{\mathbf{x}^{H}A\mathbf{x}}%
+{\mathbf{x}^{H}\mathbf{x}}\right)=\frac{\frac{d\left(\mathbf{x}^{H}A\mathbf{x}%
+\right)}{d\mathbf{x}^{(R)}}\mathbf{x}^{H}\mathbf{x-x}^{H}A\mathbf{x}\frac{d%
+\left(\mathbf{x}^{H}\mathbf{x}\right)}{d\mathbf{x}^{(R)}}}{\left(\mathbf{x}^{H%
+}\mathbf{x}\right)^{2}}=\frac{\frac{d\left(\mathbf{x}^{H}A\mathbf{x}\right)}{d%
+\mathbf{x}^{(R)}}-R(\mathbf{x})\frac{d\left(\mathbf{x}^{H}\mathbf{x}\right)}{d%
+\mathbf{x}^{(R)}}}{\mathbf{x}^{H}\mathbf{x}}\text{.}" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow></mfrac></mstyle><mo>)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac><mo>⁢</mo><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>-</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac></mrow></mrow><msup><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow><mn>2</mn></msup></mfrac></mstyle><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac></mrow></mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow></mfrac></mstyle><mo>⁢</mo><mtext>.</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Applying matrix calculus rules, we find:</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle\frac{d\left(\mathbf{x}^{H}A\mathbf{x}\right)}{d\mathbf{x}^{(R)}}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle\mathbf{x}^{H}A\frac{d\mathbf{x}}{d\mathbf{x}^{(R)}}+\mathbf{x}^{%
+T}A^{T}\frac{d\mathbf{x}^{\ast}}{d\mathbf{x}^{(R)}}=\mathbf{x}^{H}A+\mathbf{x}%
+^{T}A^{T}=\mathbf{x}^{H}A+\left(\mathbf{x}^{H}A^{H}\right)^{\ast}=" display="inline"><mrow><mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><msup><mi>𝐱</mi><mi>T</mi></msup><mo>⁢</mo><msup><mi>A</mi><mi>T</mi></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mo>∗</mo></msup></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac></mstyle></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo>+</mo><mrow><msup><mi>𝐱</mi><mi>T</mi></msup><mo>⁢</mo><msup><mi>A</mi><mi>T</mi></msup></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo>+</mo><msup><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><msup><mi>A</mi><mi>H</mi></msup></mrow><mo>)</mo></mrow><mo>∗</mo></msup></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">and since <math id="p12.m1" class="ltx_Math" alttext="A=A^{H}" display="inline"><mrow><mi>A</mi><mo>=</mo><msup><mi>A</mi><mi>H</mi></msup></mrow></math>,</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="=\mathbf{x}^{H}A+\left(\mathbf{x}^{H}A\right)^{\ast}=2\Re\left(\mathbf{x}^{H}A%
+\right)\text{.}" display="block"><mrow><mi></mi><mo>=</mo><mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo>+</mo><msup><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo>)</mo></mrow><mo>∗</mo></msup></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mtext>.</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p">In a similar way, we get:</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\frac{d\left(\mathbf{x}^{H}\mathbf{x}\right)}{d\mathbf{x}^{(R)}}=2\Re\left(%
+\mathbf{x}^{H}\right)\text{.}" display="block"><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mi>𝐱</mi><mi>H</mi></msup><mo>)</mo></mrow></mrow><mo>⁢</mo><mtext>.</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">Substituting, we obtain:</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\frac{dR(\mathbf{x})}{d\mathbf{x}^{(R)}}=2\frac{\Re\left(\mathbf{x}^{H}A\right%
+)-R(\mathbf{x})\Re\left(\mathbf{x}^{H}\right)}{\mathbf{x}^{H}\mathbf{x}}" display="block"><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mfrac><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mi>𝐱</mi><mi>H</mi></msup><mo>)</mo></mrow></mrow></mrow></mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">and, after a transposition, equating to the null column vector,</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\displaystyle\mathbf{0}" display="inline"><mn>𝟎</mn></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex11.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex11.m3" class="ltx_Math" alttext="\displaystyle\left(\Re\left(\overline{\mathbf{x}}^{H}A\right)-R(\overline{%
+\mathbf{x}})\Re\left(\overline{\mathbf{x}}^{H}\right)\right)^{T}=" display="inline"><mrow><msup><mrow><mo>(</mo><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mi>H</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mi>H</mi></msup><mo>)</mo></mrow></mrow></mrow></mrow><mo>)</mo></mrow><mi>T</mi></msup><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex12.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex12.m3" class="ltx_Math" alttext="\displaystyle\Re\left(A^{T}\overline{\mathbf{x}}^{\ast}\right)-R(\overline{%
+\mathbf{x}})\Re\left(\overline{\mathbf{x}}^{\ast}\right)=\Re\left((A^{H}%
+\overline{\mathbf{x}}\mathbf{)}^{\ast}\right)-R(\overline{\mathbf{x}})\Re\left%
+(\overline{\mathbf{x}}^{\ast}\right)=" display="inline"><mrow><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mi>A</mi><mi>T</mi></msup><mo>⁢</mo><msup><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo>∗</mo></msup></mrow><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo>∗</mo></msup><mo>)</mo></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>A</mi><mi>H</mi></msup><mo>⁢</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>∗</mo></msup><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo>∗</mo></msup><mo>)</mo></mrow></mrow></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex13.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex13.m3" class="ltx_Math" alttext="\displaystyle\Re\left((A\overline{\mathbf{x}}\mathbf{)}^{\ast}\right)-R(%
+\overline{\mathbf{x}})\Re\left(\overline{\mathbf{x}}^{\ast}\right)=\Re(A%
+\overline{\mathbf{x}}\mathbf{)}-R(\overline{\mathbf{x}})\Re\left(\overline{%
+\mathbf{x}}\right)" display="inline"><mrow><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>∗</mo></msup><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo>∗</mo></msup><mo>)</mo></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo>)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<br class="ltx_break">
+<p class="ltx_p">and, since <math id="p15.m1" class="ltx_Math" alttext="R(\mathbf{x})" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></math> is real,</p>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="\Re(A\overline{\mathbf{x}}-R(\overline{\mathbf{x}})\overline{\mathbf{x}}%
+\mathbf{)=0}" display="block"><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover></mrow><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>𝟎</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p16" class="ltx_para">
+<p class="ltx_p">Let’s then evaluate <math id="p16.m1" class="ltx_Math" alttext="\frac{dR(\mathbf{x})}{d\mathbf{x}^{(I)}}" display="inline"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac></math>:</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex15.m1" class="ltx_Math" alttext="\displaystyle\frac{dR(\mathbf{x})}{d\mathbf{x}^{(I)}}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex15.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex15.m3" class="ltx_Math" alttext="\displaystyle\frac{d}{d\mathbf{x}^{(I)}}\left(\frac{\mathbf{x}^{H}A\mathbf{x}}%
+{\mathbf{x}^{H}\mathbf{x}}\right)=\frac{\frac{d\left(\mathbf{x}^{H}A\mathbf{x}%
+\right)}{d\mathbf{x}^{(I)}}\mathbf{x}^{H}\mathbf{x-x}^{H}A\mathbf{x}\frac{d%
+\left(\mathbf{x}^{H}\mathbf{x}\right)}{d\mathbf{x}^{(I)}}}{\left(\mathbf{x}^{H%
+}\mathbf{x}\right)^{2}}=\frac{\frac{d\left(\mathbf{x}^{H}A\mathbf{x}\right)}{d%
+\mathbf{x}^{(I)}}-R(\mathbf{x})\frac{d\left(\mathbf{x}^{H}\mathbf{x}\right)}{d%
+\mathbf{x}^{(I)}}}{\mathbf{x}^{H}\mathbf{x}}\text{.}" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow></mfrac></mstyle><mo>)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac><mo>⁢</mo><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>-</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac></mrow></mrow><msup><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow><mn>2</mn></msup></mfrac></mstyle><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac></mrow></mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow></mfrac></mstyle><mo>⁢</mo><mtext>.</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p17" class="ltx_para">
+<p class="ltx_p">Applying again matrix calculus rules, we find:</p>
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex16" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex16.m1" class="ltx_Math" alttext="\displaystyle\frac{d\left(\mathbf{x}^{H}A\mathbf{x}\right)}{d\mathbf{x}^{(I)}}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex16.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex16.m3" class="ltx_Math" alttext="\displaystyle\mathbf{x}^{H}A\frac{d\mathbf{x}}{d\mathbf{x}^{(I)}}+\mathbf{x}^{%
+T}A^{T}\frac{d\mathbf{x}^{\ast}}{d\mathbf{x}^{(I)}}=j\mathbf{x}^{H}A-j\mathbf{%
+x}^{T}A^{T}=j(\mathbf{x}^{H}A-\left(\mathbf{x}^{H}A^{H}\right)^{\ast})=" display="inline"><mrow><mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><msup><mi>𝐱</mi><mi>T</mi></msup><mo>⁢</mo><msup><mi>A</mi><mi>T</mi></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mo>∗</mo></msup></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac></mstyle></mrow></mrow><mo>=</mo><mrow><mrow><mi>j</mi><mo>⁢</mo><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo>-</mo><mrow><mi>j</mi><mo>⁢</mo><msup><mi>𝐱</mi><mi>T</mi></msup><mo>⁢</mo><msup><mi>A</mi><mi>T</mi></msup></mrow></mrow><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo>-</mo><msup><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><msup><mi>A</mi><mi>H</mi></msup></mrow><mo>)</mo></mrow><mo>∗</mo></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p18" class="ltx_para">
+<p class="ltx_p">and since <math id="p18.m1" class="ltx_Math" alttext="A=A^{H}" display="inline"><mrow><mi>A</mi><mo>=</mo><msup><mi>A</mi><mi>H</mi></msup></mrow></math>,</p>
+<table id="S0.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex17.m1" class="ltx_Math" alttext="=j(\mathbf{x}^{H}A-\left(\mathbf{x}^{H}A\right)^{\ast})=j(2j\Im\left(\mathbf{x%
+}^{H}A\right))=-2\Im\left(\mathbf{x}^{H}A\right)\text{.}" display="block"><mrow><mi></mi><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo>-</mo><msup><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo>)</mo></mrow><mo>∗</mo></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo>)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mtext>.</mtext></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p19" class="ltx_para">
+<p class="ltx_p">In a similar way, we get:</p>
+<table id="S0.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex18.m1" class="ltx_Math" alttext="\frac{d\left(\mathbf{x}^{H}\mathbf{x}\right)}{d\mathbf{x}^{(I)}}=j\mathbf{x}^{%
+H}-j\mathbf{x}^{T}=j(\mathbf{x}^{H}-\left(\mathbf{x}^{H}\right)^{\ast})=j(2j%
+\Im(\mathbf{x}^{H}))=-2\Im\left(\mathbf{x}^{H}\right)\text{.}" display="block"><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac><mo>=</mo><mrow><mrow><mi>j</mi><mo>⁢</mo><msup><mi>𝐱</mi><mi>H</mi></msup></mrow><mo>-</mo><mrow><mi>j</mi><mo>⁢</mo><msup><mi>𝐱</mi><mi>T</mi></msup></mrow></mrow><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>-</mo><msup><mrow><mo>(</mo><msup><mi>𝐱</mi><mi>H</mi></msup><mo>)</mo></mrow><mo>∗</mo></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>j</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi>𝐱</mi><mi>H</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mi>𝐱</mi><mi>H</mi></msup><mo>)</mo></mrow></mrow><mo>⁢</mo><mtext>.</mtext></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p20" class="ltx_para">
+<p class="ltx_p">Substituting, we obtain:</p>
+<table id="S0.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex19.m1" class="ltx_Math" alttext="\frac{dR(\mathbf{x})}{d\mathbf{x}^{(I)}}=-2\frac{\Im\left(\mathbf{x}^{H}A%
+\right)-R(\mathbf{x})\Im\left(\mathbf{x}^{H}\right)}{\mathbf{x}^{H}\mathbf{x}}" display="block"><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>𝐱</mi><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mfrac><mo>=</mo><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mfrac><mrow><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mi>𝐱</mi><mi>H</mi></msup><mo>)</mo></mrow></mrow></mrow></mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow></mfrac></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p21" class="ltx_para">
+<p class="ltx_p">and, after a transposition, equating to the null column vector,</p>
+<table id="S0.EGx6" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex22" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex20.m1" class="ltx_Math" alttext="\displaystyle\mathbf{0}" display="inline"><mn>𝟎</mn></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex20.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex20.m3" class="ltx_Math" alttext="\displaystyle\left(\Im\left(\overline{\mathbf{x}}^{H}A\right)-R(\overline{%
+\mathbf{x}})\Im\left(\overline{\mathbf{x}}^{H}\right)\right)^{T}=" display="inline"><mrow><msup><mrow><mo>(</mo><mrow><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mi>H</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mi>H</mi></msup><mo>)</mo></mrow></mrow></mrow></mrow><mo>)</mo></mrow><mi>T</mi></msup><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex21.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex21.m3" class="ltx_Math" alttext="\displaystyle\Im\left(A^{T}\overline{\mathbf{x}}^{\ast}\right)-R(\overline{%
+\mathbf{x}})\Im\left(\overline{\mathbf{x}}^{\ast}\right)=\Im\left((A^{H}%
+\overline{\mathbf{x}}\mathbf{)}^{\ast}\right)-R(\overline{\mathbf{x}})\Im\left%
+(\overline{\mathbf{x}}^{\ast}\right)=" display="inline"><mrow><mrow><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mi>A</mi><mi>T</mi></msup><mo>⁢</mo><msup><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo>∗</mo></msup></mrow><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo>∗</mo></msup><mo>)</mo></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>A</mi><mi>H</mi></msup><mo>⁢</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>∗</mo></msup><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo>∗</mo></msup><mo>)</mo></mrow></mrow></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex22.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex22.m3" class="ltx_Math" alttext="\displaystyle\Im\left((A\overline{\mathbf{x}}\mathbf{)}^{\ast}\right)-R(%
+\overline{\mathbf{x}})\Im\left(\overline{\mathbf{x}}^{\ast}\right)=-\Im(A%
+\overline{\mathbf{x}}\mathbf{)}+R(\overline{\mathbf{x}})\Im\left(\overline{%
+\mathbf{x}}\right)" display="inline"><mrow><mrow><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>∗</mo></msup><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo>(</mo><msup><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo>∗</mo></msup><mo>)</mo></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo>(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo>)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p22" class="ltx_para">
+<p class="ltx_p">and, since <math id="p22.m1" class="ltx_Math" alttext="R(\mathbf{x})" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow></math> is real,</p>
+<table id="S0.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex23.m1" class="ltx_Math" alttext="\Im(A\overline{\mathbf{x}}-R(\overline{\mathbf{x}})\overline{\mathbf{x}}%
+\mathbf{)=0}" display="block"><mrow><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover></mrow><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>𝟎</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p23" class="ltx_para">
+<p class="ltx_p">In conclusion, we have that a stationary vector <math id="p23.m1" class="ltx_Math" alttext="\overline{\mathbf{x}}" display="inline"><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover></math> for
+the Rayleigh quotient satisfies the complex eigenvalue equation</p>
+<table id="S0.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex24.m1" class="ltx_Math" alttext="A\overline{\mathbf{x}}-R(\overline{\mathbf{x}})\overline{\mathbf{x}}=\mathbf{0}" display="block"><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover></mrow><mo>-</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>𝐱</mi><mo>¯</mo></mover></mrow></mrow><mo>=</mo><mn>𝟎</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p24" class="ltx_para">
+<p class="ltx_p">whence the thesis.<math id="p24.m1" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="p25" class="ltx_para">
+<p class="ltx_p">Remarks:</p>
+</div>
+<div id="p26" class="ltx_para">
+<p class="ltx_p">1) The two relations <math id="p26.m1" class="ltx_Math" alttext="\lambda_{\max}=\max_{\|\mathbf{x}\|\neq 0}\frac{\mathbf{x}^{H}A\mathbf{x}}{%
+\mathbf{x}^{H}\mathbf{x}}" display="inline"><mrow><msub><mi>λ</mi><mi>max</mi></msub><mo>=</mo><mrow><msub><mi>max</mi><mrow><mrow><mo>∥</mo><mi>𝐱</mi><mo>∥</mo></mrow><mo>≠</mo><mn>0</mn></mrow></msub><mo>⁡</mo><mfrac><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow></mfrac></mrow></mrow></math> and <math id="p26.m2" class="ltx_Math" alttext="\lambda_{\min}=\min_{\|\mathbf{x\|\neq 0}}\frac{\mathbf{x}^{H}A\mathbf{x}}{%
+\mathbf{x}^{H}\mathbf{x}}" display="inline"><mrow><msub><mi>λ</mi><mi>min</mi></msub><mo>=</mo><mrow><msub><mi>min</mi><mrow><mrow><mo>∥</mo><mi>𝐱</mi><mo>∥</mo></mrow><mo>≠</mo><mn>𝟎</mn></mrow></msub><mo>⁡</mo><mfrac><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow></mfrac></mrow></mrow></math> can also be obtained in a simpler way.
+By Schur’s canonical form theorem, any normal (and hence any hermitian)
+matrix is unitarily diagonalizable, i.e. a unitary matrix <math id="p26.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> exists such
+that <math id="p26.m4" class="ltx_Math" alttext="A=U\Lambda U^{H}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mi>U</mi><mo>⁢</mo><mi mathvariant="normal">Λ</mi><mo>⁢</mo><msup><mi>U</mi><mi>H</mi></msup></mrow></mrow></math> with <math id="p26.m5" class="ltx_Math" alttext="\Lambda=diag(\lambda_{1},\lambda_{2},\cdots,\lambda_{n})" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mn>1</mn></msub><mo>,</mo><msub><mi>λ</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">⋯</mi><mo>,</mo><msub><mi>λ</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. So, since all eigenvalues of a hermitian matrix are
+real, it’s possible to write:</p>
+<table id="S0.EGx7" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex26" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex25.m1" class="ltx_Math" alttext="\displaystyle\mathbf{x}^{H}A\mathbf{x}" display="inline"><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex25.m2" class="ltx_Math" alttext="\displaystyle\mathbf{=x}" display="inline"><mrow><mi></mi><mo>=</mo><mi>𝐱</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex25.m3" class="ltx_Math" alttext="{}^{H}U\Lambda U^{H}\mathbf{x=}\left(U^{H}\mathbf{x}\right)^{H}\Lambda\left(U^%
+{H}\mathbf{x}\right)=\mathbf{y}^{H}\Lambda\mathbf{y}=\sum_{i=1}^{n}\lambda_{i}%
+\left|y_{i}\right|^{2}\leq\lambda_{\max}\sum_{i=1}^{n}\left|y_{i}\right|^{2}=" display="inline"><mrow><mrow><mmultiscripts><mi>U</mi><mprescripts></mprescripts><none></none><mi>H</mi></mmultiscripts><mo>⁢</mo><mi mathvariant="normal">Λ</mi><mo>⁢</mo><msup><mi>U</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>=</mo><mrow><msup><mrow><mo>(</mo><mrow><msup><mi>U</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow><mi>H</mi></msup><mo>⁢</mo><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>U</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>𝐲</mi><mi>H</mi></msup><mo>⁢</mo><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mi>𝐲</mi></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><msub><mi>λ</mi><mi>i</mi></msub><mo>⁢</mo><msup><mrow><mo>|</mo><msub><mi>y</mi><mi>i</mi></msub><mo>|</mo></mrow><mn>2</mn></msup></mrow></mrow><mo>≤</mo><mrow><msub><mi>λ</mi><mi>max</mi></msub><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msup><mrow><mo>|</mo><msub><mi>y</mi><mi>i</mi></msub><mo>|</mo></mrow><mn>2</mn></msup></mrow></mrow><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex26.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex26.m3" class="ltx_Math" alttext="\displaystyle\lambda_{\max}\mathbf{y}^{H}\mathbf{y=}\lambda_{\max}\left(U^{H}%
+\mathbf{x}\right)^{H}\left(U^{H}\mathbf{x}\right)=\lambda_{\max}\left(\mathbf{%
+x}^{H}UU^{H}\mathbf{x}\right)\mathbf{=}\lambda_{\max}\left(\mathbf{x}^{H}%
+\mathbf{x}\right)" display="inline"><mrow><mrow><msub><mi>λ</mi><mi>max</mi></msub><mo>⁢</mo><msup><mi>𝐲</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐲</mi></mrow><mo>=</mo><mrow><msub><mi>λ</mi><mi>max</mi></msub><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><msup><mi>U</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow><mi>H</mi></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>U</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>λ</mi><mi>max</mi></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>U</mi><mo>⁢</mo><msup><mi>U</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>λ</mi><mi>max</mi></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whence</p>
+<table id="S0.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex27.m1" class="ltx_Math" alttext="\lambda_{\max}\geq\frac{\mathbf{x}^{H}A\mathbf{x}}{\mathbf{x}^{H}\mathbf{x}}" display="block"><mrow><msub><mi>λ</mi><mi>max</mi></msub><mo>≥</mo><mfrac><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But, having defined <math id="p26.m6" class="ltx_Math" alttext="A\mathbf{v}_{M}=\lambda_{\max}\mathbf{v}_{M}" display="inline"><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mi>𝐯</mi><mi>M</mi></msub></mrow><mo>=</mo><mrow><msub><mi>λ</mi><mi>max</mi></msub><mo>⁢</mo><msub><mi>𝐯</mi><mi>M</mi></msub></mrow></mrow></math>, we
+have:</p>
+<table id="S0.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex28.m1" class="ltx_Math" alttext="\frac{\mathbf{v}_{M}^{H}A\mathbf{v}_{M}}{\mathbf{v}_{M}^{H}\mathbf{v}_{M}}=%
+\frac{\mathbf{v}_{M}^{H}\lambda_{\max}\mathbf{v}_{M}}{\mathbf{v}_{M}^{H}%
+\mathbf{v}_{M}}=\lambda_{\max}" display="block"><mrow><mfrac><mrow><msubsup><mi>𝐯</mi><mi>M</mi><mi>H</mi></msubsup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msub><mi>𝐯</mi><mi>M</mi></msub></mrow><mrow><msubsup><mi>𝐯</mi><mi>M</mi><mi>H</mi></msubsup><mo>⁢</mo><msub><mi>𝐯</mi><mi>M</mi></msub></mrow></mfrac><mo>=</mo><mfrac><mrow><msubsup><mi>𝐯</mi><mi>M</mi><mi>H</mi></msubsup><mo>⁢</mo><msub><mi>λ</mi><mi>max</mi></msub><mo>⁢</mo><msub><mi>𝐯</mi><mi>M</mi></msub></mrow><mrow><msubsup><mi>𝐯</mi><mi>M</mi><mi>H</mi></msubsup><mo>⁢</mo><msub><mi>𝐯</mi><mi>M</mi></msub></mrow></mfrac><mo>=</mo><msub><mi>λ</mi><mi>max</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so that</p>
+<table id="S0.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex29.m1" class="ltx_Math" alttext="\lambda_{\max}=\max_{\|\mathbf{x\|\neq 0}}\frac{\mathbf{x}^{H}A\mathbf{x}}{%
+\mathbf{x}^{H}\mathbf{x}}" display="block"><mrow><msub><mi>λ</mi><mi>max</mi></msub><mo>=</mo><mrow><munder><mi>max</mi><mrow><mrow><mo>∥</mo><mi>𝐱</mi><mo>∥</mo></mrow><mo>≠</mo><mn>𝟎</mn></mrow></munder><mo>⁡</mo><mfrac><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In a much similar way, we obtain</p>
+<table id="S0.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex30.m1" class="ltx_Math" alttext="\lambda_{\min}=\min_{\|\mathbf{x\|\neq 0}}\frac{\mathbf{x}^{H}A\mathbf{x}}{%
+\mathbf{x}^{H}\mathbf{x}}" display="block"><mrow><msub><mi>λ</mi><mi>min</mi></msub><mo>=</mo><mrow><munder><mi>min</mi><mrow><mrow><mo>∥</mo><mi>𝐱</mi><mo>∥</mo></mrow><mo>≠</mo><mn>𝟎</mn></mrow></munder><mo>⁡</mo><mfrac><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p27" class="ltx_para">
+<p class="ltx_p">2) The above relations yield the following noteworthing bounds for the
+diagonal entries of a hermitian matrix:</p>
+<table id="S0.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex31.m1" class="ltx_Math" alttext="\lambda_{\min}\leq a_{ii}\leq\lambda_{\max}" display="block"><mrow><msub><mi>λ</mi><mi>min</mi></msub><mo>≤</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>≤</mo><msub><mi>λ</mi><mi>max</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In fact, having defined</p>
+<table id="S0.Ex32" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex32.m1" class="ltx_Math" alttext="\mathbf{e}_{i}=[\overbrace{0,0,...,0,}^{i-1}1,0,...,0]^{T}" display="block"><mrow><msub><mi>𝐞</mi><mi>i</mi></msub><mo>=</mo><msup><mrow><mo stretchy="false">[</mo><mrow><mover><mover accent="true"><mrow><mn>0</mn><mo movablelimits="false">,</mo><mn>0</mn><mo movablelimits="false">,</mo><mi mathvariant="normal">…</mi><mo movablelimits="false">,</mo><mn>0</mn><mo movablelimits="false">,</mo></mrow><mo movablelimits="false">⏞</mo></mover><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></mover><mo>⁢</mo><mn>1</mn></mrow><mo>,</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mn>0</mn><mo stretchy="false">]</mo></mrow><mi>T</mi></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and observing that <math id="p27.m1" class="ltx_Math" alttext="a_{ii}=\frac{\mathbf{e}_{i}^{H}A\mathbf{e}_{i}}{\mathbf{e}_{i}^{H}\mathbf{e}_{%
+i}}=R(\mathbf{e}_{i})" display="inline"><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>=</mo><mfrac><mrow><msubsup><mi>𝐞</mi><mi>i</mi><mi>H</mi></msubsup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msub><mi>𝐞</mi><mi>i</mi></msub></mrow><mrow><msubsup><mi>𝐞</mi><mi>i</mi><mi>H</mi></msubsup><mo>⁢</mo><msub><mi>𝐞</mi><mi>i</mi></msub></mrow></mfrac><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝐞</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we have:</p>
+<table id="S0.Ex33" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex33.m1" class="ltx_Math" alttext="\lambda_{\min}=\min_{\|\mathbf{x\|\neq 0}}R(\mathbf{x})\leq R(\mathbf{e}_{i})%
+\leq\max_{\|\mathbf{x\|\neq 0}}R(\mathbf{x})=\lambda_{\max}\text{.}" display="block"><mrow><msub><mi>λ</mi><mi>min</mi></msub><mo>=</mo><mrow><mrow><munder><mi>min</mi><mrow><mrow><mo>∥</mo><mi>𝐱</mi><mo>∥</mo></mrow><mo>≠</mo><mn>𝟎</mn></mrow></munder><mo>⁡</mo><mi>R</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝐞</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mrow><munder><mi>max</mi><mrow><mrow><mo>∥</mo><mi>𝐱</mi><mo>∥</mo></mrow><mo>≠</mo><mn>𝟎</mn></mrow></munder><mo>⁡</mo><mi>R</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐱</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>λ</mi><mi>max</mi></msub><mo>⁢</mo><mtext>.</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Rayleigh-Ritz theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">RayleighRitzTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:37:18</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:37:18</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gufotta (12050)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gufotta (12050)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gufotta (12050)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 15A18</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:26:25 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

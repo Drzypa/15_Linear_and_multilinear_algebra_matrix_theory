@@ -1,0 +1,109 @@
+<!DOCTYPE html><html>
+<head>
+<title>nilpotent matrix</title>
+<!--Generated on Fri Feb  9 18:15:25 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">nilpotent matrix</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The square matrix <math id="p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is said to be nilpotent if <math id="p1.m2" class="ltx_Math" alttext="A^{n}=\underbrace{AA\cdots A}_{\textrm{n times}}=\mathbf{0}" display="inline"><mrow><msup><mi>A</mi><mi>n</mi></msup><mo>=</mo><munder><munder accentunder="true"><mrow><mi>A</mi><mo movablelimits="false">⁢</mo><mi>A</mi><mo movablelimits="false">⁢</mo><mi mathvariant="normal">⋯</mi><mo movablelimits="false">⁢</mo><mi>A</mi></mrow><mo movablelimits="false">⏟</mo></munder><mtext>n times</mtext></munder><mo>=</mo><mn>𝟎</mn></mrow></math> for some positive integer <math id="p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> (here <math id="p1.m4" class="ltx_Math" alttext="\mathbf{0}" display="inline"><mn>𝟎</mn></math>
+denotes the matrix where every entry is 0).</p>
+</div>
+<div id="Thmthmx1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem</span> (Characterization of nilpotent matrices).</h6>
+<div id="Thmthmx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A matrix is nilpotent iff its eigenvalues are all 0.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be a nilpotent matrix. Assume <math id="p2.m2" class="ltx_Math" alttext="A^{n}=\mathbf{0}" display="inline"><mrow><msup><mi>A</mi><mi>n</mi></msup><mo>=</mo><mn>𝟎</mn></mrow></math>. Let <math id="p2.m3" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> be an eigenvalue of <math id="p2.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.
+Then <math id="p2.m5" class="ltx_Math" alttext="A\mathbf{x}=\lambda\mathbf{x}" display="inline"><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>𝐱</mi></mrow></mrow></math> for some nonzero vector <math id="p2.m6" class="ltx_Math" alttext="\mathbf{x}" display="inline"><mi>𝐱</mi></math>.
+By induction <math id="p2.m7" class="ltx_Math" alttext="\lambda^{n}\mathbf{x}=A^{n}\mathbf{x}=0" display="inline"><mrow><mrow><msup><mi>λ</mi><mi>n</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>=</mo><mrow><msup><mi>A</mi><mi>n</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>, so <math id="p2.m8" class="ltx_Math" alttext="\lambda=0" display="inline"><mrow><mi>λ</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Conversely, suppose that all eigenvalues of <math id="p3.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> are zero. Then the chararacteristic
+polynomial of <math id="p3.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>: <math id="p3.m3" class="ltx_Math" alttext="\det(\lambda I-A)=\lambda^{n}" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>λ</mi><mi>n</mi></msup></mrow></math>. It now follows from the
+Cayley-Hamilton theorem that <math id="p3.m4" class="ltx_Math" alttext="A^{n}=\mathbf{0}" display="inline"><mrow><msup><mi>A</mi><mi>n</mi></msup><mo>=</mo><mn>𝟎</mn></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Since the determinant is the product of the eigenvalues it follows that a nilpotent matrix has determinant 0. Similarly, since the trace of a square matrix is the sum of the eigenvalues, it follows that it has trace 0.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">One class of nilpotent matrices are the <span class="ltx_text ltx_font_typewriter">http://planetmath.org/node/4381</span>strictly triangular matrices (lower or upper), this follows from the fact that the eigenvalues of a triangular matrix are the diagonal elements, and thus are all zero in the case of <em class="ltx_emph ltx_font_italic">strictly</em> triangular matrices.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Note for <math id="p6.m1" class="ltx_Math" alttext="2\times 2" display="inline"><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow></math> matrices <math id="p6.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> the theorem implies that <math id="p6.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is nilpotent iff <math id="p6.m4" class="ltx_Math" alttext="A=\mathbf{0}" display="inline"><mrow><mi>A</mi><mo>=</mo><mn>𝟎</mn></mrow></math> or <math id="p6.m5" class="ltx_Math" alttext="A^{2}=\mathbf{0}" display="inline"><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo><mn>𝟎</mn></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Also it is worth noticing that any matrix that is similar to a nilpotent matrix is nilpotent.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">nilpotent matrix</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">NilpotentMatrix</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:05:56</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:05:56</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">jgade (861)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">jgade (861)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">17</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">jgade (861)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 15-00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:15:25 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

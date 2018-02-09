@@ -1,0 +1,1004 @@
+<!DOCTYPE html><html>
+<head>
+<title>lecture notes on the Cayley-Hamilton theorem</title>
+<!--Generated on Fri Feb  9 18:26:00 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">lecture notes on the Cayley-Hamilton theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Overview</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">You should all know about the characteristic polynomial of a square
+matrix, <math id="S1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. To calculate the characteristic polynomial of <math id="S1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, one
+subtracts a variable, say <math id="S1.p1.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, from the diagonal entries of <math id="S1.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, and
+then takes the determinant of the result. In other words, letting
+<math id="S1.p1.m5" class="ltx_Math" alttext="p_{A}(t)" display="inline"><mrow><msub><mi>p</mi><mi>A</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> denote the characteristic polynomial of <math id="S1.p1.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, one has</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="p_{A}(t)=\det(A-tI)," display="block"><mrow><mrow><mrow><msub><mi>p</mi><mi>A</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S1.p1.m7" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> as usual denotes the identity matrix.
+For example, set</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="A=\left[\begin{array}[]{rrr}1&amp;2&amp;3\\
+0&amp;-2&amp;1\\
+1&amp;1&amp;0\end{array}\right]." display="block"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>2</mn></mtd><mtd columnalign="right"><mn>3</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Evaluating the determinant of <math id="S1.p1.m8" class="ltx_Math" alttext="A-tI" display="inline"><mrow><mi>A</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow></math> one gets</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="p_{A}(t)=-t^{3}-t^{2}+6t+7." display="block"><mrow><mrow><mrow><msub><mi>p</mi><mi>A</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo>-</mo><msup><mi>t</mi><mn>3</mn></msup></mrow><mo>-</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mn>7</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Now the interesting thing about square matrices is that one can do
+algebra with them. So if <math id="S1.p2.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a <math id="S1.p2.m2" class="ltx_Math" alttext="3\times 3" display="inline"><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math> matrix then <math id="S1.p2.m3" class="ltx_Math" alttext="A^{2}" display="inline"><msup><mi>A</mi><mn>2</mn></msup></math>,
+<math id="S1.p2.m4" class="ltx_Math" alttext="A^{3}" display="inline"><msup><mi>A</mi><mn>3</mn></msup></math>, indeed every power of <math id="S1.p2.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> will also be a <math id="S1.p2.m6" class="ltx_Math" alttext="3\times 3" display="inline"><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math> matrix.
+Indeed, one can take any polynomial <math id="S1.p2.m7" class="ltx_Math" alttext="p(t)" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>, and happily plug <math id="S1.p2.m8" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> into
+it. The result will be some other <math id="S1.p2.m9" class="ltx_Math" alttext="3\times 3" display="inline"><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math> matrix. The obvious
+question now is: what will happen when one plugs a square matrix <math id="S1.p2.m10" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>
+into its own characteristic polynomial? Let’s see what happens for
+the sample <math id="S1.p2.m11" class="ltx_Math" alttext="3\times 3" display="inline"><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math> matrix above. Straightforward calculations show
+that</p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="A^{2}=\left[\begin{array}[]{rrr}4&amp;1&amp;5\\
+1&amp;5&amp;-2\\
+1&amp;0&amp;4\end{array}\right],\qquad A^{3}=\left[\begin{array}[]{rrr}9&amp;11&amp;13\\
+-1&amp;-10&amp;8\\
+5&amp;6&amp;3\end{array}\right]," display="block"><mrow><mrow><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>4</mn></mtd><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>5</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>5</mn></mtd><mtd columnalign="right"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><mn>4</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><msup><mi>A</mi><mn>3</mn></msup><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>9</mn></mtd><mtd columnalign="right"><mn>11</mn></mtd><mtd columnalign="right"><mn>13</mn></mtd></mtr><mtr><mtd columnalign="right"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="right"><mrow><mo>-</mo><mn>10</mn></mrow></mtd><mtd columnalign="right"><mn>8</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>5</mn></mtd><mtd columnalign="right"><mn>6</mn></mtd><mtd columnalign="right"><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Next adding the various powers of <math id="S1.p2.m12" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> with the coefficients of
+characteristic polynomial (note that one uses the identity matrix in
+place of the constants) one gets</p>
+<table id="S1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex5.m1" class="ltx_Math" alttext="\begin{array}[]{cccc}-A^{3}&amp;-A^{2}&amp;6A&amp;7I\\
+\\
+-\left[\begin{array}[]{rrr}9&amp;11&amp;13\\
+-1&amp;-10&amp;8\\
+5&amp;6&amp;3\end{array}\right]&amp;-\left[\begin{array}[]{rrr}4&amp;1&amp;5\\
+1&amp;5&amp;-2\\
+1&amp;0&amp;4\end{array}\right]&amp;+6\left[\begin{array}[]{rrr}1&amp;2&amp;3\\
+0&amp;-2&amp;1\\
+1&amp;1&amp;0\end{array}\right]&amp;+7\left[\begin{array}[]{rrr}1&amp;0&amp;0\\
+0&amp;1&amp;0\\
+0&amp;0&amp;1\end{array}\right]\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mo mathsize="90%" stretchy="false">-</mo><msup><mi mathsize="90%">A</mi><mn mathsize="90%">3</mn></msup></mrow></mtd><mtd columnalign="center"><mrow><mo mathsize="90%" stretchy="false">-</mo><msup><mi mathsize="90%">A</mi><mn mathsize="90%">2</mn></msup></mrow></mtd><mtd columnalign="center"><mrow><mn mathsize="90%">6</mn><mo>⁢</mo><mi mathsize="90%">A</mi></mrow></mtd><mtd columnalign="center"><mrow><mn mathsize="90%">7</mn><mo>⁢</mo><mi mathsize="90%">I</mi></mrow></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd></mtd><mtd></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo mathsize="90%" stretchy="false">-</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn mathsize="90%">9</mn></mtd><mtd columnalign="right"><mn mathsize="90%">11</mn></mtd><mtd columnalign="right"><mn mathsize="90%">13</mn></mtd></mtr><mtr><mtd columnalign="right"><mrow><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></mtd><mtd columnalign="right"><mrow><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">10</mn></mrow></mtd><mtd columnalign="right"><mn mathsize="90%">8</mn></mtd></mtr><mtr><mtd columnalign="right"><mn mathsize="90%">5</mn></mtd><mtd columnalign="right"><mn mathsize="90%">6</mn></mtd><mtd columnalign="right"><mn mathsize="90%">3</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mo mathsize="90%" stretchy="false">-</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn mathsize="90%">4</mn></mtd><mtd columnalign="right"><mn mathsize="90%">1</mn></mtd><mtd columnalign="right"><mn mathsize="90%">5</mn></mtd></mtr><mtr><mtd columnalign="right"><mn mathsize="90%">1</mn></mtd><mtd columnalign="right"><mn mathsize="90%">5</mn></mtd><mtd columnalign="right"><mrow><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">2</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mn mathsize="90%">1</mn></mtd><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd><mtd columnalign="right"><mn mathsize="90%">4</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><mn mathsize="90%">6</mn><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn mathsize="90%">1</mn></mtd><mtd columnalign="right"><mn mathsize="90%">2</mn></mtd><mtd columnalign="right"><mn mathsize="90%">3</mn></mtd></mtr><mtr><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd><mtd columnalign="right"><mrow><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">2</mn></mrow></mtd><mtd columnalign="right"><mn mathsize="90%">1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn mathsize="90%">1</mn></mtd><mtd columnalign="right"><mn mathsize="90%">1</mn></mtd><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mtd><mtd columnalign="center"><mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><mn mathsize="90%">7</mn><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn mathsize="90%">1</mn></mtd><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd><mtd columnalign="right"><mn mathsize="90%">1</mn></mtd><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd><mtd columnalign="right"><mn mathsize="90%">1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex6.m1" class="ltx_Math" alttext="\qquad\qquad=\left[\begin{array}[]{rrr}0&amp;0&amp;0\\
+0&amp;0&amp;0\\
+0&amp;0&amp;0\end{array}\right]" display="block"><mrow><mi></mi><mo lspace="42.5pt" mathsize="90%" stretchy="false">=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd><mtd columnalign="right"><mn mathsize="90%">0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Zero! One gets zero. This seemingly miraculous answer is not a
+coincidence. Indeed one gets zero regardless of what matrix one
+starts with. I encourage you to try this with a few examples of your own.</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span> (Cayley-Hamilton).</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be an <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">×</mo><mi>n</mi></mrow></math> matrix, and let <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="p_{A}(t)=\det(A-tI)" display="inline"><mrow><mrow><msub><mi>p</mi><mi>A</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>t</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal">det</mo><mo mathvariant="italic">⁡</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mi>A</mi><mo mathvariant="normal">-</mo><mrow><mi>t</mi><mo mathvariant="italic">⁢</mo><mi>I</mi></mrow></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> be the
+corresponding characteristic polynomial. Then, <math id="Thmtheorem1.p1.m4" class="ltx_Math" alttext="p_{A}(A)=0" display="inline"><mrow><mrow><msub><mi>p</mi><mi>A</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>A</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">0</mn></mrow></math>.</span></p>
+</div>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">The goal of these notes will be to explain and prove the above
+theorem. There are various hidden reasons that make the
+Cayley-Hamilton theorem work. It is the purpose of these notes to
+bring these reasons into the open.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>The Gist of the Matter.</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Indeed there are two factors that make the Cayley-Hamilton theorem
+such a striking and interesting result. Recall that if <math id="S2.p1.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is an
+<math id="S2.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional vector space, and <math id="S2.p1.m3" class="ltx_Math" alttext="\mathbf{u}_{1},\mathbf{u}_{2},\mathbf{u}_{3},\ldots,\mathbf{u}_{n+1}" display="inline"><mrow><msub><mi>𝐮</mi><mn>1</mn></msub><mo>,</mo><msub><mi>𝐮</mi><mn>2</mn></msub><mo>,</mo><msub><mi>𝐮</mi><mn>3</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>𝐮</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math>, are any <math id="S2.p1.m4" class="ltx_Math" alttext="n+1" display="inline"><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></math> vectors in <math id="S2.p1.m5" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>, then there will some kind of
+a linear relation between the <math id="S2.p1.m6" class="ltx_Math" alttext="\mathbf{u}_{i}" display="inline"><msub><mi>𝐮</mi><mi>i</mi></msub></math>’s, i.e. for some choice of
+scalars <math id="S2.p1.m7" class="ltx_Math" alttext="a_{1},a_{2},\ldots,a_{n+1}" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math> one will have</p>
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex7.m1" class="ltx_Math" alttext="a_{1}\mathbf{u}_{1}+a_{2}\mathbf{u}_{2}+a_{3}\mathbf{u}_{3}+\ldots a_{n+1}%
+\mathbf{u}_{n+1}=0." display="block"><mrow><mrow><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>3</mn></msub></mrow><mo>+</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>𝐮</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">Now the space of <math id="S2.p2.m1" class="ltx_Math" alttext="3\times 3" display="inline"><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math> matrices is <math id="S2.p2.m2" class="ltx_Math" alttext="9" display="inline"><mn>9</mn></math>-dimensional. Therefore
+for every <math id="S2.p2.m3" class="ltx_Math" alttext="3\times 3" display="inline"><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></math> matrix <math id="S2.p2.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> there must be a linear relationship
+between the <math id="S2.p2.m5" class="ltx_Math" alttext="10" display="inline"><mn>10</mn></math> different matrix powers</p>
+<table id="S2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex8.m1" class="ltx_Math" alttext="A^{9},A^{8},A^{7},A^{6},A^{5},A^{4},A^{3},A^{2},A^{1}=A,A^{0}=I." display="block"><mrow><mrow><mrow><mrow><msup><mi>A</mi><mn>9</mn></msup><mo>,</mo><msup><mi>A</mi><mn>8</mn></msup><mo>,</mo><msup><mi>A</mi><mn>7</mn></msup><mo>,</mo><msup><mi>A</mi><mn>6</mn></msup><mo>,</mo><msup><mi>A</mi><mn>5</mn></msup><mo>,</mo><msup><mi>A</mi><mn>4</mn></msup><mo>,</mo><msup><mi>A</mi><mn>3</mn></msup><mo>,</mo><msup><mi>A</mi><mn>2</mn></msup><mo>,</mo><msup><mi>A</mi><mn>1</mn></msup></mrow><mo>=</mo><mi>A</mi></mrow><mo>,</mo><mrow><msup><mi>A</mi><mn>0</mn></msup><mo>=</mo><mi>I</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The “miracle” of the Cayley-Hamilton theorem is twofold. First, a
+linear relation arises already for the powers <math id="S2.p2.m6" class="ltx_Math" alttext="A^{3},A^{2},A^{1},A^{0}" display="inline"><mrow><msup><mi>A</mi><mn>3</mn></msup><mo>,</mo><msup><mi>A</mi><mn>2</mn></msup><mo>,</mo><msup><mi>A</mi><mn>1</mn></msup><mo>,</mo><msup><mi>A</mi><mn>0</mn></msup></mrow></math>.
+Second, the coefficients for this linear relation are precisely the
+coefficients of the characteristic polynomial of <math id="S2.p2.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">Let’s put it another way. Look at the first column vectors of the
+matrices <math id="S2.p3.m1" class="ltx_Math" alttext="A^{3},A^{2},A^{1},A^{0}" display="inline"><mrow><msup><mi>A</mi><mn>3</mn></msup><mo>,</mo><msup><mi>A</mi><mn>2</mn></msup><mo>,</mo><msup><mi>A</mi><mn>1</mn></msup><mo>,</mo><msup><mi>A</mi><mn>0</mn></msup></mrow></math>, i.e. the vectors</p>
+<table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex9.m1" class="ltx_Math" alttext="\left[\begin{array}[]{r}9\\
+-1\\
+5\end{array}\right],\quad\left[\begin{array}[]{r}4\\
+1\\
+1\end{array}\right],\quad\left[\begin{array}[]{r}1\\
+0\\
+1\end{array}\right],\quad\left[\begin{array}[]{r}1\\
+0\\
+0\end{array}\right]." display="block"><mrow><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>9</mn></mtd></mtr><mtr><mtd columnalign="right"><mrow><mo>-</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mn>5</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo rspace="12.5pt">,</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>4</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo rspace="12.5pt">,</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo rspace="12.5pt">,</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now <math id="S2.p3.m2" class="ltx_Math" alttext="{\mathbb{R}}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math> is a <math id="S2.p3.m3" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math>-dimensional vector space, and so there
+should be a linear relation between the above <math id="S2.p3.m4" class="ltx_Math" alttext="4" display="inline"><mn>4</mn></math> vectors. Indeed
+there is: the coefficients of the linear relation are <math id="S2.p3.m5" class="ltx_Math" alttext="-1,-1,6,7" display="inline"><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mo>,</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>,</mo><mn>6</mn><mo>,</mo><mn>7</mn></mrow></math>
+( i.e. <math id="S2.p3.m6" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math> times the first vector, plus <math id="S2.p3.m7" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math> times the second, plus
+<math id="S2.p3.m8" class="ltx_Math" alttext="6" display="inline"><mn>6</mn></math> times the third, plus <math id="S2.p3.m9" class="ltx_Math" alttext="7" display="inline"><mn>7</mn></math> times the fourth is equal to zero —
+try it yourself!). What about the second column vectors of <math id="S2.p3.m10" class="ltx_Math" alttext="A^{3},A^{2},A^{1},A^{0}" display="inline"><mrow><msup><mi>A</mi><mn>3</mn></msup><mo>,</mo><msup><mi>A</mi><mn>2</mn></msup><mo>,</mo><msup><mi>A</mi><mn>1</mn></msup><mo>,</mo><msup><mi>A</mi><mn>0</mn></msup></mrow></math>? Now the vectors in question are</p>
+<table id="S2.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex10.m1" class="ltx_Math" alttext="\left[\begin{array}[]{r}11\\
+-10\\
+6\end{array}\right],\quad\left[\begin{array}[]{r}1\\
+5\\
+0\end{array}\right],\quad\left[\begin{array}[]{r}2\\
+-2\\
+1\end{array}\right],\quad\left[\begin{array}[]{r}0\\
+1\\
+0\end{array}\right]." display="block"><mrow><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>11</mn></mtd></mtr><mtr><mtd columnalign="right"><mrow><mo>-</mo><mn>10</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mn>6</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo rspace="12.5pt">,</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>5</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo rspace="12.5pt">,</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="right"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo rspace="12.5pt">,</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Again, we have here <math id="S2.p3.m11" class="ltx_Math" alttext="4" display="inline"><mn>4</mn></math> vectors from a <math id="S2.p3.m12" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math>-dimensional vectors
+space, and therefore there should be a linear relation between the
+vectors. However by some miracle the coefficients of the linear
+relation for the second column vectors are the same as the
+coefficients of the linear relation between the first column vectors,
+namely <math id="S2.p3.m13" class="ltx_Math" alttext="-1,-1,6,7" display="inline"><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mo>,</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>,</mo><mn>6</mn><mo>,</mo><mn>7</mn></mrow></math>. Furthermore, these coefficients are precisely
+the coefficients of the characteristic polynomial: <math id="S2.p3.m14" class="ltx_Math" alttext="-t^{3}-t^{2}+6t+7" display="inline"><mrow><mrow><mrow><mo>-</mo><msup><mi>t</mi><mn>3</mn></msup></mrow><mo>-</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mn>7</mn></mrow></math>.
+Needless to say the third column vectors are joined in a linear
+relation with the same coefficients: <math id="S2.p3.m15" class="ltx_Math" alttext="-1,-1,6,7" display="inline"><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mo>,</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo>,</mo><mn>6</mn><mo>,</mo><mn>7</mn></mrow></math>. Why is this
+happening?
+</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>The Cyclic Basis</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Let’s look again at the first column vectors of the matrices <math id="S3.p1.m1" class="ltx_Math" alttext="A^{0},A^{1},A^{2}" display="inline"><mrow><msup><mi>A</mi><mn>0</mn></msup><mo>,</mo><msup><mi>A</mi><mn>1</mn></msup><mo>,</mo><msup><mi>A</mi><mn>2</mn></msup></mrow></math> (recall that <math id="S3.p1.m2" class="ltx_Math" alttext="A^{0}" display="inline"><msup><mi>A</mi><mn>0</mn></msup></math> is just the identity matrix):</p>
+<table id="S3.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex11.m1" class="ltx_Math" alttext="\mathbf{u}_{0}=\ \left[\begin{array}[]{r}1\\
+0\\
+0\end{array}\right],\quad\mathbf{u}_{1}=\left[\begin{array}[]{r}1\\
+0\\
+1\end{array}\right],\quad\mathbf{u}_{2}=\left[\begin{array}[]{r}4\\
+1\\
+1\end{array}\right]," display="block"><mrow><mrow><mrow><msub><mi>𝐮</mi><mn>0</mn></msub><mo rspace="7.5pt">=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><msub><mi>𝐮</mi><mn>1</mn></msub><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><msub><mi>𝐮</mi><mn>2</mn></msub><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>4</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and let’s take these <math id="S3.p1.m3" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math> vectors as a new basis, <math id="S3.p1.m4" class="ltx_Math" alttext="{\mathbf{B}}" display="inline"><mi>𝐁</mi></math>. A basis
+obtained in this fashion, i.e. by starting with a vector and
+successively applying a matrix to it, is called a cyclic basis. What
+will be the representation of the matrix <math id="S3.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> relative to this cyclic
+basis? Now <math id="S3.p1.m6" class="ltx_Math" alttext="\mathbf{u}_{0}" display="inline"><msub><mi>𝐮</mi><mn>0</mn></msub></math> is just the first elementary vector, <math id="S3.p1.m7" class="ltx_Math" alttext="\mathbf{e}_{1}" display="inline"><msub><mi>𝐞</mi><mn>1</mn></msub></math>.
+Furthermore, note that <math id="S3.p1.m8" class="ltx_Math" alttext="\mathbf{u}_{1}" display="inline"><msub><mi>𝐮</mi><mn>1</mn></msub></math> is nothing but <math id="S3.p1.m9" class="ltx_Math" alttext="A\mathbf{u}_{0}" display="inline"><mrow><mi>A</mi><mo>⁢</mo><msub><mi>𝐮</mi><mn>0</mn></msub></mrow></math>, and that
+<math id="S3.p1.m10" class="ltx_Math" alttext="\mathbf{u}_{2}=A\mathbf{u}_{1}" display="inline"><mrow><msub><mi>𝐮</mi><mn>2</mn></msub><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow></mrow></math>. Now <math id="S3.p1.m11" class="ltx_Math" alttext="A\mathbf{u}_{2}" display="inline"><mrow><mi>A</mi><mo>⁢</mo><msub><mi>𝐮</mi><mn>2</mn></msub></mrow></math> is the first column vector of <math id="S3.p1.m12" class="ltx_Math" alttext="A^{3}" display="inline"><msup><mi>A</mi><mn>3</mn></msup></math> and
+we already determined the linear relation between the first column
+vectors of <math id="S3.p1.m13" class="ltx_Math" alttext="A^{3},\ldots A^{0}" display="inline"><mrow><msup><mi>A</mi><mn>3</mn></msup><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msup><mi>A</mi><mn>0</mn></msup></mrow></mrow></math>. The bottom line is that</p>
+<table id="S3.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex12.m1" class="ltx_Math" alttext="A\mathbf{u}_{2}=-(\mathbf{u}_{2}-6\mathbf{u}_{1}-7\mathbf{u}_{0})," display="block"><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mi>𝐮</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>𝐮</mi><mn>2</mn></msub><mo>-</mo><mrow><mn>6</mn><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow><mo>-</mo><mrow><mn>7</mn><mo>⁢</mo><msub><mi>𝐮</mi><mn>0</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and consequently <math id="S3.p1.m14" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> will have
+the following appearance relative to the basis <math id="S3.p1.m15" class="ltx_Math" alttext="{\mathbf{B}}" display="inline"><mi>𝐁</mi></math>:</p>
+<table id="S3.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex13.m1" class="ltx_Math" alttext="[A]_{{\mathbf{B}}}=\left[\begin{array}[]{rrr}0&amp;0&amp;7\\
+1&amp;0&amp;6\\
+0&amp;1&amp;-1\end{array}\right]" display="block"><mrow><msub><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow><mi>𝐁</mi></msub><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><mn>7</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><mn>6</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mrow><mo>-</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The transition matrix <math id="S3.p1.m16" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> from <math id="S3.p1.m17" class="ltx_Math" alttext="{\mathbf{B}}" display="inline"><mi>𝐁</mi></math> to the standard basis <math id="S3.p1.m18" class="ltx_Math" alttext="\mathbf{e}_{1},\mathbf{e}_{2},\mathbf{e}_{3}" display="inline"><mrow><msub><mi>𝐞</mi><mn>1</mn></msub><mo>,</mo><msub><mi>𝐞</mi><mn>2</mn></msub><mo>,</mo><msub><mi>𝐞</mi><mn>3</mn></msub></mrow></math> is given by</p>
+<table id="S3.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex14.m1" class="ltx_Math" alttext="P=\left[\begin{array}[]{rrr}1&amp;1&amp;4\\
+0&amp;0&amp;1\\
+0&amp;1&amp;1\end{array}\right]." display="block"><mrow><mrow><mi>P</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>4</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Of course <math id="S3.p1.m19" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is relevant to our discussion precisely because</p>
+<table id="S3.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex15.m1" class="ltx_Math" alttext="[A]_{\mathbf{B}}=P^{-1}AP." display="block"><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow><mi>𝐁</mi></msub><mo>=</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>P</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmproposition1" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 1</span>.</h6>
+<div id="Thmproposition1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmproposition1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be an <math id="Thmproposition1.p1.m2" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">×</mo><mi>n</mi></mrow></math> matrix, <math id="Thmproposition1.p1.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> a non-singular <math id="Thmproposition1.p1.m4" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">×</mo><mi>n</mi></mrow></math>
+matrix, and set <math id="Thmproposition1.p1.m5" class="ltx_Math" alttext="B=P^{-1}AP" display="inline"><mrow><mi>B</mi><mo mathvariant="normal">=</mo><mrow><msup><mi>P</mi><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msup><mo mathvariant="italic">⁢</mo><mi>A</mi><mo mathvariant="italic">⁢</mo><mi>P</mi></mrow></mrow></math>. The matrices <math id="Thmproposition1.p1.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="Thmproposition1.p1.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> have
+the same characteristic polynomials.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">The characteristic polynomial of <math id="S3.p2.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is given as</p>
+<table id="S3.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex16.m1" class="ltx_Math" alttext="\det(B-tI)=\det\left(P^{-1}AP-tI\right)=\det\left(P^{-1}(A-tI)P\right)." display="block"><mrow><mrow><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>P</mi></mrow><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo>(</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi></mrow><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Recall that the determinant of a product is the product of the
+determinants, and that the determinant of an inverse is the inverse of
+the determinant. Therefore</p>
+<table id="S3.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex17.m1" class="ltx_Math" alttext="\det(B-tI)=\det(P^{-1})\det(A-tI)\det(P)=\det(A-tI)." display="block"><mrow><mrow><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">(</mo><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">In other words, according to the above theorem we should expect the
+characteristic polynomial of <math id="S3.p3.m1" class="ltx_Math" alttext="[A]_{\mathbf{B}}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow><mi>𝐁</mi></msub></math> to be equal to the
+characteristic polynomial of <math id="S3.p3.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Let’s check this using a co-factor
+expansion.</p>
+<table id="S3.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex18.m1" class="ltx_Math" alttext="\left|\begin{array}[]{ccc}-t&amp;0&amp;7\\
+1&amp;-t&amp;6\\
+0&amp;1&amp;-1-t\end{array}\right|=-t(t^{2}+t-6)+7\cdot 1=-t^{3}-t^{2}+6t+7" display="block"><mrow><mrow><mo>|</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mo>-</mo><mi>t</mi></mrow></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>7</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mi>t</mi></mrow></mtd><mtd columnalign="center"><mn>6</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mo>-</mo><mi>t</mi></mrow></mtd></mtr></mtable><mo>|</mo></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>t</mi></mrow><mo>-</mo><mn>6</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mn>7</mn><mo>⋅</mo><mn>1</mn></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo>-</mo><msup><mi>t</mi><mn>3</mn></msup></mrow><mo>-</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mn>7</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Also note that the last column of <math id="S3.p3.m3" class="ltx_Math" alttext="[A]_{\mathbf{B}}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow><mi>𝐁</mi></msub></math> contains all but one of
+the coefficients of the characteristic polynomial. This too is not a
+coincidence.</p>
+</div>
+<div id="Thmproposition2" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 2</span>.</h6>
+<div id="Thmproposition2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Consider an <math id="Thmproposition2.p1.m1" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">×</mo><mi>n</mi></mrow></math> matrix <math id="Thmproposition2.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> such that the <math id="Thmproposition2.p1.m3" class="ltx_Math" alttext="j^{\mbox{\rm th}}" display="inline"><msup><mi>j</mi><mtext mathvariant="normal">th</mtext></msup></math>
+column vector for <math id="Thmproposition2.p1.m4" class="ltx_Math" alttext="j=1,2,\ldots n-1" display="inline"><mrow><mi>j</mi><mo mathvariant="normal">=</mo><mrow><mn mathvariant="normal">1</mn><mo mathvariant="normal">,</mo><mn mathvariant="normal">2</mn><mo mathvariant="normal">,</mo><mrow><mrow><mi mathvariant="normal">…</mi><mo mathvariant="italic">⁢</mo><mi>n</mi></mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></mrow></mrow></math> is the basic vector
+<math id="Thmproposition2.p1.m5" class="ltx_Math" alttext="\mathbf{e}_{j+1}" display="inline"><msub><mi mathvariant="normal">e</mi><mrow><mi>j</mi><mo mathvariant="normal">+</mo><mn mathvariant="normal">1</mn></mrow></msub></math>, while the last column of <math id="Thmproposition2.p1.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is the vector <math id="Thmproposition2.p1.m7" class="ltx_Math" alttext="[-b_{0},-b_{1},\ldots,-b_{n-1}]^{T}" display="inline"><msup><mrow><mo mathvariant="normal" stretchy="false">[</mo><mrow><mo mathvariant="normal">-</mo><msub><mi>b</mi><mn mathvariant="normal">0</mn></msub></mrow><mo mathvariant="normal">,</mo><mrow><mo mathvariant="normal">-</mo><msub><mi>b</mi><mn mathvariant="normal">1</mn></msub></mrow><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><mrow><mo mathvariant="normal">-</mo><msub><mi>b</mi><mrow><mi>n</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msub></mrow><mo mathvariant="normal" stretchy="false">]</mo></mrow><mi>T</mi></msup></math>. In other words <math id="Thmproposition2.p1.m8" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> has the following
+form:</span></p>
+<table id="S3.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex19.m1" class="ltx_Math" alttext="B=\left[\begin{array}[]{cccccc}0&amp;0&amp;0&amp;\ldots&amp;0&amp;-b_{0}\\
+1&amp;0&amp;0&amp;\ldots&amp;0&amp;-b_{1}\\
+0&amp;1&amp;0&amp;\ldots&amp;0&amp;-b_{2}\\
+0&amp;0&amp;1&amp;\ldots&amp;0&amp;-b_{3}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots\\
+0&amp;0&amp;0&amp;\ldots&amp;1&amp;-b_{n-1}\end{array}\right]" display="block"><mrow><mi>B</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>b</mi><mn>0</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>b</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>b</mi><mn>2</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>b</mi><mn>3</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋱</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Then, the characteristic polynomial of <math id="Thmproposition2.p1.m9" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is given by</span></p>
+<table id="S3.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex20.m1" class="ltx_Math" alttext="(-1)^{n}p_{B}(t)=t^{n}+b_{n-1}t^{n-1}+\ldots+b_{2}t^{2}+b_{1}t+b_{0}." display="block"><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><msub><mi>p</mi><mi>B</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>t</mi><mi>n</mi></msup><mo>+</mo><mrow><msub><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>t</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><msub><mi>b</mi><mn>0</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">We will calculate the determinant of <math id="S3.p4.m1" class="ltx_Math" alttext="B-tI" display="inline"><mrow><mi>B</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow></math> by doing a co-factor
+expansion along the first row. Let <math id="S3.p4.m2" class="ltx_Math" alttext="B_{1}" display="inline"><msub><mi>B</mi><mn>1</mn></msub></math> be the matrix obtained by
+deleting the first row and the first column from <math id="S3.p4.m3" class="ltx_Math" alttext="B-tI" display="inline"><mrow><mi>B</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow></math>, and let <math id="S3.p4.m4" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>
+be the matrix obtained by deleting the first row and the last column
+from <math id="S3.p4.m5" class="ltx_Math" alttext="B-tI" display="inline"><mrow><mi>B</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow></math>. Doing a co-factor expansion along the top row, it is
+easy to see that
+</p>
+<table id="S3.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex21.m1" class="ltx_Math" alttext="\det(B-tI)=-t\det(B_{1})+(-1)^{n}b_{0}\det(D)." display="block"><mrow><mrow><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>+</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><msub><mi>b</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>D</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now <math id="S3.p4.m6" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> is an
+upper triangular matrix with ones on the diagonal, and therefore
+<math id="S3.p4.m7" class="ltx_Math" alttext="\det(D)=1" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>D</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>. The matrix <math id="S3.p4.m8" class="ltx_Math" alttext="B_{1}" display="inline"><msub><mi>B</mi><mn>1</mn></msub></math>, on the other hand has the same
+structure as <math id="S3.p4.m9" class="ltx_Math" alttext="B-tI" display="inline"><mrow><mi>B</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow></math>, only it’s 1 size smaller. To that end let
+<math id="S3.p4.m10" class="ltx_Math" alttext="B_{2}" display="inline"><msub><mi>B</mi><mn>2</mn></msub></math> be the matrix obtained by deleting the first two rows and
+columns from <math id="S3.p4.m11" class="ltx_Math" alttext="B-tI" display="inline"><mrow><mi>B</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow></math>. By the same reasoning as above it’s easy to
+see that</p>
+<table id="S3.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex22.m1" class="ltx_Math" alttext="\det(B_{1})=-t\det(B_{2})+(-1)^{n-1}b_{1}," display="block"><mrow><mrow><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>+</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and therefore</p>
+<table id="S3.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex23.m1" class="ltx_Math" alttext="\det(B-tI)=(-1)^{n}b_{0}-t\Big{(}(-1)^{n-1}b_{1}-t\det(B_{2})\Big{)}." display="block"><mrow><mrow><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><msub><mi>b</mi><mn>0</mn></msub></mrow><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Continuing inductively we see that for even <math id="S3.p4.m12" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>,
+the determinant of <math id="S3.p4.m13" class="ltx_Math" alttext="B-tI" display="inline"><mrow><mi>B</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow></math> will have the form:</p>
+<table id="S3.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex24.m1" class="ltx_Math" alttext="b_{0}-t\Bigg{(}-b_{1}-t\Big{(}b_{2}-t\big{(}-b_{3}-t(\ldots)\big{)}\Big{)}%
+\Bigg{)}=b_{0}+b_{1}t+b_{2}t^{2}+b_{3}t^{3}+\ldots+b_{n-1}t^{n-1}+t^{n}" display="block"><mrow><mrow><msub><mi>b</mi><mn>0</mn></msub><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo maxsize="260%" minsize="260%">(</mo><mrow><mrow><mo>-</mo><msub><mi>b</mi><mn>1</mn></msub></mrow><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><mo>-</mo><msub><mi>b</mi><mn>3</mn></msub></mrow><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow></mrow><mo maxsize="260%" minsize="260%">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>3</mn></msub><mo>⁢</mo><msup><mi>t</mi><mn>3</mn></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>t</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><msup><mi>t</mi><mi>n</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">For odd <math id="S3.p4.m14" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, <math id="S3.p4.m15" class="ltx_Math" alttext="\det(B-tI)" display="inline"><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> will be just like the
+formula above, but multiplied through by a negative sign.
+∎</p>
+</div>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Putting it all together</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Thanks to Propositions <a href="#Thmproposition1" title="Proposition 1. ‣ 3 The Cyclic Basis ‣ lecture notes on the Cayley-Hamilton theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a> and <a href="#Thmproposition2" title="Proposition 2. ‣ 3 The Cyclic Basis ‣ lecture notes on the Cayley-Hamilton theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> we are
+now in a position to understand and to prove the
+Cayley-Hamilton Theorem. Let <math id="S4.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be an <math id="S4.p1.m2" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrix. Start by
+setting <math id="S4.p1.m3" class="ltx_Math" alttext="\mathbf{u}_{0}=\mathbf{e}_{1}" display="inline"><mrow><msub><mi>𝐮</mi><mn>0</mn></msub><mo>=</mo><msub><mi>𝐞</mi><mn>1</mn></msub></mrow></math>, and then create a sequence of vectors by
+successively applying <math id="S4.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, i.e. <math id="S4.p1.m5" class="ltx_Math" alttext="\mathbf{u}_{1}=A\mathbf{u}_{0}" display="inline"><mrow><msub><mi>𝐮</mi><mn>1</mn></msub><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><msub><mi>𝐮</mi><mn>0</mn></msub></mrow></mrow></math>, <math id="S4.p1.m6" class="ltx_Math" alttext="\mathbf{u}_{2}=A\mathbf{u}_{1}" display="inline"><mrow><msub><mi>𝐮</mi><mn>2</mn></msub><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow></mrow></math>, etc.
+Notice that <math id="S4.p1.m7" class="ltx_Math" alttext="\mathbf{u}_{k}=A^{k}\mathbf{u}_{0}" display="inline"><mrow><msub><mi>𝐮</mi><mi>k</mi></msub><mo>=</mo><mrow><msup><mi>A</mi><mi>k</mi></msup><mo>⁢</mo><msub><mi>𝐮</mi><mn>0</mn></msub></mrow></mrow></math>; in other words, <math id="S4.p1.m8" class="ltx_Math" alttext="\mathbf{u}_{k}" display="inline"><msub><mi>𝐮</mi><mi>k</mi></msub></math> is the first
+column of the matrix <math id="S4.p1.m9" class="ltx_Math" alttext="A^{k}" display="inline"><msup><mi>A</mi><mi>k</mi></msup></math>.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">Next, suppose that the <math id="S4.p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> vectors <math id="S4.p2.m2" class="ltx_Math" alttext="\mathbf{u}_{0},\mathbf{u}_{1},\mathbf{u}_{2},\ldots,\mathbf{u}_{n-1}" display="inline"><mrow><msub><mi>𝐮</mi><mn>0</mn></msub><mo>,</mo><msub><mi>𝐮</mi><mn>1</mn></msub><mo>,</mo><msub><mi>𝐮</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>𝐮</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></math> form a basis, <math id="S4.p2.m3" class="ltx_Math" alttext="{\mathbf{B}}" display="inline"><mi>𝐁</mi></math>, of <math id="S4.p2.m4" class="ltx_Math" alttext="{\mathbb{R}}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> (There are matrices <math id="S4.p2.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>
+for which this doesn’t happen, but we’ll consider this possibility
+later.) There will therefore exist scalars <math id="S4.p2.m6" class="ltx_Math" alttext="b_{0},b_{1},\ldots b_{n-1}" display="inline"><mrow><msub><mi>b</mi><mn>0</mn></msub><mo>,</mo><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></mrow></math>
+such that</p>
+<table id="S4.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex25.m1" class="ltx_Math" alttext="\mathbf{u}_{n}+b_{n-1}\mathbf{u}_{n-1}+\ldots+b_{1}\mathbf{u}_{1}+b_{0}\mathbf%
+{u}_{0}=0." display="block"><mrow><mrow><mrow><msub><mi>𝐮</mi><mi>n</mi></msub><mo>+</mo><mrow><msub><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>𝐮</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>0</mn></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now the representation of <math id="S4.p2.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> relative to the cyclic basis <math id="S4.p2.m8" class="ltx_Math" alttext="{\mathbf{B}}" display="inline"><mi>𝐁</mi></math> will
+have the form</p>
+<table id="S4.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex26.m1" class="ltx_Math" alttext="[A]_{\mathbf{B}}=\left[\begin{array}[]{cccccc}0&amp;0&amp;0&amp;\ldots&amp;0&amp;-b_{0}\\
+1&amp;0&amp;0&amp;\ldots&amp;0&amp;-b_{1}\\
+0&amp;1&amp;0&amp;\ldots&amp;0&amp;-b_{2}\\
+0&amp;0&amp;1&amp;\ldots&amp;0&amp;-b_{3}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots\\
+0&amp;0&amp;0&amp;\ldots&amp;1&amp;-b_{n-1}\end{array}\right]" display="block"><mrow><msub><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow><mi>𝐁</mi></msub><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>b</mi><mn>0</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>b</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>b</mi><mn>2</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>b</mi><mn>3</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋱</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By Proposition <a href="#Thmproposition1" title="Proposition 1. ‣ 3 The Cyclic Basis ‣ lecture notes on the Cayley-Hamilton theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a> the characteristic polynomial of
+<math id="S4.p2.m9" class="ltx_Math" alttext="[A]_{\mathbf{B}}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow><mi>𝐁</mi></msub></math> is equal to the characteristic polynomial of <math id="S4.p2.m10" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.
+Furthermore, by Proposition <a href="#Thmproposition2" title="Proposition 2. ‣ 3 The Cyclic Basis ‣ lecture notes on the Cayley-Hamilton theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> the characteristic
+polynomial of <math id="S4.p2.m11" class="ltx_Math" alttext="[A]_{\mathbf{B}}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow><mi>𝐁</mi></msub></math> is equal to</p>
+<table id="S4.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex27.m1" class="ltx_Math" alttext="\pm(t^{n}+b_{n-1}t^{n-1}+\ldots b_{1}t+b_{0})." display="block"><mrow><mrow><mo>±</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>t</mi><mi>n</mi></msup><mo>+</mo><mrow><msub><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>t</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><msub><mi>b</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Only one conclusion
+is possible: <math id="S4.p2.m12" class="ltx_Math" alttext="b_{0},b_{1},\ldots,b_{n-1}" display="inline"><mrow><msub><mi>b</mi><mn>0</mn></msub><mo>,</mo><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></math> must be precisely the
+coefficients of the characteristic polynomial of <math id="S4.p2.m13" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Let us
+summarize these findings.</p>
+</div>
+<div id="Thmproposition3" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 3</span>.</h6>
+<div id="Thmproposition3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmproposition3.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be an <math id="Thmproposition3.p1.m2" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">×</mo><mi>n</mi></mrow></math> matrix, with characteristic polynomial</span></p>
+<table id="S4.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex28.m1" class="ltx_Math" alttext="p_{A}(t)=\pm\left(t^{n}+b_{n-1}t^{n-1}+\ldots+b_{1}t+b_{0}\right)." display="block"><mrow><mrow><mrow><msub><mi>p</mi><mi>A</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>±</mo><mrow><mo>(</mo><mrow><msup><mi>t</mi><mi>n</mi></msup><mo>+</mo><mrow><msub><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>t</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><msub><mi>b</mi><mn>0</mn></msub></mrow><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Fix a
+number <math id="Thmproposition3.p1.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> between <math id="Thmproposition3.p1.m4" class="ltx_Math" alttext="1" display="inline"><mn mathvariant="normal">1</mn></math> and <math id="Thmproposition3.p1.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, and let <math id="Thmproposition3.p1.m6" class="ltx_Math" alttext="\mathbf{u}_{j}" display="inline"><msub><mi mathvariant="normal">u</mi><mi>j</mi></msub></math> be the <math id="Thmproposition3.p1.m7" class="ltx_Math" alttext="k^{\mbox{\rm th}}" display="inline"><msup><mi>k</mi><mtext mathvariant="normal">th</mtext></msup></math> column of the matrix <math id="Thmproposition3.p1.m8" class="ltx_Math" alttext="A^{j}" display="inline"><msup><mi>A</mi><mi>j</mi></msup></math>. If the vectors
+<math id="Thmproposition3.p1.m9" class="ltx_Math" alttext="\mathbf{u}_{0},\mathbf{u}_{1},\ldots,\mathbf{u}_{n-1}" display="inline"><mrow><msub><mi mathvariant="normal">u</mi><mn mathvariant="normal">0</mn></msub><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">u</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">u</mi><mrow><mi>n</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msub></mrow></math> form a basis of <math id="Thmproposition3.p1.m10" class="ltx_Math" alttext="{\mathbb{R}}^{n}" display="inline"><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup></math>, then
+the vectors <math id="Thmproposition3.p1.m11" class="ltx_Math" alttext="\mathbf{u}_{0},\mathbf{u}_{1},\ldots,\mathbf{u}_{n-1},\mathbf{u}_{n}" display="inline"><mrow><msub><mi mathvariant="normal">u</mi><mn mathvariant="normal">0</mn></msub><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">u</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">u</mi><mrow><mi>n</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msub><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">u</mi><mi>n</mi></msub></mrow></math> satisfy the
+linear relation:</span></p>
+<table id="S4.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex29.m1" class="ltx_Math" alttext="\mathbf{u}_{n}+b_{n-1}\mathbf{u}_{n-1}+\ldots+b_{1}\mathbf{u}_{1}+b_{0}\mathbf%
+{u}_{0}=0." display="block"><mrow><mrow><mrow><msub><mi>𝐮</mi><mi>n</mi></msub><mo>+</mo><mrow><msub><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>𝐮</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>0</mn></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>A Complication</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">We are almost done with the proof of the Cayley-Hamilton
+Theorem. First, however, we must deal with the possibility that the
+square matrix <math id="S5.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is such that the column vectors of <math id="S5.p1.m2" class="ltx_Math" alttext="A^{0},A^{1},\ldots,A^{n-1}" display="inline"><mrow><msup><mi>A</mi><mn>0</mn></msup><mo>,</mo><msup><mi>A</mi><mn>1</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>A</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></math> do not form a basis. Consider, for example</p>
+<table id="S5.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex30.m1" class="ltx_Math" alttext="A=\left[\begin{array}[]{rrr}1&amp;-1&amp;2\\
+1&amp;4&amp;-4\\
+1&amp;2&amp;-2\end{array}\right]" display="block"><mrow><mi>A</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="right"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>4</mn></mtd><mtd columnalign="right"><mrow><mo>-</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>2</mn></mtd><mtd columnalign="right"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">An easy calculation shows that the characteristic polynomial is given
+by</p>
+<table id="S5.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex31.m1" class="ltx_Math" alttext="p_{A}(t)=t^{3}-3t^{2}+t+2." display="block"><mrow><mrow><mrow><msub><mi>p</mi><mi>A</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>t</mi><mn>3</mn></msup><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mrow><mo>+</mo><mi>t</mi><mo>+</mo><mn>2</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Writing down the sequence of powers of <math id="S5.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>:</p>
+<table id="S5.Ex32" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex32.m1" class="ltx_Math" alttext="\begin{array}[]{cccc}A^{3}&amp;A^{2}&amp;A^{1}&amp;A^{0}\\
+\\
+\left[\begin{array}[]{rrr}3&amp;-2&amp;4\\
+2&amp;15&amp;-14\\
+2&amp;7&amp;-6\end{array}\right]&amp;\quad\left[\begin{array}[]{rrr}2&amp;-1&amp;2\\
+1&amp;7&amp;-6\\
+1&amp;3&amp;-2\end{array}\right]&amp;\quad\left[\begin{array}[]{rrr}1&amp;-1&amp;2\\
+1&amp;4&amp;-4\\
+1&amp;2&amp;-2\end{array}\right]&amp;\quad\left[\begin{array}[]{rrr}1&amp;0&amp;0\\
+0&amp;1&amp;0\\
+0&amp;0&amp;1\end{array}\right]\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msup><mi>A</mi><mn>3</mn></msup></mtd><mtd columnalign="center"><msup><mi>A</mi><mn>2</mn></msup></mtd><mtd columnalign="center"><msup><mi>A</mi><mn>1</mn></msup></mtd><mtd columnalign="center"><msup><mi>A</mi><mn>0</mn></msup></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd></mtd><mtd></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>3</mn></mtd><mtd columnalign="right"><mrow><mo>-</mo><mn>2</mn></mrow></mtd><mtd columnalign="right"><mn>4</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>2</mn></mtd><mtd columnalign="right"><mn>15</mn></mtd><mtd columnalign="right"><mrow><mo>-</mo><mn>14</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mn>2</mn></mtd><mtd columnalign="right"><mn>7</mn></mtd><mtd columnalign="right"><mrow><mo>-</mo><mn>6</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mtd><mtd columnalign="center"><mrow><mo lspace="12.5pt">[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>2</mn></mtd><mtd columnalign="right"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="right"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>7</mn></mtd><mtd columnalign="right"><mrow><mo>-</mo><mn>6</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>3</mn></mtd><mtd columnalign="right"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mtd><mtd columnalign="center"><mrow><mo lspace="12.5pt">[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mrow><mo>-</mo><mn>1</mn></mrow></mtd><mtd columnalign="right"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>4</mn></mtd><mtd columnalign="right"><mrow><mo>-</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>2</mn></mtd><mtd columnalign="right"><mrow><mo>-</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mtd><mtd columnalign="center"><mrow><mo lspace="12.5pt">[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">we notice that the first columns do, in fact, obey a linear relation
+with the coefficients of the characteristic polynomial:</p>
+<table id="S5.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E1.m1" class="ltx_Math" alttext="\left[\begin{array}[]{r}3\\
+2\\
+2\end{array}\right]-3\left[\begin{array}[]{r}2\\
+1\\
+1\end{array}\right]+\left[\begin{array}[]{r}1\\
+1\\
+1\end{array}\right]+2\left[\begin{array}[]{r}1\\
+0\\
+0\end{array}\right]=\left[\begin{array}[]{r}0\\
+0\\
+0\end{array}\right]." display="block"><mrow><mrow><mrow><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>3</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>+</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">However these first column vectors <span class="ltx_text ltx_font_italic">do not </span> form a basis of
+<math id="S5.p1.m4" class="ltx_Math" alttext="{\mathbb{R}}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>, and therefore Proposition <a href="#Thmproposition3" title="Proposition 3. ‣ 4 Putting it all together ‣ lecture notes on the Cayley-Hamilton theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a> is not enough
+to explain why these vectors obey the above linear relation.</p>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">In order to find an explanation, let us proceed as follows. Just as
+before, start by setting <math id="S5.p2.m1" class="ltx_Math" alttext="\mathbf{u}_{0}=\mathbf{e}_{1}" display="inline"><mrow><msub><mi>𝐮</mi><mn>0</mn></msub><mo>=</mo><msub><mi>𝐞</mi><mn>1</mn></msub></mrow></math>, and <math id="S5.p2.m2" class="ltx_Math" alttext="\mathbf{u}_{1}=A\mathbf{u}_{0}" display="inline"><mrow><msub><mi>𝐮</mi><mn>1</mn></msub><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><msub><mi>𝐮</mi><mn>0</mn></msub></mrow></mrow></math>. If we
+take <math id="S5.p2.m3" class="ltx_Math" alttext="\mathbf{u}_{2}=A\mathbf{u}_{1}" display="inline"><mrow><msub><mi>𝐮</mi><mn>2</mn></msub><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow></mrow></math>, then <math id="S5.p2.m4" class="ltx_Math" alttext="{\mathbf{B}}=(\mathbf{u}_{0},\mathbf{u}_{1},\mathbf{u}_{2})" display="inline"><mrow><mi>𝐁</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝐮</mi><mn>0</mn></msub><mo>,</mo><msub><mi>𝐮</mi><mn>1</mn></msub><mo>,</mo><msub><mi>𝐮</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> will not form a
+basis, so instead, let us choose <math id="S5.p2.m5" class="ltx_Math" alttext="\mathbf{u}_{2}" display="inline"><msub><mi>𝐮</mi><mn>2</mn></msub></math> that is linearly independent
+from <math id="S5.p2.m6" class="ltx_Math" alttext="\mathbf{u}_{0}" display="inline"><msub><mi>𝐮</mi><mn>0</mn></msub></math> and <math id="S5.p2.m7" class="ltx_Math" alttext="\mathbf{u}_{1}" display="inline"><msub><mi>𝐮</mi><mn>1</mn></msub></math>, thereby ensuring that <math id="S5.p2.m8" class="ltx_Math" alttext="{\mathbf{B}}" display="inline"><mi>𝐁</mi></math> is a basis.
+There are many, many possible such choices for <math id="S5.p2.m9" class="ltx_Math" alttext="\mathbf{u}_{2}" display="inline"><msub><mi>𝐮</mi><mn>2</mn></msub></math>. To keep the
+discussion concrete, let us take <math id="S5.p2.m10" class="ltx_Math" alttext="\mathbf{u}_{2}=\mathbf{e}_{3}=[0,0,1]^{T}" display="inline"><mrow><msub><mi>𝐮</mi><mn>2</mn></msub><mo>=</mo><msub><mi>𝐞</mi><mn>3</mn></msub><mo>=</mo><msup><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mi>T</mi></msup></mrow></math>. Note that</p>
+<table id="S5.Ex33" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex33.m1" class="ltx_Math" alttext="A\mathbf{u}_{0}=\mathbf{u}_{1}" display="block"><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mi>𝐮</mi><mn>0</mn></msub></mrow><mo>=</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S5.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex34.m1" class="ltx_Math" alttext="A\mathbf{u}_{1}=[2,1,1]^{T}=\mathbf{u}_{0}+\mathbf{u}_{1}." display="block"><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow><mo>=</mo><msup><mrow><mo stretchy="false">[</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mi>T</mi></msup><mo>=</mo><mrow><msub><mi>𝐮</mi><mn>0</mn></msub><mo>+</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S5.Ex35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex35.m1" class="ltx_Math" alttext="A\mathbf{u}_{2}=[2,-4,2]^{T}=6\mathbf{u}_{0}-4\mathbf{u}_{1}+2\mathbf{u}_{2}." display="block"><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mi>𝐮</mi><mn>2</mn></msub></mrow><mo>=</mo><msup><mrow><mo stretchy="false">[</mo><mn>2</mn><mo>,</mo><mrow><mo>-</mo><mn>4</mn></mrow><mo>,</mo><mn>2</mn><mo stretchy="false">]</mo></mrow><mi>T</mi></msup><mo>=</mo><mrow><mrow><mrow><mn>6</mn><mo>⁢</mo><msub><mi>𝐮</mi><mn>0</mn></msub></mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>𝐮</mi><mn>2</mn></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore, representing <math id="S5.p2.m11" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> relative to the basis <math id="S5.p2.m12" class="ltx_Math" alttext="{\mathbf{B}}" display="inline"><mi>𝐁</mi></math> we obtain</p>
+<table id="S5.Ex36" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex36.m1" class="ltx_Math" alttext="[A]_{\mathbf{B}}=\left[\begin{array}[]{rrr}0&amp;1&amp;6\\
+1&amp;1&amp;-4\\
+0&amp;0&amp;2\end{array}\right]" display="block"><mrow><msub><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow><mi>𝐁</mi></msub><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>6</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mrow><mo>-</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By Proposition <a href="#Thmproposition1" title="Proposition 1. ‣ 3 The Cyclic Basis ‣ lecture notes on the Cayley-Hamilton theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>, we know that the characteristic
+polynomial of <math id="S5.p2.m13" class="ltx_Math" alttext="[A]_{\mathbf{B}}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow><mi>𝐁</mi></msub></math> is equal to the characteristic polynomial of
+<math id="S5.p2.m14" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. However, we know much more.</p>
+</div>
+<div id="Thmproposition4" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 4</span>.</h6>
+<div id="Thmproposition4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmproposition4.p1.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be an <math id="Thmproposition4.p1.m2" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">×</mo><mi>n</mi></mrow></math> matrix of the form</span></p>
+<table id="S5.Ex37" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex37.m1" class="ltx_Math" alttext="B=\left[\begin{array}[]{cc}B_{1}&amp;B_{2}\\
+\mathbf{0}&amp;B_{3}\end{array}\right]" display="block"><mrow><mi>B</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>B</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><msub><mi>B</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><mn>𝟎</mn></mtd><mtd columnalign="center"><msub><mi>B</mi><mn>3</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">where
+<math id="Thmproposition4.p1.m3" class="ltx_Math" alttext="B_{1}" display="inline"><msub><mi>B</mi><mn mathvariant="normal">1</mn></msub></math> is a <math id="Thmproposition4.p1.m4" class="ltx_Math" alttext="k\times k" display="inline"><mrow><mi>k</mi><mo mathvariant="normal">×</mo><mi>k</mi></mrow></math> matrix, <math id="Thmproposition4.p1.m5" class="ltx_Math" alttext="B_{2}" display="inline"><msub><mi>B</mi><mn mathvariant="normal">2</mn></msub></math> is a <math id="Thmproposition4.p1.m6" class="ltx_Math" alttext="k\times(n-k)" display="inline"><mrow><mi>k</mi><mo mathvariant="normal">×</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mi>n</mi><mo mathvariant="normal">-</mo><mi>k</mi></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> matrix, and
+<math id="Thmproposition4.p1.m7" class="ltx_Math" alttext="B_{3}" display="inline"><msub><mi>B</mi><mn mathvariant="normal">3</mn></msub></math> is a <math id="Thmproposition4.p1.m8" class="ltx_Math" alttext="(n-k)\times(n-k)" display="inline"><mrow><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mi>n</mi><mo mathvariant="normal">-</mo><mi>k</mi></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow><mo mathvariant="normal">×</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mi>n</mi><mo mathvariant="normal">-</mo><mi>k</mi></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> matrix. Then, the characteristic
+polynomial of <math id="Thmproposition4.p1.m9" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is the product of the characteristic polynomials of
+<math id="Thmproposition4.p1.m10" class="ltx_Math" alttext="B_{1}" display="inline"><msub><mi>B</mi><mn mathvariant="normal">1</mn></msub></math> and <math id="Thmproposition4.p1.m11" class="ltx_Math" alttext="B_{3}" display="inline"><msub><mi>B</mi><mn mathvariant="normal">3</mn></msub></math>, i.e. <math id="Thmproposition4.p1.m12" class="ltx_Math" alttext="p_{B}(t)=p_{B_{1}}(t)\times p_{B_{3}}(t)" display="inline"><mrow><mrow><msub><mi>p</mi><mi>B</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>t</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mrow><mrow><mrow><msub><mi>p</mi><msub><mi>B</mi><mn mathvariant="normal">1</mn></msub></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>t</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">×</mo><msub><mi>p</mi><msub><mi>B</mi><mn mathvariant="normal">3</mn></msub></msub></mrow><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>t</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p">Note that</p>
+<table id="S5.Ex38" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex38.m1" class="ltx_Math" alttext="B-tI=\left[\begin{array}[]{cc}B_{1}-tI_{1}&amp;B_{2}\\
+\mathbf{0}&amp;B_{3}-tI_{3}\end{array}\right]" display="block"><mrow><mrow><mi>B</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msub><mi>B</mi><mn>1</mn></msub><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><msub><mi>I</mi><mn>1</mn></msub></mrow></mrow></mtd><mtd columnalign="center"><msub><mi>B</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><mn>𝟎</mn></mtd><mtd columnalign="center"><mrow><msub><mi>B</mi><mn>3</mn></msub><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><msub><mi>I</mi><mn>3</mn></msub></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S5.p3.m1" class="ltx_Math" alttext="I_{1}" display="inline"><msub><mi>I</mi><mn>1</mn></msub></math> is the <math id="S5.p3.m2" class="ltx_Math" alttext="k\times k" display="inline"><mrow><mi>k</mi><mo>×</mo><mi>k</mi></mrow></math> identity matrix, and <math id="S5.p3.m3" class="ltx_Math" alttext="I_{3}" display="inline"><msub><mi>I</mi><mn>3</mn></msub></math> is the
+<math id="S5.p3.m4" class="ltx_Math" alttext="(n-k)\times(n-k)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mi>k</mi></mrow><mo stretchy="false">)</mo></mrow><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mi>k</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> identity matrix. The Proposition now follows from
+the fact that the determinant of a matrix whose shape is like <math id="S5.p3.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is
+the determinant of the upper-left block times the determinant of the
+lower-right block.
+∎</p>
+</div>
+</div>
+<div id="S5.p4" class="ltx_para">
+<p class="ltx_p">Thanks to Proposition <a href="#Thmproposition4" title="Proposition 4. ‣ 5 A Complication ‣ lecture notes on the Cayley-Hamilton theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a> we know that the
+characteristic polynomial of <math id="S5.p4.m1" class="ltx_Math" alttext="[A]_{\mathbf{B}}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow><mi>𝐁</mi></msub></math> is a product of the
+characteristic polynomial of the <math id="S5.p4.m2" class="ltx_Math" alttext="2\times 2" display="inline"><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow></math> matrix</p>
+<table id="S5.Ex39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex39.m1" class="ltx_Math" alttext="\left[\begin{array}[]{rr}0&amp;1\\
+1&amp;1\end{array}\right]" display="block"><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd><mtd columnalign="right"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and the characteristic polynomial of the <math id="S5.p4.m3" class="ltx_Math" alttext="1\times 1" display="inline"><mrow><mn>1</mn><mo>×</mo><mn>1</mn></mrow></math> matrix <math id="S5.p4.m4" class="ltx_Math" alttext="[2]" display="inline"><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow></math>. In
+other words,</p>
+<table id="S5.Ex40" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex40.m1" class="ltx_Math" alttext="p_{[A]_{\mathbf{B}}}(t)=(t^{2}-t-1)(t-2)." display="block"><mrow><mrow><mrow><msub><mi>p</mi><msub><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow><mi>𝐁</mi></msub></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>-</mo><mi>t</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Furthermore by Proposition
+<a href="#Thmproposition2" title="Proposition 2. ‣ 3 The Cyclic Basis ‣ lecture notes on the Cayley-Hamilton theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> we know that <math id="S5.p4.m5" class="ltx_Math" alttext="A\mathbf{u}_{1}" display="inline"><mrow><mi>A</mi><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow></math>, <math id="S5.p4.m6" class="ltx_Math" alttext="\mathbf{u}_{1}" display="inline"><msub><mi>𝐮</mi><mn>1</mn></msub></math>, <math id="S5.p4.m7" class="ltx_Math" alttext="\mathbf{u}_{0}" display="inline"><msub><mi>𝐮</mi><mn>0</mn></msub></math>, i.e. the
+first column vectors of <math id="S5.p4.m8" class="ltx_Math" alttext="A^{2},A^{1},A^{0}" display="inline"><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>,</mo><msup><mi>A</mi><mn>1</mn></msup><mo>,</mo><msup><mi>A</mi><mn>0</mn></msup></mrow></math>, obey a linear relation with
+the coefficients of the polynomial <math id="S5.p4.m9" class="ltx_Math" alttext="t^{2}-t-1" display="inline"><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>-</mo><mi>t</mi><mo>-</mo><mn>1</mn></mrow></math>:</p>
+<table id="S5.Ex41" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex41.m1" class="ltx_Math" alttext="A\mathbf{u}_{1}-\mathbf{u}_{1}-\mathbf{u}_{0}=\mathbf{0}," display="block"><mrow><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow><mo>-</mo><msub><mi>𝐮</mi><mn>1</mn></msub><mo>-</mo><msub><mi>𝐮</mi><mn>0</mn></msub></mrow><mo>=</mo><mn>𝟎</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S5.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E2.m1" class="ltx_Math" alttext="\left[\begin{array}[]{r}2\\
+1\\
+1\end{array}\right]-\left[\begin{array}[]{r}1\\
+1\\
+1\end{array}\right]-\left[\begin{array}[]{r}1\\
+0\\
+0\end{array}\right]=\left[\begin{array}[]{r}0\\
+0\\
+0\end{array}\right]." display="block"><mrow><mrow><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>-</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>-</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Multiplying this relation through by <math id="S5.p4.m10" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> wed deduce that the first
+column vectors of <math id="S5.p4.m11" class="ltx_Math" alttext="A^{3},A^{2},A^{1}" display="inline"><mrow><msup><mi>A</mi><mn>3</mn></msup><mo>,</mo><msup><mi>A</mi><mn>2</mn></msup><mo>,</mo><msup><mi>A</mi><mn>1</mn></msup></mrow></math> obey the same linear relation:</p>
+<table id="S5.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E3.m1" class="ltx_Math" alttext="\left[\begin{array}[]{r}3\\
+2\\
+2\end{array}\right]-\left[\begin{array}[]{r}2\\
+1\\
+1\end{array}\right]-\left[\begin{array}[]{r}1\\
+1\\
+1\end{array}\right]=\left[\begin{array}[]{r}0\\
+0\\
+0\end{array}\right]." display="block"><mrow><mrow><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>3</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>-</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>2</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>-</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Next think about what it means to multiply a polynomial such as
+<math id="S5.p4.m12" class="ltx_Math" alttext="t^{2}-t-1" display="inline"><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>-</mo><mi>t</mi><mo>-</mo><mn>1</mn></mrow></math> by another polynomial such as <math id="S5.p4.m13" class="ltx_Math" alttext="t-2" display="inline"><mrow><mi>t</mi><mo>-</mo><mn>2</mn></mrow></math>. Indeed, one can
+structure the multiplication by multiplying the first polynomial
+through by <math id="S5.p4.m14" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, then multiplying it through by <math id="S5.p4.m15" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>-</mo><mn>2</mn></mrow></math>, and then adding
+the two terms:</p>
+<table id="S5.Ex42" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex42.m1" class="ltx_Math" alttext="\begin{array}[]{cccc}t^{3}&amp;-t^{2}&amp;-t\\
+&amp;-2t^{2}&amp;2t&amp;2\\
+\hline t^{3}&amp;-3t^{2}&amp;+t&amp;+2\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msup><mi>t</mi><mn>3</mn></msup></mtd><mtd columnalign="center"><mrow><mo>-</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mi>t</mi></mrow></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd columnalign="center"><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mrow></mtd><mtd columnalign="center"><mrow><mn>2</mn><mo>⁢</mo><mi>t</mi></mrow></mtd><mtd columnalign="center"><mn>2</mn></mtd></mtr><mtr><mtd class="ltx_border_t" columnalign="center"><msup><mi>t</mi><mn>3</mn></msup></mtd><mtd class="ltx_border_t" columnalign="center"><mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mrow></mtd><mtd class="ltx_border_t" columnalign="center"><mrow><mo>+</mo><mi>t</mi></mrow></mtd><mtd class="ltx_border_t" columnalign="center"><mrow><mo>+</mo><mn>2</mn></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The bottom line is, of course, just the characteristic polynomial
+of <math id="S5.p4.m16" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, and the whole idea behind the above calculation is that
+<math id="S5.p4.m17" class="ltx_Math" alttext="p_{A}(t)" display="inline"><mrow><msub><mi>p</mi><mi>A</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> can be “formed out of” the polynomial <math id="S5.p4.m18" class="ltx_Math" alttext="t^{2}-t-1" display="inline"><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>-</mo><mi>t</mi><mo>-</mo><mn>1</mn></mrow></math>. This
+shows that we can combine relations (<a href="#S5.E2" title="(2) ‣ 5 A Complication ‣ lecture notes on the Cayley-Hamilton theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) and
+(<a href="#S5.E3" title="(3) ‣ 5 A Complication ‣ lecture notes on the Cayley-Hamilton theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) and produce in the end the desired relation
+(<a href="#S5.E1" title="(1) ‣ 5 A Complication ‣ lecture notes on the Cayley-Hamilton theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>). All we have to do is take relation (<a href="#S5.E3" title="(3) ‣ 5 A Complication ‣ lecture notes on the Cayley-Hamilton theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>),
+and add to it <math id="S5.p4.m19" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>-</mo><mn>2</mn></mrow></math> times the relation (<a href="#S5.E2" title="(2) ‣ 5 A Complication ‣ lecture notes on the Cayley-Hamilton theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>). This explains
+why the first column vectors of <math id="S5.p4.m20" class="ltx_Math" alttext="A^{3},A^{2},A^{1},A^{0}" display="inline"><mrow><msup><mi>A</mi><mn>3</mn></msup><mo>,</mo><msup><mi>A</mi><mn>2</mn></msup><mo>,</mo><msup><mi>A</mi><mn>1</mn></msup><mo>,</mo><msup><mi>A</mi><mn>0</mn></msup></mrow></math> obey a linear
+relation whose coefficients come from the characteristic polynomial of
+<math id="S5.p4.m21" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+<div id="Thmproposition5" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 5</span>.</h6>
+<div id="Thmproposition5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmproposition5.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be an <math id="Thmproposition5.p1.m2" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">×</mo><mi>n</mi></mrow></math> matrix, with characteristic polynomial</span></p>
+<table id="S5.Ex43" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex43.m1" class="ltx_Math" alttext="p_{A}(t)=\pm\left(t^{n}+b_{n-1}t^{n-1}+\ldots+b_{1}t+b_{0}\right)." display="block"><mrow><mrow><mrow><msub><mi>p</mi><mi>A</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>±</mo><mrow><mo>(</mo><mrow><msup><mi>t</mi><mi>n</mi></msup><mo>+</mo><mrow><msub><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>t</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><msub><mi>b</mi><mn>0</mn></msub></mrow><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Fix a
+number <math id="Thmproposition5.p1.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> between <math id="Thmproposition5.p1.m4" class="ltx_Math" alttext="1" display="inline"><mn mathvariant="normal">1</mn></math> and <math id="Thmproposition5.p1.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, and let <math id="Thmproposition5.p1.m6" class="ltx_Math" alttext="\mathbf{u}_{j}" display="inline"><msub><mi mathvariant="normal">u</mi><mi>j</mi></msub></math> be the <math id="Thmproposition5.p1.m7" class="ltx_Math" alttext="k^{\mbox{\rm th}}" display="inline"><msup><mi>k</mi><mtext mathvariant="normal">th</mtext></msup></math> column of the matrix <math id="Thmproposition5.p1.m8" class="ltx_Math" alttext="A^{j}" display="inline"><msup><mi>A</mi><mi>j</mi></msup></math>.
+The vectors <math id="Thmproposition5.p1.m9" class="ltx_Math" alttext="\mathbf{u}_{0},\mathbf{u}_{1},\ldots,\mathbf{u}_{n-1},\mathbf{u}_{n}" display="inline"><mrow><msub><mi mathvariant="normal">u</mi><mn mathvariant="normal">0</mn></msub><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">u</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">u</mi><mrow><mi>n</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msub><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">u</mi><mi>n</mi></msub></mrow></math> satisfy the
+linear relation:</span></p>
+<table id="S5.Ex44" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex44.m1" class="ltx_Math" alttext="\mathbf{u}_{n}+b_{n-1}\mathbf{u}_{n-1}+\ldots+b_{1}\mathbf{u}_{1}+b_{0}\mathbf%
+{u}_{0}=0," display="block"><mrow><mrow><mrow><msub><mi>𝐮</mi><mi>n</mi></msub><mo>+</mo><mrow><msub><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>𝐮</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>0</mn></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">even if the vectors <math id="Thmproposition5.p1.m10" class="ltx_Math" alttext="\mathbf{u}_{0},\mathbf{u}_{1},\ldots,\mathbf{u}_{n-1}" display="inline"><mrow><msub><mi mathvariant="normal">u</mi><mn mathvariant="normal">0</mn></msub><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">u</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">u</mi><mrow><mi>n</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msub></mrow></math> do not form a
+basis of <math id="Thmproposition5.p1.m11" class="ltx_Math" alttext="{\mathbb{R}}^{n}" display="inline"><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S5.p5" class="ltx_para">
+<p class="ltx_p">Suppose that there is a number <math id="S5.p5.m1" class="ltx_Math" alttext="m&lt;n" display="inline"><mrow><mi>m</mi><mo>&lt;</mo><mi>n</mi></mrow></math> such that <math id="S5.p5.m2" class="ltx_Math" alttext="\mathbf{u}_{m}" display="inline"><msub><mi>𝐮</mi><mi>m</mi></msub></math> can be given
+as a linear combination of <math id="S5.p5.m3" class="ltx_Math" alttext="\mathbf{u}_{0},\mathbf{u}_{1},\ldots,\mathbf{u}_{m-1}" display="inline"><mrow><msub><mi>𝐮</mi><mn>0</mn></msub><mo>,</mo><msub><mi>𝐮</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>𝐮</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></math>; let’s
+say</p>
+<table id="S5.Ex45" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex45.m1" class="ltx_Math" alttext="\mathbf{u}_{m}+c_{m-1}\mathbf{u}_{m-1}+\ldots+c_{1}\mathbf{u}_{1}+c_{0}\mathbf%
+{u}_{0}=0." display="block"><mrow><mrow><mrow><msub><mi>𝐮</mi><mi>m</mi></msub><mo>+</mo><mrow><msub><mi>c</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>𝐮</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>0</mn></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Choose vectors <math id="S5.p5.m4" class="ltx_Math" alttext="\mathbf{v}_{m},\mathbf{v}_{m+1},\ldots,\mathbf{v}_{n-1}" display="inline"><mrow><msub><mi>𝐯</mi><mi>m</mi></msub><mo>,</mo><msub><mi>𝐯</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>𝐯</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></math> so that the
+list</p>
+<table id="S5.Ex46" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex46.m1" class="ltx_Math" alttext="{\mathbf{B}}=(\mathbf{u}_{0},\mathbf{u}_{1},\ldots,\mathbf{u}_{m-1},\mathbf{v}%
+_{m},\mathbf{v}_{m+1},\ldots,\mathbf{v}_{n-1})" display="block"><mrow><mi>𝐁</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝐮</mi><mn>0</mn></msub><mo>,</mo><msub><mi>𝐮</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>𝐮</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>𝐯</mi><mi>m</mi></msub><mo>,</mo><msub><mi>𝐯</mi><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>𝐯</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">forms a basis of <math id="S5.p5.m5" class="ltx_Math" alttext="{\mathbb{R}}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>. Relative to this basis, <math id="S5.p5.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> will have
+the form</p>
+<table id="S5.Ex47" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex47.m1" class="ltx_Math" alttext="A=\left[\begin{array}[]{rr}A_{1}&amp;A_{2}\\
+0&amp;A_{3}\end{array}\right]," display="block"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><msub><mi>A</mi><mn>1</mn></msub></mtd><mtd columnalign="right"><msub><mi>A</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd columnalign="right"><mn>0</mn></mtd><mtd columnalign="right"><msub><mi>A</mi><mn>3</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the upper-left block has the form</p>
+<table id="S5.Ex48" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex48.m1" class="ltx_Math" alttext="A_{1}=\left[\begin{array}[]{ccccc}0&amp;0&amp;\ldots&amp;0&amp;-c_{0}\\
+1&amp;0&amp;\ldots&amp;0&amp;-c_{1}\\
+0&amp;1&amp;\ldots&amp;0&amp;-c_{2}\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots&amp;\vdots\\
+0&amp;0&amp;\ldots&amp;1&amp;-c_{m-1}\end{array}\right]" display="block"><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>c</mi><mn>0</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>c</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋱</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><msub><mi>c</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By Proposition <a href="#Thmproposition2" title="Proposition 2. ‣ 3 The Cyclic Basis ‣ lecture notes on the Cayley-Hamilton theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>,</p>
+<table id="S5.Ex49" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex49.m1" class="ltx_Math" alttext="p_{A_{1}}(t)=\pm(t^{m}+c_{m-1}t^{m-1}+\ldots+c_{1}t+c_{0})" display="block"><mrow><mrow><msub><mi>p</mi><msub><mi>A</mi><mn>1</mn></msub></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>±</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>t</mi><mi>m</mi></msup><mo>+</mo><mrow><msub><mi>c</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>t</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><msub><mi>c</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">.
+Let <math id="S5.p5.m7" class="ltx_Math" alttext="\pm(t^{n-m}+d_{n-m-1}t^{m-1}+\ldots d_{1}t+d_{0})" display="inline"><mrow><mo>±</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>t</mi><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow></msup><mo>+</mo><mrow><msub><mi>d</mi><mrow><mi>n</mi><mo>-</mo><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>t</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>d</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><msub><mi>d</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></math> denote the characteristic polynomial of <math id="S5.p5.m8" class="ltx_Math" alttext="A_{3}" display="inline"><msub><mi>A</mi><mn>3</mn></msub></math>.
+By Proposition <a href="#Thmproposition4" title="Proposition 4. ‣ 5 A Complication ‣ lecture notes on the Cayley-Hamilton theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>, the characteristic polynomial of
+<math id="S5.p5.m9" class="ltx_Math" alttext="[A]_{\mathbf{B}}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>A</mi><mo stretchy="false">]</mo></mrow><mi>𝐁</mi></msub></math> (which is equal to the characteristic polynomial of <math id="S5.p5.m10" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>) is
+the product <math id="S5.p5.m11" class="ltx_Math" alttext="p_{A_{1}}(t)\times p_{A_{3}}(t)" display="inline"><mrow><mrow><mrow><msub><mi>p</mi><msub><mi>A</mi><mn>1</mn></msub></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><msub><mi>p</mi><msub><mi>A</mi><mn>3</mn></msub></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>, and therefore <math id="S5.p5.m12" class="ltx_Math" alttext="p_{A}(t)" display="inline"><mrow><msub><mi>p</mi><mi>A</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> can
+be obtained by taking linear combinations of <math id="S5.p5.m13" class="ltx_Math" alttext="p_{A_{1}}(t)" display="inline"><mrow><msub><mi>p</mi><msub><mi>A</mi><mn>1</mn></msub></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> times
+various powers of <math id="S5.p5.m14" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>:</p>
+<table id="S5.Ex50" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex50.m1" class="ltx_Math" alttext="\begin{array}[]{rrrrrrrrrr}d_{0}\times&amp;&amp;&amp;t^{m}\;+&amp;c_{m-1}t^{m-1}\;+&amp;\ldots\;+&amp;%
+c_{2}t^{2}\;+&amp;c_{1}t\;+&amp;c_{0}\\
+d_{1}\times&amp;&amp;t^{m\;+1}\;+&amp;c_{m-1}t^{m}\;+&amp;c_{m-2}t^{m-1}\;+&amp;\ldots\;+&amp;c_{1}t^{%
+2}\;+&amp;c_{0}t\\
+&amp;&amp;\ldots&amp;\ldots&amp;\ldots\\
+1\times&amp;t^{n}\;+&amp;c_{m-1}t^{n-1}\;+&amp;\ldots\;+&amp;c_{1}t^{n-m\;+1}\;+&amp;c_{0}t^{n-m}%
+\\
+\hline&amp;t^{n}\;+&amp;b_{n-1}t^{n-1}\;+&amp;b_{n-2}t^{n-2}\;+&amp;\ldots&amp;+&amp;b_{2}t^{2}\;+&amp;b_{%
+1}t\;+&amp;b_{0}\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><msub><mi mathsize="90%">d</mi><mn mathsize="90%">0</mn></msub><mo mathsize="90%" stretchy="false">×</mo></mrow></mtd><mtd></mtd><mtd></mtd><mtd columnalign="right"><mrow><mpadded width="+2.8pt"><msup><mi mathsize="90%">t</mi><mi mathsize="90%">m</mi></msup></mpadded><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mrow><msub><mi mathsize="90%">c</mi><mrow><mi mathsize="90%">m</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></msub><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi mathsize="90%">t</mi><mrow><mi mathsize="90%">m</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></msup></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mpadded width="+2.8pt"><mi mathsize="90%" mathvariant="normal">…</mi></mpadded><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mrow><msub><mi mathsize="90%">c</mi><mn mathsize="90%">2</mn></msub><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi mathsize="90%">t</mi><mn mathsize="90%">2</mn></msup></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mrow><msub><mi mathsize="90%">c</mi><mn mathsize="90%">1</mn></msub><mo>⁢</mo><mpadded width="+2.8pt"><mi mathsize="90%">t</mi></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><msub><mi mathsize="90%">c</mi><mn mathsize="90%">0</mn></msub></mtd><mtd></mtd></mtr><mtr><mtd columnalign="right"><mrow><msub><mi mathsize="90%">d</mi><mn mathsize="90%">1</mn></msub><mo mathsize="90%" stretchy="false">×</mo></mrow></mtd><mtd></mtd><mtd columnalign="right"><mrow><mpadded width="+2.8pt"><msup><mi mathsize="90%">t</mi><mrow><mpadded width="+2.8pt"><mi mathsize="90%">m</mi></mpadded><mo mathsize="90%" stretchy="false">+</mo><mn mathsize="90%">1</mn></mrow></msup></mpadded><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mrow><msub><mi mathsize="90%">c</mi><mrow><mi mathsize="90%">m</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></msub><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi mathsize="90%">t</mi><mi mathsize="90%">m</mi></msup></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mrow><msub><mi mathsize="90%">c</mi><mrow><mi mathsize="90%">m</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">2</mn></mrow></msub><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi mathsize="90%">t</mi><mrow><mi mathsize="90%">m</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></msup></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mpadded width="+2.8pt"><mi mathsize="90%" mathvariant="normal">…</mi></mpadded><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mrow><msub><mi mathsize="90%">c</mi><mn mathsize="90%">1</mn></msub><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi mathsize="90%">t</mi><mn mathsize="90%">2</mn></msup></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><msub><mi mathsize="90%">c</mi><mn mathsize="90%">0</mn></msub><mo>⁢</mo><mi mathsize="90%">t</mi></mrow></mtd><mtd></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd columnalign="right"><mi mathsize="90%" mathvariant="normal">…</mi></mtd><mtd columnalign="right"><mi mathsize="90%" mathvariant="normal">…</mi></mtd><mtd columnalign="right"><mi mathsize="90%" mathvariant="normal">…</mi></mtd><mtd></mtd><mtd></mtd><mtd></mtd><mtd></mtd><mtd></mtd></mtr><mtr><mtd columnalign="right"><mrow><mn mathsize="90%">1</mn><mo mathsize="90%" stretchy="false">×</mo></mrow></mtd><mtd columnalign="right"><mrow><mpadded width="+2.8pt"><msup><mi mathsize="90%">t</mi><mi mathsize="90%">n</mi></msup></mpadded><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mrow><msub><mi mathsize="90%">c</mi><mrow><mi mathsize="90%">m</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></msub><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi mathsize="90%">t</mi><mrow><mi mathsize="90%">n</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></msup></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mpadded width="+2.8pt"><mi mathsize="90%" mathvariant="normal">…</mi></mpadded><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mrow><msub><mi mathsize="90%">c</mi><mn mathsize="90%">1</mn></msub><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi mathsize="90%">t</mi><mrow><mrow><mi mathsize="90%">n</mi><mo mathsize="90%" stretchy="false">-</mo><mpadded width="+2.8pt"><mi mathsize="90%">m</mi></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo><mn mathsize="90%">1</mn></mrow></msup></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><msub><mi mathsize="90%">c</mi><mn mathsize="90%">0</mn></msub><mo>⁢</mo><msup><mi mathsize="90%">t</mi><mrow><mi mathsize="90%">n</mi><mo mathsize="90%" stretchy="false">-</mo><mi mathsize="90%">m</mi></mrow></msup></mrow></mtd><mtd></mtd><mtd></mtd><mtd></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_border_t"><mi></mi></mtd><mtd class="ltx_border_t" columnalign="right"><mrow><mpadded width="+2.8pt"><msup><mi mathsize="90%">t</mi><mi mathsize="90%">n</mi></msup></mpadded><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd class="ltx_border_t" columnalign="right"><mrow><mrow><msub><mi mathsize="90%">b</mi><mrow><mi mathsize="90%">n</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></msub><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi mathsize="90%">t</mi><mrow><mi mathsize="90%">n</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></msup></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd class="ltx_border_t" columnalign="right"><mrow><mrow><msub><mi mathsize="90%">b</mi><mrow><mi mathsize="90%">n</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">2</mn></mrow></msub><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi mathsize="90%">t</mi><mrow><mi mathsize="90%">n</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">2</mn></mrow></msup></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd class="ltx_border_t" columnalign="right"><mi mathsize="90%" mathvariant="normal">…</mi></mtd><mtd class="ltx_border_t" columnalign="right"><mo mathsize="90%" stretchy="false">+</mo></mtd><mtd class="ltx_border_t" columnalign="right"><mrow><mrow><msub><mi mathsize="90%">b</mi><mn mathsize="90%">2</mn></msub><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi mathsize="90%">t</mi><mn mathsize="90%">2</mn></msup></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd class="ltx_border_t" columnalign="right"><mrow><mrow><msub><mi mathsize="90%">b</mi><mn mathsize="90%">1</mn></msub><mo>⁢</mo><mpadded width="+2.8pt"><mi mathsize="90%">t</mi></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd class="ltx_border_t" columnalign="right"><msub><mi mathsize="90%">b</mi><mn mathsize="90%">0</mn></msub></mtd><mtd class="ltx_border_t"></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Corresponding to the above polynomials are the relations</p>
+<table id="S5.Ex51" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex51.m1" class="ltx_Math" alttext="\begin{array}[]{rrrrrrrrrr}&amp;&amp;\mathbf{u}_{m}\;+&amp;c_{m-1}\mathbf{u}_{m-1}\;+&amp;%
+\ldots\;+&amp;c_{2}\mathbf{u}_{2}\;+&amp;c_{1}\mathbf{u}_{1}\;+&amp;c_{0}\mathbf{u}_{0}&amp;=0%
+\\
+&amp;\mathbf{u}_{m+1}\;+&amp;c_{m-1}\mathbf{u}_{m}\;+&amp;c_{m-2}\mathbf{u}_{m-1}\;+&amp;%
+\ldots\;+&amp;c_{1}\mathbf{u}_{2}\;+&amp;c_{0}\mathbf{u}_{1}&amp;&amp;=0\\
+&amp;\ldots&amp;\ldots&amp;\ldots\\
+\mathbf{u}_{n}\;+&amp;c_{m-1}\mathbf{u}_{n-1}\;+&amp;\ldots\;+&amp;c_{1}\mathbf{u}_{n-m+1}%
+\;+&amp;c_{0}\mathbf{u}_{n-m}&amp;&amp;&amp;&amp;=0\\
+\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd></mtd><mtd></mtd><mtd columnalign="right"><mrow><mpadded width="+2.8pt"><msub><mi mathsize="90%">𝐮</mi><mi mathsize="90%">m</mi></msub></mpadded><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mrow><msub><mi mathsize="90%">c</mi><mrow><mi mathsize="90%">m</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></msub><mo>⁢</mo><mpadded width="+2.8pt"><msub><mi mathsize="90%">𝐮</mi><mrow><mi mathsize="90%">m</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></msub></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mpadded width="+2.8pt"><mi mathsize="90%" mathvariant="normal">…</mi></mpadded><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mrow><msub><mi mathsize="90%">c</mi><mn mathsize="90%">2</mn></msub><mo>⁢</mo><mpadded width="+2.8pt"><msub><mi mathsize="90%">𝐮</mi><mn mathsize="90%">2</mn></msub></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mrow><msub><mi mathsize="90%">c</mi><mn mathsize="90%">1</mn></msub><mo>⁢</mo><mpadded width="+2.8pt"><msub><mi mathsize="90%">𝐮</mi><mn mathsize="90%">1</mn></msub></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><msub><mi mathsize="90%">c</mi><mn mathsize="90%">0</mn></msub><mo>⁢</mo><msub><mi mathsize="90%">𝐮</mi><mn mathsize="90%">0</mn></msub></mrow></mtd><mtd columnalign="right"><mrow><mi></mi><mo mathsize="90%" stretchy="false">=</mo><mn mathsize="90%">0</mn></mrow></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd columnalign="right"><mrow><mpadded width="+2.8pt"><msub><mi mathsize="90%">𝐮</mi><mrow><mi mathsize="90%">m</mi><mo mathsize="90%" stretchy="false">+</mo><mn mathsize="90%">1</mn></mrow></msub></mpadded><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mrow><msub><mi mathsize="90%">c</mi><mrow><mi mathsize="90%">m</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></msub><mo>⁢</mo><mpadded width="+2.8pt"><msub><mi mathsize="90%">𝐮</mi><mi mathsize="90%">m</mi></msub></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mrow><msub><mi mathsize="90%">c</mi><mrow><mi mathsize="90%">m</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">2</mn></mrow></msub><mo>⁢</mo><mpadded width="+2.8pt"><msub><mi mathsize="90%">𝐮</mi><mrow><mi mathsize="90%">m</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></msub></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mpadded width="+2.8pt"><mi mathsize="90%" mathvariant="normal">…</mi></mpadded><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mrow><msub><mi mathsize="90%">c</mi><mn mathsize="90%">1</mn></msub><mo>⁢</mo><mpadded width="+2.8pt"><msub><mi mathsize="90%">𝐮</mi><mn mathsize="90%">2</mn></msub></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><msub><mi mathsize="90%">c</mi><mn mathsize="90%">0</mn></msub><mo>⁢</mo><msub><mi mathsize="90%">𝐮</mi><mn mathsize="90%">1</mn></msub></mrow></mtd><mtd></mtd><mtd columnalign="right"><mrow><mi></mi><mo mathsize="90%" stretchy="false">=</mo><mn mathsize="90%">0</mn></mrow></mtd><mtd></mtd></mtr><mtr><mtd></mtd><mtd columnalign="right"><mi mathsize="90%" mathvariant="normal">…</mi></mtd><mtd columnalign="right"><mi mathsize="90%" mathvariant="normal">…</mi></mtd><mtd columnalign="right"><mi mathsize="90%" mathvariant="normal">…</mi></mtd><mtd></mtd><mtd></mtd><mtd></mtd><mtd></mtd><mtd></mtd><mtd></mtd></mtr><mtr><mtd columnalign="right"><mrow><mpadded width="+2.8pt"><msub><mi mathsize="90%">𝐮</mi><mi mathsize="90%">n</mi></msub></mpadded><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mrow><msub><mi mathsize="90%">c</mi><mrow><mi mathsize="90%">m</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></msub><mo>⁢</mo><mpadded width="+2.8pt"><msub><mi mathsize="90%">𝐮</mi><mrow><mi mathsize="90%">n</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></msub></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mpadded width="+2.8pt"><mi mathsize="90%" mathvariant="normal">…</mi></mpadded><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><mrow><msub><mi mathsize="90%">c</mi><mn mathsize="90%">1</mn></msub><mo>⁢</mo><mpadded width="+2.8pt"><msub><mi mathsize="90%">𝐮</mi><mrow><mrow><mi mathsize="90%">n</mi><mo mathsize="90%" stretchy="false">-</mo><mi mathsize="90%">m</mi></mrow><mo mathsize="90%" stretchy="false">+</mo><mn mathsize="90%">1</mn></mrow></msub></mpadded></mrow><mo mathsize="90%" stretchy="false">+</mo></mrow></mtd><mtd columnalign="right"><mrow><msub><mi mathsize="90%">c</mi><mn mathsize="90%">0</mn></msub><mo>⁢</mo><msub><mi mathsize="90%">𝐮</mi><mrow><mi mathsize="90%">n</mi><mo mathsize="90%" stretchy="false">-</mo><mi mathsize="90%">m</mi></mrow></msub></mrow></mtd><mtd></mtd><mtd></mtd><mtd></mtd><mtd columnalign="right"><mrow><mi></mi><mo mathsize="90%" stretchy="false">=</mo><mn mathsize="90%">0</mn></mrow></mtd><mtd></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Adding these relations in the same way as the polynomials yields
+the desired relation:</p>
+<table id="S5.Ex52" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex52.m1" class="ltx_Math" alttext="\mathbf{u}_{n}+b_{n-1}\mathbf{u}_{n-1}+\ldots+b_{1}\mathbf{u}_{1}+b_{0}\mathbf%
+{u}_{0}=0," display="block"><mrow><mrow><mrow><msub><mi>𝐮</mi><mi>n</mi></msub><mo>+</mo><mrow><msub><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>𝐮</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>𝐮</mi><mn>0</mn></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="S5.p6" class="ltx_para">
+<p class="ltx_p">Now we really are finished. Thanks to Propositions <a href="#Thmproposition3" title="Proposition 3. ‣ 4 Putting it all together ‣ lecture notes on the Cayley-Hamilton theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>
+and <a href="#Thmproposition5" title="Proposition 5. ‣ 5 A Complication ‣ lecture notes on the Cayley-Hamilton theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a> we know that for every <math id="S5.p6.m1" class="ltx_Math" alttext="k=1,\ldots,n" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></math>, the <math id="S5.p6.m2" class="ltx_Math" alttext="k^{\rm th}" display="inline"><msup><mi>k</mi><mi>th</mi></msup></math> column vectors of the matrices</p>
+<table id="S5.Ex53" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex53.m1" class="ltx_Math" alttext="A^{n},A^{n-1},\ldots,A^{1},A^{0}" display="block"><mrow><msup><mi>A</mi><mi>n</mi></msup><mo>,</mo><msup><mi>A</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>A</mi><mn>1</mn></msup><mo>,</mo><msup><mi>A</mi><mn>0</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">obey a linear relation with the coefficients of the characteristic
+polynomial of <math id="S5.p6.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Since this is true for every column of the above
+matrices, it is certainly true for the full matrix — and that is the
+precisely the conclusion of the Cayley-Hamilton theorem.</p>
+</div>
+<div id="S5.p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">lecture notes on the Cayley-Hamilton theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">LectureNotesOnTheCayleyHamiltonTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:50:59</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:50:59</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A18</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 15A15</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:26:00 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

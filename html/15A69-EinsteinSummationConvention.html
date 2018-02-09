@@ -1,0 +1,190 @@
+<!DOCTYPE html><html>
+<head>
+<title>Einstein summation convention</title>
+<!--Generated on Fri Feb  9 18:30:52 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Einstein summation convention</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">Einstein summation convention</em> implies that when an index occurs
+more than once in the same expression, the expression is implicitly
+summed over all possible values for that index. Therefore, in order to
+use the summation convention, it must be clear from the context
+over what range indices should be summed.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The Einstein summation convention is illustrated in the below examples.</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I1.i1.p1.m1" class="ltx_Math" alttext="\{e_{i}\}_{i=1}^{n}" display="inline"><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup></math> be a orthogonal basis in <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>.
+Then the inner product of the vectors <math id="I1.i1.p1.m3" class="ltx_Math" alttext="u=u^{i}e_{i}=(\sum_{i=1}^{n})u^{i}e_{i}" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><msup><mi>u</mi><mi>i</mi></msup><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mo stretchy="false">)</mo></mrow><mo>⁡</mo><msup><mi>u</mi><mi>i</mi></msup></mrow><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow></mrow></math>
+and <math id="I1.i1.p1.m4" class="ltx_Math" alttext="v=v^{i}e_{i}=(\sum_{i=1}^{n})v^{i}e_{i}" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><msup><mi>v</mi><mi>i</mi></msup><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mo stretchy="false">)</mo></mrow><mo>⁡</mo><msup><mi>v</mi><mi>i</mi></msup></mrow><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow></mrow></math>, is</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle u\cdot v" display="inline"><mrow><mi>u</mi><mo>⋅</mo><mi>v</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m3" class="ltx_Math" alttext="\displaystyle u^{i}v^{j}e_{i}\cdot e_{j}" display="inline"><mrow><mrow><msup><mi>u</mi><mi>i</mi></msup><mo>⁢</mo><msup><mi>v</mi><mi>j</mi></msup><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow><mo>⋅</mo><msub><mi>e</mi><mi>j</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle\delta_{ij}u^{i}v^{j}." display="inline"><mrow><mrow><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msup><mi>u</mi><mi>i</mi></msup><mo>⁢</mo><msup><mi>v</mi><mi>j</mi></msup></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I1.i2.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> be a vector space with basis <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\{e_{i}\}_{i=1}^{n}" display="inline"><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup></math> and
+a dual basis <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\{e^{i}\}_{i=1}^{n}" display="inline"><msubsup><mrow><mo stretchy="false">{</mo><msup><mi>e</mi><mi>i</mi></msup><mo stretchy="false">}</mo></mrow><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup></math>. Then, for a vector <math id="I1.i2.p1.m4" class="ltx_Math" alttext="v=v^{i}e_{i}" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><msup><mi>v</mi><mi>i</mi></msup><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow></mrow></math>
+and dual vectors <math id="I1.i2.p1.m5" class="ltx_Math" alttext="\alpha=\alpha_{i}e^{i}" display="inline"><mrow><mi>α</mi><mo>=</mo><mrow><msub><mi>α</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>e</mi><mi>i</mi></msup></mrow></mrow></math> and <math id="I1.i2.p1.m6" class="ltx_Math" alttext="\beta=\beta_{i}e^{i}" display="inline"><mrow><mi>β</mi><mo>=</mo><mrow><msub><mi>β</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>e</mi><mi>i</mi></msup></mrow></mrow></math>, we have</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle(\alpha+\beta)(v)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>+</mo><mi>β</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle\alpha_{i}v^{i}+\beta_{j}v^{j}" display="inline"><mrow><mrow><msub><mi>α</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>v</mi><mi>i</mi></msup></mrow><mo>+</mo><mrow><msub><mi>β</mi><mi>j</mi></msub><mo>⁢</mo><msup><mi>v</mi><mi>j</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle(\alpha_{i}+\beta_{i})v^{i}." display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>α</mi><mi>i</mi></msub><mo>+</mo><msub><mi>β</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>v</mi><mi>i</mi></msup></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This example shows that the summation convention is “distributive” in
+a natural way.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Chain rule. Let
+<math id="I1.i3.p1.m1" class="ltx_Math" alttext="F:\mathbb{R}^{m}\to\mathbb{R}^{n}" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>m</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math>,
+<math id="I1.i3.p1.m2" class="ltx_Math" alttext="x\mapsto(F^{1},\cdots,F^{n})" display="inline"><mrow><mi>x</mi><mo>↦</mo><mrow><mo stretchy="false">(</mo><msup><mi>F</mi><mn>1</mn></msup><mo>,</mo><mi mathvariant="normal">⋯</mi><mo>,</mo><msup><mi>F</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></math>, and
+<math id="I1.i3.p1.m3" class="ltx_Math" alttext="G:\mathbb{R}^{n}\to\mathbb{R}^{p}" display="inline"><mrow><mi>G</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>p</mi></msup></mrow></mrow></math>,
+<math id="I1.i3.p1.m4" class="ltx_Math" alttext="y\mapsto(G^{1}(y),\cdots,G^{p}(y))" display="inline"><mrow><mi>y</mi><mo>↦</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>G</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">⋯</mi><mo>,</mo><mrow><msup><mi>G</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> be smooth functions. Then</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\frac{\partial(G\circ F)^{i}}{\partial x^{j}}(x)=\frac{\partial G^{i}}{%
+\partial y^{k}}\big{(}F(x)\big{)}\frac{\partial F^{k}}{\partial x^{j}}(x)," display="block"><mrow><mrow><mrow><mfrac><mrow><mo>∂</mo><msup><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>∘</mo><mi>F</mi><mo stretchy="false">)</mo></mrow><mi>i</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>j</mi></msup></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>G</mi><mi>i</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>y</mi><mi>k</mi></msup></mrow></mfrac><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>F</mi><mi>k</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>j</mi></msup></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the right hand side is summed over <math id="I1.i3.p1.m5" class="ltx_Math" alttext="k=1,\ldots,n" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">An index which is summed is called a <em class="ltx_emph ltx_font_italic">dummy index</em> or <em class="ltx_emph ltx_font_italic">dummy variable</em>.
+For instance,
+<math id="p3.m1" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> is a dummy index in <math id="p3.m2" class="ltx_Math" alttext="v^{i}e_{i}" display="inline"><mrow><msup><mi>v</mi><mi>i</mi></msup><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow></math>. An expression does not depend on
+a dummy index, i.e., <math id="p3.m3" class="ltx_Math" alttext="v^{i}e_{i}=v^{j}e_{j}" display="inline"><mrow><mrow><msup><mi>v</mi><mi>i</mi></msup><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow><mo>=</mo><mrow><msup><mi>v</mi><mi>j</mi></msup><mo>⁢</mo><msub><mi>e</mi><mi>j</mi></msub></mrow></mrow></math>.
+It is common that one must change the name of dummy indices. For
+instance, above, in Example 2 when we calculated
+<math id="p3.m4" class="ltx_Math" alttext="u\cdot v" display="inline"><mrow><mi>u</mi><mo>⋅</mo><mi>v</mi></mrow></math>, it was necessary to change the index <math id="p3.m5" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> in <math id="p3.m6" class="ltx_Math" alttext="v=v^{i}e_{i}" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><msup><mi>v</mi><mi>i</mi></msup><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow></mrow></math> to <math id="p3.m7" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>
+so that it would not clash with <math id="p3.m8" class="ltx_Math" alttext="u=u^{i}e_{i}" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><msup><mi>u</mi><mi>i</mi></msup><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">When using the Einstein summation convention, objects are usually indexed
+so that when summing, one index will always be an “upper index” and
+the other a “lower index”.
+Then summing should only take place over upper and lower indices.
+In the above examples, we have followed
+this rule. Therefore we did not write
+<math id="p4.m1" class="ltx_Math" alttext="\delta_{ij}u^{i}v^{j}=u^{i}v^{i}" display="inline"><mrow><mrow><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msup><mi>u</mi><mi>i</mi></msup><mo>⁢</mo><msup><mi>v</mi><mi>j</mi></msup></mrow><mo>=</mo><mrow><msup><mi>u</mi><mi>i</mi></msup><mo>⁢</mo><msup><mi>v</mi><mi>i</mi></msup></mrow></mrow></math> in the first example since <math id="p4.m2" class="ltx_Math" alttext="u^{i}v^{i}" display="inline"><mrow><msup><mi>u</mi><mi>i</mi></msup><mo>⁢</mo><msup><mi>v</mi><mi>i</mi></msup></mrow></math>
+has two upper indices. This is consistent; it is not possible
+to take the inner product of two vectors without a metric, which is here
+<math id="p4.m3" class="ltx_Math" alttext="\delta_{ij}" display="inline"><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math>.
+The last example illustrates that when we consider <math id="p4.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> as a “lower
+index” in
+<math id="p4.m5" class="ltx_Math" alttext="\frac{\partial G^{i}}{\partial y^{k}}" display="inline"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>G</mi><mi>i</mi></msup></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>y</mi><mi>k</mi></msup></mrow></mfrac></math>, then the chain rule
+obeys this upper-lower rule for the indices.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Einstein summation convention</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">EinsteinSummationConvention</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:32:03</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:32:03</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A69</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Summation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">dummy index</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:30:52 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

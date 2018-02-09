@@ -1,0 +1,374 @@
+<!DOCTYPE html><html>
+<head>
+<title>tensor</title>
+<!--Generated on Fri Feb  9 18:31:12 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">tensor</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Overview</h2>
+
+<div id="S0.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">tensor</em> is the mathematical idealization of a geometric or
+physical quantity whose analytic description, relative to a fixed
+frame of reference, consists of an array of numbers<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup><span class="ltx_text ltx_font_typewriter">http://aux.planetmath.org/files/objects/3112/tensor-pipe.jpg</span>“Ceci
+n’est pas une pipe,” as Rene Magritte put it. The image and the
+object represented by the image are not the same thing. The mass of
+a stone is not a number. Rather the mass can be described by a
+number relative to some specified unit mass.</span></span></span>. Some well known
+examples of tensors in geometry are quadratic forms, and the curvature
+tensor. Examples of physical tensors are the energy-momentum tensor,
+and the polarization tensor.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">Geometric and physical quantities may be categorized by considering
+the degrees of freedom inherent in their description. The scalar
+quantities are those that can be represented by a single number —
+speed, mass, temperature, for example. There are also vector-like
+quantities, such as force, that require a list of numbers for their
+description. Finally, quantities such as quadratic forms
+naturally require a multiply indexed array for their description.
+These latter quantities can only be conceived of as <em class="ltx_emph ltx_font_italic">tensors</em>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p3" class="ltx_para">
+<p class="ltx_p">Actually, the tensor notion is quite general, and applies to all of
+the above examples; scalars and vectors are special kinds of
+tensors. The feature that distinguishes a scalar from a vector, and
+distinguishes both of those from a more general tensor quantity is
+the number of indices in the representing array. This number is
+called the <em class="ltx_emph ltx_font_italic">rank</em> of a tensor. Thus, scalars are rank zero tensors (no
+indices at all), and vectors are rank one tensors.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p4" class="ltx_para">
+<p class="ltx_p">It is also necessary to distinguish between two types of indices,
+depending on whether the corresponding numbers transform covariantly
+or contravariantly relative to a change in the frame of reference.
+<em class="ltx_emph ltx_font_italic">Contravariant indices</em> are written as superscripts, while the
+<em class="ltx_emph ltx_font_italic">covariant indices</em> are written as subscripts. The <em class="ltx_emph ltx_font_italic">valence</em>
+of a tensor is the pair <math id="S0.SS0.SSS0.Px1.p4.m1" class="ltx_Math" alttext="(p,q)" display="inline"><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></math>, where <math id="S0.SS0.SSS0.Px1.p4.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is the number contravariant
+and <math id="S0.SS0.SSS0.Px1.p4.m3" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> the number of covariant indices, respectively.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p5" class="ltx_para">
+<p class="ltx_p">It is customary to represent the actual tensor, as a stand-alone
+entity, by a bold-face symbol such as <math id="S0.SS0.SSS0.Px1.p5.m1" class="ltx_Math" alttext="\mathsf{A}" display="inline"><mi>𝖠</mi></math>. The corresponding array
+of numbers for a type <math id="S0.SS0.SSS0.Px1.p5.m2" class="ltx_Math" alttext="(p,q)" display="inline"><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></math> tensor is denoted by the symbol
+<math id="S0.SS0.SSS0.Px1.p5.m3" class="ltx_Math" alttext="A^{i_{1}\ldots i_{p}}_{j_{1}\ldots j_{q}}," display="inline"><mrow><msubsup><mi>A</mi><mrow><msub><mi>j</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>j</mi><mi>q</mi></msub></mrow><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>i</mi><mi>p</mi></msub></mrow></msubsup><mo>,</mo></mrow></math> where the superscripts and
+subscripts are indices that vary from <math id="S0.SS0.SSS0.Px1.p5.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> to <math id="S0.SS0.SSS0.Px1.p5.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. This number <math id="S0.SS0.SSS0.Px1.p5.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, the
+range of the indices, is called the dimension of the tensor. The
+total degrees of freedom required for the specification of a
+particular tensor is the product of the tensor’s rank and its dimension.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p6" class="ltx_para">
+<p class="ltx_p">Again, it must be emphasized that the tensor <math id="S0.SS0.SSS0.Px1.p6.m1" class="ltx_Math" alttext="\mathsf{A}" display="inline"><mi>𝖠</mi></math> and the
+representing array <math id="S0.SS0.SSS0.Px1.p6.m2" class="ltx_Math" alttext="A^{i_{1}\ldots i_{q}}_{j_{1}\ldots j_{p}}" display="inline"><msubsup><mi>A</mi><mrow><msub><mi>j</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>j</mi><mi>p</mi></msub></mrow><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>i</mi><mi>q</mi></msub></mrow></msubsup></math> are not the
+same thing. The values of the representing array are given relative
+to some frame of reference, and undergo a linear transformation when
+the frame is changed.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p7" class="ltx_para">
+<p class="ltx_p">Finally, it must be mentioned that most physical and geometric
+applications are concerned with <em class="ltx_emph ltx_font_italic">tensor fields</em>, that is to say
+tensor valued functions, rather than tensors themselves. Some care is
+required, because it is common to see a tensor field called simply a
+tensor. There is a difference, however; the entries of a tensor array
+<math id="S0.SS0.SSS0.Px1.p7.m1" class="ltx_Math" alttext="A^{i_{1}\ldots i_{q}}_{j_{1}\ldots j_{p}}" display="inline"><msubsup><mi>A</mi><mrow><msub><mi>j</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>j</mi><mi>p</mi></msub></mrow><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>i</mi><mi>q</mi></msub></mrow></msubsup></math> are numbers, whereas the entries
+of a tensor field are functions. The present entry treats the purely
+algebraic aspect of tensors. Tensor field concepts, which typically
+involved derivatives of some kind, are discussed elsewhere.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Definition.</h2>
+
+<div id="S0.SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">The formal definition of a tensor quantity begins with a
+finite-dimensional vector space <math id="S0.SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>, which furnishes the uniform
+“building blocks” for tensors of all valences. In typical
+applications, <math id="S0.SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is the tangent space at a point of a manifold; the
+elements of <math id="S0.SS0.SSS0.Px2.p1.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> represent velocities and forces. The space of
+<math id="S0.SS0.SSS0.Px2.p1.m4" class="ltx_Math" alttext="(p,q)" display="inline"><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></math>-valent tensors, denoted here by <math id="S0.SS0.SSS0.Px2.p1.m5" class="ltx_Math" alttext="\mathcal{T}_{p,q}(U)" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒯</mi><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math> is obtained by
+taking the tensor product of <math id="S0.SS0.SSS0.Px2.p1.m6" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> copies of <math id="S0.SS0.SSS0.Px2.p1.m7" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>, and <math id="S0.SS0.SSS0.Px2.p1.m8" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> copies of
+the dual vector space <math id="S0.SS0.SSS0.Px2.p1.m9" class="ltx_Math" alttext="U^{*}" display="inline"><msup><mi>U</mi><mo>*</mo></msup></math>. To wit,</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\mathcal{T}_{p,q}(U)=\overbrace{U\otimes\ldots\otimes U}^{p\text{
+times}}\otimes\overbrace{U^{*}\otimes\ldots\otimes U^{*}}^{q\text{ times}}." display="block"><mrow><mrow><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒯</mi><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mover><mover accent="true"><mrow><mi>U</mi><mo movablelimits="false">⊗</mo><mi mathvariant="normal">…</mi><mo movablelimits="false">⊗</mo><mi>U</mi></mrow><mo movablelimits="false">⏞</mo></mover><mrow><mi>p</mi><mo>⁢</mo><mtext> times</mtext></mrow></mover><mo>⊗</mo><mover><mover accent="true"><mrow><msup><mi>U</mi><mo movablelimits="false">*</mo></msup><mo movablelimits="false">⊗</mo><mi mathvariant="normal">…</mi><mo movablelimits="false">⊗</mo><msup><mi>U</mi><mo movablelimits="false">*</mo></msup></mrow><mo movablelimits="false">⏞</mo></mover><mrow><mi>q</mi><mo>⁢</mo><mtext> times</mtext></mrow></mover></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSS0.Px2.p2" class="ltx_para">
+<p class="ltx_p">In order to represent a tensor by a concrete array of numbers, we
+require a frame of reference, which is essentially a basis of <math id="S0.SS0.SSS0.Px2.p2.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>,
+say
+<math id="S0.SS0.SSS0.Px2.p2.m2" class="ltx_Math" alttext="e_{1},\ldots,e_{n}\in U." display="inline"><mrow><mrow><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub></mrow><mo>∈</mo><mi>U</mi></mrow><mo>.</mo></mrow></math>
+Every vector in <math id="S0.SS0.SSS0.Px2.p2.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> can be
+“measured” relative to this basis, meaning that for every
+<math id="S0.SS0.SSS0.Px2.p2.m4" class="ltx_Math" alttext="\mathbf{v}\in U" display="inline"><mrow><mi>𝐯</mi><mo>∈</mo><mi>U</mi></mrow></math> there exist unique scalars <math id="S0.SS0.SSS0.Px2.p2.m5" class="ltx_Math" alttext="v^{i}" display="inline"><msup><mi>v</mi><mi>i</mi></msup></math>, such
+that (note the use of the Einstein summation convention)</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\mathbf{v}=v^{i}e_{i}." display="block"><mrow><mrow><mi>𝐯</mi><mo>=</mo><mrow><msup><mi>v</mi><mi>i</mi></msup><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">These scalars are called the components of <math id="S0.SS0.SSS0.Px2.p2.m6" class="ltx_Math" alttext="\mathbf{v}" display="inline"><mi>𝐯</mi></math> relative to the frame
+in question.</p>
+</div>
+<div id="S0.SS0.SSS0.Px2.p3" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS0.SSS0.Px2.p3.m1" class="ltx_Math" alttext="\varepsilon^{1},\ldots,\varepsilon^{n}\in U^{*}" display="inline"><mrow><mrow><msup><mi>ε</mi><mn>1</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>ε</mi><mi>n</mi></msup></mrow><mo>∈</mo><msup><mi>U</mi><mo>*</mo></msup></mrow></math> be the corresponding dual
+basis, i.e.,</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\varepsilon^{i}(e_{j})=\delta^{i}_{j}," display="block"><mrow><mrow><mrow><msup><mi>ε</mi><mi>i</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msubsup><mi>δ</mi><mi>j</mi><mi>i</mi></msubsup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the latter is the Kronecker delta array. For every covector
+<math id="S0.SS0.SSS0.Px2.p3.m2" class="ltx_Math" alttext="\alpha\in U^{*}" display="inline"><mrow><mi>α</mi><mo>∈</mo><msup><mi>U</mi><mo>*</mo></msup></mrow></math> there exists a unique array of components <math id="S0.SS0.SSS0.Px2.p3.m3" class="ltx_Math" alttext="\alpha_{i}" display="inline"><msub><mi>α</mi><mi>i</mi></msub></math> such
+that</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\alpha=\alpha_{i}\,\varepsilon^{i}." display="block"><mrow><mrow><mi>α</mi><mo>=</mo><mrow><mpadded width="+1.7pt"><msub><mi>α</mi><mi>i</mi></msub></mpadded><mo>⁢</mo><msup><mi>ε</mi><mi>i</mi></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSS0.Px2.p4" class="ltx_para">
+<p class="ltx_p">More generally, every tensor <math id="S0.SS0.SSS0.Px2.p4.m1" class="ltx_Math" alttext="\mathsf{A}\in\mathcal{T}_{p,q}(U)" display="inline"><mrow><mi>𝖠</mi><mo>∈</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒯</mi><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> has a unique
+description in terms of components. That is to say, there exists a
+unique array of scalars <math id="S0.SS0.SSS0.Px2.p4.m2" class="ltx_Math" alttext="A^{i_{1}\ldots i_{q}}_{j_{1}\ldots j_{p}}" display="inline"><msubsup><mi>A</mi><mrow><msub><mi>j</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>j</mi><mi>p</mi></msub></mrow><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>i</mi><mi>q</mi></msub></mrow></msubsup></math> such that</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\mathsf{A}=A^{i_{1}\ldots i_{q}}_{j_{1}\ldots j_{p}}\,e_{i_{1}}\otimes\ldots%
+\otimes e_{i_{q}}\otimes\varepsilon^{j_{1}}\otimes\ldots\otimes\varepsilon^{j_%
+{p}}." display="block"><mrow><mrow><mi>𝖠</mi><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><msubsup><mi>A</mi><mrow><msub><mi>j</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>j</mi><mi>p</mi></msub></mrow><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>i</mi><mi>q</mi></msub></mrow></msubsup></mpadded><mo>⁢</mo><msub><mi>e</mi><msub><mi>i</mi><mn>1</mn></msub></msub></mrow><mo>⊗</mo><mi mathvariant="normal">…</mi><mo>⊗</mo><msub><mi>e</mi><msub><mi>i</mi><mi>q</mi></msub></msub><mo>⊗</mo><msup><mi>ε</mi><msub><mi>j</mi><mn>1</mn></msub></msup><mo>⊗</mo><mi mathvariant="normal">…</mi><mo>⊗</mo><msup><mi>ε</mi><msub><mi>j</mi><mi>p</mi></msub></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px3" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Transformation rule.</h2>
+
+<div id="S0.SS0.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">Next, suppose that a change is made to a different frame of
+reference, say
+<math id="S0.SS0.SSS0.Px3.p1.m1" class="ltx_Math" alttext="\hat{e}_{1},\ldots,\hat{e}_{n}\in U." display="inline"><mrow><mrow><mrow><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mi>n</mi></msub></mrow><mo>∈</mo><mi>U</mi></mrow><mo>.</mo></mrow></math>
+Any two frames are uniquely related by
+an invertible transition matrix <math id="S0.SS0.SSS0.Px3.p1.m2" class="ltx_Math" alttext="X^{i}_{\,j}" display="inline"><msubsup><mi>X</mi><mpadded lspace="1.7pt" width="+1.7pt"><mi>j</mi></mpadded><mi>i</mi></msubsup></math>, having the property that for
+all values of <math id="S0.SS0.SSS0.Px3.p1.m3" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> we have</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\hat{e}_{j}=X^{i}_{\,j}\,e_{i}." display="block"><mrow><mrow><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><msubsup><mi>X</mi><mpadded lspace="1.7pt" width="+1.7pt"><mi>j</mi></mpadded><mi>i</mi></msubsup></mpadded><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Let <math id="S0.SS0.SSS0.Px3.p1.m4" class="ltx_Math" alttext="\mathbf{v}\in U" display="inline"><mrow><mi>𝐯</mi><mo>∈</mo><mi>U</mi></mrow></math> be a vector, and let <math id="S0.SS0.SSS0.Px3.p1.m5" class="ltx_Math" alttext="v^{i}" display="inline"><msup><mi>v</mi><mi>i</mi></msup></math>
+and <math id="S0.SS0.SSS0.Px3.p1.m6" class="ltx_Math" alttext="\hat{v}^{i}" display="inline"><msup><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msup></math> denote the corresponding component arrays relative to
+the two frames. From</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\mathbf{v}=v^{i}e_{i}=\hat{v}^{i}\hat{e}_{i}," display="block"><mrow><mrow><mi>𝐯</mi><mo>=</mo><mrow><msup><mi>v</mi><mi>i</mi></msup><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow><mo>=</mo><mrow><msup><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msup><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and from (<a href="#S0.E1" title="(1) ‣ Transformation rule. ‣ tensor" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) we infer that</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="\hat{v}^{i}=Y^{i}_{\,j}\,v^{j}," display="block"><mrow><mrow><msup><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msup><mo>=</mo><mrow><mpadded width="+1.7pt"><msubsup><mi>Y</mi><mpadded lspace="1.7pt" width="+1.7pt"><mi>j</mi></mpadded><mi>i</mi></msubsup></mpadded><mo>⁢</mo><msup><mi>v</mi><mi>j</mi></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S0.SS0.SSS0.Px3.p1.m7" class="ltx_Math" alttext="Y^{i}_{\,j}" display="inline"><msubsup><mi>Y</mi><mpadded lspace="1.7pt" width="+1.7pt"><mi>j</mi></mpadded><mi>i</mi></msubsup></math> is the matrix inverse of <math id="S0.SS0.SSS0.Px3.p1.m8" class="ltx_Math" alttext="X^{i}_{\,j}" display="inline"><msubsup><mi>X</mi><mpadded lspace="1.7pt" width="+1.7pt"><mi>j</mi></mpadded><mi>i</mi></msubsup></math>, i.e.,</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="X^{i}_{\,k}Y^{k}_{\,j}=\delta^{i}_{\,j}." display="block"><mrow><mrow><mrow><msubsup><mi>X</mi><mpadded lspace="1.7pt" width="+1.7pt"><mi>k</mi></mpadded><mi>i</mi></msubsup><mo>⁢</mo><msubsup><mi>Y</mi><mpadded lspace="1.7pt" width="+1.7pt"><mi>j</mi></mpadded><mi>k</mi></msubsup></mrow><mo>=</mo><msubsup><mi>δ</mi><mpadded lspace="1.7pt" width="+1.7pt"><mi>j</mi></mpadded><mi>i</mi></msubsup></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, the
+transformation rule for a vector’s components (<a href="#S0.E2" title="(2) ‣ Transformation rule. ‣ tensor" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) is
+contravariant to the transformation rule for the frame of reference
+(<a href="#S0.E1" title="(1) ‣ Transformation rule. ‣ tensor" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>). It is for this reason that the superscript
+indices of a vector are called contravariant.</p>
+</div>
+<div id="S0.SS0.SSS0.Px3.p2" class="ltx_para">
+<p class="ltx_p">To establish (<a href="#S0.E2" title="(2) ‣ Transformation rule. ‣ tensor" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>), we note that the transformation rule
+for the dual basis takes the form</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\hat{\varepsilon}^{i}=Y^{i}_{\,j}\,\varepsilon^{j}," display="block"><mrow><mrow><msup><mover accent="true"><mi>ε</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msup><mo>=</mo><mrow><mpadded width="+1.7pt"><msubsup><mi>Y</mi><mpadded lspace="1.7pt" width="+1.7pt"><mi>j</mi></mpadded><mi>i</mi></msubsup></mpadded><mo>⁢</mo><msup><mi>ε</mi><mi>j</mi></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and that</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="v^{i}=\varepsilon^{i}(\mathbf{v})," display="block"><mrow><mrow><msup><mi>v</mi><mi>i</mi></msup><mo>=</mo><mrow><msup><mi>ε</mi><mi>i</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐯</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">while</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\hat{v}^{i}=\hat{\varepsilon}^{i}(\mathbf{v})." display="block"><mrow><mrow><msup><mover accent="true"><mi>v</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msup><mo>=</mo><mrow><msup><mover accent="true"><mi>ε</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐯</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSS0.Px3.p3" class="ltx_para">
+<p class="ltx_p">The transformation rule for covector components is covariant. Let
+<math id="S0.SS0.SSS0.Px3.p3.m1" class="ltx_Math" alttext="\alpha\in U^{*}" display="inline"><mrow><mi>α</mi><mo>∈</mo><msup><mi>U</mi><mo>*</mo></msup></mrow></math> be a given covector, and let <math id="S0.SS0.SSS0.Px3.p3.m2" class="ltx_Math" alttext="\alpha_{i}" display="inline"><msub><mi>α</mi><mi>i</mi></msub></math> and
+<math id="S0.SS0.SSS0.Px3.p3.m3" class="ltx_Math" alttext="\hat{\alpha}_{i}" display="inline"><msub><mover accent="true"><mi>α</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub></math> be the corresponding component arrays. Then</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\hat{\alpha}_{j}=X^{i}_{\,j}\,\alpha_{i}." display="block"><mrow><mrow><msub><mover accent="true"><mi>α</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><msubsup><mi>X</mi><mpadded lspace="1.7pt" width="+1.7pt"><mi>j</mi></mpadded><mi>i</mi></msubsup></mpadded><mo>⁢</mo><msub><mi>α</mi><mi>i</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The above relation is easily established. We need only remark that</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\alpha_{i}=\alpha(e_{i})," display="block"><mrow><mrow><msub><mi>α</mi><mi>i</mi></msub><mo>=</mo><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and that</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\hat{\alpha}_{j}=\alpha(\hat{e}_{j})," display="block"><mrow><mrow><msub><mover accent="true"><mi>α</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mo>=</mo><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and then use (<a href="#S0.E1" title="(1) ‣ Transformation rule. ‣ tensor" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>).</p>
+</div>
+<div id="S0.SS0.SSS0.Px3.p4" class="ltx_para">
+<p class="ltx_p">In light of the above discussion, we see that the transformation rule
+for a general type <math id="S0.SS0.SSS0.Px3.p4.m1" class="ltx_Math" alttext="(p,q)" display="inline"><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></math> tensor takes the form</p>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="\hat{A}^{i_{1}\ldots i_{q}}_{\,j_{1}\ldots j_{p}}=X^{i_{1}}_{\,k_{1}}\cdots X^%
+{i_{q}}_{\,k_{q}}Y^{l_{1}}_{\,j_{1}}\cdots Y^{l_{1}}_{\,j_{p}}A^{k_{1}\ldots k%
+_{q}}_{\,l_{1}\ldots l_{p}}." display="block"><mrow><mrow><msubsup><mover accent="true"><mi>A</mi><mo stretchy="false">^</mo></mover><mrow><msub><mpadded lspace="1.7pt" width="+1.7pt"><mi>j</mi></mpadded><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>j</mi><mi>p</mi></msub></mrow><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>i</mi><mi>q</mi></msub></mrow></msubsup><mo>=</mo><mrow><msubsup><mi>X</mi><msub><mpadded lspace="1.7pt" width="+1.7pt"><mi>k</mi></mpadded><mn>1</mn></msub><msub><mi>i</mi><mn>1</mn></msub></msubsup><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msubsup><mi>X</mi><msub><mpadded lspace="1.7pt" width="+1.7pt"><mi>k</mi></mpadded><mi>q</mi></msub><msub><mi>i</mi><mi>q</mi></msub></msubsup><mo>⁢</mo><msubsup><mi>Y</mi><msub><mpadded lspace="1.7pt" width="+1.7pt"><mi>j</mi></mpadded><mn>1</mn></msub><msub><mi>l</mi><mn>1</mn></msub></msubsup><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msubsup><mi>Y</mi><msub><mpadded lspace="1.7pt" width="+1.7pt"><mi>j</mi></mpadded><mi>p</mi></msub><msub><mi>l</mi><mn>1</mn></msub></msubsup><mo>⁢</mo><msubsup><mi>A</mi><mrow><msub><mpadded lspace="1.7pt" width="+1.7pt"><mi>l</mi></mpadded><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>l</mi><mi>p</mi></msub></mrow><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>k</mi><mi>q</mi></msub></mrow></msubsup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">tensor</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Tensor</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:47:46</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:47:46</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A69</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TensorProduct</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TensorArray</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">valence</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">rank</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:31:12 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

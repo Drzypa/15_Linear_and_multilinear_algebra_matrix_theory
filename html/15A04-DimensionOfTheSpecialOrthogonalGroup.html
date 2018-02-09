@@ -1,0 +1,222 @@
+<!DOCTYPE html><html>
+<head>
+<title>dimension of the special orthogonal group</title>
+<!--Generated on Fri Feb  9 18:21:18 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">dimension of the special orthogonal group</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> be a <math id="p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional real inner product space.
+The group of orthogonal operators on <math id="p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> with positive determinant
+(i.e. the group of “rotations” on <math id="p1.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>)
+is called the special orthogonal group, denoted <math id="p1.m5" class="ltx_Math" alttext="SO(n)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The theorem on decomposing orthogonal operators as rotations and reflections (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/DecompositionOfOrthogonalOperatorsAsRotationsAndReflections</span>)
+suggests that all elements of <math id="p2.m1" class="ltx_Math" alttext="SO(n)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> are all fundamentally two-dimensional in some sense.
+This article is an elementary exploration of this aspect.</p>
+</div>
+<div id="p3" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">First observe that the set of orthogonal operators <math id="p4.m1" class="ltx_Math" alttext="O(n)" display="inline"><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a manifold embedded
+in the real vector space <math id="p4.m2" class="ltx_Math" alttext="\mathrm{GL}(V)\simeq\mathbb{R}^{n\times n}" display="inline"><mrow><mrow><mi>GL</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≃</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow></math>,
+defined by
+the condition <math id="p4.m3" class="ltx_Math" alttext="f(X)=XX^{*}-I=0" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>X</mi><mo>⁢</mo><msup><mi>X</mi><mo>*</mo></msup></mrow><mo>-</mo><mi>I</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>, where <math id="p4.m4" class="ltx_Math" alttext="X\in GL(V)" display="inline"><mrow><mi>X</mi><mo>∈</mo><mrow><mi>G</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and <math id="p4.m5" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> is the
+transpose of <math id="p4.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> (represented as a matrix in orthonormal coordinates).
+<math id="p4.m7" class="ltx_Math" alttext="f(X)=0" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> is simply shorthand for the condition that the columns of <math id="p4.m8" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> are
+orthonormal — we see there are <math id="p4.m9" class="ltx_Math" alttext="n+n(n-1)/2=n(n+1)/2" display="inline"><mrow><mrow><mi>n</mi><mo>+</mo><mrow><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mn>2</mn></mrow></mrow><mo>=</mo><mrow><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mn>2</mn></mrow></mrow></math> scalar equations<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup><math id="p4.m10" class="ltx_Math" alttext="f(X)=0" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> viewed as a matrix equation of course has <math id="p4.m11" class="ltx_Math" alttext="n^{2}" display="inline"><msup><mi>n</mi><mn>2</mn></msup></math> scalar equations,
+but many of them are duplicated. For simplicity,
+we prefer to view <math id="p4.m12" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>’s codomain to be the space of symmetric matrices, which is <math id="p4.m13" class="ltx_Math" alttext="n(n+1)/2" display="inline"><mrow><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mn>2</mn></mrow></math>-dimensional.</span></span></span> in <math id="p4.m14" class="ltx_Math" alttext="n^{2}" display="inline"><msup><mi>n</mi><mn>2</mn></msup></math> variables. Then if we can show that the derivative <math id="p4.m15" class="ltx_Math" alttext="\operatorname{D}f(X)" display="inline"><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> as full rank everywhere,
+then we will have established that <math id="p4.m16" class="ltx_Math" alttext="O(n)" display="inline"><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a manifold of dimension <math id="p4.m17" class="ltx_Math" alttext="n(n-1)/2" display="inline"><mrow><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mn>2</mn></mrow></math>.
+This is an easy computation if organized in the right way:
+for any <math id="p4.m18" class="ltx_Math" alttext="y\in\mathrm{GL}(V)" display="inline"><mrow><mi>y</mi><mo>∈</mo><mrow><mi>GL</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, by the product rule we have</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\operatorname{D}f(X)\cdot Y=XY^{*}+YX^{*}\,." display="block"><mrow><mrow><mrow><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>Y</mi></mrow><mo>=</mo><mrow><mrow><mi>X</mi><mo>⁢</mo><msup><mi>Y</mi><mo>*</mo></msup></mrow><mo>+</mo><mrow><mi>Y</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>X</mi><mo>*</mo></msup></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Consider first the case that <math id="p4.m19" class="ltx_Math" alttext="X=I" display="inline"><mrow><mi>X</mi><mo>=</mo><mi>I</mi></mrow></math>. Then <math id="p4.m20" class="ltx_Math" alttext="\operatorname{D}f(I)\cdot Y=0" display="inline"><mrow><mrow><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>Y</mi></mrow><mo>=</mo><mn>0</mn></mrow></math> implies <math id="p4.m21" class="ltx_Math" alttext="Y^{*}=-Y" display="inline"><mrow><msup><mi>Y</mi><mo>*</mo></msup><mo>=</mo><mrow><mo>-</mo><mi>Y</mi></mrow></mrow></math>;
+in other words, <math id="p4.m22" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is skew-symmetric. But the skew-symmetric matrices have dimension
+<math id="p4.m23" class="ltx_Math" alttext="(n^{2}-n)/2" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>-</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mn>2</mn></mrow></math>, so the kernel of <math id="p4.m24" class="ltx_Math" alttext="\operatorname{D}f(I)" display="inline"><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></mrow></math> has this dimension.
+By the dimension theorem of linear algebra, the rank of <math id="p4.m25" class="ltx_Math" alttext="\operatorname{D}f(I)" display="inline"><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></mrow></math> is <math id="p4.m26" class="ltx_Math" alttext="n^{2}-(n^{2}-n)/2=n(n+1)/2" display="inline"><mrow><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>-</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mn>2</mn></mrow></mrow><mo>=</mo><mrow><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mn>2</mn></mrow></mrow></math>,
+which is the full rank.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">For general <math id="p5.m1" class="ltx_Math" alttext="X\in O(n)" display="inline"><mrow><mi>X</mi><mo>∈</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, let <math id="p5.m2" class="ltx_Math" alttext="Y^{\prime}=X^{*}Y" display="inline"><mrow><msup><mi>Y</mi><mo>′</mo></msup><mo>=</mo><mrow><msup><mi>X</mi><mo>*</mo></msup><mo>⁢</mo><mi>Y</mi></mrow></mrow></math>. Then <math id="p5.m3" class="ltx_Math" alttext="\operatorname{D}f(X)\cdot Y=0" display="inline"><mrow><mrow><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>Y</mi></mrow><mo>=</mo><mn>0</mn></mrow></math> reduces to <math id="p5.m4" class="ltx_Math" alttext="Y^{\prime*}=-Y" display="inline"><mrow><msup><mi>Y</mi><mrow><mo mathsize="142%" stretchy="false">′</mo><mo>⁣</mo><mo>*</mo></mrow></msup><mo>=</mo><mrow><mo>-</mo><mi>Y</mi></mrow></mrow></math>,
+again the skew-symmetric condition.
+The set of all such <math id="p5.m5" class="ltx_Math" alttext="Y^{\prime}" display="inline"><msup><mi>Y</mi><mo>′</mo></msup></math> have dimension <math id="p5.m6" class="ltx_Math" alttext="(n^{2}-n)/2" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>-</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mn>2</mn></mrow></math>; but multiplication by <math id="p5.m7" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math>
+is an automorphism of <math id="p5.m8" class="ltx_Math" alttext="\mathrm{GL}(V)" display="inline"><mrow><mi>GL</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math>, so the set of all <math id="p5.m9" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> also have the same dimension.
+Thus <math id="p5.m10" class="ltx_Math" alttext="\operatorname{D}f(X)" display="inline"><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> has full rank, as before.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><math id="p6.m1" class="ltx_Math" alttext="SO(n)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> is of course just the part of <math id="p6.m2" class="ltx_Math" alttext="O(n)" display="inline"><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> that satisfies the additional condition
+<math id="p6.m3" class="ltx_Math" alttext="\det X=1" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mi>X</mi></mrow><mo>=</mo><mn>1</mn></mrow></math>. It has the same dimension as a manifold.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Notice that <math id="p7.m1" class="ltx_Math" alttext="n(n-1)/2=\binom{n}{2}" display="inline"><mrow><mrow><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mn>2</mn></mrow><mo>=</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mn>2</mn></mfrac><mo>)</mo></mrow></mrow></math>, the number of ways to choose <math id="p7.m2" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math> basis elements out of <math id="p7.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.
+We might naïvely think that an element <math id="p7.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> of <math id="p7.m5" class="ltx_Math" alttext="SO(n)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> can be decomposed
+into rotations on each of the coordinate 2-dimensional planes in <math id="p7.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional space.
+This does not quite work, because rotations do not commute, even though
+we expect that the order of the decomposition should not matter (after all,
+there is no canonical order on the pairs of basis elements of <math id="p7.m7" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>).</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Nevertheless, on an “infinitesimal level”, the decomposition does work.
+Suppose we are given a one-parameter subgroup<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>Given <math id="p8.m1" class="ltx_Math" alttext="X\in SO(n)" display="inline"><mrow><mi>X</mi><mo>∈</mo><mrow><mi>S</mi><mo>⁢</mo><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, it can be shown with the orthogonal operator decomposition theorem that there is a one-parameter subgroup containing X. Hint:
+
+<span id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<span class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<span class="ltx_eqn_cell ltx_eqn_center_padleft"></span>
+<span class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="e^{A}=\begin{pmatrix}\cos\theta&amp;-\sin\theta\\
+\sin\theta&amp;\cos\theta\end{pmatrix}\,,\qquad\textrm{if }A=\begin{pmatrix}0&amp;-%
+\theta\\
+\theta&amp;0\end{pmatrix}\,." display="block"><mrow><mrow><mrow><msup><mi>e</mi><mi>A</mi></msup><mo>=</mo><mpadded width="+1.7pt"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>sin</mi><mo>⁡</mo><mi>θ</mi></mrow></mtd><mtd columnalign="center"><mrow><mi>cos</mi><mo>⁡</mo><mi>θ</mi></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mpadded></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mtext>if </mtext><mo>⁢</mo><mi>A</mi></mrow><mo>=</mo><mpadded width="+1.7pt"><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mi>θ</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mi>θ</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mpadded></mrow></mrow><mo>.</mo></mrow></math></span>
+<span class="ltx_eqn_cell ltx_eqn_center_padright"></span></span>
+</span>
+</span></span></span> <math id="p8.m2" class="ltx_Math" alttext="X^{t}" display="inline"><msup><mi>X</mi><mi>t</mi></msup></math> of <math id="p8.m3" class="ltx_Math" alttext="SO(n)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+From ODE theory,
+it is known that <math id="p8.m4" class="ltx_Math" alttext="X^{t}" display="inline"><msup><mi>X</mi><mi>t</mi></msup></math> is given by the matrix exponential <math id="p8.m5" class="ltx_Math" alttext="e^{tA}" display="inline"><msup><mi>e</mi><mrow><mi>t</mi><mo>⁢</mo><mi>A</mi></mrow></msup></math>,
+where <math id="p8.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is derivative of <math id="p8.m7" class="ltx_Math" alttext="X^{t}" display="inline"><msup><mi>X</mi><mi>t</mi></msup></math> at <math id="p8.m8" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>.
+Also, <math id="p8.m9" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> must be skew-symmetric, because it is a tangent vector
+to the curve <math id="p8.m10" class="ltx_Math" alttext="X^{t}" display="inline"><msup><mi>X</mi><mi>t</mi></msup></math> and so must lie in the tangent space to <math id="p8.m11" class="ltx_Math" alttext="SO(n)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> (the kernel of <math id="p8.m12" class="ltx_Math" alttext="\operatorname{D}f(X)" display="inline"><mrow><mrow><mi mathvariant="normal">D</mi><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>).</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Since <math id="p9.m1" class="ltx_Math" alttext="X^{t}=e^{tA}" display="inline"><mrow><msup><mi>X</mi><mi>t</mi></msup><mo>=</mo><msup><mi>e</mi><mrow><mi>t</mi><mo>⁢</mo><mi>A</mi></mrow></msup></mrow></math>, we may reasonably ask: in what way does the matrix <math id="p9.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> represent
+the rotations <math id="p9.m3" class="ltx_Math" alttext="X^{t}" display="inline"><msup><mi>X</mi><mi>t</mi></msup></math>? The answer is suggested by the simpler case of <math id="p9.m4" class="ltx_Math" alttext="n=3" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>3</mn></mrow></math>;
+by Rodrigues’ rotation formula, <math id="p9.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is the operator <math id="p9.m6" class="ltx_Math" alttext="Av=\omega\times v" display="inline"><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mrow><mi>ω</mi><mo>×</mo><mi>v</mi></mrow></mrow></math>
+where <math id="p9.m7" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is the angular velocity vector of the rotation.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">The wedge product of the exterior algebra on <math id="p10.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>
+generalizes the cross product in higher dimensions (<math id="p10.m2" class="ltx_Math" alttext="n&gt;3" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>3</mn></mrow></math>),
+so we should start looking there,
+and one cannot but help notice that <math id="p10.m3" class="ltx_Math" alttext="\Lambda^{2}(V)" display="inline"><mrow><msup><mi mathvariant="normal">Λ</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> also has dimension <math id="p10.m4" class="ltx_Math" alttext="\binom{n}{2}" display="inline"><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mn>2</mn></mfrac><mo>)</mo></mrow></math>.
+The basis elements of this space are of the form <math id="p10.m5" class="ltx_Math" alttext="\hat{x}\wedge\hat{y}" display="inline"><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover><mo>∧</mo><mover accent="true"><mi>y</mi><mo stretchy="false">^</mo></mover></mrow></math>,
+where <math id="p10.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p10.m7" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are orthonormal basis vectors of <math id="p10.m8" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, and <math id="p10.m9" class="ltx_Math" alttext="\hat{x},\hat{y}\in V^{*}" display="inline"><mrow><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover><mo>,</mo><mover accent="true"><mi>y</mi><mo stretchy="false">^</mo></mover></mrow><mo>∈</mo><msup><mi>V</mi><mo>*</mo></msup></mrow></math>
+are defined by <math id="p10.m10" class="ltx_Math" alttext="\hat{x}(w)=\langle x,w\rangle" display="inline"><mrow><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo>,</mo><mi>w</mi><mo stretchy="false">⟩</mo></mrow></mrow></math>,
+<math id="p10.m11" class="ltx_Math" alttext="\hat{y}(w)=\langle y,w\rangle" display="inline"><mrow><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mi>y</mi><mo>,</mo><mi>w</mi><mo stretchy="false">⟩</mo></mrow></mrow></math>. By attempting to generalize the cross product representation for <math id="p10.m12" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, we can derive that the natural isomorphism between elements <math id="p10.m13" class="ltx_Math" alttext="\eta\in\Lambda^{2}(V)" display="inline"><mrow><mi>η</mi><mo>∈</mo><mrow><msup><mi mathvariant="normal">Λ</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and the skew-symmetric matrices <math id="p10.m14" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> should be given by:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\langle Av,w\rangle=\eta(v,w)\,." display="block"><mrow><mrow><mrow><mo stretchy="false">⟨</mo><mrow><mi>A</mi><mo>⁢</mo><mi>v</mi></mrow><mo>,</mo><mi>w</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mi>η</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="p10.m15" class="ltx_Math" alttext="\eta=\omega\,\hat{x}\wedge\hat{y}" display="inline"><mrow><mi>η</mi><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><mi>ω</mi></mpadded><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">^</mo></mover></mrow><mo>∧</mo><mover accent="true"><mi>y</mi><mo stretchy="false">^</mo></mover></mrow></mrow></math>,
+a simple calculation shows <math id="p10.m16" class="ltx_Math" alttext="X^{t}=e^{tA}" display="inline"><mrow><msup><mi>X</mi><mi>t</mi></msup><mo>=</mo><msup><mi>e</mi><mrow><mi>t</mi><mo>⁢</mo><mi>A</mi></mrow></msup></mrow></math> is a rotation on the plane spanned by <math id="p10.m17" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p10.m18" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>
+with angular velocity <math id="p10.m19" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>!</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">So one can think of the infinitesimal decomposition of <math id="p11.m1" class="ltx_Math" alttext="X^{t}" display="inline"><msup><mi>X</mi><mi>t</mi></msup></math>, as the “angular velocity” with its <math id="p11.m2" class="ltx_Math" alttext="\binom{n}{2}" display="inline"><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mn>2</mn></mfrac><mo>)</mo></mrow></math> components. The fact that angular velocity in our physical world
+can be represented by one vector, and the fact that rotations in <math id="p11.m3" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math> have a single axis,
+is a consequence of the fact that <math id="p11.m4" class="ltx_Math" alttext="\binom{3}{2}=3" display="inline"><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mn>3</mn><mn>2</mn></mfrac><mo>)</mo></mrow><mo>=</mo><mn>3</mn></mrow></math>.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">So although rotations do not commute in general, the correspondence between rotations
+and alternating 2-tensors, shows that rotations do add up
+and commute at the infinitesimal level<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">3</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">3</sup>This really just boils down to the fact that a manifold looks like a vector space locally.</span></span></span>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">dimension of the special orthogonal group</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DimensionOfTheSpecialOrthogonalGroup</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:24:22</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:24:22</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Result</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A04</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A75</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20G20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfRodriguesRotationFormula</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DecompositionOfOrthogonalOperatorsAsRotationsAndReflections</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">OrthogonalMatrices</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ExteriorAlgebra</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">OrthogonalGroup</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">special orthogonal group</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:21:18 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

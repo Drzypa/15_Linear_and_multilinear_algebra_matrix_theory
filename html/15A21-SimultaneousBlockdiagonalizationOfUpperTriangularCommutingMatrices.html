@@ -1,0 +1,275 @@
+<!DOCTYPE html><html>
+<head>
+<title>simultaneous block-diagonalization of upper triangular commuting matrices</title>
+<!--Generated on Fri Feb  9 18:26:49 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">simultaneous block-diagonalization of upper triangular commuting matrices</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="\mathbf{e}_{i}" display="inline"><msub><mi>𝐞</mi><mi>i</mi></msub></math> denote the (column) vector whose <math id="p2.m2" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>th position is <math id="p2.m3" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>
+and where all other positions are <math id="p2.m4" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>. Denote by <math id="p2.m5" class="ltx_Math" alttext="[n]" display="inline"><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></math> the set
+<math id="p2.m6" class="ltx_Math" alttext="\{1,\ldots,n\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></math>. Denote by <math id="p2.m7" class="ltx_Math" alttext="\mathrm{M}_{n}(\mathcal{K})" display="inline"><mrow><msub><mi mathvariant="normal">M</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒦</mi><mo stretchy="false">)</mo></mrow></mrow></math> the set of all <math id="p2.m8" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrices over <math id="p2.m9" class="ltx_Math" alttext="\mathcal{K}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒦</mi></math>, and by <math id="p2.m10" class="ltx_Math" alttext="\mathrm{GL}_{n}(\mathcal{K})" display="inline"><mrow><msub><mi>GL</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒦</mi><mo stretchy="false">)</mo></mrow></mrow></math> the set of all
+invertible elements of <math id="p2.m11" class="ltx_Math" alttext="\mathrm{M}_{n}(\mathcal{K})" display="inline"><mrow><msub><mi mathvariant="normal">M</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒦</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Let <math id="p2.m12" class="ltx_Math" alttext="d_{i}" display="inline"><msub><mi>d</mi><mi>i</mi></msub></math> be the function
+which extracts the <math id="p2.m13" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>th diagonal element of a matrix, i.e., <math id="p2.m14" class="ltx_Math" alttext="d_{i}(A)=\mathbf{e}_{i}^{\mathrm{T}}\!A\mathbf{e}_{i}" display="inline"><mrow><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mpadded width="-1.7pt"><msubsup><mi>𝐞</mi><mi>i</mi><mi mathvariant="normal">T</mi></msubsup></mpadded><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msub><mi>𝐞</mi><mi>i</mi></msub></mrow></mrow></math>.</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="\mathcal{K}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">K</mi></math> be a field, let <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> be a positive integer, and let <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="\sim" display="inline"><mo mathvariant="normal">∼</mo></math>
+be an equivalence relation on <math id="Thmtheorem1.p1.m4" class="ltx_Math" alttext="[n]" display="inline"><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>n</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></math> such that if <math id="Thmtheorem1.p1.m5" class="ltx_Math" alttext="i\sim j" display="inline"><mrow><mi>i</mi><mo mathvariant="normal">∼</mo><mi>j</mi></mrow></math> and
+<math id="Thmtheorem1.p1.m6" class="ltx_Math" alttext="i\leqslant k\leqslant j" display="inline"><mrow><mi>i</mi><mo mathvariant="normal">⩽</mo><mi>k</mi><mo mathvariant="normal">⩽</mo><mi>j</mi></mrow></math> then <math id="Thmtheorem1.p1.m7" class="ltx_Math" alttext="k\sim i" display="inline"><mrow><mi>k</mi><mo mathvariant="normal">∼</mo><mi>i</mi></mrow></math>. Let <math id="Thmtheorem1.p1.m8" class="ltx_Math" alttext="A_{1},\ldots,A_{r}\in\mathrm{M}_{n}(\mathcal{K})" display="inline"><mrow><mrow><msub><mi>A</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>A</mi><mi>r</mi></msub></mrow><mo mathvariant="normal">∈</mo><mrow><msub><mi mathvariant="normal">M</mi><mi>n</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">K</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> be pairwise commuting upper triangular matrices.
+If these matrices and <math id="Thmtheorem1.p1.m9" class="ltx_Math" alttext="\sim" display="inline"><mo mathvariant="normal">∼</mo></math> are related such that</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="i\sim j\quad\text{if and only if}\quad d_{i}(A_{k})=d_{j}(A_{k})\text{ for all%
+ }k\in[r]\text{,}" display="block"><mrow><mrow><mi>i</mi><mo>∼</mo><mrow><mi>j</mi><mo mathvariant="italic" separator="true"> </mo><mtext mathvariant="italic">if and only if</mtext></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>d</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext mathvariant="italic"> for all </mtext><mo>⁢</mo><mi>k</mi></mrow><mo>∈</mo><mrow><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mtext mathvariant="italic">,</mtext></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">then there exists a matrix <math id="Thmtheorem1.p1.m10" class="ltx_Math" alttext="B\in\mathrm{GL}_{n}(\mathcal{K})" display="inline"><mrow><mi>B</mi><mo mathvariant="normal">∈</mo><mrow><msub><mi mathvariant="normal">GL</mi><mi>n</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">K</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> such that:</span></p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">1.</span></span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If </span><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\mathbf{e}_{i}^{\mathrm{T}}\!B^{-1}A_{k}B\mathbf{e}_{j}\neq 0" display="inline"><mrow><mrow><mpadded width="-1.7pt"><msubsup><mi>𝐞</mi><mi>i</mi><mi mathvariant="normal">T</mi></msubsup></mpadded><mo>⁢</mo><msup><mi>B</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>B</mi><mo>⁢</mo><msub><mi>𝐞</mi><mi>j</mi></msub></mrow><mo>≠</mo><mn>0</mn></mrow></math><span class="ltx_text ltx_font_italic"> then
+</span><math id="I1.i1.p1.m2" class="ltx_Math" alttext="i\sim j" display="inline"><mrow><mi>i</mi><mo>∼</mo><mi>j</mi></mrow></math><span class="ltx_text ltx_font_italic"> and </span><math id="I1.i1.p1.m3" class="ltx_Math" alttext="i\leqslant j" display="inline"><mrow><mi>i</mi><mo>⩽</mo><mi>j</mi></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_italic">2.</span></span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If </span><math id="I1.i2.p1.m1" class="ltx_Math" alttext="i\sim j" display="inline"><mrow><mi>i</mi><mo>∼</mo><mi>j</mi></mrow></math><span class="ltx_text ltx_font_italic"> then </span><math id="I1.i2.p1.m2" class="ltx_Math" alttext="\mathbf{e}_{i}^{\mathrm{T}}\!B^{-1}A_{k}B\mathbf{e}_{j}=\mathbf{e}_{i}^{%
+\mathrm{T}}A_{k}\mathbf{e}_{j}" display="inline"><mrow><mrow><mpadded width="-1.7pt"><msubsup><mi>𝐞</mi><mi>i</mi><mi mathvariant="normal">T</mi></msubsup></mpadded><mo>⁢</mo><msup><mi>B</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>B</mi><mo>⁢</mo><msub><mi>𝐞</mi><mi>j</mi></msub></mrow><mo>=</mo><mrow><msubsup><mi>𝐞</mi><mi>i</mi><mi mathvariant="normal">T</mi></msubsup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><msub><mi>𝐞</mi><mi>j</mi></msub></mrow></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Condition <a href="#I1.i1" title="1. ‣ Theorem 1. ‣ simultaneous block-diagonalization of upper triangular commuting matrices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a> says that if an element of <math id="p3.m1" class="ltx_Math" alttext="B^{-1}A_{k}B" display="inline"><mrow><msup><mi>B</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>B</mi></mrow></math>
+is nonzero then both its row and column indices must belong to the
+same equivalence class of <math id="p3.m2" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math>, i.e., the nonzero elements of
+<math id="p3.m3" class="ltx_Math" alttext="B^{-1}A_{k}B" display="inline"><mrow><msup><mi>B</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>B</mi></mrow></math> only occur in particular
+blocks (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/PartitionedMatrix</span>) 
+along the diagonal, and these blocks
+correspond to equivalence classes of <math id="p3.m4" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math>.
+Condition <a href="#I1.i2" title="2. ‣ Theorem 1. ‣ simultaneous block-diagonalization of upper triangular commuting matrices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> says that within one of these blocks,
+<math id="p3.m5" class="ltx_Math" alttext="B^{-1}A_{k}B" display="inline"><mrow><msup><mi>B</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>B</mi></mrow></math> is equal to <math id="p3.m6" class="ltx_Math" alttext="A_{k}" display="inline"><msub><mi>A</mi><mi>k</mi></msub></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The proof of the theorem requires the following lemma.</p>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Lemma 2</span>.</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let a sequence <math id="Thmtheorem2.p1.m1" class="ltx_Math" alttext="A_{1},\ldots,A_{r}\in\mathrm{M}_{n}(\mathcal{K})" display="inline"><mrow><mrow><msub><mi>A</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>A</mi><mi>r</mi></msub></mrow><mo mathvariant="normal">∈</mo><mrow><msub><mi mathvariant="normal">M</mi><mi>n</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">K</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> of upper
+triangular matrices be given, and denote by <math id="Thmtheorem2.p1.m2" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">A</mi></math> the
+unital (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/unity</span>) algebra (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Algebra</span>)
+generated by these matrices. For every sequence
+<math id="Thmtheorem2.p1.m3" class="ltx_Math" alttext="\lambda_{1},\ldots,\lambda_{r}\in\mathcal{K}" display="inline"><mrow><mrow><msub><mi>λ</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>λ</mi><mi>r</mi></msub></mrow><mo mathvariant="normal">∈</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">K</mi></mrow></math> of scalars there exists a
+matrix <math id="Thmtheorem2.p1.m4" class="ltx_Math" alttext="C\in\mathcal{A}" display="inline"><mrow><mi>C</mi><mo mathvariant="normal">∈</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">A</mi></mrow></math> such that</span></p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="d_{i}(C)=\begin{cases}1&amp;\text{if \(d_{i}(A_{k})=\lambda_{k}\) for all \(k\in[r%
+]\),}\\
+0&amp;\text{otherwise}\end{cases}" display="block"><mrow><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mn>1</mn></mtd><mtd columnalign="left"><mrow><mtext mathvariant="italic">if </mtext><mrow><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>λ</mi><mi>k</mi></msub></mrow><mtext mathvariant="italic"> for all </mtext><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow></mrow><mtext mathvariant="italic">,</mtext></mrow></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd columnalign="left"><mtext>𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒</mtext></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for all <math id="Thmtheorem2.p1.m5" class="ltx_Math" alttext="i\in[n]" display="inline"><mrow><mi>i</mi><mo mathvariant="normal">∈</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>n</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">The proof of that lemma can be found in
+this article (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CharacteristicMatrixOfDiagonalElementCrossSection</span>).</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof of theorem.</h6>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">The proof is by induction on the number of equivalence classes of
+<math id="p6.m1" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math>. If there is only one equivalence class then one can take
+<math id="p6.m2" class="ltx_Math" alttext="B=I" display="inline"><mrow><mi>B</mi><mo>=</mo><mi>I</mi></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">If there is more than one equivalence class, then let <math id="p7.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> be the
+equivalence class that contains <math id="p7.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. By Lemma <a href="#Thmtheorem2" title="Lemma 2. ‣ simultaneous block-diagonalization of upper triangular commuting matrices" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>
+there exists a matrix <math id="p7.m3" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> in the unital algebra generated by
+<math id="p7.m4" class="ltx_Math" alttext="A_{1},\ldots,A_{r}" display="inline"><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>A</mi><mi>r</mi></msub></mrow></math> (hence necessarily upper triangular) such that
+<math id="p7.m5" class="ltx_Math" alttext="d_{i}(C)=1" display="inline"><mrow><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> for all <math id="p7.m6" class="ltx_Math" alttext="i\in S" display="inline"><mrow><mi>i</mi><mo>∈</mo><mi>S</mi></mrow></math> and <math id="p7.m7" class="ltx_Math" alttext="d_{i}(C)=0" display="inline"><mrow><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for all <math id="p7.m8" class="ltx_Math" alttext="i\in[n]\setminus S" display="inline"><mrow><mi>i</mi><mo>∈</mo><mrow><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><mo>∖</mo><mi>S</mi></mrow></mrow></math>. Thus <math id="p7.m9" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> has a</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="C=\begin{pmatrix}C_{11}&amp;C_{12}\\
+0&amp;C_{22}\end{pmatrix}" display="block"><mrow><mi>C</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>C</mi><mn>11</mn></msub></mtd><mtd columnalign="center"><msub><mi>C</mi><mn>12</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><msub><mi>C</mi><mn>22</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p7.m10" class="ltx_Math" alttext="C_{22}" display="inline"><msub><mi>C</mi><mn>22</mn></msub></math> is a <math id="p7.m11" class="ltx_Math" alttext="\lvert S\rvert\times\lvert S\rvert" display="inline"><mrow><mrow><mo fence="true" stretchy="false">|</mo><mi>S</mi><mo fence="true" stretchy="false">|</mo></mrow><mo>×</mo><mrow><mo fence="true" stretchy="false">|</mo><mi>S</mi><mo fence="true" stretchy="false">|</mo></mrow></mrow></math> matrix
+that has all <math id="p7.m12" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>s on the diagonal, and <math id="p7.m13" class="ltx_Math" alttext="C_{11}" display="inline"><msub><mi>C</mi><mn>11</mn></msub></math> is a
+<math id="p7.m14" class="ltx_Math" alttext="\bigl{(}n-\nobreak\lvert S\rvert\bigr{)}\times\bigl{(}n-\nobreak\lvert S\rvert%
+\bigr{)}" display="inline"><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mi>n</mi><mo>-</mo><mrow><mo fence="true" stretchy="false">|</mo><mi>S</mi><mo fence="true" stretchy="false">|</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>×</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mi>n</mi><mo>-</mo><mrow><mo fence="true" stretchy="false">|</mo><mi>S</mi><mo fence="true" stretchy="false">|</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></math> matrix that has all <math id="p7.m15" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>s
+on the diagonal.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Let <math id="p8.m1" class="ltx_Math" alttext="k\in[r]" display="inline"><mrow><mi>k</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow></mrow></math> be arbitrary and similarly decompose
+</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle C^{n}=" display="inline"><mrow><msup><mi>C</mi><mi>n</mi></msup><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle\begin{pmatrix}D_{11}&amp;D_{12}\\
+0&amp;D_{22}\end{pmatrix}\text{,}" display="inline"><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>D</mi><mn>11</mn></msub></mtd><mtd columnalign="center"><msub><mi>D</mi><mn>12</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><msub><mi>D</mi><mn>22</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mtext>,</mtext></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle A_{k}=" display="inline"><mrow><msub><mi>A</mi><mi>k</mi></msub><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m4" class="ltx_Math" alttext="\displaystyle\begin{pmatrix}A_{11}&amp;A_{12}\\
+0&amp;A_{22}\end{pmatrix}\text{.}" display="inline"><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>A</mi><mn>11</mn></msub></mtd><mtd columnalign="center"><msub><mi>A</mi><mn>12</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><msub><mi>A</mi><mn>22</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mtext>.</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">One can identify <math id="p8.m2" class="ltx_Math" alttext="D_{11}=(C_{11})^{n}" display="inline"><mrow><msub><mi>D</mi><mn>11</mn></msub><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>C</mi><mn>11</mn></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow></math> and <math id="p8.m3" class="ltx_Math" alttext="D_{22}=(C_{22})^{n}" display="inline"><mrow><msub><mi>D</mi><mn>22</mn></msub><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi>C</mi><mn>22</mn></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow></math>,
+but due to the zero diagonal of <math id="p8.m4" class="ltx_Math" alttext="C_{11}" display="inline"><msub><mi>C</mi><mn>11</mn></msub></math> and the fact that the
+
+of these matrices are smaller than <math id="p8.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, the more striking equality
+<math id="p8.m6" class="ltx_Math" alttext="D_{11}=0" display="inline"><mrow><msub><mi>D</mi><mn>11</mn></msub><mo>=</mo><mn>0</mn></mrow></math> also holds. As for <math id="p8.m7" class="ltx_Math" alttext="D_{22}" display="inline"><msub><mi>D</mi><mn>22</mn></msub></math>, one may conclude that it
+is invertible.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Since the algebra that <math id="p9.m1" class="ltx_Math" alttext="C^{n}" display="inline"><msup><mi>C</mi><mi>n</mi></msup></math> belongs to was generated by pairwise
+commuting elements, it is a commutative (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Commutative</span>)
+algebra, and in particular <math id="p9.m2" class="ltx_Math" alttext="C^{n}A_{k}=A_{k}C^{n}" display="inline"><mrow><mrow><msup><mi>C</mi><mi>n</mi></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub></mrow><mo>=</mo><mrow><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>C</mi><mi>n</mi></msup></mrow></mrow></math>. In
+
+of the individual blocks, this
+
+becomes</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\begin{pmatrix}0&amp;D_{12}A_{22}\\
+0&amp;D_{22}A_{22}\end{pmatrix}=\begin{pmatrix}0&amp;A_{11}D_{12}+A_{12}D_{22}\\
+0&amp;A_{22}D_{22}\end{pmatrix}\text{.}" display="block"><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><msub><mi>D</mi><mn>12</mn></msub><mo>⁢</mo><msub><mi>A</mi><mn>22</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><msub><mi>D</mi><mn>22</mn></msub><mo>⁢</mo><msub><mi>A</mi><mn>22</mn></msub></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mrow><msub><mi>A</mi><mn>11</mn></msub><mo>⁢</mo><msub><mi>D</mi><mn>12</mn></msub></mrow><mo>+</mo><mrow><msub><mi>A</mi><mn>12</mn></msub><mo>⁢</mo><msub><mi>D</mi><mn>22</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><msub><mi>A</mi><mn>22</mn></msub><mo>⁢</mo><msub><mi>D</mi><mn>22</mn></msub></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mtext>.</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now let</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="D=\begin{pmatrix}I&amp;D_{12}\\
+0&amp;D_{22}\end{pmatrix}\text{, so that }D^{-1}=\begin{pmatrix}I&amp;-D_{12}D_{22}^{-%
+1}\\
+0&amp;D_{22}^{-1}\end{pmatrix}" display="block"><mrow><mi>D</mi><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>I</mi></mtd><mtd columnalign="center"><msub><mi>D</mi><mn>12</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><msub><mi>D</mi><mn>22</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mtext>, so that </mtext><mo>⁢</mo><msup><mi>D</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>I</mi></mtd><mtd columnalign="center"><mrow><mo>-</mo><mrow><msub><mi>D</mi><mn>12</mn></msub><mo>⁢</mo><msubsup><mi>D</mi><mn>22</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><msubsup><mi>D</mi><mn>22</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and consider the matrix <math id="p9.m3" class="ltx_Math" alttext="D^{-1}A_{k}D" display="inline"><mrow><msup><mi>D</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>D</mi></mrow></math>. Clearly</p>
+<table class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="p9.m4" class="ltx_Math" alttext="\displaystyle D^{-1}A_{k}D=D^{-1}\begin{pmatrix}A_{11}&amp;A_{12}\\
+0&amp;A_{22}\end{pmatrix}\begin{pmatrix}I&amp;D_{12}\\
+0&amp;D_{22}\end{pmatrix}=\\
+\displaystyle=D^{-1}\begin{pmatrix}A_{11}&amp;A_{11}D_{12}+A_{12}D_{22}\\
+0&amp;A_{22}D_{22}\end{pmatrix}=\begin{pmatrix}I&amp;-D_{12}D_{22}^{-1}\\
+0&amp;D_{22}^{-1}\end{pmatrix}\begin{pmatrix}A_{11}&amp;D_{12}A_{22}\\
+0&amp;D_{22}A_{22}\end{pmatrix}=\\
+\displaystyle=\begin{pmatrix}A_{11}&amp;D_{12}A_{22}-D_{12}D_{22}^{-1}D_{22}A_{22}%
+\\
+0&amp;D_{22}^{-1}D_{22}A_{22}\end{pmatrix}=\begin{pmatrix}A_{11}&amp;0\\
+0&amp;A_{22}\end{pmatrix}" display="block"><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><msup><mi>D</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>D</mi></mrow><mo>=</mo><mrow><msup><mi>D</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>A</mi><mn>11</mn></msub></mtd><mtd columnalign="center"><msub><mi>A</mi><mn>12</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><msub><mi>A</mi><mn>22</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>I</mi></mtd><mtd columnalign="center"><msub><mi>D</mi><mn>12</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><msub><mi>D</mi><mn>22</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mi></mi></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mi></mi><mo>=</mo><mrow><msup><mi>D</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>A</mi><mn>11</mn></msub></mtd><mtd columnalign="center"><mrow><mrow><msub><mi>A</mi><mn>11</mn></msub><mo>⁢</mo><msub><mi>D</mi><mn>12</mn></msub></mrow><mo>+</mo><mrow><msub><mi>A</mi><mn>12</mn></msub><mo>⁢</mo><msub><mi>D</mi><mn>22</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><msub><mi>A</mi><mn>22</mn></msub><mo>⁢</mo><msub><mi>D</mi><mn>22</mn></msub></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>I</mi></mtd><mtd columnalign="center"><mrow><mo>-</mo><mrow><msub><mi>D</mi><mn>12</mn></msub><mo>⁢</mo><msubsup><mi>D</mi><mn>22</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><msubsup><mi>D</mi><mn>22</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>A</mi><mn>11</mn></msub></mtd><mtd columnalign="center"><mrow><msub><mi>D</mi><mn>12</mn></msub><mo>⁢</mo><msub><mi>A</mi><mn>22</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><msub><mi>D</mi><mn>22</mn></msub><mo>⁢</mo><msub><mi>A</mi><mn>22</mn></msub></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mi></mi></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mi></mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>A</mi><mn>11</mn></msub></mtd><mtd columnalign="center"><mrow><mrow><msub><mi>D</mi><mn>12</mn></msub><mo>⁢</mo><msub><mi>A</mi><mn>22</mn></msub></mrow><mo>-</mo><mrow><msub><mi>D</mi><mn>12</mn></msub><mo>⁢</mo><msubsup><mi>D</mi><mn>22</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><msub><mi>D</mi><mn>22</mn></msub><mo>⁢</mo><msub><mi>A</mi><mn>22</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><msubsup><mi>D</mi><mn>22</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><msub><mi>D</mi><mn>22</mn></msub><mo>⁢</mo><msub><mi>A</mi><mn>22</mn></msub></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>A</mi><mn>11</mn></msub></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><msub><mi>A</mi><mn>22</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so that the positions with row not in <math id="p9.m5" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> and column in <math id="p9.m6" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> are all
+zero, as requested for <math id="p9.m7" class="ltx_Math" alttext="B^{-1}A_{k}B" display="inline"><mrow><msup><mi>B</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>B</mi></mrow></math>. It should be observed that the
+choice of <math id="p9.m8" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> is independent of <math id="p9.m9" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>, and that the same <math id="p9.m10" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> thus
+works for all the <math id="p9.m11" class="ltx_Math" alttext="A_{k}" display="inline"><msub><mi>A</mi><mi>k</mi></msub></math>.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">In order to complete the proof, one applies the induction hypothesis
+to the restriction of <math id="p10.m1" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> to <math id="p10.m2" class="ltx_Math" alttext="[n]\setminus S" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><mo>∖</mo><mi>S</mi></mrow></math> and the
+corresponding submatrices of <math id="p10.m3" class="ltx_Math" alttext="D^{-1}A_{k}D" display="inline"><mrow><msup><mi>D</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>A</mi><mi>k</mi></msub><mo>⁢</mo><mi>D</mi></mrow></math>, which satisfy the same
+conditions but have one equivalence class less. This produces a
+block-diagonalising matrix <math id="p10.m4" class="ltx_Math" alttext="B^{\prime}" display="inline"><msup><mi>B</mi><mo>′</mo></msup></math> for these submatrices, and thus the
+sought <math id="p10.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> can be constructed as <math id="p10.m6" class="ltx_Math" alttext="D\left(\begin{smallmatrix}B^{\prime}&amp;0\\
+0&amp;I\end{smallmatrix}\right)" display="inline"><mrow><mi>D</mi><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><msup><mi mathsize="70%">B</mi><mo mathsize="70%" stretchy="false">′</mo></msup></mtd><mtd columnalign="center"><mn mathsize="70%">0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn mathsize="70%">0</mn></mtd><mtd columnalign="center"><mi mathsize="70%">I</mi></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="p11" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">simultaneous block-diagonalization of upper triangular commuting matrices</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SimultaneousBlockdiagonalizationOfUpperTriangularCommutingMatrices</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:29:42</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:29:42</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">lars_h (9802)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">lars_h (9802)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">lars_h (9802)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 15A21</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:26:49 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

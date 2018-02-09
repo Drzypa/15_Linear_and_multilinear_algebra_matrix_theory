@@ -1,0 +1,148 @@
+<!DOCTYPE html><html>
+<head>
+<title>Gram matrix</title>
+<!--Generated on Fri Feb  9 18:29:53 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Gram matrix</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">For a vector space <math id="p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> of dimension <math id="p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> over a field <math id="p1.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>, endowed with an inner product <math id="p1.m4" class="ltx_Math" alttext="&lt;.,.&gt;:V\times V\to k" display="inline"><mrow><mo>&lt;</mo><mo>.</mo><mo>,</mo><mo>.</mo><mo>&gt;</mo><mo>:</mo><mi>V</mi><mo>×</mo><mi>V</mi><mo>→</mo><mi>k</mi></mrow></math>, and for any given sequence of elements <math id="p1.m5" class="ltx_Math" alttext="x_{1},\ldots,x_{l}\in V" display="inline"><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>l</mi></msub></mrow><mo>∈</mo><mi>V</mi></mrow></math>, consider the following inclusion map <math id="p1.m6" class="ltx_Math" alttext="\iota" display="inline"><mi>ι</mi></math> associated to the <math id="p1.m7" class="ltx_Math" alttext="(x_{i})_{i=1,\ldots,l}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>l</mi></mrow></mrow></msub></math>:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\begin{array}[]{cccc}\iota:&amp;k^{l}&amp;\to&amp;k^{n}=V\\
+&amp;(\lambda_{1},\ldots,\lambda_{l})&amp;\mapsto&amp;\sum_{i=1}^{l}\lambda_{i}x_{i}\end{array}" display="block"><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mi>ι</mi><mo>:</mo><mi></mi></mrow></mtd><mtd columnalign="center"><msup><mi>k</mi><mi>l</mi></msup></mtd><mtd columnalign="center"><mo>→</mo></mtd><mtd columnalign="center"><mrow><msup><mi>k</mi><mi>n</mi></msup><mo>=</mo><mi>V</mi></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="center"><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>λ</mi><mi>l</mi></msub><mo stretchy="false">)</mo></mrow></mtd><mtd columnalign="center"><mo>↦</mo></mtd><mtd columnalign="center"><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>l</mi></munderover><mrow><msub><mi>λ</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">Gram bilinear form</em> of the <math id="p1.m8" class="ltx_Math" alttext="(x_{i})_{i=1,\ldots,l}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>l</mi></mrow></mrow></msub></math> is the function
+</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="x,y\in k^{l}\times k^{l}\mapsto&lt;\iota(x),\iota(y)&gt;" display="block"><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>∈</mo><msup><mi>k</mi><mi>l</mi></msup><mo>×</mo><msup><mi>k</mi><mi>l</mi></msup><mo>↦</mo><mo>&lt;</mo><mi>ι</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>,</mo><mi>ι</mi><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>&gt;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">Gram matrix</em> of the <math id="p1.m9" class="ltx_Math" alttext="(x_{i})_{i=1,\ldots,l}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>l</mi></mrow></mrow></msub></math> is the matrix associated to the Gram bilinear form in the canonical basis of <math id="p1.m10" class="ltx_Math" alttext="k^{l}" display="inline"><msup><mi>k</mi><mi>l</mi></msup></math>. The Gram form (resp. matrix) is a symmetric bilinear form (resp. matrix).
+<br class="ltx_break"></p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Gram forms/matrices are usually considered with <math id="p2.m1" class="ltx_Math" alttext="k=\mathbb{R}" display="inline"><mrow><mi>k</mi><mo>=</mo><mi>ℝ</mi></mrow></math> and <math id="p2.m2" class="ltx_Math" alttext="&lt;.,.&gt;" display="inline"><mrow><mo>&lt;</mo><mo>.</mo><mo>,</mo><mo>.</mo><mo>&gt;</mo></mrow></math> the usual scalar products on vector spaces over <math id="p2.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. In that context they have a strong geometrical meaning:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">The determinant of the Gram form/matrix is <math id="I1.i1.p1.m1" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> <span class="ltx_text ltx_framed_underline">iff</span> <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\iota" display="inline"><mi>ι</mi></math> is an injection.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\iota" display="inline"><mi>ι</mi></math> is injective, the Gram matrix (resp. form) is a positive symmetric matrix (resp. bilinear form).</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="\det(G)^{-2}=\mathrm{Vol}(\iota^{-1}(B_{0,1}))" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><msup><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>=</mo><mrow><mi>Vol</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>ι</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> where <math id="I1.i3.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is the gram form/matrix, <math id="I1.i3.p1.m3" class="ltx_Math" alttext="\mathrm{Vol}" display="inline"><mi>Vol</mi></math> denotes the volume of a subset of <math id="I1.i3.p1.m4" class="ltx_Math" alttext="{\mathbb{R}}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>, and <math id="I1.i3.p1.m5" class="ltx_Math" alttext="B_{0,1}" display="inline"><msub><mi>B</mi><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow></msub></math> is the unit ball of <math id="I1.i3.p1.m6" class="ltx_Math" alttext="{\mathbb{R}}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> centered at <math id="I1.i3.p1.m7" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I1.i4.p1.m1" class="ltx_Math" alttext="\Delta:\lambda\in{\mathbb{R}}^{l}\mapsto G(\lambda,\lambda)" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>:</mo><mrow><mi>λ</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>l</mi></msup><mo>↦</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo>,</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, where <math id="I1.i4.p1.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is the Gram bilinear form, then <math id="I1.i4.p1.m3" class="ltx_Math" alttext="\iota^{-1}(B_{0,1})=\Delta^{-1}([0,1])" display="inline"><mrow><mrow><msup><mi>ι</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi mathvariant="normal">Δ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i5.p1.m1" class="ltx_Math" alttext="\iota" display="inline"><mi>ι</mi></math> is injective and <math id="I1.i5.p1.m2" class="ltx_Math" alttext="s:\mathrm{Im}(\iota)\subset{\mathbb{R}}^{n}\to{\mathbb{R}}^{l}" display="inline"><mrow><mi>s</mi><mo>:</mo><mrow><mrow><mi>Im</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ι</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊂</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>l</mi></msup></mrow></mrow></math> is an isometry, then <math id="I1.i5.p1.m3" class="ltx_Math" alttext="\det(s\circ\iota)^{2}=\det(G)" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>∘</mo><mi>ι</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i6.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I1.i6.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> be an endomorphism of <math id="I1.i6.p1.m2" class="ltx_Math" alttext="{\mathbb{R}}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> and <math id="I1.i6.p1.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> its matrix. Let <math id="I1.i6.p1.m4" class="ltx_Math" alttext="H,U" display="inline"><mrow><mi>H</mi><mo>,</mo><mi>U</mi></mrow></math> be the polar decomposition of <math id="I1.i6.p1.m5" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>, <math id="I1.i6.p1.m6" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is a symmetric positive matrix and <math id="I1.i6.p1.m7" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> an orthogonal matrix. Let the <math id="I1.i6.p1.m8" class="ltx_Math" alttext="x_{i}" display="inline"><msub><mi>x</mi><mi>i</mi></msub></math> be the columns of <math id="I1.i6.p1.m9" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> (<math id="I1.i6.p1.m10" class="ltx_Math" alttext="l=n" display="inline"><mrow><mi>l</mi><mo>=</mo><mi>n</mi></mrow></math>) and let <math id="I1.i6.p1.m11" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be the Gram matrix the <math id="I1.i6.p1.m12" class="ltx_Math" alttext="x_{i}" display="inline"><msub><mi>x</mi><mi>i</mi></msub></math>. Then <math id="I1.i6.p1.m13" class="ltx_Math" alttext="H^{2}=G" display="inline"><mrow><msup><mi>H</mi><mn>2</mn></msup><mo>=</mo><mi>G</mi></mrow></math>. (N.B.: this is one way to prove the existence of the polar decomposition, take the square root of the Gram matrix, multiply <math id="I1.i6.p1.m14" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> by its inverse and it easily follows that what is obtained is an orthogonal matrix).</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">They are utilized in statistics in Principal components analysis. One wants to determine the general trend in terms of few characteristics (<math id="p3.m1" class="ltx_Math" alttext="l" display="inline"><mi>l</mi></math> of them) in a large sample (<math id="p3.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> individuals). Each <math id="p3.m3" class="ltx_Math" alttext="x_{i}(\in{\mathbb{R}}^{n})" display="inline"><mrow><msub><mi>x</mi><mi>i</mi></msub><mspace width="veryverythickmathspace"></mspace><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></math> represents the results of the <math id="p3.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> individuals in the sample for the <math id="p3.m5" class="ltx_Math" alttext="i^{\mathrm{th}}" display="inline"><msup><mi>i</mi><mi>th</mi></msup></math> characteristic. Each one of the <math id="p3.m6" class="ltx_Math" alttext="l" display="inline"><mi>l</mi></math> dimensions represents a characteristic and one wants to know what are the predominant characteristics and if they bear some kind of linear relations between them. This is achieved by diagonalizing the Gram matrix (often called dispersion matrix or covariance matrix in that context). The higher the eigenvalue, the more important the eigenvector associated to it.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Gram matrix</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">GramMatrix</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:56:55</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:56:55</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">lalberti (18937)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">lalberti (18937)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">lalberti (18937)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A63</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Gram matrices</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Gram bilinear form</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:29:53 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

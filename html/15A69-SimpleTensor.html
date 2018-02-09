@@ -1,0 +1,288 @@
+<!DOCTYPE html><html>
+<head>
+<title>simple tensor</title>
+<!--Generated on Fri Feb  9 18:31:08 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">simple tensor</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The tensor product (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/TensorProduct</span>) <span class="ltx_ERROR undefined">\PMlinkescapephrase</span>tensor product
+<math id="p1.m1" class="ltx_Math" alttext="U\otimes V" display="inline"><mrow><mi>U</mi><mo>⊗</mo><mi>V</mi></mrow></math> of two vector spaces <math id="p1.m2" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> and <math id="p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is
+another vector space which is characterised by being universal
+for bilinear maps on <math id="p1.m4" class="ltx_Math" alttext="U\times V" display="inline"><mrow><mi>U</mi><mo>×</mo><mi>V</mi></mrow></math>. As part of this package,
+there is an operation <math id="p1.m5" class="ltx_Math" alttext="\otimes" display="inline"><mo>⊗</mo></math> on vectors such that
+<math id="p1.m6" class="ltx_Math" alttext="\mathbf{u}\otimes\mathbf{v}\in U\otimes V" display="inline"><mrow><mrow><mi>𝐮</mi><mo>⊗</mo><mi>𝐯</mi></mrow><mo>∈</mo><mrow><mi>U</mi><mo>⊗</mo><mi>V</mi></mrow></mrow></math> for all
+<math id="p1.m7" class="ltx_Math" alttext="\mathbf{u}\in U" display="inline"><mrow><mi>𝐮</mi><mo>∈</mo><mi>U</mi></mrow></math> and <math id="p1.m8" class="ltx_Math" alttext="\mathbf{v}\in V" display="inline"><mrow><mi>𝐯</mi><mo>∈</mo><mi>V</mi></mrow></math>, and the primary subject
+of this article is the image of that operation.</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1</span>.</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">The element <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="\mathbf{w}\in U\otimes V" display="inline"><mrow><mi>𝐰</mi><mo>∈</mo><mrow><mi>U</mi><mo>⊗</mo><mi>V</mi></mrow></mrow></math> is said to be a
+<em class="ltx_emph ltx_font_italic">simple tensor</em> if there exist <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="\mathbf{u}\in U" display="inline"><mrow><mi>𝐮</mi><mo>∈</mo><mi>U</mi></mrow></math> and <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="\mathbf{v}\in V" display="inline"><mrow><mi>𝐯</mi><mo>∈</mo><mi>V</mi></mrow></math> such that <math id="Thmtheorem1.p1.m4" class="ltx_Math" alttext="\mathbf{w}=\mathbf{u}\otimes\mathbf{v}" display="inline"><mrow><mi>𝐰</mi><mo>=</mo><mrow><mi>𝐮</mi><mo>⊗</mo><mi>𝐯</mi></mrow></mrow></math>.</p>
+</div>
+<div id="Thmtheorem1.p2" class="ltx_para">
+<p class="ltx_p">More generally, the element <math id="Thmtheorem1.p2.m1" class="ltx_Math" alttext="\mathbf{w}\in W=U_{1}\otimes\cdots\otimes U_{k}" display="inline"><mrow><mi>𝐰</mi><mo>∈</mo><mi>W</mi><mo>=</mo><mrow><msub><mi>U</mi><mn>1</mn></msub><mo>⊗</mo><mi mathvariant="normal">⋯</mi><mo>⊗</mo><msub><mi>U</mi><mi>k</mi></msub></mrow></mrow></math> is said to be a simple tensor (with respect to the
+decomposition <math id="Thmtheorem1.p2.m2" class="ltx_Math" alttext="U_{1}\otimes\cdots\otimes U_{k}" display="inline"><mrow><msub><mi>U</mi><mn>1</mn></msub><mo>⊗</mo><mi mathvariant="normal">⋯</mi><mo>⊗</mo><msub><mi>U</mi><mi>k</mi></msub></mrow></math> of <math id="Thmtheorem1.p2.m3" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math>) if there
+exist <math id="Thmtheorem1.p2.m4" class="ltx_Math" alttext="\mathbf{u}_{i}\in U_{i}" display="inline"><mrow><msub><mi>𝐮</mi><mi>i</mi></msub><mo>∈</mo><msub><mi>U</mi><mi>i</mi></msub></mrow></math> for <math id="Thmtheorem1.p2.m5" class="ltx_Math" alttext="i=1,\ldots,k" display="inline"><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>k</mi></mrow></mrow></math> such that
+<math id="Thmtheorem1.p2.m6" class="ltx_Math" alttext="\mathbf{w}=\mathbf{u}_{1}\otimes\cdots\otimes\mathbf{u}_{k}" display="inline"><mrow><mi>𝐰</mi><mo>=</mo><mrow><msub><mi>𝐮</mi><mn>1</mn></msub><mo>⊗</mo><mi mathvariant="normal">⋯</mi><mo>⊗</mo><msub><mi>𝐮</mi><mi>k</mi></msub></mrow></mrow></math>.</p>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">For this definition to be interesting, there must also be tensors
+which are not simple, and indeed most tensors aren’t. In order to
+illustrate why, it is convenient to consider the tensor product of
+two finite-dimensional vector spaces <math id="p2.m1" class="ltx_Math" alttext="U=\mathcal{K}^{m}" display="inline"><mrow><mi>U</mi><mo>=</mo><msup><mi class="ltx_font_mathcaligraphic">𝒦</mi><mi>m</mi></msup></mrow></math> and <math id="p2.m2" class="ltx_Math" alttext="V=\mathcal{K}^{n}" display="inline"><mrow><mi>V</mi><mo>=</mo><msup><mi class="ltx_font_mathcaligraphic">𝒦</mi><mi>n</mi></msup></mrow></math>
+over some field <math id="p2.m3" class="ltx_Math" alttext="\mathcal{K}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒦</mi></math>. In this case one can let <math id="p2.m4" class="ltx_Math" alttext="U\otimes V=\mathcal{K}^{m\times n}" display="inline"><mrow><mrow><mi>U</mi><mo>⊗</mo><mi>V</mi></mrow><mo>=</mo><msup><mi class="ltx_font_mathcaligraphic">𝒦</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow></math> (the vector space of <math id="p2.m5" class="ltx_Math" alttext="m\times n" display="inline"><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math> matrices), since
+<math id="p2.m6" class="ltx_Math" alttext="\mathcal{K}^{m\times n}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒦</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></math> is isomorphic to any generic construction of
+<math id="p2.m7" class="ltx_Math" alttext="U\otimes V" display="inline"><mrow><mi>U</mi><mo>⊗</mo><mi>V</mi></mrow></math> and the tensor product of two spaces is anyway only
+defined up to isomorphism. Furthermore considering elements of <math id="p2.m8" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>
+and <math id="p2.m9" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> as column vectors, the tensor product of vectors can be
+defined through</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\mathbf{u}\otimes\mathbf{v}=\mathbf{u}\cdot\mathbf{v}^{\mathrm{T}}" display="block"><mrow><mrow><mi>𝐮</mi><mo>⊗</mo><mi>𝐯</mi></mrow><mo>=</mo><mrow><mi>𝐮</mi><mo>⋅</mo><msup><mi>𝐯</mi><mi mathvariant="normal">T</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p2.m10" class="ltx_Math" alttext="\cdot" display="inline"><mo>⋅</mo></math> denotes the product of two matrices (in this case an
+<math id="p2.m11" class="ltx_Math" alttext="m\times 1" display="inline"><mrow><mi>m</mi><mo>×</mo><mn>1</mn></mrow></math> matrix by a <math id="p2.m12" class="ltx_Math" alttext="1\times n" display="inline"><mrow><mn>1</mn><mo>×</mo><mi>n</mi></mrow></math> matrix). As a very concrete
+example of this,</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\begin{pmatrix}u_{1}\\
+u_{2}\\
+u_{3}\end{pmatrix}\otimes\begin{pmatrix}v_{1}\\
+v_{2}\\
+v_{3}\\
+v_{4}\end{pmatrix}=\begin{pmatrix}u_{1}v_{1}&amp;u_{1}v_{2}&amp;u_{1}v_{3}&amp;u_{1}v_{4}%
+\\
+u_{2}v_{1}&amp;u_{2}v_{2}&amp;u_{2}v_{3}&amp;u_{2}v_{4}\\
+u_{3}v_{1}&amp;u_{3}v_{2}&amp;u_{3}v_{3}&amp;u_{3}v_{4}\end{pmatrix}\text{.}" display="block"><mrow><mrow><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>u</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>u</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>u</mi><mn>3</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow><mo>⊗</mo><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>v</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>v</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>v</mi><mn>3</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>v</mi><mn>4</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>3</mn></msub></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>4</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><msub><mi>u</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>u</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>u</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>3</mn></msub></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>u</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>4</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><msub><mi>u</mi><mn>3</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>u</mi><mn>3</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>u</mi><mn>3</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>3</mn></msub></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>u</mi><mn>3</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>4</mn></msub></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mtext>.</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">One reason the simple tensors in <math id="p2.m13" class="ltx_Math" alttext="U\otimes V" display="inline"><mrow><mi>U</mi><mo>⊗</mo><mi>V</mi></mrow></math> cannot exhaust this
+space (provded <math id="p2.m14" class="ltx_Math" alttext="m,n\geqslant 2" display="inline"><mrow><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow><mo>⩾</mo><mn>2</mn></mrow></math>) is that there are essentially
+only <math id="p2.m15" class="ltx_Math" alttext="m+n-1" display="inline"><mrow><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow><mo>-</mo><mn>1</mn></mrow></math> degrees of freedom in the choice of a simple tensor, but
+<math id="p2.m16" class="ltx_Math" alttext="mn" display="inline"><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></math> dimensions (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Dimension2</span>) in the space <math id="p2.m17" class="ltx_Math" alttext="U\otimes V" display="inline"><mrow><mi>U</mi><mo>⊗</mo><mi>V</mi></mrow></math>
+as a whole. Hence</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\mathcal{K}^{m}\otimes\mathcal{K}^{n}\neq\left\{\,\mathbf{u}\otimes\mathbf{v}%
+\,\,\vrule width 1px\,\,\mathbf{u}\in\mathcal{K}^{m},\mathbf{v}\in\mathcal{K}^%
+{n}\,\right\}\qquad\text{when \(m,n\geqslant 2\).}" display="block"><mrow><msup><mi class="ltx_font_mathcaligraphic">𝒦</mi><mi>m</mi></msup><mo>⊗</mo><msup><mi class="ltx_font_mathcaligraphic">𝒦</mi><mi>n</mi></msup><mo>≠</mo><mrow><mo rspace="4.2pt">{</mo><mi>𝐮</mi><mo>⊗</mo><mpadded width="+3.3pt"><mi>𝐯</mi></mpadded><mpadded width="+3.3pt"><mtext mathcolor="red"><span class="ltx_rule" style="width:1px;background:black;display:inline-block;"> </span></mtext></mpadded><mi>𝐮</mi><mo>∈</mo><msup><mi class="ltx_font_mathcaligraphic">𝒦</mi><mi>m</mi></msup><mo>,</mo><mi>𝐯</mi><mo>∈</mo><mpadded width="+1.7pt"><msup><mi class="ltx_font_mathcaligraphic">𝒦</mi><mi>n</mi></msup></mpadded><mo>}</mo></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mtext>when </mtext><mrow><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow><mo>⩾</mo><mn>2</mn></mrow><mtext>.</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">How can one to understand the non-simple tensors, then? In general,
+they are finite sums of simple tensors. One way to see this is from
+the theorem that <math id="p3.m1" class="ltx_Math" alttext="U\otimes V" display="inline"><mrow><mi>U</mi><mo>⊗</mo><mi>V</mi></mrow></math> has a basis consisting of products of
+pairs of basis vectors.</p>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 2</span> (tensor product basis (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/TensorProductBasis</span>)).</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem2.p1.m1" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> and <math id="Thmtheorem2.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> be vector spaces over <math id="Thmtheorem2.p1.m3" class="ltx_Math" alttext="\mathcal{K}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">K</mi></math> with bases
+<math id="Thmtheorem2.p1.m4" class="ltx_Math" alttext="\{\mathbf{e}_{i}\}_{i\in I}" display="inline"><msub><mrow><mo mathvariant="normal" stretchy="false">{</mo><msub><mi mathvariant="normal">e</mi><mi>i</mi></msub><mo mathvariant="normal" stretchy="false">}</mo></mrow><mrow><mi>i</mi><mo mathvariant="normal">∈</mo><mi>I</mi></mrow></msub></math> and <math id="Thmtheorem2.p1.m5" class="ltx_Math" alttext="\{\mathbf{f}_{j}\}_{j\in J}" display="inline"><msub><mrow><mo mathvariant="normal" stretchy="false">{</mo><msub><mi mathvariant="normal">f</mi><mi>j</mi></msub><mo mathvariant="normal" stretchy="false">}</mo></mrow><mrow><mi>j</mi><mo mathvariant="normal">∈</mo><mi>J</mi></mrow></msub></math>
+respectively. Then <math id="Thmtheorem2.p1.m6" class="ltx_Math" alttext="\{\mathbf{e}_{i}\otimes\mathbf{f}_{j}\}_{(i,j)\in I\times J}" display="inline"><msub><mrow><mo mathvariant="normal" stretchy="false">{</mo><mrow><msub><mi mathvariant="normal">e</mi><mi>i</mi></msub><mo mathvariant="normal">⊗</mo><msub><mi mathvariant="normal">f</mi><mi>j</mi></msub></mrow><mo mathvariant="normal" stretchy="false">}</mo></mrow><mrow><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>i</mi><mo mathvariant="normal">,</mo><mi>j</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow><mo mathvariant="normal">∈</mo><mrow><mi>I</mi><mo mathvariant="normal">×</mo><mi>J</mi></mrow></mrow></msub></math> is a basis for <math id="Thmtheorem2.p1.m7" class="ltx_Math" alttext="U\otimes V" display="inline"><mrow><mi>U</mi><mo mathvariant="normal">⊗</mo><mi>V</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Expressing some arbitrary <math id="p4.m1" class="ltx_Math" alttext="\mathbf{w}\in U\otimes V" display="inline"><mrow><mi>𝐰</mi><mo>∈</mo><mrow><mi>U</mi><mo>⊗</mo><mi>V</mi></mrow></mrow></math> as a linear
+combination</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\mathbf{w}=\sum_{r=1}^{n}\lambda_{r}(\mathbf{e}_{i_{r}}\otimes\mathbf{f}_{j_{r%
+}})" display="block"><mrow><mi>𝐰</mi><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>r</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>λ</mi><mi>r</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>𝐞</mi><msub><mi>i</mi><mi>r</mi></msub></msub><mo>⊗</mo><msub><mi>𝐟</mi><msub><mi>j</mi><mi>r</mi></msub></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with respect to such a basis immediately produces the decomposition</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\mathbf{w}=\sum_{r=1}^{n}(\lambda_{r}\mathbf{e}_{i_{r}})\otimes\mathbf{f}_{j_{%
+r}}" display="block"><mrow><mi>𝐰</mi><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>r</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>λ</mi><mi>r</mi></msub><mo>⁢</mo><msub><mi>𝐞</mi><msub><mi>i</mi><mi>r</mi></msub></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⊗</mo><msub><mi>𝐟</mi><msub><mi>j</mi><mi>r</mi></msub></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">as a sum of simple tensors, but this decomposition is often far
+from optimally short.
+Let <math id="p4.m2" class="ltx_Math" alttext="\mathbf{e}_{1}=\left(\begin{smallmatrix}1\\
+0\end{smallmatrix}\right)\in\mathcal{K}^{2}" display="inline"><mrow><msub><mi>𝐞</mi><mn>1</mn></msub><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mn mathsize="70%">1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn mathsize="70%">0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>∈</mo><msup><mi class="ltx_font_mathcaligraphic">𝒦</mi><mn>2</mn></msup></mrow></math> and <math id="p4.m3" class="ltx_Math" alttext="\mathbf{e}_{2}=\left(\begin{smallmatrix}0\\
+1\end{smallmatrix}\right)\in\mathcal{K}^{2}" display="inline"><mrow><msub><mi>𝐞</mi><mn>2</mn></msub><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mn mathsize="70%">0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn mathsize="70%">1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>∈</mo><msup><mi class="ltx_font_mathcaligraphic">𝒦</mi><mn>2</mn></msup></mrow></math>. The tensor <math id="p4.m4" class="ltx_Math" alttext="\mathbf{e}_{1}\otimes\mathbf{e}_{1}+\mathbf{e}_{2}\otimes\mathbf{e}_{2}=\left(%
+\begin{smallmatrix}1&amp;0\\
+0&amp;1\end{smallmatrix}\right)" display="inline"><mrow><mrow><mrow><msub><mi>𝐞</mi><mn>1</mn></msub><mo>⊗</mo><msub><mi>𝐞</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>𝐞</mi><mn>2</mn></msub><mo>⊗</mo><msub><mi>𝐞</mi><mn>2</mn></msub></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn mathsize="70%">1</mn></mtd><mtd columnalign="center"><mn mathsize="70%">0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn mathsize="70%">0</mn></mtd><mtd columnalign="center"><mn mathsize="70%">1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math> is not
+simple, but as it happens the tensor <math id="p4.m5" class="ltx_Math" alttext="\mathbf{e}_{1}\otimes\mathbf{e}_{1}+\mathbf{e}_{1}\otimes\mathbf{e}_{2}+%
+\mathbf{e}_{2}\otimes\mathbf{e}_{1}+\mathbf{e}_{2}\otimes\mathbf{e}_{2}=\left(%
+\begin{smallmatrix}1&amp;1\\
+1&amp;1\end{smallmatrix}\right)=\left(\begin{smallmatrix}1\\
+1\end{smallmatrix}\right)\otimes\left(\begin{smallmatrix}1\\
+1\end{smallmatrix}\right)" display="inline"><mrow><mrow><mrow><msub><mi>𝐞</mi><mn>1</mn></msub><mo>⊗</mo><msub><mi>𝐞</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>𝐞</mi><mn>1</mn></msub><mo>⊗</mo><msub><mi>𝐞</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><msub><mi>𝐞</mi><mn>2</mn></msub><mo>⊗</mo><msub><mi>𝐞</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>𝐞</mi><mn>2</mn></msub><mo>⊗</mo><msub><mi>𝐞</mi><mn>2</mn></msub></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn mathsize="70%">1</mn></mtd><mtd columnalign="center"><mn mathsize="70%">1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn mathsize="70%">1</mn></mtd><mtd columnalign="center"><mn mathsize="70%">1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mn mathsize="70%">1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn mathsize="70%">1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⊗</mo><mrow><mo>(</mo><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mn mathsize="70%">1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn mathsize="70%">1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow></math> is simple. In general it
+is not trivial to find the simplest way of expressing a tensor as
+a sum of simple tensors, so there is a name for the length of the
+shortest such sum.</p>
+</div>
+<div id="Thmtheorem3" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 3</span>.</h6>
+<div id="Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">rank</em> of a tensor <math id="Thmtheorem3.p1.m1" class="ltx_Math" alttext="\mathbf{w}" display="inline"><mi>𝐰</mi></math> is the smallest natural
+number <math id="Thmtheorem3.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> such that <math id="Thmtheorem3.p1.m3" class="ltx_Math" alttext="\mathbf{w}=\mathbf{w}_{1}+\cdots+\mathbf{w}_{n}" display="inline"><mrow><mi>𝐰</mi><mo>=</mo><mrow><msub><mi>𝐰</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>𝐰</mi><mi>n</mi></msub></mrow></mrow></math>
+for some set of <math id="Thmtheorem3.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> simple tensors <math id="Thmtheorem3.p1.m5" class="ltx_Math" alttext="\mathbf{w}_{1}" display="inline"><msub><mi>𝐰</mi><mn>1</mn></msub></math>, …, <math id="Thmtheorem3.p1.m6" class="ltx_Math" alttext="\mathbf{w}_{n}" display="inline"><msub><mi>𝐰</mi><mi>n</mi></msub></math>.</p>
+</div>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">In particular, the zero tensor has rank <math id="p5.m1" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>, and all other simple
+tensors have rank <math id="p5.m2" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<ul class="ltx_itemize">
+<li class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"></span> 
+<div id="p6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Warning.</span>  There is an entirely different concept which is also called
+‘the rank of a tensor (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Tensor</span>)’,
+namely the number of components (factors) in the tensor
+product forming the space in which the tensor lives. This latter
+‘rank’ concept does not generalise
+‘rank of a matrix (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RankLinearMapping</span>)’.
+The ‘rank’ of Definition <a href="#Thmtheorem3" title="Definition 3. ‣ simple tensor" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a> <em class="ltx_emph ltx_font_italic">does</em>
+generalise ‘rank of a matrix’. (It also generalises
+rank of a quadratic form (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Rank5</span>).)</p>
+</div>
+</li>
+</ul>
+</div>
+<span class="ltx_ERROR undefined">\PMlinkescapephrase</span>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">one way</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">One area where the distinction between simple and non-simple tensors
+is particularly important is in Quantum Mechanics, because the state
+space of a pair of quantum systems is in general the tensor product
+of the state spaces of the component systems. When the combined state
+is a simple tensor <math id="p8.m1" class="ltx_Math" alttext="\mathbf{w}=\mathbf{u}\otimes\mathbf{v}" display="inline"><mrow><mi>𝐰</mi><mo>=</mo><mrow><mi>𝐮</mi><mo>⊗</mo><mi>𝐯</mi></mrow></mrow></math>, then that
+state can be understood as though one subsystem has state <math id="p8.m2" class="ltx_Math" alttext="\mathbf{u}" display="inline"><mi>𝐮</mi></math>
+and the other state <math id="p8.m3" class="ltx_Math" alttext="\mathbf{v}" display="inline"><mi>𝐯</mi></math>, but when the combined state <math id="p8.m4" class="ltx_Math" alttext="\mathbf{w}" display="inline"><mi>𝐰</mi></math>
+is a non-simple tensor <math id="p8.m5" class="ltx_Math" alttext="\mathbf{u}_{1}\otimes\mathbf{v}_{1}+\mathbf{u}_{2}\otimes\mathbf{v}_{2}" display="inline"><mrow><mrow><msub><mi>𝐮</mi><mn>1</mn></msub><mo>⊗</mo><msub><mi>𝐯</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>𝐮</mi><mn>2</mn></msub><mo>⊗</mo><msub><mi>𝐯</mi><mn>2</mn></msub></mrow></mrow></math> then the full system cannot be
+understood by considering the two subsystems in isolation, even if
+there is no apparent interaction between them. This situation is
+often described by saying that the two subsystems are
+<em class="ltx_emph ltx_font_italic">entangled</em>, or using phrases such as “either <math id="p8.m6" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is in state
+<math id="p8.m7" class="ltx_Math" alttext="\mathbf{u}_{1}" display="inline"><msub><mi>𝐮</mi><mn>1</mn></msub></math> and <math id="p8.m8" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is in state <math id="p8.m9" class="ltx_Math" alttext="\mathbf{v}_{1}" display="inline"><msub><mi>𝐯</mi><mn>1</mn></msub></math>, or else <math id="p8.m10" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is in state
+<math id="p8.m11" class="ltx_Math" alttext="\mathbf{u}_{2}" display="inline"><msub><mi>𝐮</mi><mn>2</mn></msub></math> and <math id="p8.m12" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is in state <math id="p8.m13" class="ltx_Math" alttext="\mathbf{v}_{2}" display="inline"><msub><mi>𝐯</mi><mn>2</mn></msub></math>.”
+Entanglement is an important part of that which makes quantum systems
+different from probabilistic classical systems. The physical
+interpretations are often mind-boggling, but the mathematical meaning
+is no more mysterious than ‘non-simple tensor’.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Entanglement can also be a useful concept for understanding pure mathematics.
+One reason that the comultiplication <math id="p9.m1" class="ltx_Math" alttext="\Delta\colon C\longrightarrow C\otimes C" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>:</mo><mrow><mi>C</mi><mo>⟶</mo><mrow><mi>C</mi><mo>⊗</mo><mi>C</mi></mrow></mrow></mrow></math>
+of a coalgebra <math id="p9.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> cannot simply be replaced in the definition by two
+maps <math id="p9.m3" class="ltx_Math" alttext="\Delta_{L},\Delta_{R}\colon C\longrightarrow C" display="inline"><mrow><mrow><msub><mi mathvariant="normal">Δ</mi><mi>L</mi></msub><mo>,</mo><msub><mi mathvariant="normal">Δ</mi><mi>R</mi></msub></mrow><mo>:</mo><mrow><mi>C</mi><mo>⟶</mo><mi>C</mi></mrow></mrow></math> that compute the ‘left’
+and ‘right’ parts of <math id="p9.m4" class="ltx_Math" alttext="\Delta" display="inline"><mi mathvariant="normal">Δ</mi></math> is that value of <math id="p9.m5" class="ltx_Math" alttext="\Delta" display="inline"><mi mathvariant="normal">Δ</mi></math> may be
+entangled, in which case one left part <math id="p9.m6" class="ltx_Math" alttext="\Delta_{L}(c)" display="inline"><mrow><msub><mi mathvariant="normal">Δ</mi><mi>L</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></math> and one right
+part <math id="p9.m7" class="ltx_Math" alttext="\Delta_{R}(c)" display="inline"><mrow><msub><mi mathvariant="normal">Δ</mi><mi>R</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></math> cannot fully encode <math id="p9.m8" class="ltx_Math" alttext="\Delta(c)" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">simple tensor</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SimpleTensor</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:26:07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:26:07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">lars_h (9802)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">lars_h (9802)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">lars_h (9802)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A69</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">tensor rank</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">entangled</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TensorProduct</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">BasicTensor</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">rank</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:31:08 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

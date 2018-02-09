@@ -1,0 +1,370 @@
+<!DOCTYPE html><html>
+<head>
+<title>frame</title>
+<!--Generated on Fri Feb  9 18:18:44 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">frame</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Introduction</h2>
+
+<div id="S0.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">Frames and coframes are notions closely related to the notions of
+basis and dual basis. As such, frames and coframes are needed to
+describe the connection between list vectors (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Vector2</span>) and
+the more general abstract vectors (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/VectorSpace</span>).</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Frames and bases.</h2>
+
+<div id="S0.SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math> be a finite-dimensional vector space over a field <math id="S0.SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math>,
+and let <math id="S0.SS0.SSS0.Px2.p1.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> be a finite, totally ordered set of indices<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>It is
+advantageous to allow general indexing sets, because one can
+indicate the use of multiple frames of reference by employing
+multiple, disjoint sets of indices.</span></span></span>, e.g. <math id="S0.SS0.SSS0.Px2.p1.m4" class="ltx_Math" alttext="(1,2,\ldots,n)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></math>. We
+will call a mapping <math id="S0.SS0.SSS0.Px2.p1.m5" class="ltx_Math" alttext="\mathbf{F}:I\rightarrow\mathcal{U}" display="inline"><mrow><mi>𝐅</mi><mo>:</mo><mrow><mi>I</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></mrow></math> a reference frame, or simply
+a frame. To put it plainly, <math id="S0.SS0.SSS0.Px2.p1.m6" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> is just a list of elements of <math id="S0.SS0.SSS0.Px2.p1.m7" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>
+with indices belong to <math id="S0.SS0.SSS0.Px2.p1.m8" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>. We will adopt a notation to reflect this
+and write <math id="S0.SS0.SSS0.Px2.p1.m9" class="ltx_Math" alttext="\mathbf{F}_{i}" display="inline"><msub><mi>𝐅</mi><mi>i</mi></msub></math> instead of <math id="S0.SS0.SSS0.Px2.p1.m10" class="ltx_Math" alttext="\mathbf{F}(i)" display="inline"><mrow><mi>𝐅</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Subscripts are used when
+writing the frame elements because it is best to regard a frame as a
+row-vector<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>It is customary to use superscripts for the
+components of a column vector, and subscripts for the components of
+a row vector. This is fully described in the
+vector entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Vector2</span>).</span></span></span> whose entries happen to be elements of <math id="S0.SS0.SSS0.Px2.p1.m11" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math>,
+and write</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\mathbf{F}=(\mathbf{F}_{1},\ldots,\mathbf{F}_{n})." display="block"><mrow><mrow><mi>𝐅</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝐅</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>𝐅</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This is appropriate because
+every reference frame <math id="S0.SS0.SSS0.Px2.p1.m12" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> naturally corresponds to a linear
+mapping <math id="S0.SS0.SSS0.Px2.p1.m13" class="ltx_Math" alttext="\hat{\mathbf{F}}:\mathbb{K}^{I}\rightarrow\mathcal{U}" display="inline"><mrow><mover accent="true"><mi>𝐅</mi><mo stretchy="false">^</mo></mover><mo>:</mo><mrow><msup><mi>𝕂</mi><mi>I</mi></msup><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></mrow></math> defined by</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\mathbf{a}\mapsto\sum_{i\in I}\mathbf{a}^{i}\,\mathbf{F}_{i},\quad\mathbf{a}%
+\in\mathbb{K}^{I}." display="block"><mrow><mrow><mrow><mi>𝐚</mi><mo>↦</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></munder><mrow><mpadded width="+1.7pt"><msup><mi>𝐚</mi><mi>i</mi></msup></mpadded><mo>⁢</mo><msub><mi>𝐅</mi><mi>i</mi></msub></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>𝐚</mi><mo>∈</mo><msup><mi>𝕂</mi><mi>I</mi></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In other words, <math id="S0.SS0.SSS0.Px2.p1.m14" class="ltx_Math" alttext="\hat{\mathbf{F}}" display="inline"><mover accent="true"><mi>𝐅</mi><mo stretchy="false">^</mo></mover></math> is a linear form on <math id="S0.SS0.SSS0.Px2.p1.m15" class="ltx_Math" alttext="\mathbb{K}^{I}" display="inline"><msup><mi>𝕂</mi><mi>I</mi></msup></math> that takes
+values in <math id="S0.SS0.SSS0.Px2.p1.m16" class="ltx_Math" alttext="\mathcal{U}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒰</mi></math> instead of <math id="S0.SS0.SSS0.Px2.p1.m17" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math>. We use row vectors to represent
+linear forms, and that’s why we write the frame as a row vector.</p>
+</div>
+<div id="S0.SS0.SSS0.Px2.p2" class="ltx_para">
+<p class="ltx_p">We call <math id="S0.SS0.SSS0.Px2.p2.m1" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> a coordinate frame (equivalently, a basis), if <math id="S0.SS0.SSS0.Px2.p2.m2" class="ltx_Math" alttext="\hat{\mathbf{F}}" display="inline"><mover accent="true"><mi>𝐅</mi><mo stretchy="false">^</mo></mover></math> is
+an isomorphism of vector spaces. Otherwise we call <math id="S0.SS0.SSS0.Px2.p2.m3" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> degenerate,
+incomplete, or both, depending on whether <math id="S0.SS0.SSS0.Px2.p2.m4" class="ltx_Math" alttext="\hat{\mathbf{F}}" display="inline"><mover accent="true"><mi>𝐅</mi><mo stretchy="false">^</mo></mover></math> fails to be,
+respectively, injective and surjective.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px3" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Coframes and coordinates.</h2>
+
+<div id="S0.SS0.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">In cases where <math id="S0.SS0.SSS0.Px3.p1.m1" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> is a basis, the inverse isomorphism</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\hat{\mathbf{F}}^{-1}:\mathcal{U}\rightarrow\mathbb{K}^{I}" display="block"><mrow><msup><mover accent="true"><mi>𝐅</mi><mo stretchy="false">^</mo></mover><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>→</mo><msup><mi>𝕂</mi><mi>I</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is called the coordinate
+mapping. It is cumbersome to work with this inverse explicitly, and
+instead we introduce linear forms <math id="S0.SS0.SSS0.Px3.p1.m2" class="ltx_Math" alttext="\mathbf{x}^{i}\in\mathcal{U}^{*},\;i\in I" display="inline"><mrow><mrow><msup><mi>𝐱</mi><mi>i</mi></msup><mo>∈</mo><msup><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>*</mo></msup></mrow><mo rspace="5.3pt">,</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></mrow></math> defined
+by</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\mathbf{x}^{i}:\mathbf{u}\mapsto\hat{\mathbf{F}}^{-1}(\mathbf{u})(i),\quad%
+\mathbf{u}\in\mathcal{U}." display="block"><mrow><mrow><msup><mi>𝐱</mi><mi>i</mi></msup><mo>:</mo><mrow><mrow><mi>𝐮</mi><mo>↦</mo><mrow><msup><mover accent="true"><mi>𝐅</mi><mo stretchy="false">^</mo></mover><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐮</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>𝐮</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Each
+<math id="S0.SS0.SSS0.Px3.p1.m3" class="ltx_Math" alttext="\mathbf{x}^{i},\;i\in I" display="inline"><mrow><mrow><msup><mi>𝐱</mi><mi>i</mi></msup><mo rspace="5.3pt">,</mo><mi>i</mi></mrow><mo>∈</mo><mi>I</mi></mrow></math> is called the <math id="S0.SS0.SSS0.Px3.p1.m4" class="ltx_Math" alttext="i^{\text{th}}" display="inline"><msup><mi>i</mi><mtext>th</mtext></msup></math> coordinate function
+relative to <math id="S0.SS0.SSS0.Px3.p1.m5" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>, or simply the <math id="S0.SS0.SSS0.Px3.p1.m6" class="ltx_Math" alttext="i^{\text{th}}" display="inline"><msup><mi>i</mi><mtext>th</mtext></msup></math>
+coordinate<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">3</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">3</sup>Strictly speaking, we should be denote the coframe
+by <math id="S0.SS0.SSS0.Px3.p1.m7" class="ltx_Math" alttext="\mathbf{x}_{\mathbf{F}}" display="inline"><msub><mi>𝐱</mi><mi>𝐅</mi></msub></math> and the coordinate functions by <math id="S0.SS0.SSS0.Px3.p1.m8" class="ltx_Math" alttext="\mathbf{x}^{i}_{\mathbf{F}}" display="inline"><msubsup><mi>𝐱</mi><mi>𝐅</mi><mi>i</mi></msubsup></math> so as
+to reflect their dependence on the choice of reference frame.
+Historically, writers have been loath to do this, preferring a
+couple of different notational tricks to avoid ambiguity. The
+cleanest approach is to use different symbols, e.g. <math id="S0.SS0.SSS0.Px3.p1.m9" class="ltx_Math" alttext="\mathbf{x}^{i}" display="inline"><msup><mi>𝐱</mi><mi>i</mi></msup></math> versus
+<math id="S0.SS0.SSS0.Px3.p1.m10" class="ltx_Math" alttext="\mathbf{y}^{j}" display="inline"><msup><mi>𝐲</mi><mi>j</mi></msup></math>, to distinguish coordinates coming from different frames.
+Another approach is to use distinct indexing sets; in this way the
+indices themselves will indicate the choice of frame. Say we have
+two frames <math id="S0.SS0.SSS0.Px3.p1.m11" class="ltx_Math" alttext="\mathbf{F}:I\rightarrow\mathcal{U}" display="inline"><mrow><mi>𝐅</mi><mo>:</mo><mrow><mi>I</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></mrow></math> and <math id="S0.SS0.SSS0.Px3.p1.m12" class="ltx_Math" alttext="\mathbf{G}:J\rightarrow\mathcal{U}" display="inline"><mrow><mi>𝐆</mi><mo>:</mo><mrow><mi>J</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></mrow></math> with
+<math id="S0.SS0.SSS0.Px3.p1.m13" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> and <math id="S0.SS0.SSS0.Px3.p1.m14" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> distinct finite sets. We stipulate that the symbol <math id="S0.SS0.SSS0.Px3.p1.m15" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>
+refers to elements of <math id="S0.SS0.SSS0.Px3.p1.m16" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> and that <math id="S0.SS0.SSS0.Px3.p1.m17" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> refers to elements of <math id="S0.SS0.SSS0.Px3.p1.m18" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math>,
+and write <math id="S0.SS0.SSS0.Px3.p1.m19" class="ltx_Math" alttext="\mathbf{x}^{i}" display="inline"><msup><mi>𝐱</mi><mi>i</mi></msup></math> for coordinates relative to <math id="S0.SS0.SSS0.Px3.p1.m20" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> and <math id="S0.SS0.SSS0.Px3.p1.m21" class="ltx_Math" alttext="\mathbf{x}^{j}" display="inline"><msup><mi>𝐱</mi><mi>j</mi></msup></math> for
+coordinates relative to <math id="S0.SS0.SSS0.Px3.p1.m22" class="ltx_Math" alttext="\mathbf{G}" display="inline"><mi>𝐆</mi></math>. That’s the way it was done in all
+the old-time geometry and physics papers, and is still largely the
+way physicists go about writing coordinates. Be that as it may, the
+notation has its problems and is the subject of long-standing
+controversy, named by mathematicians the debauche of indices. The
+problem is that the notation employs the same symbol, namely <math id="S0.SS0.SSS0.Px3.p1.m23" class="ltx_Math" alttext="\mathbf{x}" display="inline"><mi>𝐱</mi></math>,
+to refer to two different objects, namely a map with domain <math id="S0.SS0.SSS0.Px3.p1.m24" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> and
+another map with domain <math id="S0.SS0.SSS0.Px3.p1.m25" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math>. In practice, ambiguity is
+avoided because the old-time notation <span class="ltx_text ltx_font_italic">never</span> refers to the
+coframe (or indeed any tensor) without also writing the indices.
+This is the classical way of the dummy variable, a cousin to the
+<math id="S0.SS0.SSS0.Px3.p1.m26" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> notation. It creates some confusion for beginners, but with
+a little practice it’s a perfectly serviceable and useful way to
+communicate.</span></span></span>. In this way we obtain a mapping</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\mathbf{x}:I\rightarrow\mathcal{U}^{*},\quad i\mapsto\mathbf{x}^{i}" display="block"><mrow><mi>𝐱</mi><mo>:</mo><mrow><mrow><mi>I</mi><mo>→</mo><msup><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>*</mo></msup></mrow><mo rspace="12.5pt">,</mo><mrow><mi>i</mi><mo>↦</mo><msup><mi>𝐱</mi><mi>i</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">called the <span class="ltx_text ltx_font_italic">coordinate coframe</span> or simply a <span class="ltx_text ltx_font_italic">coframe</span>. The forms <math id="S0.SS0.SSS0.Px3.p1.m27" class="ltx_Math" alttext="\mathbf{x}^{i},\,i\in I" display="inline"><mrow><mrow><msup><mi>𝐱</mi><mi>i</mi></msup><mo rspace="4.2pt">,</mo><mi>i</mi></mrow><mo>∈</mo><mi>I</mi></mrow></math> give a basis of <math id="S0.SS0.SSS0.Px3.p1.m28" class="ltx_Math" alttext="\mathcal{U}^{*}" display="inline"><msup><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>*</mo></msup></math>. It is the dual basis of <math id="S0.SS0.SSS0.Px3.p1.m29" class="ltx_Math" alttext="\mathbf{F}_{i},\,i\in I" display="inline"><mrow><mrow><msub><mi>𝐅</mi><mi>i</mi></msub><mo rspace="4.2pt">,</mo><mi>i</mi></mrow><mo>∈</mo><mi>I</mi></mrow></math>, i.e.</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\mathbf{x}^{i}(\mathbf{F}_{j})=\delta^{i}_{j},\quad i,j\in I," display="block"><mrow><mrow><mrow><mrow><msup><mi>𝐱</mi><mi>i</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝐅</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msubsup><mi>δ</mi><mi>j</mi><mi>i</mi></msubsup><mo rspace="12.5pt">,</mo><mi>i</mi></mrow></mrow><mo>,</mo><mrow><mi>j</mi><mo>∈</mo><mi>I</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S0.SS0.SSS0.Px3.p1.m30" class="ltx_Math" alttext="\delta^{i}_{j}" display="inline"><msubsup><mi>δ</mi><mi>j</mi><mi>i</mi></msubsup></math> is the well-known Kronecker symbol.</p>
+</div>
+<div id="S0.SS0.SSS0.Px3.p2" class="ltx_para">
+<p class="ltx_p">In full duality to the custom of writing frames as row-vectors, we
+write the coframe as a column vector whose components are the
+coordinate functions:</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\begin{pmatrix}\mathbf{x}^{1}\\
+\mathbf{x}^{2}\\
+\vdots\\
+\mathbf{x}^{n}\end{pmatrix}." display="block"><mrow><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msup><mi>𝐱</mi><mn>1</mn></msup></mtd></mtr><mtr><mtd columnalign="center"><msup><mi>𝐱</mi><mn>2</mn></msup></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><msup><mi>𝐱</mi><mi>n</mi></msup></mtd></mtr></mtable><mo>)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We identify of <math id="S0.SS0.SSS0.Px3.p2.m1" class="ltx_Math" alttext="\hat{\mathbf{F}}^{-1}" display="inline"><msup><mover accent="true"><mi>𝐅</mi><mo stretchy="false">^</mo></mover><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> and <math id="S0.SS0.SSS0.Px3.p2.m2" class="ltx_Math" alttext="\mathbf{x}" display="inline"><mi>𝐱</mi></math> with the above column-vector.
+This is quite natural because all of these objects are in natural
+correspondence with a <math id="S0.SS0.SSS0.Px3.p2.m3" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math>-valued functions of two arguments,</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\mathcal{U}\times I\rightarrow\mathbb{K}," display="block"><mrow><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒰</mi><mo>×</mo><mi>I</mi></mrow><mo>→</mo><mi>𝕂</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">that maps an abstract vector
+<math id="S0.SS0.SSS0.Px3.p2.m4" class="ltx_Math" alttext="\mathbf{u}\in\mathcal{U}" display="inline"><mrow><mi>𝐮</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></math> and an index <math id="S0.SS0.SSS0.Px3.p2.m5" class="ltx_Math" alttext="i\in I" display="inline"><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></math> to a scalar <math id="S0.SS0.SSS0.Px3.p2.m6" class="ltx_Math" alttext="\mathbf{x}^{i}(\mathbf{u})" display="inline"><mrow><msup><mi>𝐱</mi><mi>i</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐮</mi><mo stretchy="false">)</mo></mrow></mrow></math>, called
+the <math id="S0.SS0.SSS0.Px3.p2.m7" class="ltx_Math" alttext="i^{\text{th}}" display="inline"><msup><mi>i</mi><mtext>th</mtext></msup></math> component of <math id="S0.SS0.SSS0.Px3.p2.m8" class="ltx_Math" alttext="\mathbf{u}" display="inline"><mi>𝐮</mi></math> relative to the reference frame
+<math id="S0.SS0.SSS0.Px3.p2.m9" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math>.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px4" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Change of frame.</h2>
+
+<div id="S0.SS0.SSS0.Px4.p1" class="ltx_para">
+<p class="ltx_p">Given two coordinate frames <math id="S0.SS0.SSS0.Px4.p1.m1" class="ltx_Math" alttext="\mathbf{F}:I\rightarrow\mathcal{U}" display="inline"><mrow><mi>𝐅</mi><mo>:</mo><mrow><mi>I</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></mrow></math> and
+<math id="S0.SS0.SSS0.Px4.p1.m2" class="ltx_Math" alttext="\mathbf{G}:J\rightarrow\mathcal{U}" display="inline"><mrow><mi>𝐆</mi><mo>:</mo><mrow><mi>J</mi><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒰</mi></mrow></mrow></math>, one can easily show that <math id="S0.SS0.SSS0.Px4.p1.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> and <math id="S0.SS0.SSS0.Px4.p1.m4" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> must
+have the same cardinality. Letting <math id="S0.SS0.SSS0.Px4.p1.m5" class="ltx_Math" alttext="\mathbf{x}^{i},\,i\in I" display="inline"><mrow><mrow><msup><mi>𝐱</mi><mi>i</mi></msup><mo rspace="4.2pt">,</mo><mi>i</mi></mrow><mo>∈</mo><mi>I</mi></mrow></math> and <math id="S0.SS0.SSS0.Px4.p1.m6" class="ltx_Math" alttext="\mathbf{y}^{j},\,j\in J" display="inline"><mrow><mrow><msup><mi>𝐲</mi><mi>j</mi></msup><mo rspace="4.2pt">,</mo><mi>j</mi></mrow><mo>∈</mo><mi>J</mi></mrow></math> denote the coordinates functions relative to <math id="S0.SS0.SSS0.Px4.p1.m7" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> and <math id="S0.SS0.SSS0.Px4.p1.m8" class="ltx_Math" alttext="\mathbf{G}" display="inline"><mi>𝐆</mi></math>,
+respectively, we define the transition matrix from <math id="S0.SS0.SSS0.Px4.p1.m9" class="ltx_Math" alttext="\mathbf{F}" display="inline"><mi>𝐅</mi></math> to <math id="S0.SS0.SSS0.Px4.p1.m10" class="ltx_Math" alttext="\mathbf{G}" display="inline"><mi>𝐆</mi></math> to
+be the matrix</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\mathcal{M}:I\times J\rightarrow\mathbb{K}" display="block"><mrow><mi class="ltx_font_mathcaligraphic">ℳ</mi><mo>:</mo><mrow><mrow><mi>I</mi><mo>×</mo><mi>J</mi></mrow><mo>→</mo><mi>𝕂</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with entries</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\mathcal{M}^{j}_{i}=\mathbf{y}^{j}(\mathbf{F}_{i}),\quad i\in I,\;j\in J." display="block"><mrow><mrow><mrow><msubsup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mi>i</mi><mi>j</mi></msubsup><mo>=</mo><mrow><msup><mi>𝐲</mi><mi>j</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝐅</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow><mo rspace="5.3pt">,</mo><mrow><mi>j</mi><mo>∈</mo><mi>J</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">An equivalent description of the transition matrix is given by</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\mathbf{y}^{j}=\sum_{i\in I}\mathcal{M}^{j}_{i}\,\mathbf{x}^{i},\quad\mbox{for%
+ all }j\in J." display="block"><mrow><mrow><mrow><msup><mi>𝐲</mi><mi>j</mi></msup><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></munder><mrow><mpadded width="+1.7pt"><msubsup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mi>i</mi><mi>j</mi></msubsup></mpadded><mo>⁢</mo><msup><mi>𝐱</mi><mi>i</mi></msup></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mtext>for all </mtext><mo>⁢</mo><mi>j</mi></mrow><mo>∈</mo><mi>J</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSS0.Px4.p2" class="ltx_para">
+<p class="ltx_p">It is also the custom to regard the elements of <math id="S0.SS0.SSS0.Px4.p2.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> as indexing the
+columns of the matrix, while the elements of <math id="S0.SS0.SSS0.Px4.p2.m2" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> label the rows.
+Thus, for <math id="S0.SS0.SSS0.Px4.p2.m3" class="ltx_Math" alttext="I=(1,2,\ldots,n)" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> and
+<math id="S0.SS0.SSS0.Px4.p2.m4" class="ltx_Math" alttext="J=(\bar{1},\bar{2},\ldots,\bar{n})" display="inline"><mrow><mi>J</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mn>1</mn><mo stretchy="false">¯</mo></mover><mo>,</mo><mover accent="true"><mn>2</mn><mo stretchy="false">¯</mo></mover><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mover accent="true"><mi>n</mi><mo stretchy="false">¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></math>, we can write</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\begin{pmatrix}\mathcal{M}^{\bar{1}}_{1}&amp;\ldots&amp;\mathcal{M}^{\bar{1}}_{n}\\
+\vdots&amp;\ddots&amp;\vdots\\
+\mathcal{M}^{\bar{n}}_{1}&amp;\ldots&amp;\mathcal{M}^{\bar{n}}_{n}\end{pmatrix}=\begin%
+{pmatrix}\mathbf{y}^{\bar{1}}\\
+\vdots\\
+\mathbf{y}^{\bar{n}}\end{pmatrix}\begin{pmatrix}\mathbf{F}_{1}&amp;\ldots&amp;\mathbf{%
+F}_{n}\end{pmatrix}." display="block"><mrow><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msubsup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mn>1</mn><mover accent="true"><mn>1</mn><mo stretchy="false">¯</mo></mover></msubsup></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><msubsup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mi>n</mi><mover accent="true"><mn>1</mn><mo stretchy="false">¯</mo></mover></msubsup></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋱</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><msubsup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mn>1</mn><mover accent="true"><mi>n</mi><mo stretchy="false">¯</mo></mover></msubsup></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><msubsup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mi>n</mi><mover accent="true"><mi>n</mi><mo stretchy="false">¯</mo></mover></msubsup></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msup><mi>𝐲</mi><mover accent="true"><mn>1</mn><mo stretchy="false">¯</mo></mover></msup></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><msup><mi>𝐲</mi><mover accent="true"><mi>n</mi><mo stretchy="false">¯</mo></mover></msup></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd columnalign="center"><msub><mi>𝐅</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><msub><mi>𝐅</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In this way we can describe the relation between coordinates
+relative to the two frames in terms of ordinary matrix multiplication.
+To wit, we can write</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\begin{pmatrix}\mathbf{y}^{\bar{1}}\\
+\vdots\\
+\mathbf{y}^{\bar{n}}\end{pmatrix}=\begin{pmatrix}\mathcal{M}^{\bar{1}}_{1}&amp;%
+\ldots&amp;\mathcal{M}^{\bar{1}}_{n}\\
+\vdots&amp;\ddots&amp;\vdots\\
+\mathcal{M}^{\bar{n}}_{1}&amp;\ldots&amp;\mathcal{M}^{\bar{n}}_{n}\end{pmatrix}\begin{%
+pmatrix}\mathbf{x}^{1}\\
+\vdots\\
+\mathbf{x}^{n}\end{pmatrix}" display="block"><mrow><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msup><mi>𝐲</mi><mover accent="true"><mn>1</mn><mo stretchy="false">¯</mo></mover></msup></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><msup><mi>𝐲</mi><mover accent="true"><mi>n</mi><mo stretchy="false">¯</mo></mover></msup></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msubsup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mn>1</mn><mover accent="true"><mn>1</mn><mo stretchy="false">¯</mo></mover></msubsup></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><msubsup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mi>n</mi><mover accent="true"><mn>1</mn><mo stretchy="false">¯</mo></mover></msubsup></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋱</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><msubsup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mn>1</mn><mover accent="true"><mi>n</mi><mo stretchy="false">¯</mo></mover></msubsup></mtd><mtd columnalign="center"><mi mathvariant="normal">…</mi></mtd><mtd columnalign="center"><msubsup><mi class="ltx_font_mathcaligraphic">ℳ</mi><mi>n</mi><mover accent="true"><mi>n</mi><mo stretchy="false">¯</mo></mover></msubsup></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msup><mi>𝐱</mi><mn>1</mn></msup></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><msup><mi>𝐱</mi><mi>n</mi></msup></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px5" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Notes.</h2>
+
+<div id="S0.SS0.SSS0.Px5.p1" class="ltx_para">
+<p class="ltx_p">The term frame is often used to refer to objects that
+should properly be called a <span class="ltx_text ltx_font_italic">moving frame</span>. The latter can be
+thought of as a , or functions taking
+values in the space of all frames, and are fully described elsewhere.
+The confusion in terminology is unfortunate but quite common, and is
+related to the questionable practice of using the word <span class="ltx_text ltx_font_italic">scalar</span>
+when referring to a <span class="ltx_text ltx_font_italic">scalar field</span> (a.k.a. scalar-valued
+functions) and using the word <span class="ltx_text ltx_font_italic">vector</span> when referring to a <span class="ltx_text ltx_font_italic">vector field.</span></p>
+</div>
+<div id="S0.SS0.SSS0.Px5.p2" class="ltx_para">
+<p class="ltx_p">We also mention that in the world of theoretical physics, the
+preferred terminology seems to be <span class="ltx_text ltx_font_italic">polyad</span> and related
+specializations, rather than frame. Most commonly used are <span class="ltx_text ltx_font_italic">dyad</span>, for a frame of two elements, and <span class="ltx_text ltx_font_italic">tetrad</span> for a frame of
+four elements.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">frame</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Frame</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:39:42</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:39:42</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">13</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A03</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Vector2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TensorArray</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">BasicTensor</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">coframe</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">component</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">coordinate</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">transition matrix</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">polyad</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:18:44 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

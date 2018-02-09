@@ -1,0 +1,181 @@
+<!DOCTYPE html><html>
+<head>
+<title>diagonalization of quadratic form</title>
+<!--Generated on Fri Feb  9 18:18:18 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">diagonalization of quadratic form</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A quadratic form may be diagonalized by the following procedure:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Find a variable <math id="I1.i1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> such that <math id="I1.i1.p1.m2" class="ltx_Math" alttext="x^{2}" display="inline"><msup><mi>x</mi><mn>2</mn></msup></math> appears in the quadratic form. If no such variable can be found, perform a linear change of variable so as to create such a variable.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">By completing the square, define a new variable <math id="I1.i2.p1.m1" class="ltx_Math" alttext="x^{\prime}" display="inline"><msup><mi>x</mi><mo>′</mo></msup></math> such that there are no cross-terms involving <math id="I1.i2.p1.m2" class="ltx_Math" alttext="x^{\prime}" display="inline"><msup><mi>x</mi><mo>′</mo></msup></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Repeat the procedure with the remaining variables.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example</span>
+Suppose we have been asked to diagonalize the quadratic form
+</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="Q=x^{2}+xy-3xz-y^{2}/4+yz-9z^{2}/4" display="block"><mrow><mi>Q</mi><mo>=</mo><mrow><mrow><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>z</mi></mrow><mo>-</mo><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>/</mo><mn>4</mn></mrow></mrow><mo>+</mo><mrow><mi>y</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>-</mo><mrow><mrow><mn>9</mn><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo>/</mo><mn>4</mn></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">in three variables. We could proceed as follows:</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Since <math id="I2.i1.p1.m1" class="ltx_Math" alttext="x^{2}" display="inline"><msup><mi>x</mi><mn>2</mn></msup></math> appears, we do not need to perform a change of variables.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">We have the cross terms <math id="I2.i2.p1.m1" class="ltx_Math" alttext="xy" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></math> and <math id="I2.i2.p1.m2" class="ltx_Math" alttext="-3xz" display="inline"><mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>z</mi></mrow></mrow></math>. If we define <math id="I2.i2.p1.m3" class="ltx_Math" alttext="x^{\prime}=x+y/2-3z/2" display="inline"><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mrow><mrow><mi>x</mi><mo>+</mo><mrow><mi>y</mi><mo>/</mo><mn>2</mn></mrow></mrow><mo>-</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>z</mi></mrow><mo>/</mo><mn>2</mn></mrow></mrow></mrow></math>, then</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="{x^{\prime}}^{2}=x^{2}+xy-3xz+y^{2}/4+9z^{2}/4-3yz/2" display="block"><mrow><mmultiscripts><mi>x</mi><none></none><mo>′</mo><none></none><mn>2</mn></mmultiscripts><mo>=</mo><mrow><mrow><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>+</mo><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>/</mo><mn>4</mn></mrow><mo>+</mo><mrow><mrow><mn>9</mn><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo>/</mo><mn>4</mn></mrow></mrow><mo>-</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mi>z</mi></mrow><mo>/</mo><mn>2</mn></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence, we may re-express <math id="I2.i2.p1.m4" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> as</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="Q={x^{\prime}}^{2}-yz/2" display="block"><mrow><mi>Q</mi><mo>=</mo><mrow><mmultiscripts><mi>x</mi><none></none><mo>′</mo><none></none><mn>2</mn></mmultiscripts><mo>-</mo><mrow><mrow><mi>y</mi><mo>⁢</mo><mi>z</mi></mrow><mo>/</mo><mn>2</mn></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">We must now repeat the procedure with the remaining variables, <math id="I2.i3.p1.m1" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> and <math id="I2.i3.p1.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>. Since neither <math id="I2.i3.p1.m3" class="ltx_Math" alttext="y^{2}" display="inline"><msup><mi>y</mi><mn>2</mn></msup></math> nor <math id="I2.i3.p1.m4" class="ltx_Math" alttext="z^{2}" display="inline"><msup><mi>z</mi><mn>2</mn></msup></math> appears, we must make a change of variable. Let us define <math id="I2.i3.p1.m5" class="ltx_Math" alttext="z^{\prime}=z+2y" display="inline"><mrow><msup><mi>z</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>z</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></math>.</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="Q={x^{\prime}}^{2}-y^{2}-yz^{\prime}/2" display="block"><mrow><mi>Q</mi><mo>=</mo><mrow><mmultiscripts><mi>x</mi><none></none><mo>′</mo><none></none><mn>2</mn></mmultiscripts><mo>-</mo><msup><mi>y</mi><mn>2</mn></msup><mo>-</mo><mrow><mrow><mi>y</mi><mo>⁢</mo><msup><mi>z</mi><mo>′</mo></msup></mrow><mo>/</mo><mn>2</mn></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">We have a cross term <math id="I2.i4.p1.m1" class="ltx_Math" alttext="-yz^{\prime}/2" display="inline"><mrow><mo>-</mo><mrow><mrow><mi>y</mi><mo>⁢</mo><msup><mi>z</mi><mo>′</mo></msup></mrow><mo>/</mo><mn>2</mn></mrow></mrow></math>. To eliminate this term, make a change of variable <math id="I2.i4.p1.m2" class="ltx_Math" alttext="y^{\prime}=y+z^{\prime}/4" display="inline"><mrow><msup><mi>y</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>y</mi><mo>+</mo><mrow><msup><mi>z</mi><mo>′</mo></msup><mo>/</mo><mn>4</mn></mrow></mrow></mrow></math>. Then we have</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="{y^{\prime}}^{2}=y^{2}+yz^{\prime}/2+{z^{\prime}}^{2}/16" display="block"><mrow><mmultiscripts><mi>y</mi><none></none><mo>′</mo><none></none><mn>2</mn></mmultiscripts><mo>=</mo><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><mrow><mrow><mi>y</mi><mo>⁢</mo><msup><mi>z</mi><mo>′</mo></msup></mrow><mo>/</mo><mn>2</mn></mrow><mo>+</mo><mrow><mmultiscripts><mi>z</mi><none></none><mo>′</mo><none></none><mn>2</mn></mmultiscripts><mo>/</mo><mn>16</mn></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and hence</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="Q={x^{\prime}}^{2}-{y^{\prime}}^{2}+{z^{\prime}}^{2}/16" display="block"><mrow><mi>Q</mi><mo>=</mo><mrow><mrow><mmultiscripts><mi>x</mi><none></none><mo>′</mo><none></none><mn>2</mn></mmultiscripts><mo>-</mo><mmultiscripts><mi>y</mi><none></none><mo>′</mo><none></none><mn>2</mn></mmultiscripts></mrow><mo>+</mo><mrow><mmultiscripts><mi>z</mi><none></none><mo>′</mo><none></none><mn>2</mn></mmultiscripts><mo>/</mo><mn>16</mn></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The quadratic form is now diagonal, so we are done. We see that the form has rank 3 and signature 2.</p>
+</div>
+</li>
+</ul>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">diagonalization of quadratic form</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DiagonalizationOfQuadraticForm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:49:34</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:49:34</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A03</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">DiagonalQuadraticForm</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:18:18 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html><html>
+<head>
+<title>eigenvalue</title>
+<!--Generated on Fri Feb  9 18:25:31 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">eigenvalue</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> be a vector space over a field <math id="p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>, and let <math id="p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be an
+endomorphism of <math id="p1.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> (meaning a linear mapping of <math id="p1.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> into itself).
+A scalar <math id="p1.m6" class="ltx_Math" alttext="\lambda\in k" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>k</mi></mrow></math> is said to be an
+<em class="ltx_emph ltx_font_italic">eigenvalue</em> of <math id="p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> if there is a nonzero <math id="p1.m8" class="ltx_Math" alttext="x\in V" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow></math> for which</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="Ax=\lambda x\;." display="block"><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Geometrically, one thinks of a vector whose direction is unchanged
+by the action of <math id="p1.m9" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, but whose magnitude is multiplied by <math id="p1.m10" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">If <math id="p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is finite dimensional, elementary linear algebra shows that
+there are several equivalent definitions of an eigenvalue:</p>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">(2) The linear mapping</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="B=\lambda I-A" display="block"><mrow><mi>B</mi><mo>=</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mi>A</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">i.e. <math id="p3.m1" class="ltx_Math" alttext="B:x\mapsto\lambda x-Ax" display="inline"><mrow><mi>B</mi><mo>:</mo><mrow><mi>x</mi><mo>↦</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mi>A</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mrow></math>, has no inverse.</p>
+</div>
+<div id="p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">(3) <math id="p4.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is not injective.</p>
+</div>
+<div id="p5" class="ltx_para ltx_noindent">
+<p class="ltx_p">(4) <math id="p5.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is not surjective.</p>
+</div>
+<div id="p6" class="ltx_para ltx_noindent">
+<p class="ltx_p">(5) <math id="p6.m1" class="ltx_Math" alttext="\det(B)=0" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, i.e. <math id="p6.m2" class="ltx_Math" alttext="\det(\lambda I-A)=0" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">But if <math id="p7.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is of infinite dimension, (5) has no meaning and the
+conditions (2) and (4) are not equivalent to (1).
+A scalar <math id="p7.m2" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> satisfying (2) (called a <em class="ltx_emph ltx_font_italic">spectral value</em> of
+<math id="p7.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>) need not be an eigenvalue. Consider for example the complex
+vector space <math id="p7.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> of all sequences <math id="p7.m5" class="ltx_Math" alttext="(x_{n})_{n=1}^{\infty}" display="inline"><msubsup><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup></math> of complex
+numbers with the obvious operations, and the map <math id="p7.m6" class="ltx_Math" alttext="A:V\to V" display="inline"><mrow><mi>A</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>V</mi></mrow></mrow></math> given by</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="A(x_{1},x_{2},x_{3},\dots)=(0,x_{1},x_{2},x_{3},\dots)\;." display="block"><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Zero is a spectral value of <math id="p7.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, but clearly not an eigenvalue.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Now suppose again that <math id="p8.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is of finite dimension, say <math id="p8.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.
+The function</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\chi(\lambda)=\det(B)" display="block"><mrow><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is a polynomial of degree <math id="p8.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> over <math id="p8.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> in the
+variable <math id="p8.m5" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math>, called the <em class="ltx_emph ltx_font_italic">characteristic polynomial</em> of the
+endomorphism <math id="p8.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. (Note that some writers define the characteristic
+polynomial as <math id="p8.m7" class="ltx_Math" alttext="\det(A-\lambda I)" display="inline"><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> rather than <math id="p8.m8" class="ltx_Math" alttext="\det(\lambda I-A)" display="inline"><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, but the
+two have the same zeros.)</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">If <math id="p9.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is <math id="p9.m2" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> or any other algebraically closed field, or if <math id="p9.m3" class="ltx_Math" alttext="k=\mathbb{R}" display="inline"><mrow><mi>k</mi><mo>=</mo><mi>ℝ</mi></mrow></math>
+and <math id="p9.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is odd, then <math id="p9.m5" class="ltx_Math" alttext="\chi" display="inline"><mi>χ</mi></math> has at least one zero, meaning that <math id="p9.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>
+has at least one eigenvalue. In no case does <math id="p9.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> have more than <math id="p9.m8" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>
+eigenvalues.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">Although we didn’t need to do so here, one can compute the coefficients
+of <math id="p10.m1" class="ltx_Math" alttext="\chi" display="inline"><mi>χ</mi></math> by introducing a basis of <math id="p10.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> and the corresponding matrix for
+<math id="p10.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. Unfortunately, computing <math id="p10.m4" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> determinants and finding roots
+of polynomials of degree <math id="p10.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> are computationally messy procedures
+for even moderately large <math id="p10.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, so for most practical purposes
+variations on this naive scheme are needed. See the eigenvalue
+problem for more information.</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">If <math id="p11.m1" class="ltx_Math" alttext="k=\mathbb{C}" display="inline"><mrow><mi>k</mi><mo>=</mo><mi>ℂ</mi></mrow></math> but the coefficients of <math id="p11.m2" class="ltx_Math" alttext="\chi" display="inline"><mi>χ</mi></math> are real (and in particular if
+<math id="p11.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> has a basis for which the matrix of <math id="p11.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> has only real entries), then
+the non-real eigenvalues of <math id="p11.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> appear in conjugate pairs. For example,
+if <math id="p11.m6" class="ltx_Math" alttext="n=2" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow></math> and, for some basis, <math id="p11.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> has the matrix</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="A=\begin{pmatrix}0&amp;-1\\
+1&amp;0\end{pmatrix}" display="block"><mrow><mi>A</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then <math id="p11.m8" class="ltx_Math" alttext="\chi(\lambda)=\lambda^{2}+1" display="inline"><mrow><mrow><mi>χ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mrow></math>, with the two zeros <math id="p11.m9" class="ltx_Math" alttext="\pm i" display="inline"><mrow><mo>±</mo><mi>i</mi></mrow></math>.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">Eigenvalues are of relatively little importance in connection with
+an infinite-dimensional vector space, unless that space is endowed with
+some additional structure, typically that of a Banach space or Hilbert space. But in those cases the notion is of great value in
+physics, engineering, and mathematics proper. Look for “spectral theory”
+for more on that subject.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">eigenvalue</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Eigenvalue</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:11:52</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:11:52</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Koro (127)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Koro (127)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">15</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Koro (127)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A18</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">EigenvalueProblem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SimilarMatrix</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Eigenvector</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SingularValueDecomposition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">eigenvalue</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">spectral value</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:25:31 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

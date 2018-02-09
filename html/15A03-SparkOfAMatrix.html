@@ -1,0 +1,143 @@
+<!DOCTYPE html><html>
+<head>
+<title>spark of a matrix</title>
+<!--Generated on Fri Feb  9 18:20:21 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">spark of a matrix</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="\mathbb{F}" display="inline"><mi>𝔽</mi></math> be a field, and let <math id="p1.m2" class="ltx_Math" alttext="m,n\in\mathbb{N}\setminus\{0\}." display="inline"><mrow><mrow><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow><mo>∈</mo><mrow><mi>ℕ</mi><mo>∖</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math> Consider an <math id="p1.m3" class="ltx_Math" alttext="m\times n" display="inline"><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></math> matrix <math id="p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> whose entries belong to <math id="p1.m5" class="ltx_Math" alttext="\mathbb{F}." display="inline"><mrow><mi>𝔽</mi><mo>.</mo></mrow></math> Let <math id="p1.m6" class="ltx_Math" alttext="\displaystyle C_{1},\ldots,C_{n}\in\mathbb{F}^{m}" display="inline"><mrow><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>C</mi><mi>n</mi></msub></mrow><mo>∈</mo><msup><mi>𝔽</mi><mi>m</mi></msup></mrow></math> be the columns of <math id="p1.m7" class="ltx_Math" alttext="A." display="inline"><mrow><mi>A</mi><mo>.</mo></mrow></math></p>
+</div>
+<div id="Thmdefi1" class="ltx_theorem ltx_theorem_defi">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Definition 1</span></h6>
+<div id="Thmdefi1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The spark of the matrix <math id="Thmdefi1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is defined to be the infimum of the set of all positive integers <math id="Thmdefi1.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> with the property that</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\exists\,j_{1},\ldots,j_{k}\in\{1,\ldots,n\}:\,\left\{\begin{array}[]{l}j_{1}&lt;%
+\ldots&lt;j_{k},\\
+$\displaystyle C_{j_{1}}, \ldots, C_{j_{k}}$arelinearlydependent(over$\mathbb{%
+F}$).\end{array}\right." display="block"><mrow><mrow><mrow><mrow><mo rspace="4.2pt">∃</mo><msub><mi>j</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>j</mi><mi>k</mi></msub></mrow><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></mrow><mo rspace="4.2pt">:</mo><mrow><mo>{</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><msub><mi>j</mi><mn>1</mn></msub><mo>&lt;</mo><mi mathvariant="normal">…</mi><mo>&lt;</mo><msub><mi>j</mi><mi>k</mi></msub></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><msub><mtext>𝐶</mtext><msub><mtext>𝑗</mtext><mtext mathvariant="italic">1</mtext></msub></msub><mo>⁢</mo><msub><mtext mathvariant="italic">, …, C</mtext><msub><mtext>𝑗</mtext><mtext>𝑘</mtext></msub></msub><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>o</mi><mo>⁢</mo><mi>v</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mtext>𝔽</mtext></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable><mi></mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The notion of spark of a matrix was introduced by Donoho and Elad in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>. It is strictly related to Compressed Sensing. The word “spark” comes from a verbal fusion of “sparse” and “rank”.</p>
+</div>
+<div id="Thmdefi2" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Remark 2</span></h6>
+<div id="Thmdefi2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The following properties hold true:
+<br class="ltx_break">
+<span class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<span class="ltx_thead">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_th_row">(i)</span>
+<span class="ltx_td ltx_align_left ltx_th ltx_th_column"><math id="Thmdefi2.p1.m1" class="ltx_Math" alttext="{\rm spark}(A)\in\{1,\ldots,n\}\cup\{+\infty\}," display="inline"><mrow><mrow><mrow><mi mathvariant="normal">spark</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>A</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">∈</mo><mrow><mrow><mo mathvariant="normal" stretchy="false">{</mo><mn mathvariant="normal">1</mn><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><mi>n</mi><mo mathvariant="normal" stretchy="false">}</mo></mrow><mo mathvariant="normal">∪</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><mrow><mo mathvariant="normal">+</mo><mi mathvariant="normal">∞</mi></mrow><mo mathvariant="normal" stretchy="false">}</mo></mrow></mrow></mrow><mo mathvariant="normal">,</mo></mrow></math></span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_center ltx_th ltx_th_column ltx_th_row">(ii)</span>
+<span class="ltx_td ltx_align_left ltx_th ltx_th_column"><math id="Thmdefi2.p1.m2" class="ltx_Math" alttext="{\rm spark}(A)=+\infty\,\Leftrightarrow\,{\rm rank}(A)=n," display="inline"><mrow><mrow><mrow><mrow><mi mathvariant="normal">spark</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>A</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal">+</mo><mpadded width="+1.7pt"><mi mathvariant="normal">∞</mi></mpadded></mrow></mrow><mo mathvariant="normal" rspace="4.2pt">⇔</mo><mrow><mrow><mi mathvariant="normal">rank</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>A</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mi>n</mi></mrow></mrow><mo mathvariant="normal">,</mo></mrow></math></span></span>
+</span>
+<span class="ltx_tbody">
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_center ltx_th ltx_th_row">(iii)</span>
+<span class="ltx_td ltx_align_left"><math id="Thmdefi2.p1.m3" class="ltx_Math" alttext="{\rm spark}(A)=1" display="inline"><mrow><mrow><mi mathvariant="normal">spark</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>A</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">1</mn></mrow></math> if and only if the matrix <math id="Thmdefi2.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> has a zero column,</span></span>
+<span class="ltx_tr">
+<span class="ltx_td ltx_align_center ltx_th ltx_th_row">(iv)</span>
+<span class="ltx_td ltx_align_left">if <math id="Thmdefi2.p1.m5" class="ltx_Math" alttext="{\rm spark}(A)\neq+\infty," display="inline"><mrow><mrow><mrow><mi mathvariant="normal">spark</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>A</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">≠</mo><mrow><mo mathvariant="normal">+</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mo mathvariant="normal">,</mo></mrow></math> then <math id="Thmdefi2.p1.m6" class="ltx_Math" alttext="{\rm spark}(A)\leq{\rm rank}(A)+1." display="inline"><mrow><mrow><mrow><mi mathvariant="normal">spark</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>A</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">≤</mo><mrow><mrow><mi mathvariant="normal">rank</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>A</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">+</mo><mn mathvariant="normal">1</mn></mrow></mrow><mo mathvariant="normal">.</mo></mrow></math></span></span>
+</span>
+</span>
+<br class="ltx_break">Moreover, <math id="Thmdefi2.p1.m7" class="ltx_Math" alttext="{\rm spark}(A)" display="inline"><mrow><mi mathvariant="normal">spark</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>A</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> coincides with the infimum of the set <math id="Thmdefi2.p1.m8" class="ltx_Math" alttext="\displaystyle\left\{\left\|x\right\|_{0}:\,x\in\mathbb{F}^{n}\setminus\{{\bf 0%
+}\},\,Ax={\bf 0}\right\}" display="inline"><mrow><mo mathvariant="normal">{</mo><msub><mrow><mo mathvariant="normal">∥</mo><mi>x</mi><mo mathvariant="normal">∥</mo></mrow><mn mathvariant="normal">0</mn></msub><mo mathvariant="normal" rspace="4.2pt">:</mo><mrow><mrow><mi>x</mi><mo mathvariant="normal">∈</mo><mrow><msup><mi mathvariant="normal">F</mi><mi>n</mi></msup><mo mathvariant="normal">∖</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><mn mathvariant="normal">0</mn><mo mathvariant="normal" stretchy="false">}</mo></mrow></mrow></mrow><mo mathvariant="normal" rspace="4.2pt">,</mo><mrow><mrow><mi>A</mi><mo mathvariant="italic">⁢</mo><mi>x</mi></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">0</mn></mrow></mrow><mo mathvariant="normal">}</mo></mrow></math>, where <math id="Thmdefi2.p1.m9" class="ltx_Math" alttext="\displaystyle\left\|x\right\|_{0}" display="inline"><msub><mrow><mo mathvariant="normal">∥</mo><mi>x</mi><mo mathvariant="normal">∥</mo></mrow><mn mathvariant="normal">0</mn></msub></math> is the Hamming weight of <math id="Thmdefi2.p1.m10" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="Thmdefi2.p1.m11" class="ltx_Math" alttext="{\bf 0}" display="inline"><mn mathvariant="normal">0</mn></math> stands for the appropriate zero vectors.</span></p>
+</div>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+D. L. Donoho and M. Elad, Optimally sparse representation in general (nonorthogonal) dictionaries via <math id="bib.bib1.m1" class="ltx_Math" alttext="\ell^{1}" display="inline"><msup><mi mathvariant="normal">ℓ</mi><mn>1</mn></msup></math> minimization, <span class="ltx_text ltx_font_italic">Proc. Natl. Acad. Sci. USA</span> <span class="ltx_text ltx_font_bold">100</span>, No. 5: 2197 – 2202 (2003).
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">spark of a matrix</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SparkOfAMatrix</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:36:23</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:36:23</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">kammerer (26336)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">kammerer (26336)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">21</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">kammerer (26336)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A03</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">RankOfAMatrix</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:20:21 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

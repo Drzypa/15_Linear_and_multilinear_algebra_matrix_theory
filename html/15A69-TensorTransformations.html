@@ -1,0 +1,262 @@
+<!DOCTYPE html><html>
+<head>
+<title>tensor transformations</title>
+<!--Generated on Fri Feb  9 18:31:46 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">tensor transformations</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The present entry employs the terminology and notation defined
+and described in the entry on tensor arrays and basic tensors. To keep things
+reasonably self contained we mention that the symbol <math id="p1.m1" class="ltx_Math" alttext="\mathrm{T}^{p,q}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></msup></math> refers
+to the vector space of type <math id="p1.m2" class="ltx_Math" alttext="(p,q)" display="inline"><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></math> tensor arrays, i.e. maps</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="I^{p}\times I^{q}\rightarrow\mathbb{K}," display="block"><mrow><mrow><mrow><msup><mi>I</mi><mi>p</mi></msup><mo>×</mo><msup><mi>I</mi><mi>q</mi></msup></mrow><mo>→</mo><mi>𝕂</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p1.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is some finite list of
+index labels, and where <math id="p1.m4" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math> is a field. The symbols <math id="p1.m5" class="ltx_Math" alttext="\varepsilon_{(i)},\varepsilon^{(i)},\;i\in I" display="inline"><mrow><mrow><msub><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msub><mo>,</mo><msup><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo rspace="5.3pt">,</mo><mi>i</mi></mrow><mo>∈</mo><mi>I</mi></mrow></math> refer to the column and row vectors giving the
+natural basis of <math id="p1.m6" class="ltx_Math" alttext="\mathrm{T}^{1,0}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mn>1</mn><mo>,</mo><mn>0</mn></mrow></msup></math> and <math id="p1.m7" class="ltx_Math" alttext="\mathrm{T}^{0,1}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow></msup></math>, respectively.
+</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> and <math id="p2.m2" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> be two finite lists of equal cardinality, and let</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="T:\mathbb{K}^{I}\rightarrow\mathbb{K}^{J}" display="block"><mrow><mi>T</mi><mo>:</mo><mrow><msup><mi>𝕂</mi><mi>I</mi></msup><mo>→</mo><msup><mi>𝕂</mi><mi>J</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">be a linear isomorphism. Every
+such isomorphism is uniquely represented by an invertible matrix</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="M:J\times I\rightarrow\mathbb{K}" display="block"><mrow><mi>M</mi><mo>:</mo><mrow><mrow><mi>J</mi><mo>×</mo><mi>I</mi></mrow><mo>→</mo><mi>𝕂</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with entries given by</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="M^{j}_{\!\hphantom{j}i}=\left(T\varepsilon_{(i)}\right)^{j},\quad i\in I,\;j%
+\in J." display="block"><mrow><mrow><mrow><msubsup><mi>M</mi><mpadded lspace="3.5pt" width="+3.5pt"><mi>i</mi></mpadded><mi>j</mi></msubsup><mo>=</mo><msup><mrow><mo>(</mo><mrow><mi>T</mi><mo>⁢</mo><msub><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msub></mrow><mo>)</mo></mrow><mi>j</mi></msup></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow><mo rspace="5.3pt">,</mo><mrow><mi>j</mi><mo>∈</mo><mi>J</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In other words, the
+action of <math id="p2.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is described by the following substitutions</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\varepsilon_{(i)}\mapsto\sum_{j\in J}M^{j}_{\!\hphantom{j}i}\,\varepsilon_{(j)%
+},\quad i\in I." display="block"><mrow><mrow><mrow><msub><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msub><mo>↦</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>∈</mo><mi>J</mi></mrow></munder><mrow><mpadded width="+1.7pt"><msubsup><mi>M</mi><mpadded lspace="3.5pt" width="+3.5pt"><mi>i</mi></mpadded><mi>j</mi></msubsup></mpadded><mo>⁢</mo><msub><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></msub></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Equivalently, the action of <math id="p2.m4" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is given by matrix-multiplication
+of column vectors in <math id="p2.m5" class="ltx_Math" alttext="\mathbb{K}^{I}" display="inline"><msup><mi>𝕂</mi><mi>I</mi></msup></math> by <math id="p2.m6" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The corresponding substitutions relations for the type <math id="p3.m1" class="ltx_Math" alttext="(0,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> tensors
+involve the inverse matrix <math id="p3.m2" class="ltx_Math" alttext="M^{-1}:I\times J\rightarrow\mathbb{K}," display="inline"><mrow><mrow><msup><mi>M</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>:</mo><mrow><mrow><mi>I</mi><mo>×</mo><mi>J</mi></mrow><mo>→</mo><mi>𝕂</mi></mrow></mrow><mo>,</mo></mrow></math> and
+take the form<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>The above relations describe the action of the dual homomorphism of the
+inverse transformation
+
+<span id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<span class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<span class="ltx_eqn_cell ltx_eqn_center_padleft"></span>
+<span class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\left(T^{-1}\right)^{*}:\left(\mathbb{K}^{I}\right)^{*}\rightarrow\left(%
+\mathbb{K}^{J}\right)^{*}." display="block"><mrow><mrow><msup><mrow><mo>(</mo><msup><mi>T</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>)</mo></mrow><mo>*</mo></msup><mo>:</mo><mrow><msup><mrow><mo>(</mo><msup><mi>𝕂</mi><mi>I</mi></msup><mo>)</mo></mrow><mo>*</mo></msup><mo>→</mo><msup><mrow><mo>(</mo><msup><mi>𝕂</mi><mi>J</mi></msup><mo>)</mo></mrow><mo>*</mo></msup></mrow></mrow><mo>.</mo></mrow></math></span>
+<span class="ltx_eqn_cell ltx_eqn_center_padright"></span></span>
+</span></span></span></span></p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="\varepsilon^{(i)}\mapsto\sum_{j\in J}\left(M^{-1}\right)^{i}_{\!\hphantom{i}j}%
+\,\varepsilon^{(j)},\quad i\in I." display="block"><mrow><mrow><mrow><msup><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo>↦</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>∈</mo><mi>J</mi></mrow></munder><mrow><mpadded width="+1.7pt"><msubsup><mrow><mo>(</mo><msup><mi>M</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>)</mo></mrow><mpadded lspace="3.5pt" width="+3.5pt"><mi>j</mi></mpadded><mi>i</mi></msubsup></mpadded><mo>⁢</mo><msup><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The rules for type <math id="p4.m1" class="ltx_Math" alttext="(0,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> substitutions are what they are, because of
+the requirement that the <math id="p4.m2" class="ltx_Math" alttext="\varepsilon_{(i)}" display="inline"><msub><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msub></math> and <math id="p4.m3" class="ltx_Math" alttext="\varepsilon^{(i)}" display="inline"><msup><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup></math> remain dual bases
+even after the substitution. In other words we want the substitutions
+to preserve the relations</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\varepsilon^{(i_{1})}\varepsilon_{(i_{2})}=\delta^{\,i_{1}}_{\;i_{2}},\quad i_%
+{1},i_{2}\in I," display="block"><mrow><mrow><mrow><mrow><msup><mi>ε</mi><mrow><mo stretchy="false">(</mo><msub><mi>i</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><msub><mi>ε</mi><mrow><mo stretchy="false">(</mo><msub><mi>i</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></msub></mrow><mo>=</mo><mrow><msubsup><mi>δ</mi><msub><mpadded lspace="2.8pt" width="+2.8pt"><mi>i</mi></mpadded><mn>2</mn></msub><msub><mpadded lspace="1.7pt" width="+1.7pt"><mi>i</mi></mpadded><mn>1</mn></msub></msubsup><mo rspace="12.5pt">,</mo><msub><mi>i</mi><mn>1</mn></msub></mrow></mrow><mo>,</mo><mrow><msub><mi>i</mi><mn>2</mn></msub><mo>∈</mo><mi>I</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the left-hand side of the above equation features the inner
+product and the right-hand side the Kronecker delta. Given that the
+vector basis transforms as in (<a href="#S0.E1" title="(1) ‣ tensor transformations" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) and given the above
+constraint, the substitution rules for the linear form basis, shown in
+(<a href="#S0.E2" title="(2) ‣ tensor transformations" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>), are the only such possible.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">The classical terminology of contravariant and covariant indices is
+motivated by thinking in term of substitutions. Thus, suppose we
+perform a linear substitution and change a vector, i.e. a type <math id="p5.m1" class="ltx_Math" alttext="(1,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>
+tensor, <math id="p5.m2" class="ltx_Math" alttext="X\in\mathbb{K}^{I}" display="inline"><mrow><mi>X</mi><mo>∈</mo><msup><mi>𝕂</mi><mi>I</mi></msup></mrow></math> into a vector <math id="p5.m3" class="ltx_Math" alttext="Y\in\mathbb{K}^{J}" display="inline"><mrow><mi>Y</mi><mo>∈</mo><msup><mi>𝕂</mi><mi>J</mi></msup></mrow></math>. The indexed
+values of the former and of the latter are related by</p>
+<table id="S0.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E3.m1" class="ltx_Math" alttext="Y^{j}=\sum_{i\in I}M^{j}_{\!\hphantom{j}i}\,X^{i},\quad j\in J." display="block"><mrow><mrow><mrow><msup><mi>Y</mi><mi>j</mi></msup><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></munder><mrow><mpadded width="+1.7pt"><msubsup><mi>M</mi><mpadded lspace="3.5pt" width="+3.5pt"><mi>i</mi></mpadded><mi>j</mi></msubsup></mpadded><mo>⁢</mo><msup><mi>X</mi><mi>i</mi></msup></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>j</mi><mo>∈</mo><mi>J</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, we see
+that the “transformation rule” for indices is contravariant to the
+substitution rule (<a href="#S0.E1" title="(1) ‣ tensor transformations" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) for basis vectors.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">In modern terms, this contravariance is best described by saying that
+the dual space space construction is a contravariant functor<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>See the entry on the dual homomorphism.</span></span></span>. In other
+words, the substitution rule for the linear forms, i.e. the type
+<math id="p6.m1" class="ltx_Math" alttext="(0,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> tensors, is contravariant to the substitution rule for
+vectors:</p>
+<table id="S0.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E4.m1" class="ltx_Math" alttext="\varepsilon^{(j)}\mapsto\sum_{i\in I}M^{j}_{\!\hphantom{j}i}\,\varepsilon^{(i)%
+},\quad j\in J," display="block"><mrow><mrow><mrow><msup><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></msup><mo>↦</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></munder><mrow><mpadded width="+1.7pt"><msubsup><mi>M</mi><mpadded lspace="3.5pt" width="+3.5pt"><mi>i</mi></mpadded><mi>j</mi></msubsup></mpadded><mo>⁢</mo><msup><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>j</mi><mo>∈</mo><mi>J</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr>
+</table>
+<p class="ltx_p">in full agreement with the relation shown in (<a href="#S0.E2" title="(2) ‣ tensor transformations" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>).
+Everything comes together, and equations (<a href="#S0.E3" title="(3) ‣ tensor transformations" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) and
+(<a href="#S0.E4" title="(4) ‣ tensor transformations" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>) are seen to be one and the same, once we remark
+that tensor array values can be obtained by contracting with
+characteristic arrays. For example,</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="X^{i}=\varepsilon^{(i)}(X),\quad i\in I;\qquad Y^{j}=\varepsilon^{(j)}(Y),%
+\quad j\in J." display="block"><mrow><mrow><mrow><msup><mi>X</mi><mi>i</mi></msup><mo>=</mo><mrow><msup><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow><mo rspace="22.5pt">;</mo><mrow><mrow><msup><mi>Y</mi><mi>j</mi></msup><mo>=</mo><mrow><msup><mi>ε</mi><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>j</mi><mo>∈</mo><mi>J</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Finally we must remark that the transformation rule for covariant
+indices involves the inverse matrix <math id="p7.m1" class="ltx_Math" alttext="M^{-1}" display="inline"><msup><mi>M</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math>. Thus if <math id="p7.m2" class="ltx_Math" alttext="\alpha\in\mathrm{T}^{0,1}(I)" display="inline"><mrow><mi>α</mi><mo>∈</mo><mrow><msup><mi mathvariant="normal">T</mi><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is transformed to a <math id="p7.m3" class="ltx_Math" alttext="\beta\in\mathrm{T}^{0,1}" display="inline"><mrow><mi>β</mi><mo>∈</mo><msup><mi mathvariant="normal">T</mi><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow></msup></mrow></math> the
+indices will be related by</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\beta_{j}=\sum_{i\in I}\left(M^{-1}\right)^{i}_{\!\hphantom{i}j}\,\alpha_{i},%
+\quad j\in J." display="block"><mrow><mrow><mrow><msub><mi>β</mi><mi>j</mi></msub><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></munder><mrow><mpadded width="+1.7pt"><msubsup><mrow><mo>(</mo><msup><mi>M</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>)</mo></mrow><mpadded lspace="3.5pt" width="+3.5pt"><mi>j</mi></mpadded><mi>i</mi></msubsup></mpadded><mo>⁢</mo><msub><mi>α</mi><mi>i</mi></msub></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>j</mi><mo>∈</mo><mi>J</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The most general transformation rule for tensor array indices is
+therefore the following: the indexed values of a tensor array <math id="p7.m4" class="ltx_Math" alttext="X\in\mathrm{T}^{p,q}(I)" display="inline"><mrow><mi>X</mi><mo>∈</mo><mrow><msup><mi mathvariant="normal">T</mi><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and the values of the transformed tensor array
+<math id="p7.m5" class="ltx_Math" alttext="Y\in\mathrm{T}^{p,q}(J)" display="inline"><mrow><mi>Y</mi><mo>∈</mo><mrow><msup><mi mathvariant="normal">T</mi><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>J</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> are related by</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="Y^{\!j_{1}\ldots j_{p}}_{\;l_{1}\ldots l_{q}}=\!\!\sum_{\genfrac{}{}{0.0pt}{}{%
+i_{1},\ldots,i_{p}\in I^{p}}{k_{1},\ldots,k_{q}\in I^{q}}}\!\!M^{j_{1}}_{\,i_{%
+1}}\cdot\cdot\cdot M^{j_{p}}_{\,i_{p}}\left(M^{-1}\right)^{\!k_{1}}_{l_{1}}%
+\cdot\cdot\cdot\left(M^{-1}\right)^{\!k_{q}}_{l_{q}}X^{i_{1}\ldots i_{p}}_{k_{%
+1}\ldots k_{q}}," display="block"><mrow><mrow><msubsup><mi>Y</mi><mrow><msub><mpadded lspace="2.8pt" width="+2.8pt"><mi>l</mi></mpadded><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>l</mi><mi>q</mi></msub></mrow><mrow><msub><mpadded lspace="-1.7pt" width="-1.7pt"><mi>j</mi></mpadded><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>j</mi><mi>p</mi></msub></mrow></msubsup><mo rspace="0pt">=</mo><mrow><mpadded width="-3.3pt"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mfrac linethickness="0.0pt"><mrow><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>i</mi><mi>p</mi></msub></mrow><mo>∈</mo><msup><mi>I</mi><mi>p</mi></msup></mrow><mrow><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>k</mi><mi>q</mi></msub></mrow><mo>∈</mo><msup><mi>I</mi><mi>q</mi></msup></mrow></mfrac></munder></mpadded><mrow><msubsup><mi>M</mi><msub><mpadded lspace="1.7pt" width="+1.7pt"><mi>i</mi></mpadded><mn>1</mn></msub><msub><mi>j</mi><mn>1</mn></msub></msubsup><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msubsup><mi>M</mi><msub><mpadded lspace="1.7pt" width="+1.7pt"><mi>i</mi></mpadded><mi>p</mi></msub><msub><mi>j</mi><mi>p</mi></msub></msubsup><mo>⁢</mo><msubsup><mrow><mo>(</mo><msup><mi>M</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>)</mo></mrow><msub><mi>l</mi><mn>1</mn></msub><msub><mpadded lspace="-1.7pt" width="-1.7pt"><mi>k</mi></mpadded><mn>1</mn></msub></msubsup><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msubsup><mrow><mo>(</mo><msup><mi>M</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>)</mo></mrow><msub><mi>l</mi><mi>q</mi></msub><msub><mpadded lspace="-1.7pt" width="-1.7pt"><mi>k</mi></mpadded><mi>q</mi></msub></msubsup><mo>⁢</mo><msubsup><mi>X</mi><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>k</mi><mi>q</mi></msub></mrow><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>i</mi><mi>p</mi></msub></mrow></msubsup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all possible choice of indices
+<math id="p7.m6" class="ltx_Math" alttext="\quad j_{1},\ldots j_{p},l_{1},\ldots,l_{q}\in J." display="inline"><mrow><mrow><mrow><msub><mpadded lspace="10pt" width="+10pt"><mi>j</mi></mpadded><mn>1</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>j</mi><mi>p</mi></msub></mrow><mo>,</mo><msub><mi>l</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>l</mi><mi>q</mi></msub></mrow><mo>∈</mo><mi>J</mi></mrow><mo>.</mo></mrow></math>
+Debauche of indices, indeed!
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">tensor transformations</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TensorTransformations</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:40:33</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:40:33</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 15A69</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:31:46 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

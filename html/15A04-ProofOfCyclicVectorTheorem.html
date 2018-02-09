@@ -1,0 +1,235 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of cyclic vector theorem</title>
+<!--Generated on Fri Feb  9 18:22:05 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of cyclic vector theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">First, let’s assume <math id="p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> has a cyclic vector <math id="p1.m2" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>. Then <math id="p1.m3" class="ltx_Math" alttext="B=\{v,f(v),...,f^{n-1}(v)\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>v</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msup><mi>f</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math> is a basis for <math id="p1.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Suppose <math id="p1.m5" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is a linear transformation which commutes with <math id="p1.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. Consider the coordinates <math id="p1.m7" class="ltx_Math" alttext="(\alpha_{0},...,\alpha_{n-1})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>0</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>α</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></math> of <math id="p1.m8" class="ltx_Math" alttext="g(v)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></math> in B, that is</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="g(v)=\sum_{i=0}^{n-1}\alpha_{i}f^{i}(v)." display="block"><mrow><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><msub><mi>α</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>f</mi><mi>i</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="P=\sum_{i=0}^{n-1}\alpha_{i}X^{i}\in k[X]." display="block"><mrow><mrow><mi>P</mi><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><msub><mi>α</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>X</mi><mi>i</mi></msup></mrow></mrow><mo>∈</mo><mrow><mi>k</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We show that <math id="p1.m9" class="ltx_Math" alttext="g=P(f)" display="inline"><mrow><mi>g</mi><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+For <math id="p1.m10" class="ltx_Math" alttext="w\in V" display="inline"><mrow><mi>w</mi><mo>∈</mo><mi>V</mi></mrow></math>, write</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="w=\sum_{j=0}^{n-1}\beta_{j}f^{j}(v)," display="block"><mrow><mrow><mi>w</mi><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><msub><mi>β</mi><mi>j</mi></msub><mo>⁢</mo><msup><mi>f</mi><mi>j</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle g(w)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle\sum_{j=0}^{n-1}\beta_{j}g(f^{j}(v))=\sum_{j=0}^{n-1}\beta_{j}f^{%
+j}(g(v))" display="inline"><mrow><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover></mstyle><mrow><msub><mi>β</mi><mi>j</mi></msub><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>f</mi><mi>j</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover></mstyle><mrow><msub><mi>β</mi><mi>j</mi></msub><mo>⁢</mo><msup><mi>f</mi><mi>j</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle\sum_{j=0}^{n-1}\beta_{j}f^{j}(\sum_{i=0}^{n-1}\alpha_{i}f^{i}(v)%
+)=\sum_{j=0}^{n-1}\beta_{j}\sum_{i=0}^{n-1}\alpha_{i}f^{j+i}(v)=\sum_{j=0}^{n-%
+1}\sum_{i=0}^{n-1}\beta_{j}\alpha_{i}f^{j+i}(v)" display="inline"><mrow><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover></mstyle><mrow><msub><mi>β</mi><mi>j</mi></msub><mo>⁢</mo><msup><mi>f</mi><mi>j</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover></mstyle><mrow><msub><mi>α</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>f</mi><mi>i</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover></mstyle><mrow><msub><mi>β</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover></mstyle><mrow><msub><mi>α</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>f</mi><mrow><mi>j</mi><mo>+</mo><mi>i</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover></mstyle><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover></mstyle><mrow><msub><mi>β</mi><mi>j</mi></msub><mo>⁢</mo><msub><mi>α</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>f</mi><mrow><mi>j</mi><mo>+</mo><mi>i</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle\sum_{i=0}^{n-1}\sum_{j=0}^{n-1}\beta_{j}\alpha_{i}f^{j+i}(v)=%
+\sum_{i=0}^{n-1}\alpha_{i}f^{i}(\sum_{j=0}^{n-1}\beta_{j}f^{j}(v))=\sum_{i=0}^%
+{n-1}\alpha_{i}f^{i}(w)" display="inline"><mrow><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover></mstyle><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover></mstyle><mrow><msub><mi>β</mi><mi>j</mi></msub><mo>⁢</mo><msub><mi>α</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>f</mi><mrow><mi>j</mi><mo>+</mo><mi>i</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover></mstyle><mrow><msub><mi>α</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>f</mi><mi>i</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover></mstyle><mrow><msub><mi>β</mi><mi>j</mi></msub><mo>⁢</mo><msup><mi>f</mi><mi>j</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></munderover></mstyle><mrow><msub><mi>α</mi><mi>i</mi></msub><mo>⁢</mo><msup><mi>f</mi><mi>i</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Now, to finish the proof, suppose <math id="p2.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> doesn’t have a cyclic vector (we want to see that there is a linear transformation <math id="p2.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> which commutes with <math id="p2.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> but is not a polynomial evaluated in <math id="p2.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>). As <math id="p2.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> doesn’t have a cyclic vector, then due to the cyclic decomposition theorem <math id="p2.m6" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> has a basis of the form</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="B=\{v_{1},f(v_{1}),...,f^{j_{1}}(v_{1}),v_{2},f(v_{2}),...,f^{j_{2}}(v_{2}),..%
+.,v_{r},f(v_{r}),...,f^{j_{r}}(v_{r})\}." display="block"><mrow><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msup><mi>f</mi><msub><mi>j</mi><mn>1</mn></msub></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msup><mi>f</mi><msub><mi>j</mi><mn>2</mn></msub></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>v</mi><mi>r</mi></msub><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>r</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msup><mi>f</mi><msub><mi>j</mi><mi>r</mi></msub></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>r</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <math id="p2.m7" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> be the linear transformation defined in <math id="p2.m8" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> as follows:</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="g(f^{k}(v_{1}))=\left\{\begin{array}[]{ll}0&amp;\textrm{for every }k=0,\ldots,j_{1%
+}\\
+f^{k_{i}}(v_{i})&amp;\textrm{for every }i=2,\ldots,r\textrm{ and }k_{i}=0,\ldots,j%
+_{i}.\end{array}\right." display="block"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>f</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd columnalign="left"><mrow><mrow><mtext>for every </mtext><mo>⁢</mo><mi>k</mi></mrow><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>j</mi><mn>1</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><msup><mi>f</mi><msub><mi>k</mi><mi>i</mi></msub></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mrow><mrow><mrow><mrow><mtext>for every </mtext><mo>⁢</mo><mi>i</mi></mrow><mo>=</mo><mrow><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><mrow><mi>r</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><msub><mi>k</mi><mi>i</mi></msub></mrow><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>j</mi><mi>i</mi></msub></mrow></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable><mi></mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The fact that <math id="p2.m9" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="p2.m10" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> commute is a consequence of <math id="p2.m11" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> being defined as zero on one <math id="p2.m12" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>-invariant subspace and as the identity on its complementary <math id="p2.m13" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>-invariant subspace. Observe that it’s enough to see that <math id="p2.m14" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> and <math id="p2.m15" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> commute in the basis <math id="p2.m16" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> (this fact is trivial). We see that, if <math id="p2.m17" class="ltx_Math" alttext="k=0,...,j_{1}-1" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>j</mi><mn>1</mn></msub><mo>-</mo><mn>1</mn></mrow></mrow></mrow></math>, then</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="(gf)(f^{k}(v_{1}))=g(f^{k+1}(v_{1}))=0\quad\mbox{ and }\quad(fg)(f^{k}(v_{1}))%
+=f(g(f^{k}(v_{1}))=f(0)=0." display="block"><mrow><mrow><mo stretchy="false">(</mo><mi>g</mi><mi>f</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><msup><mi>f</mi><mi>k</mi></msup><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>g</mi><mrow><mo stretchy="false">(</mo><msup><mi>f</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mn>0</mn><mo mathvariant="italic" separator="true"> </mo><mtext> and </mtext><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mi>g</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><msup><mi>f</mi><mi>k</mi></msup><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>g</mi><mrow><mo stretchy="false">(</mo><msup><mi>f</mi><mi>k</mi></msup><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>=</mo><mn>0</mn><mo>.</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="p2.m18" class="ltx_Math" alttext="k=j_{1}" display="inline"><mrow><mi>k</mi><mo>=</mo><msub><mi>j</mi><mn>1</mn></msub></mrow></math>, we know there are <math id="p2.m19" class="ltx_Math" alttext="\lambda_{0},...,\lambda_{j_{1}}" display="inline"><mrow><msub><mi>λ</mi><mn>0</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>λ</mi><msub><mi>j</mi><mn>1</mn></msub></msub></mrow></math> such that</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="f^{j_{1}+1}(v_{1})=\sum_{k=0}^{j_{1}}\lambda_{k}f^{k}(v_{1})," display="block"><mrow><mrow><mrow><msup><mi>f</mi><mrow><msub><mi>j</mi><mn>1</mn></msub><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><msub><mi>j</mi><mn>1</mn></msub></munderover><mrow><msub><mi>λ</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>f</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="(gf)(f^{j_{1}}(v_{1}))=\sum_{k=0}^{j_{1}}\lambda_{k}g(f^{k}(v_{1}))=0\quad%
+\mbox{ and }\quad(fg)(f^{j_{1}}(v_{1}))=f(0)=0." display="block"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>f</mi><msub><mi>j</mi><mn>1</mn></msub></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><msub><mi>j</mi><mn>1</mn></msub></munderover><mrow><msub><mi>λ</mi><mi>k</mi></msub><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>f</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mtext> and </mtext><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>f</mi><msub><mi>j</mi><mn>1</mn></msub></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now, let <math id="p2.m20" class="ltx_Math" alttext="i=2,...,r" display="inline"><mrow><mi>i</mi><mo>=</mo><mrow><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>r</mi></mrow></mrow></math> and <math id="p2.m21" class="ltx_Math" alttext="k_{i}=0,...,j_{i}-1" display="inline"><mrow><msub><mi>k</mi><mi>i</mi></msub><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>j</mi><mi>i</mi></msub><mo>-</mo><mn>1</mn></mrow></mrow></mrow></math>, then</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="(gf)(f^{k_{i}}(v_{i}))=g(f^{k_{i}+1}(v_{i}))=f^{k_{i}+1}(v_{i})\quad\mbox{ and%
+ }\quad(fg)(f^{k_{i}}(v_{i}))=f(g(f^{k_{i}}(v_{i}))=f^{k_{i}+1}(v_{i})." display="block"><mrow><mrow><mo stretchy="false">(</mo><mi>g</mi><mi>f</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><msup><mi>f</mi><msub><mi>k</mi><mi>i</mi></msub></msup><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>g</mi><mrow><mo stretchy="false">(</mo><msup><mi>f</mi><mrow><msub><mi>k</mi><mi>i</mi></msub><mo>+</mo><mn>1</mn></mrow></msup><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><msup><mi>f</mi><mrow><msub><mi>k</mi><mi>i</mi></msub><mo>+</mo><mn>1</mn></mrow></msup><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo mathvariant="italic" separator="true"> </mo><mtext> and </mtext><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mi>g</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><msup><mi>f</mi><msub><mi>k</mi><mi>i</mi></msub></msup><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>g</mi><mrow><mo stretchy="false">(</mo><msup><mi>f</mi><msub><mi>k</mi><mi>i</mi></msub></msup><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><msup><mi>f</mi><mrow><msub><mi>k</mi><mi>i</mi></msub><mo>+</mo><mn>1</mn></mrow></msup><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In the case <math id="p2.m22" class="ltx_Math" alttext="k_{i}=j_{i}" display="inline"><mrow><msub><mi>k</mi><mi>i</mi></msub><mo>=</mo><msub><mi>j</mi><mi>i</mi></msub></mrow></math>, we know there are <math id="p2.m23" class="ltx_Math" alttext="\lambda_{0,i},...,\lambda_{j_{i},i}" display="inline"><mrow><msub><mi>λ</mi><mrow><mn>0</mn><mo>,</mo><mi>i</mi></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>λ</mi><mrow><msub><mi>j</mi><mi>i</mi></msub><mo>,</mo><mi>i</mi></mrow></msub></mrow></math> such that</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="f^{j_{i}+1}(v_{i})=\sum_{k=0}^{j_{i}}\lambda_{k,i}f^{k}(v_{i})" display="block"><mrow><mrow><msup><mi>f</mi><mrow><msub><mi>j</mi><mi>i</mi></msub><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><msub><mi>j</mi><mi>i</mi></msub></munderover><mrow><msub><mi>λ</mi><mrow><mi>k</mi><mo>,</mo><mi>i</mi></mrow></msub><mo>⁢</mo><msup><mi>f</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then</p>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="(gf)(f^{j_{i}}(v_{i}))=g(f^{j_{i}+1}(v_{i}))=\sum_{k=0}^{j_{i}}\lambda_{k,i}g(%
+f^{k}(v_{i}))=\sum_{k=0}^{j_{i}}\lambda_{k,i}f^{k}(v_{i})=f^{j_{i}+1}(v_{i})," display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>f</mi><msub><mi>j</mi><mi>i</mi></msub></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>f</mi><mrow><msub><mi>j</mi><mi>i</mi></msub><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><msub><mi>j</mi><mi>i</mi></msub></munderover><mrow><msub><mi>λ</mi><mrow><mi>k</mi><mo>,</mo><mi>i</mi></mrow></msub><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>f</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><msub><mi>j</mi><mi>i</mi></msub></munderover><mrow><msub><mi>λ</mi><mrow><mi>k</mi><mo>,</mo><mi>i</mi></mrow></msub><mo>⁢</mo><msup><mi>f</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msup><mi>f</mi><mrow><msub><mi>j</mi><mi>i</mi></msub><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="(fg)(f^{j_{i}}(v_{i}))=f(g(f^{j_{i}}(v_{i}))=f(f^{j_{i}}(v_{i}))=f^{j_{i}+1}(v%
+_{i})." display="block"><mrow><mrow><mo stretchy="false">(</mo><mi>f</mi><mi>g</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><msup><mi>f</mi><msub><mi>j</mi><mi>i</mi></msub></msup><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>g</mi><mrow><mo stretchy="false">(</mo><msup><mi>f</mi><msub><mi>j</mi><mi>i</mi></msub></msup><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>f</mi><mrow><mo stretchy="false">(</mo><msup><mi>f</mi><msub><mi>j</mi><mi>i</mi></msub></msup><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><msup><mi>f</mi><mrow><msub><mi>j</mi><mi>i</mi></msub><mo>+</mo><mn>1</mn></mrow></msup><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This proves that <math id="p2.m24" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> and <math id="p2.m25" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> commute in <math id="p2.m26" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. Suppose now that <math id="p2.m27" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is a polynomial evaluated in <math id="p2.m28" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. So there is a</p>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="P=\sum_{k=0}^{h}c_{k}X^{k}\in K[X]" display="block"><mrow><mi>P</mi><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>h</mi></munderover><mrow><msub><mi>c</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>X</mi><mi>k</mi></msup></mrow></mrow><mo>∈</mo><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">such that
+<math id="p2.m29" class="ltx_Math" alttext="g=P(f)" display="inline"><mrow><mi>g</mi><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Then, <math id="p2.m30" class="ltx_Math" alttext="0=g(v_{1})=P(f)(v_{1})" display="inline"><mrow><mn>0</mn><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and so the annihilator polynomial <math id="p2.m31" class="ltx_Math" alttext="m_{v_{1}}" display="inline"><msub><mi>m</mi><msub><mi>v</mi><mn>1</mn></msub></msub></math> of <math id="p2.m32" class="ltx_Math" alttext="v_{1}" display="inline"><msub><mi>v</mi><mn>1</mn></msub></math> divides <math id="p2.m33" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>. But then, as the annihilator <math id="p2.m34" class="ltx_Math" alttext="m_{v_{2}}" display="inline"><msub><mi>m</mi><msub><mi>v</mi><mn>2</mn></msub></msub></math> of <math id="p2.m35" class="ltx_Math" alttext="v_{2}" display="inline"><msub><mi>v</mi><mn>2</mn></msub></math> divides <math id="p2.m36" class="ltx_Math" alttext="m_{v_{1}}" display="inline"><msub><mi>m</mi><msub><mi>v</mi><mn>1</mn></msub></msub></math> (see the cyclic decomposition theorem), we have that <math id="p2.m37" class="ltx_Math" alttext="m_{v_{2}}" display="inline"><msub><mi>m</mi><msub><mi>v</mi><mn>2</mn></msub></msub></math> divides <math id="p2.m38" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, and then <math id="p2.m39" class="ltx_Math" alttext="0=P(f)(v_{2})=g(v_{2})=v_{2}" display="inline"><mrow><mn>0</mn><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></math> which is absurd because <math id="p2.m40" class="ltx_Math" alttext="v_{2}" display="inline"><msub><mi>v</mi><mn>2</mn></msub></math> is a vector of the basis <math id="p2.m41" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. This finishes the proof.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of cyclic vector theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfCyclicVectorTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:14:42</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:14:42</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 15A04</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:22:05 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

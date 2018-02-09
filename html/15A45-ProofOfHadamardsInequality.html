@@ -1,0 +1,130 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Hadamard’s inequality</title>
+<!--Generated on Fri Feb  9 18:28:11 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Hadamard’s inequality</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let’s first prove the second inequality. If <math id="p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is singular, the thesis is
+trivially verified, since for a Hermitian positive semidefinite matrix the
+right-hand side is always nonnegative, all the diagonal entries being nonnegative. Let’s thus assume <math id="p1.m2" class="ltx_Math" alttext="\det(A)\neq 0" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math>, which means, <math id="p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> being
+Hermitian positive semidefinite, <math id="p1.m4" class="ltx_Math" alttext="\det(A)&gt;0" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>. Then no diagonal entry of <math id="p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>
+can be <math id="p1.m6" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> (otherwise, since for a Hermitian positive semidefinite matrix, <math id="p1.m7" class="ltx_Math" alttext="0\leq\lambda_{min}\leq a_{ii}\leq\lambda_{max}" display="inline"><mrow><mn>0</mn><mo>≤</mo><msub><mi>λ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>≤</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>≤</mo><msub><mi>λ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow></msub></mrow></math>, <math id="p1.m8" class="ltx_Math" alttext="\lambda_{min}" display="inline"><msub><mi>λ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub></math> and <math id="p1.m9" class="ltx_Math" alttext="\lambda_{max}" display="inline"><msub><mi>λ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow></msub></math> being respectively the minimal and the maximal eigenvalue, this would imply <math id="p1.m10" class="ltx_Math" alttext="\lambda_{min}=0" display="inline"><mrow><msub><mi>λ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>=</mo><mn>0</mn></mrow></math>, that is <math id="p1.m11" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is singular); for this reason we can define <math id="p1.m12" class="ltx_Math" alttext="D=diag(d_{11},d_{22},\ldots,d_{nn})" display="inline"><mrow><mi>D</mi><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>d</mi><mn>11</mn></msub><mo>,</mo><msub><mi>d</mi><mn>22</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>d</mi><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, with <math id="p1.m13" class="ltx_Math" alttext="d_{ii}=a_{ii}^{-\frac{1}{2}}\in\mathbb{R}" display="inline"><mrow><msub><mi>d</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>=</mo><msubsup><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow><mrow><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msubsup><mo>∈</mo><mi>ℝ</mi></mrow></math>, since all <math id="p1.m14" class="ltx_Math" alttext="a_{ii}\in\mathbb{R}^{+}" display="inline"><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>∈</mo><msup><mi>ℝ</mi><mo>+</mo></msup></mrow></math>. Let’s furthermore define <math id="p1.m15" class="ltx_Math" alttext="B=DAD" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mi>D</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>D</mi></mrow></mrow></math>. It’s easy to check that <math id="p1.m16" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> too is Hermitian positive semidefinite, so its eigenvalues <math id="p1.m17" class="ltx_Math" alttext="\lambda_{B}" display="inline"><msub><mi>λ</mi><mi>B</mi></msub></math> are all non-negative (actually, since <math id="p1.m18" class="ltx_Math" alttext="A=A^{H}" display="inline"><mrow><mi>A</mi><mo>=</mo><msup><mi>A</mi><mi>H</mi></msup></mrow></math> and since <math id="p1.m19" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> is real and diagonal, <math id="p1.m20" class="ltx_Math" alttext="B^{H}=(DAD)^{H}=D^{H}(DA)^{H}=D^{H}A^{H}D^{H}=DAD=B" display="inline"><mrow><msup><mi>B</mi><mi>H</mi></msup><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>D</mi></mrow><mo stretchy="false">)</mo></mrow><mi>H</mi></msup><mo>=</mo><mrow><msup><mi>D</mi><mi>H</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow><mi>H</mi></msup></mrow><mo>=</mo><mrow><msup><mi>D</mi><mi>H</mi></msup><mo>⁢</mo><msup><mi>A</mi><mi>H</mi></msup><mo>⁢</mo><msup><mi>D</mi><mi>H</mi></msup></mrow><mo>=</mo><mrow><mi>D</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>D</mi></mrow><mo>=</mo><mi>B</mi></mrow></math>; on the other hand, for any <math id="p1.m21" class="ltx_Math" alttext="\mathbf{x}\neq\mathbf{0}" display="inline"><mrow><mi>𝐱</mi><mo>≠</mo><mn>𝟎</mn></mrow></math>, <math id="p1.m22" class="ltx_Math" alttext="\mathbf{x}^{H}B\mathbf{x}=\mathbf{x}^{H}DAD\mathbf{x}=(\mathbf{x}^{H}D)A(D%
+\mathbf{x})=(D^{H}\mathbf{x})^{H}A(D\mathbf{x})=(D\mathbf{x})^{H}A(D\mathbf{x}%
+)=\mathbf{y}^{H}A\mathbf{y}\geq 0" display="inline"><mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>B</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo>=</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>D</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>D</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo stretchy="false">)</mo></mrow><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo stretchy="false">)</mo></mrow><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>𝐲</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>𝐲</mi></mrow><mo>≥</mo><mn>0</mn></mrow></math>).
+Moreover, we have obviously <math id="p1.m23" class="ltx_Math" alttext="b_{ii}=d_{ii}a_{ii}d_{ii}=1" display="inline"><mrow><msub><mi>b</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>=</mo><mrow><msub><mi>d</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>⁢</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>⁢</mo><msub><mi>d</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow><mo>=</mo><mn>1</mn></mrow></math> so that <math id="p1.m24" class="ltx_Math" alttext="tr(B)=n" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>n</mi></mrow></math>
+and, recalling the geometric-arithmetic mean inequality (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ArithmeticGeometricMeansInequality</span>), which holds in this
+case because the eigenvalues of <math id="p1.m25" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are all non-negative,</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><math id="p2.m1" class="ltx_Math" alttext="\det(B)=\prod_{i=1}^{n}\lambda_{B}^{(i)}\leq\left(\frac{1}{n}\sum_{i=1}^{n}%
+\lambda_{B}^{(i)}\right)^{n}=\left(\frac{1}{n}tr(B\right))^{n}=1" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msubsup><mi>λ</mi><mi>B</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msubsup></mrow><mo>≤</mo><msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mi>n</mi></mfrac><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msubsup><mi>λ</mi><mi>B</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msubsup></mrow></mrow><mo>)</mo></mrow><mi>n</mi></msup><mo>=</mo><msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mi>n</mi></mfrac><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo>)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>=</mo><mn>1</mn></mrow></math>,</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">and since <math id="p3.m1" class="ltx_Math" alttext="\det(B)=\det(D)^{2}\det(A)=\left(\prod_{i=1}^{n}a_{ii}\right)^{-1}\det(A)" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mi>D</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo>(</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow><mo>)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, we have the thesis.
+Since <math id="p3.m2" class="ltx_Math" alttext="\det(A)=\prod_{i=1}^{n}a_{ii}" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow></mrow></math> if and only if <math id="p3.m3" class="ltx_Math" alttext="\det(B)=1" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> and since in the geometric-arithmetic inequality equality holds if
+and only if all terms are equal, we must have <math id="p3.m4" class="ltx_Math" alttext="\lambda_{B}^{(i)}=\lambda_{B}" display="inline"><mrow><msubsup><mi>λ</mi><mi>B</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>=</mo><msub><mi>λ</mi><mi>B</mi></msub></mrow></math>, so that <math id="p3.m5" class="ltx_Math" alttext="\prod_{i=1}^{n}\lambda_{B}^{(i)}=\lambda_{B}^{n}=1" display="inline"><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msubsup><mi>λ</mi><mi>B</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msubsup></mrow><mo>=</mo><msubsup><mi>λ</mi><mi>B</mi><mi>n</mi></msubsup><mo>=</mo><mn>1</mn></mrow></math>,
+whence <math id="p3.m6" class="ltx_Math" alttext="\lambda_{B}=1" display="inline"><mrow><msub><mi>λ</mi><mi>B</mi></msub><mo>=</mo><mn>1</mn></mrow></math> (<math id="p3.m7" class="ltx_Math" alttext="\lambda_{B}" display="inline"><msub><mi>λ</mi><mi>B</mi></msub></math> having to be non-negative), and since
+<math id="p3.m8" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is Hermitian and hence is diagonalizable, we obtain <math id="p3.m9" class="ltx_Math" alttext="B=I" display="inline"><mrow><mi>B</mi><mo>=</mo><mi>I</mi></mrow></math>, and so <math id="p3.m10" class="ltx_Math" alttext="A=D^{-1}BD^{-1}=D^{-2}=diag(a_{11},a_{22},\ldots,a_{nn})" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><msup><mi>D</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>B</mi><mo>⁢</mo><msup><mi>D</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>=</mo><msup><mi>D</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>11</mn></msub><mo>,</mo><msub><mi>a</mi><mn>22</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. So we can
+conclude that equality holds if and only if <math id="p3.m11" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is diagonal.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Let’s now derive the more general first inequality.
+Let <math id="p4.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be a complex-valued <math id="p4.m2" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrix. If <math id="p4.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is singular,
+the thesis is trivially verified. Let’s thus assume <math id="p4.m4" class="ltx_Math" alttext="\det(A)\neq 0" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math>; then <math id="p4.m5" class="ltx_Math" alttext="B=AA^{H}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mi>H</mi></msup></mrow></mrow></math> is a Hermitian positive semidefinite matrix (actually, <math id="p4.m6" class="ltx_Math" alttext="B^{H}=(AA^{H})^{H}=(A^{H})^{H}A^{H}=AA^{H}=B" display="inline"><mrow><msup><mi>B</mi><mi>H</mi></msup><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mi>H</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mi>H</mi></msup><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><msup><mi>A</mi><mi>H</mi></msup><mo stretchy="false">)</mo></mrow><mi>H</mi></msup><mo>⁢</mo><msup><mi>A</mi><mi>H</mi></msup></mrow><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mi>H</mi></msup></mrow><mo>=</mo><mi>B</mi></mrow></math> and, for any <math id="p4.m7" class="ltx_Math" alttext="\mathbf{x}\neq\mathbf{0}" display="inline"><mrow><mi>𝐱</mi><mo>≠</mo><mn>𝟎</mn></mrow></math>,<math id="p4.m8" class="ltx_Math" alttext="\mathbf{x}^{H}B\mathbf{x}=\mathbf{x}^{H}AA^{H}\mathbf{x}=(\mathbf{x}^{H}A)(A^{%
+H}\mathbf{x})=(A^{H}\mathbf{x})^{H}(A^{H}\mathbf{x})=\mathbf{y}^{H}\mathbf{y}=%
+\|\mathbf{y}\|_{2}^{2}\geq 0" display="inline"><mrow><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>B</mi><mo>⁢</mo><mi>𝐱</mi></mrow><mo>=</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>𝐱</mi><mi>H</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>A</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>A</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo stretchy="false">)</mo></mrow><mi>H</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>A</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐱</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>𝐲</mi><mi>H</mi></msup><mo>⁢</mo><mi>𝐲</mi></mrow><mo>=</mo><msubsup><mrow><mo>∥</mo><mi>𝐲</mi><mo>∥</mo></mrow><mn>2</mn><mn>2</mn></msubsup><mo>≥</mo><mn>0</mn></mrow></math>). Therefore, the second inequality can be applied to <math id="p4.m9" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, yielding:</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><math id="p5.m1" class="ltx_Math" alttext="\left|\det(A)\right|^{2}=\det(A)\det^{\ast}(A)=\det(A)\det(A^{H})=\det(AA^{H})=" display="inline"><mrow><msup><mrow><mo>|</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>|</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><msup><mo>det</mo><mo>∗</mo></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi>A</mi><mi>H</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mi>H</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi></mi></mrow></math>
+<br class="ltx_break"><math id="p5.m2" class="ltx_Math" alttext="=\det(B)\leq\prod_{i=1}^{n}b_{ii}=\prod_{i=1}^{n}\sum_{j=1}^{n}a_{ij}(a^{H})_{%
+ji}=\prod_{i=1}^{n}\sum_{j=1}^{n}a_{ij}a_{ij}^{\ast}=\prod_{i=1}^{n}\sum_{j=1}%
+^{n}\left|a_{ij}\right|^{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>b</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mrow><mo stretchy="false">(</mo><msup><mi>a</mi><mi>H</mi></msup><mo stretchy="false">)</mo></mrow><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msubsup><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow><mo>∗</mo></msubsup></mrow></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msup><mrow><mo>|</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>|</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">As we proved above, for <math id="p6.m1" class="ltx_Math" alttext="\det(B)" display="inline"><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math> to be equal to <math id="p6.m2" class="ltx_Math" alttext="\prod_{i=1}^{n}b_{ii}" display="inline"><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>b</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow></math>, <math id="p6.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> must be diagonal, which means that <math id="p6.m4" class="ltx_Math" alttext="\sum_{k=1}^{n}a_{ik}a_{jk}^{\ast}=|a_{ii}|^{2}\delta_{ij}" display="inline"><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⁢</mo><msubsup><mi>a</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow><mo>∗</mo></msubsup></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">|</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow></math>. So we can conclude that equality holds if and only if the rows of <math id="p6.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> are orthogonal.
+<math id="p6.m6" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> R. A. Horn, C. R. Johnson,
+<em class="ltx_emph ltx_font_italic">Matrix Analysis</em>, Cambridge University Press, 1985
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Hadamard’s inequality</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfHadamardsInequality</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:37:02</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:37:02</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Andrea Ambrosio (7332)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Andrea Ambrosio (7332)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">17</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Andrea Ambrosio (7332)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 15A45</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:28:11 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

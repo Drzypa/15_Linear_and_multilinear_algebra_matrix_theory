@@ -1,0 +1,666 @@
+<!DOCTYPE html><html>
+<head>
+<title>vector identities</title>
+<!--Generated on Fri Feb  9 18:33:09 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">vector identities</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Preface</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">In all works that I have read, that describe electromagnetic fields from a technical point of view, the authors use vector identities to establish proof. These vector identities,for example, are used to establish the veracity of the poynting vector or establish the wave equation.
+We have no intristic reason to believe these identities are true, however the proofs of which can be tedious. Nonwithstanding, doing so can have rewards as we gain insight into the nature of combinatorics and the constraints of permutations.
+A list of these vector identities is provided and for each one also is provided a proof of the identity.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>What are curl and div anyway?</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">curl see hyperlinks for more information.</p>
+<table id="S2.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E1.m1" class="ltx_Math" alttext="(\nabla\times\vec{B})" display="block"><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">divergence see hyperlinks for more information.</p>
+<table id="S2.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E2.m1" class="ltx_Math" alttext="(\nabla\cdot\vec{B})" display="block"><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⋅</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<table id="S2.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.E3.m1" class="ltx_Math" alttext="(\nabla b)" display="block"><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Is div applied to a scalar. This is the gradient or grad.
+curl takes a vector and gives back a vector; div takes a vector and gives back a scalar.
+grad takes a scalar and gives back a vector.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>First Proof</h2>
+
+<div id="S3.p1" class="ltx_para">
+<table id="S3.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E4.m1" class="ltx_Math" alttext="\nabla ab=a\nabla b+b\nabla a" display="block"><mrow><mrow><mo>∇</mo><mo>⁡</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>b</mi></mrow></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>a</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Starting with</p>
+<table id="S3.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E5.m1" class="ltx_Math" alttext="\nabla f=\vec{i}\frac{\partial f}{\partial x_{1}}+\vec{j}\frac{\partial f}{%
+\partial x_{2}}+\vec{k}\frac{\partial f}{\partial x_{3}}" display="block"><mrow><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow><mo>=</mo><mrow><mrow><mover accent="true"><mi>i</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow><mo>+</mo><mrow><mover accent="true"><mi>j</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mfrac></mrow><mo>+</mo><mrow><mover accent="true"><mi>k</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mfrac></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Replace f with ab</p>
+<table id="S3.E6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E6.m1" class="ltx_Math" alttext="\nabla ab=\vec{i}\frac{\partial ab}{\partial x_{1}}+\vec{j}\frac{\partial ab}{%
+\partial x_{2}}+\vec{k}\frac{\partial ab}{\partial x_{3}}" display="block"><mrow><mrow><mo>∇</mo><mo>⁡</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mrow><mrow><mover accent="true"><mi>i</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow><mo>+</mo><mrow><mover accent="true"><mi>j</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mfrac></mrow><mo>+</mo><mrow><mover accent="true"><mi>k</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mfrac></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr>
+</table>
+<p class="ltx_p">we cannot make assertions about the scalar functions a b, so we are forced to invoke the
+product rule assuming the most generality
+For the first dimension it becomes
+</p>
+<table id="S3.E7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E7.m1" class="ltx_Math" alttext="\vec{i}\left[a\frac{\partial b}{\partial x_{1}}+\frac{\partial a}{\partial x_{%
+1}}b\right]" display="block"><mrow><mover accent="true"><mi>i</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>b</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>a</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr>
+</table>
+<p class="ltx_p">and likewise</p>
+<table id="S3.E8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E8.m1" class="ltx_Math" alttext="\vec{j}\left[a\frac{\partial b}{\partial x_{1}}+\frac{\partial a}{\partial x_{%
+1}}b\right]" display="block"><mrow><mover accent="true"><mi>j</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>b</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>a</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr>
+</table>
+<table id="S3.E9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E9.m1" class="ltx_Math" alttext="\vec{k}\left[a\frac{\partial b}{\partial x_{1}}+\frac{\partial a}{\partial x_{%
+1}}b\right]" display="block"><mrow><mover accent="true"><mi>k</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>b</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>a</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Instead of viewing this as a single vector we split the vector into two vectors.</p>
+<table id="S3.E10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E10.m1" class="ltx_Math" alttext="\vec{i}\left[a\frac{\partial b}{\partial x_{1}}\right]\longleftrightarrow\vec{%
+i}\left[\frac{\partial a}{\partial x_{1}}b\right]" display="block"><mrow><mrow><mover accent="true"><mi>i</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mrow><mo>[</mo><mrow><mi>a</mi><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>b</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow><mo>]</mo></mrow></mrow><mo>⟷</mo><mrow><mover accent="true"><mi>i</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mrow><mo>[</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>a</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac><mo>⁢</mo><mi>b</mi></mrow><mo>]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(10)</span></td>
+</tr>
+</table>
+<p class="ltx_p">and likewise</p>
+<table id="S3.E11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E11.m1" class="ltx_Math" alttext="\vec{j}\left[a\frac{\partial b}{\partial x_{1}}\right]\longleftrightarrow\vec{%
+j}\left[\frac{\partial a}{\partial x_{1}}b\right]" display="block"><mrow><mrow><mover accent="true"><mi>j</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mrow><mo>[</mo><mrow><mi>a</mi><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>b</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow><mo>]</mo></mrow></mrow><mo>⟷</mo><mrow><mover accent="true"><mi>j</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mrow><mo>[</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>a</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac><mo>⁢</mo><mi>b</mi></mrow><mo>]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(11)</span></td>
+</tr>
+</table>
+<table id="S3.E12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E12.m1" class="ltx_Math" alttext="\vec{k}\left[a\frac{\partial b}{\partial x_{1}}\right]\longleftrightarrow\vec{%
+k}\left[\frac{\partial a}{\partial x_{1}}b\right]" display="block"><mrow><mrow><mover accent="true"><mi>k</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mrow><mo>[</mo><mrow><mi>a</mi><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>b</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow><mo>]</mo></mrow></mrow><mo>⟷</mo><mrow><mover accent="true"><mi>k</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mrow><mo>[</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>a</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac><mo>⁢</mo><mi>b</mi></mrow><mo>]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(12)</span></td>
+</tr>
+</table>
+<p class="ltx_p">factor the a scalar from the first vector and b scalar from the second vector</p>
+<table id="S3.E13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E13.m1" class="ltx_Math" alttext="a\left[\vec{i}\frac{\partial b}{\partial x_{1}}+\vec{j}\frac{\partial b}{%
+\partial x_{2}}+\vec{k}\frac{\partial b}{\partial x_{3}}\right]+\left[\vec{i}%
+\frac{\partial a}{\partial x_{1}}+\vec{j}\frac{\partial a}{\partial x_{2}}+%
+\vec{k}\frac{\partial a}{\partial x_{3}}\right]b" display="block"><mrow><mrow><mi>a</mi><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><mover accent="true"><mi>i</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>b</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow><mo>+</mo><mrow><mover accent="true"><mi>j</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>b</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mfrac></mrow><mo>+</mo><mrow><mover accent="true"><mi>k</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>b</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mfrac></mrow></mrow><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo>[</mo><mrow><mrow><mover accent="true"><mi>i</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>a</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow><mo>+</mo><mrow><mover accent="true"><mi>j</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>a</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mfrac></mrow><mo>+</mo><mrow><mover accent="true"><mi>k</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>a</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mfrac></mrow></mrow><mo>]</mo></mrow><mo>⁢</mo><mi>b</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(13)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Now the defintion of the gradient can be seen to occur twice in the last equation, once for b and once for a
+and it is shown by imposing a structure</p>
+<table id="S3.E14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E14.m1" class="ltx_Math" alttext="\nabla ab=a\nabla b+b\nabla a" display="block"><mrow><mrow><mo>∇</mo><mo>⁡</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>b</mi></mrow></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>a</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(14)</span></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Second Proof</h2>
+
+<div id="S4.p1" class="ltx_para">
+<table id="S4.E15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E15.m1" class="ltx_Math" alttext="\nabla(\vec{A}\cdot\vec{B})=[(\vec{A}\cdot\nabla)\vec{B}]+[(\vec{B}\cdot\nabla%
+)\vec{A}]+[\vec{A}\times(\nabla\times\vec{B})]+[\vec{B}\times(\nabla\times\vec%
+{A})]" display="block"><mrow><mrow><mo>∇</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>⋅</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>⋅</mo><mo>∇</mo></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">]</mo></mrow><mo>+</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>⋅</mo><mo>∇</mo></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">]</mo></mrow><mo>+</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow><mo>+</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(15)</span></td>
+</tr>
+</table>
+<p class="ltx_p">This is the second vector identity to prove.</p>
+<table id="S4.E16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E16.m1" class="ltx_Math" alttext="\nabla\cdot(A\times B)=[B\cdot(\nabla\times A)]-[A\cdot(\nabla\times B)]" display="block"><mrow><mrow><mo>∇</mo><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>B</mi><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow><mo>-</mo><mrow><mo stretchy="false">[</mo><mrow><mi>A</mi><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(16)</span></td>
+</tr>
+</table>
+<table id="S4.E17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E17.m1" class="ltx_Math" alttext="\frac{\partial(a_{2}b_{3}-b_{2}a_{3})}{\partial x_{1}}" display="block"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>b</mi><mn>3</mn></msub></mrow><mo>-</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>a</mi><mn>3</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(17)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Structurally, this means we have to apply the product rule twice:
+Once on the first term and again on the second term.</p>
+<table id="S4.E18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E18.m1" class="ltx_Math" alttext="\frac{\partial(a_{2}b_{3})}{\partial x_{1}}-\frac{\partial(b_{2}a_{3})}{%
+\partial x_{1}}" display="block"><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>b</mi><mn>3</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac><mo>-</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>a</mi><mn>3</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(18)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Each of these must get expanded according to the product rule.</p>
+<table id="S4.E19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E19.m1" class="ltx_Math" alttext="a_{2}\frac{\partial b_{3}}{\partial x_{1}}+b_{3}\frac{\partial a_{2}}{\partial
+x%
+_{1}}-\left[a_{3}\frac{\partial b_{2}}{\partial x_{1}}+b_{2}\frac{\partial a_{%
+3}}{\partial x_{1}}\right]" display="block"><mrow><mrow><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>b</mi><mn>3</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>3</mn></msub><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>a</mi><mn>2</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow></mrow><mo>-</mo><mrow><mo>[</mo><mrow><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>a</mi><mn>3</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow></mrow><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(19)</span></td>
+</tr>
+</table>
+<table id="S4.E20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E20.m1" class="ltx_Math" alttext="-\left[a_{1}\frac{\partial b_{3}}{\partial x_{2}}+b_{3}\frac{\partial a_{1}}{%
+\partial x_{2}}-\left[a_{3}\frac{\partial b_{1}}{\partial x_{2}}+b_{1}\frac{%
+\partial a_{3}}{\partial x_{2}}\right]\right]" display="block"><mrow><mo>-</mo><mrow><mo>[</mo><mrow><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>b</mi><mn>3</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mfrac></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>3</mn></msub><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mfrac></mrow></mrow><mo>-</mo><mrow><mo>[</mo><mrow><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>b</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mfrac></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>a</mi><mn>3</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mfrac></mrow></mrow><mo>]</mo></mrow></mrow><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(20)</span></td>
+</tr>
+</table>
+<table id="S4.E21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E21.m1" class="ltx_Math" alttext="a_{1}\frac{\partial b_{2}}{\partial x_{3}}+b_{2}\frac{\partial a_{1}}{\partial
+x%
+_{3}}-\left[a_{2}\frac{\partial b_{1}}{\partial x_{3}}+b_{1}\frac{\partial a_{%
+2}}{\partial x_{3}}\right]" display="block"><mrow><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mfrac></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mfrac></mrow></mrow><mo>-</mo><mrow><mo>[</mo><mrow><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>b</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mfrac></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>a</mi><mn>2</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mfrac></mrow></mrow><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(21)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Ok. Now we start to look at this as an array. The importance of this cannot be underestimated to build up what I call a Noetherian viewpoint. If we insist on imposing a structure on something that is abelian, we will be able to draw conclusions with much more alacrity.</p>
+<table id="S4.E22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E22.m1" class="ltx_Math" alttext="\mathbf{X}=\left(\begin{array}[]{cccc}a_{2}\partial b^{3}_{1}&amp;b_{3}\partial a^%
+{2}_{1}&amp;-a_{3}\partial b^{2}_{1}&amp;-b_{2}\partial a^{3}_{1}\\
+-a_{1}\partial b^{3}_{2}&amp;-b_{3}\partial a^{1}_{2}&amp;a_{3}\partial b^{1}_{2}&amp;b_{1%
+}\partial a^{3}_{2}\\
+a_{1}\partial b^{2}_{3}&amp;b_{2}\partial a^{1}_{3}&amp;-a_{2}\partial b^{1}_{3}&amp;-b_{1%
+}\partial a^{2}_{3}\end{array}\right)" display="block"><mrow><mi>𝐗</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>b</mi><mn>1</mn><mn>3</mn></msubsup></mrow></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>b</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>a</mi><mn>1</mn><mn>2</mn></msubsup></mrow></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>b</mi><mn>1</mn><mn>2</mn></msubsup></mrow></mrow></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>a</mi><mn>1</mn><mn>3</mn></msubsup></mrow></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>b</mi><mn>2</mn><mn>3</mn></msubsup></mrow></mrow></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mrow><msub><mi>b</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>a</mi><mn>2</mn><mn>1</mn></msubsup></mrow></mrow></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>b</mi><mn>2</mn><mn>1</mn></msubsup></mrow></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>a</mi><mn>2</mn><mn>3</mn></msubsup></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>b</mi><mn>3</mn><mn>2</mn></msubsup></mrow></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>a</mi><mn>3</mn><mn>1</mn></msubsup></mrow></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>b</mi><mn>3</mn><mn>1</mn></msubsup></mrow></mrow></mrow></mtd><mtd columnalign="center"><mrow><mo>-</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>a</mi><mn>3</mn><mn>2</mn></msubsup></mrow></mrow></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(22)</span></td>
+</tr>
+</table>
+<p class="ltx_p">This transformation now allows us to count that 3x4 or 12 terms is the same as 2x6 terms.
+grabbing the <math id="S4.p1.m1" class="ltx_Math" alttext="a_{1}" display="inline"><msub><mi>a</mi><mn>1</mn></msub></math> terms:</p>
+<table id="S4.E23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E23.m1" class="ltx_Math" alttext="a_{1}\partial b^{2}_{3}-a_{1}\partial b^{3}_{2}" display="block"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>b</mi><mn>3</mn><mn>2</mn></msubsup></mrow></mrow><mo>-</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>b</mi><mn>2</mn><mn>3</mn></msubsup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(23)</span></td>
+</tr>
+</table>
+<p class="ltx_p">grabbing the <math id="S4.p1.m2" class="ltx_Math" alttext="a_{2}" display="inline"><msub><mi>a</mi><mn>2</mn></msub></math> terms:</p>
+<table id="S4.E24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E24.m1" class="ltx_Math" alttext="-\left[a_{2}\partial b^{1}_{3}-a_{2}\partial b^{3}_{1}\right]" display="block"><mrow><mo>-</mo><mrow><mo>[</mo><mrow><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>b</mi><mn>3</mn><mn>1</mn></msubsup></mrow></mrow><mo>-</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>b</mi><mn>1</mn><mn>3</mn></msubsup></mrow></mrow></mrow><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(24)</span></td>
+</tr>
+</table>
+<p class="ltx_p">grabbing the <math id="S4.p1.m3" class="ltx_Math" alttext="a_{3}" display="inline"><msub><mi>a</mi><mn>3</mn></msub></math> terms:</p>
+<table id="S4.E25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E25.m1" class="ltx_Math" alttext="a_{3}\partial b^{1}_{2}-a_{3}\partial b^{2}_{1}" display="block"><mrow><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>b</mi><mn>2</mn><mn>1</mn></msubsup></mrow></mrow><mo>-</mo><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>b</mi><mn>1</mn><mn>2</mn></msubsup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(25)</span></td>
+</tr>
+</table>
+<p class="ltx_p">grabbing the <math id="S4.p1.m4" class="ltx_Math" alttext="b_{1}" display="inline"><msub><mi>b</mi><mn>1</mn></msub></math> terms:</p>
+<table id="S4.E26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E26.m1" class="ltx_Math" alttext="-b_{1}\partial a^{2}_{3}+b_{1}\partial a^{3}_{2}" display="block"><mrow><mrow><mo>-</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>a</mi><mn>3</mn><mn>2</mn></msubsup></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>a</mi><mn>2</mn><mn>3</mn></msubsup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(26)</span></td>
+</tr>
+</table>
+<p class="ltx_p">grabbing the <math id="S4.p1.m5" class="ltx_Math" alttext="b_{2}" display="inline"><msub><mi>b</mi><mn>2</mn></msub></math> terms:</p>
+<table id="S4.E27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E27.m1" class="ltx_Math" alttext="-\left[-\left[b_{2}\partial a^{1}_{3}-b_{2}\partial a^{3}_{1}\right]\right]" display="block"><mrow><mo>-</mo><mrow><mo>[</mo><mrow><mo>-</mo><mrow><mo>[</mo><mrow><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>a</mi><mn>3</mn><mn>1</mn></msubsup></mrow></mrow><mo>-</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>a</mi><mn>1</mn><mn>3</mn></msubsup></mrow></mrow></mrow><mo>]</mo></mrow></mrow><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(27)</span></td>
+</tr>
+</table>
+<p class="ltx_p">grabbing the <math id="S4.p1.m6" class="ltx_Math" alttext="b_{3}" display="inline"><msub><mi>b</mi><mn>3</mn></msub></math> terms:</p>
+<table id="S4.E28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E28.m1" class="ltx_Math" alttext="-b_{3}\partial a^{1}_{2}+b_{3}\partial a^{2}_{1}" display="block"><mrow><mrow><mo>-</mo><mrow><msub><mi>b</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>a</mi><mn>2</mn><mn>1</mn></msubsup></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>a</mi><mn>1</mn><mn>2</mn></msubsup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(28)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Note that the Sign of the second group of six is Inverted from the first group.
+All of these have an identical form and it remains to extract the Dot product of the A vector with something that can be made to look like the curl of B.
+Factoring and transforming back to the partial deriviative form:
+grabbing the <math id="S4.p1.m7" class="ltx_Math" alttext="a_{1}" display="inline"><msub><mi>a</mi><mn>1</mn></msub></math> terms:</p>
+<table id="S4.E29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E29.m1" class="ltx_Math" alttext="(a_{1})(\frac{\partial b_{2}}{\partial x_{3}}-\frac{\partial b_{3}}{\partial x%
+_{2}})" display="block"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mfrac><mo>-</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>b</mi><mn>3</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(29)</span></td>
+</tr>
+</table>
+<p class="ltx_p">grabbing the <math id="S4.p1.m8" class="ltx_Math" alttext="a_{2}" display="inline"><msub><mi>a</mi><mn>2</mn></msub></math> terms:</p>
+<table id="S4.E30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E30.m1" class="ltx_Math" alttext="(a_{2})(-\left[\frac{\partial b_{1}}{\partial x_{3}}-\frac{\partial b_{3}}{%
+\partial x_{1}}\right])" display="block"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mrow><mo>[</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>b</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mfrac><mo>-</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>b</mi><mn>3</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow><mo>]</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(30)</span></td>
+</tr>
+</table>
+<p class="ltx_p">grabbing the <math id="S4.p1.m9" class="ltx_Math" alttext="a_{3}" display="inline"><msub><mi>a</mi><mn>3</mn></msub></math> terms:</p>
+<table id="S4.E31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E31.m1" class="ltx_Math" alttext="(a_{3})(\frac{\partial b_{1}}{\partial x_{2}}-\frac{\partial b_{2}}{\partial x%
+_{1}})" display="block"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>3</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>b</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mfrac><mo>-</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(31)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Equation 19 cannot contain <math id="S4.p1.m10" class="ltx_Math" alttext="x_{1}" display="inline"><msub><mi>x</mi><mn>1</mn></msub></math>(”x” component)
+Equation 20 cannot contain <math id="S4.p1.m11" class="ltx_Math" alttext="x_{2}" display="inline"><msub><mi>x</mi><mn>2</mn></msub></math>(”y” component) and must be negative cofactor
+Equation 21 cannot contain <math id="S4.p1.m12" class="ltx_Math" alttext="x_{3}" display="inline"><msub><mi>x</mi><mn>3</mn></msub></math>(”z”component)
+gluing these together as a vector we see after factoring out another -1,</p>
+<table id="S4.E32" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E32.m1" class="ltx_Math" alttext="-A\cdot(\nabla\times B)" display="block"><mrow><mo>-</mo><mrow><mi>A</mi><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(32)</span></td>
+</tr>
+</table>
+<p class="ltx_p">working through the similar logic for the other 6 terms, we see</p>
+<table id="S4.E33" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E33.m1" class="ltx_Math" alttext="B\cdot(\nabla\times A)" display="block"><mrow><mi>B</mi><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(33)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Together, the result is proven.
+This is a lot of work, but because we organize it as systematically as we do,we are able to manage the tedium, and gain some insight into why this can only work because of the factorization of 12 and the fact that curl is intrinsically 3 dimensional. Note also that this identity only works with the cartesian coordinate systems. Variation based on the Jacobian can be found in Ramo and Whinnery, ”Fields and Waves in Modern Radio”</p>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Third Proof</h2>
+
+<div id="S5.p1" class="ltx_para">
+<table id="S5.E34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E34.m1" class="ltx_Math" alttext="\nabla\times(\nabla\times A)=\nabla(\nabla\cdot A)-\nabla^{2}A" display="block"><mrow><mrow><mo>∇</mo><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>∇</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⋅</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mi>A</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(34)</span></td>
+</tr>
+</table>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">In this proof, I have resorted to an even more barebones representation.
+It is really the only way you can get to see the view from 10,000 feet and still be able to elicit forth the regroupings.
+Looking at the expanded curl operator</p>
+<table id="S5.E35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E35.m1" class="ltx_Math" alttext="\nabla\times A=\left[\frac{\frac{3}{2}-\frac{2}{3}}{1}\right]\left[\frac{\frac%
+{3}{1}-\frac{1}{3}}{-2}\right]\left[\frac{\frac{2}{1}-\frac{1}{2}}{3}\right]" display="block"><mrow><mrow><mo>∇</mo><mo>×</mo><mi>A</mi></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mfrac><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>-</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow><mn>1</mn></mfrac><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mfrac><mrow><mfrac><mn>3</mn><mn>1</mn></mfrac><mo>-</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><mrow><mo>-</mo><mn>2</mn></mrow></mfrac><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mfrac><mrow><mfrac><mn>2</mn><mn>1</mn></mfrac><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mn>3</mn></mfrac><mo>]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(35)</span></td>
+</tr>
+</table>
+<p class="ltx_p">The denominators are not really denominators, but the dimensions of the space. The second one is made negative to remind all of the cofactor, lest it get inadvertently dropped.</p>
+<table id="S5.E36" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E36.m1" class="ltx_Math" alttext="\nabla\times(\nabla\times A)=\left[\frac{\frac{\left[\frac{\frac{2}{1}-\frac{1%
+}{2}}{3}\right]}{2}-\frac{\left[\frac{\frac{3}{1}-\frac{1}{3}}{-2}\right]}{3}}%
+{1}\right]\left[\frac{\frac{\left[\frac{\frac{2}{1}-\frac{1}{2}}{3}\right]}{1}%
+-\frac{\left[\frac{\frac{3}{2}-\frac{2}{3}}{1}\right]}{3}}{-2}\right]\left[%
+\frac{\frac{\left[\frac{\frac{3}{1}-\frac{1}{3}}{-2}\right]}{1}-\frac{\left[%
+\frac{\frac{3}{2}-\frac{2}{3}}{1}\right]}{2}}{3}\right]" display="block"><mrow><mrow><mo>∇</mo><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mfrac><mrow><mfrac><mrow><mo>[</mo><mfrac><mrow><mfrac><mn>2</mn><mn>1</mn></mfrac><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mn>3</mn></mfrac><mo>]</mo></mrow><mn>2</mn></mfrac><mo>-</mo><mfrac><mrow><mo>[</mo><mfrac><mrow><mfrac><mn>3</mn><mn>1</mn></mfrac><mo>-</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><mrow><mo>-</mo><mn>2</mn></mrow></mfrac><mo>]</mo></mrow><mn>3</mn></mfrac></mrow><mn>1</mn></mfrac><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mfrac><mrow><mfrac><mrow><mo>[</mo><mfrac><mrow><mfrac><mn>2</mn><mn>1</mn></mfrac><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mn>3</mn></mfrac><mo>]</mo></mrow><mn>1</mn></mfrac><mo>-</mo><mfrac><mrow><mo>[</mo><mfrac><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>-</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow><mn>1</mn></mfrac><mo>]</mo></mrow><mn>3</mn></mfrac></mrow><mrow><mo>-</mo><mn>2</mn></mrow></mfrac><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mfrac><mrow><mfrac><mrow><mo>[</mo><mfrac><mrow><mfrac><mn>3</mn><mn>1</mn></mfrac><mo>-</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><mrow><mo>-</mo><mn>2</mn></mrow></mfrac><mo>]</mo></mrow><mn>1</mn></mfrac><mo>-</mo><mfrac><mrow><mo>[</mo><mfrac><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>-</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow><mn>1</mn></mfrac><mo>]</mo></mrow><mn>2</mn></mfrac></mrow><mn>3</mn></mfrac><mo>]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(36)</span></td>
+</tr>
+</table>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p">It is important to be sure of these relationships because it would appear for certain it will deal with the mixed partial derivatives. For example, the last equation, the ”denominator” when there are two ”fractions” separated by subtraction, is not one of dimension, but is in fact the partial derivative with respect to the ”numerator”
+The operation of taking the partial derivative first with respect to the first dimension and them with respect to the second dimension, is notated by</p>
+<table id="S5.E37" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E37.m1" class="ltx_Math" alttext="\frac{\partial\left[\frac{\partial f_{2}}{\partial x_{1}}\right]}{\partial x_{%
+2}}=\frac{\partial^{2}f_{2}}{\partial x_{2}\partial x_{1}}" display="block"><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo>[</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>f</mi><mn>2</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac><mo>]</mo></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msub><mi>f</mi><mn>2</mn></msub></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(37)</span></td>
+</tr>
+</table>
+<table id="S5.E38" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E38.m1" class="ltx_Math" alttext="\frac{\partial\left[\frac{\partial f_{1}}{\partial x_{2}}\right]}{\partial x_{%
+2}}=\frac{\partial^{2}f_{1}}{\partial x_{2}^{2}}" display="block"><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo>[</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>f</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mfrac><mo>]</mo></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msub><mi>f</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(38)</span></td>
+</tr>
+</table>
+<p class="ltx_p">The notation, barebones or not must keep track of the order of mixed partials, in case we have to</p>
+</div>
+<div id="S5.p4" class="ltx_para">
+<p class="ltx_p">explain why the order matters(though it shouldn’t, but at this point who knows?)
+Back substition</p>
+<table id="S5.E39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E39.m1" class="ltx_Math" alttext="\nabla\times(\nabla\times A)=\left[\frac{\left[\frac{\partial^{2}f_{2}}{%
+\partial x_{2}\partial x_{1}}-\frac{\partial^{2}f_{1}}{\partial x_{2}^{2}}%
+\right]-\frac{\left[\frac{\frac{3}{1}-\frac{1}{3}}{-2}\right]}{3}}{1}\right]%
+\left[\frac{\frac{\left[\frac{\frac{2}{1}-\frac{1}{2}}{3}\right]}{1}-\frac{%
+\left[\frac{\frac{3}{2}-\frac{2}{3}}{1}\right]}{3}}{-2}\right]\left[\frac{%
+\frac{\left[\frac{\frac{3}{1}-\frac{1}{3}}{-2}\right]}{1}-\frac{\left[\frac{%
+\frac{3}{2}-\frac{2}{3}}{1}\right]}{2}}{3}\right]" display="block"><mrow><mrow><mo>∇</mo><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mfrac><mrow><mrow><mo>[</mo><mrow><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msub><mi>f</mi><mn>2</mn></msub></mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>⁢</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mrow></mfrac><mo>-</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msub><mi>f</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mfrac></mrow><mo>]</mo></mrow><mo>-</mo><mfrac><mrow><mo>[</mo><mfrac><mrow><mfrac><mn>3</mn><mn>1</mn></mfrac><mo>-</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><mrow><mo>-</mo><mn>2</mn></mrow></mfrac><mo>]</mo></mrow><mn>3</mn></mfrac></mrow><mn>1</mn></mfrac><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mfrac><mrow><mfrac><mrow><mo>[</mo><mfrac><mrow><mfrac><mn>2</mn><mn>1</mn></mfrac><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mn>3</mn></mfrac><mo>]</mo></mrow><mn>1</mn></mfrac><mo>-</mo><mfrac><mrow><mo>[</mo><mfrac><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>-</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow><mn>1</mn></mfrac><mo>]</mo></mrow><mn>3</mn></mfrac></mrow><mrow><mo>-</mo><mn>2</mn></mrow></mfrac><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mfrac><mrow><mfrac><mrow><mo>[</mo><mfrac><mrow><mfrac><mn>3</mn><mn>1</mn></mfrac><mo>-</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><mrow><mo>-</mo><mn>2</mn></mrow></mfrac><mo>]</mo></mrow><mn>1</mn></mfrac><mo>-</mo><mfrac><mrow><mo>[</mo><mfrac><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>-</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow><mn>1</mn></mfrac><mo>]</mo></mrow><mn>2</mn></mfrac></mrow><mn>3</mn></mfrac><mo>]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(39)</span></td>
+</tr>
+</table>
+<p class="ltx_p">What is seen is a pattern emerging were some of the items in this collection are positive and some are negative. None of the positive items are of the form:</p>
+<table id="S5.E40" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E40.m1" class="ltx_Math" alttext="\frac{\partial^{2}f_{1}}{\partial x_{2}^{2}}" display="block"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msub><mi>f</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mfrac></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(40)</span></td>
+</tr>
+</table>
+<p class="ltx_p">In fact these all correspond to the expansion of the term:</p>
+<table id="S5.E41" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E41.m1" class="ltx_Math" alttext="-\nabla^{2}A" display="block"><mrow><mo>-</mo><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mi>A</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(41)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Given the products that appear on the left hand side of the above equation the meaning of</p>
+<table id="S5.E42" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E42.m1" class="ltx_Math" alttext="\nabla^{2}A" display="block"><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mi>A</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(42)</span></td>
+</tr>
+</table>
+<p class="ltx_p">is inferred to be</p>
+<table id="S5.E43" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E43.m1" class="ltx_Math" alttext="\nabla^{2}A=\vec{(}i)\nabla^{2}C_{1}+\vec{(}j)\nabla^{2}C_{2}+\vec{(}k)\nabla^%
+{2}C_{3}" display="block"><mrow><mrow><mrow><msup><mo>∇</mo><mn>2</mn></msup><mi>A</mi><mo>=</mo><mover accent="true"><mo stretchy="false">(</mo><mo stretchy="false">→</mo></mover><mi>i</mi><mo stretchy="false">)</mo></mrow><msup><mo>∇</mo><mn>2</mn></msup><msub><mi>C</mi><mn>1</mn></msub><mo>+</mo><mover accent="true"><mo stretchy="false">(</mo><mo stretchy="false">→</mo></mover><mi>j</mi><mo stretchy="false">)</mo></mrow><msup><mo>∇</mo><mn>2</mn></msup><msub><mi>C</mi><mn>2</mn></msub><mo>+</mo><mover accent="true"><mo stretchy="false">(</mo><mo stretchy="false">→</mo></mover><mi>k</mi><mo stretchy="false">)</mo><mo>∇</mo><msup><mi></mi><mn>2</mn></msup><mi>C</mi><msub><mi></mi><mn>3</mn></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(43)</span></td>
+</tr>
+</table>
+<p class="ltx_p">This will give us an ”array” 3 by 3 that has overcounted the items on the ”main diagonal” the curl of the curl has no terms of the form:</p>
+<table id="S5.E44" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E44.m1" class="ltx_Math" alttext="\frac{\partial^{2}f_{1}}{\partial x_{1}^{2}}" display="block"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msub><mi>f</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></mrow></mfrac></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(44)</span></td>
+</tr>
+</table>
+<p class="ltx_p">And so we must resort to trickery using an</p>
+<table id="S5.E45" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E45.m1" class="ltx_Math" alttext="\left[\vec{(}i)\frac{\partial^{2}C_{1}}{\partial x_{1}^{2}}+\vec{(}j)\frac{%
+\partial^{2}C_{2}}{\partial x_{2}^{2}}+\vec{(}k)\frac{\partial^{2}C_{3}}{%
+\partial x_{3}^{2}}\right]-\left[\vec{(}i)\frac{\partial^{2}C_{1}}{\partial x_%
+{1}^{2}}+\vec{(}j)\frac{\partial^{2}C_{2}}{\partial x_{2}^{2}}+\vec{(}k)\frac{%
+\partial^{2}C_{3}}{\partial x_{3}^{2}}\right]" display="block"><mrow><mrow><mrow><mrow><mrow><mrow><mrow><mo>[</mo><mover accent="true"><mo stretchy="false">(</mo><mo stretchy="false">→</mo></mover><mi>i</mi><mo stretchy="false">)</mo></mrow><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msub><mi>C</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></mrow></mfrac><mo>+</mo><mover accent="true"><mo stretchy="false">(</mo><mo stretchy="false">→</mo></mover><mi>j</mi><mo stretchy="false">)</mo></mrow><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msub><mi>C</mi><mn>2</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mfrac><mo>+</mo><mover accent="true"><mo stretchy="false">(</mo><mo stretchy="false">→</mo></mover><mi>k</mi><mo stretchy="false">)</mo></mrow><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msub><mi>C</mi><mn>3</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>x</mi><mn>3</mn><mn>2</mn></msubsup></mrow></mfrac><mo>]</mo></mrow><mo>-</mo><mrow><mo>[</mo><mover accent="true"><mo stretchy="false">(</mo><mo stretchy="false">→</mo></mover><mi>i</mi><mo stretchy="false">)</mo></mrow><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msub><mi>C</mi><mn>1</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></mrow></mfrac><mo>+</mo><mover accent="true"><mo stretchy="false">(</mo><mo stretchy="false">→</mo></mover><mi>j</mi><mo stretchy="false">)</mo></mrow><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msub><mi>C</mi><mn>2</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mfrac><mo>+</mo><mover accent="true"><mo stretchy="false">(</mo><mo stretchy="false">→</mo></mover><mi>k</mi><mo stretchy="false">)</mo></mrow><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><msub><mi>C</mi><mn>3</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msubsup><mi>x</mi><mn>3</mn><mn>2</mn></msubsup></mrow></mfrac><mo>]</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(45)</span></td>
+</tr>
+</table>
+<p class="ltx_p">As a substituion for zero.
+What remains is to show that the positive part of the above expression together with the remaining part of the curl is indeed</p>
+<table id="S5.E46" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E46.m1" class="ltx_Math" alttext="\nabla(\nabla\cdot A)" display="block"><mrow><mo>∇</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⋅</mo><mi>A</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(46)</span></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bibx1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">RW</span>
+        
+<span class="ltx_bibblock"> Ramo, Simon, and
+Whinnery, John R. (1944). <span class="ltx_text ltx_font_italic">Fields and Waves in Modern Radio.</span> General Electric Company.
+
+</span>
+      </li>
+      
+<li id="bib.bibx2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">KC</span>
+        
+<span class="ltx_bibblock"> Krause, John D. and Carver, Keith R.
+(1973). <span class="ltx_text ltx_font_italic">Electromagnetics Second Edition.</span> McGraw Hill Book Company
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">vector identities</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">VectorIdentities</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:07:43</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:07:43</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mark_t314159 (20778)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mark_t314159 (20778)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">34</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mark_t314159 (20778)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 15A72</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:33:09 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

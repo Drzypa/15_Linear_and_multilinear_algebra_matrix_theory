@@ -1,0 +1,156 @@
+<!DOCTYPE html><html>
+<head>
+<title>ideals in matrix algebras</title>
+<!--Generated on Fri Feb  9 18:27:16 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">ideals in matrix algebras</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> be a ring with 1. Consider the ring <math id="p1.m2" class="ltx_Math" alttext="M_{n\times n}(R)" display="inline"><mrow><msub><mi>M</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow></math> of <math id="p1.m3" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math>-matrices with entries taken from <math id="p1.m4" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">It will be shown that there exists a one-to-one
+correspondence between the (two-sided) ideals of <math id="p2.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> and the
+(two-sided) ideals of <math id="p2.m2" class="ltx_Math" alttext="M_{n\times n}(R)" display="inline"><mrow><msub><mi>M</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">For <math id="p3.m1" class="ltx_Math" alttext="1\leq i,j\leq n" display="inline"><mrow><mrow><mn>1</mn><mo>≤</mo><mi>i</mi></mrow><mo>,</mo><mrow><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></mrow></math>, let <math id="p3.m2" class="ltx_Math" alttext="E_{ij}" display="inline"><msub><mi>E</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math> denote the <math id="p3.m3" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math>-matrix having entry 1 at position
+<math id="p3.m4" class="ltx_Math" alttext="(i,j)" display="inline"><mrow><mo stretchy="false">(</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></math> and 0 in all other places. It can be
+easily checked that</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="E_{ij}\cdot E_{kl}=\left\{\begin{array}[]{lllll}0&amp;\mbox{iff}&amp;k\neq j\\
+E_{il}&amp;\mbox{otherwise.}\end{array}\right." display="block"><mrow><mrow><msub><mi>E</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⋅</mo><msub><mi>E</mi><mrow><mi>k</mi><mo>⁢</mo><mi>l</mi></mrow></msub></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd columnalign="left"><mtext>iff</mtext></mtd><mtd columnalign="left"><mrow><mi>k</mi><mo>≠</mo><mi>j</mi></mrow></mtd><mtd></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><msub><mi>E</mi><mrow><mi>i</mi><mo>⁢</mo><mi>l</mi></mrow></msub></mtd><mtd columnalign="left"><mtext>otherwise.</mtext></mtd><mtd></mtd><mtd></mtd><mtd></mtd></mtr></mtable><mi></mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Let <math id="p3.m5" class="ltx_Math" alttext="\mathfrak{m}" display="inline"><mi>𝔪</mi></math> be an ideal in <math id="p3.m6" class="ltx_Math" alttext="M_{n\times n}(R)" display="inline"><mrow><msub><mi>M</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="Thmclaimx1" class="ltx_theorem ltx_theorem_claim">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Claim</span>.</h6>
+<div id="Thmclaimx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The set <math id="Thmclaimx1.p1.m1" class="ltx_Math" alttext="\mathfrak{i}\subseteq R" display="inline"><mrow><mi mathvariant="normal">i</mi><mo mathvariant="normal">⊆</mo><mi>R</mi></mrow></math> given by</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\mathfrak{i}=\{x\in R\mid x\quad\mbox{is an entry
+of }A\in\mathfrak{m}\}" display="block"><mrow><mi>𝔦</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>R</mi></mrow><mo>∣</mo><mrow><mrow><mi>x</mi><mo mathvariant="italic" separator="true"> </mo><mrow><mtext mathvariant="italic">is an entry
+of </mtext><mo>⁢</mo><mi>A</mi></mrow></mrow><mo>∈</mo><mi>𝔪</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">is an ideal in <math id="Thmclaimx1.p1.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>, and
+<math id="Thmclaimx1.p1.m3" class="ltx_Math" alttext="\mathfrak{m}=M_{n\times n}(\mathfrak{i})" display="inline"><mrow><mi mathvariant="normal">m</mi><mo mathvariant="normal">=</mo><mrow><msub><mi>M</mi><mrow><mi>n</mi><mo mathvariant="normal">×</mo><mi>n</mi></mrow></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi mathvariant="normal">i</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><math id="p4.m1" class="ltx_Math" alttext="\mathfrak{i}\neq\emptyset" display="inline"><mrow><mi>𝔦</mi><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math> since <math id="p4.m2" class="ltx_Math" alttext="0\in\mathfrak{i}" display="inline"><mrow><mn>0</mn><mo>∈</mo><mi>𝔦</mi></mrow></math>. Now let <math id="p4.m3" class="ltx_Math" alttext="A=(a_{ij})" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p4.m4" class="ltx_Math" alttext="B=(b_{ij})" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>b</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math>
+be matrices in <math id="p4.m5" class="ltx_Math" alttext="\mathfrak{m}" display="inline"><mi>𝔪</mi></math>, and <math id="p4.m6" class="ltx_Math" alttext="x,y\in R" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>R</mi></mrow></math> be
+entries of <math id="p4.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="p4.m8" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> respectively, say
+<math id="p4.m9" class="ltx_Math" alttext="x=a_{ij}" display="inline"><mrow><mi>x</mi><mo>=</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></math> and <math id="p4.m10" class="ltx_Math" alttext="y=b_{kl}" display="inline"><mrow><mi>y</mi><mo>=</mo><msub><mi>b</mi><mrow><mi>k</mi><mo>⁢</mo><mi>l</mi></mrow></msub></mrow></math>. Then the matrix <math id="p4.m11" class="ltx_Math" alttext="A\cdot E_{jl}+E_{ik}\cdot B\in\mathfrak{m}" display="inline"><mrow><mrow><mrow><mi>A</mi><mo>⋅</mo><msub><mi>E</mi><mrow><mi>j</mi><mo>⁢</mo><mi>l</mi></mrow></msub></mrow><mo>+</mo><mrow><msub><mi>E</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⋅</mo><mi>B</mi></mrow></mrow><mo>∈</mo><mi>𝔪</mi></mrow></math> has <math id="p4.m12" class="ltx_Math" alttext="x+y" display="inline"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></math>
+at position <math id="p4.m13" class="ltx_Math" alttext="(i,l)" display="inline"><mrow><mo stretchy="false">(</mo><mi>i</mi><mo>,</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></math>, and it follows: If <math id="p4.m14" class="ltx_Math" alttext="x,y\in\mathfrak{i}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>𝔦</mi></mrow></math>, then <math id="p4.m15" class="ltx_Math" alttext="x+y\in\mathfrak{i}" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>∈</mo><mi>𝔦</mi></mrow></math>. Since
+<math id="p4.m16" class="ltx_Math" alttext="\mathfrak{i}" display="inline"><mi>𝔦</mi></math> is an ideal in <math id="p4.m17" class="ltx_Math" alttext="M_{n\times n}(R)" display="inline"><mrow><msub><mi>M</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+it contains, in particular, the matrices <math id="p4.m18" class="ltx_Math" alttext="D_{r}\cdot A" display="inline"><mrow><msub><mi>D</mi><mi>r</mi></msub><mo>⋅</mo><mi>A</mi></mrow></math> and <math id="p4.m19" class="ltx_Math" alttext="A\cdot D_{r}" display="inline"><mrow><mi>A</mi><mo>⋅</mo><msub><mi>D</mi><mi>r</mi></msub></mrow></math>, where</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="D_{r}:=\sum_{i=1}^{n}r\cdot E_{ii},r\in R." display="block"><mrow><mrow><mrow><msub><mi>D</mi><mi>r</mi></msub><mo>:=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mi>r</mi><mo>⋅</mo><msub><mi>E</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow></mrow></mrow><mo>,</mo><mrow><mi>r</mi><mo>∈</mo><mi>R</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">thus, <math id="p4.m20" class="ltx_Math" alttext="rx,xr\in\mathfrak{i}" display="inline"><mrow><mrow><mrow><mi>r</mi><mo>⁢</mo><mi>x</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>⁢</mo><mi>r</mi></mrow></mrow><mo>∈</mo><mi>𝔦</mi></mrow></math>. This shows
+that <math id="p4.m21" class="ltx_Math" alttext="\mathfrak{i}" display="inline"><mi>𝔦</mi></math> is an ideal in <math id="p4.m22" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>.
+Furthermore, <math id="p4.m23" class="ltx_Math" alttext="M_{n\times n}(\mathfrak{i})\subseteq\mathfrak{m}" display="inline"><mrow><mrow><msub><mi>M</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔦</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mi>𝔪</mi></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">By construction, any matrix <math id="p5.m1" class="ltx_Math" alttext="A\in\mathfrak{m}" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi>𝔪</mi></mrow></math>
+has entries in <math id="p5.m2" class="ltx_Math" alttext="\mathfrak{i}" display="inline"><mi>𝔦</mi></math>, so we have</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="A=\sum\limits_{1\leq i,j\leq n}a_{ij}E_{ij},a_{ij}\in\mathfrak{i}" display="block"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><mn>1</mn><mo>≤</mo><mi>i</mi></mrow><mo>,</mo><mrow><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></mrow></munder><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mi>E</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></mrow></mrow><mo>,</mo><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>∈</mo><mi>𝔦</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so <math id="p5.m3" class="ltx_Math" alttext="A\in m_{n\times n}(\mathfrak{i})" display="inline"><mrow><mi>A</mi><mo>∈</mo><mrow><msub><mi>m</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔦</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Therefore
+<math id="p5.m4" class="ltx_Math" alttext="\mathfrak{m}\subseteq M_{n\times n}(\mathfrak{i})" display="inline"><mrow><mi>𝔪</mi><mo>⊆</mo><mrow><msub><mi>M</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝔦</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">A consequence of this is: If <math id="p6.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is a field, then <math id="p6.m2" class="ltx_Math" alttext="M_{n\times n}(F)" display="inline"><mrow><msub><mi>M</mi><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>F</mi><mo stretchy="false">)</mo></mrow></mrow></math> is simple.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">ideals in matrix algebras</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">IdealsInMatrixAlgebras</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:59:28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:59:28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathcam (2727)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 15A30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:27:16 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

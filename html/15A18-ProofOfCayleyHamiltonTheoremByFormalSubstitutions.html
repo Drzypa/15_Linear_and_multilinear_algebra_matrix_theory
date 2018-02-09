@@ -1,0 +1,346 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Cayley-Hamilton theorem by formal substitutions</title>
+<!--Generated on Fri Feb  9 18:26:11 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Cayley-Hamilton theorem by formal substitutions</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break"><span class="ltx_ERROR undefined">\PMlinkescapephrase</span>
+<p class="ltx_p">properties</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be a <math id="p2.m2" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrix with entries
+in a commutative ring with identity, and let <math id="p2.m3" class="ltx_Math" alttext="p(\lambda)=c_{0}+c_{1}\lambda+\dots+c_{n}\lambda^{n}" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mi>λ</mi></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>λ</mi><mi>n</mi></msup></mrow></mrow></mrow></math> be its characteristic polynomial.
+We will prove that <math id="p2.m4" class="ltx_Math" alttext="p(A):=c_{0}I+c_{1}A+\dots+c_{n}A^{n}=0" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>⁢</mo><mi>I</mi></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mi>A</mi></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>A</mi><mi>n</mi></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_bold ltx_font_italic">Proof</em><math id="p3.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math><span class="ltx_text ltx_font_bold"> (Popular fake proof):</span></p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">In the expression</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle p(t)=\det(A-tI)=c_{0}+c_{1}t+\cdots+c_{n}t^{n}\,," display="inline"><mrow><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>t</mi><mi>n</mi></msup></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">substitute <math id="p4.m1" class="ltx_Math" alttext="t=A" display="inline"><mrow><mi>t</mi><mo>=</mo><mi>A</mi></mrow></math>; then <math id="p4.m2" class="ltx_Math" alttext="p(A)=\det(A-AI)=\det(0)=0" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>A</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>. <math id="p4.m3" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><math id="p5.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math></p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">It is clear why the argument is faulty.
+But interestingly, there is a way to rescue it using clever formal substitution arguments. For the moment,
+we assume that the matrix <math id="p6.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is over the complex field.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Since the notation <math id="p7.m1" class="ltx_Math" alttext="p(\lambda)" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p7.m2" class="ltx_Math" alttext="p(A)" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math> can be confusing at first sight, as one expression takes scalar values and the other matrix values, we will change it. From now on, we will use the notation <math id="p7.m3" class="ltx_Math" alttext="\widetilde{p}(t)" display="inline"><mrow><mover accent="true"><mi>p</mi><mo>~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> when applying the polymial <math id="p7.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> to a matrix <math id="p7.m5" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>. In this sense <math id="p7.m6" class="ltx_Math" alttext="p(\cdot)" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow></mrow></math> is a function of <math id="p7.m7" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> and <math id="p7.m8" class="ltx_Math" alttext="\widetilde{p}(\cdot)" display="inline"><mrow><mover accent="true"><mi>p</mi><mo>~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow></mrow></math> is function of matrices. Also, by definition,
+</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle\widetilde{p}(t):=c_{0}I+c_{1}t+\dots+c_{n}t^{n}\,,\qquad\qquad%
+\text{where $t$ is a matrix}" display="inline"><mrow><mrow><mover accent="true"><mi>p</mi><mo>~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mrow><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>⁢</mo><mi>I</mi></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>t</mi><mi>n</mi></msup></mpadded></mrow></mrow><mo rspace="42.5pt">,</mo><mrow><mtext>where </mtext><mi>t</mi><mtext> is a matrix</mtext></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Of course, we intend to prove that <math id="p7.m9" class="ltx_Math" alttext="\widetilde{p}(A)=0" display="inline"><mrow><mrow><mover accent="true"><mi>p</mi><mo>~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_bold ltx_font_italic">Proof</em><span class="ltx_text ltx_font_bold"> <math id="p8.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math> (Proof of the complex case):</span></p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">For each <math id="p9.m1" class="ltx_Math" alttext="\lambda\in\mathbb{C}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>ℂ</mi></mrow></math> let <math id="p9.m2" class="ltx_Math" alttext="B(\lambda)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the classical adjoint to <math id="p9.m3" class="ltx_Math" alttext="A-\lambda I" display="inline"><mrow><mi>A</mi><mo>-</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow></mrow></math>.
+We have</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="B(\lambda)(A-\lambda I)=\det(A-\lambda I)I=p(\lambda)I=c_{0}I+\lambda(c_{1}I)+%
+\cdots+\lambda^{n}(c_{n}I)\,." display="block"><mrow><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>I</mi></mrow></mrow><mo>=</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>I</mi></mrow><mo>=</mo><mrow><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>⁢</mo><mi>I</mi></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mi>I</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msup><mi>λ</mi><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><mi>I</mi></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">From the definition of the classical adjoint, it is clear
+that <math id="p9.m4" class="ltx_Math" alttext="B(\lambda)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></math> can be written as a polynomial of <math id="p9.m5" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> having degree <math id="p9.m6" class="ltx_Math" alttext="\leq n-1" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mrow></math>, whose coefficients are matrices.
+That is,</p>
+<table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle B(\lambda)=D_{0}+D_{1}\lambda+\dots+D_{n-1}\lambda^{n-1}\,," display="inline"><mrow><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>D</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>⁢</mo><mi>λ</mi></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>D</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>λ</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some constant coefficient matrices <math id="p9.m7" class="ltx_Math" alttext="D_{i}" display="inline"><msub><mi>D</mi><mi>i</mi></msub></math>.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">Now, we would like <math id="p10.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> to be defined for matrices (just like from the polynomial <math id="p10.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> we have considered <math id="p10.m3" class="ltx_Math" alttext="\widetilde{p}" display="inline"><mover accent="true"><mi>p</mi><mo>~</mo></mover></math>), so we define for every matrix <math id="p10.m4" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math></p>
+</div>
+<div id="p11" class="ltx_para">
+<table id="A0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle\widetilde{B}(t):=D_{0}+D_{1}t+\dots+D_{n-1}t^{n-1}\,." display="inline"><mrow><mrow><mrow><mover accent="true"><mi>B</mi><mo>~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><msub><mi>D</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>D</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>t</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">Now consider the following function of matrices:</p>
+<table id="A0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle Q(t):=(D_{0}A-c_{0}I)+(D_{1}A-D_{0}-c_{1}I)t+\dots+(D_{n-1}A-D_{%
+n-2}-c_{n-1}I)t^{n-1}+(-D_{n-1}-c_{n}I)t^{n}" display="inline"><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>D</mi><mn>0</mn></msub><mo>⁢</mo><mi>A</mi></mrow><mo>-</mo><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>⁢</mo><mi>A</mi></mrow><mo>-</mo><msub><mi>D</mi><mn>0</mn></msub><mo>-</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>D</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mi>A</mi></mrow><mo>-</mo><msub><mi>D</mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msub><mo>-</mo><mrow><msub><mi>c</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>t</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><msub><mi>D</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo>-</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>t</mi><mi>n</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p">The above expression may look strange, but if we think that the matrix <math id="p13.m1" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> commutes with all <math id="p13.m2" class="ltx_Math" alttext="D_{0},\dots,D_{n-1}" display="inline"><mrow><msub><mi>D</mi><mn>0</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>D</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></math> and <math id="p13.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, then expression (2) is easily seen to be equal to</p>
+<table id="A0.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle(D_{0}+D_{1}t+\dots+D_{n-1}t^{n-1})(A-It)-c_{0}I-c_{1}t-\dots-c_{%
+n}t^{n}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>D</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>D</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>t</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>I</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>⁢</mo><mi>I</mi></mrow><mo>-</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow><mo>-</mo><mi mathvariant="normal">…</mi><mo>-</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>t</mi><mi>n</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This means that</p>
+<table id="A0.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle Q(t)=\widetilde{B}(t)(A-It)-\widetilde{p}(t)\;\;\;\;\;\;\;\text{%
+whenever}\;t\text{commutes with}D_{0},\dots,D_{n-1},A" display="inline"><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mover accent="true"><mi>B</mi><mo>~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>I</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mover accent="true"><mi>p</mi><mo>~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo mathvariant="italic" separator="true">   </mo><mrow><mpadded width="+2.8pt"><mtext>whenever</mtext></mpadded><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mtext>commutes with</mtext><mo>⁢</mo><msub><mi>D</mi><mn>0</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>D</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><mi>A</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The reason for not defining <math id="p13.m4" class="ltx_Math" alttext="Q(t)" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> by the expression in (3) is that we want <math id="p13.m5" class="ltx_Math" alttext="Q(t)" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> to be some kind of ”polynomial” in <math id="p13.m6" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> (with matrix coefficients on the left of each <math id="p13.m7" class="ltx_Math" alttext="t^{k}" display="inline"><msup><mi>t</mi><mi>k</mi></msup></math>).</p>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">We now state some properties that can be easily checked by straightforward calculation:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\widetilde{p}(\lambda I)=p(\lambda)I" display="inline"><mrow><mrow><mover accent="true"><mi>p</mi><mo>~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>I</mi></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\widetilde{B}(\lambda I)=B(\lambda)" display="inline"><mrow><mrow><mover accent="true"><mi>B</mi><mo>~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">Notice that matrices of the form <math id="p15.m1" class="ltx_Math" alttext="\lambda I" display="inline"><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow></math> with <math id="p15.m2" class="ltx_Math" alttext="\lambda\in\mathbb{C}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>ℂ</mi></mrow></math> commute with every other matrix, so that</p>
+<table id="A0.EGx8" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle Q(\lambda I)=\widetilde{B}(\lambda I)(A-\lambda I)-\widetilde{p}%
+(\lambda I)=B(\lambda)(A-\lambda I)-p(\lambda)I=0" display="inline"><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mover accent="true"><mi>B</mi><mo>~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mover accent="true"><mi>p</mi><mo>~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>I</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p16" class="ltx_para">
+<p class="ltx_p">Now <math id="p16.m1" class="ltx_Math" alttext="Q(\lambda I)" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is also a matrix whose entries <math id="p16.m2" class="ltx_Math" alttext="q_{ij}(\lambda)" display="inline"><mrow><msub><mi>q</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></math> are polynomials in <math id="p16.m3" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math>. Since <math id="p16.m4" class="ltx_Math" alttext="Q(\lambda I)=0" display="inline"><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> we must have <math id="p16.m5" class="ltx_Math" alttext="q_{ij}(\lambda)=0" display="inline"><mrow><mrow><msub><mi>q</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for all <math id="p16.m6" class="ltx_Math" alttext="\lambda\in\mathbb{C}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>ℂ</mi></mrow></math>. This means that <math id="p16.m7" class="ltx_Math" alttext="q_{ij}(t)" display="inline"><mrow><msub><mi>q</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the zero
+polynomial and, since this occurs for all <math id="p16.m8" class="ltx_Math" alttext="i,j" display="inline"><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></math>, it follows that
+the matrix coefficients of <math id="p16.m9" class="ltx_Math" alttext="t^{k}" display="inline"><msup><mi>t</mi><mi>k</mi></msup></math> occurring in (2) are all zero, i.e. <math id="p16.m10" class="ltx_Math" alttext="Q(t)" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the zero matrix for all matrices <math id="p16.m11" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>.</p>
+</div>
+<div id="p17" class="ltx_para">
+<p class="ltx_p">Taking <math id="p17.m1" class="ltx_Math" alttext="t=A" display="inline"><mrow><mi>t</mi><mo>=</mo><mi>A</mi></mrow></math> we can also see that</p>
+<table id="A0.EGx9" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle Q(A)" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle(D_{0}A-c_{0}I)+(D_{1}A-D_{0}-c_{1}I)A+\dots+(D_{n-1}A-D_{n-2}-c_%
+{n-1}I)A^{n-1}+(-D_{n-1}-c_{n}I)A^{n}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>D</mi><mn>0</mn></msub><mo>⁢</mo><mi>A</mi></mrow><mo>-</mo><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>⁢</mo><mi>A</mi></mrow><mo>-</mo><msub><mi>D</mi><mn>0</mn></msub><mo>-</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>A</mi></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>D</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mi>A</mi></mrow><mo>-</mo><msub><mi>D</mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msub><mo>-</mo><mrow><msub><mi>c</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>A</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><msub><mi>D</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo>-</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>A</mi><mi>n</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle-c_{0}I-c_{1}A-\dots-c_{n-1}A^{n-1}-c_{n}A^{n}" display="inline"><mrow><mrow><mo>-</mo><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>⁢</mo><mi>I</mi></mrow></mrow><mo>-</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mi>A</mi></mrow><mo>-</mo><mi mathvariant="normal">…</mi><mo>-</mo><mrow><msub><mi>c</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>A</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>-</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>A</mi><mi>n</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m3" class="ltx_Math" alttext="\displaystyle-\widetilde{p}(A)" display="inline"><mrow><mo>-</mo><mrow><mover accent="true"><mi>p</mi><mo>~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p18" class="ltx_para">
+<p class="ltx_p">Hence <math id="p18.m1" class="ltx_Math" alttext="\widetilde{p}(A)=0" display="inline"><mrow><mrow><mover accent="true"><mi>p</mi><mo>~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, which finishes the proof. <math id="p18.m2" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="p19" class="ltx_para">
+<p class="ltx_p"><math id="p19.m1" class="ltx_Math" alttext="," display="inline"><mrow><mi></mi><mo>,</mo></mrow></math></p>
+</div>
+<div id="p20" class="ltx_para">
+<p class="ltx_p">Actually, <math id="p20.m1" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> could have been substituted with <math id="p20.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> or <math id="p20.m3" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> in the proof above.
+The only property of <math id="p20.m4" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> that was used is that it is an infinite integral domain.</p>
+</div>
+<div id="p21" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_bold ltx_font_italic">Proof</em><span class="ltx_text ltx_font_bold"> <math id="p21.m1" class="ltx_Math" alttext="\," display="inline"><mi></mi></math> (Proof for an arbitrary commutative ring with identity):</span></p>
+</div>
+<div id="p22" class="ltx_para">
+<p class="ltx_p">Let <math id="p22.m1" class="ltx_Math" alttext="A=(a_{ij})" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math>, where the entries <math id="p22.m2" class="ltx_Math" alttext="a_{ij}" display="inline"><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math> are in commutative ring with identity <math id="p22.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>. First notice that, since <math id="p22.m4" class="ltx_Math" alttext="c_{0}+c_{1}\lambda+\dots+c_{n}\lambda^{n}=p(\lambda)=\det(A-\lambda I)" display="inline"><mrow><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mi>λ</mi></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>λ</mi><mi>n</mi></msup></mrow></mrow><mo>=</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, where <math id="p22.m5" class="ltx_Math" alttext="\lambda\in R" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>R</mi></mrow></math>, we have that the coefficients <math id="p22.m6" class="ltx_Math" alttext="c_{0},\dots,c_{n}" display="inline"><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>c</mi><mi>n</mi></msub></mrow></math> are polynomials in <math id="p22.m7" class="ltx_Math" alttext="\{a_{ij}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+<div id="p23" class="ltx_para">
+<p class="ltx_p">Hence <math id="p23.m1" class="ltx_Math" alttext="\widetilde{p}(A):=c_{0}I+c_{1}A+\dots+c_{n}A^{n}" display="inline"><mrow><mrow><mover accent="true"><mi>p</mi><mo>~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>⁢</mo><mi>I</mi></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mi>A</mi></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>A</mi><mi>n</mi></msup></mrow></mrow></mrow></math> is a matrix whose entries are also polynomials in <math id="p23.m2" class="ltx_Math" alttext="\{a_{ij}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">}</mo></mrow></math>.
+These polynomials vanish for every assignment of <math id="p23.m3" class="ltx_Math" alttext="\{a_{ij}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">}</mo></mrow></math> to numbers in <math id="p23.m4" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>,
+because the complex case of the theorem has already been proven (this would be the same as substituting the matrix <math id="p23.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> by a matrix with complex entries).
+Therefore these polynomials are zero polynomials and we conclude that <math id="p23.m6" class="ltx_Math" alttext="\widetilde{p}(A)=0" display="inline"><mrow><mrow><mover accent="true"><mi>p</mi><mo>~</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> as we inteded to prove.<math id="p23.m7" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Comments on other proofs</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">Yet another proof of the Cayley-Hamilton Theorem (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ProofOfCayleyHamiltonTheorem</span>)
+is to establish it for diagonalizable matrices,
+and then by a density argument (i.e. every matrix can be approximated by
+diagonalizable ones in an algebraically closed field),
+we conclude that <math id="Sx1.p1.m1" class="ltx_Math" alttext="p(A)=0" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> is an identity for all matrices over a field.
+This kind of proof is also presented as an exercise in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">The “standard approach” can be found in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>]</cite>.
+It proves the result for matrices over any field,
+but requires no “abstract algebra” (no algebraic closure, Zariski topology or formal substitutions).</p>
+</div>
+<div id="Sx1.p3" class="ltx_para">
+<p class="ltx_p">The two other proofs just mentioned can be extended to matrices
+over an arbitrary commutative ring simply by repeating the last argument
+in our proof.</p>
+</div>
+<div id="Sx1.p4" class="ltx_para">
+<p class="ltx_p">In <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite> there is a proof similar to the one presented here (although it has some errors).</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Michael Artin. <span class="ltx_text ltx_font_italic">Algebra</span>. Prentice-Hall, 1991.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+Martin Braun. <span class="ltx_text ltx_font_italic">Differential equations and their applications: an introduction to applied mathematics</span>,
+3rd edition. Springer-Verlag, 1983.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+Friedberg, Insel, Spence.
+<span class="ltx_text ltx_font_italic">Linear Algebra</span>, 3rd edition. Prentice-Hall, 1997.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p24" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Cayley-Hamilton theorem by formal substitutions</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfCayleyHamiltonTheoremByFormalSubstitutions</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:27:28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:27:28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">19</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">asteroid (17536)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 15A18</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 15A15</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 18:26:11 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
