@@ -18,29 +18,29 @@
 
 <div id="p1" class="ltx_para">
 <br class="ltx_break">
-<p class="ltx_p">The definition of determinant as a multilinear mapping on rows can be
-modified to provide a basis-free definition of determinant. In order
+<p class="ltx_p">The <a class="nnexus_concept" href="http://planetmath.org/definition">definition</a> of <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">determinant</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Determinant.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/determinant"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> as a multilinear mapping on rows can be
+modified to provide a <a class="nnexus_concept" href="http://planetmath.org/basisfreedefinitionofdeterminant">basis-free definition of determinant</a>. In order
 to make it clear that we are not using bases. we shall speak in terms
-of an endomorphism of a vector space over <math id="p1.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> rather than speaking of
+of an <a class="nnexus_concept" href="http://planetmath.org/structurehomomorphism">endomorphism</a> of a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">vector space</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/VectorSpace.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/vectorspace"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> over <math id="p1.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> rather than speaking of
 a matrix whose entries belong to <math id="p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>. We start by recalling some
 preliminary facts.
 </p>
 </div>
 <div id="p2" class="ltx_para">
-<p class="ltx_p">Suppose <math id="p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a finite-dimensional vector space of dimension <math id="p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> over
+<p class="ltx_p">Suppose <math id="p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a <a class="nnexus_concept" href="http://planetmath.org/dimensionvectorspace">finite-dimensional</a> vector space of <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">dimension</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/orthonormalbasis"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/dimension"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> <math id="p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> over
 a field <math id="p2.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>. Recall that a multilinear map <math id="p2.m4" class="ltx_Math" alttext="f\colon V^{n}\to k" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msup><mi>V</mi><mi>n</mi></msup><mo>→</mo><mi>k</mi></mrow></mrow></math> is
-alternating if <math id="p2.m5" class="ltx_Math" alttext="f(x)=0" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> whenever there exist distinct indices
+<a class="nnexus_concept" href="http://planetmath.org/alternatingform">alternating</a> if <math id="p2.m5" class="ltx_Math" alttext="f(x)=0" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> whenever there exist distinct indices
 <math id="p2.m6" class="ltx_Math" alttext="i,j\in[n]=\{1,\dots,n\}" display="inline"><mrow><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></mrow></math> such that <math id="p2.m7" class="ltx_Math" alttext="x_{i}=x_{j}" display="inline"><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></math>. Every alternating
-map <math id="p2.m8" class="ltx_Math" alttext="f\colon V^{n}\to k" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msup><mi>V</mi><mi>n</mi></msup><mo>→</mo><mi>k</mi></mrow></mrow></math> is skew-symmetric, that is, for each
-permutation <math id="p2.m9" class="ltx_Math" alttext="\pi\in\mathfrak{S}_{n}" display="inline"><mrow><mi>π</mi><mo>∈</mo><msub><mi>𝔖</mi><mi>n</mi></msub></mrow></math>, we have that <math id="p2.m10" class="ltx_Math" alttext="f(x)=\operatorname{sgn}(\pi)f(x^{\pi})" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>sgn</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>π</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mi>π</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, where <math id="p2.m11" class="ltx_Math" alttext="x^{\pi}" display="inline"><msup><mi>x</mi><mi>π</mi></msup></math> denotes
+map <math id="p2.m8" class="ltx_Math" alttext="f\colon V^{n}\to k" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msup><mi>V</mi><mi>n</mi></msup><mo>→</mo><mi>k</mi></mrow></mrow></math> is <a class="nnexus_concept" href="http://planetmath.org/antisymmetricmapping">skew-symmetric</a>, that is, for each
+<a class="nnexus_concept" href="http://planetmath.org/permutation">permutation</a> <math id="p2.m9" class="ltx_Math" alttext="\pi\in\mathfrak{S}_{n}" display="inline"><mrow><mi>π</mi><mo>∈</mo><msub><mi>𝔖</mi><mi>n</mi></msub></mrow></math>, we have that <math id="p2.m10" class="ltx_Math" alttext="f(x)=\operatorname{sgn}(\pi)f(x^{\pi})" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>sgn</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>π</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mi>π</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, where <math id="p2.m11" class="ltx_Math" alttext="x^{\pi}" display="inline"><msup><mi>x</mi><mi>π</mi></msup></math> denotes
 <math id="p2.m12" class="ltx_Math" alttext="(x_{\pi(i)})_{i\in[n]}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo stretchy="false">)</mo></mrow><mrow><mi>i</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></mrow></msub></math>, the result of <math id="p2.m13" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> permuting the entries of
 <math id="p2.m14" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.</p>
 </div>
 <div id="p3" class="ltx_para">
-<p class="ltx_p">Since the trivial map <math id="p3.m1" class="ltx_Math" alttext="0\colon V^{n}\to k" display="inline"><mrow><mn>0</mn><mo>:</mo><mrow><msup><mi>V</mi><mi>n</mi></msup><mo>→</mo><mi>k</mi></mrow></mrow></math> is alternating and any linear
-combination of alternating maps is alternating, it follows that
-alternating maps form a subspace of the space of multilinear maps. In
-the following proposition we show that this subspace is
+<p class="ltx_p">Since the <a class="nnexus_concept" href="http://mathworld.wolfram.com/Trivial.html">trivial</a> map <math id="p3.m1" class="ltx_Math" alttext="0\colon V^{n}\to k" display="inline"><mrow><mn>0</mn><mo>:</mo><mrow><msup><mi>V</mi><mi>n</mi></msup><mo>→</mo><mi>k</mi></mrow></mrow></math> is alternating and any <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">linear
+combination</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/LinearCombination.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/linearcombination"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of alternating maps is alternating, it follows that
+alternating maps form a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">subspace</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/subspacetopology"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/vectorsubspace"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of the space of multilinear maps. In
+the following <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">proposition</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/lemma"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/booleanvaluedfunction"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/propositionallogic"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> we show that this subspace is
 one-dimensional.</p>
 </div>
 <div id="Thmpropositionx1" class="ltx_theorem ltx_theorem_proposition">
@@ -57,12 +57,12 @@ one-dimensional.</span></p>
 <div id="p4" class="ltx_para">
 <p class="ltx_p">We use a basis here, but we will throw it away later. We need the
 basis here because each map we will consider has exactly as many
-elements as a basis of <math id="p4.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. So let <math id="p4.m2" class="ltx_Math" alttext="B=\{b_{i}\colon i\in[n]\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>b</mi><mi>i</mi></msub><mo>:</mo><mrow><mi>i</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math> be a
+<a class="nnexus_concept" href="http://mathworld.wolfram.com/Element.html">elements</a> as a basis of <math id="p4.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. So let <math id="p4.m2" class="ltx_Math" alttext="B=\{b_{i}\colon i\in[n]\}" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>b</mi><mi>i</mi></msub><mo>:</mo><mrow><mi>i</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math> be a
 basis of <math id="p4.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
 </div>
 <div id="p5" class="ltx_para">
 <p class="ltx_p">Suppose <math id="p5.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="p5.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> are nontrivial alternating maps from <math id="p5.m3" class="ltx_Math" alttext="V^{n}" display="inline"><msup><mi>V</mi><mi>n</mi></msup></math> to <math id="p5.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>.
-We claim that <math id="p5.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="p5.m6" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> are linearly dependent. Let <math id="p5.m7" class="ltx_Math" alttext="x\in V^{n}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>V</mi><mi>n</mi></msup></mrow></math>. We
+We claim that <math id="p5.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="p5.m6" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> are <a class="nnexus_concept" href="http://planetmath.org/linearlyindependent">linearly dependent</a>. Let <math id="p5.m7" class="ltx_Math" alttext="x\in V^{n}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>V</mi><mi>n</mi></msup></mrow></math>. We
 may assume that the entries of <math id="p5.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> are basis vectors, that is, that <math id="p5.m9" class="ltx_Math" alttext="X=\{x_{i}\colon i\in[n]\}\subset\{b_{i}\colon i\in[n]\}" display="inline"><mrow><mi>X</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mi>i</mi></msub><mo>:</mo><mrow><mi>i</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">}</mo></mrow><mo>⊂</mo><mrow><mo stretchy="false">{</mo><msub><mi>b</mi><mi>i</mi></msub><mo>:</mo><mrow><mi>i</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.
 If <math id="p5.m10" class="ltx_Math" alttext="X\subsetneq B" display="inline"><mrow><mi>X</mi><mo>⊊</mo><mi>B</mi></mrow></math>, then there exist distinct indices <math id="p5.m11" class="ltx_Math" alttext="i,j\in[n]" display="inline"><mrow><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></mrow></math> such
 that <math id="p5.m12" class="ltx_Math" alttext="x_{i}=x_{j}" display="inline"><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></math>. Since <math id="p5.m13" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="p5.m14" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> are alternating, it follows that
@@ -87,7 +87,7 @@ dependent.</p>
 alternating maps is less than or equal to one. In order to show that
 the space is one-dimensional we simply need to find a nontrivial
 alternating form. To do this, let <math id="p6.m1" class="ltx_Math" alttext="\{b^{*}_{i}\colon i\in[n]\}" display="inline"><mrow><mo stretchy="false">{</mo><msubsup><mi>b</mi><mi>i</mi><mo>*</mo></msubsup><mo>:</mo><mrow><mi>i</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">}</mo></mrow></math> be the
-natural basis of <math id="p6.m2" class="ltx_Math" alttext="V^{*}" display="inline"><msup><mi>V</mi><mo>*</mo></msup></math>, so that <math id="p6.m3" class="ltx_Math" alttext="b^{*}_{i}(b_{j})" display="inline"><mrow><msubsup><mi>b</mi><mi>i</mi><mo>*</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>b</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is the Kronecker delta of
+natural basis of <math id="p6.m2" class="ltx_Math" alttext="V^{*}" display="inline"><msup><mi>V</mi><mo>*</mo></msup></math>, so that <math id="p6.m3" class="ltx_Math" alttext="b^{*}_{i}(b_{j})" display="inline"><mrow><msubsup><mi>b</mi><mi>i</mi><mo>*</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>b</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is the <a class="nnexus_concept" href="http://planetmath.org/kroneckerdelta">Kronecker delta</a> of
 <math id="p6.m4" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> and <math id="p6.m5" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> for any <math id="p6.m6" class="ltx_Math" alttext="i,j\in[n]" display="inline"><mrow><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></mrow></math>. Define a map <math id="p6.m7" class="ltx_Math" alttext="f\colon V^{n}\to k" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msup><mi>V</mi><mi>n</mi></msup><mo>→</mo><mi>k</mi></mrow></mrow></math> by</p>
 <table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
 
@@ -98,7 +98,7 @@ natural basis of <math id="p6.m2" class="ltx_Math" alttext="V^{*}" display="inli
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">One can check that <math id="p6.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is multilinear and alternating. Moreover,
+<p class="ltx_p">One can check that <math id="p6.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is <a class="nnexus_concept" href="http://planetmath.org/multilinear">multilinear</a> and alternating. Moreover,
 <math id="p6.m9" class="ltx_Math" alttext="f(b)=1" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>, so it is nontrivial. Hence the space of alternating maps
 is one-dimensional.
 ∎</p>
@@ -106,14 +106,14 @@ is one-dimensional.
 </div>
 <div id="p7" class="ltx_para">
 <p class="ltx_p">For an alternate view of the above results, we could look instead at
-linear maps from the exterior product <math id="p7.m1" class="ltx_Math" alttext="\bigwedge^{n}V" display="inline"><mrow><msup><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋀</mo><mi>n</mi></msup><mi>V</mi></mrow></math> into <math id="p7.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>. The
+<a class="nnexus_concept" href="http://planetmath.org/lineartransformation">linear maps</a> from the <a class="nnexus_concept" href="http://planetmath.org/exterioralgebra">exterior product</a> <math id="p7.m1" class="ltx_Math" alttext="\bigwedge^{n}V" display="inline"><mrow><msup><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋀</mo><mi>n</mi></msup><mi>V</mi></mrow></math> into <math id="p7.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>. The
 proposition above can be viewed as saying that the dimension of
 <math id="p7.m3" class="ltx_Math" alttext="\bigwedge^{n}V" display="inline"><mrow><msup><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋀</mo><mi>n</mi></msup><mi>V</mi></mrow></math> is <math id="p7.m4" class="ltx_Math" alttext="\displaystyle\binom{n}{n}=1" display="inline"><mrow><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac linethickness="0pt"><mi>n</mi><mi>n</mi></mfrac></mstyle><mo>)</mo></mrow><mo>=</mo><mn>1</mn></mrow></math>.</p>
 </div>
 <div id="p8" class="ltx_para">
 <p class="ltx_p">We define the determinant of an endomorphism in terms of the action of
 the endomorphism on alternating maps. Recall that if <math id="p8.m1" class="ltx_Math" alttext="M\colon V\to V" display="inline"><mrow><mi>M</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>V</mi></mrow></mrow></math>
-is an endomorphism, its pullback <math id="p8.m2" class="ltx_Math" alttext="M^{*}" display="inline"><msup><mi>M</mi><mo>*</mo></msup></math> is the unique operator such
+is an endomorphism, its <a class="nnexus_concept" href="http://planetmath.org/pullback">pullback</a> <math id="p8.m2" class="ltx_Math" alttext="M^{*}" display="inline"><msup><mi>M</mi><mo>*</mo></msup></math> is the unique <a class="nnexus_concept" href="http://planetmath.org/operator">operator</a> such
 that</p>
 <table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
 
@@ -124,9 +124,9 @@ that</p>
 </tr>
 </table>
 <p class="ltx_p">Since the space of alternating maps is one-dimensional and
-endomorphisms of a one-dimensional space reduce to scalar
-multiplication, it follows that <math id="p8.m3" class="ltx_Math" alttext="M^{*}f" display="inline"><mrow><msup><mi>M</mi><mo>*</mo></msup><mo>⁢</mo><mi>f</mi></mrow></math> is a scalar multiple of <math id="p8.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.
-We call this scalar the determinant. It is well-defined because the
+endomorphisms of a one-dimensional space reduce to <a class="nnexus_concept" href="http://mathworld.wolfram.com/ScalarMultiplication.html">scalar
+multiplication</a>, it follows that <math id="p8.m3" class="ltx_Math" alttext="M^{*}f" display="inline"><mrow><msup><mi>M</mi><mo>*</mo></msup><mo>⁢</mo><mi>f</mi></mrow></math> is a <a class="nnexus_concept" href="http://planetmath.org/eigenvector">scalar multiple</a> of <math id="p8.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.
+We call this scalar the determinant. It is <a class="nnexus_concept" href="http://planetmath.org/welldefined">well-defined</a> because the
 scalar depends on <math id="p8.m5" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> but not on <math id="p8.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</p>
 </div>
 <div id="Thmdefinitionx1" class="ltx_theorem ltx_theorem_definition">
@@ -155,7 +155,7 @@ a field <math id="Thmdefinitionx1.p1.m3" class="ltx_Math" alttext="k" display="i
 <td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">basis-free definition of determinant</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><a class="nnexus_concept" href="http://planetmath.org/canonical">Canonical</a> name</th>
 <td class="ltx_td ltx_align_left ltx_border_r">BasisfreeDefinitionOfDeterminant</td>
 </tr>
 <tr class="ltx_tr">

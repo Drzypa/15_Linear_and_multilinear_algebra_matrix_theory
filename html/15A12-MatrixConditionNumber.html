@@ -24,8 +24,8 @@
 <span class="ltx_tag ltx_tag_section">1 </span>Matrix Condition Number</h2>
 
 <div id="S1.p1" class="ltx_para">
-<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">condition number for matrix inversion</em> with respect to a matrix norm
-<math id="S1.p1.m1" class="ltx_Math" alttext="\lVert\cdot\rVert" display="inline"><mrow><mo fence="true" stretchy="false">∥</mo><mo>⋅</mo><mo fence="true" stretchy="false">∥</mo></mrow></math> of a square matrix <math id="S1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is defined by</p>
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic"><a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">condition number</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/ConditionNumber.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/matrixconditionnumber"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> for <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">matrix inversion</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/MatrixInversion.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/matrixinverse"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup></em> with respect to a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">matrix norm</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/MatrixNorm.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/matrixnorm"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>
+<math id="S1.p1.m1" class="ltx_Math" alttext="\lVert\cdot\rVert" display="inline"><mrow><mo fence="true" stretchy="false">∥</mo><mo>⋅</mo><mo fence="true" stretchy="false">∥</mo></mrow></math> of a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">square matrix</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/SquareMatrix.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/squarematrix"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> <math id="S1.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is defined by</p>
 <table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -34,22 +34,22 @@
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">if <math id="S1.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is non-singular; and <math id="S1.p1.m4" class="ltx_Math" alttext="\kappa(A)=+\infty" display="inline"><mrow><mrow><mi>κ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math> if <math id="S1.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is singular.</p>
+<p class="ltx_p">if <math id="S1.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is non-singular; and <math id="S1.p1.m4" class="ltx_Math" alttext="\kappa(A)=+\infty" display="inline"><mrow><mrow><mi>κ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math> if <math id="S1.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is <a class="nnexus_concept" href="http://planetmath.org/singular">singular</a>.</p>
 </div>
 <div id="S1.p2" class="ltx_para">
-<p class="ltx_p">The condition number is a measure of stability or sensitivity of a matrix (or the linear system it represents) to numerical operations. In other words, we may not be able to trust the results of computations on an ill-conditioned matrix.</p>
+<p class="ltx_p">The condition number is a measure of stability or sensitivity of a matrix (or the <a class="nnexus_concept" href="http://planetmath.org/linearequation">linear system</a> it represents) to numerical operations. In other words, we may not be able to trust the results of computations on an <a class="nnexus_concept" href="http://mathworld.wolfram.com/Ill-ConditionedMatrix.html">ill-conditioned matrix</a>.</p>
 </div>
 <div id="S1.p3" class="ltx_para">
-<p class="ltx_p">Matrices with condition numbers near 1 are said to be <em class="ltx_emph ltx_font_italic">well-conditioned</em>. Matrices with condition numbers much greater than one (such as around <math id="S1.p3.m1" class="ltx_Math" alttext="10^{5}" display="inline"><msup><mn>10</mn><mn>5</mn></msup></math> for a <math id="S1.p3.m2" class="ltx_Math" alttext="5\times 5" display="inline"><mrow><mn>5</mn><mo>×</mo><mn>5</mn></mrow></math> Hilbert matrix) are said to be <em class="ltx_emph ltx_font_italic">ill-conditioned</em>.</p>
+<p class="ltx_p">Matrices with condition numbers near 1 are said to be <em class="ltx_emph ltx_font_italic">well-conditioned</em>. Matrices with condition numbers much greater than one (such as around <math id="S1.p3.m1" class="ltx_Math" alttext="10^{5}" display="inline"><msup><mn>10</mn><mn>5</mn></msup></math> for a <math id="S1.p3.m2" class="ltx_Math" alttext="5\times 5" display="inline"><mrow><mn>5</mn><mo>×</mo><mn>5</mn></mrow></math> <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">Hilbert matrix</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/HilbertMatrix.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/hilbertmatrix"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>) are said to be <em class="ltx_emph ltx_font_italic">ill-conditioned</em>.</p>
 </div>
 <div id="S1.p4" class="ltx_para">
 <p class="ltx_p">If <math id="S1.p4.m1" class="ltx_Math" alttext="\kappa(A)" display="inline"><mrow><mi>κ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the condition number of <math id="S1.p4.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, then <math id="S1.p4.m3" class="ltx_Math" alttext="\kappa(A)" display="inline"><mrow><mi>κ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math> measures
-a sort of inverse distance from <math id="S1.p4.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> to the set of singular matrices,
+a sort of <a class="nnexus_concept" href="http://planetmath.org/inversenumber">inverse</a> <a class="nnexus_concept" href="http://planetmath.org/distanceinagraph">distance</a> from <math id="S1.p4.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> to the set of <a class="nnexus_concept" href="http://mathworld.wolfram.com/SingularMatrix.html">singular matrices</a>,
 normalized by <math id="S1.p4.m5" class="ltx_Math" alttext="\lVert A\rVert" display="inline"><mrow><mo fence="true" stretchy="false">∥</mo><mi>A</mi><mo fence="true" stretchy="false">∥</mo></mrow></math>.
-Precisely, if <math id="S1.p4.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is invertible, and <math id="S1.p4.m7" class="ltx_Math" alttext="\lVert B-A\rVert&lt;\lVert A^{-1}\rVert^{-1}" display="inline"><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mi>B</mi><mo>-</mo><mi>A</mi></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo>&lt;</mo><msup><mrow><mo fence="true" stretchy="false">∥</mo><msup><mi>A</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo fence="true" stretchy="false">∥</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>,
+Precisely, if <math id="S1.p4.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is <a class="nnexus_concept" href="http://planetmath.org/invertiblelineartransformation">invertible</a>, and <math id="S1.p4.m7" class="ltx_Math" alttext="\lVert B-A\rVert&lt;\lVert A^{-1}\rVert^{-1}" display="inline"><mrow><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mi>B</mi><mo>-</mo><mi>A</mi></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mo>&lt;</mo><msup><mrow><mo fence="true" stretchy="false">∥</mo><msup><mi>A</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo fence="true" stretchy="false">∥</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>,
 then <math id="S1.p4.m8" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> must also be invertible. On the other hand, in the case of the <math id="S1.p4.m9" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>-norm,
 there always exists a singular matrix <math id="S1.p4.m10" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> such that <math id="S1.p4.m11" class="ltx_Math" alttext="\lVert B-A\rVert_{2}=\lVert A^{-1}\rVert_{2}^{-1}" display="inline"><mrow><msub><mrow><mo fence="true" stretchy="false">∥</mo><mrow><mi>B</mi><mo>-</mo><mi>A</mi></mrow><mo fence="true" stretchy="false">∥</mo></mrow><mn>2</mn></msub><mo>=</mo><msubsup><mrow><mo fence="true" stretchy="false">∥</mo><msup><mi>A</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo fence="true" stretchy="false">∥</mo></mrow><mn>2</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mrow></math>
-(so the distance estimate is sharp).</p>
+(so the distance <a class="nnexus_concept" href="http://mathworld.wolfram.com/Estimate.html">estimate</a> is sharp).</p>
 </div>
 </section>
 <section id="bib" class="ltx_bibliography">
@@ -75,7 +75,7 @@ there always exists a singular matrix <math id="S1.p4.m10" class="ltx_Math" altt
 <td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">matrix condition number</td>
 </tr>
 <tr class="ltx_tr">
-<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_l"><a class="nnexus_concept" href="http://planetmath.org/canonical">Canonical</a> name</td>
 <td class="ltx_td ltx_align_left ltx_border_r">MatrixConditionNumber</td>
 </tr>
 <tr class="ltx_tr">
@@ -104,10 +104,10 @@ there always exists a singular matrix <math id="S1.p4.m10" class="ltx_Math" altt
 </tr>
 <tr class="ltx_tr">
 <td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
-<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><a class="nnexus_concept" href="http://planetmath.org/definition">Definition</a></td>
 </tr>
 <tr class="ltx_tr">
-<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_l"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Classification.html">Classification</a></td>
 <td class="ltx_td ltx_align_left ltx_border_r">msc 15A12</td>
 </tr>
 <tr class="ltx_tr">

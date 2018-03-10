@@ -18,12 +18,12 @@
 
 <div id="p1" class="ltx_para">
 <br class="ltx_break">
-<p class="ltx_p">Google’s PageRank algorithm uses a particular stochastic matrix called the Google matrix.
+<p class="ltx_p">Google’s PageRank <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">algorithm</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Algorithm.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/algorithm"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> uses a particular <a class="nnexus_concept" href="http://planetmath.org/stochasticmatrix">stochastic matrix</a> called the <a class="nnexus_concept" href="http://planetmath.org/googlematrix">Google matrix</a>.
 The purpose of the PageRank algorithm is to compute a stationary vector of the Google matrix.
 The stationary vector is then used to provide a ranking of the pages on the internet.</p>
 </div>
 <div id="p2" class="ltx_para">
-<p class="ltx_p">A directed graph <math id="p2.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> is constructed whose vertices correspond to web pages and a directed
+<p class="ltx_p">A <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">directed graph</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/DirectedGraph.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/directedgraph"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> <math id="p2.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> is constructed whose vertices correspond to web pages and a directed
 arc from vertex <math id="p2.m2" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> to vertex <math id="p2.m3" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> exists if and only if page <math id="p2.m4" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> has a link out to
 page <math id="p2.m5" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>.
 Then a stochastic matrix <math id="p2.m6" class="ltx_Math" alttext="A=(a_{ij})" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math> is constructed from <math id="p2.m7" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>: for each <math id="p2.m8" class="ltx_Math" alttext="i,j" display="inline"><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></math>
@@ -37,7 +37,7 @@ set
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">if the outdegree of vertex <math id="p2.m9" class="ltx_Math" alttext="i,d(i)" display="inline"><mrow><mi>i</mi><mo>,</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is positive and there is an arc from <math id="p2.m10" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> to <math id="p2.m11" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> in <math id="p2.m12" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>.
+<p class="ltx_p">if the <a class="nnexus_concept" href="http://mathworld.wolfram.com/Outdegree.html">outdegree</a> of vertex <math id="p2.m9" class="ltx_Math" alttext="i,d(i)" display="inline"><mrow><mi>i</mi><mo>,</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is <a class="nnexus_concept" href="http://planetmath.org/positive">positive</a> and there is an arc from <math id="p2.m10" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> to <math id="p2.m11" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> in <math id="p2.m12" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>.
 Set</p>
 <table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
 
@@ -62,7 +62,7 @@ Set</p>
 <p class="ltx_p">if <math id="p3.m1" class="ltx_Math" alttext="d(i)=0" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, where <math id="p3.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is the order of the matrix.</p>
 </div>
 <div id="p4" class="ltx_para">
-<p class="ltx_p">Having defined <math id="p4.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> choose a positive row vector <math id="p4.m2" class="ltx_Math" alttext="v^{T}" display="inline"><msup><mi>v</mi><mi>T</mi></msup></math> such that <math id="p4.m3" class="ltx_Math" alttext="v^{T}\textbf{1}=1" display="inline"><mrow><mrow><msup><mi>v</mi><mi>T</mi></msup><mo>⁢</mo><mtext>𝟏</mtext></mrow><mo>=</mo><mn>1</mn></mrow></math>
+<p class="ltx_p">Having defined <math id="p4.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> choose a positive <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">row vector</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/RowVector.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/listvector"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> <math id="p4.m2" class="ltx_Math" alttext="v^{T}" display="inline"><msup><mi>v</mi><mi>T</mi></msup></math> such that <math id="p4.m3" class="ltx_Math" alttext="v^{T}\textbf{1}=1" display="inline"><mrow><mrow><msup><mi>v</mi><mi>T</mi></msup><mo>⁢</mo><mtext>𝟏</mtext></mrow><mo>=</mo><mn>1</mn></mrow></math>
 where <span class="ltx_text ltx_markedasmath ltx_font_bold">1</span> is a vector of all ones.
 Finally, choose a constant <math id="p4.m5" class="ltx_Math" alttext="c\in(0,1)" display="inline"><mrow><mi>c</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math>.
 The <em class="ltx_emph ltx_font_italic">Google matrix</em> <math id="p4.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>
@@ -86,7 +86,7 @@ is</p>
 <td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Google matrix</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><a class="nnexus_concept" href="http://planetmath.org/canonical">Canonical</a> name</th>
 <td class="ltx_td ltx_align_left ltx_border_r">GoogleMatrix</td>
 </tr>
 <tr class="ltx_tr">
@@ -115,10 +115,10 @@ is</p>
 </tr>
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
-<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><a class="nnexus_concept" href="http://planetmath.org/definition">Definition</a></td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Classification.html">Classification</a></th>
 <td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 15A51</td>
 </tr>
 </tbody>

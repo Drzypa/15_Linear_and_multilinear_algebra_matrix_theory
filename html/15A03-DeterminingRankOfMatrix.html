@@ -19,14 +19,14 @@
 <div id="p1" class="ltx_para">
 <br class="ltx_break">
 <p class="ltx_p">One can determine the rank of even large matrices by using row and
-column operations to put the matrix in a triangular form. The method
-presented here is a version of row reduction to echelon form,
+column <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">operations</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Operation.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/operation"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> to put the matrix in a triangular form. The method
+presented here is a version of <a class="nnexus_concept" href="http://planetmath.org/rowreduction">row reduction</a> to <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">echelon form</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/EchelonForm.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/rowechelonform"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>,
 but some simplifications can be made because we are only interested
 in finding the rank of the matrix.</p>
 </div>
 <div id="p2" class="ltx_para">
-<p class="ltx_p">The foundation of this method is that the rank of a matrix is left
-invariant by the following operations:</p>
+<p class="ltx_p">The <a class="nnexus_concept" href="http://planetmath.org/axiomoffoundation">foundation</a> of this method is that the rank of a matrix is left
+<a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">invariant</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Invariant.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/invariant"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> by the following operations:</p>
 <ol id="I1" class="ltx_enumerate">
 <li id="I1.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_enumerate">1.</span> 
@@ -43,21 +43,21 @@ invariant by the following operations:</p>
 <li id="I1.i3" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_enumerate">3.</span> 
 <div id="I1.i3.p1" class="ltx_para">
-<p class="ltx_p">Adding a multiple of a row to another row</p>
+<p class="ltx_p">Adding a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">multiple</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Multiple.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/generalassociativity"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/divisibility"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of a row to another row</p>
 </div>
 </li>
 <li id="I1.i4" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_enumerate">4.</span> 
 <div id="I1.i4.p1" class="ltx_para">
-<p class="ltx_p">Multiplying a row by an invertible scalar</p>
+<p class="ltx_p">Multiplying a row by an <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">invertible</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/inversefunction"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/matrixinverse"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/invertiblelineartransformation"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> scalar</p>
 </div>
 </li>
 </ol>
 <p class="ltx_p">The last operation is really not needed, but it can be convenient.
-For instance, if some of the numbers in the matrix are huge, one
+For <a class="nnexus_concept" href="http://planetmath.org/substitutionsinpropositionallogic">instance</a>, if some of the numbers in the matrix are huge, one
 may want to use this operation to keep the numbers in a reasonable
-range or, if one has a matrix of integers, one may want to cancel
-denominators so that one does not have to deal with fractions.</p>
+range or, if one has a matrix of <a class="nnexus_concept" href="http://mathworld.wolfram.com/Integer.html">integers</a>, one may want to cancel
+<a class="nnexus_concept" href="http://planetmath.org/fraction">denominators</a> so that one does not have to deal with fractions.</p>
 </div>
 <div id="p3" class="ltx_para">
 <p class="ltx_p">These operations can be used to put the matrix in a triangular
@@ -75,7 +75,7 @@ zero, you are done.</p>
 <li id="I2.i2" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_enumerate">2.</span> 
 <div id="I2.i2.p1" class="ltx_para">
-<p class="ltx_p">Permute rows and columns so as to put a non-zero element in
+<p class="ltx_p">Permute rows and columns so as to put a non-zero <a class="nnexus_concept" href="http://mathworld.wolfram.com/Element.html">element</a> in
 the <math id="I2.i2.p1.m1" class="ltx_Math" alttext="(1,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> position of the matrix.</p>
 </div>
 </li>
@@ -89,7 +89,7 @@ entries in the first column except the first one zero.</p>
 <li id="I2.i4" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_enumerate">4.</span> 
 <div id="I2.i4.p1" class="ltx_para">
-<p class="ltx_p">Repeat the process starting at step 1 with the submatrix
+<p class="ltx_p">Repeat the process starting at step 1 with the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">submatrix</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Submatrix.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/partitionedmatrix"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>
 gotten by throwing away the first row and the first column.</p>
 </div>
 </li>
@@ -212,7 +212,7 @@ out the first, second, and third rows and columns:</p>
 </tr>
 </table>
 <p class="ltx_p">Since the <math id="p5.m5" class="ltx_Math" alttext="(1,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> entry of this submatrix is zero, we must make
-a permutation. We will swap the fourth and the fifth columns:</p>
+a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">permutation</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Permutation.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/permutation"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>. We will swap the fourth and the fifth columns:</p>
 <table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -253,11 +253,11 @@ all but the fifth row and column:</p>
 </tr>
 </table>
 <p class="ltx_p">Since the sole entry of this submatrix is zero, we are done
-and have a triangular matrix. Since there are four
+and have a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">triangular matrix</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/TriangularMatrix.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/triangularmatrix"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>. Since there are four
 non-zero rows, the rank is <math id="p5.m6" class="ltx_Math" alttext="4" display="inline"><mn>4</mn></math>.</p>
 </div>
 <div id="p6" class="ltx_para">
-<p class="ltx_p">In the presentation above, certain entries of the matrix have been
+<p class="ltx_p">In the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">presentation</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Presentation.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/presentationofinversemonoidsandinversesemigroups"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/presentationofagroup"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> above, certain entries of the matrix have been
 shown in boldface. When using the method in practice, it is only
 necessary to write these entries — the other entries can be
 ignored and need not be copied from step to step.
@@ -266,7 +266,7 @@ ignored and need not be copied from step to step.
 <tbody class="ltx_tbody">
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
-<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">determining rank of matrix</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><a class="nnexus_concept" href="http://planetmath.org/determiningrankofmatrix">determining rank of matrix</a></td>
 </tr>
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
@@ -301,7 +301,7 @@ ignored and need not be copied from step to step.
 <td class="ltx_td ltx_align_left ltx_border_r">Algorithm</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Classification.html">Classification</a></th>
 <td class="ltx_td ltx_align_left ltx_border_r">msc 15A03</td>
 </tr>
 <tr class="ltx_tr">

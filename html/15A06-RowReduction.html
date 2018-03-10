@@ -18,7 +18,7 @@
 
 <div id="p1" class="ltx_para">
 <br class="ltx_break">
-<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Row reduction</em>, also known as <em class="ltx_emph ltx_font_italic">Gaussian elimination</em>, is an algorithm for solving a system of linear equations</p>
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic"><a class="nnexus_concept" href="http://planetmath.org/rowreduction">Row reduction</a></em>, also known as <em class="ltx_emph ltx_font_italic"><a class="nnexus_concept" href="http://mathworld.wolfram.com/GaussianElimination.html">Gaussian elimination</a></em>, is an algorithm for solving a <a class="nnexus_concept" href="http://planetmath.org/finitedimensionallinearproblem">system of linear equations</a></p>
 <table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -32,8 +32,8 @@ a_{n1}x_{1}&amp;+&amp;a_{n2}x_{2}&amp;+&amp;\ldots&amp;+&amp;a_{nm}x_{m}&amp;=&a
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">To describe row reduction, it is convenient to formulate a linear
-system as a single matrix-vector equation <math id="p1.m1" class="ltx_Math" alttext="Ax=b," display="inline"><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mi>b</mi></mrow><mo>,</mo></mrow></math> where</p>
+<p class="ltx_p">To describe row reduction, it is convenient to formulate a <a class="nnexus_concept" href="http://planetmath.org/linearequation">linear
+system</a> as a single matrix-vector equation <math id="p1.m1" class="ltx_Math" alttext="Ax=b," display="inline"><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mi>b</mi></mrow><mo>,</mo></mrow></math> where</p>
 <table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -51,10 +51,10 @@ x_{m}\end{bmatrix}" display="block"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo>[<
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">are, respectively, the <math id="p1.m2" class="ltx_Math" alttext="n\times m" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>m</mi></mrow></math> matrix of coefficients of the
-linear system, the <math id="p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-place column vector of the scalars from the
+<p class="ltx_p">are, respectively, the <math id="p1.m2" class="ltx_Math" alttext="n\times m" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>m</mi></mrow></math> matrix of <a class="nnexus_concept" href="http://mathworld.wolfram.com/Coefficient.html">coefficients</a> of the
+linear system, the <math id="p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-place <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">column vector</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/ColumnVector.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/listvector"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of the scalars from the
 right-hand of the equations, and the <math id="p1.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>-place column vector of
-unknowns.</p>
+<a class="nnexus_concept" href="http://mathworld.wolfram.com/Unknown.html">unknowns</a>.</p>
 </div>
 <div id="p2" class="ltx_para">
 <p class="ltx_p">The method consists of combining the coefficient matrix <math id="p2.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> with the
@@ -76,17 +76,17 @@ R_{n},\end{bmatrix}" display="block"><mrow><mrow><mo>[</mo><mtable columnspacing
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">where each <math id="p3.m1" class="ltx_Math" alttext="R_{i}" display="inline"><msub><mi>R</mi><mi>i</mi></msub></math> is the <math id="p3.m2" class="ltx_Math" alttext="m+1" display="inline"><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></math>-place row vector corresponding to row
+<p class="ltx_p">where each <math id="p3.m1" class="ltx_Math" alttext="R_{i}" display="inline"><msub><mi>R</mi><mi>i</mi></msub></math> is the <math id="p3.m2" class="ltx_Math" alttext="m+1" display="inline"><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow></math>-place <a class="nnexus_concept" href="http://mathworld.wolfram.com/RowVector.html">row vector</a> corresponding to row
 <math id="p3.m3" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> of the augmented matrix.</p>
 </div>
 <div id="p4" class="ltx_para">
-<p class="ltx_p">A sequence of elementary row operations is then applied to this matrix
-so as to transform it to row echelon form. The elementary operations are:</p>
+<p class="ltx_p">A <a class="nnexus_concept" href="http://planetmath.org/sequence">sequence</a> of <a class="nnexus_concept" href="http://planetmath.org/elementarymatrix">elementary row operations</a> is then applied to this matrix
+so as to transform it to <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">row echelon form</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/RowEchelonForm.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/rowechelonform"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>. The elementary operations are:</p>
 <ul id="I1" class="ltx_itemize">
 <li id="I1.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_itemize">•</span> 
 <div id="I1.i1.p1" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_bold">row scaling:</span> the multiplication a row by a nonzero
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">row scaling:</span> the <a class="nnexus_concept" href="http://planetmath.org/cardinalarithmetic">multiplication</a> a row by a nonzero
 scalar;
 </p>
 <table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
@@ -129,12 +129,12 @@ another row;</p>
 </div>
 </li>
 </ul>
-<p class="ltx_p">Note that these operations are “legal” because <math id="p4.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a solution of
+<p class="ltx_p">Note that these <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">operations</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Operation.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/operation"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> are “legal” because <math id="p4.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a solution of
 the transformed system if and only if it is a solution of the initial system.</p>
 </div>
 <div id="p5" class="ltx_para">
-<p class="ltx_p">If the number of equations equals the number of variables (<math id="p5.m1" class="ltx_Math" alttext="m=n" display="inline"><mrow><mi>m</mi><mo>=</mo><mi>n</mi></mrow></math>), and
-if the coefficient matrix <math id="p5.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is non-singular (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/singular</span>), then the algorithm will
+<p class="ltx_p">If the number of equations equals the number of <a class="nnexus_concept" href="http://mathworld.wolfram.com/Variable.html">variables</a> (<math id="p5.m1" class="ltx_Math" alttext="m=n" display="inline"><mrow><mi>m</mi><mo>=</mo><mi>n</mi></mrow></math>), and
+if the coefficient matrix <math id="p5.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is <a class="nnexus_concept" href="http://planetmath.org/inversefunction">non-singular</a> (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/<a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">singular</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/cofinality"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/singular"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup></span>), then the algorithm will
 terminate when the augmented matrix has the following form:</p>
 </div>
 <div id="p6" class="ltx_para">
@@ -149,12 +149,12 @@ terminate when the augmented matrix has the following form:</p>
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">With these assumptions, there exists a unique solution, which can be
+<p class="ltx_p">With these <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">assumptions</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/deduction"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/derivationsinnaturaldeduction"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>, there exists a unique solution, which can be
 obtained from the above matrix by back substitution.</p>
 </div>
 <div id="p7" class="ltx_para">
 <p class="ltx_p">For the general case, the termination procedure is somewhat more
-complicated. First recall that a matrix is in echelon form if each
+complicated. First recall that a matrix is in <a class="nnexus_concept" href="http://mathworld.wolfram.com/EchelonForm.html">echelon form</a> if each
 row has more leading zeros than the rows above it. A pivot is the
 leading non-zero entry of some row. We then have</p>
 <ul id="I2" class="ltx_itemize">
@@ -162,7 +162,7 @@ leading non-zero entry of some row. We then have</p>
 <span class="ltx_tag ltx_tag_itemize">•</span> 
 <div id="I2.i1.p1" class="ltx_para">
 <p class="ltx_p">If there is a pivot in the last column, the system is
-inconsistent ; there will be no solutions.</p>
+<a class="nnexus_concept" href="http://planetmath.org/consistent">inconsistent</a> ; there will be no solutions.</p>
 </div>
 </li>
 <li id="I2.i2" class="ltx_item" style="list-style-type:none;">
@@ -171,12 +171,12 @@ inconsistent ; there will be no solutions.</p>
 <p class="ltx_p">If that is not the case, then the general solution will have <math id="I2.i2.p1.m1" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>
 degrees of freedom, where <math id="I2.i2.p1.m2" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> is the number of columns from <math id="I2.i2.p1.m3" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> to
 <math id="I2.i2.p1.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> that have no pivot. To be more precise, the general solution
-will have the form of one particular solution plus an arbitrary linear
-combination of <math id="I2.i2.p1.m5" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> linearly independent <math id="I2.i2.p1.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-vectors.</p>
+will have the form of one particular solution plus an arbitrary <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">linear
+combination</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/LinearCombination.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/linearcombination"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of <math id="I2.i2.p1.m5" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">linearly independent</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/LinearlyIndependent.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/linearlyindependent"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> <math id="I2.i2.p1.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-vectors.</p>
 </div>
 <div id="I2.i2.p2" class="ltx_para">
-<p class="ltx_p">In even more prosaic language, the variables in the non-pivot
-columns are to be considered “free variables” and should be
+<p class="ltx_p">In even more prosaic <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">language</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/language"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/signature"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>, the variables in the non-pivot
+columns are to be considered “<a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">free variables</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/FreeVariable.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/freeandboundvariables"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/combinatorylogic"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>” and should be
 “moved” to the right-hand side of the equation. The general
 solution is then obtained by arbitrarily choosing values of the free
 variables, and then solving for the remaining “non-free” variables
@@ -186,16 +186,16 @@ that reside in the pivot columns.</p>
 </ul>
 </div>
 <div id="p8" class="ltx_para">
-<p class="ltx_p">A variant of Gaussian elimination is Gauss-Jordan elimination. In
-this variation we reduce to echelon form, and then if the system
+<p class="ltx_p">A variant of Gaussian elimination is <a class="nnexus_concept" href="http://mathworld.wolfram.com/Gauss-JordanElimination.html">Gauss-Jordan elimination</a>. In
+this <a class="nnexus_concept" href="http://planetmath.org/variation">variation</a> we reduce to echelon form, and then if the system
 proves to be consistent, continue to apply the elementary row
-operations until the augmented matrix is in <span class="ltx_text ltx_font_italic">reduced echelon
-form</span>. This means that not only does each pivot have all zeroes
+operations until the augmented matrix is in <span class="ltx_text ltx_font_italic"><a class="nnexus_concept" href="http://mathworld.wolfram.com/ReducedEchelonForm.html">reduced echelon
+form</a></span>. This means that not only does each pivot have all zeroes
 below it, but that each pivot also has all zeroes above it.</p>
 </div>
 <div id="p9" class="ltx_para">
 <p class="ltx_p">In essence, Gauss-Jordan elimination performs the back substitution;
-the values of the unknowns can be read off directly from the terminal
+the values of the unknowns can be read off directly from the <a class="nnexus_concept" href="http://planetmath.org/formalgrammar">terminal</a>
 augmented matrix. Not surprisingly, Gauss-Jordan elimination is
 slower than Gaussian elimination. It is useful, however, for solving
 systems on paper.

@@ -26,16 +26,16 @@
 <p class="ltx_p">, or tensors for short<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>The term <span class="ltx_text ltx_font_italic">tensor</span> has other meanings, c.f. the tensor entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Tensor</span>).</span></span></span>
 are multidimensional arrays with two types of (covariant and
 contravariant) indices. Tensors are widely used in science and
-mathematics, because these data structures are the natural choice of
-representation for a variety of important physical and geometric
+mathematics, because these <a class="nnexus_concept" href="http://mathworld.wolfram.com/DataStructure.html">data structures</a> are the natural choice of
+<a class="nnexus_concept" href="http://planetmath.org/grouprepresentation">representation</a> for a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">variety</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Variety.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/equationalclass"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/varietyofgroups"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of important physical and geometric
 quantities.</p>
 </div>
 <div id="S0.SS0.SSS0.Px1.p2" class="ltx_para">
-<p class="ltx_p">In this entry we give the definition of a tensor array and establish
+<p class="ltx_p">In this entry we give the definition of a <a class="nnexus_concept" href="http://planetmath.org/tensorarray">tensor array</a> and establish
 some related terminology and notation. The theory of tensor arrays
-incorporates a number of other essential topics: basic tensors, tensor
-transformations, outer multiplication, contraction, inner
-multiplication, and generalized transposition. These are fully
+incorporates a number of other essential topics: <a class="nnexus_concept" href="http://planetmath.org/basictensor">basic tensors</a>, <a class="nnexus_concept" href="http://planetmath.org/tensortransformations">tensor
+transformations</a>, <a class="nnexus_concept" href="http://planetmath.org/outermultiplication">outer multiplication</a>, <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">contraction</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/contraction"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/sequent"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>, inner
+<a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">multiplication</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/multiplication"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/cardinalarithmetic"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>, and generalized <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">transposition</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Transposition.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/transposition"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>. These are fully
 described in their separate entries.
 </p>
 </div>
@@ -47,8 +47,8 @@ described in their separate entries.
 <p class="ltx_p">Let <math id="S0.SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math> be a field<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>In physics and differential
 geometry, <math id="S0.SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math> is typically <math id="S0.SS0.SSS0.Px2.p1.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> or <math id="S0.SS0.SSS0.Px2.p1.m4" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>.</span></span></span> and let <math id="S0.SS0.SSS0.Px2.p1.m5" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>
 be a finite list of indices<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">3</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">3</sup>It is advantageous to allow
-general indexing sets, because one can indicate the use of multiple
-frames of reference by employing multiple, disjoint sets of
+general <a class="nnexus_concept" href="http://planetmath.org/indexingset">indexing sets</a>, because one can indicate the use of <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">multiple</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Multiple.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/generalassociativity"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/divisibility"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>
+frames of reference by employing multiple, <a class="nnexus_concept" href="http://mathworld.wolfram.com/DisjointSets.html">disjoint sets</a> of
 indices.</span></span></span>, such as <math id="S0.SS0.SSS0.Px2.p1.m6" class="ltx_Math" alttext="(1,2,\ldots,n)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></math>. A tensor array of type</p>
 <table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
 
@@ -58,7 +58,7 @@ indices.</span></span></span>, such as <math id="S0.SS0.SSS0.Px2.p1.m6" class="l
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">is a mapping</p>
+<p class="ltx_p">is a <a class="nnexus_concept" href="http://planetmath.org/mapping">mapping</a></p>
 <table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
 
 <tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -69,19 +69,19 @@ indices.</span></span></span>, such as <math id="S0.SS0.SSS0.Px2.p1.m6" class="l
 </table>
 <p class="ltx_p">The set of all such mappings
 will be denoted by <math id="S0.SS0.SSS0.Px2.p1.m7" class="ltx_Math" alttext="\mathrm{T}^{p,q}(I,\mathbb{K})" display="inline"><mrow><msup><mi mathvariant="normal">T</mi><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>𝕂</mi><mo stretchy="false">)</mo></mrow></mrow></math>, or when <math id="S0.SS0.SSS0.Px2.p1.m8" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> and
-<math id="S0.SS0.SSS0.Px2.p1.m9" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math> are clear from the context, simply as <math id="S0.SS0.SSS0.Px2.p1.m10" class="ltx_Math" alttext="\mathrm{T}^{p,q}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></msup></math>. The
+<math id="S0.SS0.SSS0.Px2.p1.m9" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math> are clear from the <a class="nnexus_concept" href="http://planetmath.org/conceptlattice">context</a>, simply as <math id="S0.SS0.SSS0.Px2.p1.m10" class="ltx_Math" alttext="\mathrm{T}^{p,q}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></msup></math>. The
 numbers <math id="S0.SS0.SSS0.Px2.p1.m11" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="S0.SS0.SSS0.Px2.p1.m12" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> are called, respectively, the contravariant and
-the covariant valence of the tensor array.</p>
+the covariant <a class="nnexus_concept" href="http://planetmath.org/valency">valence</a> of the tensor array.</p>
 </div>
 <div id="S0.SS0.SSS0.Px2.p2" class="ltx_para">
-<p class="ltx_p">Point-wise addition and scaling give <math id="S0.SS0.SSS0.Px2.p2.m1" class="ltx_Math" alttext="\mathrm{T}^{p,q}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></msup></math> the structure of a
-a vector space of dimension <math id="S0.SS0.SSS0.Px2.p2.m2" class="ltx_Math" alttext="n^{p+q}" display="inline"><msup><mi>n</mi><mrow><mi>p</mi><mo>+</mo><mi>q</mi></mrow></msup></math>, where <math id="S0.SS0.SSS0.Px2.p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is the cardinality of
-<math id="S0.SS0.SSS0.Px2.p2.m4" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>. We will interpret <math id="S0.SS0.SSS0.Px2.p2.m5" class="ltx_Math" alttext="I^{0}" display="inline"><msup><mi>I</mi><mn>0</mn></msup></math> as signifying a singleton set.
+<p class="ltx_p">Point-wise <a class="nnexus_concept" href="http://planetmath.org/addition">addition</a> and <a class="nnexus_concept" href="http://planetmath.org/affinetransformation">scaling</a> give <math id="S0.SS0.SSS0.Px2.p2.m1" class="ltx_Math" alttext="\mathrm{T}^{p,q}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></msup></math> the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">structure</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Structure.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/structure"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of a
+a <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">vector space</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/VectorSpace.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/vectorspace"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">dimension</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/dimensionvectorspace"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/dimension"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> <math id="S0.SS0.SSS0.Px2.p2.m2" class="ltx_Math" alttext="n^{p+q}" display="inline"><msup><mi>n</mi><mrow><mi>p</mi><mo>+</mo><mi>q</mi></mrow></msup></math>, where <math id="S0.SS0.SSS0.Px2.p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is the <a class="nnexus_concept" href="http://planetmath.org/cardinality">cardinality</a> of
+<math id="S0.SS0.SSS0.Px2.p2.m4" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>. We will interpret <math id="S0.SS0.SSS0.Px2.p2.m5" class="ltx_Math" alttext="I^{0}" display="inline"><msup><mi>I</mi><mn>0</mn></msup></math> as signifying a <a class="nnexus_concept" href="http://mathworld.wolfram.com/SingletonSet.html">singleton set</a>.
 Consequently <math id="S0.SS0.SSS0.Px2.p2.m6" class="ltx_Math" alttext="\mathrm{T}^{p,0}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mi>p</mi><mo>,</mo><mn>0</mn></mrow></msup></math> and <math id="S0.SS0.SSS0.Px2.p2.m7" class="ltx_Math" alttext="\mathrm{T}^{0,q}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mn>0</mn><mo>,</mo><mi>q</mi></mrow></msup></math> are just the maps from,
 respectively, <math id="S0.SS0.SSS0.Px2.p2.m8" class="ltx_Math" alttext="I^{p}" display="inline"><msup><mi>I</mi><mi>p</mi></msup></math> and <math id="S0.SS0.SSS0.Px2.p2.m9" class="ltx_Math" alttext="I^{q}" display="inline"><msup><mi>I</mi><mi>q</mi></msup></math> to <math id="S0.SS0.SSS0.Px2.p2.m10" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math>. It is also customary to
-identify <math id="S0.SS0.SSS0.Px2.p2.m11" class="ltx_Math" alttext="\mathrm{T}^{1,0}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mn>1</mn><mo>,</mo><mn>0</mn></mrow></msup></math> with <math id="S0.SS0.SSS0.Px2.p2.m12" class="ltx_Math" alttext="\mathbb{K}^{I}" display="inline"><msup><mi>𝕂</mi><mi>I</mi></msup></math>, the vector space of list
-vectors indexed by <math id="S0.SS0.SSS0.Px2.p2.m13" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, and to identify <math id="S0.SS0.SSS0.Px2.p2.m14" class="ltx_Math" alttext="\mathrm{T}^{0,1}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow></msup></math> with dual space
-<math id="S0.SS0.SSS0.Px2.p2.m15" class="ltx_Math" alttext="\left(\mathbb{K}^{I}\right)^{*}" display="inline"><msup><mrow><mo>(</mo><msup><mi>𝕂</mi><mi>I</mi></msup><mo>)</mo></mrow><mo>*</mo></msup></math> of linear forms on <math id="S0.SS0.SSS0.Px2.p2.m16" class="ltx_Math" alttext="\mathbb{K}^{I}" display="inline"><msup><mi>𝕂</mi><mi>I</mi></msup></math>. Finally,
+identify <math id="S0.SS0.SSS0.Px2.p2.m11" class="ltx_Math" alttext="\mathrm{T}^{1,0}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mn>1</mn><mo>,</mo><mn>0</mn></mrow></msup></math> with <math id="S0.SS0.SSS0.Px2.p2.m12" class="ltx_Math" alttext="\mathbb{K}^{I}" display="inline"><msup><mi>𝕂</mi><mi>I</mi></msup></math>, the vector space of <a class="nnexus_concept" href="http://planetmath.org/listvector">list
+vectors</a> indexed by <math id="S0.SS0.SSS0.Px2.p2.m13" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, and to identify <math id="S0.SS0.SSS0.Px2.p2.m14" class="ltx_Math" alttext="\mathrm{T}^{0,1}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow></msup></math> with <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">dual space</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/dualspace"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/dualofstonerepresentationtheorem"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>
+<math id="S0.SS0.SSS0.Px2.p2.m15" class="ltx_Math" alttext="\left(\mathbb{K}^{I}\right)^{*}" display="inline"><msup><mrow><mo>(</mo><msup><mi>𝕂</mi><mi>I</mi></msup><mo>)</mo></mrow><mo>*</mo></msup></math> of <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">linear forms</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/homogeneouspolynomial1"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/linearfunctional"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> on <math id="S0.SS0.SSS0.Px2.p2.m16" class="ltx_Math" alttext="\mathbb{K}^{I}" display="inline"><msup><mi>𝕂</mi><mi>I</mi></msup></math>. Finally,
 <math id="S0.SS0.SSS0.Px2.p2.m17" class="ltx_Math" alttext="\mathrm{T}^{0,0}" display="inline"><msup><mi mathvariant="normal">T</mi><mrow><mn>0</mn><mo>,</mo><mn>0</mn></mrow></msup></math> can be identified with <math id="S0.SS0.SSS0.Px2.p2.m18" class="ltx_Math" alttext="\mathbb{K}" display="inline"><mi>𝕂</mi></math> itself. In other
 words, scalars are tensor arrays of zero valence.</p>
 </div>
@@ -114,12 +114,12 @@ authors. See H. Weyl’s books and papers, for example.</span></span></span></p>
 <div id="S0.SS0.SSS0.Px2.p4" class="ltx_para">
 <p class="ltx_p">We also mention that it is customary to use columns to represent
 contravariant index dimensions, and rows to represent the covariant
-index dimensions. Thus column vectors are type <math id="S0.SS0.SSS0.Px2.p4.m1" class="ltx_Math" alttext="(1,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> tensor arrays,
-row vectors are type <math id="S0.SS0.SSS0.Px2.p4.m2" class="ltx_Math" alttext="(0,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> tensor arrays, and matrices, in as much
+index dimensions. Thus <a class="nnexus_concept" href="http://mathworld.wolfram.com/ColumnVector.html">column vectors</a> are type <math id="S0.SS0.SSS0.Px2.p4.m1" class="ltx_Math" alttext="(1,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> tensor arrays,
+<a class="nnexus_concept" href="http://mathworld.wolfram.com/RowVector.html">row vectors</a> are type <math id="S0.SS0.SSS0.Px2.p4.m2" class="ltx_Math" alttext="(0,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> tensor arrays, and matrices, in as much
 as they can be regarded either as rows of columns or as columns of
 rows, are type <math id="S0.SS0.SSS0.Px2.p4.m3" class="ltx_Math" alttext="(1,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> tensor arrays.<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">5</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">5</sup>It is also customary to
 use matrices to also represent type <math id="S0.SS0.SSS0.Px2.p4.m4" class="ltx_Math" alttext="(2,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> and type <math id="S0.SS0.SSS0.Px2.p4.m5" class="ltx_Math" alttext="(0,2)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math> tensor
-arrays (The latter are used to represent quadratic forms.)
+arrays (The latter are used to represent <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">quadratic forms</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/QuadraticForm.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/quadraticform"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>.)
 Speaking idealistically, such objects should be typeset,
 respectively, as a column of column vectors and as a row of row
 vectors. However typographical constraints and notational
@@ -133,8 +133,8 @@ convenience dictate that they be displayed as matrices.</span></span></span></p>
 <p class="ltx_p">It must be noted that our usage of the term <span class="ltx_text ltx_font_italic">tensor array</span> is
 non-standard. The traditionally inclined authors simply call these
 data structures tensors. We bother to make the distinction because
-the traditional nomenclature is ambiguous and doesn’t include the
-modern mathematical understanding of the tensor concept. (This is
+the traditional nomenclature is <a class="nnexus_concept" href="http://planetmath.org/ambiguousgrammar">ambiguous</a> and doesn’t include the
+modern mathematical understanding of the tensor <a class="nnexus_concept" href="http://mathworld.wolfram.com/Concept.html">concept</a>. (This is
 explained more fully in the tensor entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Tensor</span>).) Precise and
 meaningful definitions can only be given by treating the concept of a
 tensor array as distinct from the concept of a geometric/abstract
@@ -144,10 +144,10 @@ tensor.
 <div id="S0.SS0.SSS0.Px3.p2" class="ltx_para">
 <p class="ltx_p">We also mention that the term <span class="ltx_text ltx_font_italic">tensor</span> is often applied to objects
 that should more appropriately be termed a <span class="ltx_text ltx_font_italic">tensor field</span>. The
-latter are tensor-valued functions, or more generally sections of a
+latter are tensor-valued <a class="nnexus_concept" href="http://planetmath.org/function">functions</a>, or more generally <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">sections</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/operationsonrelations"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/sectionofagroup"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> of a
 tensor bundle. A tensor is what one gets by evaluating a tensor field
 at one point. Informally, one can also think of a tensor field as a
-tensor whose values are functions, rather than constants.
+tensor whose values are functions, rather than <a class="nnexus_concept" href="http://planetmath.org/logicallanguage">constants</a>.
 </p>
 <table class="ltx_tabular ltx_align_right ltx_align_middle">
 <tbody class="ltx_tbody">
@@ -188,7 +188,7 @@ tensor whose values are functions, rather than constants.
 <td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
 </tr>
 <tr class="ltx_tr">
-<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_l"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Classification.html">Classification</a></td>
 <td class="ltx_td ltx_align_left ltx_border_r">msc 15A69</td>
 </tr>
 <tr class="ltx_tr">
